@@ -24,7 +24,6 @@ const renderPostList = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
-  draggable,
 }) =>
   <div style={postListStyle}>
     <PostList
@@ -40,7 +39,6 @@ const renderPostList = ({
       onImageClickNext={onImageClickNext}
       onImageClickPrev={onImageClickPrev}
       onImageClose={onImageClose}
-      draggable={draggable}
     />
   </div>;
 
@@ -104,7 +102,6 @@ PostLists.propTypes = {
 
 PostLists.defaultProps = {
   postLists: [],
-  draggable: false,
 };
 
 export default PostLists;
