@@ -851,7 +851,7 @@ exports[`Snapshots App should render application 1`] = `
               }
             }
           >
-            Whoops, it looks like you're not logged in.
+            Welcome to Buffer Publish
           </span>
         </div>
       </div>

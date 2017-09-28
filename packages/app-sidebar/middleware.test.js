@@ -1,15 +1,14 @@
 import {
-  actionTypes as dataFetchActionTypes,
   actions as dataFetchActions,
 } from '@bufferapp/async-data-fetch';
 import middleware from './middleware';
 
 describe('middleware', () => {
-  it('should fetch user after login', () => {
+  it('should fetch user APP_INIT', () => {
     const next = jest.fn();
     const dispatch = jest.fn();
     const action = {
-      type: `login_${dataFetchActionTypes.FETCH_SUCCESS}`,
+      type: 'APP_INIT',
     };
     middleware({ dispatch })(next)(action);
     expect(next)

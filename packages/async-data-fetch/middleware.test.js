@@ -148,37 +148,4 @@ describe('middleware', () => {
         error: RPCClient.fakeError,
       });
   });
-  it('should pass along token if it is set', async () => {
-    const token = 'session token';
-    const store = {
-      dispatch: jest.fn(),
-      getState: () => ({
-        asyncDataFetch: {
-          token,
-        },
-      }),
-    };
-    const name = 'fake rpc';
-    const args = {
-      test: 'yes',
-    };
-    const action = {
-      type: actionTypes.FETCH,
-      name,
-      args,
-    };
-    middleware(store)(() => {})(action);
-    await sleep(); // give the event loop a chance to process promise
-    expect(store.dispatch)
-      .toBeCalledWith({
-        type: `${name}_${actionTypes.FETCH_SUCCESS}`,
-        name,
-        args: {
-          ...args,
-          token,
-        },
-        id: 0,
-        result: RPCClient.fakeResult,
-      });
-  });
 });

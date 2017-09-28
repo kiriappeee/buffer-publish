@@ -8,7 +8,6 @@ const ComposerWrapper = ({
   userData,
   profiles,
   enabledApplicationModes,
-  accessToken,
   onSave,
   environment,
   editMode,
@@ -55,7 +54,6 @@ const ComposerWrapper = ({
         metaData={formattedData.metaData}
         imageDimensionsKey={formattedData.imageDimensionsKey}
         options={options}
-        accessToken={accessToken}
         onNewPublish
       />
     </div>
@@ -76,7 +74,6 @@ ComposerWrapper.propTypes = {
   }).isRequired,
   profiles: PropTypes.arrayOf(PropTypes.object),
   enabledApplicationModes: PropTypes.arrayOf(PropTypes.string),
-  accessToken: PropTypes.string.isRequired,
   onSave: PropTypes.func.isRequired,
   environment: PropTypes.string.isRequired,
   editMode: PropTypes.bool.isRequired,
@@ -100,7 +97,6 @@ export default connect(
         profiles: state.profileSidebar.profiles,
         enabledApplicationModes: state.enabledApplicationModes,
         environment: state.queue.environment,
-        accessToken: state.login.sessionToken,
         editMode: state.queue.editMode,
         post: state.queue.byProfileId[selectedProfileId].posts[postId],
       });

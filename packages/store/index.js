@@ -5,7 +5,6 @@ import {
 } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
-import { middleware as loginMiddleware } from '@bufferapp/login';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
@@ -32,7 +31,6 @@ const configureStore = (initialstate) => {
       applyMiddleware(
         routerMiddleware(history),
         asyncDataFetchMiddleware,
-        loginMiddleware,
         i18nMiddleware,
         profileSidebarMiddleware,
         appSidebarMiddleware,

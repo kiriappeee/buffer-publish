@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import { routerReducer } from 'react-router-redux';
-import { reducer as loginReducer } from '@bufferapp/login';
 import { reducer as tabsReducer } from '@bufferapp/publish-tabs';
 import { reducer as queueReducer } from '@bufferapp/publish-queue';
 import { reducer as sentReducer } from '@bufferapp/publish-sent';
@@ -14,7 +13,6 @@ import { reducer as notificationsReducer } from '@bufferapp/notifications';
 
 export default combineReducers({
   form: formReducer,
-  login: loginReducer,
   router: routerReducer,
   queue: queueReducer,
   sent: sentReducer,

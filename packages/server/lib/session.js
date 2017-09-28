@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken');
 const RPCClient = require('micro-rpc-client');
 
 const COOKIE_NAME = 'session';
@@ -11,10 +10,8 @@ const client = new RPCClient({
 
 exports = module.exports;
 
-// Given a jwt return the session object
 exports.get = sessionCookie =>
-  client.call('get', { token: sessionCookie })
-    .then(({ token }) => jwt.decode(token));
+  client.call('get', { token: sessionCookie });
 
 exports.getCookie = req => req.cookies[COOKIE_NAME];
 
@@ -25,8 +22,10 @@ exports.middleware = (req, res, next) => {
   }
 
   exports.get(sessionCookie)
-    .then((decodedSession) => {
-      req.session = decodedSession;
+    .then((session) => {
+      if (session && session.publish) {
+        req.session = session.publish;
+      }
       next();
     })
     .catch(next);

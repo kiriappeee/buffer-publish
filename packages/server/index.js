@@ -83,12 +83,12 @@ app.post('/pusher/auth',
 );
 
 app.get('*', (req, res) => {
-  if (!req.session || !req.session.accessToken) {
+  if (req.session && req.session.accessToken) {
+    res.send(getHtml());
+  } else {
     const redirect = encodeURIComponent(`https://${req.get('host')}${req.originalUrl}`);
     const accountUrl = `https://account${isProduction ? '' : '.local'}.buffer.com/login/`;
     res.redirect(`${accountUrl}?redirect=${redirect}`);
-  } else {
-    res.send(getHtml());
   }
 });
 

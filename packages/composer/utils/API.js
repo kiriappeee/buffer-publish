@@ -29,7 +29,6 @@ class API extends BufferAPI {
       return rpc.call('composerApiProxy', {
         url: `/1/${url}`,
         args: data,
-        token: AppStore.getUserData().accessToken,
       });
     }
 

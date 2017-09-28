@@ -14,7 +14,7 @@ import {
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
-    case `login_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case 'APP_INIT':
       dispatch(dataFetchActions.fetch({
         name: 'profiles',
       }));

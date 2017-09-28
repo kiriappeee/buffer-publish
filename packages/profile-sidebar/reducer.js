@@ -55,6 +55,7 @@ export default (state = initialState, action) => {
     }
     case actionTypes.SELECT_PROFILE: {
       return {
+        ...state,
         selectedProfileId: action.profileId,
         profiles: profilesReducer(state.profiles, action),
         lockedProfiles: profilesReducer(state.lockedProfiles, action),

@@ -1,7 +1,7 @@
 {
   "name": "@bufferapp/publish-i18n",
   "version": "0.5.28",
-  "description": "Buffer Login Package",
+  "description": "Buffer i18n Package",
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9001",

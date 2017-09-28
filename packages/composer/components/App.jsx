@@ -147,7 +147,6 @@ class App extends React.Component {
 
     csrfToken: React.PropTypes.string.isRequired,
     imageDimensionsKey: React.PropTypes.string.isRequired,
-    accessToken: React.PropTypes.string.isRequired,
     onNewPublish: React.PropTypes.bool,
 
     options: React.PropTypes.shape({
@@ -260,7 +259,6 @@ class App extends React.Component {
       csrfToken,
       imageDimensionsKey,
       options,
-      accessToken,
       onNewPublish,
     } = this.props;
 
@@ -271,7 +269,6 @@ class App extends React.Component {
       csrfToken,
       imageDimensionsKey,
       options,
-      accessToken,
       onNewPublish,
     });
     WebSocket.init();

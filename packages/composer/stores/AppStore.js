@@ -81,7 +81,6 @@ const getNewUserData = (data) => ({
   weekStartsMonday: data.weekStartsMonday,
   shouldAlwaysSkipEmptyTextAlert: data.shouldAlwaysSkipEmptyTextAlert,
   profilesSchedulesSlots: data.profilesSchedulesSlots,
-  accessToken: data.accessToken,
   onNewPublish: data.onNewPublish,
 });
 

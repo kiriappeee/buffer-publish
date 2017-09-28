@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import {
   Text,
-  LoadingAnimation,
 } from '@bufferapp/components';
 
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
@@ -27,22 +25,13 @@ const defaultPageStyle = {
   flex: '1',
 };
 
-const DefaultPage = ({ loggedIn }) => (
+export default () => (
   <div style={pageStyle}>
     <div style={profileSideBarStyle}>
       <ProfileSidebar />
     </div>
     <div style={defaultPageStyle}>
-      {!loggedIn && <Text>Whoops, it looks like you&apos;re not logged in.</Text>}
-      {loggedIn && <LoadingAnimation />}
+      <Text>Welcome to Buffer Publish</Text>
     </div>
   </div>
 );
-
-DefaultPage.propTypes = {
-  loggedIn: PropTypes.bool.isRequired,
-};
-
-const mapStateToProps = ({ login }) => login;
-
-export default connect(mapStateToProps)(DefaultPage);

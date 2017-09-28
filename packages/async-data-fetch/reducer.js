@@ -1,5 +1,3 @@
-import Cookie from 'js-cookie';
-
 export const actionTypes = {
   FETCH: 'FETCH',
   FETCH_START: 'FETCH_START',
@@ -7,29 +5,8 @@ export const actionTypes = {
   FETCH_FAIL: 'FETCH_FAIL',
 };
 
-const getCookieDomain = () => {
-  if (window.location.hostname.indexOf('.local') > -1) {
-    return '.local.buffer.com';
-  }
-  return '.buffer.com';
-};
-
-const initialState = {
-  token: Cookie.get('session', { domain: getCookieDomain() }),
-};
-
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
-    case `login_${actionTypes.FETCH_SUCCESS}`:
-      return {
-        ...state,
-        token: action.result.token,
-      };
-    case `logout_${actionTypes.FETCH_SUCCESS}`:
-    case `logout_${actionTypes.FETCH_FAIL}`: {
-      const { token, ...newState } = state;
-      return newState;
-    }
     default:
       return state;
   }

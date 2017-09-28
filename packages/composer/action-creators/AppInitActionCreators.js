@@ -305,7 +305,6 @@ const AppInitActionCreators = {
     csrfToken,
     imageDimensionsKey,
     options,
-    accessToken,
     onNewPublish,
   }) => {
     const clonedMetaData = cloneDeep(metaData);
@@ -316,7 +315,7 @@ const AppInitActionCreators = {
     loadInitialMetaData(clonedMetaData);
     loadInitialOptions(clonedOptions);
     loadInitialProfilesData(cloneDeep(profilesData), clonedOptions);
-    loadInitialUserData(cloneDeep({ ...userData, accessToken, onNewPublish }));
+    loadInitialUserData(cloneDeep({ ...userData, onNewPublish }));
 
     AppHooks.handleAppLoaded();
   },
