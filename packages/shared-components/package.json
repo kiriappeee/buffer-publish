@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-shared-components",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "description": "Buffer Publish Shared Components",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/components": "0.7.0",
+    "@bufferapp/components": "0.7.3",
     "react-images": "0.5.5"
   },
   "devDependencies": {

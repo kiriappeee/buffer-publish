@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,19 +10,19 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/app-sidebar": "0.7.0",
+    "@bufferapp/app-sidebar": "0.7.3",
     "@bufferapp/async-data-fetch": "0.5.35",
     "@bufferapp/login": "0.5.35",
-    "@bufferapp/notifications": "0.7.0",
-    "@bufferapp/publish-example": "0.7.0",
+    "@bufferapp/notifications": "0.7.3",
+    "@bufferapp/publish-example": "0.7.3",
     "@bufferapp/publish-i18n": "0.5.28",
-    "@bufferapp/publish-profile-sidebar": "0.7.0",
-    "@bufferapp/publish-pusher-sync": "0.7.1",
-    "@bufferapp/publish-queue": "0.7.1",
+    "@bufferapp/publish-profile-sidebar": "0.7.3",
+    "@bufferapp/publish-pusher-sync": "0.7.3",
+    "@bufferapp/publish-queue": "0.7.3",
     "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-sent": "0.7.1",
-    "@bufferapp/publish-settings": "0.7.2",
-    "@bufferapp/publish-tabs": "0.7.1"
+    "@bufferapp/publish-sent": "0.7.3",
+    "@bufferapp/publish-settings": "0.7.3",
+    "@bufferapp/publish-tabs": "0.7.3"
   },
   "devDependencies": {
     "eslint": "3.19.0",

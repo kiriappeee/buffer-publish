@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-example",
-  "version": "0.7.0",
+  "version": "0.7.3",
   "description": "An example UI package",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "0.5.35",
-    "@bufferapp/components": "0.7.0"
+    "@bufferapp/components": "0.7.3"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",
