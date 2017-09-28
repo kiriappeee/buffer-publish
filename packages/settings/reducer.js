@@ -1,27 +1,28 @@
 
 import { actionTypes as profileActionTypes } from '@bufferapp/publish-profile-sidebar';
 import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
-import {
-  timezones,
-} from './components/ProfileSettings/settingsData';
 import { transformSchedules } from './utils/transformSchedule';
 
 export const actionTypes = {
   REMOVE_SCHEDULE_TIME: 'REMOVE_SCHEDULE_TIME',
   UPDATE_SCHEDULE_TIME: 'UPDATE_SCHEDULE_TIME',
   ADD_SCHEDULE_TIME: 'ADD_SCHEDULE_TIME',
+  UPDATE_TIMEZONE: 'UPDATE_TIMEZONE',
+  GET_TIMEZONES: 'GET_TIMEZONES',
+  CLEAR_TIMEZONE_INPUT: 'CLEAR_TIMEZONE_INPUT',
+  RESET_TIMEZONE_INPUT: 'RESET_TIMEZONE_INPUT',
 };
 
-// TODO remove stubbed data once we have real data coming in
 const initialState = {
   settingsHeader: 'Your posting schedule',
   loading: false,
   scheduleLoading: true,
   days: [],
   schedules: [],
-  items: timezones,
-  profileTimezone: '',
+  items: [],
+  profileTimezoneCity: '',
   hasTwentyFourHourTimeFormat: false,
+  clearTimezoneInput: false,
 };
 
 export default (state = initialState, action) => {
@@ -33,7 +34,7 @@ export default (state = initialState, action) => {
         days: transformSchedules(action.profile.schedules),
         scheduleLoading: false,
         schedules: action.profile.schedules,
-        profileTimezone: action.profile.timezone,
+        profileTimezoneCity: action.profile.timezone_city,
         settingsHeader: `Your posting schedule for ${action.profile.serviceUsername}`,
       };
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
@@ -46,6 +47,27 @@ export default (state = initialState, action) => {
         ...state,
         days: transformSchedules(action.result.schedules),
         schedules: action.result.schedules,
+      };
+    case `updateTimezone_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        profileTimezoneCity: action.result.newTimezone,
+        clearTimezoneInput: false,
+      };
+    case `getTimezones_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        items: action.result.suggestions,
+      };
+    case actionTypes.CLEAR_TIMEZONE_INPUT:
+      return {
+        ...state,
+        clearTimezoneInput: true,
+      };
+    case actionTypes.RESET_TIMEZONE_INPUT:
+      return {
+        ...state,
+        clearTimezoneInput: false,
       };
     default:
       return state;
@@ -75,5 +97,21 @@ export const actions = {
     minutes,
     dayName,
     profileId,
+  }),
+  handleUpdateTimezone: ({ timezone, city, profileId }) => ({
+    type: actionTypes.UPDATE_TIMEZONE,
+    timezone,
+    city,
+    profileId,
+  }),
+  handleGetTimezones: ({ query }) => ({
+    type: actionTypes.GET_TIMEZONES,
+    query,
+  }),
+  handleTimezoneInputFocus: () => ({
+    type: actionTypes.CLEAR_TIMEZONE_INPUT,
+  }),
+  handleTimezoneInputBlur: () => ({
+    type: actionTypes.RESET_TIMEZONE_INPUT,
   }),
 };

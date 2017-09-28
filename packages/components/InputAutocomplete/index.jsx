@@ -8,10 +8,11 @@ import {
 } from '../lib/utils';
 import {
   aquaHaze,
+  white,
 } from '../style/color';
 
 const matchValueToItem = (item, value) =>
-  item.toLowerCase().indexOf(value.toLowerCase()) !== -1;
+  item.label.toLowerCase().indexOf(value.toLowerCase()) !== -1;
 
 const InputAutocomplete = ({
   input: {
@@ -21,8 +22,11 @@ const InputAutocomplete = ({
   onSelect,
   items,
   sortItems,
+  placeholder,
+  onFocusHandler,
+  onBlurHandler,
 }) => {
-  const renderItem = (item, isHighlighted) => {
+  const renderItem = ({ label }, isHighlighted) => {
     const style = calculateStyles({
       default: {
         padding: '2px 6px',
@@ -43,7 +47,7 @@ const InputAutocomplete = ({
       <div style={style}><Text
         key={uuid()}
       >
-        {item}
+        {label}
       </Text></div>
     );
   };
@@ -58,19 +62,28 @@ const InputAutocomplete = ({
     width: '100%',
   };
 
-  const menuStyle = {
-    margin: '0.25rem 0 0 0',
-    backgroundColor: 'white',
-    border: '1px solid #e6ebef',
-    borderRadius: '2px',
-    boxShadow: '0 1px 2px rgba(50, 59, 67, 0.3)',
-    width: '100%',
-    position: 'absolute',
-  };
+  const notEmpty = items.length > 1;
+  const menuStyle = calculateStyles({
+    default: {
+      margin: '0.25rem 0 0 0',
+      backgroundColor: `${white}`,
+      position: 'absolute',
+    },
+    notEmpty: {
+      margin: '0.25rem 0 0 0',
+      backgroundColor: `${white}`,
+      border: '1px solid #e6ebef',
+      borderRadius: '2px',
+      boxShadow: '0 1px 2px rgba(50, 59, 67, 0.3)',
+      position: 'absolute',
+      zIndex: '3000',
+    },
+  }, {
+    notEmpty,
+  });
 
   const wrapperStyle = {
     display: 'flex',
-    // flexDirection: 'column',
     width: '100%',
   };
 
@@ -78,13 +91,22 @@ const InputAutocomplete = ({
     <div>
       <Autocomplete
         value={value}
-        inputProps={{ id: 'states-autocomplete', style: inputStyle }}
+        inputProps={{
+          id: 'states-autocomplete',
+          style: inputStyle,
+          placeholder,
+          onFocus: onFocusHandler,
+          onBlur: onBlurHandler,
+        }}
         items={items}
-        getItemValue={item => item}
+        getItemValue={item => item.label}
         shouldItemRender={matchValueToItem}
         sortItems={sortItems}
         onChange={onChange}
-        onSelect={onSelect}
+        onSelect={(val, obj) => {
+          value = val;
+          onSelect(obj);
+        }}
         renderItem={renderItem}
         menuStyle={menuStyle}
         wrapperStyle={wrapperStyle}
@@ -98,14 +120,20 @@ InputAutocomplete.propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.string.isRequired,
   }).isRequired,
-  items: PropTypes.arrayOf(PropTypes.string),
+  items: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+  })).isRequired,
   onSelect: PropTypes.func.isRequired,
   sortItems: PropTypes.func.isRequired,
+  onFocusHandler: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  onBlurHandler: PropTypes.func.isRequired,
 };
 
 InputAutocomplete.defaultProps = {
   value: '',
   items: [],
+  placeholder: '',
 };
 
 export default InputAutocomplete;

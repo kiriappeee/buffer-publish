@@ -35,8 +35,8 @@ const fieldStyle = {
 };
 
 const sortItems = (a, b, value) => {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
+  const aLower = a.label.toLowerCase();
+  const bLower = b.label.toLowerCase();
   const valueLower = value.toLowerCase();
   const queryPosA = aLower.indexOf(valueLower);
   const queryPosB = bLower.indexOf(valueLower);
@@ -49,6 +49,9 @@ const sortItems = (a, b, value) => {
 let TimezoneInputForm = ({
   items,
   handleSubmit,
+  onTimezoneInputFocus,
+  onTimezoneInputBlur,
+  onTimezoneChange,
 }) => (
   <form>
     <div style={editTimezoneStyle}>
@@ -68,7 +71,11 @@ let TimezoneInputForm = ({
               name="timezone"
               component={InputAutocomplete}
               items={items}
-              onSelect={handleSubmit}
+              placeholder={'Type a city...'}
+              onChange={onTimezoneChange}
+              onFocusHandler={onTimezoneInputFocus}
+              onBlurHandler={onTimezoneInputBlur}
+              onSelect={({ timezone, city }) => { handleSubmit({ timezone, city }); }}
               sortItems={sortItems}
             />
           </div>
@@ -79,8 +86,13 @@ let TimezoneInputForm = ({
   );
 
 TimezoneInputForm.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+  })).isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  onTimezoneInputFocus: PropTypes.func.isRequired,
+  onTimezoneInputBlur: PropTypes.func.isRequired,
+  onTimezoneChange: PropTypes.func.isRequired,
 };
 
 TimezoneInputForm.defaultProps = {
@@ -95,10 +107,9 @@ TimezoneInputForm = reduxForm({
 TimezoneInputForm = connect(
   ({ settings }) => ({
     initialValues: {
-      timezone: settings ? settings.profileTimezone : '',
+      timezone: settings && !settings.clearTimezoneInput ? settings.profileTimezoneCity : '',
     },
   }),
 )(TimezoneInputForm);
 
 export default TimezoneInputForm;
-

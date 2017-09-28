@@ -9,9 +9,9 @@
  * location (or there is no match) will be sorted alphabetically - For example,
  * a search for "or" would return "North Carolina" above "North Dakota".
  */
-export function sortStates(a, b, value) {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
+export function sortItems(a, b, value) {
+  const aLower = a.label.toLowerCase();
+  const bLower = b.label.toLowerCase();
   const valueLower = value.toLowerCase();
   const queryPosA = aLower.indexOf(valueLower);
   const queryPosB = bLower.indexOf(valueLower);
@@ -20,57 +20,18 @@ export function sortStates(a, b, value) {
   }
   return aLower < bLower ? -1 : 1;
 }
-export function getStates() {
+
+export function getTimezones() {
   return [
-    'Alabama',
-    'Alaska',
-    'Arizona',
-    'Arkansas',
-    'California',
-    'Colorado',
-    'Connecticut',
-    'Delaware',
-    'Florida',
-    'Georgia',
-    'Hawaii',
-    'Idaho',
-    'Illinois',
-    'Indiana',
-    'Iowa',
-    'Kansas',
-    'Kentucky',
-    'Louisiana',
-    'Maine',
-    'Maryland',
-    'Massachusetts',
-    'Michigan',
-    'Minnesota',
-    'Mississippi',
-    'Missouri',
-    'Montana',
-    'Nebraska',
-    'Nevada',
-    'New Hampshire',
-    'New Jersey',
-    'New Mexico',
-    'New York',
-    'North Carolina',
-    'North Dakota',
-    'Ohio',
-    'Oklahoma',
-    'Oregon',
-    'Pennsylvania',
-    'Rhode Island',
-    'South Carolina',
-    'South Dakota',
-    'Tennessee',
-    'Texas',
-    'Utah',
-    'Vermont',
-    'Virginia',
-    'Washington',
-    'West Virginia',
-    'Wisconsin',
-    'Wyoming',
+    { label: 'Benxi - China', timezone: 'Asia/Shanghai', offset: 28800 },
+    { label: 'Berrechid - Morocco', timezone: 'Africa/Casablanca', offset: 3600 },
+    { label: 'Kitakyu016bshu016b - Japan', timezone: 'Asia/Tokyo', offset: 32400 },
+    { label: 'Basingstoke - United Kingdom', timezone: 'Europe/London', offset: 3600 },
+    { label: 'Bridgetown - Barbados', timezone: 'America/Barbados', offset: -14400 },
+    { label: 'Ventura, CA - United States', timezone: 'America/Los_Angeles', offset: -25200 },
+    { label: 'Birmingham - United Kingdom', timezone: 'Europe/London', offset: 3600 },
+    { label: 'Brisbane - Australia', timezone: 'Australia/Brisbane', offset: 36000 },
+    { label: 'North Charleston, SC - United States', timezone: 'America/New_York', offset: -14400 },
+    { label: 'Kitakami - Japan', timezone: 'Asia/Tokyo', offset: 32400 },
   ];
 }

@@ -15,6 +15,7 @@ import {
 
 import PostingTimeForm from '../PostingTimeForm';
 import TimezoneInputForm from '../TimezoneInputForm';
+import debounce from '../../utils/debounce';
 
 const headerStyle = {
   marginBottom: '0.5rem',
@@ -52,9 +53,13 @@ const ProfileSettings = ({
   scheduleLoading,
   onUpdateTime,
   onAddPostingTime,
+  onUpdateTimezone,
+  onGetTimezones,
   settingsHeader,
   hasTwentyFourHourTimeFormat,
   onRemoveTimeClick,
+  onTimezoneInputFocus,
+  onTimezoneInputBlur,
 }) => {
   if (loading) {
     return (
@@ -64,6 +69,15 @@ const ProfileSettings = ({
     );
   }
   const emptySchedule = days.filter(day => day.postingTimesTotal > 0).length < 1;
+  // TODO: is this the right place?
+  if (items.length > 0) {
+    items.forEach(item =>
+      item.label = item.city,
+    );
+  }
+
+  const debouncedOnChange = debounce(onGetTimezones, 500);
+
   return (
     <div>
       <div style={headerStyle}>
@@ -72,10 +86,11 @@ const ProfileSettings = ({
       <Divider />
       <div style={timezoneStyle}>
         <TimezoneInputForm
-          onSubmit={() => { console.log('timezone submit'); }}
+          handleSubmit={({ city, timezone }) => onUpdateTimezone({ city, timezone })}
           items={items}
-          onChange={() => { console.log('on change'); }}
-          onSelect={() => { console.log('on select action'); }}
+          onTimezoneChange={debouncedOnChange}
+          onTimezoneInputFocus={onTimezoneInputFocus}
+          onTimezoneInputBlur={onTimezoneInputBlur}
         />
       </div>
       <Divider />
@@ -156,13 +171,19 @@ ProfileSettings.propTypes = {
     }),
   ).isRequired,
   hasTwentyFourHourTimeFormat: PropTypes.bool.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+  })).isRequired,
   loading: PropTypes.bool.isRequired,
   scheduleLoading: PropTypes.bool.isRequired,
   settingsHeader: PropTypes.string.isRequired,
   onRemoveTimeClick: PropTypes.func.isRequired,
   onUpdateTime: PropTypes.func.isRequired,
   onAddPostingTime: PropTypes.func.isRequired,
+  onUpdateTimezone: PropTypes.func.isRequired,
+  onGetTimezones: PropTypes.func.isRequired,
+  onTimezoneInputFocus: PropTypes.func.isRequired,
+  onTimezoneInputBlur: PropTypes.func.isRequired,
 };
 
 ProfileSettings.defaultProps = {

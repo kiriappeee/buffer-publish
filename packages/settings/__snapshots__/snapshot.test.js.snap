@@ -3114,6 +3114,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       onClick={[Function]}
                       onFocus={[Function]}
                       onKeyDown={[Function]}
+                      placeholder="Type a city..."
                       role="combobox"
                       style={
                         Object {
@@ -14051,6 +14052,7 @@ exports[`Snapshots TimezoneInputForm default 1`] = `
                   onClick={[Function]}
                   onFocus={[Function]}
                   onKeyDown={[Function]}
+                  placeholder="Type a city..."
                   role="combobox"
                   style={
                     Object {
@@ -14063,7 +14065,7 @@ exports[`Snapshots TimezoneInputForm default 1`] = `
                       "width": "100%",
                     }
                   }
-                  value="America/Vancouver"
+                  value=""
                 />
               </div>
             </div>

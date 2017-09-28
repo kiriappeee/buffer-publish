@@ -1714,6 +1714,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                             onClick={[Function]}
                             onFocus={[Function]}
                             onKeyDown={[Function]}
+                            placeholder="Type a city..."
                             role="combobox"
                             style={
                               Object {

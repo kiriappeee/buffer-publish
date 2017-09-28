@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import { action } from '@storybook/addon-actions';
 import InputAutocomplete from './index';
-import { getStates, sortStates } from './utils';
+import { sortItems, getTimezones } from './utils';
 
 storiesOf('InputAutocomplete')
   .addDecorator(checkA11y)
@@ -13,8 +13,19 @@ storiesOf('InputAutocomplete')
         onChange: action('on-change'),
         value: '',
       }}
-      items={getStates()}
+      items={getTimezones()}
       onSelect={action('select-item')}
-      sortItems={sortStates}
+      sortItems={sortItems}
+    />
+  ))
+  .add('empty items', () => (
+    <InputAutocomplete
+      input={{
+        onChange: action('on-change'),
+        value: '',
+      }}
+      items={[]}
+      onSelect={action('select-item')}
+      sortItems={sortItems}
     />
   ));

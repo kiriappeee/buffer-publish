@@ -14,8 +14,9 @@ export default connect(
     days: state.settings.days,
     schedules: state.settings.schedules,
     items: state.settings.items,
-    profileTimezone: state.settings.profileTimezone,
+    profileTimezoneCity: state.settings.profileTimezoneCity,
     hasTwentyFourHourTimeFormat: state.settings.hasTwentyFourHourTimeFormat,
+    clearTimezoneInput: state.settings.clearTimezoneInput,
   }),
   (dispatch, ownProps) => ({
     onRemoveTimeClick: (hours, minutes, dayName, timeIndex) => {
@@ -43,6 +44,27 @@ export default connect(
         dayName: day.day || day,
         profileId: ownProps.profileId,
       }));
+    },
+    onUpdateTimezone: ({ timezone, city }) => {
+      dispatch(actions.handleUpdateTimezone({
+        timezone,
+        city,
+        profileId: ownProps.profileId,
+      }));
+    },
+    // send both args to allow debounce to work correctly
+    onGetTimezones: (ev, timezone) => {
+      if (timezone.length > 1) {
+        dispatch(actions.handleGetTimezones({
+          query: timezone,
+        }));
+      }
+    },
+    onTimezoneInputFocus: () => {
+      dispatch(actions.handleTimezoneInputFocus());
+    },
+    onTimezoneInputBlur: () => {
+      dispatch(actions.handleTimezoneInputBlur());
     },
   }),
 )(ProfileSettings);

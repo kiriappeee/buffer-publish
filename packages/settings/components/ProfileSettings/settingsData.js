@@ -60,13 +60,13 @@ export const days = [
 ];
 
 export const timezones = [
-  'Pacific/Midway',
-  'America/Adak',
-  'America/Anchorage',
-  'Pacific/Gambier',
-  'America/Dawson_Creek',
-  'Pacific/Auckland',
-  'Pacific/Chatham',
+  { label: 'Pacific/Midway', timezone: 'Pacific/Midway' },
+  { label: 'America/Adak', timezone: 'America/Adak' },
+  { label: 'America/Anchorage', timezone: 'America/Anchorage' },
+  { label: 'Pacific/Gambier', timezone: 'Pacific/Gambier' },
+  { label: 'America/Dawson_Creek', timezone: 'America/Dawson_Creek' },
+  { label: 'Pacific/Auckland', timezone: 'Pacific/Auckland' },
+  { label: 'Pacific/Chatham', timezone: 'Pacific/Chatham' },
 ];
 
 export const profileTimezone = 'Pacific/Midway';

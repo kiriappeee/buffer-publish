@@ -7,6 +7,7 @@ module.exports = profile => ({
   pendingCount: profile.counts.pending,
   sentCount: profile.counts.sent,
   timezone: profile.timezone,
+  timezone_city: profile.timezone_city,
   schedules: profile.schedules,
   service: profile.service,
   service_type: profile.service_type,

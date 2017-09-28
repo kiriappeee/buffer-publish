@@ -10,6 +10,8 @@ const enabledApplicationModesMethod = require('./enabledApplicationModes');
 const composerApiProxyMethod = require('./composerApiProxy');
 const environmentMethod = require('./environment');
 const updateScheduleMethod = require('./updateSchedule');
+const getTimezonesMethod = require('./getTimezones');
+const updateTimezoneMethod = require('./updateTimezone');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -22,4 +24,6 @@ module.exports = checkToken(rpc(
   composerApiProxyMethod,
   environmentMethod,
   updateScheduleMethod,
+  getTimezonesMethod,
+  updateTimezoneMethod,
 ));

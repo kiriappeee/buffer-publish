@@ -88,6 +88,24 @@ export default ({ dispatch, getState }) => next => (action) => {
         },
       }));
       break;
+    case actionTypes.UPDATE_TIMEZONE:
+      dispatch(dataFetchActions.fetch({
+        name: 'updateTimezone',
+        args: {
+          profileId: action.profileId,
+          timezone: action.timezone,
+          city: action.city,
+        },
+      }));
+      break;
+    case actionTypes.GET_TIMEZONES:
+      dispatch(dataFetchActions.fetch({
+        name: 'getTimezones',
+        args: {
+          query: action.query,
+        },
+      }));
+      break;
     case `updateSchedule_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(notificationActions.createNotification({
         notificationType: 'success',
@@ -95,6 +113,18 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case `updateSchedule_${dataFetchActionTypes.FETCH_FAIL}`:
+      dispatch(notificationActions.createNotification({
+        notificationType: 'error',
+        message: action.error,
+      }));
+      break;
+    case `updateTimezone_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      dispatch(notificationActions.createNotification({
+        notificationType: 'success',
+        message: 'Awesome! Your schedule has been successfully saved.',
+      }));
+      break;
+    case `updateTimezone_${dataFetchActionTypes.FETCH_FAIL}`:
       dispatch(notificationActions.createNotification({
         notificationType: 'error',
         message: action.error,
