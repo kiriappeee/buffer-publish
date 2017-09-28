@@ -999,10 +999,11 @@ exports[`Snapshots PostingTimeForm default 1`] = `
               onMouseLeave={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#168eea",
+                  "backgroundColor": "transparent",
                   "border": "0.063rem solid transparent",
+                  "borderColor": "#168eea",
                   "borderRadius": "2rem",
-                  "color": "#fff",
+                  "color": "#168eea",
                   "cursor": "pointer",
                   "display": "inline-block",
                   "fontFamily": "\\"Open Sans\\", sans-serif",
@@ -1942,10 +1943,11 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
               onMouseLeave={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#168eea",
+                  "backgroundColor": "transparent",
                   "border": "0.063rem solid transparent",
+                  "borderColor": "#168eea",
                   "borderRadius": "2rem",
-                  "color": "#fff",
+                  "color": "#168eea",
                   "cursor": "pointer",
                   "display": "inline-block",
                   "fontFamily": "\\"Open Sans\\", sans-serif",
@@ -2967,10 +2969,11 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
               onMouseLeave={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#168eea",
+                  "backgroundColor": "transparent",
                   "border": "0.063rem solid transparent",
+                  "borderColor": "#168eea",
                   "borderRadius": "2rem",
-                  "color": "#fff",
+                  "color": "#168eea",
                   "cursor": "pointer",
                   "display": "inline-block",
                   "fontFamily": "\\"Open Sans\\", sans-serif",
@@ -4156,10 +4159,11 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#168eea",
+                      "backgroundColor": "transparent",
                       "border": "0.063rem solid transparent",
+                      "borderColor": "#168eea",
                       "borderRadius": "2rem",
-                      "color": "#fff",
+                      "color": "#168eea",
                       "cursor": "pointer",
                       "display": "inline-block",
                       "fontFamily": "\\"Open Sans\\", sans-serif",
