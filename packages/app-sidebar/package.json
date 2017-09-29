@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/app-sidebar",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "The sidebar for the Buffer suite of products",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "hamstu@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "0.5.35",
+    "@bufferapp/async-data-fetch": "0.7.4",
     "@bufferapp/components": "0.7.3"
   },
   "devDependencies": {

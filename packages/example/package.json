@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-example",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "An example UI package",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "0.5.35",
+    "@bufferapp/async-data-fetch": "0.7.4",
     "@bufferapp/components": "0.7.3"
   },
   "devDependencies": {

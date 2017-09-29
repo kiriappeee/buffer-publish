@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/async-data-fetch",
-  "version": "0.5.35",
+  "version": "0.7.4",
   "description": "Fetch data from RPC backend",
   "main": "index.js",
   "scripts": {
