@@ -31,7 +31,7 @@ const contentStyle = {
   flexGrow: 1,
   display: 'flex',
   flexDirection: 'column',
-  marginLeft: '1rem',
+  marginLeft: '0.5rem',
   marginRight: '1rem',
   height: '100vh',
 };

@@ -5,6 +5,7 @@ const containerStyle = {
   overflowY: 'auto',
   marginTop: '1rem',
   paddingRight: '1rem',
+  paddingLeft: '0.5rem',
   display: 'flex',
   flexDirection: 'column',
 };

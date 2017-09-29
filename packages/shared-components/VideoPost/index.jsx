@@ -22,6 +22,9 @@ const VideoPost = ({
   onImageClickPrev,
   onImageClose,
   isLightboxOpen,
+  draggable,
+  dragging,
+  hovering,
 }) =>
   <ImagePost
     isConfirmingDelete={isConfirmingDelete}
@@ -44,6 +47,9 @@ const VideoPost = ({
     onImageClickPrev={onImageClickPrev}
     onImageClose={onImageClose}
     isLightboxOpen={isLightboxOpen}
+    draggable={draggable}
+    dragging={dragging}
+    hovering={hovering}
   />;
 
 VideoPost.propTypes = ImagePost.propTypes;

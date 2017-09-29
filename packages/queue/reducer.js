@@ -18,6 +18,7 @@ export const actionTypes = {
   OPEN_COMPOSER: 'OPEN_COMPOSER',
   HIDE_COMPOSER: 'HIDE_COMPOSER',
   POST_COUNT_UPDATED: 'POST_COUNT_UPDATED',
+  POST_DROPPED: 'POST_DROPPED',
 };
 
 const initialState = {
@@ -332,5 +333,11 @@ export const actions = {
     type: actionTypes.POST_COUNT_UPDATED,
     profileId,
     counts,
+  }),
+  onDropPost: ({ draggedPost, droppedOnPost, profileId }) => ({
+    type: actionTypes.POST_DROPPED,
+    profileId,
+    draggedPost,
+    droppedOnPost,
   }),
 };

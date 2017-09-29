@@ -9,6 +9,7 @@ import {
 } from '../style/font';
 import {
   outerSpace,
+  outerSpaceLight,
   white,
   mystic,
   geyser,
@@ -42,6 +43,7 @@ const Card = ({
   onMouseLeave,
   reducedPadding,
   shadowHeight,
+  draggingPlaceholder,
 }) => {
   const style = calculateStyles({
     default: {
@@ -89,6 +91,9 @@ const Card = ({
     shadowHeightTwo: {
       boxShadow: boxShadowLevelTwo,
     },
+    draggingPlaceholder: {
+      border: `${borderWidth} dashed ${outerSpaceLight}`,
+    },
   }, {
     doublePadding,
     empty,
@@ -101,6 +106,7 @@ const Card = ({
     reducedPadding,
     shadowHeightOne: shadowHeight === 1,
     shadowHeightTwo: shadowHeight === 2,
+    draggingPlaceholder,
   });
   return (
     <div
@@ -127,10 +133,12 @@ Card.propTypes = {
   onMouseLeave: PropTypes.func,
   reducedPadding: PropTypes.bool,
   shadowHeight: PropTypes.oneOf([0, 1, 2]),
+  draggingPlaceholder: PropTypes.bool,
 };
 
 Card.defaultProps = {
   shadowHeight: 0,
+  draggingPlaceholder: false,
 };
 
 export default Card;

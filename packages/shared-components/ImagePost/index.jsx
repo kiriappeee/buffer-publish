@@ -58,6 +58,9 @@ const ImagePost = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
+  draggable,
+  dragging,
+  hovering,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -112,6 +115,9 @@ const ImagePost = ({
       sent={sent}
       text={text}
       retweetProfile={retweetProfile}
+      draggable={draggable}
+      dragging={dragging}
+      hovering={hovering}
     >
       {children}
     </Post>

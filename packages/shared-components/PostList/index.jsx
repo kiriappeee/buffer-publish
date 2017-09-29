@@ -42,6 +42,7 @@ const renderPost = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
+  onDropPost,
   draggable,
 }) => {
   const postWithEventHandlers = {
@@ -56,15 +57,19 @@ const renderPost = ({
     onImageClickNext: () => onImageClickNext({ post }),
     onImageClickPrev: () => onImageClickPrev({ post }),
     onImageClose: () => onImageClose({ post }),
+    onDropPost,
   };
   let PostComponent = postTypeComponentMap.get(post.type);
   PostComponent = PostComponent || TextPost;
 
   if (draggable) {
     return (
-      <PostDragWrapper id={post.id}>
-        <PostComponent {...postWithEventHandlers} />
-      </PostDragWrapper>
+      <PostDragWrapper
+        id={post.id}
+        index={post.index}
+        postComponent={PostComponent}
+        postProps={postWithEventHandlers}
+      />
     );
   }
 
@@ -85,6 +90,7 @@ const PostList = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
+  onDropPost,
   draggable,
 }) =>
   <div>
@@ -110,6 +116,7 @@ const PostList = ({
               onImageClickNext,
               onImageClickPrev,
               onImageClose,
+              onDropPost,
               draggable,
             })
           }
@@ -134,6 +141,7 @@ PostList.propTypes = {
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
+  onDropPost: PropTypes.func,
   draggable: PropTypes.bool,
 };
 

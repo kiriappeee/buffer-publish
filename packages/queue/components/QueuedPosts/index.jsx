@@ -11,6 +11,7 @@ import {
 import {
   PostLists,
   EmptyState,
+  PostDragLayer,
 } from '@bufferapp/publish-shared-components';
 import ComposerPopover from '../ComposerPopover';
 
@@ -40,6 +41,7 @@ const QueuedPosts = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
+  onDropPost,
   showComposer,
   editMode,
 }) => {
@@ -53,6 +55,7 @@ const QueuedPosts = ({
 
   return (
     <div>
+      <PostDragLayer />
       <div style={composerStyle}>
         {showComposer && !editMode &&
           <ComposerPopover
@@ -88,6 +91,7 @@ const QueuedPosts = ({
         onImageClickNext={onImageClickNext}
         onImageClickPrev={onImageClickPrev}
         onImageClose={onImageClose}
+        onDropPost={onDropPost}
         draggable
       />
     </div>
@@ -120,6 +124,7 @@ QueuedPosts.propTypes = {
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
+  onDropPost: PropTypes.func.isRequired,
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
 };

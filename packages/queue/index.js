@@ -8,9 +8,11 @@ const formatPostLists = (posts) => {
   const postLists = [];
   let day;
   let newList;
+  let index = 0;
   const postIds = Object.keys(posts);
 
   postIds.forEach((postId) => {
+    posts[postId].index = index; index += 1;
     if (posts[postId].day !== day) {
       day = posts[postId].day;
       newList = { listHeader: day, posts: [posts[postId]] };
@@ -97,6 +99,13 @@ export default connect(
     onImageClickPrev: (post) => {
       dispatch(actions.handleImageClickPrev({
         post: post.post,
+        profileId: ownProps.profileId,
+      }));
+    },
+    onDropPost: ({ draggedPost, droppedOnPost }) => {
+      dispatch(actions.onDropPost({
+        draggedPost,
+        droppedOnPost,
         profileId: ownProps.profileId,
       }));
     },

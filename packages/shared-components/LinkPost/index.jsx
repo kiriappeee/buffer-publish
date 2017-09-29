@@ -55,6 +55,9 @@ const LinkPost = ({
   scheduledAt,
   sent,
   text,
+  draggable,
+  dragging,
+  hovering,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -124,6 +127,9 @@ const LinkPost = ({
       scheduledAt={scheduledAt}
       sent={sent}
       text={text}
+      draggable={draggable}
+      dragging={dragging}
+      hovering={hovering}
     >
       {children}
     </Post>
