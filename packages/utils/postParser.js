@@ -109,5 +109,8 @@ module.exports = (post) => {
     media,
     extra_media: post.extra_media,
     subprofile_id: post.subprofile_id,
+    due_at: post.due_at,
+    scheduled_at: post.scheduled_at,
+    pinned: post.pinned,
   };
 };
