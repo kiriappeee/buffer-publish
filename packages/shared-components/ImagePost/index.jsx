@@ -19,6 +19,7 @@ const postContentTextStyle = {
 
 const imageWrapperStyle = {
   position: 'relative',
+  cursor: 'pointer',
 };
 
 const imageTagStyle = {

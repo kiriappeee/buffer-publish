@@ -17,6 +17,10 @@ const postContentTextStyle = {
   flexGrow: 1,
 };
 
+const imagesWrapperStyle = {
+  cursor: 'pointer',
+};
+
 const MultipleImagesPost = ({
   postDetails,
   imageUrls,
@@ -53,7 +57,7 @@ const MultipleImagesPost = ({
           {text}
         </LinkifiedText>
       </span>
-      <div onClick={onImageClick}>
+      <div style={imagesWrapperStyle} onClick={onImageClick}>
         <MultipleImages
           border={'rounded'}
           height={'15rem'}
