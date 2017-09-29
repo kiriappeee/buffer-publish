@@ -34,6 +34,9 @@ const ComposerWrapper = ({
     updateId: post ? post.id : undefined,
     update: { ...post, images: post.imageUrls },
     subprofileId: post ? post.subprofile_id : undefined,
+    due_at: post ? post.due_at : undefined,
+    scheduled_at: post ? post.scheduled_at : undefined,
+    pinned: post ? post.pinned : undefined,
   };
   const formattedData = formatInputData({
     env: metaData.application,
