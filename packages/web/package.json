@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-web",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Buffer Web Dashboard",
   "main": "index.jsx",
   "scripts": {
@@ -16,12 +16,12 @@
     "@bufferapp/notifications": "0.7.3",
     "@bufferapp/publish-example": "0.7.4",
     "@bufferapp/publish-profile-sidebar": "0.7.4",
-    "@bufferapp/publish-queue": "0.7.4",
+    "@bufferapp/publish-queue": "0.7.5",
     "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-sent": "0.7.4",
+    "@bufferapp/publish-sent": "0.7.5",
     "@bufferapp/publish-settings": "0.7.4",
     "@bufferapp/publish-shared-components": "0.7.4",
-    "@bufferapp/publish-store": "0.7.4",
+    "@bufferapp/publish-store": "0.7.5",
     "@bufferapp/publish-tabs": "0.7.4"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
