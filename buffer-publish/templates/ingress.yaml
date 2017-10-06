@@ -18,7 +18,7 @@ metadata:
     {{- end }}
 spec:
   rules:
-    - host: "{{ .Values.branchSubdomain }}publish.buffer.com"
+    - host: "{{ .Values.branchSubdomain }}publish.dev.buffer.com"
       http:
         paths:
           - path: /
