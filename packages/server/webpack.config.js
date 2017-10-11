@@ -1,3 +1,5 @@
+
+var webpack=require('webpack');
 module.exports = {
   context: __dirname,
   entry: [
@@ -8,7 +10,9 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/',
   },
-  plugins: [],
+  plugins: [
+     new webpack.IgnorePlugin(/\.\/locale$/)
+  ],
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
   },
