@@ -10,11 +10,12 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/',
   },
-  plugins: [
-     new webpack.IgnorePlugin(/\.\/locale$/)
-  ],
+  plugins: [],
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
+    alias: {
+      moment$: 'moment/moment.js',
+    },
   },
   module: {
     rules: [
