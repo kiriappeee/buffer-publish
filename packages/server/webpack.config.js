@@ -11,6 +11,9 @@ module.exports = {
   plugins: [],
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
+    alias: {
+      moment$: 'moment/moment.js',
+    },
   },
   module: {
     rules: [
