@@ -3,6 +3,11 @@
 exports[`Snapshots TabNavigation default 1`] = `
 <div
   id="tabs"
+  style={
+    Object {
+      "paddingLeft": "0.5rem",
+    }
+  }
 >
   <div>
     <div

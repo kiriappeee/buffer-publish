@@ -1152,6 +1152,7 @@ exports[`Snapshots Post sent 1`] = `
 exports[`Snapshots PostFooter isConfirmingDelete 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={true}
     isDeleting={false}
     isWorking={false}
@@ -1172,6 +1173,7 @@ exports[`Snapshots PostFooter isConfirmingDelete 1`] = `
 exports[`Snapshots PostFooter isDeleting 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={true}
     isWorking={false}
@@ -1192,6 +1194,7 @@ exports[`Snapshots PostFooter isDeleting 1`] = `
 exports[`Snapshots PostFooter isWorking 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={true}
@@ -1212,6 +1215,7 @@ exports[`Snapshots PostFooter isWorking 1`] = `
 exports[`Snapshots PostFooter post with error 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1234,6 +1238,7 @@ exports[`Snapshots PostFooter post with error 1`] = `
 exports[`Snapshots PostFooter queued post 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1255,6 +1260,7 @@ exports[`Snapshots PostFooter queued post 1`] = `
 exports[`Snapshots PostFooter sent post 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1365,6 +1371,7 @@ exports[`Snapshots PostFooterDelete isConfirmingDelete 1`] = `
 exports[`Snapshots PostList default 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1422,6 +1429,7 @@ exports[`Snapshots PostList default 1`] = `
 exports[`Snapshots PostList image posts 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1481,6 +1489,7 @@ exports[`Snapshots PostList image posts 1`] = `
 exports[`Snapshots PostList link posts 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1566,6 +1575,7 @@ exports[`Snapshots PostList link posts 1`] = `
 exports[`Snapshots PostList missing type 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1623,6 +1633,7 @@ exports[`Snapshots PostList missing type 1`] = `
 exports[`Snapshots PostList multiple image posts 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1690,6 +1701,7 @@ exports[`Snapshots PostList multiple image posts 1`] = `
 exports[`Snapshots PostList sent 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1747,6 +1759,7 @@ exports[`Snapshots PostList sent 1`] = `
 exports[`Snapshots PostList video posts 1`] = `
 <span>
   <PostList
+    draggable={false}
     listHeader="List Header"
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
@@ -1806,6 +1819,7 @@ exports[`Snapshots PostList video posts 1`] = `
 exports[`Snapshots PostLists default 1`] = `
 <span>
   <PostLists
+    draggable={false}
     onCancelConfirmClick={[Function]}
     onDeleteClick={[Function]}
     onDeleteConfirmClick={[Function]}
