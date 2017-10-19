@@ -3,7 +3,7 @@ import { profilePageRoute } from '@bufferapp/publish-routes';
 import { Route, Switch } from 'react-router';
 import AppSidebar from '@bufferapp/app-sidebar';
 import Notifications from '@bufferapp/notifications';
-import ProfilePage from '../ProfilePage';
+import ProfilePage from '@bufferapp/profile-page';
 import DefaultPage from '../DefaultPage';
 
 const appStyle = {
