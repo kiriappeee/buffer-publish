@@ -15,9 +15,6 @@ module.exports = {
       moment$: 'moment/moment.js',
     },
   },
-  watchOptions: {
-    poll: true,
-  },
   module: {
     rules: [
       {
