@@ -104,7 +104,6 @@ const QueueItems = (props) => {
     if (queueItemtype === 'header') {
       return renderHeader(rest);
     }
-    console.error(`Unknown queue item object (queueItemtype: '${queueItemtype}')`, rest);
     return null;
   });
   return (
