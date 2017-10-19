@@ -97,11 +97,11 @@ const renderHeader = ({ text, id }) => (
 const QueueItems = (props) => {
   const { items, ...propsForPosts } = props;
   const itemList = items.map((item) => {
-    const { queueItemtype, ...rest } = item;
-    if (queueItemtype === 'post') {
+    const { queueItemType, ...rest } = item;
+    if (queueItemType === 'post') {
       return renderPost({ post: rest, ...propsForPosts });
     }
-    if (queueItemtype === 'header') {
+    if (queueItemType === 'header') {
       return renderHeader(rest);
     }
     return null;

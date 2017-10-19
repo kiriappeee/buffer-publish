@@ -1,11 +1,11 @@
 const postLists = [
   {
-    queueItemtype: 'header',
+    queueItemType: 'header',
     test: 'Today',
     id: 'header-1',
   },
   {
-    queueItemtype: 'post',
+    queueItemType: 'post',
     id: '590a365d749c2018007b23c6',
     isConfirmingDelete: false,
     isDeleting: false,
@@ -23,7 +23,7 @@ const postLists = [
     type: 'text',
   },
   {
-    queueItemtype: 'post',
+    queueItemType: 'post',
     id: '590a3693749c200e007b23c7',
     isConfirmingDelete: false,
     isDeleting: false,
@@ -41,12 +41,12 @@ const postLists = [
     type: 'text',
   },
   {
-    queueItemtype: 'header',
+    queueItemType: 'header',
     test: 'Tuesday May 3rd',
     id: 'header-2',
   },
   {
-    queueItemtype: 'post',
+    queueItemType: 'post',
     id: '590a365d749c2018007b23c1',
     isConfirmingDelete: false,
     isDeleting: false,
@@ -64,7 +64,7 @@ const postLists = [
     type: 'text',
   },
   {
-    queueItemtype: 'post',
+    queueItemType: 'post',
     id: '590a3693749c200e007b23c2',
     isConfirmingDelete: false,
     isDeleting: false,

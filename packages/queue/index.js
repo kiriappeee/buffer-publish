@@ -10,9 +10,9 @@ const formatPostLists = (posts) => {
   return orderedPosts.reduce((acc, post, index) => {
     if (lastHeader !== post.day) {
       lastHeader = post.day;
-      acc.push({ queueItemtype: 'header', text: post.day, id: `header-${index}` });
+      acc.push({ queueItemType: 'header', text: post.day, id: `header-${index}` });
     }
-    acc.push({ queueItemtype: 'post', index, ...post });
+    acc.push({ queueItemType: 'post', index, ...post });
     return acc;
   }, []);
 };
