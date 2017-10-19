@@ -31,6 +31,9 @@ const TextPost = ({
   retweetComment,
   retweetCommentLinks,
   sent,
+  draggable,
+  dragging,
+  hovering,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -66,6 +69,9 @@ const TextPost = ({
       retweetComment={retweetComment}
       retweetCommentLinks={retweetCommentLinks}
       sent={sent}
+      draggable={draggable}
+      dragging={dragging}
+      hovering={hovering}
     >
       {children}
     </Post>

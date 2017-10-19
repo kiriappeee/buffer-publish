@@ -5,22 +5,16 @@ import QueuedPosts from './components/QueuedPosts';
 import { actions } from './reducer';
 
 const formatPostLists = (posts) => {
-  const postLists = [];
-  let day;
-  let newList;
-  const postIds = Object.keys(posts);
-
-  postIds.forEach((postId) => {
-    if (posts[postId].day !== day) {
-      day = posts[postId].day;
-      newList = { listHeader: day, posts: [posts[postId]] };
-      postLists.push(newList);
-    } else { // if same day add to posts array of current list
-      newList.posts.push(posts[postId]);
+  const orderedPosts = Object.values(posts).sort((a, b) => a.due_at - b.due_at);
+  let lastHeader = null;
+  return orderedPosts.reduce((acc, post, index) => {
+    if (lastHeader !== post.day) {
+      lastHeader = post.day;
+      acc.push({ queueItemType: 'header', text: post.day, id: `header-${index}` });
     }
-  });
-
-  return postLists;
+    acc.push({ queueItemType: 'post', index, ...post });
+    return acc;
+  }, []);
 };
 
 // default export = container
@@ -97,6 +91,13 @@ export default connect(
     onImageClickPrev: (post) => {
       dispatch(actions.handleImageClickPrev({
         post: post.post,
+        profileId: ownProps.profileId,
+      }));
+    },
+    onDropPost: ({ dragIndex, hoverIndex }) => {
+      dispatch(actions.onDropPost({
+        dragIndex,
+        hoverIndex,
         profileId: ownProps.profileId,
       }));
     },

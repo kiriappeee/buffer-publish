@@ -13,12 +13,13 @@ import {
 
 import PostFooterButtons from '../PostFooterButtons';
 
-const postDetailsStyle = {
+const getPostDetailsStyle = dragging => ({
   display: 'flex',
   padding: '0.5rem 1rem',
   backgroundColor: '#fcfcfc',
   borderTop: `${borderWidth} solid ${mystic}`,
-};
+  opacity: dragging ? 0 : 1,
+});
 
 const postActionDetailsStyle = {
   flexGrow: 1,
@@ -68,8 +69,9 @@ const PostFooter = ({
   onShareNowClick,
   postDetails,
   sent,
+  dragging,
 }) =>
-  (<div style={postDetailsStyle}>
+  (<div style={getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
       {postDetails.error && renderIcon()}
       {renderText({ postDetails })}
@@ -104,12 +106,14 @@ PostFooter.propTypes = {
     postAction: PropTypes.string,
   }).isRequired,
   sent: PropTypes.bool.isRequired,
+  dragging: PropTypes.bool,
 };
 
 PostFooter.defaultProps = {
   isDeleting: false,
   isConfirmingDelete: false,
   isWorking: false,
+  dragging: false,
 };
 
 export default PostFooter;

@@ -11,7 +11,7 @@ const TabNavigation = ({
 }) =>
   /* wrapper div with "tabs" id necessary as a selector
   for a11y focus after selecting profile in sidebar */
-  <div id="tabs">
+  <div id="tabs" style={{ paddingLeft: '0.5rem' }}>
     <Tabs
       selectedTabId={selectedTabId}
       onTabClick={onTabClick}

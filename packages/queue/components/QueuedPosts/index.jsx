@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import {
-  Text,
   Input,
   LoadingAnimation,
 } from '@bufferapp/components';
 import {
-  geyser,
-  fillColor,
-  curiousBlue,
-} from '@bufferapp/components/style/color';
-import {
-  PostLists,
   EmptyState,
+  PostDragLayer,
 } from '@bufferapp/publish-shared-components';
+
 import ComposerPopover from '../ComposerPopover';
+import QueueItems from '../QueueItems';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -42,6 +39,7 @@ const QueuedPosts = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
+  onDropPost,
   showComposer,
   editMode,
 }) => {
@@ -55,6 +53,7 @@ const QueuedPosts = ({
 
   return (
     <div>
+      <PostDragLayer />
       <div style={composerStyle}>
         {showComposer && !editMode &&
           <ComposerPopover
@@ -79,8 +78,8 @@ const QueuedPosts = ({
       {showComposer && editMode &&
         <ComposerPopover onSave={onComposerCreateSuccess} />
       }
-      <PostLists
-        postLists={postLists}
+      <QueueItems
+        items={postLists}
         onCancelConfirmClick={onCancelConfirmClick}
         onDeleteClick={onDeleteClick}
         onDeleteConfirmClick={onDeleteConfirmClick}
@@ -90,6 +89,8 @@ const QueuedPosts = ({
         onImageClickNext={onImageClickNext}
         onImageClickPrev={onImageClickPrev}
         onImageClose={onImageClose}
+        onDropPost={onDropPost}
+        draggable
       />
     </div>
   );
@@ -101,12 +102,7 @@ QueuedPosts.propTypes = {
   page: PropTypes.number, // eslint-disable-line
   postLists: PropTypes.arrayOf(
     PropTypes.shape({
-      listHeader: PropTypes.string,
-      posts: PropTypes.arrayOf(
-        PropTypes.shape({
-          text: PropTypes.string,
-        }),
-      ),
+      type: PropTypes.string,
     }),
   ).isRequired,
   total: PropTypes.number,
@@ -121,6 +117,7 @@ QueuedPosts.propTypes = {
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
+  onDropPost: PropTypes.func.isRequired,
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
 };

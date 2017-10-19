@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  List,
   Text,
 } from '@bufferapp/components';
-import TextPost from '../TextPost';
-import ImagePost from '../ImagePost';
-import MultipleImagesPost from '../MultipleImagesPost';
-import LinkPost from '../LinkPost';
-import VideoPost from '../VideoPost';
-import PostDragWrapper from '../PostDragWrapper';
+
+import {
+  TextPost,
+  ImagePost,
+  MultipleImagesPost,
+  LinkPost,
+  VideoPost,
+  PostDragWrapper,
+} from '@bufferapp/publish-shared-components';
 
 const postStyle = {
   marginBottom: '2rem',
@@ -43,6 +45,7 @@ const renderPost = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  draggable,
 }) => {
   const postWithEventHandlers = {
     ...post,
@@ -61,61 +64,59 @@ const renderPost = ({
   let PostComponent = postTypeComponentMap.get(post.type);
   PostComponent = PostComponent || TextPost;
 
-  return <PostComponent {...postWithEventHandlers} />;
+  if (draggable) {
+    return (
+      <div style={postStyle} key={post.id}>
+        <PostDragWrapper
+          id={post.id}
+          index={post.index}
+          postComponent={PostComponent}
+          postProps={postWithEventHandlers}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div style={postStyle} key={post.id}>
+      <PostComponent {...postWithEventHandlers} />
+    </div>
+  );
 };
+
+const renderHeader = ({ text, id }) => (
+  <div style={listHeaderStyle} key={id}>
+    <Text color={'black'}>
+      {text}
+    </Text>
+  </div>
+);
 
 /* eslint-enable react/prop-types */
 
-const PostList = ({
-  listHeader,
-  posts,
-  onCancelConfirmClick,
-  onDeleteClick,
-  onDeleteConfirmClick,
-  onEditClick,
-  onShareNowClick,
-  onImageClick,
-  onImageClickNext,
-  onImageClickPrev,
-  onImageClose,
-  onDropPost,
-}) =>
-  <div>
-    <div style={listHeaderStyle}>
-      <Text
-        color={'black'}
-      >
-        {listHeader}
-      </Text>
+const QueueItems = (props) => {
+  const { items, ...propsForPosts } = props;
+  const itemList = items.map((item) => {
+    const { queueItemType, ...rest } = item;
+    if (queueItemType === 'post') {
+      return renderPost({ post: rest, ...propsForPosts });
+    }
+    if (queueItemType === 'header') {
+      return renderHeader(rest);
+    }
+    return null;
+  });
+  return (
+    <div>
+      {itemList}
     </div>
-    <List
-      items={posts.map(post =>
-        <div style={postStyle}>
-          {
-            renderPost({
-              post,
-              onCancelConfirmClick,
-              onDeleteClick,
-              onDeleteConfirmClick,
-              onEditClick,
-              onShareNowClick,
-              onImageClick,
-              onImageClickNext,
-              onImageClickPrev,
-              onImageClose,
-              onDropPost,
-            })
-          }
-        </div>,
-      )}
-    />
-  </div>;
+  );
+};
 
-PostList.propTypes = {
-  listHeader: PropTypes.string,
-  posts: PropTypes.arrayOf(
+QueueItems.propTypes = {
+  items: PropTypes.arrayOf(
     PropTypes.shape({
-      text: PropTypes.string,
+      type: PropTypes.string,
     }),
   ),
   onCancelConfirmClick: PropTypes.func,
@@ -128,10 +129,12 @@ PostList.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
+  draggable: PropTypes.bool,
 };
 
-PostList.defaultProps = {
-  posts: [],
+QueueItems.defaultProps = {
+  items: [],
+  draggable: false,
 };
 
-export default PostList;
+export default QueueItems;

@@ -42,6 +42,9 @@ const MultipleImagesPost = ({
   onImageClose,
   onImageClick,
   currentImage,
+  draggable,
+  dragging,
+  hovering,
 }) => {
   const images = imageUrls.map(url => ({ src: `${url}` }));
   const children = (
@@ -93,6 +96,9 @@ const MultipleImagesPost = ({
       retweetProfile={retweetProfile}
       sent={sent}
       text={text}
+      draggable={draggable}
+      dragging={dragging}
+      hovering={hovering}
     >
       {children}
     </Post>

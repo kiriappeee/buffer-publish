@@ -24,26 +24,25 @@ const renderPostList = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
-}) => {
-  return (
-    <div style={postListStyle}>
-      <PostList
-        key={`postList-${index}`}
-        listHeader={postList.listHeader}
-        posts={postList.posts}
-        onCancelConfirmClick={onCancelConfirmClick}
-        onDeleteClick={onDeleteClick}
-        onDeleteConfirmClick={onDeleteConfirmClick}
-        onEditClick={onEditClick}
-        onShareNowClick={onShareNowClick}
-        onImageClick={onImageClick}
-        onImageClickNext={onImageClickNext}
-        onImageClickPrev={onImageClickPrev}
-        onImageClose={onImageClose}
-      />
-    </div>
-  );
-}
+  onDropPost,
+}) =>
+  <div style={postListStyle}>
+    <PostList
+      key={`postList-${index}`}
+      listHeader={postList.listHeader}
+      posts={postList.posts}
+      onCancelConfirmClick={onCancelConfirmClick}
+      onDeleteClick={onDeleteClick}
+      onDeleteConfirmClick={onDeleteConfirmClick}
+      onEditClick={onEditClick}
+      onShareNowClick={onShareNowClick}
+      onImageClick={onImageClick}
+      onImageClickNext={onImageClickNext}
+      onImageClickPrev={onImageClickPrev}
+      onImageClose={onImageClose}
+      onDropPost={onDropPost}
+    />
+  </div>;
 
 /* eslint-enable react/prop-types */
 
@@ -58,6 +57,7 @@ const PostLists = ({
   onImageClickNext,
   onImageClickPrev,
   onImageClose,
+  onDropPost,
 }) =>
   <List
     items={postLists.map((postList, index) =>
@@ -73,6 +73,7 @@ const PostLists = ({
         onImageClickNext,
         onImageClickPrev,
         onImageClose,
+        onDropPost,
       }),
     )}
     fillContainer
@@ -98,6 +99,7 @@ PostLists.propTypes = {
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
+  onDropPost: PropTypes.func,
 };
 
 PostLists.defaultProps = {

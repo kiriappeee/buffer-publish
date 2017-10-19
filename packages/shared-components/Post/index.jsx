@@ -4,22 +4,47 @@ import {
   Card,
   LinkifiedText,
 } from '@bufferapp/components';
+
+import {
+  transitionAnimationType,
+} from '@bufferapp/components/style/animation';
+
+import {
+  boxShadowLevelTwo,
+} from '@bufferapp/components/style/dropShadow';
+
 import PostFooter from '../PostFooter';
 import RetweetPanel from '../RetweetPanel';
 
-const postContainerStyle = {
+const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
   width: '100%',
-};
+  boxShadow: (hovering && !dragging) ? '0 2px 4px 0 rgba(0,0,0,0.50)' : 'none',
+  transition: `box-shadow 0.1s ${transitionAnimationType}`,
+});
 
 const postStyle = {
   flexGrow: 1,
   minWidth: 0,
 };
 
-const postContentStyle = {
-  padding: '1rem',
+const prefixCSSForBrowser = (css) => {
+  const chrome = navigator.userAgent.indexOf('Chrome') > -1;
+  if (chrome) {
+    return `-webkit-${css}`;
+  }
+  const firefox = navigator.userAgent.indexOf('Firefox') > -1;
+  if (firefox) {
+    return `-moz-${css}`;
+  }
+  return css;
 };
+
+const getPostContentStyle = ({ draggable, dragging }) => ({
+  padding: '1rem',
+  cursor: draggable ? prefixCSSForBrowser('grab') : 'inherit',
+  opacity: dragging ? 0 : 1,
+});
 
 const retweetProfileWrapperStyle = {
   marginBottom: '1rem',
@@ -53,10 +78,12 @@ const renderContent = ({
   retweetComment,
   retweetCommentLinks,
   retweetProfile,
+  draggable,
+  dragging,
 }) => {
   if (retweetProfile) {
     return (
-      <div style={postContentStyle}>
+      <div style={getPostContentStyle({ draggable, dragging })}>
         { retweetComment ? renderRetweetComment({ retweetComment, retweetCommentLinks }) : '' }
         <Card
           color={'off-white'}
@@ -72,7 +99,7 @@ const renderContent = ({
   }
 
   return (
-    <div style={postContentStyle}>
+    <div style={getPostContentStyle({ draggable, dragging })}>
       { children }
     </div>
   );
@@ -95,18 +122,24 @@ const Post = ({
   retweetCommentLinks,
   retweetProfile,
   sent,
+  draggable,
+  dragging,
+  hovering,
 }) =>
-  (<div style={postContainerStyle}>
+  (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
       <Card
         faded={isDeleting}
         noPadding
+        draggingPlaceholder={dragging}
       >
         {renderContent({
           children,
           retweetProfile,
           retweetComment,
           retweetCommentLinks,
+          draggable,
+          dragging,
         })}
         <PostFooter
           isDeleting={isDeleting}
@@ -119,6 +152,7 @@ const Post = ({
           onShareNowClick={onShareNowClick}
           postDetails={postDetails}
           sent={sent}
+          dragging={dragging}
         />
       </Card>
     </div>
@@ -153,6 +187,10 @@ Post.commonPropTypes = {
     }),
   ),
   sent: PropTypes.bool.isRequired,
+  draggable: PropTypes.bool,
+  dragging: PropTypes.bool,
+  hovering: PropTypes.bool,
+  onDropPost: PropTypes.func,
 };
 
 Post.propTypes = {

@@ -1152,6 +1152,7 @@ exports[`Snapshots Post sent 1`] = `
 exports[`Snapshots PostFooter isConfirmingDelete 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={true}
     isDeleting={false}
     isWorking={false}
@@ -1172,6 +1173,7 @@ exports[`Snapshots PostFooter isConfirmingDelete 1`] = `
 exports[`Snapshots PostFooter isDeleting 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={true}
     isWorking={false}
@@ -1192,6 +1194,7 @@ exports[`Snapshots PostFooter isDeleting 1`] = `
 exports[`Snapshots PostFooter isWorking 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={true}
@@ -1212,6 +1215,7 @@ exports[`Snapshots PostFooter isWorking 1`] = `
 exports[`Snapshots PostFooter post with error 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1234,6 +1238,7 @@ exports[`Snapshots PostFooter post with error 1`] = `
 exports[`Snapshots PostFooter queued post 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1255,6 +1260,7 @@ exports[`Snapshots PostFooter queued post 1`] = `
 exports[`Snapshots PostFooter sent post 1`] = `
 <span>
   <PostFooter
+    dragging={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}

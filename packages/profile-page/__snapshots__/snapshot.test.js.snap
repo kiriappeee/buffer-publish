@@ -172,13 +172,18 @@ exports[`Snapshots ProfilePage should render 1`] = `
           "flexDirection": "column",
           "flexGrow": 1,
           "height": "100vh",
-          "marginLeft": "1rem",
+          "marginLeft": "0.5rem",
           "marginRight": "1rem",
         }
       }
     >
       <div
         id="tabs"
+        style={
+          Object {
+            "paddingLeft": "0.5rem",
+          }
+        }
       >
         <div>
           <div
@@ -350,6 +355,7 @@ exports[`Snapshots ProfilePage should render 1`] = `
             "flexDirection": "column",
             "marginTop": "1rem",
             "overflowY": "auto",
+            "paddingLeft": "0.5rem",
             "paddingRight": "1rem",
           }
         }
@@ -531,13 +537,18 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
           "flexDirection": "column",
           "flexGrow": 1,
           "height": "100vh",
-          "marginLeft": "1rem",
+          "marginLeft": "0.5rem",
           "marginRight": "1rem",
         }
       }
     >
       <div
         id="tabs"
+        style={
+          Object {
+            "paddingLeft": "0.5rem",
+          }
+        }
       >
         <div>
           <div
@@ -710,6 +721,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
             "flexDirection": "column",
             "marginTop": "1rem",
             "overflowY": "auto",
+            "paddingLeft": "0.5rem",
             "paddingRight": "1rem",
           }
         }
