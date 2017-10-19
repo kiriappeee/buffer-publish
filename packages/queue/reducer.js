@@ -57,14 +57,77 @@ const getPostUpdateId = (action) => {
   if (action.post) { return action.post.id; }
 };
 
-const movePost = (arr, from, to) => {
+/**
+ * movePostInArray()
+ *
+ * Return a new array with the item at index `from` moved to index `to`.
+ *
+ * @param  {Array}  arr
+ * @param  {Number} from
+ * @param  {Number} to
+ * @return {Array}
+ */
+const movePostInArray = (arr, from, to) => {
   const clone = [...arr];
+
+  // Support passing `from` and `to` in non-sequential order (e.g., 4 and 1).
   const fromIndex = from < to ? from : to;
   const toIndex = to > from ? to : from;
+
+  // Generate the new array
   Array.prototype.splice.call(clone, toIndex, 0,
     Array.prototype.splice.call(clone, fromIndex, 1)[0],
   );
   return clone;
+};
+
+/**
+ * handlePostDropped()
+ *
+ * This function takes an object contaning posts keyed by ID and a `POST_DROPPED`
+ * action and returns the re-ordered posts map object based on that action.
+ * (This action is dispatched during a drag operation when a post hovers
+ * over another post in the queue. See `PostDragLayer/index.jsx`)
+ *
+ * Since posts are stored in a `key: value` map we can't just reorder them like
+ * an array. Instead we're just shuffling values around. This means that as you
+ * drag a post it's `due_at` (and other related data in the object) is 'fixed'.
+ * The result is that when we render posts ordered by their `due_at` time in the
+ * queue the new order reflected.
+ *
+ * @param  {Object} posts   key: value map of posts
+ * @param  {Object} action  action dispatched from the drag operation
+ * @return {Object}         new posts map
+ */
+const handlePostDropped = (posts, action) => {
+  const orderedPosts = Object.values(posts).sort((a, b) => a.due_at - b.due_at);
+
+  // Save values that should be fixed
+  const fixedValues = orderedPosts.map(p => ({
+    due_at: p.due_at,
+    postAction: p.postDetails.postAction,
+    day: p.day,
+  }));
+
+  // Move the post that is being dragged
+  const afterMovePosts = movePostInArray(
+    orderedPosts,
+    action.dragIndex,
+    action.hoverIndex,
+  );
+
+  // Apply the fixed values we saved
+  const finalPosts = afterMovePosts.map((p, idx) => {
+    p.day = fixedValues[idx].day;
+    p.postDetails.postAction = fixedValues[idx].postAction;
+    p.due_at = fixedValues[idx].due_at;
+    return p;
+  });
+
+  // Return a new post map
+  const newPostsMap = finalPosts.reduce((map, post) => { map[post.id] = post; return map; }, {});
+
+  return newPostsMap;
 };
 
 /**
@@ -191,32 +254,9 @@ const profileReducer = (state = profileInitialState, action) => {
         total: action.counts.pending,
       };
     case actionTypes.POST_DROPPED: {
-      const orderedPosts = Object.values(state.posts).sort((a, b) => a.due_at - b.due_at);
-      const fixedValues = orderedPosts.map(p => ({
-        due_at: p.due_at,
-        postAction: p.postDetails.postAction,
-        day: p.day,
-      }));
-      const afterMovePosts = movePost(
-        orderedPosts,
-        action.dragIndex,
-        action.hoverIndex,
-      );
-      const finalPosts = afterMovePosts.map((p, idx) => {
-        p.day = fixedValues[idx].day;
-        p.postDetails.postAction = fixedValues[idx].postAction;
-        p.due_at = fixedValues[idx].due_at;
-        return p;
-      });
-      const newPostsMap = finalPosts.reduce(
-        (map, post) => {
-          map[post.id] = post; return map;
-        },
-        {},
-      );
       return {
         ...state,
-        posts: newPostsMap,
+        posts: handlePostDropped(state.posts, action),
       };
     }
     case `sharePostNow_${dataFetchActionTypes.FETCH_FAIL}`:

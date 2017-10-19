@@ -6,7 +6,6 @@ import {
   LoadingAnimation,
 } from '@bufferapp/components';
 import {
-  // PostLists,
   EmptyState,
   PostDragLayer,
 } from '@bufferapp/publish-shared-components';
