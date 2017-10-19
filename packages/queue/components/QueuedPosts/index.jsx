@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { DragDropContext } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
-
 import {
   Input,
   LoadingAnimation,
 } from '@bufferapp/components';
 import {
-  PostLists,
+  // PostLists,
   EmptyState,
   PostDragLayer,
 } from '@bufferapp/publish-shared-components';
+
 import ComposerPopover from '../ComposerPopover';
+import QueueItems from '../QueueItems';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -80,8 +79,8 @@ const QueuedPosts = ({
       {showComposer && editMode &&
         <ComposerPopover onSave={onComposerCreateSuccess} />
       }
-      <PostLists
-        postLists={postLists}
+      <QueueItems
+        items={postLists}
         onCancelConfirmClick={onCancelConfirmClick}
         onDeleteClick={onDeleteClick}
         onDeleteConfirmClick={onDeleteConfirmClick}
@@ -104,12 +103,7 @@ QueuedPosts.propTypes = {
   page: PropTypes.number, // eslint-disable-line
   postLists: PropTypes.arrayOf(
     PropTypes.shape({
-      listHeader: PropTypes.string,
-      posts: PropTypes.arrayOf(
-        PropTypes.shape({
-          text: PropTypes.string,
-        }),
-      ),
+      type: PropTypes.string,
     }),
   ).isRequired,
   total: PropTypes.number,
@@ -140,4 +134,4 @@ QueuedPosts.defaultProps = {
   editMode: false,
 };
 
-export default DragDropContext(HTML5Backend)(QueuedPosts);
+export default QueuedPosts;

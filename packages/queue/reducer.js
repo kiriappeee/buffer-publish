@@ -57,6 +57,16 @@ const getPostUpdateId = (action) => {
   if (action.post) { return action.post.id; }
 };
 
+const movePost = (arr, from, to) => {
+  const clone = [...arr];
+  const fromIndex = from < to ? from : to;
+  const toIndex = to > from ? to : from;
+  Array.prototype.splice.call(clone, toIndex, 0,
+    Array.prototype.splice.call(clone, fromIndex, 1)[0],
+  );
+  return clone;
+};
+
 /**
  * Reducers
  */
@@ -180,6 +190,35 @@ const profileReducer = (state = profileInitialState, action) => {
         ...state,
         total: action.counts.pending,
       };
+    case actionTypes.POST_DROPPED: {
+      const orderedPosts = Object.values(state.posts).sort((a, b) => a.due_at - b.due_at);
+      const fixedValues = orderedPosts.map(p => ({
+        due_at: p.due_at,
+        postAction: p.postDetails.postAction,
+        day: p.day,
+      }));
+      const afterMovePosts = movePost(
+        orderedPosts,
+        action.dragIndex,
+        action.hoverIndex,
+      );
+      const finalPosts = afterMovePosts.map((p, idx) => {
+        p.day = fixedValues[idx].day;
+        p.postDetails.postAction = fixedValues[idx].postAction;
+        p.due_at = fixedValues[idx].due_at;
+        return p;
+      });
+      const newPostsMap = finalPosts.reduce(
+        (map, post) => {
+          map[post.id] = post; return map;
+        },
+        {},
+      );
+      return {
+        ...state,
+        posts: newPostsMap,
+      };
+    }
     case `sharePostNow_${dataFetchActionTypes.FETCH_FAIL}`:
     case actionTypes.POST_ERROR:
     case actionTypes.POST_CREATED:
@@ -207,6 +246,7 @@ const profileReducer = (state = profileInitialState, action) => {
 export default (state = initialState, action) => {
   let profileId;
   switch (action.type) {
+    case actionTypes.POST_DROPPED:
     case `sharePostNow_${dataFetchActionTypes.FETCH_FAIL}`:
     case profileSidebarActionTypes.SELECT_PROFILE:
     case `queuedPosts_${dataFetchActionTypes.FETCH_START}`:
@@ -334,10 +374,10 @@ export const actions = {
     profileId,
     counts,
   }),
-  onDropPost: ({ draggedPost, droppedOnPost, profileId }) => ({
+  onDropPost: ({ dragIndex, hoverIndex, profileId }) => ({
     type: actionTypes.POST_DROPPED,
     profileId,
-    draggedPost,
-    droppedOnPost,
+    dragIndex,
+    hoverIndex,
   }),
 };

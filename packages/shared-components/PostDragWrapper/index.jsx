@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
 import PropTypes from 'prop-types';
 
 import flow from 'lodash.flow';
@@ -21,37 +20,20 @@ const postSource = {
 };
 
 const postTarget = {
-  hover(props, monitor, hoverComponent) {
-    const { index: dragIndex, postProps: dragPost } = monitor.getItem();
-    const { index: hoverIndex, postProps: hoverPost } = props;
+  hover(props, monitor) {
+    const { index: dragIndex } = monitor.getItem();
+    const { index: hoverIndex } = props;
 
-    // Don't replace post with itself
+    // Don't replace post with itself...
     if (dragIndex === hoverIndex) {
       return;
     }
 
-    console.log(`Dragging ${dragIndex} over ${hoverIndex}.`);
-
-    const hoverRect = findDOMNode(hoverComponent).getBoundingClientRect(); // eslint-disable-line
-    const topThirdOfHover = ((hoverRect.bottom - hoverRect.top) / 3) + hoverRect.top;
-    const bottomThirdOfHover = hoverRect.bottom - ((hoverRect.bottom - hoverRect.top) / 3);
-
-    const mouse = monitor.getClientOffset();
-
-    // Dragging downwards
-    if (dragIndex < hoverIndex && mouse.y < topThirdOfHover) {
-      return;
-    }
-
-    // Dragging upwards
-    if (dragIndex > hoverIndex && mouse.y > bottomThirdOfHover) {
-      return;
-    }
-
     // Drop!
-    props.postProps.onDropPost({ draggedPost: dragPost, droppedOnPost: hoverPost });
+    props.postProps.onDropPost({ dragIndex, hoverIndex });
 
-    // https://github.com/react-dnd/react-dnd/blob/abbe4c7d715c3be99a50885280b677f5c232d1a4/examples/04%20Sortable/Simple/Card.js#L67
+    // We need to directly mutate the monitor state here
+    // to ensure the currently dragged item index is updated.
     monitor.getItem().index = hoverIndex;
   },
 };
@@ -111,7 +93,7 @@ class PostDragWrapper extends Component {
 }
 
 PostDragWrapper.propTypes = {
-  handleDragPost: PropTypes.func.isRequired, // eslint-disable-line
+  handleDragPost: PropTypes.func, // eslint-disable-line
   profileId: PropTypes.string.isRequired, // eslint-disable-line
   postComponent: PropTypes.func.isRequired,
   postProps: PropTypes.object.isRequired, // eslint-disable-line
