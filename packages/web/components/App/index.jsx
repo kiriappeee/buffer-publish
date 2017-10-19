@@ -7,8 +7,8 @@ import HTML5Backend from 'react-dnd-html5-backend';
 
 import AppSidebar from '@bufferapp/app-sidebar';
 import Notifications from '@bufferapp/notifications';
+import ProfilePage from '@bufferapp/profile-page';
 
-import ProfilePage from '../ProfilePage';
 import DefaultPage from '../DefaultPage';
 
 const appStyle = {

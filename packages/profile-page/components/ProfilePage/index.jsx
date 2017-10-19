@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { Redirect } from 'react-router';
@@ -9,8 +8,6 @@ import SentPosts from '@bufferapp/publish-sent';
 import ProfileSettings from '@bufferapp/publish-settings';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
-
-import { actions as dataFetchActions } from '@bufferapp/async-data-fetch';
 import { ScrollableContainer } from '@bufferapp/publish-shared-components';
 import { getProfilePageParams } from '@bufferapp/publish-routes';
 import { Button } from '@bufferapp/components';
@@ -143,35 +140,4 @@ ProfilePage.defaultProps = {
   total: 0,
 };
 
-export default connect(
-  (state, ownProps) => {
-    const { tabId, profileId } =
-      getProfilePageParams({ path: ownProps.history.location.pathname }) || {};
-    if (state[tabId] && state[tabId].byProfileId && state[tabId].byProfileId[profileId]) {
-      return ({
-        loading: state[tabId].byProfileId[profileId].loading,
-        loadingMore: state[tabId].byProfileId[profileId].loadingMore,
-        moreToLoad: state[tabId].byProfileId[profileId].moreToLoad,
-        page: state[tabId].byProfileId[profileId].page,
-        posts: state[tabId].byProfileId[profileId].posts,
-        total: state[tabId].byProfileId[profileId].total,
-        translations: state.i18n.translations.example, // all package translations
-      });
-    }
-    return {};
-  },
-  dispatch => ({
-    onLoadMoreClick: ({ profileId, page, tabId }) => {
-      dispatch(
-        dataFetchActions.fetch({
-          name: `${tabId === 'queue' ? 'queued' : 'sent'}Posts`,
-          args: {
-            profileId,
-            page,
-            isFetchingMore: true,
-          },
-        }),
-      );
-    },
-  }),
-)(ProfilePage);
+export default ProfilePage;
