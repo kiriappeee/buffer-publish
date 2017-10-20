@@ -124,7 +124,7 @@ class DateTimeSlotPicker extends React.Component {
 
   onClick = this.props.onClick; // eslint-disable-line react/sort-comp
 
-  onDayClick = (e, day, modifiers) => {
+  onDayClick = (day, modifiers) => {
     const isDayDisabled = modifiers.disabled;
     if (isDayDisabled) return;
 
