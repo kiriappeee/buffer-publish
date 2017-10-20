@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Textarea from 'react-textarea-autosize';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import { LinkAttachmentTextFieldTypes } from '../AppConstants';
@@ -10,10 +11,10 @@ import styles from './css/LinkAttachmentTextEditor.css';
 
 class LinkAttachmentTextEditor extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired,
-    canBeEdited: React.PropTypes.bool.isRequired,
+    draftId: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    canBeEdited: PropTypes.bool.isRequired,
   };
 
   onLinkFieldKeyDown = (e) => {

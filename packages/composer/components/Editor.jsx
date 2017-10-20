@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { RichUtils, Modifier, EditorState } from '@bufferapp/draft-js';
 import DraftjsEditor from '@bufferapp/draft-js-plugins-editor';
@@ -44,19 +45,19 @@ import { getDraftCharacterCount } from '../stores/ComposerStore';
 
 class Editor extends React.Component {
   static propTypes = {
-    draft: React.PropTypes.object.isRequired,
-    isComposerExpanded: React.PropTypes.bool.isRequired,
-    shouldEnableFacebookAutocomplete: React.PropTypes.bool.isRequired,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    profiles: React.PropTypes.array,
-    shouldAutoFocus: React.PropTypes.bool,
-    onFocus: React.PropTypes.func,
-    placeholder: React.PropTypes.string,
-    hasAttachmentGlance: React.PropTypes.bool,
-    attachmentGlanceHasNoThumbnail: React.PropTypes.bool,
-    hasLinkAttachment: React.PropTypes.bool,
-    usesImageFirstLayout: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
+    draft: PropTypes.object.isRequired,
+    isComposerExpanded: PropTypes.bool.isRequired,
+    shouldEnableFacebookAutocomplete: PropTypes.bool.isRequired,
+    visibleNotifications: PropTypes.array.isRequired,
+    profiles: PropTypes.array,
+    shouldAutoFocus: PropTypes.bool,
+    onFocus: PropTypes.func,
+    placeholder: PropTypes.string,
+    hasAttachmentGlance: PropTypes.bool,
+    attachmentGlanceHasNoThumbnail: PropTypes.bool,
+    hasLinkAttachment: PropTypes.bool,
+    usesImageFirstLayout: PropTypes.bool,
+    readOnly: PropTypes.bool,
   };
 
   static defaultProps = {

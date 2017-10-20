@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Svg from '../../components/Svg';
 import styles from '../css/progress-indicators/CircularIndicator.css';
 
@@ -65,17 +66,17 @@ const CircularIndicator = (props) => {
 };
 
 CircularIndicator.propTypes = {
-  size: React.PropTypes.number.isRequired,
-  progress: React.PropTypes.number.isRequired,
-  initialProgress: React.PropTypes.number,
-  showText: React.PropTypes.bool,
-  strokeWidth: React.PropTypes.number,
-  classNames: React.PropTypes.shape({
-    container: React.PropTypes.string,
-    circle: React.PropTypes.string,
+  size: PropTypes.number.isRequired,
+  progress: PropTypes.number.isRequired,
+  initialProgress: PropTypes.number,
+  showText: PropTypes.bool,
+  strokeWidth: PropTypes.number,
+  classNames: PropTypes.shape({
+    container: PropTypes.string,
+    circle: PropTypes.string,
   }),
-  styles: React.PropTypes.shape({
-    circle: React.PropTypes.object,
+  styles: PropTypes.shape({
+    circle: PropTypes.object,
   }),
 };
 

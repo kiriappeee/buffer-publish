@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/CharacterCount.css';
 
 const CharacterCount = (props) => {
@@ -23,9 +24,9 @@ const CharacterCount = (props) => {
 };
 
 CharacterCount.propTypes = {
-  count: React.PropTypes.number.isRequired,
-  maxCount: React.PropTypes.number.isRequired,
-  className: React.PropTypes.string,
+  count: PropTypes.number.isRequired,
+  maxCount: PropTypes.number.isRequired,
+  className: PropTypes.string,
 };
 
 export default CharacterCount;

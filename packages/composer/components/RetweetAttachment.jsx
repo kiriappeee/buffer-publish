@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CloseButton from '../components/CloseButton';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
@@ -8,8 +9,8 @@ import styles from './css/RetweetAttachment.css';
 
 class RetweetAttachment extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    retweet: React.PropTypes.object.isRequired,
+    draftId: PropTypes.string.isRequired,
+    retweet: PropTypes.object.isRequired,
   };
 
   onCloseButtonClick = () => {

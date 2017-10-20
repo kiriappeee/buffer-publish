@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import LinkAttachmentTextEditor from '../components/LinkAttachmentTextEditor';
@@ -17,11 +18,11 @@ import { getAbsoluteUrl } from '../utils/StringUtils';
 
 class LinkAttachment extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    link: React.PropTypes.object.isRequired,
-    service: React.PropTypes.object,
-    visibleNotifications: React.PropTypes.array,
-    fileUploadProgress: React.PropTypes.number,
+    draftId: PropTypes.string.isRequired,
+    link: PropTypes.object.isRequired,
+    service: PropTypes.object,
+    visibleNotifications: PropTypes.array,
+    fileUploadProgress: PropTypes.number,
   };
 
   onCloseButtonClick = () => {

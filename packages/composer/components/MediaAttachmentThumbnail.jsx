@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import CloseButton from '../components/CloseButton';
@@ -9,11 +10,11 @@ import ModalActionCreators from '../__legacy-buffer-web-shared-components__/moda
 
 class MediaAttachmentThumbnail extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    className: React.PropTypes.string,
-    media: React.PropTypes.object.isRequired,
-    showTwitterImageDescription: React.PropTypes.bool.isRequired,
-    composerPosition: React.PropTypes.object,
+    draftId: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    media: PropTypes.object.isRequired,
+    showTwitterImageDescription: PropTypes.bool.isRequired,
+    composerPosition: PropTypes.object,
   };
 
   static defaultProps = {

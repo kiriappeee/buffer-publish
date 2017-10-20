@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Highlighter.css';
 
@@ -7,7 +8,7 @@ const Highlighter = (props) => (
 );
 
 Highlighter.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Highlighter;

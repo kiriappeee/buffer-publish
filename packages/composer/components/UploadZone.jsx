@@ -9,6 +9,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import Button from '../components/Button';
@@ -19,16 +20,16 @@ import { NotificationScopes } from '../AppConstants';
 
 class UploadZone extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    className: React.PropTypes.string,
-    classNames: React.PropTypes.shape({
-      uploadZone: React.PropTypes.string,
-      uploadZoneActive: React.PropTypes.string,
+    draftId: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    classNames: PropTypes.shape({
+      uploadZone: PropTypes.string,
+      uploadZoneActive: PropTypes.string,
     }),
-    uploadFormatsConfig: React.PropTypes.object,
-    disabled: React.PropTypes.bool,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    uploadType: React.PropTypes.string,
+    uploadFormatsConfig: PropTypes.object,
+    disabled: PropTypes.bool,
+    visibleNotifications: PropTypes.array.isRequired,
+    uploadType: PropTypes.string,
   };
 
   static defaultProps = {

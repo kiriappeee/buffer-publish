@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/BoardSelector.css';
 import BoardSelectorBoardItem from '../components/BoardSelectorBoardItem';
 import BoardCreator from '../components/BoardCreator';
@@ -6,12 +7,12 @@ import Input from '../components/Input';
 
 class BoardSelector extends React.Component {
   static propTypes = {
-    subprofilesCount: React.PropTypes.number,
-    profile: React.PropTypes.object.isRequired,
-    subprofiles: React.PropTypes.array.isRequired,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    canUnselectSubprofiles: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
+    subprofilesCount: PropTypes.number,
+    profile: PropTypes.object.isRequired,
+    subprofiles: PropTypes.array.isRequired,
+    visibleNotifications: PropTypes.array.isRequired,
+    canUnselectSubprofiles: PropTypes.bool,
+    onChange: PropTypes.func,
   };
 
   static defaultProps = {

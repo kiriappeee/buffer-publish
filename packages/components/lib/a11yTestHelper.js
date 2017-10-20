@@ -1,6 +1,5 @@
 // Modified from: https://gist.github.com/marcysutton/835c2fd90fadb631414b39523d5bda61
-import { findDOMNode } from 'react-dom';
-import { mount } from 'enzyme';
+import { render, findDOMNode } from 'react-dom';
 import axeCore from 'axe-core';
 
 /**
@@ -38,19 +37,16 @@ const testComponentA11y = (app) => {
   const div = document.createElement('div'); //eslint-disable-line
   document.body.appendChild(div); //eslint-disable-line
 
-  const wrapper = mount(app, { attachTo: div });
-  const node = findDOMNode(wrapper.component);
+  render(app, div);
+  const node = findDOMNode(div);
   const config = {
     rules: {
       'color-contrast': { enabled: false },
     },
   };
   document.body.removeChild(div); //eslint-disable-line
-  const oldNode = global.Node;
-  global.Node = node.ownerDocument.defaultView.Node;
   return new Promise((resolve) => {
     axeCore.a11yCheck(node, config, (results) => {
-      global.Node = oldNode;
       resolve(results);
       report(results);
     });

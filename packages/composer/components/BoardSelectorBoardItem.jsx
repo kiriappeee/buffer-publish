@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import Button from '../components/Button';
 import styles from './css/BoardSelectorBoardItem.css';
 
 class BoardSelectorBoardItem extends React.Component {
   static propTypes = {
-    profile: React.PropTypes.object.isRequired,
-    board: React.PropTypes.object.isRequired,
-    canUnselectSubprofiles: React.PropTypes.bool.isRequired,
-    onChange: React.PropTypes.func.isRequired,
+    profile: PropTypes.object.isRequired,
+    board: PropTypes.object.isRequired,
+    canUnselectSubprofiles: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
   };
 
   onClick = () => (

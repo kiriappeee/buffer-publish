@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import styles from './css/ImageDescriptionInput.css';
@@ -6,8 +7,8 @@ import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 
 class ImageDescriptionInput extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string,
-    mediaAttachment: React.PropTypes.object,
+    draftId: PropTypes.string,
+    mediaAttachment: PropTypes.object,
   };
 
   constructor(props) {

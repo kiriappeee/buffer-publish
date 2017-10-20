@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import A from '../components/A';
 import styles from './css/PowerSchedulerButton.css';
 
@@ -24,8 +25,8 @@ const PowerSchedulerButton = (props) => {
 };
 
 PowerSchedulerButton.propTypes = {
-  selectedProfiles: React.PropTypes.array,
-  visibleNotifications: React.PropTypes.array.isRequired,
+  selectedProfiles: PropTypes.array,
+  visibleNotifications: PropTypes.array.isRequired,
 };
 
 export default PowerSchedulerButton;

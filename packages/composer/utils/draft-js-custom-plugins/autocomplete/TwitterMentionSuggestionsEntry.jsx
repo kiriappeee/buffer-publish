@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TwitterMentionSuggestionsEntry = (props) => {
   const {
@@ -22,8 +23,8 @@ const TwitterMentionSuggestionsEntry = (props) => {
 };
 
 TwitterMentionSuggestionsEntry.propTypes = {
-  mention: React.PropTypes.object.isRequired,
-  theme: React.PropTypes.object.isRequired,
+  mention: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
 export default TwitterMentionSuggestionsEntry;

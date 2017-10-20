@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './PrepopulatedMention.css';
 
@@ -7,7 +8,7 @@ const PrepopulatedMention = (props) => (
 );
 
 PrepopulatedMention.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default PrepopulatedMention;

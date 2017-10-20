@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { EditorState } from '@bufferapp/draft-js';
 import addUnshortenedLink from '../unshortened-link/modifiers/addUnshortenedLink';
 import Button from '../../../components/Button';
@@ -23,10 +24,10 @@ const findEntityRangeForKey = (contentBlock, entityKey, callback) => {
 
 class ShortLinkTooltip extends React.Component {
   static propTypes = {
-    callbacks: React.PropTypes.object.isRequired,
-    store: React.PropTypes.object.isRequired,
-    onLinkUnshortened: React.PropTypes.func,
-    classNames: React.PropTypes.object,
+    callbacks: PropTypes.object.isRequired,
+    store: PropTypes.object.isRequired,
+    onLinkUnshortened: PropTypes.func,
+    classNames: PropTypes.object,
   };
 
   static defaultProps = {

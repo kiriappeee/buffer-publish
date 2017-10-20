@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/MediaAttachmentHeader.css';
 
 const MediaAttachmentHeader = (props) => {
@@ -22,8 +23,8 @@ const MediaAttachmentHeader = (props) => {
 };
 
 MediaAttachmentHeader.propTypes = {
-  maxAttachableImagesCount: React.PropTypes.number.isRequired,
-  className: React.PropTypes.string,
+  maxAttachableImagesCount: PropTypes.number.isRequired,
+  className: PropTypes.string,
 };
 
 export default MediaAttachmentHeader;

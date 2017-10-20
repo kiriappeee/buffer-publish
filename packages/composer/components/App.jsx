@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import DragMe from '@bufferapp/dragme';
 import AppStore from '../stores/AppStore';
@@ -41,125 +42,125 @@ function getState() {
 
 class App extends React.Component {
   static propTypes = {
-    profilesData: React.PropTypes.arrayOf(React.PropTypes.shape({
-      id: React.PropTypes.string.isRequired,
-      serviceName: React.PropTypes.string.isRequired,
-      serviceUsername: React.PropTypes.string.isRequired,
-      serviceFormattedUsername: React.PropTypes.string.isRequired,
-      imagesAvatar: React.PropTypes.string.isRequired,
-      timezone: React.PropTypes.string.isRequired,
-      shouldBeAutoSelected: React.PropTypes.bool.isRequired,
-      isDisabled: React.PropTypes.bool.isRequired,
-      serviceType: React.PropTypes.string.isRequired,
-      isBusinessProfile: React.PropTypes.bool.isRequired,
-      subprofiles: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.string.isRequired,
-        profileId: React.PropTypes.string.isRequired,
-        name: React.PropTypes.string.isRequired,
-        avatar: React.PropTypes.string.isRequired,
-        isShared: React.PropTypes.bool.isRequired,
-        shouldBeAutoSelected: React.PropTypes.bool.isRequired,
+    profilesData: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      serviceName: PropTypes.string.isRequired,
+      serviceUsername: PropTypes.string.isRequired,
+      serviceFormattedUsername: PropTypes.string.isRequired,
+      imagesAvatar: PropTypes.string.isRequired,
+      timezone: PropTypes.string.isRequired,
+      shouldBeAutoSelected: PropTypes.bool.isRequired,
+      isDisabled: PropTypes.bool.isRequired,
+      serviceType: PropTypes.string.isRequired,
+      isBusinessProfile: PropTypes.bool.isRequired,
+      subprofiles: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        profileId: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        isShared: PropTypes.bool.isRequired,
+        shouldBeAutoSelected: PropTypes.bool.isRequired,
       })).isRequired,
     })).isRequired,
 
-    userData: React.PropTypes.shape({
-      id: React.PropTypes.string.isRequired,
-      s3UploadSignature: React.PropTypes.shape({
-        algorithm: React.PropTypes.string.isRequired,
-        base64Policy: React.PropTypes.string.isRequired,
-        bucket: React.PropTypes.string.isRequired,
-        credentials: React.PropTypes.string.isRequired,
-        date: React.PropTypes.string.isRequired,
-        expires: React.PropTypes.string.isRequired,
-        signature: React.PropTypes.string.isRequired,
-        successActionStatus: React.PropTypes.string.isRequired,
+    userData: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      s3UploadSignature: PropTypes.shape({
+        algorithm: PropTypes.string.isRequired,
+        base64Policy: PropTypes.string.isRequired,
+        bucket: PropTypes.string.isRequired,
+        credentials: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        expires: PropTypes.string.isRequired,
+        signature: PropTypes.string.isRequired,
+        successActionStatus: PropTypes.string.isRequired,
       }).isRequired,
-      uses24hTime: React.PropTypes.bool.isRequired,
-      weekStartsMonday: React.PropTypes.bool.isRequired,
-      isFreeUser: React.PropTypes.bool.isRequired,
-      isBusinessUser: React.PropTypes.bool.isRequired,
-      shouldAlwaysSkipEmptyTextAlert: React.PropTypes.bool.isRequired,
-      profileGroups: React.PropTypes.arrayOf(React.PropTypes.shape({
-        id: React.PropTypes.string.isRequired,
-        name: React.PropTypes.string.isRequired,
-        profileIds: React.PropTypes.arrayOf(React.PropTypes.string.isRequired).isRequired,
+      uses24hTime: PropTypes.bool.isRequired,
+      weekStartsMonday: PropTypes.bool.isRequired,
+      isFreeUser: PropTypes.bool.isRequired,
+      isBusinessUser: PropTypes.bool.isRequired,
+      shouldAlwaysSkipEmptyTextAlert: PropTypes.bool.isRequired,
+      profileGroups: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        profileIds: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
       })).isRequired,
-      profilesSchedulesSlots: React.PropTypes.objectOf(
-        React.PropTypes.objectOf(
-          React.PropTypes.arrayOf(React.PropTypes.shape({
-            isSlotFree: React.PropTypes.bool.isRequired,
-            timestamp: React.PropTypes.number.isRequired,
+      profilesSchedulesSlots: PropTypes.objectOf(
+        PropTypes.objectOf(
+          PropTypes.arrayOf(PropTypes.shape({
+            isSlotFree: PropTypes.bool.isRequired,
+            timestamp: PropTypes.number.isRequired,
           }))
         )
       ),
     }).isRequired,
 
-    metaData: React.PropTypes.shape({
-      environment: React.PropTypes.string.isRequired,
-      appEnvironment: React.PropTypes.string.isRequired,
-      shouldDisplayHelpButton: React.PropTypes.bool.isRequired,
-      shouldEnableFacebookAutocomplete: React.PropTypes.bool.isRequired,
-      shouldUseNewTwitterAutocomplete: React.PropTypes.bool.isRequired,
-      showTwitterImageDescription: React.PropTypes.bool.isRequired,
-      updateId: React.PropTypes.string,
-      scheduledAt: React.PropTypes.number,
-      isPinnedToSlot: React.PropTypes.bool,
-      didUserSetScheduledAt: React.PropTypes.bool,
-      text: React.PropTypes.string,
-      url: React.PropTypes.string,
-      sourceUrl: React.PropTypes.string,
-      via: React.PropTypes.string,
-      images: React.PropTypes.arrayOf(React.PropTypes.string),
-      video: React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        duration: React.PropTypes.number.isRequired,
-        durationMs: React.PropTypes.number.isRequired,
-        size: React.PropTypes.number.isRequired,
-        width: React.PropTypes.number.isRequired,
-        height: React.PropTypes.number.isRequired,
-        url: React.PropTypes.string.isRequired,
-        originalUrl: React.PropTypes.string.isRequired,
-        thumbnail: React.PropTypes.string.isRequired,
-        availableThumbnails: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    metaData: PropTypes.shape({
+      environment: PropTypes.string.isRequired,
+      appEnvironment: PropTypes.string.isRequired,
+      shouldDisplayHelpButton: PropTypes.bool.isRequired,
+      shouldEnableFacebookAutocomplete: PropTypes.bool.isRequired,
+      shouldUseNewTwitterAutocomplete: PropTypes.bool.isRequired,
+      showTwitterImageDescription: PropTypes.bool.isRequired,
+      updateId: PropTypes.string,
+      scheduledAt: PropTypes.number,
+      isPinnedToSlot: PropTypes.bool,
+      didUserSetScheduledAt: PropTypes.bool,
+      text: PropTypes.string,
+      url: PropTypes.string,
+      sourceUrl: PropTypes.string,
+      via: PropTypes.string,
+      images: PropTypes.arrayOf(PropTypes.string),
+      video: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        duration: PropTypes.number.isRequired,
+        durationMs: PropTypes.number.isRequired,
+        size: PropTypes.number.isRequired,
+        width: PropTypes.number.isRequired,
+        height: PropTypes.number.isRequired,
+        url: PropTypes.string.isRequired,
+        originalUrl: PropTypes.string.isRequired,
+        thumbnail: PropTypes.string.isRequired,
+        availableThumbnails: PropTypes.arrayOf(PropTypes.string).isRequired,
       }),
-      browser: React.PropTypes.string,
-      extensionVersion: React.PropTypes.string,
-      retweetData: React.PropTypes.shape({
-        text: React.PropTypes.string.isRequired,
-        tweetId: React.PropTypes.string.isRequired,
-        userId: React.PropTypes.oneOfType([
-          React.PropTypes.string,
-          React.PropTypes.number,
+      browser: PropTypes.string,
+      extensionVersion: PropTypes.string,
+      retweetData: PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        tweetId: PropTypes.string.isRequired,
+        userId: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.number,
         ]).isRequired,
-        userName: React.PropTypes.string.isRequired,
-        userDisplayName: React.PropTypes.string.isRequired,
-        tweetUrl: React.PropTypes.string.isRequired,
-        avatarUrl: React.PropTypes.string.isRequired,
-        comment: React.PropTypes.string.isRequired,
+        userName: PropTypes.string.isRequired,
+        userDisplayName: PropTypes.string.isRequired,
+        tweetUrl: PropTypes.string.isRequired,
+        avatarUrl: PropTypes.string.isRequired,
+        comment: PropTypes.string.isRequired,
       }),
-      facebookMentionEntities: React.PropTypes.arrayOf(React.PropTypes.shape({
-        indices: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-        id: React.PropTypes.number.isRequired,
-        name: React.PropTypes.string.isRequired,
-        url: React.PropTypes.string.isRequired,
+      facebookMentionEntities: PropTypes.arrayOf(PropTypes.shape({
+        indices: PropTypes.arrayOf(PropTypes.number).isRequired,
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
       })),
     }).isRequired,
 
-    csrfToken: React.PropTypes.string.isRequired,
-    imageDimensionsKey: React.PropTypes.string.isRequired,
-    onNewPublish: React.PropTypes.bool,
+    csrfToken: PropTypes.string.isRequired,
+    imageDimensionsKey: PropTypes.string.isRequired,
+    onNewPublish: PropTypes.bool,
 
-    options: React.PropTypes.shape({
-      canSelectProfiles: React.PropTypes.bool.isRequired,
-      saveButtons: React.PropTypes.arrayOf(
-        React.PropTypes.oneOf(Object.keys(SaveButtonTypes))
+    options: PropTypes.shape({
+      canSelectProfiles: PropTypes.bool.isRequired,
+      saveButtons: PropTypes.arrayOf(
+        PropTypes.oneOf(Object.keys(SaveButtonTypes))
       ).isRequired,
-      updateId: React.PropTypes.string,
-      position: React.PropTypes.shape({
-        top: React.PropTypes.number.isRequired,
-        left: React.PropTypes.number,
+      updateId: PropTypes.string,
+      position: PropTypes.shape({
+        top: PropTypes.number.isRequired,
+        left: PropTypes.number,
       }),
-      onSave: React.PropTypes.func,
+      onSave: PropTypes.func,
     }).isRequired,
   };
 

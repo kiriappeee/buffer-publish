@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/Select.css';
 
 const Select = ({ className, ...restProps }) => (
@@ -9,7 +10,7 @@ const Select = ({ className, ...restProps }) => (
 );
 
 Select.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 Select.defaultProps = {

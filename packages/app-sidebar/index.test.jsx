@@ -1,5 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { Provider } from 'react-redux';
 import AppSidebar, {
   reducer,
@@ -7,6 +8,8 @@ import AppSidebar, {
   actionTypes,
   middleware,
 } from './index';
+
+configure({ adapter: new Adapter() });
 
 const storeFake = state => ({
   default: () => {},

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/BaseButton.css';
 
 const Button = ({ className, ...restProps }) => (
@@ -9,7 +10,7 @@ const Button = ({ className, ...restProps }) => (
 );
 
 Button.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {

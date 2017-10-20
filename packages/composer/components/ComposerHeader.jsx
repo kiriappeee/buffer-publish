@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/ComposerHeader.css';
 import { Services } from '../AppConstants';
 
@@ -36,8 +37,8 @@ const ComposerHeader = (props) => {
 };
 
 ComposerHeader.propTypes = {
-  appState: React.PropTypes.object.isRequired,
-  profiles: React.PropTypes.array.isRequired,
+  appState: PropTypes.object.isRequired,
+  profiles: PropTypes.array.isRequired,
 };
 
 export default ComposerHeader;

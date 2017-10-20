@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SourceUrl from '../components/SourceUrl';
 import PinterestSelectedBoards from '../components/PinterestSelectedBoards';
 import BoardSelector from '../components/BoardSelector';
@@ -7,11 +8,11 @@ import styles from './css/PinterestComposerBar.css';
 
 class PinterestComposerBar extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    shouldShowInlineSubprofileDropdown: React.PropTypes.bool.isRequired,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    sourceUrl: React.PropTypes.string,
-    profiles: React.PropTypes.array,
+    draftId: PropTypes.string.isRequired,
+    shouldShowInlineSubprofileDropdown: PropTypes.bool.isRequired,
+    visibleNotifications: PropTypes.array.isRequired,
+    sourceUrl: PropTypes.string,
+    profiles: PropTypes.array,
   };
 
   static defaultProps = {

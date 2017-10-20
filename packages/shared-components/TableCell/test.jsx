@@ -1,6 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import TableCell from './index';
+
+configure({ adapter: new Adapter() });
 
 describe('TableCell', () => {
   it('should have children', () => {

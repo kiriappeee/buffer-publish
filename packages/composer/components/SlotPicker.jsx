@@ -6,22 +6,23 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import Select from '../components/Select';
 
 class SlotPicker extends React.Component {
   static propTypes = {
-    metaData: React.PropTypes.object,
-    shouldUse24hTime: React.PropTypes.bool.isRequired,
-    onChange: React.PropTypes.func.isRequired,
-    slots: React.PropTypes.arrayOf(React.PropTypes.shape({
-      isSlotFree: React.PropTypes.bool.isRequired,
-      timestamp: React.PropTypes.number.isRequired,
+    metaData: PropTypes.object,
+    shouldUse24hTime: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+    slots: PropTypes.arrayOf(PropTypes.shape({
+      isSlotFree: PropTypes.bool.isRequired,
+      timestamp: PropTypes.number.isRequired,
     })).isRequired,
-    metaData: React.PropTypes.object,
-    slot: React.PropTypes.instanceOf(moment),
-    timezone: React.PropTypes.string,
-    className: React.PropTypes.string,
+    metaData: PropTypes.object,
+    slot: PropTypes.instanceOf(moment),
+    timezone: PropTypes.string,
+    className: PropTypes.string,
   };
 
   static defaultProps = {

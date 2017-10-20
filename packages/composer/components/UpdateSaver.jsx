@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOMServer from 'react-dom/server';
 import moment from 'moment-timezone';
 import partition from 'lodash.partition';
@@ -22,27 +23,27 @@ const getUpdateSaverState = () => ({
 
 class UpdateSaver extends React.Component {
   static propTypes = {
-    appState: React.PropTypes.object.isRequired,
-    metaData: React.PropTypes.object.isRequired,
-    userData: React.PropTypes.object.isRequired,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    isSlotPickingAvailable: React.PropTypes.bool.isRequired,
-    saveButtons: React.PropTypes.arrayOf(
-      React.PropTypes.oneOf(Object.keys(SaveButtonTypes))
+    appState: PropTypes.object.isRequired,
+    metaData: PropTypes.object.isRequired,
+    userData: PropTypes.object.isRequired,
+    visibleNotifications: PropTypes.array.isRequired,
+    isSlotPickingAvailable: PropTypes.bool.isRequired,
+    saveButtons: PropTypes.arrayOf(
+      PropTypes.oneOf(Object.keys(SaveButtonTypes))
     ).isRequired,
-    timezone: React.PropTypes.string,
-    moreThanOneProfileSelected: React.PropTypes.bool,
-    areAllDraftsSaved: React.PropTypes.bool,
-    whatPreventsSavingMessages: React.PropTypes.array,
-    scheduledAt: React.PropTypes.number,
-    availableSchedulesSlotsForDay: React.PropTypes.oneOfType([
-      React.PropTypes.bool,
-      React.PropTypes.arrayOf(React.PropTypes.shape({
-        isSlotFree: React.PropTypes.bool.isRequired,
-        timestamp: React.PropTypes.number.isRequired,
+    timezone: PropTypes.string,
+    moreThanOneProfileSelected: PropTypes.bool,
+    areAllDraftsSaved: PropTypes.bool,
+    whatPreventsSavingMessages: PropTypes.array,
+    scheduledAt: PropTypes.number,
+    availableSchedulesSlotsForDay: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.arrayOf(PropTypes.shape({
+        isSlotFree: PropTypes.bool.isRequired,
+        timestamp: PropTypes.number.isRequired,
       })),
     ]),
-    isPinnedToSlot: React.PropTypes.bool,
+    isPinnedToSlot: PropTypes.bool,
   };
 
   static defaultProps = {

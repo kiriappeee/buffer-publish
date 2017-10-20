@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const MentionSuggestionsEntry = (props) => {
   const { mention, theme: styles, ...parentProps } = props;
@@ -21,8 +22,8 @@ const MentionSuggestionsEntry = (props) => {
 };
 
 MentionSuggestionsEntry.propTypes = {
-  mention: React.PropTypes.object.isRequired,
-  theme: React.PropTypes.object.isRequired,
+  mention: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
 export default MentionSuggestionsEntry;

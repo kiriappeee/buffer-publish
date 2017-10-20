@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import styles from './css/LinkAttachmentThumbnailEditor.css';
 import { FileUploadFormatsConfigs, UploadTypes } from '../AppConstants';
@@ -13,13 +14,13 @@ import CircularUploadIndicator from '../components/progress-indicators/CircularU
 
 class LinkAttachmentThumbnailEditor extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    selectedThumbnail: React.PropTypes.object,
-    availableThumbnails: React.PropTypes.array,
-    fileUploadProgress: React.PropTypes.number,
-    visibleNotifications: React.PropTypes.array,
-    service: React.PropTypes.object,
-    hasThumbnail: React.PropTypes.bool,
+    draftId: PropTypes.string.isRequired,
+    selectedThumbnail: PropTypes.object,
+    availableThumbnails: PropTypes.array,
+    fileUploadProgress: PropTypes.number,
+    visibleNotifications: PropTypes.array,
+    service: PropTypes.object,
+    hasThumbnail: PropTypes.bool,
   };
 
   selectPreviousThumbnail = () =>

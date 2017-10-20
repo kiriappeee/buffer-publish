@@ -2,6 +2,7 @@
  * Component that takes an array of messages and generates list markup for use in a tooltip
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/TooltipList.css';
 
 const TooltipList = (props) => {
@@ -20,7 +21,7 @@ const TooltipList = (props) => {
 };
 
 TooltipList.propTypes = {
-  messages: React.PropTypes.array.isRequired,
+  messages: PropTypes.array.isRequired,
 };
 
 export default TooltipList;

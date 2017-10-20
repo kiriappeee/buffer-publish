@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ImportedMention.css';
 
@@ -7,7 +8,7 @@ const ImportedMention = (props) => (
 );
 
 ImportedMention.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default ImportedMention;

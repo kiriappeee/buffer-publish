@@ -12,28 +12,29 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NotificationTypes } from '../AppConstants';
 import Notification from '../components/Notification';
 import styles from './css/NotificationContainer.css';
 
 class NotificationContainer extends React.Component {
   static propTypes = {
-    visibleNotifications: React.PropTypes.array.isRequired,
-    scope: React.PropTypes.string,
-    notScopes: React.PropTypes.array,
-    type: React.PropTypes.string,
-    notTypes: React.PropTypes.array,
-    className: React.PropTypes.string,
-    classNames: React.PropTypes.shape({
-      container: React.PropTypes.string,
-      notification: React.PropTypes.string,
-      successNotification: React.PropTypes.string,
-      errorNotification: React.PropTypes.string,
-      notificationCloseButton: React.PropTypes.string,
+    visibleNotifications: PropTypes.array.isRequired,
+    scope: PropTypes.string,
+    notScopes: PropTypes.array,
+    type: PropTypes.string,
+    notTypes: PropTypes.array,
+    className: PropTypes.string,
+    classNames: PropTypes.shape({
+      container: PropTypes.string,
+      notification: PropTypes.string,
+      successNotification: PropTypes.string,
+      errorNotification: PropTypes.string,
+      notificationCloseButton: PropTypes.string,
     }),
-    shouldShowCloseIcon: React.PropTypes.bool,
-    children: React.PropTypes.node,
-    onClick: React.PropTypes.func,
+    shouldShowCloseIcon: PropTypes.bool,
+    children: PropTypes.node,
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import { QueueingTypes, SaveButtonTypes } from '../AppConstants';
 import Dropdown, { DropdownTrigger, DropdownContent } from '../components/Dropdown';
@@ -21,16 +22,16 @@ const buttonsQueuingTypesMap = new Map([
 
 class UpdateSaverItem extends React.Component {
   static propTypes = {
-    type: React.PropTypes.oneOf(Object.keys(SaveButtonTypes)).isRequired,
-    children: React.PropTypes.node.isRequired,
-    appState: React.PropTypes.object.isRequired,
-    userData: React.PropTypes.object.isRequired,
-    isInlineSchedulerDisplayed: React.PropTypes.bool.isRequired,
-    disabled: React.PropTypes.bool,
-    timezone: React.PropTypes.string,
-    isMenuItem: React.PropTypes.bool,
-    isSecondaryItem: React.PropTypes.bool,
-    weekStartsMonday: React.PropTypes.bool.isRequired,
+    type: PropTypes.oneOf(Object.keys(SaveButtonTypes)).isRequired,
+    children: PropTypes.node.isRequired,
+    appState: PropTypes.object.isRequired,
+    userData: PropTypes.object.isRequired,
+    isInlineSchedulerDisplayed: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool,
+    timezone: PropTypes.string,
+    isMenuItem: PropTypes.bool,
+    isSecondaryItem: PropTypes.bool,
+    weekStartsMonday: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {

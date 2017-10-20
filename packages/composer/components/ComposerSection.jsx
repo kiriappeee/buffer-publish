@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ComposerStore from '../stores/ComposerStore';
 import Composer from '../components/Composer';
 import styles from './css/ComposerSection.css';
@@ -11,16 +12,16 @@ const getComposerState = () => ({
 
 class ComposerSection extends React.Component {
   static propTypes = {
-    appState: React.PropTypes.object.isRequired,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    areAllDraftsSaved: React.PropTypes.bool.isRequired,
-    shouldEnableFacebookAutocomplete: React.PropTypes.bool.isRequired,
-    shouldShowInlineSubprofileDropdown: React.PropTypes.bool.isRequired,
-    profiles: React.PropTypes.array,
-    selectedProfiles: React.PropTypes.array,
-    showTwitterImageDescription: React.PropTypes.bool.isRequired,
-    isOmniboxEnabled: React.PropTypes.bool,
-    composerPosition: React.PropTypes.object,
+    appState: PropTypes.object.isRequired,
+    visibleNotifications: PropTypes.array.isRequired,
+    areAllDraftsSaved: PropTypes.bool.isRequired,
+    shouldEnableFacebookAutocomplete: PropTypes.bool.isRequired,
+    shouldShowInlineSubprofileDropdown: PropTypes.bool.isRequired,
+    profiles: PropTypes.array,
+    selectedProfiles: PropTypes.array,
+    showTwitterImageDescription: PropTypes.bool.isRequired,
+    isOmniboxEnabled: PropTypes.bool,
+    composerPosition: PropTypes.object,
   };
 
   static defaultProps = {

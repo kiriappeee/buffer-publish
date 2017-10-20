@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SimpleDropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
 import styles from './css/Dropdown.css';
 
@@ -15,13 +16,13 @@ const getDropdownState = ({ isDropdownExpanded }) => ({
 
 class Dropdown extends React.Component {
   static propTypes = {
-    children: React.PropTypes.node,
-    disabled: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    isDropdownExpanded: React.PropTypes.bool,
-    onHide: React.PropTypes.func,
-    onShow: React.PropTypes.func,
-    title: React.PropTypes.string,
+    children: PropTypes.node,
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+    isDropdownExpanded: PropTypes.bool,
+    onHide: PropTypes.func,
+    onShow: PropTypes.func,
+    title: PropTypes.string,
   };
 
   static defaultProps = {

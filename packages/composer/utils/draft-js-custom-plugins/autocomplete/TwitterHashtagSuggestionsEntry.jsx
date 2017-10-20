@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TwitterHashtagAutocompleteSuggestionsEntry = (props) => {
   const {
@@ -18,8 +19,8 @@ const TwitterHashtagAutocompleteSuggestionsEntry = (props) => {
 };
 
 TwitterHashtagAutocompleteSuggestionsEntry.propTypes = {
-  mention: React.PropTypes.object.isRequired,
-  theme: React.PropTypes.object.isRequired,
+  mention: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
 export default TwitterHashtagAutocompleteSuggestionsEntry;

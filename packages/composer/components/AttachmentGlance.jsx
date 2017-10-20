@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { AttachmentTypes } from '../AppConstants';
 import styles from './css/AttachmentGlance.css';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
@@ -11,9 +12,9 @@ import AppActionCreators from '../action-creators/AppActionCreators';
 class AttachmentGlance extends React.Component {
 
   static propTypes = {
-    draft: React.PropTypes.object.isRequired,
-    attachmentType: React.PropTypes.string.isRequired,
-    attachmentThumbnails: React.PropTypes.array,
+    draft: PropTypes.object.isRequired,
+    attachmentType: PropTypes.string.isRequired,
+    attachmentThumbnails: PropTypes.array,
   };
 
   onClick = (e) => {

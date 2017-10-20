@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from '../__legacy-buffer-web-shared-components__/modal/modal';
 import styles from './css/MediaZoomBox.css';
 import ImageDescriptionInput from '../components/ImageDescriptionInput';
@@ -7,10 +8,10 @@ import { getHumanReadableSize } from '../utils/StringUtils';
 
 class MediaZoomBox extends React.Component {
   static propTypes = {
-    media: React.PropTypes.object.isRequired,
-    draftId: React.PropTypes.string.isRequired,
-    showTwitterImageDescription: React.PropTypes.bool.isRequired,
-    composerPosition: React.PropTypes.object,
+    media: PropTypes.object.isRequired,
+    draftId: PropTypes.string.isRequired,
+    showTwitterImageDescription: PropTypes.bool.isRequired,
+    composerPosition: PropTypes.object,
   };
 
   static defaultProps = {

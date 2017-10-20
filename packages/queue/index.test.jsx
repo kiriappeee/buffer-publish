@@ -1,5 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { Provider } from 'react-redux';
 import Queue, {
   reducer,
@@ -8,6 +9,8 @@ import Queue, {
   middleware,
 } from './index';
 import QueuedPosts from './components/QueuedPosts';
+
+configure({ adapter: new Adapter() });
 
 const storeFake = state => ({
   default: () => {},

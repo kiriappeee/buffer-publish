@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/PinterestSelectedBoards.css';
 
 class PinterestSelectedBoards extends React.Component {
   static propTypes = {
-    profiles: React.PropTypes.array,
+    profiles: PropTypes.array,
   };
 
   getSelectedBoard = () => {

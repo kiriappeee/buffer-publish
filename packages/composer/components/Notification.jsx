@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NotificationTypes } from '../AppConstants';
 import CloseButton from '../components/CloseButton';
 import styles from './css/Notification.css';
@@ -6,16 +7,16 @@ import NotificationActionCreators from '../action-creators/NotificationActionCre
 
 class Notification extends React.Component {
   static propTypes = {
-    id: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
-    message: React.PropTypes.string.isRequired,
-    shouldShowCloseIcon: React.PropTypes.bool.isRequired,
-    className: React.PropTypes.string,
-    classNames: React.PropTypes.shape({
-      notification: React.PropTypes.string,
-      closeButton: React.PropTypes.string,
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    shouldShowCloseIcon: PropTypes.bool.isRequired,
+    className: PropTypes.string,
+    classNames: PropTypes.shape({
+      notification: PropTypes.string,
+      closeButton: PropTypes.string,
     }),
-    children: React.PropTypes.node,
+    children: PropTypes.node,
   };
 
   static defaultProps = {

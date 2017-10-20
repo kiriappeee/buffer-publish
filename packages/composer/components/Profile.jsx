@@ -2,6 +2,7 @@
  * Component that displays a profile
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import { Services } from '../AppConstants';
@@ -13,12 +14,12 @@ import { scrollIntoView } from '../utils/DOMUtils';
 
 class Profile extends React.Component {
   static propTypes = {
-    profile: React.PropTypes.object.isRequired,
-    expandedProfileSubprofileDropdownId: React.PropTypes.string,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    addContainerScrollHandler: React.PropTypes.func.isRequired,
-    removeContainerScrollHandler: React.PropTypes.func.isRequired,
-    className: React.PropTypes.string,
+    profile: PropTypes.object.isRequired,
+    expandedProfileSubprofileDropdownId: PropTypes.string,
+    visibleNotifications: PropTypes.array.isRequired,
+    addContainerScrollHandler: PropTypes.func.isRequired,
+    removeContainerScrollHandler: PropTypes.func.isRequired,
+    className: PropTypes.string,
   };
 
   componentDidMount() {

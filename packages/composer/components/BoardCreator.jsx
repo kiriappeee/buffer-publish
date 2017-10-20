@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/BoardCreator.css';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import { NotificationScopes } from '../AppConstants';
@@ -9,9 +10,9 @@ import NotificationActionCreators from '../action-creators/NotificationActionCre
 
 class BoardCreator extends React.Component {
   static propTypes = {
-    subprofiles: React.PropTypes.array,
-    profile: React.PropTypes.object,
-    visibleNotifications: React.PropTypes.array.isRequired,
+    subprofiles: PropTypes.array,
+    profile: PropTypes.object,
+    visibleNotifications: PropTypes.array.isRequired,
   };
 
   constructor(props) {

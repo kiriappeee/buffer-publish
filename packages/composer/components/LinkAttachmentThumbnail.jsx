@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/LinkAttachmentThumbnail.css';
 
 const LinkAttachmentThumbnail = (props) => {
@@ -22,7 +23,7 @@ const LinkAttachmentThumbnail = (props) => {
 };
 
 LinkAttachmentThumbnail.propTypes = {
-  thumbnail: React.PropTypes.object,
+  thumbnail: PropTypes.object,
 };
 
 export default LinkAttachmentThumbnail;

@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import throttle from 'lodash.throttle';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import AppActionCreators from '../action-creators/AppActionCreators';
@@ -16,9 +17,9 @@ import { getHumanReadableSize, getHumanReadableTime } from '../utils/StringUtils
 
 class SuggestedMediaBox extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    suggestedMedia: React.PropTypes.array.isRequired,
-    className: React.PropTypes.string,
+    draftId: PropTypes.string.isRequired,
+    suggestedMedia: PropTypes.array.isRequired,
+    className: PropTypes.string,
   };
 
   static defaultProps = {

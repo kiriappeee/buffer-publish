@@ -2,6 +2,7 @@
  * Component that shows the list of available profiles
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Profile from '../components/Profile';
 import ProfileGroups from '../components/ProfileGroups';
 import Button from '../components/Button';
@@ -10,10 +11,10 @@ import AppActionCreators from '../action-creators/AppActionCreators';
 
 class ProfileSection extends React.Component {
   static propTypes = {
-    profiles: React.PropTypes.array.isRequired,
-    appState: React.PropTypes.object.isRequired,
-    userData: React.PropTypes.object,
-    visibleNotifications: React.PropTypes.array.isRequired,
+    profiles: PropTypes.array.isRequired,
+    appState: PropTypes.object.isRequired,
+    userData: PropTypes.object,
+    visibleNotifications: PropTypes.array.isRequired,
   };
 
   onScroll = (e) => {

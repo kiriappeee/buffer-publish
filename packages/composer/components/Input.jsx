@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/Input.css';
 
 const Input = ({ className, ...restProps }) => (
@@ -9,7 +10,7 @@ const Input = ({ className, ...restProps }) => (
 );
 
 Input.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 Input.defaultProps = {

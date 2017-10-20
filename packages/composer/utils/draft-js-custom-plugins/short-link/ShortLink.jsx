@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ShortLink.css';
 
 class ShortLink extends React.Component {
   static propTypes = {
-    onMouseOver: React.PropTypes.func.isRequired,
-    onMouseOut: React.PropTypes.func.isRequired,
-    entityKey: React.PropTypes.string.isRequired,
-    contentState: React.PropTypes.object.isRequired,
-    children: React.PropTypes.node,
+    onMouseOver: PropTypes.func.isRequired,
+    onMouseOut: PropTypes.func.isRequired,
+    entityKey: PropTypes.string.isRequired,
+    contentState: PropTypes.object.isRequired,
+    children: PropTypes.node,
   };
 
   onMouseOver = () => {

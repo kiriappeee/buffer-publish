@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import MediaAttachmentThumbnail from '../components/MediaAttachmentThumbnail';
 import UploadZone from '../components/UploadZone';
 import CircularUploadIndicator from '../components/progress-indicators/CircularUploadIndicator';
@@ -12,19 +13,19 @@ import styles from './css/MediaAttachment.css';
 
 class MediaAttachment extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    images: React.PropTypes.array.isRequired,
-    video: React.PropTypes.object,
-    gif: React.PropTypes.object,
-    tempImage: React.PropTypes.string,
-    maxAttachableImagesCount: React.PropTypes.number.isRequired,
-    fileUploadProgress: React.PropTypes.number,
-    service: React.PropTypes.object,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    className: React.PropTypes.string,
-    usesImageFirstLayout: React.PropTypes.bool,
-    showTwitterImageDescription: React.PropTypes.bool.isRequired,
-    composerPosition: React.PropTypes.object,
+    draftId: PropTypes.string.isRequired,
+    images: PropTypes.array.isRequired,
+    video: PropTypes.object,
+    gif: PropTypes.object,
+    tempImage: PropTypes.string,
+    maxAttachableImagesCount: PropTypes.number.isRequired,
+    fileUploadProgress: PropTypes.number,
+    service: PropTypes.object,
+    visibleNotifications: PropTypes.array.isRequired,
+    className: PropTypes.string,
+    usesImageFirstLayout: PropTypes.bool,
+    showTwitterImageDescription: PropTypes.bool.isRequired,
+    composerPosition: PropTypes.object,
   };
 
   static defaultProps = {

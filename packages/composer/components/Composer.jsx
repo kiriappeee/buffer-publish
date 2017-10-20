@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import ReactDOMServer from 'react-dom/server';
 import uniqBy from 'lodash.uniqby';
@@ -28,20 +29,20 @@ import styles from './css/Composer.css';
 
 class Composer extends React.Component {
   static propTypes = {
-    appState: React.PropTypes.object.isRequired,
-    draft: React.PropTypes.object.isRequired,
-    enabledDrafts: React.PropTypes.array.isRequired,
-    draftsSharedData: React.PropTypes.object.isRequired,
-    visibleNotifications: React.PropTypes.array.isRequired,
-    areAllDraftsSaved: React.PropTypes.bool.isRequired,
-    shouldEnableFacebookAutocomplete: React.PropTypes.bool.isRequired,
-    shouldShowInlineSubprofileDropdown: React.PropTypes.bool.isRequired,
-    profiles: React.PropTypes.array,
-    expandedComposerId: React.PropTypes.string,
-    selectedProfiles: React.PropTypes.array,
-    children: React.PropTypes.node,
-    showTwitterImageDescription: React.PropTypes.bool.isRequired,
-    composerPosition: React.PropTypes.object,
+    appState: PropTypes.object.isRequired,
+    draft: PropTypes.object.isRequired,
+    enabledDrafts: PropTypes.array.isRequired,
+    draftsSharedData: PropTypes.object.isRequired,
+    visibleNotifications: PropTypes.array.isRequired,
+    areAllDraftsSaved: PropTypes.bool.isRequired,
+    shouldEnableFacebookAutocomplete: PropTypes.bool.isRequired,
+    shouldShowInlineSubprofileDropdown: PropTypes.bool.isRequired,
+    profiles: PropTypes.array,
+    expandedComposerId: PropTypes.string,
+    selectedProfiles: PropTypes.array,
+    children: PropTypes.node,
+    showTwitterImageDescription: PropTypes.bool.isRequired,
+    composerPosition: PropTypes.object,
   };
 
   static defaultProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/Svg.css';
 
 const Svg = ({ className, ...restProps }) => (
@@ -9,7 +10,7 @@ const Svg = ({ className, ...restProps }) => (
 );
 
 Svg.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 Svg.defaultProps = {

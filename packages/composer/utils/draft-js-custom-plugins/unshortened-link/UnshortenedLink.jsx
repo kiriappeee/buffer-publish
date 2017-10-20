@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './UnshortenedLink.css';
 
 class UnshortenedLink extends React.Component {
   static propTypes = {
-    onMouseOver: React.PropTypes.func.isRequired,
-    onMouseOut: React.PropTypes.func.isRequired,
-    entityKey: React.PropTypes.string.isRequired,
-    contentState: React.PropTypes.object.isRequired,
-    children: React.PropTypes.node.isRequired,
+    onMouseOver: PropTypes.func.isRequired,
+    onMouseOut: PropTypes.func.isRequired,
+    entityKey: PropTypes.string.isRequired,
+    contentState: PropTypes.object.isRequired,
+    children: PropTypes.node.isRequired,
   };
 
   // UNSHORTENED_LINK entities are mutable: don't offer to reshorten mutated entities

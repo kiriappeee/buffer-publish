@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ComposerActionCreators from '../action-creators/ComposerActionCreators';
 import Input from '../components/Input';
 import styles from './css/SourceUrl.css';
 
 class SourceUrl extends React.Component {
   static propTypes = {
-    draftId: React.PropTypes.string.isRequired,
-    sourceUrl: React.PropTypes.string,
+    draftId: PropTypes.string.isRequired,
+    sourceUrl: PropTypes.string,
   };
 
   static defaultProps = {

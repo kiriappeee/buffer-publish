@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import Select from '../components/Select';
 
@@ -13,11 +14,11 @@ import styles from './css/TimePicker.css';
 
 class TimePicker extends React.Component {
   static propTypes = {
-    shouldUse24hTime: React.PropTypes.bool.isRequired,
-    onChange: React.PropTypes.func.isRequired,
-    time: React.PropTypes.instanceOf(moment),
-    timezone: React.PropTypes.string,
-    className: React.PropTypes.string,
+    shouldUse24hTime: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+    time: PropTypes.instanceOf(moment),
+    timezone: PropTypes.string,
+    className: PropTypes.string,
   };
 
   static defaultProps = {

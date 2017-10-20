@@ -12,6 +12,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment-timezone';
 import DatePicker from 'react-day-picker';
 import TimePicker from '../components/TimePicker';
@@ -57,24 +58,24 @@ class DateTimeSlotPicker extends React.Component {
   };
 
   static propTypes = {
-    shouldUse24hTime: React.PropTypes.bool.isRequired,
-    onSubmit: React.PropTypes.func.isRequired,
-    isSlotPickingAvailable: React.PropTypes.bool,
-    onClick: React.PropTypes.func,
-    onChange: React.PropTypes.func,
-    timezone: React.PropTypes.string,
-    weekStartsMonday: React.PropTypes.bool.isRequired,
-    availableSchedulesSlotsForDay: React.PropTypes.oneOfType([
-      React.PropTypes.bool,
-      React.PropTypes.arrayOf(React.PropTypes.shape({
-        isSlotFree: React.PropTypes.bool.isRequired,
-        timestamp: React.PropTypes.number.isRequired,
+    shouldUse24hTime: PropTypes.bool.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    isSlotPickingAvailable: PropTypes.bool,
+    onClick: PropTypes.func,
+    onChange: PropTypes.func,
+    timezone: PropTypes.string,
+    weekStartsMonday: PropTypes.bool.isRequired,
+    availableSchedulesSlotsForDay: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.arrayOf(PropTypes.shape({
+        isSlotFree: PropTypes.bool.isRequired,
+        timestamp: PropTypes.number.isRequired,
       })),
     ]),
-    isPinnedToSlot: React.PropTypes.bool,
-    metaData: React.PropTypes.object,
-    initialDateTime: React.PropTypes.instanceOf(moment),
-    submitButtonCopy: React.PropTypes.string,
+    isPinnedToSlot: PropTypes.bool,
+    metaData: PropTypes.object,
+    initialDateTime: PropTypes.instanceOf(moment),
+    submitButtonCopy: PropTypes.string,
   };
 
   static defaultProps = {

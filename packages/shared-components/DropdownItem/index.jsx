@@ -22,7 +22,6 @@ const DropdownItem = ({
   );
 };
 
-
 DropdownItem.propTypes = {
   onClick: PropTypes.func.isRequired,
   children: PropTypes.node,

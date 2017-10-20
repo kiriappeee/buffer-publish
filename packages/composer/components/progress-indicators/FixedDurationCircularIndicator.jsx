@@ -6,12 +6,13 @@
  * to the required props for CircularIndicator.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import CircularIndicator from './CircularIndicator';
 
 class FixedDurationCircularIndicator extends React.Component {
   static propTypes = {
-    duration: React.PropTypes.number.isRequired, // Seconds
-    steps: React.PropTypes.number,
+    duration: PropTypes.number.isRequired, // Seconds
+    steps: PropTypes.number,
   };
 
   static defaultProps = {

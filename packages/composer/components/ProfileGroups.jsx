@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProfileGroupItem from '../components/ProfileGroupItem';
 import A from '../components/A';
 import styles from './css/ProfileGroups.css';
@@ -41,8 +42,8 @@ const ProfileGroups = (props) => {
 };
 
 ProfileGroups.propTypes = {
-  groups: React.PropTypes.array.isRequired,
-  selectedProfilesIds: React.PropTypes.array.isRequired,
+  groups: PropTypes.array.isRequired,
+  selectedProfilesIds: PropTypes.array.isRequired,
 };
 
 export default ProfileGroups;

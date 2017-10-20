@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppActionCreators from '../action-creators/AppActionCreators';
 import Button from '../components/Button';
 
@@ -6,8 +7,8 @@ import styles from './css/ProfileGroupItem.css';
 
 class ProfileGroupItem extends React.Component {
   static propTypes = {
-    group: React.PropTypes.object.isRequired,
-    selectedProfileGroupsIds: React.PropTypes.array.isRequired,
+    group: PropTypes.object.isRequired,
+    selectedProfileGroupsIds: PropTypes.array.isRequired,
   };
 
   onClick = (e) => {

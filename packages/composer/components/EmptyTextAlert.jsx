@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from '../__legacy-buffer-web-shared-components__/modal/modal';
 import ModalActionCreators from '../__legacy-buffer-web-shared-components__/modal/actionCreators.js';
 import AppActionCreators from '../action-creators/AppActionCreators';
@@ -7,7 +8,7 @@ import styles from './css/EmptyTextAlert.css';
 
 class EmptyTextAlert extends React.Component {
   static propTypes = {
-    queueingType: React.PropTypes.string.isRequired,
+    queueingType: PropTypes.string.isRequired,
   };
 
   onClickCancel = () => {

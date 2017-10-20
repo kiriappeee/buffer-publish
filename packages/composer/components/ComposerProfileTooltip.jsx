@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/ComposerProfileTooltip.css';
 
 class ComposerProfileTooltip extends React.Component {
   static propTypes = {
-    selectedProfilesForService: React.PropTypes.array.isRequired,
+    selectedProfilesForService: PropTypes.array.isRequired,
   }
 
   getFormattedServiceType = (profile) =>

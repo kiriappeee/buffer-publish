@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/SuggestedMediaBox.css';
 
 const SuggestedMediaThumbnailInfo = (props) => {
@@ -20,8 +21,8 @@ const SuggestedMediaThumbnailInfo = (props) => {
 };
 
 SuggestedMediaThumbnailInfo.propTypes = {
-  width: React.PropTypes.number.isRequired,
-  height: React.PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
 };
 
 export default SuggestedMediaThumbnailInfo;
