@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-queue",
-  "version": "0.7.7",
+  "version": "1.0.0",
   "description": "Queue UI package",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,11 @@
   "author": "melissa@buffer.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "0.7.4",
-    "@bufferapp/components": "0.7.3",
-    "@bufferapp/notifications": "0.7.3",
-    "@bufferapp/publish-composer": "0.7.4",
-    "@bufferapp/publish-profile-sidebar": "0.7.4",
-    "@bufferapp/publish-shared-components": "0.7.4",
+    "@bufferapp/components": "1.0.0",
+    "@bufferapp/notifications": "1.0.0",
+    "@bufferapp/publish-composer": "1.0.0",
+    "@bufferapp/publish-profile-sidebar": "1.0.0",
+    "@bufferapp/publish-shared-components": "1.0.0",
     "moment-timezone": "0.5.12"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/notifications",
-  "version": "0.7.3",
+  "version": "1.0.0",
   "description": "Display application notifications",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/components": "0.7.3"
+    "@bufferapp/components": "1.0.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

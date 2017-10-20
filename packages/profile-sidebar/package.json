@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-profile-sidebar",
-  "version": "0.7.4",
+  "version": "1.0.0",
   "description": "Load and display a list of profiles",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "0.7.4",
-    "@bufferapp/components": "0.7.3",
+    "@bufferapp/components": "1.0.0",
     "@bufferapp/publish-routes": "0.5.25"
   },
   "devDependencies": {
