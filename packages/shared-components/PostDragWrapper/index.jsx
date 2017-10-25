@@ -5,6 +5,8 @@ import flow from 'lodash.flow';
 import { DragSource, DropTarget } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 
+const allowed = postProps => !postProps.scheduled_at && !postProps.pinned;
+
 const postSource = {
   beginDrag(props, monitor, component) {
     return {
@@ -13,15 +15,23 @@ const postSource = {
       postComponent: props.postComponent,
       postProps: props.postProps,
       width: component.containerNode.offsetWidth,
-      onDropPost: props.onDropPost,
+      onDropPost: props.postProps.onDropPost,
       profileId: props.profileId,
     };
   },
 };
 
 const postTarget = {
+  drop(props) {
+    const { onDropPost } = props.postProps;
+    onDropPost({ commit: true });
+  },
+  canDrop(props, monitor) {
+    const draggingPost = monitor.getItem();
+    return allowed(props.postProps) && allowed(draggingPost.postProps);
+  },
   hover(props, monitor) {
-    const { index: dragIndex } = monitor.getItem();
+    const { index: dragIndex, onDropPost } = monitor.getItem();
     const { index: hoverIndex } = props;
 
     // Don't replace post with itself...
@@ -29,12 +39,14 @@ const postTarget = {
       return;
     }
 
-    // Drop!
-    props.postProps.onDropPost({ dragIndex, hoverIndex });
+    if (monitor.canDrop()) {
+      // Drop!
+      onDropPost({ dragIndex, hoverIndex });
 
-    // We need to directly mutate the monitor state here
-    // to ensure the currently dragged item index is updated.
-    monitor.getItem().index = hoverIndex;
+      // We need to directly mutate the monitor state here
+      // to ensure the currently dragged item index is updated.
+      monitor.getItem().index = hoverIndex;
+    }
   },
 };
 
@@ -77,6 +89,7 @@ class PostDragWrapper extends Component {
     } = this.props;
 
     const { isHovering } = this.state;
+    const fixed = !allowed(postProps);
 
     return connectDragSource(
       connectDropTarget(
@@ -85,7 +98,13 @@ class PostDragWrapper extends Component {
           onMouseLeave={this.onMouseLeave}
           ref={(node) => { this.containerNode = node; }}
         >
-          <PostComponent {...postProps} draggable dragging={isDragging} hovering={isHovering} />
+          <PostComponent
+            {...postProps}
+            draggable
+            dragging={isDragging}
+            hovering={isHovering}
+            fixed={fixed}
+          />
         </div>,
       ),
     );
@@ -94,7 +113,7 @@ class PostDragWrapper extends Component {
 
 PostDragWrapper.propTypes = {
   handleDragPost: PropTypes.func, // eslint-disable-line
-  profileId: PropTypes.string.isRequired, // eslint-disable-line
+  profileId: PropTypes.string, // eslint-disable-line
   postComponent: PropTypes.func.isRequired,
   postProps: PropTypes.object.isRequired, // eslint-disable-line
   connectDragSource: PropTypes.func.isRequired,
@@ -110,7 +129,7 @@ export default flow(
     connectDragPreview: connect.dragPreview(),
     isDragging: monitor.isDragging(),
   })),
-  DropTarget('post', postTarget, connect => ({
+  DropTarget('post', postTarget, (connect, monitor) => ({
     connectDropTarget: connect.dropTarget(),
   })),
 )(PostDragWrapper);

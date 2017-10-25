@@ -125,13 +125,15 @@ const Post = ({
   draggable,
   dragging,
   hovering,
+  fixed,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
       <Card
         faded={isDeleting}
         noPadding
-        draggingPlaceholder={dragging}
+        draggingPlaceholder={dragging && !fixed}
+        noBorder={dragging && fixed}
       >
         {renderContent({
           children,
@@ -190,6 +192,7 @@ Post.commonPropTypes = {
   draggable: PropTypes.bool,
   dragging: PropTypes.bool,
   hovering: PropTypes.bool,
+  fixed: PropTypes.bool,
   onDropPost: PropTypes.func,
 };
 
@@ -202,6 +205,7 @@ Post.defaultProps = {
   isConfirmingDelete: false,
   isDeleting: false,
   isWorking: false,
+  fixed: false,
 };
 
 export default Post;

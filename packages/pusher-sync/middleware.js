@@ -13,6 +13,7 @@ const profileEventActionMap = {
 };
 
 const bindProfileEvents = (channel, profileId, dispatch) => {
+  // Bind post related events
   Object.entries(profileEventActionMap).forEach(([pusherEvent, actionType]) => {
     channel.bind(pusherEvent, (data) => {
       dispatch({
@@ -20,6 +21,14 @@ const bindProfileEvents = (channel, profileId, dispatch) => {
         profileId,
         post: postParser(data.update),
       });
+    });
+  });
+  // Bind other events
+  channel.bind('reordered_updates', (order) => {
+    dispatch({
+      type: queueActionTypes.REORDERED_UPDATES,
+      profileId,
+      order,
     });
   });
 };

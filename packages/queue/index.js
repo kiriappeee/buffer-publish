@@ -94,10 +94,11 @@ export default connect(
         profileId: ownProps.profileId,
       }));
     },
-    onDropPost: ({ dragIndex, hoverIndex }) => {
+    onDropPost: ({ dragIndex, hoverIndex, commit }) => {
       dispatch(actions.onDropPost({
         dragIndex,
         hoverIndex,
+        commit,
         profileId: ownProps.profileId,
       }));
     },
