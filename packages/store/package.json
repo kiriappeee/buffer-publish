@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,18 +10,18 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/app-sidebar": "1.0.0",
+    "@bufferapp/app-sidebar": "1.0.2",
     "@bufferapp/async-data-fetch": "0.7.4",
-    "@bufferapp/notifications": "1.0.0",
-    "@bufferapp/publish-example": "1.0.0",
+    "@bufferapp/notifications": "1.0.2",
+    "@bufferapp/publish-example": "1.0.2",
     "@bufferapp/publish-i18n": "0.7.4",
-    "@bufferapp/publish-profile-sidebar": "1.0.0",
-    "@bufferapp/publish-pusher-sync": "1.0.1",
-    "@bufferapp/publish-queue": "1.0.1",
+    "@bufferapp/publish-profile-sidebar": "1.0.2",
+    "@bufferapp/publish-pusher-sync": "1.0.2",
+    "@bufferapp/publish-queue": "1.0.2",
     "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-sent": "1.0.1",
-    "@bufferapp/publish-settings": "1.0.0",
-    "@bufferapp/publish-tabs": "1.0.0"
+    "@bufferapp/publish-sent": "1.0.2",
+    "@bufferapp/publish-settings": "1.0.2",
+    "@bufferapp/publish-tabs": "1.0.2"
   },
   "devDependencies": {
     "eslint": "3.19.0",
