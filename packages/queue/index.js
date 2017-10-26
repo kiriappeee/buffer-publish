@@ -22,6 +22,7 @@ export default connect(
   (state, ownProps) => {
     const profileId = ownProps.profileId;
     const currentProfile = state.queue.byProfileId[profileId];
+    const paused = state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length;
     if (currentProfile) {
       return {
         loading: currentProfile.loading,
@@ -35,6 +36,7 @@ export default connect(
         environment: state.queue.environment,
         editMode: state.queue.editMode,
         editingPostId: state.queue.editingPostId,
+        paused,
       };
     }
     return {};

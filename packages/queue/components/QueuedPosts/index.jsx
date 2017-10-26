@@ -42,6 +42,7 @@ const QueuedPosts = ({
   onDropPost,
   showComposer,
   editMode,
+  paused,
 }) => {
   if (loading) {
     return (
@@ -67,6 +68,7 @@ const QueuedPosts = ({
           onFocus={onComposerPlaceholderClick}
         />
       </div>
+      {paused && <div>Your queue is paused</div>}
       {total < 1 &&
         <EmptyState
           title="It looks like you haven't got any posts in your queue!"
@@ -120,6 +122,7 @@ QueuedPosts.propTypes = {
   onDropPost: PropTypes.func.isRequired,
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
+  paused: PropTypes.bool,
 };
 
 QueuedPosts.defaultProps = {
@@ -131,6 +134,7 @@ QueuedPosts.defaultProps = {
   total: 0,
   enabledApplicationModes: [],
   editMode: false,
+  paused: false,
 };
 
 export default QueuedPosts;
