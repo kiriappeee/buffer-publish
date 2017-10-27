@@ -47,6 +47,12 @@ export default ({ dispatch, getState }) => next => (action) => {
         }));
       }
       break;
+    case `deletePost_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      dispatch(notificationActions.createNotification({
+        notificationType: 'success',
+        message: 'Okay, we\'ve deleted that post!',
+      }));
+      break;
     case actionTypes.POST_CONFIRMED_DELETE:
       dispatch(dataFetchActions.fetch({
         name: 'deletePost',
