@@ -44,15 +44,13 @@ const renderIcon = () =>
     <WarningIcon color={'torchRed'} />
   </div>);
 
-const renderText = ({
-  postDetails,
-}) =>
+const renderText = ({ postDetails }, hasError) =>
   (<span>
     <Text
       size={'small'}
-      color={postDetails.error ? 'torchRed' : 'black'}
+      color={hasError ? 'torchRed' : 'black'}
     >
-      {postDetails.error ? postDetails.error : postDetails.postAction}
+      {hasError ? postDetails.error : postDetails.postAction}
     </Text>
   </span>);
 
@@ -65,20 +63,23 @@ const PostFooter = ({
   onCancelConfirmClick,
   onDeleteClick,
   onDeleteConfirmClick,
+  onRequeueClick,
   onEditClick,
   onShareNowClick,
   postDetails,
   sent,
   dragging,
-}) =>
-  (<div style={getPostDetailsStyle(dragging)}>
+}) => {
+  const hasError = postDetails.error && postDetails.error.length > 0;
+  return (<div style={getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
-      {postDetails.error && renderIcon()}
-      {renderText({ postDetails })}
+      {hasError && renderIcon()}
+      {renderText({ postDetails }, hasError)}
     </div>
     { !sent && (
       <div style={postControlsStyle}>
         <PostFooterButtons
+          error={postDetails.error}
           isDeleting={isDeleting}
           isConfirmingDelete={isConfirmingDelete}
           isWorking={isWorking}
@@ -87,10 +88,12 @@ const PostFooter = ({
           onEditClick={onEditClick}
           onDeleteConfirmClick={onDeleteConfirmClick}
           onShareNowClick={onShareNowClick}
+          onRequeueClick={onRequeueClick}
         />
       </div>)
     }
   </div>);
+};
 
 PostFooter.propTypes = {
   isDeleting: PropTypes.bool,
@@ -107,6 +110,7 @@ PostFooter.propTypes = {
   }).isRequired,
   sent: PropTypes.bool.isRequired,
   dragging: PropTypes.bool,
+  onRequeueClick: PropTypes.func,
 };
 
 PostFooter.defaultProps = {

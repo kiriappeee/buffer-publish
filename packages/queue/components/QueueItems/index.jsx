@@ -37,6 +37,7 @@ const postTypeComponentMap = new Map([
 const renderPost = ({
   post,
   onCancelConfirmClick,
+  onRequeueClick,
   onDeleteClick,
   onDeleteConfirmClick,
   onEditClick,
@@ -51,6 +52,7 @@ const renderPost = ({
   const postWithEventHandlers = {
     ...post,
     key: post.id,
+    postDetails: post.postDetails,
     onCancelConfirmClick: () => onCancelConfirmClick({ post }),
     onDeleteClick: () => onDeleteClick({ post }),
     onDeleteConfirmClick: () => onDeleteConfirmClick({ post }),
@@ -60,6 +62,7 @@ const renderPost = ({
     onImageClickNext: () => onImageClickNext({ post }),
     onImageClickPrev: () => onImageClickPrev({ post }),
     onImageClose: () => onImageClose({ post }),
+    onRequeueClick: () => onRequeueClick({ post }),
     onDropPost,
   };
   let PostComponent = postTypeComponentMap.get(post.type);
@@ -147,6 +150,7 @@ QueueItems.propTypes = {
   onDeleteConfirmClick: PropTypes.func,
   onEditClick: PropTypes.func,
   onShareNowClick: PropTypes.func,
+  onRequeueClick: PropTypes.func,
   onImageClick: PropTypes.func,
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,

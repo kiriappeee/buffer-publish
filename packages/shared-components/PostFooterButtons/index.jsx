@@ -42,6 +42,7 @@ const renderEdit = ({
 
 const renderShareNow = ({
   onShareNowClick,
+  error,
 }) =>
   (<span>
     <span style={verticalLineStyle} />
@@ -50,10 +51,26 @@ const renderShareNow = ({
         size={'small'}
         color={'black'}
       >
-        Share Now
+        {error.length > 0 ? 'Retry Now' : 'Share Now'}
       </HoverableText>
     </Button>
   </span>);
+
+const renderRetryInQueue = ({
+  onRequeueClick,
+}) =>
+  (<span>
+    <span style={verticalLineStyle} />
+    <Button onClick={onRequeueClick} noStyle>
+      <HoverableText
+        size={'small'}
+        color={'black'}
+      >
+        Re-add to queue
+      </HoverableText>
+    </Button>
+  </span>);
+
 
 const renderControls = ({
   isDeleting,
@@ -64,6 +81,8 @@ const renderControls = ({
   onEditClick,
   onDeleteConfirmClick,
   onShareNowClick,
+  onRequeueClick,
+  error,
 }) => {
   if (isDeleting) {
     return (
@@ -76,7 +95,6 @@ const renderControls = ({
       <Text size={'small'}> Sharing... </Text>
     );
   }
-
   return (
     <div>
       <PostFooterDelete
@@ -91,6 +109,10 @@ const renderControls = ({
       })}
       {renderShareNow({
         onShareNowClick,
+        error,
+      })}
+      {error.length > 0 && renderRetryInQueue({
+        onRequeueClick,
       })}
     </div>
   );
@@ -107,6 +129,8 @@ const PostFooterButtons = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
+  error,
 }) =>
   (<div style={postControlsStyle}>
     {renderControls({
@@ -118,6 +142,8 @@ const PostFooterButtons = ({
       onEditClick,
       onDeleteConfirmClick,
       onShareNowClick,
+      onRequeueClick,
+      error,
     })}
   </div>);
 
@@ -128,14 +154,17 @@ PostFooterButtons.propTypes = {
   onCancelConfirmClick: PropTypes.func,
   onDeleteClick: PropTypes.func,
   onDeleteConfirmClick: PropTypes.func,
+  onRequeueClick: PropTypes.func,
   onEditClick: PropTypes.func,
   onShareNowClick: PropTypes.func,
+  error: PropTypes.string.isRequired,
 };
 
 PostFooterButtons.defaultProps = {
   isDeleting: false,
   isConfirmingDelete: false,
   isWorking: false,
+  error: '',
 };
 
 export default PostFooterButtons;

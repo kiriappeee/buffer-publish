@@ -64,6 +64,12 @@ export default connect(
         profileId: ownProps.profileId,
       }));
     },
+    onRequeueClick: (post) => {
+      dispatch(actions.handleRequeue({
+        post: post.post,
+        profileId: ownProps.profileId,
+      }));
+    },
     onShareNowClick: (post) => {
       dispatch(actions.handleShareNowClick({
         post: post.post,

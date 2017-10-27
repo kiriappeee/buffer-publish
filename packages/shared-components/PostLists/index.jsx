@@ -20,6 +20,7 @@ const renderPostList = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   onImageClick,
   onImageClickNext,
   onImageClickPrev,
@@ -36,6 +37,7 @@ const renderPostList = ({
       onDeleteConfirmClick={onDeleteConfirmClick}
       onEditClick={onEditClick}
       onShareNowClick={onShareNowClick}
+      onRequeueClick={onRequeueClick}
       onImageClick={onImageClick}
       onImageClickNext={onImageClickNext}
       onImageClickPrev={onImageClickPrev}
@@ -53,6 +55,7 @@ const PostLists = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   onImageClick,
   onImageClickNext,
   onImageClickPrev,
@@ -69,6 +72,7 @@ const PostLists = ({
         onDeleteConfirmClick,
         onEditClick,
         onShareNowClick,
+        onRequeueClick,
         onImageClick,
         onImageClickNext,
         onImageClickPrev,
@@ -95,6 +99,7 @@ PostLists.propTypes = {
   onDeleteConfirmClick: PropTypes.func,
   onEditClick: PropTypes.func,
   onShareNowClick: PropTypes.func,
+  onRequeueClick: PropTypes.func,
   onImageClick: PropTypes.func,
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,

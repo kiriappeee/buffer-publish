@@ -33,6 +33,7 @@ const MultipleImagesPost = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   retweetProfile,
   sent,
   text,
@@ -93,6 +94,7 @@ const MultipleImagesPost = ({
       onDeleteConfirmClick={onDeleteConfirmClick}
       onEditClick={onEditClick}
       onShareNowClick={onShareNowClick}
+      onRequeueClick={onRequeueClick}
       retweetProfile={retweetProfile}
       sent={sent}
       text={text}

@@ -29,6 +29,24 @@ export default ({ dispatch, getState }) => next => (action) => {
         },
       }));
       break;
+    case `requeuePost_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      dispatch(dataFetchActions.fetch({
+        name: 'queuedPosts',
+        args: {
+          profileId: action.args.profileId,
+          isFetchingMore: false,
+          isReordering: true,
+        },
+      }));
+      break;
+    case `queuedPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      if (action.args.isReordering) {
+        dispatch(notificationActions.createNotification({
+          notificationType: 'success',
+          message: 'We\'ve re-added this post to your queue!',
+        }));
+      }
+      break;
     case actionTypes.POST_CONFIRMED_DELETE:
       dispatch(dataFetchActions.fetch({
         name: 'deletePost',
@@ -40,6 +58,15 @@ export default ({ dispatch, getState }) => next => (action) => {
     case actionTypes.POST_SHARE_NOW:
       dispatch(dataFetchActions.fetch({
         name: 'sharePostNow',
+        args: {
+          updateId: action.post.id,
+          profileId: action.profileId,
+        },
+      }));
+      break;
+    case actionTypes.POST_REQUEUE:
+      dispatch(dataFetchActions.fetch({
+        name: 'requeuePost',
         args: {
           updateId: action.post.id,
           profileId: action.profileId,

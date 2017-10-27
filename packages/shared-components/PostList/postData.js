@@ -11,6 +11,7 @@ export const posts = [
     postDetails: {
       postAction: 'This post is scheduled for May 3rd',
       isRetweet: false,
+      error: '',
     },
     retweetCommentLinks: [],
     sent: false,
@@ -29,6 +30,7 @@ export const posts = [
     postDetails: {
       postAction: 'This post is scheduled for May 3rd',
       isRetweet: false,
+      error: '',
     },
     retweetCommentLinks: [],
     sent: false,
@@ -53,6 +55,7 @@ export const linkPosts = posts.map(post => ({
   },
   postDetails: {
     postAction: 'This post is scheduled for 9:42pm (GMT)',
+    error: '',
   },
   text: 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv',
   type: 'link',

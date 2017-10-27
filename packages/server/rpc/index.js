@@ -12,6 +12,7 @@ const environmentMethod = require('./environment');
 const updateScheduleMethod = require('./updateSchedule');
 const getTimezonesMethod = require('./getTimezones');
 const updateTimezoneMethod = require('./updateTimezone');
+const requeuePost = require('./requeuePost');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -26,4 +27,5 @@ module.exports = checkToken(rpc(
   updateScheduleMethod,
   getTimezonesMethod,
   updateTimezoneMethod,
+  requeuePost,
 ));
