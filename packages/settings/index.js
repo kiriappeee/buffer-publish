@@ -1,10 +1,9 @@
-// component vs. container https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 import { connect } from 'react-redux';
-// load the presentational component
-import ProfileSettings from './components/ProfileSettings';
+import { actions as profileSidebarActions } from '@bufferapp/publish-profile-sidebar';
 import { actions } from './reducer';
 
-// default export = container
+import ProfileSettings from './components/ProfileSettings';
+
 export default connect(
   state => ({
     loading: state.settings.loading,
@@ -17,6 +16,7 @@ export default connect(
     profileTimezoneCity: state.settings.profileTimezoneCity,
     hasTwentyFourHourTimeFormat: state.settings.hasTwentyFourHourTimeFormat,
     clearTimezoneInput: state.settings.clearTimezoneInput,
+    paused: state.settings.paused,
   }),
   (dispatch, ownProps) => ({
     onRemoveTimeClick: (hours, minutes, dayName, timeIndex) => {
@@ -65,6 +65,12 @@ export default connect(
     },
     onTimezoneInputBlur: () => {
       dispatch(actions.handleTimezoneInputBlur());
+    },
+    onUnpauseClick: () => {
+      dispatch(profileSidebarActions.onUnpauseClick({ profileId: ownProps.profileId }));
+    },
+    onPauseClick: () => {
+      dispatch(profileSidebarActions.onPauseClick({ profileId: ownProps.profileId }));
     },
   }),
 )(ProfileSettings);

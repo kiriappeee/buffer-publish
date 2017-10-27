@@ -12,6 +12,7 @@ import {
 
 import ComposerPopover from '../ComposerPopover';
 import QueueItems from '../QueueItems';
+import QueuePausedBar from '../QueuePausedBar';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -43,6 +44,7 @@ const QueuedPosts = ({
   showComposer,
   editMode,
   paused,
+  onUnpauseClick,
 }) => {
   if (loading) {
     return (
@@ -68,7 +70,7 @@ const QueuedPosts = ({
           onFocus={onComposerPlaceholderClick}
         />
       </div>
-      {paused && <div>Your queue is paused</div>}
+      {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
       {total < 1 &&
         <EmptyState
           title="It looks like you haven't got any posts in your queue!"
@@ -92,7 +94,7 @@ const QueuedPosts = ({
         onImageClickPrev={onImageClickPrev}
         onImageClose={onImageClose}
         onDropPost={onDropPost}
-        draggable
+        draggable={!paused}
       />
     </div>
   );
@@ -123,6 +125,7 @@ QueuedPosts.propTypes = {
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
   paused: PropTypes.bool,
+  onUnpauseClick: PropTypes.func.isRequired,
 };
 
 QueuedPosts.defaultProps = {
