@@ -63,6 +63,7 @@ const QueuedPosts = ({
           <ComposerPopover
             onSave={onComposerCreateSuccess}
             transparentOverlay
+            preserveComposerStateOnClose
           />
         }
         <Input
