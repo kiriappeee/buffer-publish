@@ -65,6 +65,13 @@ class PostDragLayer extends Component {
 
     const { postComponent: PostComponent, postProps } = this.props.item;
 
+    // Dragging any files (images, etc.) onto the app causes `react-dnd`
+    // to render this component, so we'll bail out here if it's not a
+    // post being dragged.
+    if (!PostComponent) {
+      return null;
+    }
+
     return (
       <div style={getLayerStyles(this.props.item.width)}>
         <div style={getItemStyles(this.props)}>
