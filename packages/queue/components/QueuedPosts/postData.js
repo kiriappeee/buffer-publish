@@ -16,6 +16,7 @@ const postLists = [
     postDetails: {
       postAction: 'This post is scheduled for May 2nd',
       isRetweet: false,
+      error: '',
     },
     retweetCommentLinks: [],
     sent: false,
@@ -34,6 +35,7 @@ const postLists = [
     postDetails: {
       postAction: 'This post is scheduled for May 2nd',
       isRetweet: false,
+      error: '',
     },
     retweetCommentLinks: [],
     sent: false,
@@ -57,6 +59,7 @@ const postLists = [
     postDetails: {
       postAction: 'This post is scheduled for May 3rd',
       isRetweet: false,
+      error: '',
     },
     retweetCommentLinks: [],
     sent: false,
@@ -75,6 +78,7 @@ const postLists = [
     postDetails: {
       postAction: 'This post is scheduled for May 3rd',
       isRetweet: false,
+      error: '',
     },
     retweetCommentLinks: [],
     sent: false,

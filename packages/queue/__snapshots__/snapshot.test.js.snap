@@ -60,6 +60,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -160,6 +162,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                         }
                       }
                     >
+                      
                       <span>
                         <span
                           style={
@@ -370,6 +373,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -470,6 +475,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                         }
                       }
                     >
+                      
                       <span>
                         <span
                           style={
@@ -700,6 +706,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -800,6 +808,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                         }
                       }
                     >
+                      
                       <span>
                         <span
                           style={
@@ -1010,6 +1019,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -1110,6 +1121,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                         }
                       }
                     >
+                      
                       <span>
                         <span
                           style={

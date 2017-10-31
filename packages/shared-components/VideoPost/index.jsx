@@ -12,6 +12,7 @@ const VideoPost = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   postDetails,
   text,
   tag,
@@ -40,6 +41,7 @@ const VideoPost = ({
     onDeleteConfirmClick={onDeleteConfirmClick}
     onEditClick={onEditClick}
     onShareNowClick={onShareNowClick}
+    onRequeueClick={onRequeueClick}
     retweetProfile={retweetProfile}
     sent={sent}
     onImageClick={onImageClick}

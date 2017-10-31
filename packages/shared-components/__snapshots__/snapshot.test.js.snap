@@ -1294,6 +1294,7 @@ exports[`Snapshots PostFooter sent post 1`] = `
 exports[`Snapshots PostFooterButtons default 1`] = `
 <span>
   <PostFooterButtons
+    error=""
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1309,6 +1310,7 @@ exports[`Snapshots PostFooterButtons default 1`] = `
 exports[`Snapshots PostFooterButtons isConfirmingDelete 1`] = `
 <span>
   <PostFooterButtons
+    error=""
     isConfirmingDelete={true}
     isDeleting={false}
     isWorking={false}
@@ -1324,6 +1326,7 @@ exports[`Snapshots PostFooterButtons isConfirmingDelete 1`] = `
 exports[`Snapshots PostFooterButtons isDeleting 1`] = `
 <span>
   <PostFooterButtons
+    error=""
     isConfirmingDelete={false}
     isDeleting={true}
     isWorking={false}
@@ -1339,6 +1342,7 @@ exports[`Snapshots PostFooterButtons isDeleting 1`] = `
 exports[`Snapshots PostFooterButtons isWorking 1`] = `
 <span>
   <PostFooterButtons
+    error=""
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={true}
@@ -1410,6 +1414,7 @@ exports[`Snapshots PostList default 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1428,6 +1433,7 @@ exports[`Snapshots PostList default 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1468,6 +1474,7 @@ exports[`Snapshots PostList image posts 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1487,6 +1494,7 @@ exports[`Snapshots PostList image posts 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1541,6 +1549,7 @@ exports[`Snapshots PostList link posts 1`] = `
             },
           ],
           "postDetails": Object {
+            "error": "",
             "postAction": "This post is scheduled for 9:42pm (GMT)",
           },
           "retweetCommentLinks": Array [],
@@ -1573,6 +1582,7 @@ exports[`Snapshots PostList link posts 1`] = `
             },
           ],
           "postDetails": Object {
+            "error": "",
             "postAction": "This post is scheduled for 9:42pm (GMT)",
           },
           "retweetCommentLinks": Array [],
@@ -1611,6 +1621,7 @@ exports[`Snapshots PostList missing type 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1629,6 +1640,7 @@ exports[`Snapshots PostList missing type 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1673,6 +1685,7 @@ exports[`Snapshots PostList multiple image posts 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1696,6 +1709,7 @@ exports[`Snapshots PostList multiple image posts 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1735,6 +1749,7 @@ exports[`Snapshots PostList sent 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1753,6 +1768,7 @@ exports[`Snapshots PostList sent 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1793,6 +1809,7 @@ exports[`Snapshots PostList video posts 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },
@@ -1812,6 +1829,7 @@ exports[`Snapshots PostList video posts 1`] = `
           "linkAttachment": Object {},
           "links": Array [],
           "postDetails": Object {
+            "error": "",
             "isRetweet": false,
             "postAction": "This post is scheduled for May 3rd",
           },

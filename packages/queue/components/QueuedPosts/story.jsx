@@ -34,6 +34,7 @@ storiesOf('QueuedPosts')
       onDeleteConfirmClick={action('onDeleteConfirmClick')}
       onEditClick={action('onEditClick')}
       onShareNowClick={action('onShareNowClick')}
+      onRequeueClick={action('onRequeueClick')}
     />
   ))
   .add('loading', () => (
@@ -46,5 +47,6 @@ storiesOf('QueuedPosts')
       onDeleteConfirmClick={action('onDeleteConfirmClick')}
       onEditClick={action('onEditClick')}
       onShareNowClick={action('onShareNowClick')}
+      onRequeueClick={action('onRequeueClick')}
     />
   ));

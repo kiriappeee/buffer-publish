@@ -33,6 +33,7 @@ const getPostActionString = ({ post }) => {
 const getPostDetails = ({ post }) => ({
   postAction: getPostActionString({ post }),
   isRetweet: post.retweet !== undefined,
+  error: post.error || '',
 });
 
 const getRetweetProfileInfo = (post) => {

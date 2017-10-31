@@ -25,6 +25,7 @@ const TextPost = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   postDetails,
   text,
   retweetProfile,
@@ -64,6 +65,7 @@ const TextPost = ({
       onDeleteConfirmClick={onDeleteConfirmClick}
       onEditClick={onEditClick}
       onShareNowClick={onShareNowClick}
+      onRequeueClick={onRequeueClick}
       postDetails={postDetails}
       text={text}
       retweetProfile={retweetProfile}

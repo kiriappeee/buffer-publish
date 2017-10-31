@@ -48,6 +48,7 @@ const ImagePost = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   postDetails,
   sent,
   text,
@@ -111,6 +112,7 @@ const ImagePost = ({
       onDeleteConfirmClick={onDeleteConfirmClick}
       onEditClick={onEditClick}
       onShareNowClick={onShareNowClick}
+      onRequeueClick={onRequeueClick}
       postDetails={postDetails}
       sent={sent}
       text={text}

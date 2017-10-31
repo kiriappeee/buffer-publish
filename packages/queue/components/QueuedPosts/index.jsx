@@ -31,6 +31,7 @@ const QueuedPosts = ({
   onComposerPlaceholderClick,
   onComposerCreateSuccess,
   onCancelConfirmClick,
+  onRequeueClick,
   onDeleteClick,
   onDeleteConfirmClick,
   onEditClick,
@@ -81,6 +82,7 @@ const QueuedPosts = ({
       <QueueItems
         items={postLists}
         onCancelConfirmClick={onCancelConfirmClick}
+        onRequeueClick={onRequeueClick}
         onDeleteClick={onDeleteClick}
         onDeleteConfirmClick={onDeleteConfirmClick}
         onEditClick={onEditClick}
@@ -109,6 +111,7 @@ QueuedPosts.propTypes = {
   onComposerPlaceholderClick: PropTypes.func.isRequired,
   onComposerCreateSuccess: PropTypes.func.isRequired,
   onCancelConfirmClick: PropTypes.func.isRequired,
+  onRequeueClick: PropTypes.func.isRequired,
   onDeleteClick: PropTypes.func.isRequired,
   onDeleteConfirmClick: PropTypes.func.isRequired,
   onEditClick: PropTypes.func.isRequired,
