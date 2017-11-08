@@ -83,8 +83,6 @@ const movePostInArray = (arr, from, to) => {
   return clone;
 };
 
-const isFixedPost = post => post.pinned || post.scheduled_at;
-
 /**
  * handlePostDropped()
  *
@@ -121,9 +119,9 @@ const handlePostDropped = (posts, action) => {
     day: p.day,
   }));
 
-  // Store the original indexes of pinned/scheduled posts
+  // Store the original indexes of fixed posts (pinned, scheduled, error'd, etc.)
   const fixedPosts = orderedPosts.reduce((acc, post, idx) => {
-    if (isFixedPost(post)) {
+    if (post.isFixed) {
       acc.set(post.id, { originalIndex: idx });
     }
     return acc;

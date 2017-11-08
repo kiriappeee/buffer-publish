@@ -5,8 +5,6 @@ import flow from 'lodash.flow';
 import { DragSource, DropTarget } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 
-const allowed = postProps => !postProps.scheduled_at && !postProps.pinned;
-
 const postSource = {
   beginDrag(props, monitor, component) {
     return {
@@ -28,7 +26,7 @@ const postTarget = {
   },
   canDrop(props, monitor) {
     const draggingPost = monitor.getItem();
-    return allowed(props.postProps) && allowed(draggingPost.postProps);
+    return (!props.postProps.isFixed) && (!draggingPost.postProps.isFixed);
   },
   hover(props, monitor) {
     const { index: dragIndex, onDropPost } = monitor.getItem();
@@ -89,7 +87,6 @@ class PostDragWrapper extends Component {
     } = this.props;
 
     const { isHovering } = this.state;
-    const fixed = !allowed(postProps);
 
     return connectDragSource(
       connectDropTarget(
@@ -103,7 +100,7 @@ class PostDragWrapper extends Component {
             draggable
             dragging={isDragging}
             hovering={isHovering}
-            fixed={fixed}
+            fixed={postProps.isFixed}
           />
         </div>,
       ),

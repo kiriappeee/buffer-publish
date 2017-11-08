@@ -13,8 +13,6 @@ const getLayerStyles = width => ({
   opacity: 0.95,
 });
 
-const allowed = postProps => !postProps.scheduled_at && !postProps.pinned;
-
 function getItemStyles(props) {
   const { initialOffset, currentOffset, diffOffset } = props;
   if (!initialOffset || !currentOffset) {
@@ -26,7 +24,7 @@ function getItemStyles(props) {
   let { y } = currentOffset;
   const { x } = initialOffset;
 
-  const keepFixed = !allowed(props.item.postProps) &&
+  const keepFixed = props.item.postProps.isFixed &&
                     Math.abs(diffOffset.y) > 50;
   if (keepFixed) {
     y = initialOffset.y;

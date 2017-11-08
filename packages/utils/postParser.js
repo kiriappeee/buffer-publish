@@ -84,6 +84,13 @@ module.exports = (post) => {
         .concat(post.profile_service === 'facebook' ? parseFacebookEntities(text, post.entities) : [])
         .sort(({ indices: [startIdxA] }, { indices: [startIdxB] }) => startIdxA - startIdxB);
 
+  const isFixed = (
+    post.pinned ||
+    post.scheduled_at ||
+    post.due_at === 0 ||
+    post.error
+  );
+
   return {
     day: post.day,
     id: post.id,
@@ -113,5 +120,6 @@ module.exports = (post) => {
     due_at: post.due_at,
     scheduled_at: post.scheduled_at,
     pinned: post.pinned,
+    isFixed,
   };
 };
