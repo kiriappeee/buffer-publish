@@ -23,6 +23,8 @@ const initialState = {
   profileTimezoneCity: '',
   hasTwentyFourHourTimeFormat: false,
   clearTimezoneInput: false,
+  paused: false,
+  profileId: null,
 };
 
 export default (state = initialState, action) => {
@@ -36,7 +38,26 @@ export default (state = initialState, action) => {
         schedules: action.profile.schedules,
         profileTimezoneCity: action.profile.timezone_city,
         settingsHeader: `Your posting schedule for ${action.profile.serviceUsername}`,
+        paused: action.profile.paused,
+        profileId: action.profile.id,
       };
+    case profileActionTypes.PROFILE_PAUSED:
+    case profileActionTypes.PROFILE_UNPAUSED:
+      if (action.profileId === state.profileId) {
+        return {
+          ...state,
+          paused: action.type === actionTypes.PROFILE_PAUSED,
+        };
+      }
+      return state;
+    case profileActionTypes.PUSHER_PROFILE_PAUSED_STATE:
+      if (action.profileId === state.profileId) {
+        return {
+          ...state,
+          paused: action.paused,
+        };
+      }
+      return state;
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,

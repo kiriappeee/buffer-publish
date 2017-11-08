@@ -31,10 +31,17 @@ const bindProfileEvents = (channel, profileId, dispatch) => {
       order,
     });
   });
+  channel.bind('queue_paused', (paused) => {
+    dispatch({
+      type: profileSidebarActionTypes.PUSHER_PROFILE_PAUSED_STATE,
+      paused,
+      profileId,
+    });
+  });
 };
 
 export default ({ dispatch }) => {
-  const pusher = new Pusher(PUSHER_APP_KEY, { authEndpoint: '/pusher/auth' }); // eslint-disable-line
+  const pusher = new Pusher(PUSHER_APP_KEY, { authEndpoint: '/pusher/auth' });
   window.__pusher = pusher;
   const channelsByProfileId = {};
 

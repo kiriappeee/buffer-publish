@@ -6,6 +6,8 @@ import {
   QuestionIcon,
   IconArrowPopover,
   LoadingAnimation,
+  Link,
+  Button,
 } from '@bufferapp/components';
 
 import {
@@ -45,6 +47,14 @@ const scheduleLoadingContainerStyle = {
   textAlign: 'center',
 };
 
+const pauseQueueContainerStyle = {
+  marginBottom: '3rem',
+};
+
+const pauseButtonContainerStyle = {
+  margin: '1rem 0 .25rem',
+};
+
 /* eslint no-console: 0 */
 const ProfileSettings = ({
   days,
@@ -60,6 +70,9 @@ const ProfileSettings = ({
   onRemoveTimeClick,
   onTimezoneInputFocus,
   onTimezoneInputBlur,
+  paused,
+  onPauseClick,
+  onUnpauseClick,
 }) => {
   if (loading) {
     return (
@@ -148,6 +161,46 @@ const ProfileSettings = ({
             onUpdateTime={onUpdateTime}
           />}
       </div>
+      <div style={headerStyle}>
+        <Text color="black">Pause Queue</Text>
+      </div>
+      <Divider />
+      {paused
+        ? <div style={pauseQueueContainerStyle}>
+          <Text size="mini">
+            <b>Your queue is currently paused.</b>&nbsp;
+          </Text>
+          <div style={pauseButtonContainerStyle}>
+            <Button
+              onClick={onUnpauseClick}
+            >
+              Resume Queue
+            </Button>
+          </div>
+          <Text size="small">
+            <Link newTab href="https://faq.buffer.com/article/681-how-to-pause-your-queue">
+              How does this work?
+            </Link>.
+          </Text>
+        </div>
+        : <div style={pauseQueueContainerStyle}>
+          <Text size="mini">
+            Pausing your queue prevents all posts from being sent until you resume it.&nbsp;
+          </Text>
+          <div style={pauseButtonContainerStyle}>
+            <Button
+              onClick={onPauseClick}
+            >
+              Pause Queue
+            </Button>
+          </div>
+          <Text size="small">
+            <Link newTab href="https://faq.buffer.com/article/681-how-to-pause-your-queue">
+              How does this work?
+            </Link>.
+          </Text>
+        </div>
+      }
     </div>
   );
 };
@@ -184,6 +237,9 @@ ProfileSettings.propTypes = {
   onGetTimezones: PropTypes.func.isRequired,
   onTimezoneInputFocus: PropTypes.func.isRequired,
   onTimezoneInputBlur: PropTypes.func.isRequired,
+  paused: PropTypes.bool.isRequired,
+  onPauseClick: PropTypes.func.isRequired,
+  onUnpauseClick: PropTypes.func.isRequired,
 };
 
 ProfileSettings.defaultProps = {

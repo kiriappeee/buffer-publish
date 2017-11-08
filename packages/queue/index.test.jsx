@@ -22,6 +22,11 @@ const storeFake = state => ({
 describe('Queue', () => {
   it('should render', () => {
     const store = storeFake({
+      profileSidebar: {
+        profiles: [
+          { id: 'abc', paused: false },
+        ],
+      },
       queue: {
         byProfileId: {
           abc: {

@@ -1,8 +1,7 @@
-// component vs. container https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 import { connect } from 'react-redux';
-// load the presentational component
-import QueuedPosts from './components/QueuedPosts';
+import { actions as profileSidebarActions } from '@bufferapp/publish-profile-sidebar';
 import { actions } from './reducer';
+import QueuedPosts from './components/QueuedPosts';
 
 const formatPostLists = (posts) => {
   const orderedPosts = Object.values(posts).sort((a, b) => a.due_at - b.due_at);
@@ -22,6 +21,7 @@ export default connect(
   (state, ownProps) => {
     const profileId = ownProps.profileId;
     const currentProfile = state.queue.byProfileId[profileId];
+    const paused = state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length;
     if (currentProfile) {
       return {
         loading: currentProfile.loading,
@@ -35,6 +35,7 @@ export default connect(
         environment: state.queue.environment,
         editMode: state.queue.editMode,
         editingPostId: state.queue.editingPostId,
+        paused,
       };
     }
     return {};
@@ -107,6 +108,9 @@ export default connect(
         commit,
         profileId: ownProps.profileId,
       }));
+    },
+    onUnpauseClick: () => {
+      dispatch(profileSidebarActions.onUnpauseClick({ profileId: ownProps.profileId }));
     },
     onComposerPlaceholderClick: () => {
       dispatch(actions.handleComposerPlaceholderClick());
