@@ -3,6 +3,9 @@ import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch
 export const actionTypes = {
   SELECT_PROFILE: 'SELECT_PROFILE',
   POST_COUNT_UPDATED: 'POST_COUNT_UPDATED',
+  PROFILE_UNPAUSED: 'PROFILE_UNPAUSED',
+  PROFILE_PAUSED: 'PROFILE_PAUSED',
+  PUSHER_PROFILE_PAUSED_STATE: 'PUSHER_PROFILE_PAUSED_STATE',
 };
 
 const initialState = {
@@ -30,6 +33,23 @@ const profilesReducer = (state = [], action) => {
           sentCount: profile.id === action.profileId
             ? action.counts.sent
             : profile.sentCount,
+        }));
+    case actionTypes.PROFILE_PAUSED:
+    case actionTypes.PROFILE_UNPAUSED:
+      return state
+        .map(profile => ({
+          ...profile,
+          paused: profile.id === action.profileId
+            ? action.type === actionTypes.PROFILE_PAUSED
+            : profile.paused,
+        }));
+    case actionTypes.PUSHER_PROFILE_PAUSED_STATE:
+      return state
+        .map(profile => ({
+          ...profile,
+          paused: profile.id === action.profileId
+            ? action.paused
+            : profile.paused,
         }));
     default:
       return state;
@@ -61,6 +81,9 @@ export default (state = initialState, action) => {
         lockedProfiles: profilesReducer(state.lockedProfiles, action),
       };
     }
+    case actionTypes.PROFILE_PAUSED:
+    case actionTypes.PROFILE_UNPAUSED:
+    case actionTypes.PUSHER_PROFILE_PAUSED_STATE:
     case actionTypes.POST_COUNT_UPDATED: {
       return {
         ...state,
@@ -78,5 +101,13 @@ export const actions = {
     type: actionTypes.SELECT_PROFILE,
     profileId: profile.id,
     profile,
+  }),
+  onUnpauseClick: ({ profileId }) => ({
+    type: actionTypes.PROFILE_UNPAUSED,
+    profileId,
+  }),
+  onPauseClick: ({ profileId }) => ({
+    type: actionTypes.PROFILE_PAUSED,
+    profileId,
   }),
 };

@@ -18,5 +18,6 @@ module.exports = profile => ({
   disabled: profile.disabled,
   business: profile.business,
   default: profile.default,
+  paused: profile.paused,
   open: false,
 });

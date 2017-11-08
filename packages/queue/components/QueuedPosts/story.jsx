@@ -49,4 +49,18 @@ storiesOf('QueuedPosts')
       onShareNowClick={action('onShareNowClick')}
       onRequeueClick={action('onRequeueClick')}
     />
+  ))
+  .add('paused', () => (
+    <QueuedPosts
+      total={10}
+      loading={false}
+      postLists={postLists}
+      onCancelConfirmClick={action('onCancelConfirmClick')}
+      onDeleteClick={action('onDeleteClick')}
+      onDeleteConfirmClick={action('onDeleteConfirmClick')}
+      onEditClick={action('onEditClick')}
+      onShareNowClick={action('onShareNowClick')}
+      paused
+      onUnpauseClick={action('onUnpauseClick')}
+    />
   ));

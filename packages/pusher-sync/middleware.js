@@ -22,6 +22,13 @@ const bindProfileEvents = (channel, profileId, dispatch) => {
       });
     });
   });
+  channel.bind('queue_paused', (paused) => {
+    dispatch({
+      type: profileSidebarActionTypes.PUSHER_PROFILE_PAUSED_STATE,
+      paused,
+      profileId,
+    });
+  });
 };
 
 export default ({ dispatch }) => {
