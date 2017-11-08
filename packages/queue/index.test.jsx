@@ -49,6 +49,7 @@ describe('Queue', () => {
           onDeleteClick={jest.fn()}
           onDeleteConfirmClick={jest.fn()}
           onEditClick={jest.fn()}
+          onRequeueClick={jest.fn()}
           onShareNowClick={jest.fn()}
         />
       </Provider>,

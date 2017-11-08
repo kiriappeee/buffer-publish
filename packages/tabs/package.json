@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-tabs",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Buffer Tabs Package",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "emily@buffer.com",
   "dependencies": {
     "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-shared-components": "1.0.2"
+    "@bufferapp/publish-shared-components": "1.1.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

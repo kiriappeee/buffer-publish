@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import {
   Text,
 } from '@bufferapp/components';
+import { calculateStyles } from '@bufferapp/components/lib/utils';
+import {
+  transitionAnimationTime,
+  transitionAnimationType,
+} from '@bufferapp/components/style/animation';
 
 import {
   TextPost,
@@ -12,10 +17,6 @@ import {
   VideoPost,
   PostDragWrapper,
 } from '@bufferapp/publish-shared-components';
-
-const postStyle = {
-  marginBottom: '2rem',
-};
 
 const listHeaderStyle = {
   marginBottom: '1rem',
@@ -36,6 +37,7 @@ const postTypeComponentMap = new Map([
 const renderPost = ({
   post,
   onCancelConfirmClick,
+  onRequeueClick,
   onDeleteClick,
   onDeleteConfirmClick,
   onEditClick,
@@ -50,6 +52,7 @@ const renderPost = ({
   const postWithEventHandlers = {
     ...post,
     key: post.id,
+    postDetails: post.postDetails,
     onCancelConfirmClick: () => onCancelConfirmClick({ post }),
     onDeleteClick: () => onDeleteClick({ post }),
     onDeleteConfirmClick: () => onDeleteConfirmClick({ post }),
@@ -59,14 +62,34 @@ const renderPost = ({
     onImageClickNext: () => onImageClickNext({ post }),
     onImageClickPrev: () => onImageClickPrev({ post }),
     onImageClose: () => onImageClose({ post }),
+    onRequeueClick: () => onRequeueClick({ post }),
     onDropPost,
   };
   let PostComponent = postTypeComponentMap.get(post.type);
   PostComponent = PostComponent || TextPost;
 
+  const defaultStyle = {
+    default: {
+      marginBottom: '2rem',
+      maxHeight: '100vh',
+      transition: `all ${transitionAnimationTime} ${transitionAnimationType}`,
+    },
+    hidden: {
+      maxHeight: 0,
+      opacity: 0,
+    },
+  };
+
+  const hiddenStyle = {
+    hidden: post.isDeleting,
+  };
+
   if (draggable) {
     return (
-      <div style={postStyle} key={post.id}>
+      <div
+        style={calculateStyles(defaultStyle, hiddenStyle)}
+        key={post.id}
+      >
         <PostDragWrapper
           id={post.id}
           index={post.index}
@@ -78,7 +101,10 @@ const renderPost = ({
   }
 
   return (
-    <div style={postStyle} key={post.id}>
+    <div
+      style={calculateStyles(defaultStyle, hiddenStyle)}
+      key={post.id}
+    >
       <PostComponent {...postWithEventHandlers} />
     </div>
   );
@@ -124,6 +150,7 @@ QueueItems.propTypes = {
   onDeleteConfirmClick: PropTypes.func,
   onEditClick: PropTypes.func,
   onShareNowClick: PropTypes.func,
+  onRequeueClick: PropTypes.func,
   onImageClick: PropTypes.func,
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,

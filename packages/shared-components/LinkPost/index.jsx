@@ -51,6 +51,7 @@ const LinkPost = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   postDetails,
   scheduledAt,
   sent,
@@ -130,6 +131,7 @@ const LinkPost = ({
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
+      onRequeueClick={onRequeueClick}
     >
       {children}
     </Post>

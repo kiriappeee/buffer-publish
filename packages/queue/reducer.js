@@ -19,6 +19,7 @@ export const actionTypes = {
   HIDE_COMPOSER: 'HIDE_COMPOSER',
   POST_COUNT_UPDATED: 'POST_COUNT_UPDATED',
   POST_DROPPED: 'POST_DROPPED',
+  POST_REQUEUE: 'POST_REQUEUE',
 };
 
 const initialState = {
@@ -230,7 +231,7 @@ const profileReducer = (state = profileInitialState, action) => {
     case `queuedPosts_${dataFetchActionTypes.FETCH_START}`:
       return {
         ...state,
-        loading: !action.args.isFetchingMore,
+        loading: !action.args.isFetchingMore && !action.args.isReordering,
         loadingMore: action.args.isFetchingMore,
       };
     case `queuedPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
@@ -398,6 +399,12 @@ export const actions = {
   }),
   handleImageClose: ({ post, profileId }) => ({
     type: actionTypes.POST_IMAGE_CLOSED,
+    updateId: post.id,
+    post,
+    profileId,
+  }),
+  handleRequeue: ({ post, profileId }) => ({
+    type: actionTypes.POST_REQUEUE,
     updateId: post.id,
     post,
     profileId,

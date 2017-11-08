@@ -117,6 +117,7 @@ const Post = ({
   onDeleteConfirmClick,
   onEditClick,
   onShareNowClick,
+  onRequeueClick,
   postDetails,
   retweetComment,
   retweetCommentLinks,
@@ -153,6 +154,7 @@ const Post = ({
           postDetails={postDetails}
           sent={sent}
           dragging={dragging}
+          onRequeueClick={onRequeueClick}
         />
       </Card>
     </div>
@@ -163,6 +165,7 @@ Post.commonPropTypes = {
   isDeleting: PropTypes.bool,
   isWorking: PropTypes.bool,
   onCancelConfirmClick: PropTypes.func,
+  onRequeueClick: PropTypes.func,
   onDeleteClick: PropTypes.func,
   onDeleteConfirmClick: PropTypes.func,
   onEditClick: PropTypes.func,
