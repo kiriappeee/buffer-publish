@@ -54,10 +54,13 @@ class PostDragWrapper extends Component {
 
     this.state = {
       isHovering: false,
+      isKbdGrabbed: false,
     };
 
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
 
   componentDidMount() {
@@ -77,6 +80,26 @@ class PostDragWrapper extends Component {
     this.setState(state => ({ ...state, isHovering: false }));
   }
 
+  onKeyDown(event) { // eslint-disable-line
+    const { postProps: { index, onDropPost } } = this.props;
+    if (event.key === ' ') {
+      event.preventDefault();
+      this.setState(state => ({ ...state, isKbdGrabbed: !state.isKbdGrabbed }));
+    }
+    if (event.key === 'ArrowDown' && this.state.isKbdGrabbed) {
+      event.preventDefault();
+      onDropPost({ dragIndex: index, hoverIndex: index + 1 });
+    }
+    if (event.key === 'ArrowUp' && this.state.isKbdGrabbed) {
+      event.preventDefault();
+      onDropPost({ dragIndex: index, hoverIndex: index - 1 });
+    }
+  }
+
+  onBlur() {
+    this.setState(state => ({ ...state, isKbdGrabbed: false }));
+  }
+
   render() {
     const {
       postComponent: PostComponent,
@@ -86,7 +109,7 @@ class PostDragWrapper extends Component {
       connectDropTarget,
     } = this.props;
 
-    const { isHovering } = this.state;
+    const { isHovering, isKbdGrabbed } = this.state;
 
     return connectDragSource(
       connectDropTarget(
@@ -94,12 +117,17 @@ class PostDragWrapper extends Component {
           onMouseEnter={this.onMouseEnter}
           onMouseLeave={this.onMouseLeave}
           ref={(node) => { this.containerNode = node; }}
+          draggable
+          tabIndex={0}
+          onKeyDown={this.onKeyDown}
+          onBlur={this.onBlur}
+          style={isKbdGrabbed ? { outline: 'none', transition: 'all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)', transform: 'scale(1.01)' } : { transition: 'all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)' }}
         >
           <PostComponent
             {...postProps}
             draggable
             dragging={isDragging}
-            hovering={isHovering}
+            hovering={isHovering || isKbdGrabbed}
             fixed={postProps.isFixed}
           />
         </div>,
