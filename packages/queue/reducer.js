@@ -182,15 +182,7 @@ const handlePostsReordered = (posts, { order: newOrder }) => {
   }));
 
   // Move the posts into their correct positions
-  let reorderedPosts = [...orderedPosts];
-  let currentOrder = orderedPosts.map(post => post.id);
-  newOrder.forEach((postId, newIndex) => {
-    const currentIndex = currentOrder.indexOf(postId);
-    if (newIndex !== currentIndex) {
-      reorderedPosts = movePostInArray(reorderedPosts, currentIndex, newIndex);
-      currentOrder = movePostInArray(currentOrder, currentIndex, newIndex);
-    }
-  });
+  const reorderedPosts = newOrder.map(postId => posts[postId]);
 
   // Finally, apply the fixed values we saved
   const finalPosts = reorderedPosts.map((p, idx) => {
