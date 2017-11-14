@@ -25,7 +25,7 @@ const postTarget = {
     onDropPost({ commit: true });
 
     // This tricky line removes the focus from the 'just dragged' post
-    // so we don't see a flash of CSS outline blue
+    // so we don't see a flash of the CSS outline
     component.decoratedComponentInstance.containerNode.blur();
   },
   canDrop(props, monitor) {
