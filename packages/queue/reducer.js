@@ -112,6 +112,29 @@ const movePostInArray = (arr, from, to) => {
 const handlePostDropped = (posts, action) => {
   const orderedPosts = Object.values(posts).sort((a, b) => a.due_at - b.due_at);
 
+  // For keyboard moves we should skip fixed posts manually
+  const { keyboardDirection, dragIndex } = action;
+  let { hoverIndex } = action;
+
+  if (keyboardDirection) {
+    let moveToPost = orderedPosts[hoverIndex];
+
+    while (moveToPost && moveToPost.isFixed) {
+      if (keyboardDirection === 'down') {
+        hoverIndex += 1;
+      }
+      if (keyboardDirection === 'up') {
+        hoverIndex -= 1;
+      }
+      moveToPost = orderedPosts[hoverIndex];
+    }
+    // If we get to the end and can't find a slot
+    // then just stay where we are
+    if (!moveToPost) {
+      hoverIndex = dragIndex;
+    }
+  }
+
   // Save values that should be fixed
   const fixedValues = orderedPosts.map(p => ({
     due_at: p.due_at,
@@ -130,8 +153,8 @@ const handlePostDropped = (posts, action) => {
   // Move the post that is being dragged
   const afterMovePosts = movePostInArray(
     orderedPosts,
-    action.dragIndex,
-    action.hoverIndex,
+    dragIndex,
+    hoverIndex,
   );
 
   // Put the pinned/scheduled posts back where they should be
@@ -504,11 +527,12 @@ export const actions = {
     profileId,
     counts,
   }),
-  onDropPost: ({ dragIndex, hoverIndex, commit, profileId }) => ({
+  onDropPost: ({ dragIndex, hoverIndex, commit, keyboardDirection, profileId }) => ({
     type: actionTypes.POST_DROPPED,
     dragIndex,
     hoverIndex,
     commit,
+    keyboardDirection,
     profileId,
   }),
 };

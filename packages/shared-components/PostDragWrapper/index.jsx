@@ -20,9 +20,13 @@ const postSource = {
 };
 
 const postTarget = {
-  drop(props) {
+  drop(props, monitor, component) {
     const { onDropPost } = props.postProps;
     onDropPost({ commit: true });
+
+    // This tricky line removes the focus from the 'just dragged' post
+    // so we don't see a flash of CSS outline blue
+    component.decoratedComponentInstance.containerNode.blur();
   },
   canDrop(props, monitor) {
     const draggingPost = monitor.getItem();
@@ -80,24 +84,42 @@ class PostDragWrapper extends Component {
     this.setState(state => ({ ...state, isHovering: false }));
   }
 
-  onKeyDown(event) { // eslint-disable-line
+  onKeyDown(event) {
     const { postProps: { index, onDropPost } } = this.props;
     if (event.key === ' ') {
       event.preventDefault();
-      this.setState(state => ({ ...state, isKbdGrabbed: !state.isKbdGrabbed }));
+      const isKbdGrabbed = !this.state.isKbdGrabbed;
+      this.setState(state => ({ ...state, isKbdGrabbed }));
+      if (!isKbdGrabbed) {
+        onDropPost({ commit: true });
+      }
     }
     if (event.key === 'ArrowDown' && this.state.isKbdGrabbed) {
       event.preventDefault();
-      onDropPost({ dragIndex: index, hoverIndex: index + 1 });
+      onDropPost({ dragIndex: index, hoverIndex: index + 1, keyboardDirection: 'down' });
     }
     if (event.key === 'ArrowUp' && this.state.isKbdGrabbed) {
       event.preventDefault();
-      onDropPost({ dragIndex: index, hoverIndex: index - 1 });
+      onDropPost({ dragIndex: index, hoverIndex: index - 1, keyboardDirection: 'up' });
     }
   }
 
   onBlur() {
     this.setState(state => ({ ...state, isKbdGrabbed: false }));
+  }
+
+  /**
+   * These styles add a bit of animation to when you pick up a post with
+   * the space bar, and also ensure we don't show the focus ring when using
+   * the mouse for drag and drop.
+   */
+  getStyle() {
+    const transition = 'all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    const hideOutline = (this.state.isHovering || this.props.isDragging)
+      ? { outline: 'none' } : {};
+    return this.state.isKbdGrabbed
+      ? { transition, transform: 'scale(1.01)', ...hideOutline }
+      : { transition, ...hideOutline };
   }
 
   render() {
@@ -114,6 +136,8 @@ class PostDragWrapper extends Component {
     return connectDragSource(
       connectDropTarget(
         <div
+          aria-grabbed={isKbdGrabbed}
+          aria-dropeffect="move"
           onMouseEnter={this.onMouseEnter}
           onMouseLeave={this.onMouseLeave}
           ref={(node) => { this.containerNode = node; }}
@@ -121,7 +145,7 @@ class PostDragWrapper extends Component {
           tabIndex={0}
           onKeyDown={this.onKeyDown}
           onBlur={this.onBlur}
-          style={isKbdGrabbed ? { outline: 'none', transition: 'all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)', transform: 'scale(1.01)' } : { transition: 'all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)' }}
+          style={this.getStyle()}
         >
           <PostComponent
             {...postProps}
@@ -154,7 +178,7 @@ export default flow(
     connectDragPreview: connect.dragPreview(),
     isDragging: monitor.isDragging(),
   })),
-  DropTarget('post', postTarget, (connect, monitor) => ({
+  DropTarget('post', postTarget, connect => ({
     connectDropTarget: connect.dropTarget(),
   })),
 )(PostDragWrapper);
