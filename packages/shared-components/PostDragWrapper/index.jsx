@@ -102,7 +102,7 @@ class PostDragWrapper extends Component {
   }
 
   onMouseEnter() {
-    // this.setState(state => ({ ...state, isHovering: true }));
+    this.setState(state => ({ ...state, isHovering: true }));
   }
 
   onMouseLeave() {
