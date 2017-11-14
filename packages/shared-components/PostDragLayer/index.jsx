@@ -14,18 +14,25 @@ const getLayerStyles = width => ({
 });
 
 function getItemStyles(props) {
-  const { initialOffset, currentOffset } = props;
+  const { initialOffset, currentOffset, diffOffset } = props;
   if (!initialOffset || !currentOffset) {
     return {
       display: 'none',
     };
   }
 
-  const { y } = currentOffset;
+  let { y } = currentOffset;
   const { x } = initialOffset;
+
+  const keepFixed = props.item.postProps.isFixed &&
+                    Math.abs(diffOffset.y) > 50;
+  if (keepFixed) {
+    y = initialOffset.y;
+  }
 
   const transform = `translate(${x}px, ${y}px)`;
   return {
+    transition: keepFixed ? 'all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)' : 'none',
     transform,
     WebkitTransform: transform,
   };
@@ -42,6 +49,10 @@ class PostDragLayer extends Component {
       x: PropTypes.number.isRequired,
       y: PropTypes.number.isRequired,
     }),
+    diffOffset: PropTypes.shape({ // eslint-disable-line
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+    }),
     isDragging: PropTypes.bool.isRequired,
   };
 
@@ -51,6 +62,13 @@ class PostDragLayer extends Component {
     }
 
     const { postComponent: PostComponent, postProps } = this.props.item;
+
+    // Dragging any files (images, etc.) onto the app causes `react-dnd`
+    // to render this component, so we'll bail out here if it's not a
+    // post being dragged.
+    if (!PostComponent) {
+      return null;
+    }
 
     return (
       <div style={getLayerStyles(this.props.item.width)}>
@@ -66,5 +84,6 @@ export default DragLayer(monitor => ({
   item: monitor.getItem(),
   initialOffset: monitor.getInitialSourceClientOffset(),
   currentOffset: monitor.getSourceClientOffset(),
+  diffOffset: monitor.getDifferenceFromInitialOffset(),
   isDragging: monitor.isDragging(),
 }))(PostDragLayer);

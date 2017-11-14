@@ -482,6 +482,7 @@ exports[`Snapshots ImagePost wide image 1`] = `
 exports[`Snapshots LinkPost error 1`] = `
 <span>
   <LinkPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -526,6 +527,7 @@ exports[`Snapshots LinkPost error 1`] = `
 exports[`Snapshots LinkPost queued link post 1`] = `
 <span>
   <LinkPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -569,6 +571,7 @@ exports[`Snapshots LinkPost queued link post 1`] = `
 exports[`Snapshots LinkPost sent 1`] = `
 <span>
   <LinkPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -612,6 +615,7 @@ exports[`Snapshots LinkPost sent 1`] = `
 exports[`Snapshots LinkPost square image 1`] = `
 <span>
   <LinkPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -655,6 +659,7 @@ exports[`Snapshots LinkPost square image 1`] = `
 exports[`Snapshots LinkPost tall image 1`] = `
 <span>
   <LinkPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -698,6 +703,7 @@ exports[`Snapshots LinkPost tall image 1`] = `
 exports[`Snapshots LinkPost wide image 1`] = `
 <span>
   <LinkPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -742,6 +748,7 @@ exports[`Snapshots MultipleImagesPost error 1`] = `
 <span>
   <MultipleImagesPost
     currentImage={0}
+    fixed={false}
     imageUrls={
       Array [
         "http://lorempixel.com/400/400/cats/",
@@ -791,6 +798,7 @@ exports[`Snapshots MultipleImagesPost queued multiple image post 1`] = `
 <span>
   <MultipleImagesPost
     currentImage={0}
+    fixed={false}
     imageUrls={
       Array [
         "http://lorempixel.com/400/400/cats/",
@@ -839,6 +847,7 @@ exports[`Snapshots MultipleImagesPost sent multiple image post 1`] = `
 <span>
   <MultipleImagesPost
     currentImage={0}
+    fixed={false}
     imageUrls={
       Array [
         "http://lorempixel.com/400/400/cats/",
@@ -886,6 +895,7 @@ exports[`Snapshots MultipleImagesPost sent multiple image post 1`] = `
 exports[`Snapshots Post error 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -918,6 +928,7 @@ exports[`Snapshots Post error 1`] = `
 exports[`Snapshots Post isConfirmingDelete 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={true}
     isDeleting={false}
     isWorking={false}
@@ -947,6 +958,7 @@ exports[`Snapshots Post isConfirmingDelete 1`] = `
 exports[`Snapshots Post isDeleting 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={true}
     isWorking={false}
@@ -976,6 +988,7 @@ exports[`Snapshots Post isDeleting 1`] = `
 exports[`Snapshots Post isWorking 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={true}
@@ -1005,6 +1018,7 @@ exports[`Snapshots Post isWorking 1`] = `
 exports[`Snapshots Post queued post 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1034,6 +1048,7 @@ exports[`Snapshots Post queued post 1`] = `
 exports[`Snapshots Post retweet 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1072,6 +1087,7 @@ exports[`Snapshots Post retweet 1`] = `
 exports[`Snapshots Post retweet with comment 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -1124,6 +1140,7 @@ exports[`Snapshots Post retweet with comment 1`] = `
 exports[`Snapshots Post sent 1`] = `
 <span>
   <Post
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -3106,6 +3123,7 @@ exports[`Snapshots Tabs default 1`] = `
 exports[`Snapshots TextPost error 1`] = `
 <span>
   <TextPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -3143,6 +3161,7 @@ exports[`Snapshots TextPost error 1`] = `
 exports[`Snapshots TextPost queued text post 1`] = `
 <span>
   <TextPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -3179,6 +3198,7 @@ exports[`Snapshots TextPost queued text post 1`] = `
 exports[`Snapshots TextPost retweet 1`] = `
 <span>
   <TextPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -3222,6 +3242,7 @@ exports[`Snapshots TextPost retweet 1`] = `
 exports[`Snapshots TextPost retweet with comment 1`] = `
 <span>
   <TextPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}
@@ -3279,6 +3300,7 @@ exports[`Snapshots TextPost retweet with comment 1`] = `
 exports[`Snapshots TextPost sent 1`] = `
 <span>
   <TextPost
+    fixed={false}
     isConfirmingDelete={false}
     isDeleting={false}
     isWorking={false}

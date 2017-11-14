@@ -35,6 +35,7 @@ const TextPost = ({
   draggable,
   dragging,
   hovering,
+  fixed,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -74,6 +75,7 @@ const TextPost = ({
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
+      fixed={fixed}
     >
       {children}
     </Post>

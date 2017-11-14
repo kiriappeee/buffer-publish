@@ -196,8 +196,19 @@ exports[`Snapshots QueuedPosts default 1`] = `
           }
         >
           <div
+            aria-dropeffect="move"
+            aria-grabbed={false}
+            draggable={true}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            style={
+              Object {
+                "transition": "all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+              }
+            }
+            tabIndex={0}
           >
             <div
               style={
@@ -509,8 +520,19 @@ exports[`Snapshots QueuedPosts default 1`] = `
           }
         >
           <div
+            aria-dropeffect="move"
+            aria-grabbed={false}
+            draggable={true}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            style={
+              Object {
+                "transition": "all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+              }
+            }
+            tabIndex={0}
           >
             <div
               style={
@@ -842,8 +864,19 @@ exports[`Snapshots QueuedPosts default 1`] = `
           }
         >
           <div
+            aria-dropeffect="move"
+            aria-grabbed={false}
+            draggable={true}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            style={
+              Object {
+                "transition": "all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+              }
+            }
+            tabIndex={0}
           >
             <div
               style={
@@ -1155,8 +1188,19 @@ exports[`Snapshots QueuedPosts default 1`] = `
           }
         >
           <div
+            aria-dropeffect="move"
+            aria-grabbed={false}
+            draggable={true}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            style={
+              Object {
+                "transition": "all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+              }
+            }
+            tabIndex={0}
           >
             <div
               style={
@@ -1684,6 +1728,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -1780,6 +1826,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                       }
                     }
                   >
+                    
                     <span>
                       <span
                         style={
@@ -1989,6 +2036,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -2085,6 +2134,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                       }
                     }
                   >
+                    
                     <span>
                       <span
                         style={
@@ -2314,6 +2364,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -2410,6 +2462,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                       }
                     }
                   >
+                    
                     <span>
                       <span
                         style={
@@ -2619,6 +2672,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
           style={
             Object {
               "marginBottom": "2rem",
+              "maxHeight": "100vh",
+              "transition": "all 0.2s linear",
             }
           }
         >
@@ -2715,6 +2770,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                       }
                     }
                   >
+                    
                     <span>
                       <span
                         style={

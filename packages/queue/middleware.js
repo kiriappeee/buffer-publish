@@ -92,6 +92,24 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
 
+    case actionTypes.POST_DROPPED: {
+      if (action.commit) {
+        const state = getState();
+        const posts = state.queue.byProfileId[action.profileId].posts;
+        const orderedPosts = Object.values(posts).sort((a, b) => a.due_at - b.due_at);
+        const orderedIds = orderedPosts.map(post => post.id);
+
+        dispatch(dataFetchActions.fetch({
+          name: 'reorderPosts',
+          args: {
+            profileId: action.profileId,
+            order: orderedIds,
+          },
+        }));
+      }
+      break;
+    }
+
     /**
      * Watch for Pusher events to keep post counts up-to-date throughout the app.
      */

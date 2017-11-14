@@ -101,10 +101,12 @@ export default connect(
         profileId: ownProps.profileId,
       }));
     },
-    onDropPost: ({ dragIndex, hoverIndex }) => {
+    onDropPost: ({ dragIndex, hoverIndex, keyboardDirection, commit }) => {
       dispatch(actions.onDropPost({
         dragIndex,
         hoverIndex,
+        keyboardDirection,
+        commit,
         profileId: ownProps.profileId,
       }));
     },

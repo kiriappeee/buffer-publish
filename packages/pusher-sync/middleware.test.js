@@ -51,8 +51,10 @@ describe('middleware', () => {
     expect(Pusher.bind.mock.calls[3][0]).toEqual('private-updates-12345');
     expect(Pusher.bind.mock.calls[3][1]).toEqual('updated_update');
     expect(Pusher.bind.mock.calls[4][0]).toEqual('private-updates-12345');
-    expect(Pusher.bind.mock.calls[4][1]).toEqual('queue_paused');
-    expect(Pusher.bind).toHaveBeenCalledTimes(5);
+    expect(Pusher.bind.mock.calls[4][1]).toEqual('reordered_updates');
+    expect(Pusher.bind.mock.calls[5][0]).toEqual('private-updates-12345');
+    expect(Pusher.bind.mock.calls[5][1]).toEqual('queue_paused');
+    expect(Pusher.bind).toHaveBeenCalledTimes(6);
   });
 
   it('should dispatch when a subscribed pusher event happens', () => {
