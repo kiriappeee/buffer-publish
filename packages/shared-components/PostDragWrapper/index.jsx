@@ -28,27 +28,52 @@ const postTarget = {
     // so we don't see a flash of the CSS outline
     component.decoratedComponentInstance.containerNode.blur();
   },
-  canDrop(props, monitor) {
+  canDrop(props, monitor, component) {
     const draggingPost = monitor.getItem();
     return (!props.postProps.isFixed) && (!draggingPost.postProps.isFixed);
   },
-  hover(props, monitor) {
+  hover(props, monitor, component) {
     const { index: dragIndex, onDropPost } = monitor.getItem();
     const { index: hoverIndex } = props;
 
     // Don't replace post with itself...
-    if (dragIndex === hoverIndex) {
+    if (dragIndex === hoverIndex || (!monitor.canDrop())) {
       return;
     }
 
-    if (monitor.canDrop()) {
-      // Drop!
-      onDropPost({ dragIndex, hoverIndex });
+    // Determine rectangle on screen
+    const node = component.decoratedComponentInstance.containerNode;
+    const hoverBoundingRect = node.getBoundingClientRect();
 
-      // We need to directly mutate the monitor state here
-      // to ensure the currently dragged item index is updated.
-      monitor.getItem().index = hoverIndex;
+    // Get vertical middle
+    const hoverThird = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 3;
+
+    // Determine mouse position
+    const clientOffset = monitor.getClientOffset();
+
+    // Get pixels to the top
+    const hoverClientY = clientOffset.y - hoverBoundingRect.top;
+
+    // Only perform the move when the mouse has crossed half of the items height
+    // When dragging downwards, only move when the cursor is below 50%
+    // When dragging upwards, only move when the cursor is above 50%
+
+    // Dragging downwards
+    if (dragIndex < hoverIndex && hoverClientY < hoverThird) {
+      return;
     }
+
+    // Dragging upwards
+    if (dragIndex > hoverIndex && hoverClientY > hoverThird) {
+      return;
+    }
+
+    // Drop!
+    onDropPost({ dragIndex, hoverIndex });
+
+    // We need to directly mutate the monitor state here
+    // to ensure the currently dragged item index is updated.
+    monitor.getItem().index = hoverIndex;
   },
 };
 
@@ -77,7 +102,7 @@ class PostDragWrapper extends Component {
   }
 
   onMouseEnter() {
-    this.setState(state => ({ ...state, isHovering: true }));
+    // this.setState(state => ({ ...state, isHovering: true }));
   }
 
   onMouseLeave() {
