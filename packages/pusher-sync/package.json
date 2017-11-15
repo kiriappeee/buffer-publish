@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-pusher-sync",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Keep application data in sync with Pusher",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@bufferapp/publish-profile-sidebar": "1.0.2",
-    "@bufferapp/publish-queue": "1.1.1",
-    "@bufferapp/publish-utils": "1.1.0",
+    "@bufferapp/publish-profile-sidebar": "1.2.0",
+    "@bufferapp/publish-queue": "1.2.0",
+    "@bufferapp/publish-utils": "1.2.0",
     "pusher-js": "4.1.0"
   }
 }
