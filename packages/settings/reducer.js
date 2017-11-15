@@ -11,6 +11,10 @@ export const actionTypes = {
   GET_TIMEZONES: 'GET_TIMEZONES',
   CLEAR_TIMEZONE_INPUT: 'CLEAR_TIMEZONE_INPUT',
   RESET_TIMEZONE_INPUT: 'RESET_TIMEZONE_INPUT',
+  PAUSE_DAY: 'PAUSE_DAY',
+  UNPAUSE_DAY: 'UNPAUSE_DAY',
+  UPDATE_PAUSED_SCHEDULE: 'UPDATE_PAUSED_SCHEDULE',
+  REMOVE_PAUSED_TIME: 'REMOVE_PAUSED_TIME',
 };
 
 const initialState = {
@@ -19,6 +23,7 @@ const initialState = {
   scheduleLoading: true,
   days: [],
   schedules: [],
+  pausedSchedules: [],
   items: [],
   profileTimezoneCity: '',
   hasTwentyFourHourTimeFormat: false,
@@ -33,9 +38,10 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        days: transformSchedules(action.profile.schedules),
+        days: transformSchedules(action.profile.schedules, action.profile.pausedSchedules),
         scheduleLoading: false,
         schedules: action.profile.schedules,
+        pausedSchedules: action.profile.pausedSchedules,
         profileTimezoneCity: action.profile.timezone_city,
         settingsHeader: `Your posting schedule for ${action.profile.serviceUsername}`,
         paused: action.profile.paused,
@@ -66,8 +72,15 @@ export default (state = initialState, action) => {
     case `updateSchedule_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
-        days: transformSchedules(action.result.schedules),
+        days: transformSchedules(action.result.schedules, state.pausedSchedules),
         schedules: action.result.schedules,
+      };
+    case `updatePausedSchedules_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        days: transformSchedules(action.result.schedules, action.result.pausedSchedules),
+        schedules: action.result.schedules,
+        pausedSchedules: action.result.pausedSchedules,
       };
     case `updateTimezone_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
@@ -96,21 +109,23 @@ export default (state = initialState, action) => {
 };
 
 export const actions = {
-  handleRemoveTimeClick: ({ hours, minutes, dayName, profileId, timeIndex }) => ({
-    type: actionTypes.REMOVE_SCHEDULE_TIME,
+  handleRemoveTimeClick: ({ hours, minutes, dayName, profileId, timeIndex, paused }) => ({
+    type: paused ? actionTypes.REMOVE_PAUSED_TIME : actionTypes.REMOVE_SCHEDULE_TIME,
     hours,
     minutes,
     timeIndex,
     dayName,
     profileId,
+    paused,
   }),
-  handleUpdateTime: ({ hours, minutes, dayName, profileId, timeIndex }) => ({
-    type: actionTypes.UPDATE_SCHEDULE_TIME,
+  handleUpdateTime: ({ hours, minutes, dayName, profileId, timeIndex, paused }) => ({
+    type: paused ? actionTypes.UPDATE_PAUSED_SCHEDULE : actionTypes.UPDATE_SCHEDULE_TIME,
     hours,
     minutes,
     timeIndex,
     dayName,
     profileId,
+    paused,
   }),
   handleAddPostingTime: ({ hours, minutes, dayName, profileId }) => ({
     type: actionTypes.ADD_SCHEDULE_TIME,
@@ -134,5 +149,10 @@ export const actions = {
   }),
   handleTimezoneInputBlur: () => ({
     type: actionTypes.RESET_TIMEZONE_INPUT,
+  }),
+  handlePauseToggleClick: ({ dayName, profileId, paused }) => ({
+    type: paused ? actionTypes.UNPAUSE_DAY : actionTypes.PAUSE_DAY,
+    dayName,
+    profileId,
   }),
 };

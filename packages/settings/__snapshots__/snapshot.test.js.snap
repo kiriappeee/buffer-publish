@@ -4388,6 +4388,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -4407,6 +4408,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Monday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={
@@ -5748,6 +5778,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -5767,6 +5798,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Tuesday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={
@@ -7108,6 +7168,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -7127,6 +7188,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Wednesday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={
@@ -8468,6 +8558,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -8487,6 +8578,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Thursday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={
@@ -9828,6 +9948,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -9847,6 +9968,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Friday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={
@@ -11188,6 +11338,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -11207,6 +11358,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Saturday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={
@@ -12548,6 +12728,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 Object {
                   "borderBottom": "0.063rem solid #e6ebef",
                   "cursor": "default",
+                  "minHeight": "40px",
                   "outline": "none",
                   "paddingBottom": "1rem",
                   "paddingTop": "1rem",
@@ -12567,6 +12748,35 @@ exports[`Snapshots ProfileSettings default 1`] = `
               >
                 Sunday
               </span>
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "#168eea",
+                    "cursor": "pointer",
+                    "display": "block",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 400,
+                    "margin": "0 auto",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Turn off
+              </button>
             </div>
             <div
               style={

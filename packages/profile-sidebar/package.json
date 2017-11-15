@@ -13,7 +13,7 @@
   "dependencies": {
     "@bufferapp/notifications": "1.0.2",
     "@bufferapp/async-data-fetch": "0.7.4",
-    "@bufferapp/components": "1.0.1",
+    "@bufferapp/components": "1.0.7",
     "@bufferapp/publish-routes": "0.5.25"
   },
   "devDependencies": {

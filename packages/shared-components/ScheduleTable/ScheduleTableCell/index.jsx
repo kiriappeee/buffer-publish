@@ -98,18 +98,19 @@ const ScheduleTableCell = ({
   onUpdateTime,
   dayName,
   timeIndex,
+  paused,
 }) => (
   <TableCell>
     <TableCellContents
       disabled={disabled}
       select24Hours={select24Hours}
-      onRemoveTimeClick={() => onRemoveTimeClick(time.hours, time.minutes, dayMap[dayName], timeIndex)} //eslint-disable-line
+      onRemoveTimeClick={() => onRemoveTimeClick(time.hours, time.minutes, dayMap[dayName], timeIndex, paused)} //eslint-disable-line
       time={{
         ...time,
         onChange: ({ hours, minutes }) => {
           hours = hours < 10 ? `0${hours}` : hours;
           minutes = minutes < 10 ? `0${minutes}` : minutes;
-          onUpdateTime(hours, minutes, dayMap[dayName], timeIndex);
+          onUpdateTime(hours, minutes, dayMap[dayName], timeIndex, paused);
         },
       }}
     />
@@ -138,6 +139,7 @@ ScheduleTableCell.propTypes = {
     onChange: PropTypes.func,
   }).isRequired,
   onRemoveTimeClick: PropTypes.func.isRequired,
+  paused: PropTypes.bool.isRequired,
 };
 
 export default ScheduleTableCell;

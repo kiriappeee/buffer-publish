@@ -70,6 +70,7 @@ const ProfileSettings = ({
   onRemoveTimeClick,
   onTimezoneInputFocus,
   onTimezoneInputBlur,
+  onPauseToggleClick,
   paused,
   onPauseClick,
   onUnpauseClick,
@@ -159,6 +160,7 @@ const ProfileSettings = ({
             select24Hours={hasTwentyFourHourTimeFormat}
             onRemoveTimeClick={onRemoveTimeClick}
             onUpdateTime={onUpdateTime}
+            onPauseToggleClick={onPauseToggleClick}
           />}
       </div>
       <div style={headerStyle}>
@@ -237,6 +239,7 @@ ProfileSettings.propTypes = {
   onGetTimezones: PropTypes.func.isRequired,
   onTimezoneInputFocus: PropTypes.func.isRequired,
   onTimezoneInputBlur: PropTypes.func.isRequired,
+  onPauseToggleClick: PropTypes.func.isRequired,
   paused: PropTypes.bool.isRequired,
   onPauseClick: PropTypes.func.isRequired,
   onUnpauseClick: PropTypes.func.isRequired,

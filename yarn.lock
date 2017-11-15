@@ -20,13 +20,15 @@
   dependencies:
     whatwg-fetch "0.11.1"
 
-"@bufferapp/components@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-1.0.1.tgz#9cb06bd1d28cae0fa36290eef797783ac889d526"
+"@bufferapp/components@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-1.0.7.tgz#d0dfa99fecabd53339eca51a515587ee040bf25b"
   dependencies:
     "@bufferapp/react-keyframes" "0.2.5"
+    prop-types "15.5.10"
     react-autocomplete "1.7.2"
     react-day-picker "6.2.1"
+    uuid "3.0.1"
 
 "@bufferapp/draft-js-mention-plugin@2.0.0-rc8.1":
   version "2.0.0-rc8.1"

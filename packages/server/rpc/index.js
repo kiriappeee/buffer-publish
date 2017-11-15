@@ -15,6 +15,7 @@ const updateTimezoneMethod = require('./updateTimezone');
 const reorderPostsMethod = require('./reorderPosts');
 const pauseQueueMethod = require('./pauseQueue');
 const requeuePost = require('./requeuePost');
+const updatePausedSchedules = require('./updatePausedSchedules');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -32,4 +33,5 @@ module.exports = checkToken(rpc(
   reorderPostsMethod,
   pauseQueueMethod,
   requeuePost,
+  updatePausedSchedules,
 ));

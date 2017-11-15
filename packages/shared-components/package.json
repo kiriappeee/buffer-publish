@@ -11,7 +11,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/components": "1.0.1",
+    "@bufferapp/components": "1.0.7",
     "react-images": "0.5.5"
   },
   "devDependencies": {

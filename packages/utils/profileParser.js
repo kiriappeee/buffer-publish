@@ -9,6 +9,7 @@ module.exports = profile => ({
   timezone: profile.timezone,
   timezone_city: profile.timezone_city,
   schedules: profile.schedules,
+  pausedSchedules: profile.paused_schedules,
   service: profile.service,
   service_type: profile.service_type,
   serviceUsername: profile.service_username,

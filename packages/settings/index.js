@@ -12,6 +12,7 @@ export default connect(
     translations: state.i18n.translations.settings, // all package translations
     days: state.settings.days,
     schedules: state.settings.schedules,
+    pausedSchedules: state.settings.pausedSchedules,
     items: state.settings.items,
     profileTimezoneCity: state.settings.profileTimezoneCity,
     hasTwentyFourHourTimeFormat: state.settings.hasTwentyFourHourTimeFormat,
@@ -19,22 +20,24 @@ export default connect(
     paused: state.settings.paused,
   }),
   (dispatch, ownProps) => ({
-    onRemoveTimeClick: (hours, minutes, dayName, timeIndex) => {
+    onRemoveTimeClick: (hours, minutes, dayName, timeIndex, paused) => {
       dispatch(actions.handleRemoveTimeClick({
         hours,
         minutes,
         dayName,
         timeIndex,
         profileId: ownProps.profileId,
+        paused,
       }));
     },
-    onUpdateTime: (hours, minutes, dayName, timeIndex) => {
+    onUpdateTime: (hours, minutes, dayName, timeIndex, paused) => {
       dispatch(actions.handleUpdateTime({
         hours,
         minutes,
         dayName,
         timeIndex,
         profileId: ownProps.profileId,
+        paused,
       }));
     },
     onAddPostingTime: ({ day, time }) => {
@@ -65,6 +68,15 @@ export default connect(
     },
     onTimezoneInputBlur: () => {
       dispatch(actions.handleTimezoneInputBlur());
+    },
+    // maybe we can pass a `pausing` flag here that we can
+    // check in the handler to see how to update the schedules?
+    onPauseToggleClick: (dayName, paused) => {
+      dispatch(actions.handlePauseToggleClick({
+        profileId: ownProps.profileId,
+        dayName,
+        paused,
+      }));
     },
     onUnpauseClick: () => {
       dispatch(profileSidebarActions.onUnpauseClick({ profileId: ownProps.profileId }));

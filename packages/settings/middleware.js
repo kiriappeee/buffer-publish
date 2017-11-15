@@ -4,63 +4,32 @@ import {
 } from '@bufferapp/async-data-fetch';
 import { actions as notificationActions } from '@bufferapp/notifications';
 import { actionTypes } from './reducer';
-import { dayMap } from './utils/transformSchedule';
-
-// This depends on the schedule format of the profile for 'settings_schedule' enabled
-const updateScheduleTimeForApi = (unformattedSchedule, action) => {
-  if (!Array.isArray(unformattedSchedule)) return [];
-
-  unformattedSchedule.forEach((scheduleItem) => {
-    if (scheduleItem.days.includes(action.dayName)) {
-      scheduleItem.times[action.timeIndex] = `${action.hours}:${action.minutes}`;
-      scheduleItem.times.sort();
-    }
-  });
-
-  return unformattedSchedule;
-};
-
-const deleteTimeFromSchedule = (unformattedSchedule, action) => {
-  if (!Array.isArray(unformattedSchedule)) return [];
-  const formattedSchedule = [...unformattedSchedule];
-  formattedSchedule.forEach((scheduleItem) => {
-    if (scheduleItem.days.includes(action.dayName)) {
-      const removedTime = scheduleItem.times[action.timeIndex];
-      scheduleItem.times = scheduleItem.times.filter(time => time !== removedTime);
-    }
-  });
-  return formattedSchedule;
-};
-
-const addTimeToScheduleForApi = (unformattedSchedule, action) => {
-  const multDays = ['weekends', 'weekdays', 'everyday'];
-  const everyday = Object.keys(dayMap);
-  const weekdays = everyday.slice(0, 5);
-  const weekends = everyday.slice(-2);
-  const daysMap = {
-    everyday,
-    weekdays,
-    weekends,
-  };
-
-  const newTime = `${action.hours}:${action.minutes}`;
-  const daysToAdd = multDays.includes(action.dayName) ? daysMap[action.dayName] : [action.dayName];
-
-  daysToAdd.forEach((dayToAdd) => {
-    unformattedSchedule.forEach((daySchedule) => {
-      if (daySchedule.days.includes(dayToAdd)) {
-        daySchedule.times.push(newTime);
-        daySchedule.times.sort();
-      }
-    });
-  });
-
-  return unformattedSchedule;
-};
+import {
+  addTimeToScheduleForApi,
+  deleteTimeFromPausedSchedulesForApi,
+  deleteTimeFromSchedule,
+  updatePausedSchedulesForApi,
+  updateScheduleTimeForApi,
+  removePausedDaysFromScheduleForApi,
+  addPausedDayBackToScheduleForApi,
+  removeDayFromPausedSchedulesForApi,
+  addDayToPausedSchedulesForApi } from './utils/scheduleUtils';
 
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
+    case actionTypes.UPDATE_PAUSED_SCHEDULE:
+      dispatch(dataFetchActions.fetch({
+        name: 'updatePausedSchedules',
+        args: {
+          profileId: action.profileId,
+          pausedSchedules:
+            updatePausedSchedulesForApi(
+              getState().settings.schedules, getState().settings.days, action),
+          schedules: getState().settings.schedules,
+        },
+      }));
+      break;
     case actionTypes.UPDATE_SCHEDULE_TIME:
       dispatch(dataFetchActions.fetch({
         name: 'updateSchedule',
@@ -70,12 +39,54 @@ export default ({ dispatch, getState }) => next => (action) => {
         },
       }));
       break;
+    case actionTypes.PAUSE_DAY:
+      dispatch(dataFetchActions.fetch({
+        name: 'updatePausedSchedules',
+        args: {
+          profileId: action.profileId,
+          pausedSchedules:
+            addDayToPausedSchedulesForApi(
+              action.dayName, getState().settings.schedules, getState().settings.days),
+          schedules:
+            removePausedDaysFromScheduleForApi(action.dayName, getState().settings.schedules),
+        },
+      }));
+      break;
+    case actionTypes.UNPAUSE_DAY:
+      dispatch(dataFetchActions.fetch({
+        name: 'updatePausedSchedules',
+        args: {
+          profileId: action.profileId,
+          pausedSchedules:
+            removeDayFromPausedSchedulesForApi(
+              action.dayName, getState().settings.schedules, getState().settings.days),
+          schedules:
+            addPausedDayBackToScheduleForApi(
+              action.dayName, getState().settings.schedules, getState().settings.days),
+          empty_paused_schedules:
+            removeDayFromPausedSchedulesForApi(
+              action.dayName, getState().settings.schedules, getState().settings.days).length === 0,
+        },
+      }));
+      break;
     case actionTypes.ADD_SCHEDULE_TIME:
       dispatch(dataFetchActions.fetch({
         name: 'updateSchedule',
         args: {
           profileId: action.profileId,
           schedules: addTimeToScheduleForApi(getState().settings.schedules, action),
+        },
+      }));
+      break;
+    case actionTypes.REMOVE_PAUSED_TIME:
+      dispatch(dataFetchActions.fetch({
+        name: 'updatePausedSchedules',
+        args: {
+          profileId: action.profileId,
+          pausedSchedules:
+            deleteTimeFromPausedSchedulesForApi(
+              getState().settings.schedules, getState().settings.days, action),
+          schedules: getState().settings.schedules,
         },
       }));
       break;

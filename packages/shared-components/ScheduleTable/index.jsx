@@ -20,12 +20,21 @@ const tableColumnWrapperStyle = {
   flexGrow: '1',
 };
 
+const pausedColumnStyle = {
+  display: 'flex',
+  marginRight: '-1px',
+  flexGrow: '1',
+  backgroundColor: '#f8f8f8',
+  borderLeft: `${borderWidth} solid ${mystic}`,
+};
+
 const ScheduleTable = ({
   days,
   disabled,
   select24Hours,
   onRemoveTimeClick,
   onUpdateTime,
+  onPauseToggleClick,
 }) => (
   <div style={tableStyle}>
     {
@@ -33,30 +42,28 @@ const ScheduleTable = ({
         dayName,
         postingTimesTotal,
         times,
+        paused,
       }) =>
         <div
           key={dayName}
-          style={tableColumnWrapperStyle}
+          style={paused ? pausedColumnStyle : tableColumnWrapperStyle}
         >
           <ScheduleTableColumn
             dayName={dayName}
+            paused={paused}
             disabled={disabled}
             postingTimesTotal={postingTimesTotal}
             select24Hours={select24Hours}
             times={times}
             onRemoveTimeClick={onRemoveTimeClick}
             onUpdateTime={onUpdateTime}
+            onPauseToggleClick={onPauseToggleClick}
           />
         </div>,
       )
     }
   </div>
 );
-
-ScheduleTable.defaultProps = {
-  disabled: false,
-  select24Hours: false,
-};
 
 // TODO: onChange and onRemoveTimeClick required when app is not read-only
 ScheduleTable.propTypes = {
@@ -81,6 +88,12 @@ ScheduleTable.propTypes = {
   select24Hours: PropTypes.bool.isRequired,
   onRemoveTimeClick: PropTypes.func.isRequired,
   onUpdateTime: PropTypes.func.isRequired,
+  onPauseToggleClick: PropTypes.func.isRequired,
+};
+
+ScheduleTable.defaultProps = {
+  disabled: false,
+  select24Hours: false,
 };
 
 export default ScheduleTable;
