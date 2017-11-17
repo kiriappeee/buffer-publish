@@ -4,7 +4,7 @@ const rp = require('request-promise');
 module.exports = method(
   'updatePausedSchedules',
   'update paused schedules for profile',
-  async ({ profileId, pausedSchedules, schedules, empty_paused_schedules }, { session }) => {
+  async ({ profileId, pausedSchedules, schedules, emptyPausedSchedules }, { session }) => {
     let result;
     try {
       result = await rp({
@@ -15,7 +15,7 @@ module.exports = method(
           access_token: session.accessToken,
           paused_schedules: pausedSchedules,
           schedules,
-          empty_paused_schedules,
+          empty_paused_schedules: emptyPausedSchedules,
         },
       });
     } catch (err) {

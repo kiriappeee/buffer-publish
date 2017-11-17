@@ -15,6 +15,7 @@ export const actionTypes = {
   UNPAUSE_DAY: 'UNPAUSE_DAY',
   UPDATE_PAUSED_SCHEDULE: 'UPDATE_PAUSED_SCHEDULE',
   REMOVE_PAUSED_TIME: 'REMOVE_PAUSED_TIME',
+  UPDATE_PAUSED_SCHEDULE_STATE: 'UPDATE_PAUSED_SCHEDULE_STATE',
 };
 
 const initialState = {
@@ -75,12 +76,13 @@ export default (state = initialState, action) => {
         days: transformSchedules(action.result.schedules, state.pausedSchedules),
         schedules: action.result.schedules,
       };
-    case `updatePausedSchedules_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    // Optimistically update the UI
+    case actionTypes.UPDATE_PAUSED_SCHEDULE_STATE:
       return {
         ...state,
-        days: transformSchedules(action.result.schedules, action.result.pausedSchedules),
-        schedules: action.result.schedules,
-        pausedSchedules: action.result.pausedSchedules,
+        days: transformSchedules(action.schedules, action.pausedSchedules),
+        schedules: action.schedules,
+        pausedSchedules: action.pausedSchedules,
       };
     case `updateTimezone_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
@@ -153,6 +155,12 @@ export const actions = {
   handlePauseToggleClick: ({ dayName, profileId, paused }) => ({
     type: paused ? actionTypes.UNPAUSE_DAY : actionTypes.PAUSE_DAY,
     dayName,
+    profileId,
+  }),
+  handlePauseScheduleChanges: ({ pausedSchedules, schedules, profileId }) => ({
+    type: actionTypes.UPDATE_PAUSED_SCHEDULE_STATE,
+    pausedSchedules,
+    schedules,
     profileId,
   }),
 };

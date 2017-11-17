@@ -1,5 +1,14 @@
 import { dayMap } from './transformSchedule';
 
+/**
+ * getPausedSchedule()
+ *
+ * Generates the paused schedules array
+ *
+ * @param  {Array} unformattedSchedule
+ * @param  {Array} days
+ * @return {Array}
+ */
 const getPausedSchedule = (unformattedSchedule, days) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   const pausedDays = days.filter(day => day.paused).map(pausedDay => pausedDay.key);
@@ -17,7 +26,6 @@ const getPausedSchedule = (unformattedSchedule, days) => {
  * @param  {Array} days
  * @return {Array}
  */
-
 const addDayToPausedSchedulesForApi = (dayName, unformattedSchedule, days) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   const pausedDays = days.filter(day => day.paused).map(pausedDay => pausedDay.key);
@@ -36,7 +44,6 @@ const addDayToPausedSchedulesForApi = (dayName, unformattedSchedule, days) => {
  * @param  {Array} days
  * @return {Array}
  */
-
 const removeDayFromPausedSchedulesForApi = (dayName, unformattedSchedule, days) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   const pausedDays =
@@ -55,7 +62,6 @@ const removeDayFromPausedSchedulesForApi = (dayName, unformattedSchedule, days) 
  * @param  {Array} days
  * @return {Array}
  */
-
 const addPausedDayBackToScheduleForApi = (dayName, unformattedSchedule, days) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   const pausedDay = days.filter(day => day.paused && day.key === dayName);
@@ -76,7 +82,6 @@ const addPausedDayBackToScheduleForApi = (dayName, unformattedSchedule, days) =>
  * @param  {object} action
  * @return {Array}
  */
-
 const removePausedDaysFromScheduleForApi = (dayName, unformattedSchedule) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   return unformattedSchedule.map(item => ({
@@ -115,7 +120,6 @@ const updatePausedSchedulesForApi = (unformattedSchedule, days, action) => {
   return updateScheduleTimeForApi(newSchedule, action);
 };
 
-// TODO: Make immutable.
 const deleteTimeFromSchedule = (unformattedSchedule, action) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   const formattedSchedule = [...unformattedSchedule];

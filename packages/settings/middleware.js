@@ -3,6 +3,7 @@ import {
   actionTypes as dataFetchActionTypes,
 } from '@bufferapp/async-data-fetch';
 import { actions as notificationActions } from '@bufferapp/notifications';
+import { actions as settingsActions } from './index';
 import { actionTypes } from './reducer';
 import {
   addTimeToScheduleForApi,
@@ -19,13 +20,19 @@ export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
     case actionTypes.UPDATE_PAUSED_SCHEDULE:
+      next(settingsActions.handlePauseScheduleChanges({
+        pausedSchedules:
+          updatePausedSchedulesForApi(
+            getState().settings.schedules, getState().settings.days, action),
+        schedules:
+          getState().settings.schedules,
+        profileId: action.profileId,
+      }));
       dispatch(dataFetchActions.fetch({
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules:
-            updatePausedSchedulesForApi(
-              getState().settings.schedules, getState().settings.days, action),
+          pausedSchedules: getState().settings.pausedSchedules,
           schedules: getState().settings.schedules,
         },
       }));
@@ -40,32 +47,43 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case actionTypes.PAUSE_DAY:
+      // Optimistically update the UI with the new paused schedule, to reduce
+      // issues with fetch response delays messing up state & give appearance
+      // of faster response on the user's end - EP
+      next(settingsActions.handlePauseScheduleChanges({
+        pausedSchedules:
+          addDayToPausedSchedulesForApi(
+            action.dayName, getState().settings.schedules, getState().settings.days),
+        schedules:
+          removePausedDaysFromScheduleForApi(action.dayName, getState().settings.schedules),
+        profileId: action.profileId,
+      }));
       dispatch(dataFetchActions.fetch({
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules:
-            addDayToPausedSchedulesForApi(
-              action.dayName, getState().settings.schedules, getState().settings.days),
-          schedules:
-            removePausedDaysFromScheduleForApi(action.dayName, getState().settings.schedules),
+          pausedSchedules: getState().settings.pausedSchedules,
+          schedules: getState().settings.schedules,
         },
       }));
       break;
     case actionTypes.UNPAUSE_DAY:
+      next(settingsActions.handlePauseScheduleChanges({
+        pausedSchedules:
+          removeDayFromPausedSchedulesForApi(
+            action.dayName, getState().settings.schedules, getState().settings.days),
+        schedules:
+          addPausedDayBackToScheduleForApi(
+            action.dayName, getState().settings.schedules, getState().settings.days),
+        profileId: action.profileId,
+      }));
       dispatch(dataFetchActions.fetch({
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules:
-            removeDayFromPausedSchedulesForApi(
-              action.dayName, getState().settings.schedules, getState().settings.days),
-          schedules:
-            addPausedDayBackToScheduleForApi(
-              action.dayName, getState().settings.schedules, getState().settings.days),
-          empty_paused_schedules:
-            removeDayFromPausedSchedulesForApi(
-              action.dayName, getState().settings.schedules, getState().settings.days).length === 0,
+          pausedSchedules: getState().settings.pausedSchedules,
+          schedules: getState().settings.schedules,
+          emptyPausedSchedules: getState().settings.pausedSchedules.length === 0,
         },
       }));
       break;
@@ -79,13 +97,18 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case actionTypes.REMOVE_PAUSED_TIME:
+      next(settingsActions.handlePauseScheduleChanges({
+        pausedSchedules:
+          deleteTimeFromPausedSchedulesForApi(
+            getState().settings.schedules, getState().settings.days, action),
+        schedules: getState().settings.schedules,
+        profileId: action.profileId,
+      }));
       dispatch(dataFetchActions.fetch({
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules:
-            deleteTimeFromPausedSchedulesForApi(
-              getState().settings.schedules, getState().settings.days, action),
+          pausedSchedules: getState().settings.pausedSchedules,
           schedules: getState().settings.schedules,
         },
       }));
@@ -139,6 +162,16 @@ export default ({ dispatch, getState }) => next => (action) => {
       dispatch(notificationActions.createNotification({
         notificationType: 'error',
         message: action.error,
+      }));
+      break;
+    case `updatePausedSchedules_${dataFetchActionTypes.FETCH_FAIL}`:
+      dispatch(notificationActions.createNotification({
+        notificationType: 'error',
+        message: `Oh no, we had trouble updating your paused days!
+        Please contact support if this persists.`,
+      }));
+      dispatch(dataFetchActions.fetch({
+        name: 'profiles',
       }));
       break;
     default:
