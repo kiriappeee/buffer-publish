@@ -72,8 +72,7 @@ const AppSidebar = ({
       </PopoverButton>
       {!user.loading && <PopoverButton icon={<UserAvatar />} label="My Account" popoverPosition="above" large>
         <PopoverMenu>
-          <PopoverMenuItem href="https://buffer.com/pricing" subtitle={user.email}>My Account</PopoverMenuItem>
-          <PopoverMenuItem href="https://buffer.com/wishlist" subtitle="Notifications, time & date, apps&hellip;">Preferences</PopoverMenuItem>
+          <PopoverMenuItem href="https://buffer.com/app/account/email" subtitle="Notifications, time & date, apps&hellip;" newWindow>Preferences</PopoverMenuItem>
           <Divider color="sidebarBackgroundBlue" />
           <PopoverMenuItem href="/logout">Sign out</PopoverMenuItem>
         </PopoverMenu>
