@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "@bufferapp/publish-queue": "1.2.0",
     "@bufferapp/publish-routes": "0.5.25",
     "@bufferapp/publish-sent": "1.2.0",
-    "@bufferapp/publish-settings": "1.2.0",
+    "@bufferapp/publish-settings": "1.2.1",
     "@bufferapp/publish-tabs": "1.2.0"
   },
   "devDependencies": {
