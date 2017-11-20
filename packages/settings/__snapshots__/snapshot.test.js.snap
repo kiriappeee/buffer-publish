@@ -4418,19 +4418,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }
@@ -5808,19 +5807,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }
@@ -7198,19 +7196,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }
@@ -8588,19 +8585,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }
@@ -9978,19 +9974,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }
@@ -11368,19 +11363,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }
@@ -12758,19 +12752,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
-                    "background": "none",
-                    "backgroundColor": "unset",
-                    "border": "none",
-                    "borderRadius": "unset",
-                    "color": "#168eea",
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
                     "cursor": "pointer",
-                    "display": "block",
+                    "display": "inline-block",
                     "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.8rem",
                     "fontWeight": 400,
-                    "margin": "0 auto",
+                    "margin": "0",
                     "outline": "none",
-                    "padding": 0,
+                    "padding": "0.5rem 2rem",
                     "transition": "background-color 0.2s linear",
                   }
                 }

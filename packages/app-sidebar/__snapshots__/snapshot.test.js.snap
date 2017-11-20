@@ -607,7 +607,7 @@ exports[`Snapshots AppSidebar should show app sidebar 1`] = `
                     onMouseLeave={[Function]}
                   >
                     <a
-                      href="https://buffer.com/wishlist"
+                      href="https://buffersurvey.typeform.com/to/ZEiVmL"
                       role="menuitem"
                       style={
                         Object {
@@ -762,49 +762,7 @@ exports[`Snapshots AppSidebar should show app sidebar 1`] = `
                     onMouseLeave={[Function]}
                   >
                     <a
-                      href="https://buffer.com/pricing"
-                      role="menuitem"
-                      style={
-                        Object {
-                          "color": "#ced7df",
-                          "display": "block",
-                          "padding": ".5rem 1rem",
-                          "textDecoration": "none",
-                        }
-                      }
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#fff",
-                            "display": "block",
-                            "fontSize": "0.9rem",
-                          }
-                        }
-                      >
-                        My Account
-                      </span>
-                      <span
-                        style={
-                          Object {
-                            "display": "block",
-                            "fontSize": ".7rem",
-                            "paddingTop": ".25rem",
-                          }
-                        }
-                      >
-                        hamstu@gmail.com
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="https://buffer.com/wishlist"
+                      href="https://buffer.com/app/account/email"
                       role="menuitem"
                       style={
                         Object {
@@ -835,7 +793,7 @@ exports[`Snapshots AppSidebar should show app sidebar 1`] = `
                           }
                         }
                       >
-                        Notifications, time & date, apps…
+                        Notifications, time / date, apps…
                       </span>
                     </a>
                   </li>
