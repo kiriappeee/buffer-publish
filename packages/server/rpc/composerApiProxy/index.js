@@ -12,7 +12,7 @@ module.exports = method(
         method: 'POST',
         strictSSL: process.env.NODE_ENV !== 'development',
         form: Object.assign(args, {
-          access_token: session.accessToken,
+          access_token: session.publish.accessToken,
         }),
       });
     } catch (err) {

@@ -12,7 +12,7 @@ module.exports = method(
         method: 'POST',
         strictSSL: !(process.env.NODE_ENV === 'development'),
         form: {
-          access_token: session.accessToken,
+          access_token: session.publish.accessToken,
           paused_schedules: pausedSchedules,
           schedules,
           empty_paused_schedules: emptyPausedSchedules,

@@ -13,7 +13,7 @@ module.exports = method(
       method: 'GET',
       strictSSL: !(process.env.NODE_ENV === 'development'),
       qs: {
-        access_token: session.accessToken,
+        access_token: session.publish.accessToken,
         page,
         count: 20,
         since: daysAgoTimestamp(30),

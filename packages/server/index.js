@@ -8,10 +8,13 @@ const fs = require('fs');
 const { join } = require('path');
 const shutdownHelper = require('@bufferapp/shutdown-helper');
 const { apiError } = require('./middleware');
-const session = require('./lib/session');
+const {
+  middleware: sessionMiddleware,
+} = require('@bufferapp/session-manager');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
 const pusher = require('./lib/pusher');
+
 
 const app = express();
 const server = http.createServer(app);
@@ -60,7 +63,16 @@ app.use(logMiddleware({ name: 'BufferPublish' }));
 app.use(cookieParser());
 
 // All routes after this have access to the user session
-app.use(session.middleware);
+app.use(sessionMiddleware.getSession({
+  production: isProduction,
+  sessionKeys: ['publish', 'global'],
+}));
+
+// make sure we have a valid session
+app.use(sessionMiddleware.validateSession({
+  production: isProduction,
+  requiredSessionKeys: ['publish.accessToken', 'global.userId'],
+}));
 
 app.post('/rpc', (req, res, next) => {
   rpc(req, res)
@@ -82,15 +94,7 @@ app.post('/pusher/auth',
   },
 );
 
-app.get('*', (req, res) => {
-  if (req.session && req.session.accessToken) {
-    res.send(getHtml());
-  } else {
-    const redirect = encodeURIComponent(`https://${req.get('host')}${req.originalUrl}`);
-    const accountUrl = `https://account${isProduction ? '' : '.local'}.buffer.com/login/`;
-    res.redirect(`${accountUrl}?redirect=${redirect}`);
-  }
-});
+app.get('*', (req, res) => res.send(getHtml()));
 
 app.use(apiError);
 
