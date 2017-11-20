@@ -67,7 +67,7 @@ const AppSidebar = ({
           <PopoverMenuItem href="https://faq.buffer.com">FAQ</PopoverMenuItem>
           <PopoverMenuItem href="http://status.buffer.com/">Status</PopoverMenuItem>
           <PopoverMenuItem href="https://buffer.com/pricing">Pricing &amp; Plans</PopoverMenuItem>
-          <PopoverMenuItem href="https://buffer.com/wishlist">Wishlist</PopoverMenuItem>
+          <PopoverMenuItem href="https://buffersurvey.typeform.com/to/ZEiVmL">Wishlist</PopoverMenuItem>
         </PopoverMenu>
       </PopoverButton>
       {!user.loading && <PopoverButton icon={<UserAvatar />} label="My Account" popoverPosition="above" large>
