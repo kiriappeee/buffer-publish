@@ -69,7 +69,6 @@
     "react-addons-test-utils": "15.5.1",
     "react-day-picker": "6.1.0",
     "react-dom": "16.0.0",
-    "react-dropzone": "4.2.3",
     "react-dnd": "2.5.1",
     "react-dnd-html5-backend": "2.5.1",
     "react-dnd-test-backend": "^2.5.4",
