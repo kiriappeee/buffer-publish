@@ -12,6 +12,7 @@ const initialState = {
     email: '...',
     avatar: '',
   },
+  environment: 'production',
 };
 
 export default (state = initialState, action) => {
@@ -31,6 +32,11 @@ export default (state = initialState, action) => {
           ...action.result,
           loading: false,
         },
+      };
+    case `environment_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        environment: action.result.environment,
       };
     default:
       return state;

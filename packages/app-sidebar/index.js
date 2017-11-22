@@ -7,6 +7,7 @@ export default connect(
   state => ({
     translations: state.i18n.translations.example, // all package translations
     user: state.appSidebar.user,
+    environment: state.appSidebar.environment,
   }),
 )(AppSidebar);
 

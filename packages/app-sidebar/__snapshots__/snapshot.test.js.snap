@@ -859,7 +859,7 @@ exports[`Snapshots AppSidebar should show app sidebar 1`] = `
                     onMouseLeave={[Function]}
                   >
                     <a
-                      href="/logout"
+                      href="https://account.buffer.com/logout/?redirect=about:blank"
                       role="menuitem"
                       style={
                         Object {

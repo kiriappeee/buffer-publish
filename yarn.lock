@@ -80,9 +80,9 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@bufferapp/react-keyframes/-/react-keyframes-0.2.5.tgz#fed847849f170c440ad6ea683224352e4b882b92"
 
-"@bufferapp/session-manager@0.5.36":
-  version "0.5.36"
-  resolved "https://registry.yarnpkg.com/@bufferapp/session-manager/-/session-manager-0.5.36.tgz#6b52cf1197d2c7cd6875b56623969a28d4fa6ab1"
+"@bufferapp/session-manager@0.5.38":
+  version "0.5.38"
+  resolved "https://registry.yarnpkg.com/@bufferapp/session-manager/-/session-manager-0.5.38.tgz#7e0a82af35b9772dd08d465872832c8874606285"
   dependencies:
     micro-rpc-client "0.1.2"
     object-path "0.11.4"

@@ -20,6 +20,7 @@ storiesOf('AppSidebar')
         activeProduct="publish"
         translations={translations}
         user={fakeUser}
+        environment={'production'}
       />
     </div>
   ));
