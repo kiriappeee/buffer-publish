@@ -14,7 +14,8 @@ import {
   removePausedDaysFromScheduleForApi,
   addPausedDayBackToScheduleForApi,
   removeDayFromPausedSchedulesForApi,
-  addDayToPausedSchedulesForApi } from './utils/scheduleUtils';
+  addDayToPausedSchedulesForApi,
+  deleteAllTimesFromSchedule } from './utils/scheduleUtils';
 
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
@@ -119,6 +120,28 @@ export default ({ dispatch, getState }) => next => (action) => {
         args: {
           profileId: action.profileId,
           schedules: deleteTimeFromSchedule(getState().settings.schedules, action),
+        },
+      }));
+      break;
+    case actionTypes.CLEAR_ALL_TIMES:
+      next(settingsActions.handlePauseScheduleChanges({
+        pausedSchedules: deleteAllTimesFromSchedule(getState().settings.pausedSchedules),
+        schedules: deleteAllTimesFromSchedule(getState().settings.schedules),
+        profileId: action.profileId,
+      }));
+      dispatch(dataFetchActions.fetch({
+        name: 'updateSchedule',
+        args: {
+          profileId: action.profileId,
+          schedules: getState().settings.schedules,
+        },
+      }));
+      dispatch(dataFetchActions.fetch({
+        name: 'updatePausedSchedules',
+        args: {
+          profileId: action.profileId,
+          pausedSchedules: getState().settings.pausedSchedules,
+          schedules: getState().settings.schedules,
         },
       }));
       break;

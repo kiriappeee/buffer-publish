@@ -135,6 +135,15 @@ const deleteTimeFromSchedule = (unformattedSchedule, action) => {
 const deleteTimeFromPausedSchedulesForApi = (unformattedSchedule, days, action) =>
   deleteTimeFromSchedule(getPausedSchedule(unformattedSchedule, days), action);
 
+const deleteAllTimesFromSchedule = (unformattedSchedule) => {
+  if (!Array.isArray(unformattedSchedule)) return [];
+  const formattedSchedule = [...unformattedSchedule];
+  formattedSchedule.forEach((scheduleItem) => {
+    scheduleItem.times = [];
+  });
+  return formattedSchedule;
+};
+
 const addTimeToScheduleForApi = (unformattedSchedule, action) => {
   const multDays = ['weekends', 'weekdays', 'everyday'];
   const everyday = Object.keys(dayMap);
@@ -164,4 +173,4 @@ const addTimeToScheduleForApi = (unformattedSchedule, action) => {
 export { addTimeToScheduleForApi, deleteTimeFromPausedSchedulesForApi, deleteTimeFromSchedule,
          updatePausedSchedulesForApi, updateScheduleTimeForApi, removePausedDaysFromScheduleForApi,
          addPausedDayBackToScheduleForApi, removeDayFromPausedSchedulesForApi,
-         addDayToPausedSchedulesForApi };
+         addDayToPausedSchedulesForApi, deleteAllTimesFromSchedule };

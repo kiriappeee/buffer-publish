@@ -8,6 +8,7 @@ import {
   LoadingAnimation,
   Link,
   Button,
+  Popover,
 } from '@bufferapp/components';
 
 import {
@@ -18,6 +19,7 @@ import {
 import PostingTimeForm from '../PostingTimeForm';
 import TimezoneInputForm from '../TimezoneInputForm';
 import debounce from '../../utils/debounce';
+import ConfirmClear from '../ConfirmClear';
 
 const headerStyle = {
   marginBottom: '0.5rem',
@@ -34,6 +36,19 @@ const sectionStyle = {
   marginTop: '1.5rem',
   marginBottom: '1.5rem',
   width: '100%',
+};
+
+const postingTimesSection = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-end',
+  flexWrap: 'wrap',
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+}
+
+const postingTimesStyle = {
+  margin: '0 auto 0 0',
 };
 
 const loadingContainerStyle = {
@@ -55,6 +70,10 @@ const pauseButtonContainerStyle = {
   margin: '1rem 0 .25rem',
 };
 
+const tableStyle = {
+  flexBasis: '100%',
+}
+
 /* eslint no-console: 0 */
 const ProfileSettings = ({
   days,
@@ -74,6 +93,15 @@ const ProfileSettings = ({
   paused,
   onPauseClick,
   onUnpauseClick,
+  showClearAllModal,
+  onClearAllClick,
+  profileName,
+  profileType,
+  onConfirmClearClick,
+  onCancelClearClick,
+  closePopover,
+  avatar,
+  profileService,
 }) => {
   if (loading) {
     return (
@@ -91,7 +119,6 @@ const ProfileSettings = ({
   }
 
   const debouncedOnChange = debounce(onGetTimezones, 500);
-
   return (
     <div>
       <div style={headerStyle}>
@@ -122,46 +149,68 @@ const ProfileSettings = ({
         />
       </div>
       <Divider />
-      <div style={sectionStyle}>
-        <Text
-          color="black"
-          weight="thin"
-          size="small"
-        >
-          Posting times
-          {/* Need to move the tooltip a bit for visual accuracy! */}
-          <div style={{ display: 'inline-block', position: 'relative', top: '4px', left: '5px' }}>
-            <IconArrowPopover icon={<QuestionIcon />} position="below" shadow oneLine={false} width="320px" label="Posting Times">
-              <div style={{ padding: '.5rem .25rem' }}>
-                {/* eslint-disable max-len */}
-                Your posting schedule tells Buffer when to send out posts in your Queue. <br /><br />
-                For example, the next 10 posts you add to your Queue will go out in the next 10 upcoming time/date slots you
-                decide below. You can change this schedule at any time!
-              </div>
-            </IconArrowPopover>
-          </div>
-        </Text>
-        <Divider color="white" />
-        {scheduleLoading &&
-          <div style={scheduleLoadingContainerStyle}>
-            <LoadingAnimation />
-          </div>}
-        {!scheduleLoading && emptySchedule &&
-          <EmptyState
-            title="Looks like you don't have any posting times set!"
-            subtitle="Add a new posting time to start publishing posts from your queue."
-            heroImg="https://s3.amazonaws.com/buffer-publish/images/clock2x.png"
-            heroImgSize={{ width: '40px', height: '40px' }}
-            height={'30vh'}
-          />}
+      <div style={postingTimesSection}>
+        <div style={postingTimesStyle}>
+          <Text
+            color="black"
+            weight="thin"
+            size="small"
+          >
+            Posting times
+            {/* Need to move the tooltip a bit for visual accuracy! */}
+            <div style={{ display: 'inline-block', position: 'relative', top: '4px', left: '5px' }}>
+              <IconArrowPopover icon={<QuestionIcon />} position="below" shadow oneLine={false} width="320px" label="Posting Times">
+                <div style={{ padding: '.5rem .25rem' }}>
+                  {/* eslint-disable max-len */}
+                  Your posting schedule tells Buffer when to send out posts in your Queue. <br /><br />
+                  For example, the next 10 posts you add to your Queue will go out in the next 10 upcoming time/date slots you
+                  decide below. You can change this schedule at any time!
+                </div>
+              </IconArrowPopover>
+            </div>
+          </Text>
+        </div>
         {!emptySchedule &&
-          <ScheduleTable
-            days={days}
-            select24Hours={hasTwentyFourHourTimeFormat}
-            onRemoveTimeClick={onRemoveTimeClick}
-            onUpdateTime={onUpdateTime}
-            onPauseToggleClick={onPauseToggleClick}
-          />}
+            <Button secondary onClick={onClearAllClick}>
+              Clear all Posting Times
+            </Button>}
+        <Popover
+          hidden={!showClearAllModal}
+          onOverlayClick={closePopover}
+        >
+          <ConfirmClear
+            onConfirmClick={onConfirmClearClick}
+            onCancelClick={onCancelClearClick}
+            profileName={profileName}
+            profileType={profileType}
+            profileService={profileService}
+            onCloseClick={closePopover}
+            avatar={avatar}
+          />
+        </Popover>
+        <div style={tableStyle}>
+          <Divider color="white" />
+          {scheduleLoading &&
+            <div style={scheduleLoadingContainerStyle}>
+              <LoadingAnimation />
+            </div>}
+          {!scheduleLoading && emptySchedule &&
+            <EmptyState
+              title="Looks like you don't have any posting times set!"
+              subtitle="Add a new posting time to start publishing posts from your queue."
+              heroImg="https://s3.amazonaws.com/buffer-publish/images/clock2x.png"
+              heroImgSize={{ width: '40px', height: '40px' }}
+              height={'30vh'}
+            />}
+          {!emptySchedule &&
+            <ScheduleTable
+              days={days}
+              select24Hours={hasTwentyFourHourTimeFormat}
+              onRemoveTimeClick={onRemoveTimeClick}
+              onUpdateTime={onUpdateTime}
+              onPauseToggleClick={onPauseToggleClick}
+            />}
+        </div>
       </div>
       <div style={headerStyle}>
         <Text color="black">Pause Queue</Text>
@@ -243,6 +292,15 @@ ProfileSettings.propTypes = {
   paused: PropTypes.bool.isRequired,
   onPauseClick: PropTypes.func.isRequired,
   onUnpauseClick: PropTypes.func.isRequired,
+  onClearAllClick: PropTypes.func.isRequired,
+  showClearAllModal: PropTypes.bool.isRequired,
+  profileName: PropTypes.string.isRequired,
+  profileType: PropTypes.string.isRequired,
+  onCancelClearClick: PropTypes.func.isRequired,
+  onConfirmClearClick: PropTypes.func.isRequired,
+  closePopover: PropTypes.func,
+  avatar: PropTypes.string,
+  profileService: PropTypes.string.isRequired,
 };
 
 ProfileSettings.defaultProps = {

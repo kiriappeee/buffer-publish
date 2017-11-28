@@ -20,9 +20,9 @@
   dependencies:
     whatwg-fetch "0.11.1"
 
-"@bufferapp/components@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-1.0.7.tgz#d0dfa99fecabd53339eca51a515587ee040bf25b"
+"@bufferapp/components@1.1.0-beta.6":
+  version "1.1.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-1.1.0-beta.6.tgz#61782a8fe78e128e5011c76075600a17cca846d5"
   dependencies:
     "@bufferapp/react-keyframes" "0.2.5"
     prop-types "15.5.10"

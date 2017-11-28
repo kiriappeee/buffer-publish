@@ -18,6 +18,11 @@ export default connect(
     hasTwentyFourHourTimeFormat: state.settings.hasTwentyFourHourTimeFormat,
     clearTimezoneInput: state.settings.clearTimezoneInput,
     paused: state.settings.paused,
+    showClearAllModal: state.settings.showClearAllModal,
+    profileName: state.settings.profileName,
+    profileType: state.settings.profileType,
+    profileService: state.settings.profileService,
+    avatar: state.settings.avatar,
   }),
   (dispatch, ownProps) => ({
     onRemoveTimeClick: (hours, minutes, dayName, timeIndex, paused) => {
@@ -83,6 +88,18 @@ export default connect(
     },
     onPauseClick: () => {
       dispatch(profileSidebarActions.onPauseClick({ profileId: ownProps.profileId }));
+    },
+    onClearAllClick: () => {
+      dispatch(actions.handleClearAllClick());
+    },
+    onConfirmClearClick: () => {
+      dispatch(actions.handleConfirmClearClick({ profileId: ownProps.profileId }));
+    },
+    onCancelClearClick: () => {
+      dispatch(actions.handleCancelClearClick());
+    },
+    closePopover: () => {
+      dispatch(actions.handleClosePopover());
     },
   }),
 )(ProfileSettings);
