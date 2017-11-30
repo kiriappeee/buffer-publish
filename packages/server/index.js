@@ -68,17 +68,17 @@ app.use(sessionMiddleware.getSession({
   sessionKeys: ['publish', 'global'],
 }));
 
-// make sure we have a valid session
-app.use(sessionMiddleware.validateSession({
-  production: isProduction,
-  requiredSessionKeys: ['publish.accessToken', 'global.userId'],
-}));
-
 app.post('/rpc', (req, res, next) => {
   rpc(req, res)
     // catch any unexpected errors
     .catch(err => next(err));
 });
+
+// make sure we have a valid session
+app.use(sessionMiddleware.validateSession({
+  production: isProduction,
+  requiredSessionKeys: ['publish.accessToken', 'global.userId'],
+}));
 
 app.get('/health-check', controller.healthCheck);
 

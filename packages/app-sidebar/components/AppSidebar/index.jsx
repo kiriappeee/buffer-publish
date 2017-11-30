@@ -12,13 +12,12 @@ import {
 import { calculateStyles } from '@bufferapp/components/lib/utils';
 import { sidebarBackgroundBlue } from '@bufferapp/components/style/color';
 import { navbar } from '@bufferapp/components/style/zIndex';
-
+import { logoutUrl } from '@bufferapp/session-manager';
 import PopoverButton from '../PopoverButton';
 import BufferLogo from '../BufferLogo';
 import PopoverMenu from '../PopoverMenu';
 import PopoverMenuItem from '../PopoverMenuItem';
 import UserAvatar from '../UserAvatar';
-import { logoutUrl } from '../../utils';
 
 const style = calculateStyles({
   default: {

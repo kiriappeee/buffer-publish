@@ -39,6 +39,9 @@ describe('Queue', () => {
           },
         },
       },
+      environment: {
+        environment: 'production',
+      },
     });
     const wrapper = mount(
       <Provider store={store}>

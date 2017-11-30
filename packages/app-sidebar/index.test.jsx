@@ -29,6 +29,8 @@ describe('Example', () => {
           email: '...',
           avatar: '',
         },
+      },
+      environment: {
         environment: 'production',
       },
       i18n: {

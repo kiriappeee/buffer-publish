@@ -99,7 +99,7 @@ export default connect(
         userData: state.appSidebar.user,
         profiles: state.profileSidebar.profiles,
         enabledApplicationModes: state.enabledApplicationModes,
-        environment: state.queue.environment,
+        environment: state.environment.environment,
         editMode: state.queue.editMode,
         post: state.queue.byProfileId[selectedProfileId].posts[postId],
       });

@@ -33,11 +33,6 @@ export default (state = initialState, action) => {
           loading: false,
         },
       };
-    case `environment_${dataFetchActionTypes.FETCH_SUCCESS}`:
-      return {
-        ...state,
-        environment: action.result.environment,
-      };
     default:
       return state;
   }
