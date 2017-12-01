@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/environment",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Manages application environment state",
   "main": "index.js",
   "scripts": {
