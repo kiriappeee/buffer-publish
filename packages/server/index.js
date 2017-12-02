@@ -71,7 +71,16 @@ app.use(sessionMiddleware.getSession({
 app.post('/rpc', (req, res, next) => {
   rpc(req, res)
     // catch any unexpected errors
-    .catch(err => next(err));
+    .catch((err) => {
+      if (err.statusCode !== 500) {
+        next({
+          httpCode: err.statusCode,
+          error: err.message,
+        });
+      } else {
+        next(err);
+      }
+    });
 });
 
 // make sure we have a valid session
