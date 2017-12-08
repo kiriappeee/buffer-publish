@@ -81,7 +81,7 @@ const productTitle = (
         weight={'bold'}
         size={'large'}
       >
-        This is changed
+        Publish
       </Text>
     </span>
     <Text
