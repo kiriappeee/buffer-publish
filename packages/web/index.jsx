@@ -32,7 +32,9 @@ const renderApp = (AppComponent) => {
 renderApp(App);
 
 if (module.hot) {
+  console.log('module is HOT! 🔥');
   module.hot.accept('./components/App', () => {
+    console.log('APP COMPONENT CHANGED!');
     const newApp = require('./components/App').default; // eslint-disable-line global-require
     renderApp(newApp);
   });
