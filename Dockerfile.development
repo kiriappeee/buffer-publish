@@ -8,4 +8,5 @@ RUN npm install -g nodemon
 
 EXPOSE 80
 
-CMD nodemon --inspect=0.0.0.0:5858 --ignore 'index.html' --watch ./packages/server -e html,js,json packages/server/index.js
+CMD nodemon --ignore 'index.html' --watch ./packages/server -e html,js,json packages/server/index.js
+# add '--inspect=0.0.0.0:5858' to debug the server

@@ -17,7 +17,6 @@
     "@bufferapp/shutdown-helper": "0.2.0",
     "body-parser": "1.17.2",
     "bugsnag": "1.11.0",
-    "cache-loader": "1.0.3",
     "cookie-parser": "1.4.3",
     "express": "4.15.3",
     "jsonwebtoken": "7.4.1",

@@ -20,7 +20,8 @@ const app = express();
 const server = http.createServer(app);
 
 let staticAssets = {
-  'bundle.js': '/static/bundle.js',
+  // 'bundle.js': '/static/bundle.js',
+  'bundle.js': 'https://local.buffer.com:8080/static/bundle.js',
 };
 
 // NOTE: Bugsnag will not notify in local setup with current weback configuration
@@ -30,20 +31,7 @@ let bugsnagScript = '';
 const isProduction = process.env.NODE_ENV === 'production';
 app.set('isProduction', isProduction);
 
-if (!isProduction) {
-  /* eslint-disable global-require */
-  const webpack = require('webpack');
-  const config = require('./webpack.config.dev');
-  const webpackMiddleware = require('webpack-dev-middleware');
-  const webpackHotMiddleware = require('webpack-hot-middleware');
-  /* eslint-enable global-require */
-
-  const compiler = webpack(config);
-  app.use(webpackMiddleware(compiler, {
-    publicPath: config.output.publicPath,
-  }));
-  app.use(webpackHotMiddleware(compiler));
-} else {
+if (isProduction) {
   staticAssets = JSON.parse(fs.readFileSync(join(__dirname, 'staticAssets.json'), 'utf8'));
   if (process.env.BUGSNAG_KEY) {
     bugsnag.register(process.env.BUGSNAG_KEY);
