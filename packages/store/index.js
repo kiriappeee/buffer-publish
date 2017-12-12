@@ -16,6 +16,7 @@ import { middleware as pusherSyncMiddleware } from '@bufferapp/publish-pusher-sy
 import { middleware as notificationsMiddleware } from '@bufferapp/notifications';
 import { middleware as environmentMiddleware } from '@bufferapp/environment';
 import { middleware as unauthorizedRedirectMiddleware } from '@bufferapp/unauthorized-redirect';
+import { middleware as appSwitcherMiddleware } from '@bufferapp/publish-app-switcher';
 import reducers from './reducers';
 
 export const history = createHistory();
@@ -43,6 +44,7 @@ const configureStore = (initialstate) => {
         notificationsMiddleware,
         environmentMiddleware,
         unauthorizedRedirectMiddleware,
+        appSwitcherMiddleware,
       ),
     ),
   );

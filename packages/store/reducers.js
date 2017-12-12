@@ -11,6 +11,7 @@ import { reducer as appSidebarReducer } from '@bufferapp/app-sidebar';
 import { reducer as asyncDataFetchReducer } from '@bufferapp/async-data-fetch';
 import { reducer as notificationsReducer } from '@bufferapp/notifications';
 import { reducer as environmentReducer } from '@bufferapp/environment';
+import { reducer as appSwitcherReducer } from '@bufferapp/publish-app-switcher';
 
 export default combineReducers({
   form: formReducer,
@@ -25,4 +26,5 @@ export default combineReducers({
   asyncDataFetch: asyncDataFetchReducer,
   notifications: notificationsReducer,
   environment: environmentReducer,
+  appSwitcher: appSwitcherReducer,
 });
