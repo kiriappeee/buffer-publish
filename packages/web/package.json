@@ -10,6 +10,7 @@
     "test-update": "jest -u --config=../../.jestrc.json"
   },
   "dependencies": {
+    "@bufferapp/publish-app-switcher": "1.2.3",
     "@bufferapp/app-sidebar": "1.2.3",
     "@bufferapp/components": "1.1.0-beta.6",
     "@bufferapp/notifications": "1.2.3",

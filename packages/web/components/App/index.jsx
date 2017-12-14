@@ -8,6 +8,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import AppSidebar from '@bufferapp/app-sidebar';
 import Notifications from '@bufferapp/notifications';
 import ProfilePage from '@bufferapp/profile-page';
+import AppSwitcher from '@bufferapp/publish-app-switcher';
 
 import DefaultPage from '../DefaultPage';
 
@@ -37,6 +38,7 @@ class App extends Component { // eslint-disable-line
           </Switch>
         </div>
         <Notifications />
+        <AppSwitcher />
       </div>
     );
   }
