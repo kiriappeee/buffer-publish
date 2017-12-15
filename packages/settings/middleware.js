@@ -187,6 +187,12 @@ export default ({ dispatch, getState }) => next => (action) => {
         message: action.error,
       }));
       break;
+    case `updatePausedSchedules_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      dispatch(notificationActions.createNotification({
+        notificationType: 'success',
+        message: action.result.message,
+      }));
+      break;
     case `updatePausedSchedules_${dataFetchActionTypes.FETCH_FAIL}`:
       dispatch(notificationActions.createNotification({
         notificationType: 'error',
