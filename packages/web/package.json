@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-web",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Buffer Web Dashboard",
   "main": "index.jsx",
   "scripts": {
@@ -10,14 +10,15 @@
     "test-update": "jest -u --config=../../.jestrc.json"
   },
   "dependencies": {
-    "@bufferapp/app-sidebar": "1.2.0",
-    "@bufferapp/components": "1.0.7",
-    "@bufferapp/notifications": "1.2.0",
-    "@bufferapp/profile-page": "1.2.1",
-    "@bufferapp/publish-example": "1.2.0",
-    "@bufferapp/publish-profile-sidebar": "1.2.0",
+    "@bufferapp/publish-app-switcher": "1.2.3",
+    "@bufferapp/app-sidebar": "1.2.3",
+    "@bufferapp/components": "1.1.0-beta.6",
+    "@bufferapp/notifications": "1.2.3",
+    "@bufferapp/profile-page": "1.2.3",
+    "@bufferapp/publish-example": "1.2.3",
+    "@bufferapp/publish-profile-sidebar": "1.2.3",
     "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-store": "1.2.1"
+    "@bufferapp/publish-store": "1.2.3"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
   "devDependencies": {

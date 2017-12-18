@@ -430,11 +430,6 @@ export default (state = initialState, action) => {
         ...state,
         enabledApplicationModes: action.result.enabledApplicationModes,
       };
-    case `environment_${dataFetchActionTypes.FETCH_SUCCESS}`:
-      return {
-        ...state,
-        environment: action.result.environment,
-      };
     case actionTypes.OPEN_COMPOSER:
       return {
         ...state,

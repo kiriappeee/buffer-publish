@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-settings",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Settings package",
   "main": "index.js",
   "scripts": {
@@ -12,10 +12,10 @@
   "author": "melissa@buffer.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "0.7.4",
-    "@bufferapp/components": "1.0.7",
-    "@bufferapp/notifications": "1.2.0",
-    "@bufferapp/publish-profile-sidebar": "1.2.0",
-    "@bufferapp/publish-shared-components": "1.2.0",
+    "@bufferapp/components": "1.1.0-beta.6",
+    "@bufferapp/notifications": "1.2.3",
+    "@bufferapp/publish-profile-sidebar": "1.2.3",
+    "@bufferapp/publish-shared-components": "1.2.3",
     "moment-timezone": "0.5.12"
   },
   "devDependencies": {

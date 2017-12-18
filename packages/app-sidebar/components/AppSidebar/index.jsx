@@ -12,7 +12,7 @@ import {
 import { calculateStyles } from '@bufferapp/components/lib/utils';
 import { sidebarBackgroundBlue } from '@bufferapp/components/style/color';
 import { navbar } from '@bufferapp/components/style/zIndex';
-
+import { logoutUrl } from '@bufferapp/session-manager';
 import PopoverButton from '../PopoverButton';
 import BufferLogo from '../BufferLogo';
 import PopoverMenu from '../PopoverMenu';
@@ -36,6 +36,7 @@ const style = calculateStyles({
 const AppSidebar = ({
   activeProduct,
   user,
+  environment,
 }) => (
   <nav style={style} aria-label="sidebar" role="menubar">
     <BufferLogo />
@@ -74,7 +75,13 @@ const AppSidebar = ({
         <PopoverMenu>
           <PopoverMenuItem href="https://buffer.com/app/account/email" newWindow subtitle="Notifications, time / date, apps&hellip;">Preferences</PopoverMenuItem>
           <Divider color="sidebarBackgroundBlue" />
-          <PopoverMenuItem href="/logout">Sign out</PopoverMenuItem>
+          <PopoverMenuItem
+            href={logoutUrl({
+              production: environment === 'production',
+            })}
+          >
+            Sign out
+          </PopoverMenuItem>
         </PopoverMenu>
       </PopoverButton>}
     </div>
@@ -89,6 +96,7 @@ AppSidebar.propTypes = {
     id: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
   }).isRequired,
+  environment: PropTypes.string.isRequired,
 };
 
 AppSidebar.defaultProps = {

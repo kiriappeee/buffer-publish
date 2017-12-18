@@ -14,6 +14,7 @@ describe('reducer', () => {
         email: '...',
         avatar: '',
       },
+      environment: 'production',
     };
     const action = {
       type: 'INIT',
@@ -33,7 +34,7 @@ describe('reducer', () => {
       type: `user_${dataFetchActionTypes.FETCH_SUCCESS}`,
       result: user,
     };
-    const stateAfter = { user };
+    const stateAfter = { user, environment: 'production' };
     deepFreeze(action);
     expect(reducer(undefined, action))
       .toEqual(stateAfter);

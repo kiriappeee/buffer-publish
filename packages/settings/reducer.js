@@ -16,6 +16,9 @@ export const actionTypes = {
   UPDATE_PAUSED_SCHEDULE: 'UPDATE_PAUSED_SCHEDULE',
   REMOVE_PAUSED_TIME: 'REMOVE_PAUSED_TIME',
   UPDATE_PAUSED_SCHEDULE_STATE: 'UPDATE_PAUSED_SCHEDULE_STATE',
+  CONFIRM_CLEAR_ALL_TIMES: 'CONFIRM_CLEAR_ALL_TIMES',
+  CLOSE_POPOVER: 'CLOSE_POPOVER',
+  CLEAR_ALL_TIMES: 'CLEAR_ALL_TIMES',
 };
 
 const initialState = {
@@ -31,6 +34,11 @@ const initialState = {
   clearTimezoneInput: false,
   paused: false,
   profileId: null,
+  showClearAllModal: false,
+  profileName: '',
+  profileType: '',
+  profileService: '',
+  avatar: '',
 };
 
 export default (state = initialState, action) => {
@@ -47,6 +55,10 @@ export default (state = initialState, action) => {
         settingsHeader: `Your posting schedule for ${action.profile.serviceUsername}`,
         paused: action.profile.paused,
         profileId: action.profile.id,
+        profileName: action.profile.handle,
+        profileType: action.profile.service_type,
+        profileService: action.profile.service,
+        avatar: action.profile.avatarUrl,
       };
     case profileActionTypes.PROFILE_PAUSED:
     case profileActionTypes.PROFILE_UNPAUSED:
@@ -105,6 +117,17 @@ export default (state = initialState, action) => {
         ...state,
         clearTimezoneInput: false,
       };
+    case actionTypes.CONFIRM_CLEAR_ALL_TIMES:
+      return {
+        ...state,
+        showClearAllModal: true,
+      };
+    case actionTypes.CLOSE_POPOVER:
+    case actionTypes.CLEAR_ALL_TIMES:
+      return {
+        ...state,
+        showClearAllModal: false,
+      };
     default:
       return state;
   }
@@ -162,5 +185,18 @@ export const actions = {
     pausedSchedules,
     schedules,
     profileId,
+  }),
+  handleClearAllClick: () => ({
+    type: actionTypes.CONFIRM_CLEAR_ALL_TIMES,
+  }),
+  handleConfirmClearClick: ({ profileId }) => ({
+    type: actionTypes.CLEAR_ALL_TIMES,
+    profileId,
+  }),
+  handleCancelClearClick: () => ({
+    type: actionTypes.CLOSE_POPOVER,
+  }),
+  handleClosePopover: () => ({
+    type: actionTypes.CLOSE_POPOVER,
   }),
 };

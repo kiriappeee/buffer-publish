@@ -9,6 +9,7 @@ exports[`Snapshots Notifications - Test Harness default 1`] = `
           "position": "absolute",
           "right": 0,
           "top": 0,
+          "zIndex": 10000,
         }
       }
     >
@@ -41,6 +42,7 @@ exports[`Snapshots Notifications 1 notification 1`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
+        "zIndex": 10000,
       }
     }
   >
@@ -217,6 +219,7 @@ exports[`Snapshots Notifications default 1`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
+        "zIndex": 10000,
       }
     }
   >

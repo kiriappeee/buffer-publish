@@ -17,11 +17,13 @@ export default (store) => {
       case actionTypes.FETCH: {
         const id = counter++; // eslint-disable-line no-plusplus
         const args = action.args || {};
+
         store.dispatch(actions.fetchStart({
           name: action.name,
           args,
           id,
         }));
+
         rpc.call(action.name, args)
           .then(result => store.dispatch(actions.fetchSuccess({
             name: action.name,
@@ -29,12 +31,15 @@ export default (store) => {
             id,
             result,
           })))
-          .catch(error => store.dispatch(actions.fetchFail({
-            name: action.name,
-            args,
-            id,
-            error: error.message,
-          })));
+          .catch((error) => {
+            console.error(error);
+            store.dispatch(actions.fetchFail({
+              name: action.name,
+              args,
+              id,
+              error: error.message,
+            }));
+          });
         break;
       }
       default:

@@ -30,6 +30,9 @@ describe('Example', () => {
           avatar: '',
         },
       },
+      environment: {
+        environment: 'production',
+      },
       i18n: {
         translations: { },
       },

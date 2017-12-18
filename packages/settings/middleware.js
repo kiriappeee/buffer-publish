@@ -14,7 +14,8 @@ import {
   removePausedDaysFromScheduleForApi,
   addPausedDayBackToScheduleForApi,
   removeDayFromPausedSchedulesForApi,
-  addDayToPausedSchedulesForApi } from './utils/scheduleUtils';
+  addDayToPausedSchedulesForApi,
+  deleteAllTimesFromSchedule } from './utils/scheduleUtils';
 
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
@@ -122,6 +123,28 @@ export default ({ dispatch, getState }) => next => (action) => {
         },
       }));
       break;
+    case actionTypes.CLEAR_ALL_TIMES:
+      next(settingsActions.handlePauseScheduleChanges({
+        pausedSchedules: deleteAllTimesFromSchedule(getState().settings.pausedSchedules),
+        schedules: deleteAllTimesFromSchedule(getState().settings.schedules),
+        profileId: action.profileId,
+      }));
+      dispatch(dataFetchActions.fetch({
+        name: 'updateSchedule',
+        args: {
+          profileId: action.profileId,
+          schedules: getState().settings.schedules,
+        },
+      }));
+      dispatch(dataFetchActions.fetch({
+        name: 'updatePausedSchedules',
+        args: {
+          profileId: action.profileId,
+          pausedSchedules: getState().settings.pausedSchedules,
+          schedules: getState().settings.schedules,
+        },
+      }));
+      break;
     case actionTypes.UPDATE_TIMEZONE:
       dispatch(dataFetchActions.fetch({
         name: 'updateTimezone',
@@ -162,6 +185,12 @@ export default ({ dispatch, getState }) => next => (action) => {
       dispatch(notificationActions.createNotification({
         notificationType: 'error',
         message: action.error,
+      }));
+      break;
+    case `updatePausedSchedules_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      dispatch(notificationActions.createNotification({
+        notificationType: 'success',
+        message: action.result.message,
       }));
       break;
     case `updatePausedSchedules_${dataFetchActionTypes.FETCH_FAIL}`:

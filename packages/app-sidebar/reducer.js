@@ -12,6 +12,7 @@ const initialState = {
     email: '...',
     avatar: '',
   },
+  environment: 'production',
 };
 
 export default (state = initialState, action) => {

@@ -32,7 +32,7 @@ export default connect(
         total: currentProfile.total,
         enabledApplicationModes: state.queue.enabledApplicationModes,
         showComposer: state.queue.showComposer,
-        environment: state.queue.environment,
+        environment: state.environment.environment,
         editMode: state.queue.editMode,
         editingPostId: state.queue.editingPostId,
         paused,
