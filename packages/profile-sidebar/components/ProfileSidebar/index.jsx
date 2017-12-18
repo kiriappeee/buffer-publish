@@ -110,6 +110,7 @@ const ProfileSidebar = ({
   lockedProfiles,
   translations,
   onProfileClick,
+  onConnectSocialAccountClick,
 }) =>
   <div style={profileSidebarStyle}>
     {productTitle}
@@ -135,6 +136,7 @@ const ProfileSidebar = ({
       <Button
         secondary
         fillContainer
+        onClick={() => { onConnectSocialAccountClick(); }}
       >
         {translations.connectButton}
       </Button>
@@ -144,6 +146,7 @@ const ProfileSidebar = ({
 ProfileSidebar.propTypes = {
   loading: PropTypes.bool.isRequired,
   onProfileClick: ProfileList.propTypes.onProfileClick,
+  onConnectSocialAccountClick: PropTypes.func.isRequired,
   selectedProfileId: ProfileList.propTypes.selectedProfileId,
   profiles: PropTypes.arrayOf(
     PropTypes.shape(ProfileListItem.propTypes),
