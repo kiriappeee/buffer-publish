@@ -606,7 +606,7 @@ exports[`Snapshots App should render application 1`] = `
                     onMouseLeave={[Function]}
                   >
                     <a
-                      href="https://buffer.com/wishlist"
+                      href="https://buffersurvey.typeform.com/to/ZEiVmL"
                       role="menuitem"
                       style={
                         Object {
