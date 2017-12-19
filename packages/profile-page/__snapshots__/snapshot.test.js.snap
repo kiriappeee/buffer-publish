@@ -333,6 +333,26 @@ exports[`Snapshots ProfilePage should render 1`] = `
               </span>
             </a>
           </div>
+          <a
+            href="https://buffer.com/pricing"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "outline": "none",
+                "padding": "0",
+                "textDecoration": "none",
+              }
+            }
+            target="_blank"
+          >
+            Upgrade
+          </a>
           <hr
             style={
               Object {
@@ -699,6 +719,26 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
               </span>
             </a>
           </div>
+          <a
+            href="https://buffer.com/pricing"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "outline": "none",
+                "padding": "0",
+                "textDecoration": "none",
+              }
+            }
+            target="_blank"
+          >
+            Upgrade
+          </a>
           <hr
             style={
               Object {
