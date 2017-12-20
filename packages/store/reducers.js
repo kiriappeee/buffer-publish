@@ -12,6 +12,7 @@ import { reducer as asyncDataFetchReducer } from '@bufferapp/async-data-fetch';
 import { reducer as notificationsReducer } from '@bufferapp/notifications';
 import { reducer as environmentReducer } from '@bufferapp/environment';
 import { reducer as appSwitcherReducer } from '@bufferapp/publish-app-switcher';
+import { reducer as betaRedirectReducer } from '@bufferapp/publish-beta-redirect';
 
 export default combineReducers({
   form: formReducer,
@@ -27,4 +28,5 @@ export default combineReducers({
   notifications: notificationsReducer,
   environment: environmentReducer,
   appSwitcher: appSwitcherReducer,
+  betaRedirect: betaRedirectReducer,
 });
