@@ -1,5 +1,6 @@
 import {
   actionTypes as dataFetchActionTypes,
+  actions as dataFetchActions,
 } from '@bufferapp/async-data-fetch';
 
 const getClassicBufferURL = () => {
@@ -9,13 +10,15 @@ const getClassicBufferURL = () => {
   return 'https://buffer.com/app';
 };
 
-export default ({ getState }) => next => (action) => {
+export default ({ getState, dispatch }) => next => (action) => {
   next(action);
   switch (action.type) {
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`: {
-      const { hasPublishBeta } = getState().betaRedirect;
+      const { hasPublishBeta, hasPublishBetaRedirect } = getState().betaRedirect;
       if (!hasPublishBeta) {
         window.location = getClassicBufferURL();
+      } else if (!hasPublishBetaRedirect) {
+        dispatch(dataFetchActions.fetch({ name: 'savePublishBetaRedirect' }));
       }
       break;
     }

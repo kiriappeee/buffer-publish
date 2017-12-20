@@ -14,8 +14,8 @@ import { CloseIcon } from '@bufferapp/components/Icon/Icons';
 
 const getContainerStyle = hidden => ({
   position: 'absolute',
-  bottom: '40px',
-  right: '40px',
+  top: '13px',
+  right: '16px',
   width: '260px',
   display: hidden ? 'none' : '',
 });
