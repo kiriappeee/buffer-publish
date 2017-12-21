@@ -3,9 +3,9 @@ import { actions as notificationActions } from '@bufferapp/notifications';
 
 const getClassicBufferURL = () => {
   if (window.location.hostname === 'publish.local.buffer.com') {
-    return 'https://local.buffer.com/app';
+    return 'https://local.buffer.com/classic';
   }
-  return 'https://buffer.com/app';
+  return 'https://buffer.com/classic';
 };
 
 export default ({ dispatch }) => next => (action) => {

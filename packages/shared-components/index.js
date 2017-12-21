@@ -16,3 +16,4 @@ export ScheduleTable from './ScheduleTable';
 export ScrollableContainer from './ScrollableContainer';
 export PostDragWrapper from './PostDragWrapper';
 export PostDragLayer from './PostDragLayer';
+export BufferLoading from './BufferLoading';
