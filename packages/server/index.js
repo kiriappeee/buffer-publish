@@ -110,10 +110,7 @@ app.post('/pusher/auth',
   },
 );
 
-app.get('*', (req, res) => {
-  console.dir(req.session);
-  res.send(getHtml());
-});
+app.get('*', (req, res) => res.send(getHtml()));
 
 app.use(apiError);
 
