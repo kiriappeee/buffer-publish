@@ -16,6 +16,7 @@ const getClassicBufferPricingURL = () => {
 const TabNavigation = ({
   selectedTabId,
   onTabClick,
+  shouldShowUpgradeCta,
 }) =>
   /* wrapper div with "tabs" id necessary as a selector
   for a11y focus after selecting profile in sidebar */
@@ -27,13 +28,26 @@ const TabNavigation = ({
       <Tab tabId={'queue'}>Queue</Tab>
       <Tab tabId={'sent'}>Sent Posts</Tab>
       <Tab tabId={'settings'}>Settings</Tab>
-      <Link href={getClassicBufferPricingURL()} unstyled newTab>Upgrade</Link>
+      {shouldShowUpgradeCta &&
+        <Link
+          href={getClassicBufferPricingURL()}
+          unstyled
+          newTab
+        >
+          Upgrade
+        </Link>
+      }
     </Tabs>
   </div>;
+
+TabNavigation.defaultProps = {
+  shouldShowUpgradeCta: false,
+};
 
 TabNavigation.propTypes = {
   selectedTabId: PropTypes.string.isRequired,
   onTabClick: PropTypes.func.isRequired,
+  shouldShowUpgradeCta: PropTypes.bool,
 };
 
 export default TabNavigation;
