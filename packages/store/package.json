@@ -24,7 +24,8 @@
     "@bufferapp/publish-sent": "1.2.4",
     "@bufferapp/publish-settings": "1.2.4",
     "@bufferapp/publish-tabs": "1.2.4",
-    "@bufferapp/unauthorized-redirect": "1.2.4"
+    "@bufferapp/unauthorized-redirect": "1.2.4",
+    "@bufferapp/publish-beta-redirect": "1.2.3"
   },
   "devDependencies": {
     "eslint": "3.19.0",

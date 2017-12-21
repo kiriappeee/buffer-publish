@@ -8,6 +8,7 @@ import {
 import {
   EmptyState,
   PostDragLayer,
+  BufferLoading,
 } from '@bufferapp/publish-shared-components';
 
 import ComposerPopover from '../ComposerPopover';
@@ -50,7 +51,7 @@ const QueuedPosts = ({
   if (loading) {
     return (
       <div style={loadingContainerStyle}>
-        <LoadingAnimation />
+        <BufferLoading size={64} />
       </div>
     );
   }

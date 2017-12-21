@@ -6,6 +6,7 @@ import {
 export const actionTypes = {};
 
 const initialState = {
+  redirecting: false,
   showGoBackToClassic: false,
   submittingFeedback: false,
   user: {

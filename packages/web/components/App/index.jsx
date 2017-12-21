@@ -9,6 +9,7 @@ import AppSidebar from '@bufferapp/app-sidebar';
 import Notifications from '@bufferapp/notifications';
 import ProfilePage from '@bufferapp/profile-page';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
+import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 
 import DefaultPage from '../DefaultPage';
 
@@ -29,13 +30,15 @@ class App extends Component { // eslint-disable-line
       <div style={appStyle}>
         <AppSidebar activeProduct="publish" />
         <div style={contentStyle}>
-          <Switch>
-            <Route
-              path={profilePageRoute}
-              component={ProfilePage}
-            />
-            <Route component={DefaultPage} />
-          </Switch>
+          <EnsurePublishBetaUser>
+            <Switch>
+              <Route
+                path={profilePageRoute}
+                component={ProfilePage}
+              />
+              <Route component={DefaultPage} />
+            </Switch>
+          </EnsurePublishBetaUser>
         </div>
         <Notifications />
         <AppSwitcher />

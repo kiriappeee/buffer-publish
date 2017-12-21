@@ -21,7 +21,8 @@ export default connect(
   (state, ownProps) => {
     const profileId = ownProps.profileId;
     const currentProfile = state.queue.byProfileId[profileId];
-    const paused = state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length;
+    const paused =
+      (state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length) > 0;
     if (currentProfile) {
       return {
         loading: currentProfile.loading,
