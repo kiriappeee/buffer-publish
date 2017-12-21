@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshots BufferLoading default 1`] = `
+<span>
+  <BufferLoading
+    fullscreen={false}
+    size={100}
+  />
+</span>
+`;
+
 exports[`Snapshots DropdownItem default 1`] = `
 <span>
   <DropdownItem
