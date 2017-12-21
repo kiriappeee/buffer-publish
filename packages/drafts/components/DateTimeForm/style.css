@@ -1,0 +1,9 @@
+.dateTimeForm {
+  width: 240px;
+}
+
+.rescheduleCloseButton{
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
