@@ -13,6 +13,7 @@ export default connect(
     days: state.settings.days,
     schedules: state.settings.schedules,
     pausedSchedules: state.settings.pausedSchedules,
+    mergedSchedules: state.settings.mergedSchedules,
     items: state.settings.items,
     profileTimezoneCity: state.settings.profileTimezoneCity,
     hasTwentyFourHourTimeFormat: state.settings.hasTwentyFourHourTimeFormat,

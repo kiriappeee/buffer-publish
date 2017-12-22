@@ -23,7 +23,6 @@ module.exports = method(
       }
       throw err;
     }
-    console.log(result);
     result = JSON.parse(result);
     return Promise.resolve(result);
   },
