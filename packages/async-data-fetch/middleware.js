@@ -32,7 +32,7 @@ export default (store) => {
             result,
           })))
           .catch((error) => {
-            console.error(error);
+            console.error(error); // eslint-disable-line
             store.dispatch(actions.fetchFail({
               name: action.name,
               args,

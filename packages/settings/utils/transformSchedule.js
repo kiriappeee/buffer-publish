@@ -46,22 +46,19 @@ const transformForTable = (derivedSchedule, pausedDays) => {
 };
 
 const mergeSchedules = (profileSchedules, pausedSchedules) => {
-  const newSchedule = profileSchedules.map((schedule) => {
+  const mergedSchedules = [];
+  profileSchedules.forEach((schedule, index) => {
+    mergedSchedules.push({ ...schedule });
     pausedSchedules.forEach((pausedSchedule) => {
       if (pausedSchedule.days[0] === schedule.days[0]) {
-        schedule.times = pausedSchedule.times;
+        mergedSchedules[index].times = pausedSchedule.times;
       }
     });
-    return schedule;
   });
-  return newSchedule;
+  return mergedSchedules;
 };
 
 const transformSchedules = (profileSchedules, pausedSchedules = []) => {
-  if (pausedSchedules.length > 0) {
-    profileSchedules = mergeSchedules(profileSchedules, pausedSchedules);
-  }
-
   const schedule = {
     mon: [],
     tue: [],
@@ -136,4 +133,4 @@ const transformSchedules = (profileSchedules, pausedSchedules = []) => {
   return transformForTable(schedule, pausedDays);
 };
 
-export { transformSchedules, dayMap };
+export { transformSchedules, dayMap, mergeSchedules };
