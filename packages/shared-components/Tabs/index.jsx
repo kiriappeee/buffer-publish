@@ -11,7 +11,7 @@ const Tabs = ({
 }) => (
   <div>
     {React.Children.map(children, (tab) => {
-      if (!tab.props.tabId) return tab;
+      if (!tab || !tab.props.tabId) return tab;
       return React.cloneElement(tab, {
         selected: selectedTabId === tab.props.tabId,
         onClick: onTabClick,
