@@ -53,9 +53,10 @@ export default ({ dispatch, getState }) => next => (action) => {
       break;
     case actionTypes.ADD_SCHEDULE_TIME:
       dispatch(dataFetchActions.fetch({
-        name: 'updateSchedule',
+        name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
+          pausedSchedules: getState().settings.pausedSchedules,
           schedules: getState().settings.schedules,
         },
       }));

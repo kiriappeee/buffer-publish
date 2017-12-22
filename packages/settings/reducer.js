@@ -14,7 +14,7 @@ import {
   removeDayFromPausedSchedulesForApi,
   addDayToPausedSchedulesForApi,
   deleteTimeFromSchedule,
-  addTimeToScheduleForApi,
+  addTimeToSchedulesForApi,
   updateScheduleTimeForApi,
   deleteAllTimesFromSchedule } from './utils/scheduleUtils';
 
@@ -61,6 +61,7 @@ export default (state = initialState, action) => {
   let mergedSchedules = [];
   let pausedSchedules = [];
   let schedules = [];
+  let newSchedules = {};
   switch (action.type) {
     case profileActionTypes.SELECT_PROFILE:
       mergedSchedules = mergeSchedules(action.profile.schedules, action.profile.pausedSchedules);
@@ -112,7 +113,7 @@ export default (state = initialState, action) => {
         schedules: action.result.schedules,
       };
     case actionTypes.PAUSE_DAY:
-      schedules = removePausedDaysFromScheduleForApi(action.dayName, state.schedules);
+      schedules = removePausedDaysFromScheduleForApi([action.dayName], state.schedules);
       pausedSchedules =
         addDayToPausedSchedulesForApi(action.dayName, state.mergedSchedules, state.days);
       mergedSchedules = mergeSchedules(schedules, pausedSchedules);
@@ -211,13 +212,17 @@ export default (state = initialState, action) => {
         mergedSchedules,
       };
     case actionTypes.ADD_SCHEDULE_TIME:
-      schedules = addTimeToScheduleForApi(state.schedules, action);
-      mergedSchedules = mergeSchedules(schedules, state.pausedSchedules);
+      newSchedules = addTimeToSchedulesForApi(
+        action,
+        state.mergedSchedules,
+        state.pausedSchedules,
+      );
+      mergedSchedules = mergeSchedules(newSchedules.schedules, newSchedules.pausedSchedules);
       return {
         ...state,
         days: transformSchedules(cloneDeep(mergedSchedules), cloneDeep(state.pausedSchedules)),
-        schedules,
-        pausedSchedules: state.pausedSchedules,
+        schedules: newSchedules.schedules,
+        pausedSchedules: newSchedules.pausedSchedules,
         mergedSchedules,
       };
     case actionTypes.UPDATE_SCHEDULE_TIME:
