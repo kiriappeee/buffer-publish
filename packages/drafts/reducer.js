@@ -41,6 +41,129 @@ const profileInitialState = {
   loadingMore: false,
   moreToLoad: false,
   page: 1,
-  posts: {},
+  drafts: {},
   total: 0,
+};
+
+export const actions = {
+  openEditComposer: ({ draft, role, profileTimezone }) => ({
+    type: actionTypes.OPEN_COMPOSER,
+    payload: true,
+    draft,
+    role,
+    profileTimezone,
+  }),
+  draftEdited: ({ draft }) => ({
+    type: actionTypes.COLLABORATION_DRAFT_EDITED,
+    draftId: draft.id,
+  }),
+  draftUpdated: payload => ({
+    type: actionTypes.COLLABORATION_DRAFT_UPDATED,
+    draft: payload.draft,
+    draftId: payload.draft_id,
+  }),
+  requestDraftApproval: ({ draft }) => ({
+    type: actionTypes.REQUESTING_DRAFT_APPROVE,
+    draftId: draft.id,
+    draft,
+  }),
+  handleDraftDeleteClick: ({ draft }) => ({
+    type: actionTypes.COLLABORATION_CONFIRM_DELETE,
+    draftId: draft.id,
+    draft,
+  }),
+  handleDeleteCancel: ({ draftId }) => ({
+    type: actionTypes.COLLABORATION_DELETE_CANCELED,
+    draftId,
+  }),
+  requestDraftDelete: ({ draft }) => ({
+    type: actionTypes.REQUESTING_DRAFT_DELETE,
+    draftId: draft.id,
+    draft,
+  }),
+  requestDraftNeedsApprovalUpdate: ({ draft, needsApproval, isMoving }) => ({
+    type: actionTypes.REQUESTING_NEEDS_APPROVAL_UPDATE,
+    draftId: draft.id,
+    draft,
+    needsApproval,
+    isMoving,
+  }),
+  draftDeleted: payload => ({
+    type: actionTypes.COLLABORATION_DRAFT_DELETED,
+    draftId: payload.update_id,
+  }),
+  draftCreated: payload => ({
+    type: actionTypes.COLLABORATION_DRAFT_CREATED,
+    draftId: payload.update.id,
+    draft: payload.update,
+  }),
+  draftApproved: payload => ({
+    type: actionTypes.COLLABORATION_DRAFT_APPROVED,
+    draftId: payload.update.id,
+    draft: payload.update,
+  }),
+  triggerDraftStatusUpdate: (/* { dispatch, draftId, isPendingApproval } */) => {
+    // TODO: Version2. Hit update endpoint and toggles 'pending_approval' status.
+    //       Dispatches draftUpdated action.
+    // Once 'Pending Approval' tab is ready - filter drafts shown by 'pending_approval' field
+  },
+  draftActionError: error => ({
+    type: actionTypes.COLLABORATION_DRAFT_ERROR,
+    error,
+  }),
+  updateUserReadMessages: ({ message }) => ({
+    type: actionTypes.UPDATE_USER_READ_MESSAGES,
+    message,
+  }),
+  updateUserReadMessagesSuccess: ({ messages }) => ({
+    type: actionTypes.UPDATE_USER_READ_MESSAGES_SUCCESS,
+    messages,
+  }),
+  showDateTimeForm: ({ draftId, right, top }) => ({
+    type: actionTypes.TOGGLE_DATE_TIME_FORM,
+    draftId,
+    payload: true,
+    right,
+    top,
+  }),
+  hideDateTimeForm: () => ({
+    type: actionTypes.TOGGLE_DATE_TIME_FORM,
+    payload: false,
+  }),
+  rescheduleStart: ({ draftId, date, time, timezone }) => ({
+    type: actionTypes.COLLABORATION_DRAFT_RESCHEDULE_START,
+    draftId,
+    date,
+    time,
+    timezone,
+  }),
+  rescheduleSuccess: ({ draft }) => ({
+    type: actionTypes.COLLABORATION_DRAFT_RESCHEDULE_SUCCESS,
+    draft,
+  }),
+  fetchProfileDrafts: profileId => ({
+    type: actionTypes.FETCH_PROFILE_DRAFTS_START,
+    profileId,
+  }),
+  fetchProfileDraftsSuccess: drafts => ({
+    type: actionTypes.FETCH_PROFILE_DRAFTS_SUCCESS,
+    drafts,
+  }),
+  fetchProfileDraftsError: error => ({
+    type: actionTypes.FETCH_PROFILE_DRAFTS_ERROR,
+    error,
+  }),
+  changeProfile: profile => ({
+    type: actionTypes.CHANGE_PROFILE,
+    profile,
+  }),
+  setDraftFilter: ({ filter }) => ({
+    type: actionTypes.SET_DRAFT_FILTER,
+    filter,
+  }),
+  showNotification: ({ message, style }) => ({
+    type: actionTypes.SHOW_NOTIFICATION,
+    message,
+    style,
+  }),
 };
