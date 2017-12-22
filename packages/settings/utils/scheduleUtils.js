@@ -130,8 +130,8 @@ const deleteTimeFromSchedule = (unformattedSchedule, action) => {
   return formattedSchedule;
 };
 
-const deleteTimeFromPausedSchedulesForApi = (unformattedSchedule, days, action) =>
-  deleteTimeFromSchedule(getPausedSchedule(unformattedSchedule, days), action);
+const deleteTimeFromPausedSchedulesForApi = (mergedSchedules, days, action) =>
+  deleteTimeFromSchedule(getPausedSchedule(mergedSchedules, days), action);
 
 const deleteAllTimesFromSchedule = (unformattedSchedule) => {
   if (!Array.isArray(unformattedSchedule)) return [];
