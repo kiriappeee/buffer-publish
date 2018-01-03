@@ -45,15 +45,77 @@ const profileInitialState = {
   total: 0,
 };
 
+const getProfileId = (action) => {
+  if (action.profileId) { return action.profileId; }
+  if (action.args) { return action.args.profileId; }
+  if (action.profile) { return action.profile.id; }
+};
+
+const determineIfMoreToLoad = (action, currentPosts) => {
+  const currentPostCount = Object.keys(currentPosts).length;
+  const resultUpdatesCount = Object.keys(action.result.drafts).length;
+  return (action.result.total > (currentPostCount + resultUpdatesCount));
+};
+
+const postReducer = (state, action) => {
+  switch (action.type) {
+    case actionTypes.POST_CREATED:
+    case actionTypes.POST_UPDATED:
+      return action.post;
+    case actionTypes.POST_ERROR:
+      return state;
+    case actionTypes.POST_CLICKED_DELETE:
+      return { ...state, isConfirmingDelete: true };
+    case actionTypes.POST_CONFIRMED_DELETE:
+      return {
+        ...state,
+        isConfirmingDelete: false,
+        isDeleting: true,
+      };
+    case actionTypes.POST_SHARE_NOW:
+      return {
+        ...state,
+        isWorking: true,
+      };
+    case actionTypes.POST_CANCELED_DELETE:
+      return {
+        ...state,
+        isConfirmingDelete: false,
+      };
+    case actionTypes.POST_IMAGE_CLICKED:
+      return {
+        ...state,
+        isLightboxOpen: true,
+        currentImage: 0,
+      };
+    case actionTypes.POST_IMAGE_CLOSED:
+      return {
+        ...state,
+        isLightboxOpen: false,
+      };
+    case actionTypes.POST_IMAGE_CLICKED_NEXT:
+      return {
+        ...state,
+        currentImage: state.currentImage + 1,
+      };
+    case actionTypes.POST_IMAGE_CLICKED_PREV:
+      return {
+        ...state,
+        currentImage: state.currentImage - 1,
+      };
+    default:
+      return state;
+  }
+};
 
 const postsReducer = (state = {}, action) => {
   switch (action.type) {
     case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`: {
-      const { updates } = action.result;
+      const { drafts } = action.result;
       if (action.args.isFetchingMore) {
-        return { ...state, ...updates };
+        return { ...state, ...drafts };
       }
-      return updates;
+      return drafts;
     }
     default:
       return state;
@@ -69,14 +131,13 @@ const profileReducer = (state = profileInitialState, action) => {
         loadingMore: action.args.isFetchingMore,
       };
     case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
-      debugger;
       return {
         ...state,
         loading: false,
         loadingMore: false,
-        moreToLoad: determineIfMoreToLoad(action, state.posts),
+        moreToLoad: determineIfMoreToLoad(action, state.drafts),
         page: state.page + 1,
-        posts: postsReducer(state.posts, action),
+        drafts: postsReducer(state.drafts, action),
         total: action.result.total,
       };
     case `draftPosts_${dataFetchActionTypes.FETCH_FAIL}`:
@@ -90,11 +151,23 @@ const profileReducer = (state = profileInitialState, action) => {
 };
 
 export default (state = initialState, action) => {
+  let profileId;
   switch (action.type) {
     case profileSidebarActionTypes.SELECT_PROFILE:
     case `draftPosts_${dataFetchActionTypes.FETCH_START}`:
     case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
     case `draftPosts_${dataFetchActionTypes.FETCH_FAIL}`:
+      profileId = getProfileId(action);
+      if (profileId) {
+        return {
+          ...state,
+          byProfileId: {
+            ...state.byProfileId,
+            [profileId]: profileReducer(state.byProfileId[profileId], action),
+          },
+        };
+      }
+      return state;
     default:
       return state;
   }
