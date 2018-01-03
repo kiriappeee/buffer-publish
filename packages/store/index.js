@@ -7,6 +7,7 @@ import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
+import { middleware as draftsMiddleware } from '@bufferapp/publish-drafts';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
@@ -38,6 +39,7 @@ const configureStore = (initialstate) => {
         profileSidebarMiddleware,
         appSidebarMiddleware,
         queueMiddleware,
+        draftsMiddleware,
         sentMiddleware,
         settingsMiddleware,
         pusherSyncMiddleware,
