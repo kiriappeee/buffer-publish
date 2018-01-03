@@ -18,6 +18,7 @@
     "@bufferapp/publish-profile-sidebar": "1.2.4",
     "@bufferapp/publish-pusher-sync": "1.2.4",
     "@bufferapp/publish-queue": "1.2.4",
+    "@bufferapp/publish-drafts": "1.2.4",
     "@bufferapp/publish-routes": "0.5.25",
     "@bufferapp/publish-sent": "1.2.4",
     "@bufferapp/publish-settings": "1.2.4",

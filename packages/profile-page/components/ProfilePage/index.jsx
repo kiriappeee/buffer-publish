@@ -5,6 +5,7 @@ import { Redirect } from 'react-router';
 
 import QueuedPosts from '@bufferapp/publish-queue';
 import SentPosts from '@bufferapp/publish-sent';
+import DraftList from '@bufferapp/publish-drafts';
 import ProfileSettings from '@bufferapp/publish-settings';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
@@ -51,6 +52,10 @@ const TabContent = ({ tabId, profileId }) => {
           profileId={profileId}
         />
       );
+    case 'drafts':
+      return (
+        <DraftList profileId={profileId} />
+      );
     case 'settings':
       return (
         <ProfileSettings
@@ -85,7 +90,7 @@ const ProfilePage = ({
   moreToLoad,
   page,
 }) => {
-  const isPostsTab = ['queue', 'sent'].includes(tabId);
+  const isPostsTab = ['queue', 'sent', 'drafts'].includes(tabId);
   const showLoadMoreButton = moreToLoad && isPostsTab;
   return (
     <div style={profilePageStyle}>

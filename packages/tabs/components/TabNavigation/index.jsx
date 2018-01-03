@@ -12,7 +12,7 @@ const getClassicBufferPricingURL = () => {
   }
   return 'https://buffer.com/pricing';
 };
-
+// TODO: only show Drafts/Approval if user is business
 const TabNavigation = ({
   selectedTabId,
   onTabClick,
@@ -27,6 +27,7 @@ const TabNavigation = ({
       <Tab tabId={'queue'}>Queue</Tab>
       <Tab tabId={'sent'}>Sent Posts</Tab>
       <Tab tabId={'settings'}>Settings</Tab>
+      <Tab tabId={'drafts'}>Drafts</Tab>
       <Link href={getClassicBufferPricingURL()} unstyled newTab>Upgrade</Link>
     </Tabs>
   </div>;
