@@ -1,9 +1,11 @@
-import React, { PropTypes } from 'react';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import React from 'react';
+import PropTypes from 'prop-types';
+// import CSSTransitionGroup from 'react-addons-css-transition-group';
 import Loader from '@bufferapp/components/Loader';
 import {
   PostList,
-} from '@bufferapp/web-components';
+  // EmptyState,
+} from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
 import styles from './style.css';
 
@@ -18,25 +20,17 @@ const renderPostList = ({
   onRequestApprovalClick,
   onRescheduleClick,
 }) =>
-  <CSSTransitionGroup
-    transitionAppear
-    transitionAppearTimeout={600}
-    transitionEnterTimeout={600}
-    transitionLeaveTimeout={1500}
-    transitionName={styles}
-  >
-    <PostList
-      posts={posts}
-      onApproveClick={onApproveClick}
-      onCancelConfirmClick={onCancelConfirmClick}
-      onDeleteClick={onDeleteClick}
-      onDeleteConfirmClick={onDeleteConfirmClick}
-      onEditClick={onEditClick}
-      onMoveToDraftsClick={onMoveToDraftsClick}
-      onRequestApprovalClick={onRequestApprovalClick}
-      onRescheduleClick={onRescheduleClick}
-    />
-  </CSSTransitionGroup>;
+  <PostList
+    posts={posts}
+    onApproveClick={onApproveClick}
+    onCancelConfirmClick={onCancelConfirmClick}
+    onDeleteClick={onDeleteClick}
+    onDeleteConfirmClick={onDeleteConfirmClick}
+    onEditClick={onEditClick}
+    onMoveToDraftsClick={onMoveToDraftsClick}
+    onRequestApprovalClick={onRequestApprovalClick}
+    onRescheduleClick={onRescheduleClick}
+  />;
 
 const renderEmpty = ({
   manager,
@@ -45,6 +39,12 @@ const renderEmpty = ({
   onUserReadMessage,
   view
 }) =>
+  // <EmptyState
+  //   title="It looks like you haven't got any drafts!"
+  //   subtitle="Click the box above to add a draft :)"
+  //   heroImg="https://s3.amazonaws.com/buffer-publish/images/fresh-queue%402x.png"
+  //   heroImgSize={{ width: '229px', height: '196px' }}
+  // />;
   <Empty
     isManager={manager}
     profile={profile}
@@ -95,7 +95,7 @@ const DraftList = ({
           profile,
           user,
           onUserReadMessage,
-          view
+          view,
         })
       }
     </div>

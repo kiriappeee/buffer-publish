@@ -3,38 +3,21 @@ import { actions as profileSidebarActions } from '@bufferapp/publish-profile-sid
 import { actions } from './actions';
 import DraftList from './components/DraftList';
 
-const formatPostLists = (posts) => {
-  const orderedPosts = Object.values(posts).sort((a, b) => a.due_at - b.due_at);
-  let lastHeader = null;
-  return orderedPosts.reduce((acc, post, index) => {
-    if (lastHeader !== post.day) {
-      lastHeader = post.day;
-      acc.push({ queueItemType: 'header', text: post.day, id: `header-${index}` });
-    }
-    acc.push({ queueItemType: 'post', index, ...post });
-    return acc;
-  }, []);
-};
-
 export default connect(
   (state, ownProps) => {
     const profileId = ownProps.profileId;
-    const currentProfile = state.queue.byProfileId[profileId];
-    const paused = state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length;
+    const currentProfile = state.drafts.byProfileId[profileId];
     if (currentProfile) {
       return {
         loading: currentProfile.loading,
         loadingMore: currentProfile.loadingMore,
         moreToLoad: currentProfile.moreToLoad,
         page: currentProfile.page,
-        postLists: formatPostLists(currentProfile.posts),
         total: currentProfile.total,
-        enabledApplicationModes: state.queue.enabledApplicationModes,
-        showComposer: state.queue.showComposer,
+        showComposer: state.drafts.showComposer,
         environment: state.environment.environment,
-        editMode: state.queue.editMode,
-        editingPostId: state.queue.editingPostId,
-        paused,
+        editMode: state.drafts.editMode,
+        editingPostId: state.drafts.editingPostId,
       };
     }
     return {};

@@ -45,6 +45,61 @@ const profileInitialState = {
   total: 0,
 };
 
+
+const postsReducer = (state = {}, action) => {
+  switch (action.type) {
+    case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`: {
+      const { updates } = action.result;
+      if (action.args.isFetchingMore) {
+        return { ...state, ...updates };
+      }
+      return updates;
+    }
+    default:
+      return state;
+  }
+};
+
+const profileReducer = (state = profileInitialState, action) => {
+  switch (action.type) {
+    case `draftPosts_${dataFetchActionTypes.FETCH_START}`:
+      return {
+        ...state,
+        loading: !action.args.isFetchingMore && !action.args.isReordering,
+        loadingMore: action.args.isFetchingMore,
+      };
+    case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      debugger;
+      return {
+        ...state,
+        loading: false,
+        loadingMore: false,
+        moreToLoad: determineIfMoreToLoad(action, state.posts),
+        page: state.page + 1,
+        posts: postsReducer(state.posts, action),
+        total: action.result.total,
+      };
+    case `draftPosts_${dataFetchActionTypes.FETCH_FAIL}`:
+      return {
+        ...state,
+        loading: false,
+      };
+    default:
+      return state;
+  }
+};
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case profileSidebarActionTypes.SELECT_PROFILE:
+    case `draftPosts_${dataFetchActionTypes.FETCH_START}`:
+    case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case `draftPosts_${dataFetchActionTypes.FETCH_FAIL}`:
+    default:
+      return state;
+  }
+};
+
 export const actions = {
   openEditComposer: ({ draft, role, profileTimezone }) => ({
     type: actionTypes.OPEN_COMPOSER,
