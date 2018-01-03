@@ -61,6 +61,7 @@ if (module.hot) {
     '../tabs/index.js',
     '../unauthorized-redirect/index.js',
     '../utils/index.js',
+    '../drafts/index.js',
   ], () => {
     const newApp = require('./components/App').default; // eslint-disable-line global-require
     const newReducers = require('../store/reducers').default; // eslint-disable-line global-require

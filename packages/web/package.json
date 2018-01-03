@@ -16,6 +16,7 @@
     "@bufferapp/profile-page": "1.2.4",
     "@bufferapp/publish-app-switcher": "1.2.4",
     "@bufferapp/publish-example": "1.2.4",
+    "@bufferapp/publish-drafts": "1.2.4",
     "@bufferapp/publish-profile-sidebar": "1.2.4",
     "@bufferapp/publish-routes": "0.5.25",
     "@bufferapp/publish-store": "1.2.4"
