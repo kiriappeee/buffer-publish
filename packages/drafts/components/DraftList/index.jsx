@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import CSSTransitionGroup from 'react-addons-css-transition-group';
 import Loader from '@bufferapp/components/Loader';
-import {
-  PostList,
-  // EmptyState,
-} from '@bufferapp/publish-shared-components';
+import { QueueItems } from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
 import styles from './style.css';
 
@@ -20,8 +17,8 @@ const renderPostList = ({
   onRequestApprovalClick,
   onRescheduleClick,
 }) =>
-  <PostList
-    posts={posts}
+  <QueueItems
+    items={posts}
     onApproveClick={onApproveClick}
     onCancelConfirmClick={onCancelConfirmClick}
     onDeleteClick={onDeleteClick}
@@ -39,12 +36,6 @@ const renderEmpty = ({
   onUserReadMessage,
   view
 }) =>
-  // <EmptyState
-  //   title="It looks like you haven't got any drafts!"
-  //   subtitle="Click the box above to add a draft :)"
-  //   heroImg="https://s3.amazonaws.com/buffer-publish/images/fresh-queue%402x.png"
-  //   heroImgSize={{ width: '229px', height: '196px' }}
-  // />;
   <Empty
     isManager={manager}
     profile={profile}
@@ -55,7 +46,7 @@ const renderEmpty = ({
 
 const DraftList = ({
   loading,
-  posts,
+  drafts,
   manager,
   profile,
   user,
@@ -80,7 +71,7 @@ const DraftList = ({
       {
         posts.length > 0 ?
         renderPostList({
-          posts,
+          drafts,
           onApproveClick,
           onCancelConfirmClick,
           onDeleteClick,
@@ -106,7 +97,7 @@ const DraftList = ({
 // TODO: these need some <3, they're not complete!
 DraftList.propTypes = {
   loading: PropTypes.bool,
-  posts: PropTypes.arrayOf(
+  drafts: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
     })
