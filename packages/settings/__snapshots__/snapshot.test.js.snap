@@ -3036,53 +3036,53 @@ exports[`Snapshots ProfileSettings default 1`] = `
     <div
       style={
         Object {
-          "marginBottom": "1.5rem",
-          "marginTop": "1rem",
-          "width": "100%",
+          "display": "flex",
+          "flexDirection": "row",
         }
       }
     >
-      <form>
-        <div
-          style={
-            Object {
-              "display": "flex",
-              "flex": 1,
-              "flexDirection": "column",
-              "marginBottom": "0.5rem",
-              "width": "200px",
-            }
+      <div
+        style={
+          Object {
+            "marginBottom": "1.5rem",
+            "marginTop": "1rem",
+            "width": "100%",
           }
-        >
+        }
+      >
+        <form>
           <div
             style={
               Object {
                 "display": "flex",
+                "flex": 1,
+                "flexDirection": "column",
                 "marginBottom": "0.5rem",
+                "width": "200px",
               }
             }
           >
-            <span
+            <div
               style={
                 Object {
-                  "color": "#000",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
-                  "fontWeight": 300,
+                  "display": "flex",
+                  "marginBottom": "0.5rem",
                 }
               }
             >
-              Timezone
-            </span>
-          </div>
-          <div
-            style={
-              Object {
-                "display": "flex",
-                "flexGrow": 1,
-              }
-            }
-          >
+              <span
+                style={
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "0.8rem",
+                    "fontWeight": 300,
+                  }
+                }
+              >
+                Timezone
+              </span>
+            </div>
             <div
               style={
                 Object {
@@ -3094,51 +3094,148 @@ exports[`Snapshots ProfileSettings default 1`] = `
               <div
                 style={
                   Object {
-                    "width": "100%",
+                    "display": "flex",
+                    "flexGrow": 1,
                   }
                 }
               >
-                <div>
-                  <div
-                    style={
-                      Object {
-                        "display": "flex",
-                        "width": "100%",
-                      }
+                <div
+                  style={
+                    Object {
+                      "width": "100%",
                     }
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-expanded={false}
-                      autoComplete="off"
-                      id="states-autocomplete"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Type a city..."
-                      role="combobox"
+                  }
+                >
+                  <div>
+                    <div
                       style={
                         Object {
-                          "backgroundColor": "#fff",
-                          "border": "1px solid #e6ebef",
-                          "borderRadius": "2px",
-                          "fontSize": ".8rem",
-                          "margin": "0 0 0 0",
-                          "padding": ".5rem",
+                          "display": "flex",
                           "width": "100%",
                         }
                       }
-                      value=""
-                    />
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-expanded={false}
+                        autoComplete="off"
+                        id="states-autocomplete"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Type a city..."
+                        role="combobox"
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "border": "1px solid #e6ebef",
+                            "borderRadius": "2px",
+                            "fontSize": ".8rem",
+                            "margin": "0 0 0 0",
+                            "padding": ".5rem",
+                            "width": "100%",
+                          }
+                        }
+                        value=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </form>
+      </div>
+      <div
+        style={
+          Object {
+            "marginBottom": "1.5rem",
+            "marginTop": "1rem",
+            "textAlign": "right",
+            "whiteSpace": "nowrap",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Open Sans\\", sans-serif",
+              "fontSize": "0.8rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Stop all posts from being sent on this Social Account? 
+        </span>
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Open Sans\\", sans-serif",
+              "fontSize": "0.8rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          <a
+            href="https://faq.buffer.com/article/681-how-to-pause-your-queue"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_blank"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "margin": "1rem 0 .25rem",
+            }
+          }
+        >
+          <button
+            aria-label={null}
+            disabled={undefined}
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#168eea",
+                "border": "0.063rem solid transparent",
+                "borderRadius": "2rem",
+                "color": "#fff",
+                "cursor": "pointer",
+                "display": "inline-block",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "0.8rem",
+                "fontWeight": 400,
+                "margin": "0",
+                "outline": "none",
+                "padding": "0.25rem 2rem",
+                "transition": "background-color 0.2s linear",
+              }
+            }
+          >
+            Pause Queue
+          </button>
         </div>
-      </form>
+      </div>
     </div>
     <hr
       style={
@@ -14394,126 +14491,6 @@ exports[`Snapshots ProfileSettings default 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "marginBottom": "0.5rem",
-          "width": "100%",
-        }
-      }
-    >
-      <span
-        style={
-          Object {
-            "color": "#000",
-            "fontFamily": "\\"Open Sans\\", sans-serif",
-            "fontSize": "1rem",
-            "fontWeight": 400,
-          }
-        }
-      >
-        Pause Queue
-      </span>
-    </div>
-    <hr
-      style={
-        Object {
-          "background": "#e6ebef",
-          "border": "none",
-          "boxSizing": "border-box",
-          "height": "0.063rem",
-          "marginBottom": "0.5rem",
-          "marginTop": "0.5rem",
-          "width": "100%",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "marginBottom": "3rem",
-        }
-      }
-    >
-      <span
-        style={
-          Object {
-            "color": "#59626a",
-            "fontFamily": "\\"Open Sans\\", sans-serif",
-            "fontSize": "0.9rem",
-            "fontWeight": 400,
-          }
-        }
-      >
-        Pausing your queue prevents all posts from being sent until you resume it. 
-      </span>
-      <div
-        style={
-          Object {
-            "margin": "1rem 0 .25rem",
-          }
-        }
-      >
-        <button
-          aria-label={null}
-          disabled={undefined}
-          onBlur={[Function]}
-          onClick={undefined}
-          onFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "backgroundColor": "#168eea",
-              "border": "0.063rem solid transparent",
-              "borderRadius": "2rem",
-              "color": "#fff",
-              "cursor": "pointer",
-              "display": "inline-block",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
-              "fontWeight": 400,
-              "margin": "0",
-              "outline": "none",
-              "padding": "0.5rem 2rem",
-              "transition": "background-color 0.2s linear",
-            }
-          }
-        >
-          Pause Queue
-        </button>
-      </div>
-      <span
-        style={
-          Object {
-            "color": "#59626a",
-            "fontFamily": "\\"Open Sans\\", sans-serif",
-            "fontSize": "0.8rem",
-            "fontWeight": 400,
-          }
-        }
-      >
-        <a
-          href="https://faq.buffer.com/article/681-how-to-pause-your-queue"
-          onBlur={[Function]}
-          onClick={undefined}
-          onFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "#168eea",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "padding": "0",
-            }
-          }
-          target="_blank"
-        >
-          How does this work?
-        </a>
-        .
-      </span>
     </div>
   </div>
 </span>

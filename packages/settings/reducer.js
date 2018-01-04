@@ -84,11 +84,18 @@ export default (state = initialState, action) => {
         avatar: action.profile.avatarUrl,
       };
     case profileActionTypes.PROFILE_PAUSED:
+      if (action.profileId === state.profileId) {
+        return {
+          ...state,
+          paused: true,
+        };
+      }
+      return state;
     case profileActionTypes.PROFILE_UNPAUSED:
       if (action.profileId === state.profileId) {
         return {
           ...state,
-          paused: action.type === actionTypes.PROFILE_PAUSED,
+          paused: false,
         };
       }
       return state;
