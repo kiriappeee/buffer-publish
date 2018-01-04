@@ -1984,11 +1984,10 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                         onMouseLeave={[Function]}
                         style={
                           Object {
-                            "backgroundColor": "transparent",
+                            "backgroundColor": "#168eea",
                             "border": "0.063rem solid transparent",
-                            "borderColor": "#168eea",
                             "borderRadius": "2rem",
-                            "color": "#168eea",
+                            "color": "#fff",
                             "cursor": "pointer",
                             "display": "inline-block",
                             "fontFamily": "\\"Open Sans\\", sans-serif",
