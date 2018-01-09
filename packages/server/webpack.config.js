@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [],
   resolve: {
-    extensions: ['.js', '.json', '.jsx'],
+    extensions: ['.js', '.json', '.jsx', '.css'],
     alias: {
       moment$: 'moment/moment.js',
     },
@@ -26,10 +26,15 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)/,
-        loaders: [
-          'babel-loader',
-        ],
+        exclude: /node_modules(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'stage-0', 'react'],
+          plugins: [
+            'transform-object-assign',
+            'add-module-exports',
+          ],
+        },
       },
     ],
   },

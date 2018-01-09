@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Composer from '@bufferapp/composer';
+import { bufferPublishComposer as Composer } from '@bufferapp/composer';
 
 // TODO: move this component to container directory since it's connected
-const ComposerWrapper = (props) => {
-  return (
-    <div>
-      <Composer {...props} />
-    </div>
-  );
-};
+const ComposerWrapper = (props) => (
+  <div>
+    <Composer {...props} />
+  </div>
+);
 
 ComposerWrapper.propTypes = {
   userData: PropTypes.shape({
