@@ -13,6 +13,13 @@ import {
   actionTypes,
 } from './reducer';
 
+const getClassicBufferConnectAccountURL = () => {
+  if (window.location.hostname === 'publish.local.buffer.com') {
+    return 'https://local.buffer.com/app/profile/connect';
+  }
+  return 'https://buffer.com/app/profile/connect';
+};
+
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
@@ -50,6 +57,9 @@ export default ({ dispatch, getState }) => next => (action) => {
           paused: action.type === actionTypes.PROFILE_PAUSED,
         },
       }));
+      break;
+    case actionTypes.CONNECT_SOCIAL_ACCOUNT:
+      window.location = getClassicBufferConnectAccountURL();
       break;
     case `pauseQueue_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(notificationActions.createNotification({

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,21 +10,22 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/publish-app-switcher": "1.2.3",
-    "@bufferapp/app-sidebar": "1.2.3",
-    "@bufferapp/async-data-fetch": "0.7.4",
-    "@bufferapp/environment": "1.2.3",
-    "@bufferapp/notifications": "1.2.3",
-    "@bufferapp/publish-example": "1.2.3",
+    "@bufferapp/app-sidebar": "1.2.4",
+    "@bufferapp/async-data-fetch": "1.2.4",
+    "@bufferapp/environment": "1.2.4",
+    "@bufferapp/notifications": "1.2.4",
+    "@bufferapp/publish-app-switcher": "1.2.4",
+    "@bufferapp/publish-example": "1.2.4",
     "@bufferapp/publish-i18n": "0.7.4",
-    "@bufferapp/publish-profile-sidebar": "1.2.3",
-    "@bufferapp/publish-pusher-sync": "1.2.3",
-    "@bufferapp/publish-queue": "1.2.3",
+    "@bufferapp/publish-profile-sidebar": "1.2.4",
+    "@bufferapp/publish-pusher-sync": "1.2.4",
+    "@bufferapp/publish-queue": "1.2.4",
     "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-sent": "1.2.3",
-    "@bufferapp/publish-settings": "1.2.3",
-    "@bufferapp/publish-tabs": "1.2.3",
-    "@bufferapp/unauthorized-redirect": "1.2.3"
+    "@bufferapp/publish-sent": "1.2.4",
+    "@bufferapp/publish-settings": "1.2.4",
+    "@bufferapp/publish-tabs": "1.2.4",
+    "@bufferapp/unauthorized-redirect": "1.2.4",
+    "@bufferapp/publish-beta-redirect": "1.2.3"
   },
   "devDependencies": {
     "eslint": "3.19.0",

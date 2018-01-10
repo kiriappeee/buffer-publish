@@ -6,6 +6,7 @@ export const actionTypes = {
   PROFILE_UNPAUSED: 'PROFILE_UNPAUSED',
   PROFILE_PAUSED: 'PROFILE_PAUSED',
   PUSHER_PROFILE_PAUSED_STATE: 'PUSHER_PROFILE_PAUSED_STATE',
+  CONNECT_SOCIAL_ACCOUNT: 'CONNECT_SOCIAL_ACCOUNT',
 };
 
 const initialState = {
@@ -109,5 +110,8 @@ export const actions = {
   onPauseClick: ({ profileId }) => ({
     type: actionTypes.PROFILE_PAUSED,
     profileId,
+  }),
+  handleConnectSocialAccountClick: () => ({
+    type: actionTypes.CONNECT_SOCIAL_ACCOUNT,
   }),
 };

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/unauthorized-redirect",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Redirect to login when unauthorized rpc response is received",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "0.7.4",
+    "@bufferapp/async-data-fetch": "1.2.4",
     "@bufferapp/session-manager": "0.5.39"
   },
   "devDependencies": {

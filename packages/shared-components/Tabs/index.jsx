@@ -10,10 +10,13 @@ const Tabs = ({
   onTabClick,
 }) => (
   <div>
-    {React.Children.map(children, tab => React.cloneElement(tab, {
-      selected: selectedTabId === tab.props.tabId,
-      onClick: onTabClick,
-    }))}
+    {React.Children.map(children, (tab) => {
+      if (!tab || !tab.props.tabId) return tab;
+      return React.cloneElement(tab, {
+        selected: selectedTabId === tab.props.tabId,
+        onClick: onTabClick,
+      });
+    })}
     <Divider marginTop={'0'} marginBottom={'0'} />
   </div>
 );

@@ -21,15 +21,15 @@ const getPausedSchedule = (unformattedSchedule, days) => {
  *
  * Adds a day to the paused schedules array
  *
- * @param  {String}  dayName
- * @param  {Array} unformattedSchedule
+ * @param  {String} dayName
+ * @param  {Array} mergedSchedules
  * @param  {Array} days
  * @return {Array}
  */
-const addDayToPausedSchedulesForApi = (dayName, unformattedSchedule, days) => {
-  if (!Array.isArray(unformattedSchedule)) return [];
+const addDayToPausedSchedulesForApi = (dayName, mergedSchedules, days) => {
+  if (!Array.isArray(mergedSchedules)) return [];
   const pausedDays = days.filter(day => day.paused).map(pausedDay => pausedDay.key);
-  const formattedSchedule = [...unformattedSchedule];
+  const formattedSchedule = [...mergedSchedules];
   return formattedSchedule.filter(scheduleItem =>
     scheduleItem.days.includes(dayName) || pausedDays.includes(scheduleItem.days[0]));
 };
@@ -59,16 +59,15 @@ const removeDayFromPausedSchedulesForApi = (dayName, unformattedSchedule, days) 
  *
  * @param  {String}  dayName
  * @param  {Array} unformattedSchedule
- * @param  {Array} days
+ * @param  {Array} mergedSchedules
  * @return {Array}
  */
-const addPausedDayBackToScheduleForApi = (dayName, unformattedSchedule, days) => {
+const addPausedDayBackToScheduleForApi = (dayName, unformattedSchedule, mergedSchedules) => {
   if (!Array.isArray(unformattedSchedule)) return [];
-  const pausedDay = days.filter(day => day.paused && day.key === dayName);
-  const formattedTimes = pausedDay[0].times.map(time => `${time.value.hours}:${time.value.minutes}`);
+  const pausedDay = mergedSchedules.filter(sched => sched.days[0] === dayName)[0];
   return unformattedSchedule.map(item => ({
     ...item,
-    times: item.days.includes(pausedDay.key) ? formattedTimes : item.times,
+    times: item.days.includes(pausedDay.days[0]) ? pausedDay.times : item.times,
   }));
 };
 
@@ -79,14 +78,13 @@ const addPausedDayBackToScheduleForApi = (dayName, unformattedSchedule, days) =>
  *
  * @param  {String}  dayName
  * @param  {Array} unformattedSchedule
- * @param  {object} action
  * @return {Array}
  */
-const removePausedDaysFromScheduleForApi = (dayName, unformattedSchedule) => {
+const removePausedDaysFromScheduleForApi = (dayNames, unformattedSchedule) => {
   if (!Array.isArray(unformattedSchedule)) return [];
   return unformattedSchedule.map(item => ({
     ...item,
-    times: item.days.includes(dayName) ? [] : item.times,
+    times: dayNames.includes(item.days[0]) ? [] : item.times,
   }));
 };
 
@@ -110,8 +108,8 @@ const updateScheduleTimeForApi = (unformattedSchedule, action) => {
  *
  * Edits a time in the paused schedules array
  *
- * @param  {String}  dayName
  * @param  {Array} unformattedSchedule
+ * @param  {Array} days
  * @param  {object} action
  * @return {Array}
  */
@@ -144,7 +142,12 @@ const deleteAllTimesFromSchedule = (unformattedSchedule) => {
   return formattedSchedule;
 };
 
-const addTimeToScheduleForApi = (unformattedSchedule, action) => {
+const addTimeToSchedulesForApi = (
+  action,
+  schedules,
+  pausedSchedules,
+) => {
+  const { hours, minutes, dayName } = action;
   const multDays = ['weekends', 'weekdays', 'everyday'];
   const everyday = Object.keys(dayMap);
   const weekdays = everyday.slice(0, 5);
@@ -155,22 +158,35 @@ const addTimeToScheduleForApi = (unformattedSchedule, action) => {
     weekends,
   };
 
-  const newTime = `${action.hours}:${action.minutes}`;
-  const daysToAdd = multDays.includes(action.dayName) ? daysMap[action.dayName] : [action.dayName];
+  const newTime = `${hours}:${minutes}`;
+  const pausedDays = pausedSchedules.map(day => day.days[0]);
+  const daysToAdd = multDays.includes(dayName) ? daysMap[dayName] : [dayName];
+  const updatedSchedules = {};
 
   daysToAdd.forEach((dayToAdd) => {
-    unformattedSchedule.forEach((daySchedule) => {
-      if (daySchedule.days.includes(dayToAdd)) {
-        daySchedule.times.push(newTime);
-        daySchedule.times.sort();
-      }
-    });
+    if (pausedDays.includes(dayToAdd)) {
+      pausedSchedules.forEach((daySchedule) => {
+        if (daySchedule.days.includes(dayToAdd)) {
+          daySchedule.times.push(newTime);
+          daySchedule.times.sort();
+        }
+      });
+    } else {
+      schedules.forEach((daySchedule) => {
+        if (daySchedule.days.includes(dayToAdd)) {
+          daySchedule.times.push(newTime);
+          daySchedule.times.sort();
+        }
+      });
+    }
   });
 
-  return unformattedSchedule;
+  updatedSchedules.pausedSchedules = pausedSchedules;
+  updatedSchedules.schedules = removePausedDaysFromScheduleForApi(pausedDays, schedules);
+  return updatedSchedules;
 };
 
-export { addTimeToScheduleForApi, deleteTimeFromPausedSchedulesForApi, deleteTimeFromSchedule,
+export { addTimeToSchedulesForApi, deleteTimeFromPausedSchedulesForApi, deleteTimeFromSchedule,
          updatePausedSchedulesForApi, updateScheduleTimeForApi, removePausedDaysFromScheduleForApi,
          addPausedDayBackToScheduleForApi, removeDayFromPausedSchedulesForApi,
          addDayToPausedSchedulesForApi, deleteAllTimesFromSchedule };

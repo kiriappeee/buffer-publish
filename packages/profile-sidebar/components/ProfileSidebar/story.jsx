@@ -24,6 +24,7 @@ storiesOf('ProfileSidebar')
       lockedProfiles={lockedProfiles}
       translations={translations}
       onProfileClick={action('profile click')}
+      onConnectSocialAccountClick={action('connect social account click')}
     />
   ))
   .add('should display a long list of profiles', () => (
@@ -33,5 +34,6 @@ storiesOf('ProfileSidebar')
       translations={translations}
       onProfileClick={action('profile click')}
       selectedProfile={profiles[0]}
+      onConnectSocialAccountClick={action('connect social account click')}
     />
   ));

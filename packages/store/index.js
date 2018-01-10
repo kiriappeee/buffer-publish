@@ -17,6 +17,7 @@ import { middleware as notificationsMiddleware } from '@bufferapp/notifications'
 import { middleware as environmentMiddleware } from '@bufferapp/environment';
 import { middleware as unauthorizedRedirectMiddleware } from '@bufferapp/unauthorized-redirect';
 import { middleware as appSwitcherMiddleware } from '@bufferapp/publish-app-switcher';
+import { middleware as betaRedirectMiddleware } from '@bufferapp/publish-beta-redirect';
 import reducers from './reducers';
 
 export const history = createHistory();
@@ -45,6 +46,7 @@ const configureStore = (initialstate) => {
         environmentMiddleware,
         unauthorizedRedirectMiddleware,
         appSwitcherMiddleware,
+        betaRedirectMiddleware,
       ),
     ),
   );

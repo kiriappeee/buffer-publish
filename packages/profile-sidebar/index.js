@@ -25,6 +25,9 @@ export default connect(
         }));
       }
     },
+    onConnectSocialAccountClick: () => {
+      dispatch(actions.handleConnectSocialAccountClick());
+    },
   }),
 )(ProfileSidebar);
 

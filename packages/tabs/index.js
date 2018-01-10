@@ -9,6 +9,7 @@ import TabNavigation from './components/TabNavigation';
 export default connect(
   (state, ownProps) => ({
     selectedTabId: ownProps.tabId,
+    shouldShowUpgradeCta: state.appSidebar.user.is_free_user,
   }),
   (dispatch, ownProps) => ({
     onTabClick: tabId => dispatch(push(generateProfilePageRoute({

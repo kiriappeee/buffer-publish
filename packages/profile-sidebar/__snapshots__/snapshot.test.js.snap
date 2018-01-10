@@ -1682,7 +1682,8 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
         <div
           style={
             Object {
-              "marginLeft": "auto",
+              "marginLeft": "13rem",
+              "position": "absolute",
             }
           }
         >
@@ -2206,7 +2207,7 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
         aria-label={null}
         disabled={undefined}
         onBlur={[Function]}
-        onClick={undefined}
+        onClick={[Function]}
         onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -2663,7 +2664,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
         <div
           style={
             Object {
-              "marginLeft": "auto",
+              "marginLeft": "13rem",
+              "position": "absolute",
             }
           }
         >
@@ -6458,7 +6460,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
         aria-label={null}
         disabled={undefined}
         onBlur={[Function]}
-        onClick={undefined}
+        onClick={[Function]}
         onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

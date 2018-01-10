@@ -63,7 +63,10 @@ const scheduleLoadingContainerStyle = {
 };
 
 const pauseQueueContainerStyle = {
-  marginBottom: '3rem',
+  marginBottom: '1.5rem',
+  marginTop: '1rem',
+  textAlign: 'right',
+  whiteSpace: 'nowrap',
 };
 
 const pauseButtonContainerStyle = {
@@ -72,6 +75,11 @@ const pauseButtonContainerStyle = {
 
 const tableStyle = {
   flexBasis: '100%',
+}
+
+const timezoneAndPauseContainerStyle = {
+  display: 'flex',
+  flexDirection: 'row',
 }
 
 /* eslint no-console: 0 */
@@ -125,14 +133,54 @@ const ProfileSettings = ({
         <Text color="black">{settingsHeader}</Text>
       </div>
       <Divider />
-      <div style={timezoneStyle}>
-        <TimezoneInputForm
-          handleSubmit={({ city, timezone }) => onUpdateTimezone({ city, timezone })}
-          items={items}
-          onTimezoneChange={debouncedOnChange}
-          onTimezoneInputFocus={onTimezoneInputFocus}
-          onTimezoneInputBlur={onTimezoneInputBlur}
-        />
+      <div style={timezoneAndPauseContainerStyle}>
+        <div style={timezoneStyle}>
+          <TimezoneInputForm
+            handleSubmit={({ city, timezone }) => onUpdateTimezone({ city, timezone })}
+            items={items}
+            onTimezoneChange={debouncedOnChange}
+            onTimezoneInputFocus={onTimezoneInputFocus}
+            onTimezoneInputBlur={onTimezoneInputBlur}
+          />
+        </div>
+        {paused ?
+          <div style={pauseQueueContainerStyle}>
+            <Text size="small">
+              Your queue has been paused&nbsp;
+            </Text>
+            <Text size="small">
+              <Link newTab href="https://faq.buffer.com/article/681-how-to-pause-your-queue">
+                 Learn more
+              </Link>
+            </Text>
+            <div style={pauseButtonContainerStyle}>
+              <Button
+                onClick={onUnpauseClick}
+                small
+              >
+                Unpause Queue
+              </Button>
+            </div>
+          </div> :
+          <div style={pauseQueueContainerStyle}>
+            <Text size="small">
+              Stop all posts from being sent on this Social Account?&nbsp;
+            </Text>
+            <Text size="small">
+              <Link newTab href="https://faq.buffer.com/article/681-how-to-pause-your-queue">
+                 Learn more
+              </Link>
+            </Text>
+            <div style={pauseButtonContainerStyle}>
+              <Button
+                onClick={onPauseClick}
+                small
+              >
+                Pause Queue
+              </Button>
+            </div>
+          </div>
+        }
       </div>
       <Divider />
       <div style={sectionStyle}>
@@ -212,46 +260,6 @@ const ProfileSettings = ({
             />}
         </div>
       </div>
-      <div style={headerStyle}>
-        <Text color="black">Pause Queue</Text>
-      </div>
-      <Divider />
-      {paused
-        ? <div style={pauseQueueContainerStyle}>
-          <Text size="mini">
-            <b>Your queue is currently paused.</b>&nbsp;
-          </Text>
-          <div style={pauseButtonContainerStyle}>
-            <Button
-              onClick={onUnpauseClick}
-            >
-              Resume Queue
-            </Button>
-          </div>
-          <Text size="small">
-            <Link newTab href="https://faq.buffer.com/article/681-how-to-pause-your-queue">
-              How does this work?
-            </Link>.
-          </Text>
-        </div>
-        : <div style={pauseQueueContainerStyle}>
-          <Text size="mini">
-            Pausing your queue prevents all posts from being sent until you resume it.&nbsp;
-          </Text>
-          <div style={pauseButtonContainerStyle}>
-            <Button
-              onClick={onPauseClick}
-            >
-              Pause Queue
-            </Button>
-          </div>
-          <Text size="small">
-            <Link newTab href="https://faq.buffer.com/article/681-how-to-pause-your-queue">
-              How does this work?
-            </Link>.
-          </Text>
-        </div>
-      }
     </div>
   );
 };

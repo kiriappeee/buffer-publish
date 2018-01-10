@@ -92,7 +92,7 @@ const PostingTimeForm = ({
             <Button
               onClick={handleSubmit}
               disabled={submitting}
-              secondary
+              primary
             >
               Add Posting Time
             </Button>
