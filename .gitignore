@@ -6,3 +6,4 @@ coverage
 *.sublime*
 .cache-loader
 .DS_Store
+packages/composer
