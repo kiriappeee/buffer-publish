@@ -14,6 +14,7 @@ const initialState = {
   lockedProfiles: [],
   selectedProfileId: '',
   loading: false,
+  selectedProfile: {},
 };
 
 const profilesReducer = (state = [], action) => {
@@ -79,6 +80,7 @@ export default (state = initialState, action) => {
         ...state,
         selectedProfileId: action.profileId,
         profiles: profilesReducer(state.profiles, action),
+        selectedProfile: action.profile,
         lockedProfiles: profilesReducer(state.lockedProfiles, action),
       };
     }
