@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import CSSTransitionGroup from 'react-addons-css-transition-group';
-import Loader from '@bufferapp/components/Loader';
+import { LoadingAnimation } from '@bufferapp/components';
 import { QueueItems } from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
 import styles from './style.css';
 
+const loadingContainerStyle = {
+  width: '100%',
+  height: '100%',
+  textAlign: 'center',
+  paddingTop: '5rem',
+};
+
 const renderPostList = ({
-  posts,
+  postLists,
   onApproveClick,
   onCancelConfirmClick,
   onDeleteClick,
@@ -16,18 +23,23 @@ const renderPostList = ({
   onMoveToDraftsClick,
   onRequestApprovalClick,
   onRescheduleClick,
-}) =>
-  <QueueItems
-    items={posts}
-    onApproveClick={onApproveClick}
-    onCancelConfirmClick={onCancelConfirmClick}
-    onDeleteClick={onDeleteClick}
-    onDeleteConfirmClick={onDeleteConfirmClick}
-    onEditClick={onEditClick}
-    onMoveToDraftsClick={onMoveToDraftsClick}
-    onRequestApprovalClick={onRequestApprovalClick}
-    onRescheduleClick={onRescheduleClick}
-  />;
+}) => {
+  return (
+    <QueueItems
+      items={postLists}
+      onApproveClick={onApproveClick}
+      onCancelConfirmClick={onCancelConfirmClick}
+      onDeleteClick={onDeleteClick}
+      onDeleteConfirmClick={onDeleteConfirmClick}
+      onEditClick={onEditClick}
+      onMoveToDraftsClick={onMoveToDraftsClick}
+      onRequestApprovalClick={onRequestApprovalClick}
+      onRescheduleClick={onRescheduleClick}
+      draggable={false}
+      type={'drafts'}
+    />
+  );
+};
 
 const renderEmpty = ({
   manager,
@@ -45,8 +57,9 @@ const renderEmpty = ({
   />;
 
 const DraftList = ({
+  total,
   loading,
-  drafts,
+  postLists,
   manager,
   profile,
   user,
@@ -63,15 +76,18 @@ const DraftList = ({
 }) => {
   if (loading) {
     return (
-      <Loader />
+      <div style={loadingContainerStyle}>
+        <LoadingAnimation />
+      </div>
     );
   }
+
   return (
     <div className={styles.container}>
       {
-        posts.length > 0 ?
+        postLists.length > 0 ?
         renderPostList({
-          drafts,
+          postLists,
           onApproveClick,
           onCancelConfirmClick,
           onDeleteClick,
@@ -97,10 +113,10 @@ const DraftList = ({
 // TODO: these need some <3, they're not complete!
 DraftList.propTypes = {
   loading: PropTypes.bool,
-  drafts: PropTypes.arrayOf(
+  postLists: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
-    })
+    }),
   ),
   manager: PropTypes.bool,
   profile: PropTypes.shape({
@@ -109,6 +125,7 @@ DraftList.propTypes = {
   user: PropTypes.shape({
     id: PropTypes.string,
   }),
+  total: PropTypes.number,
   view: PropTypes.oneOf(['approval', 'drafts', null]),
   onApproveClick: PropTypes.func.isRequired,
   onCancelConfirmClick: PropTypes.func.isRequired,

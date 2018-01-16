@@ -127,7 +127,7 @@ const profileReducer = (state = profileInitialState, action) => {
     case `draftPosts_${dataFetchActionTypes.FETCH_START}`:
       return {
         ...state,
-        loading: !action.args.isFetchingMore && !action.args.isReordering,
+        loading: true, // !action.args.isFetchingMore,
         loadingMore: action.args.isFetchingMore,
       };
     case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:

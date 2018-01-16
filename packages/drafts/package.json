@@ -15,6 +15,7 @@
     "@bufferapp/components": "1.1.0-beta.6",
     "@bufferapp/notifications": "1.2.4",
     "@bufferapp/publish-composer": "1.2.4",
+    "@bufferapp/publish-utils": "1.2.4",
     "@bufferapp/publish-profile-sidebar": "1.2.4",
     "@bufferapp/publish-shared-components": "1.2.4",
     "moment-timezone": "0.5.12",
