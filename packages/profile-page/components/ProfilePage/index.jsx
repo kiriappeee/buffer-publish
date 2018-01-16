@@ -54,7 +54,9 @@ const TabContent = ({ tabId, profileId }) => {
       );
     case 'drafts':
       return (
-        <DraftList profileId={profileId} />
+        <DraftList
+          profileId={profileId}
+        />
       );
     case 'settings':
       return (
