@@ -43,7 +43,6 @@ module.exports = {
           presets: ['es2015', 'stage-0', 'react'],
           plugins: [
             'transform-object-assign',
-            'add-module-exports',
           ],
         },
       },

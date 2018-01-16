@@ -1,13 +1,14 @@
 {
   "name": "@bufferapp/publish",
+  "private": true,
   "version": "0.0.1",
   "description": "🍩",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "test": "if [ -n \"$CI\" ]; then yarn run init; fi && lerna run test",
     "test-update": "lerna run test-update",
-    "init": "yarn install && lerna bootstrap --loglevel verbose --hoist",
+    "init": "yarn install && lerna bootstrap --loglevel verbose",
     "start": "cd ./packages/server/ && yarn run start",
     "publish": "lerna publish --exact",
     "publish-beta": "lerna publish --npm-tag=beta --exact",
@@ -50,7 +51,7 @@
     "immutable": "3.8.1",
     "js-cookie": "2.1.4",
     "keymirror": "0.1.1",
-    "lerna": "2.0.0-rc.5",
+    "lerna": "2.7.0",
     "lodash.clonedeep": "4.5.0",
     "lodash.debounce": "4.0.8",
     "lodash.escaperegexp": "4.1.2",
@@ -91,12 +92,15 @@
     "then-sleep": "1.0.1",
     "twitter-text": "1.14.7",
     "uuid": "3.0.1",
-    "webpack": "2.6.1",
+    "webpack": "3.10.0",
     "webpack-dev-middleware": "1.10.2",
     "webpack-dev-server": "^2.9.7",
     "webpack-hot-middleware": "2.18.0"
   },
   "dependencies": {
     "@bufferapp/react-images-loaded": "^1.1.0-fork.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
