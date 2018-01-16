@@ -15,6 +15,11 @@ import MultipleImagesPost from '../MultipleImagesPost';
 import LinkPost from '../LinkPost';
 import VideoPost from '../VideoPost';
 import PostDragWrapper from '../PostDragWrapper';
+import TextDraft from '../TextDraft';
+import ImageDraft from '../ImageDraft';
+import MultipleImagesDraft from '../MultipleImagesDraft';
+import LinkDraft from '../LinkDraft';
+import VideoDraft from '../VideoDraft';
 
 const listHeaderStyle = {
   marginBottom: '1rem',
@@ -28,6 +33,14 @@ const postTypeComponentMap = new Map([
   ['multipleImage', MultipleImagesPost],
   ['link', LinkPost],
   ['video', VideoPost],
+]);
+
+const draftTypeComponentMap = new Map([
+  ['text', TextDraft],
+  ['image', ImageDraft],
+  ['multipleImage', MultipleImagesDraft],
+  ['link', LinkDraft],
+  ['video', VideoDraft],
 ]);
 
 /* eslint-disable react/prop-types */
@@ -108,6 +121,67 @@ const renderPost = ({
   );
 };
 
+const renderDraft = ({
+  draft,
+  onApproveClick,
+  onCancelConfirmClick,
+  onDeleteClick,
+  onDeleteConfirmClick,
+  onEditClick,
+  onMoveToDraftsClick,
+  onRequestApprovalClick,
+  onRescheduleClick,
+  onImageClick,
+  onImageClickNext,
+  onImageClickPrev,
+  onImageClose,
+}) => {
+  const draftWithEventHandlers = {
+    ...draft,
+    key: draft.id,
+    draftDetails: draft.draftDetails,
+    onCancelConfirmClick: () => onCancelConfirmClick({ draft }),
+    onDeleteClick: () => onDeleteClick({ draft }),
+    onDeleteConfirmClick: () => onDeleteConfirmClick({ draft }),
+    onEditClick: () => onEditClick({ draft }),
+    onApproveClick: () => onApproveClick({ draft }),
+    onMoveToDraftsClick: () => onMoveToDraftsClick({ draft }),
+    onRequestApprovalClick: () => onRequestApprovalClick({ draft }),
+    onRescheduleClick: () => onRescheduleClick({ draft }),
+    onImageClick: () => onImageClick({ draft }),
+    onImageClickNext: () => onImageClickNext({ draft }),
+    onImageClickPrev: () => onImageClickPrev({ draft }),
+    onImageClose: () => onImageClose({ draft }),
+  };
+  let DraftComponent = draftTypeComponentMap.get(draft.type);
+  DraftComponent = DraftComponent || TextDraft;
+
+  const defaultStyle = {
+    default: {
+      marginBottom: '2rem',
+      maxHeight: '100vh',
+      transition: `all ${transitionAnimationTime} ${transitionAnimationType}`,
+    },
+    hidden: {
+      maxHeight: 0,
+      opacity: 0,
+    },
+  };
+
+  const hiddenStyle = {
+    hidden: draft.isDeleting,
+  };
+
+  return (
+    <div
+      style={calculateStyles(defaultStyle, hiddenStyle)}
+      key={draft.id}
+    >
+      <DraftComponent {...draftWithEventHandlers} />
+    </div>
+  );
+};
+
 const renderHeader = ({ text, id }) => (
   <div style={listHeaderStyle} key={id}>
     <Text color={'black'}>
@@ -119,11 +193,11 @@ const renderHeader = ({ text, id }) => (
 /* eslint-enable react/prop-types */
 
 const QueueItems = (props) => {
-  const { items, ...propsForPosts } = props;
+  const { items, type, ...propsForPosts } = props;
   const itemList = items.map((item) => {
     const { queueItemType, ...rest } = item;
     if (queueItemType === 'post') {
-      return renderPost({ post: rest, ...propsForPosts });
+      return type === 'drafts' ? renderDraft({ draft: rest, ...propsForPosts }) : renderPost({ post: rest, ...propsForPosts });
     }
     if (queueItemType === 'header') {
       return renderHeader(rest);
@@ -155,11 +229,13 @@ QueueItems.propTypes = {
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
   draggable: PropTypes.bool,
+  type: PropTypes.string,
 };
 
 QueueItems.defaultProps = {
   items: [],
   draggable: false,
+  type: 'post',
 };
 
 export default QueueItems;
