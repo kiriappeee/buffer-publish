@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-routes",
-  "version": "0.5.25",
+  "version": "1.2.7",
   "description": "Keep track of and generate buffer routes",
   "main": "index.js",
   "scripts": {

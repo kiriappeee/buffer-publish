@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/profile-page",
-  "version": "1.2.4",
+  "version": "1.2.7",
   "description": "profile page package",
   "main": "index.js",
   "scripts": {
@@ -11,19 +11,19 @@
   },
   "author": "melissa@buffer.com",
   "dependencies": {
-    "@bufferapp/app-sidebar": "1.2.4",
-    "@bufferapp/async-data-fetch": "1.2.4",
+    "@bufferapp/app-sidebar": "1.2.7",
+    "@bufferapp/async-data-fetch": "1.2.7",
     "@bufferapp/components": "1.1.0-beta.6",
-    "@bufferapp/notifications": "1.2.4",
-    "@bufferapp/publish-profile-sidebar": "1.2.4",
-    "@bufferapp/publish-pusher-sync": "1.2.4",
-    "@bufferapp/publish-queue": "1.2.4",
-    "@bufferapp/publish-routes": "0.5.25",
-    "@bufferapp/publish-sent": "1.2.4",
-    "@bufferapp/publish-settings": "1.2.4",
-    "@bufferapp/publish-shared-components": "1.2.4",
-    "@bufferapp/publish-store": "1.2.4",
-    "@bufferapp/publish-tabs": "1.2.4"
+    "@bufferapp/notifications": "1.2.7",
+    "@bufferapp/publish-profile-sidebar": "1.2.7",
+    "@bufferapp/publish-pusher-sync": "1.2.7",
+    "@bufferapp/publish-queue": "1.2.7",
+    "@bufferapp/publish-routes": "1.2.7",
+    "@bufferapp/publish-sent": "1.2.7",
+    "@bufferapp/publish-settings": "1.2.7",
+    "@bufferapp/publish-shared-components": "1.2.7",
+    "@bufferapp/publish-store": "1.2.7",
+    "@bufferapp/publish-tabs": "1.2.7"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

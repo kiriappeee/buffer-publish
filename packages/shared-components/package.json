@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-shared-components",
-  "version": "1.2.4",
+  "version": "1.2.7",
   "description": "Buffer Publish Shared Components",
   "main": "index.js",
   "scripts": {
