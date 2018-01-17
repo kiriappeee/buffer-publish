@@ -4,8 +4,11 @@ import {
   actions as dataFetchActions,
   actionTypes as dataFetchActionTypes,
 } from '@bufferapp/async-data-fetch';
+import {
+  actionTypes,
+  actions,
+} from './reducer';
 // import { actions as notificationActions } from '@bufferapp/notifications';
-// import { actionTypes, actions } from './reducer';
 
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
@@ -16,6 +19,14 @@ export default ({ dispatch, getState }) => next => (action) => {
         args: {
           profileId: action.profile.id,
           isFetchingMore: false,
+        },
+      }));
+      break;
+    case actionTypes.DRAFT_CONFIRMED_DELETE:
+      dispatch(dataFetchActions.fetch({
+        name: 'deletePost',
+        args: {
+          updateId: action.updateId,
         },
       }));
       break;

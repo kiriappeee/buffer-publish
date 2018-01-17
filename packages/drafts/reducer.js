@@ -26,6 +26,8 @@ export const actionTypes = {
   SET_DRAFT_FILTER: 'SET_DRAFT_FILTER',
   SHOW_NOTIFICATION: 'SHOW_NOTIFICATION',
   DRAFT_CLICKED_DELETE: 'DRAFT_CLICKED_DELETE',
+  DRAFT_CANCELED_DELETE: 'DRAFT_CANCELED_DELETE',
+  DRAFT_CONFIRMED_DELETE: 'DRAFT_CONFIRMED_DELETE',
 };
 
 const initialState = {
@@ -71,23 +73,26 @@ const postReducer = (state, action) => {
       return action.post;
     case actionTypes.POST_ERROR:
       return state;
-    case actionTypes.DRAFT_CLICKED_DELETE:
-      return { ...state, isConfirmingDelete: true };
-    case actionTypes.POST_CONFIRMED_DELETE:
+    case actionTypes.DRAFT_CONFIRMED_DELETE:
       return {
         ...state,
         isConfirmingDelete: false,
         isDeleting: true,
       };
+    case actionTypes.DRAFT_CLICKED_DELETE:
+      return {
+        ...state,
+        isConfirmingDelete: true,
+      };
+    case actionTypes.DRAFT_CANCELED_DELETE:
+      return {
+        ...state,
+        isConfirmingDelete: false,
+      };
     case actionTypes.POST_SHARE_NOW:
       return {
         ...state,
         isWorking: true,
-      };
-    case actionTypes.POST_CANCELED_DELETE:
-      return {
-        ...state,
-        isConfirmingDelete: false,
       };
     case actionTypes.POST_IMAGE_CLICKED:
       return {
@@ -124,6 +129,8 @@ const postsReducer = (state = {}, action) => {
       }
       return drafts;
     }
+    case actionTypes.DRAFT_CONFIRMED_DELETE:
+    case actionTypes.DRAFT_CANCELED_DELETE:
     case actionTypes.DRAFT_CLICKED_DELETE:
       return {
         ...state,
@@ -157,6 +164,8 @@ const profileReducer = (state = profileInitialState, action) => {
         ...state,
         loading: false,
       };
+    case actionTypes.DRAFT_CONFIRMED_DELETE:
+    case actionTypes.DRAFT_CANCELED_DELETE:
     case actionTypes.DRAFT_CLICKED_DELETE:
       return {
         ...state,
@@ -174,6 +183,8 @@ export default (state = initialState, action) => {
     case `draftPosts_${dataFetchActionTypes.FETCH_START}`:
     case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
     case `draftPosts_${dataFetchActionTypes.FETCH_FAIL}`:
+    case actionTypes.DRAFT_CONFIRMED_DELETE:
+    case actionTypes.DRAFT_CANCELED_DELETE:
     case actionTypes.DRAFT_CLICKED_DELETE:
       profileId = getProfileId(action);
       if (profileId) {
@@ -194,6 +205,18 @@ export default (state = initialState, action) => {
 export const actions = {
   handleDeleteClick: ({ draft, profileId }) => ({
     type: actionTypes.DRAFT_CLICKED_DELETE,
+    updateId: draft.id,
+    draft,
+    profileId,
+  }),
+  handleCancelConfirmClick: ({ draft, profileId }) => ({
+    type: actionTypes.DRAFT_CANCELED_DELETE,
+    updateId: draft.id,
+    draft,
+    profileId,
+  }),
+  handleDeleteConfirmClick: ({ draft, profileId }) => ({
+    type: actionTypes.DRAFT_CONFIRMED_DELETE,
     updateId: draft.id,
     draft,
     profileId,

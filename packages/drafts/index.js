@@ -119,14 +119,14 @@ export default connect(
         profileId: ownProps.profileId,
       }));
     },
-    onDeleteConfirmClick: (draft) => {
-      dispatch(actions.handleDeleteConfirmClick({
+    onCancelConfirmClick: (draft) => {
+      dispatch(actions.handleCancelConfirmClick({
         draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onCancelConfirmClick: (draft) => {
-      dispatch(actions.handleCancelConfirmClick({
+    onDeleteConfirmClick: (draft) => {
+      dispatch(actions.handleDeleteConfirmClick({
         draft: draft.draft,
         profileId: ownProps.profileId,
       }));
