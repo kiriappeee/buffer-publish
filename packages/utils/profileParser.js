@@ -21,4 +21,5 @@ module.exports = profile => ({
   default: profile.default,
   paused: profile.paused,
   open: false,
+  organizationRole: profile.organization_role,
 });

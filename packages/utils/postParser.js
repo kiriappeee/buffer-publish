@@ -64,6 +64,14 @@ const getPostType = ({ post }) => {
   return 'text';
 };
 
+const isInThePast = (unconvertedDate) => {
+  if (!unconvertedDate) return false;
+  const date = new Date(unconvertedDate * 1000);
+  const now = new Date();
+  return date < now;
+};
+
+
 module.exports = (post) => {
   const media = post.media || {};
   const isVideo = media.video;
@@ -91,10 +99,17 @@ module.exports = (post) => {
     post.error
   );
 
+  const isPastDue = isInThePast(post.scheduled_at);
+
   return {
     day: post.day,
     id: post.id,
+    createdAt: post.created_at,
+    entities: post.entities,
+    profileId: post.profile_id,
     isConfirmingDelete: post.isDeleting && !post.requestingDraftAction,
+    isMoving: post.isMoving,
+    isPastDue,
     isDeleting: post.isDeleting && post.requestingDraftAction,
     isWorking: !post.isDeleting && post.requestingDraftAction,
     imageSrc: isVideo ? media.thumbnail : media.picture,
@@ -107,10 +122,14 @@ module.exports = (post) => {
       description: media.description,
       thumbnailUrl: media.preview,
     },
+    needsApproval: post.needs_approval,
     postDetails: getPostDetails({ post }),
+    profile_service: post.profile_service,
+    retweet: post.retweet, // do we need this?
     retweetComment,
     retweetCommentLinks: canHaveLinks ? links : [],
     retweetProfile: getRetweetProfileInfo(post),
+    source_url: post.source_url,
     sent: post.status === 'sent',
     text,
     type: getPostType({ post }),
@@ -119,6 +138,9 @@ module.exports = (post) => {
     subprofile_id: post.subprofile_id,
     due_at: post.due_at,
     scheduled_at: post.scheduled_at,
+    scheduledAt: post.scheduled_at, // for edit composer. confirm we still need it
+    sharedNext: post.shared_next,
+    user_id: post.user_id,
     pinned: post.pinned,
     isFixed,
   };
