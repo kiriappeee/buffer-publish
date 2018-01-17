@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { actions as profileSidebarActions } from '@bufferapp/publish-profile-sidebar';
 import { getDateString, isInThePast } from '@bufferapp/publish-utils/date';
-import { actions } from './actions';
+import { actions } from './reducer';
 import DraftList from './components/DraftList';
 
 // TODO: move these to utils
@@ -113,57 +113,57 @@ export default connect(
     return {};
   },
   (dispatch, ownProps) => ({
-    onEditClick: (post) => {
-      dispatch(actions.handleEditClick({
-        post: post.post,
-        profileId: ownProps.profileId,
-      }));
-    },
-    onDeleteClick: (post) => {
+    onDeleteClick: (draft) => {
       dispatch(actions.handleDeleteClick({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onDeleteConfirmClick: (post) => {
+    onDeleteConfirmClick: (draft) => {
       dispatch(actions.handleDeleteConfirmClick({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onCancelConfirmClick: (post) => {
+    onCancelConfirmClick: (draft) => {
       dispatch(actions.handleCancelConfirmClick({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onApproveClick: (post) => {
+    onEditClick: (draft) => {
+      dispatch(actions.handleEditClick({
+        draft: draft.draft,
+        profileId: ownProps.profileId,
+      }));
+    },
+    onApproveClick: (draft) => {
       dispatch(actions.requestDraftApproval({
-        draft: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onImageClick: (post) => {
+    onImageClick: (draft) => {
       dispatch(actions.handleImageClick({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onImageClose: (post) => {
+    onImageClose: (draft) => {
       dispatch(actions.handleImageClose({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onImageClickNext: (post) => {
+    onImageClickNext: (draft) => {
       dispatch(actions.handleImageClickNext({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },
-    onImageClickPrev: (post) => {
+    onImageClickPrev: (draft) => {
       dispatch(actions.handleImageClickPrev({
-        post: post.post,
+        draft: draft.draft,
         profileId: ownProps.profileId,
       }));
     },

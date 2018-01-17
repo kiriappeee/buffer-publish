@@ -138,4 +138,8 @@ DraftList.propTypes = {
   onUserReadMessage: PropTypes.func.isRequired,
 };
 
+DraftList.defaultProps = {
+  loading: true,
+};
+
 export default DraftList;

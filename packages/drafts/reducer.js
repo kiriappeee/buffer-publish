@@ -25,6 +25,7 @@ export const actionTypes = {
   CHANGE_PROFILE: 'CHANGE_PROFILE',
   SET_DRAFT_FILTER: 'SET_DRAFT_FILTER',
   SHOW_NOTIFICATION: 'SHOW_NOTIFICATION',
+  DRAFT_CLICKED_DELETE: 'DRAFT_CLICKED_DELETE',
 };
 
 const initialState = {
@@ -51,6 +52,12 @@ const getProfileId = (action) => {
   if (action.profile) { return action.profile.id; }
 };
 
+const getPostUpdateId = (action) => {
+  if (action.updateId) { return action.updateId; }
+  if (action.args) { return action.args.updateId; }
+  if (action.post) { return action.post.id; }
+};
+
 const determineIfMoreToLoad = (action, currentPosts) => {
   const currentPostCount = Object.keys(currentPosts).length;
   const resultUpdatesCount = Object.keys(action.result.drafts).length;
@@ -64,7 +71,7 @@ const postReducer = (state, action) => {
       return action.post;
     case actionTypes.POST_ERROR:
       return state;
-    case actionTypes.POST_CLICKED_DELETE:
+    case actionTypes.DRAFT_CLICKED_DELETE:
       return { ...state, isConfirmingDelete: true };
     case actionTypes.POST_CONFIRMED_DELETE:
       return {
@@ -117,6 +124,11 @@ const postsReducer = (state = {}, action) => {
       }
       return drafts;
     }
+    case actionTypes.DRAFT_CLICKED_DELETE:
+      return {
+        ...state,
+        [getPostUpdateId(action)]: postReducer(state[getPostUpdateId(action)], action),
+      };
     default:
       return state;
   }
@@ -145,6 +157,11 @@ const profileReducer = (state = profileInitialState, action) => {
         ...state,
         loading: false,
       };
+    case actionTypes.DRAFT_CLICKED_DELETE:
+      return {
+        ...state,
+        drafts: postsReducer(state.drafts, action),
+      };
     default:
       return state;
   }
@@ -157,6 +174,7 @@ export default (state = initialState, action) => {
     case `draftPosts_${dataFetchActionTypes.FETCH_START}`:
     case `draftPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
     case `draftPosts_${dataFetchActionTypes.FETCH_FAIL}`:
+    case actionTypes.DRAFT_CLICKED_DELETE:
       profileId = getProfileId(action);
       if (profileId) {
         return {
@@ -174,6 +192,12 @@ export default (state = initialState, action) => {
 };
 
 export const actions = {
+  handleDeleteClick: ({ draft, profileId }) => ({
+    type: actionTypes.DRAFT_CLICKED_DELETE,
+    updateId: draft.id,
+    draft,
+    profileId,
+  }),
   openEditComposer: ({ draft, role, profileTimezone }) => ({
     type: actionTypes.OPEN_COMPOSER,
     payload: true,
@@ -230,11 +254,11 @@ export const actions = {
     draftId: payload.update.id,
     draft: payload.update,
   }),
-  triggerDraftStatusUpdate: (/* { dispatch, draftId, isPendingApproval } */) => {
-    // TODO: Version2. Hit update endpoint and toggles 'pending_approval' status.
-    //       Dispatches draftUpdated action.
-    // Once 'Pending Approval' tab is ready - filter drafts shown by 'pending_approval' field
-  },
+  // triggerDraftStatusUpdate: (/* { dispatch, draftId, isPendingApproval } */) => {
+  //   // TODO: Version2. Hit update endpoint and toggles 'pending_approval' status.
+  //   //       Dispatches draftUpdated action.
+  //   // Once 'Pending Approval' tab is ready - filter drafts shown by 'pending_approval' field
+  // },
   draftActionError: error => ({
     type: actionTypes.COLLABORATION_DRAFT_ERROR,
     error,
