@@ -13,7 +13,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.2.4",
     "@bufferapp/components": "1.1.0-beta.6",
-    "@bufferapp/session-manager": "0.5.39"
+    "@bufferapp/session-manager": "0.5.42"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",
