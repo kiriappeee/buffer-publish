@@ -9,6 +9,1321 @@ exports[`Snapshots BufferLoading default 1`] = `
 </span>
 `;
 
+exports[`Snapshots Draft approval view: isMoving 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={true}
+    isWorking={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="approval"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft default 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft isConfirmingDelete 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={true}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft isDeleting 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={true}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft isWorking 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft isWorkingManager 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={true}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft manager 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft no permission 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft past due 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This draft was scheduled for June 21st",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isPastDue={true}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRescheduleClick={[Function]}
+    scheduledAt={123456789}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft past due no permission 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This draft was scheduled for June 21st",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isPastDue={true}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRescheduleClick={[Function]}
+    scheduledAt={123456789}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft post text with line breaks 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only 
+       test post 
+       with line breaks.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft retweet 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": true,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft retweet with comment 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": true,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    retweetComment="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    retweetCommentLinks={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots Draft scheduled 1`] = `
+<span>
+  <Draft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post is scheduled for 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    scheduledAt={123456789}
+    view="drafts"
+  >
+    <Text
+      color="shuttleGray"
+      size="mini"
+    >
+      I am a text-only test post.
+    </Text>
+  </Draft>
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: manager 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMoveToDraftsClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: manager moving to drafts 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={true}
+    isPastDue={false}
+    isWorking={true}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMoveToDraftsClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: manager past due 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post was scheduled for March 12 at 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={true}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRescheduleClick={[Function]}
+    scheduledAt={1495553578}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: managerIsApproving 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={true}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: not a manager 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMoveToDraftsClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: not a manager past due 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={true}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMoveToDraftsClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: not manager moving to drafts 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={true}
+    isPastDue={false}
+    isWorking={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMoveToDraftsClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter approval view: not manager, no permission 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: isWorking 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: manager - scheduled post 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post is scheduled for 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    scheduledAt={1495553578}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: manager 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: manager past due 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post was scheduled for March 12 at 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={true}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRescheduleClick={[Function]}
+    scheduledAt={1495553578}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: managerIsApproving 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={true}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: not manager 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: not manager past due 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post was scheduled for March 12 at 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={true}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    scheduledAt={1495553578}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: not manager past due, no permission 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={true}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter drafts view: not manager, no permission 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter isConfirmingDelete 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={true}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter isDeleting 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={true}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter managerIsConfirmingDelete 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={true}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooter no permission 1`] = `
+<span>
+  <DraftFooter
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "web",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isMoving={false}
+    isPastDue={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval approval view: manager 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval approval view: manager past due 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={true}
+    manager={true}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval approval view: not manager 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={false}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval approval view: not manager. past due 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={true}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval approval view: not manager. past due. no permissions. 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={false}
+    isPastDue={true}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval drafts view: manager 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={false}
+    manager={true}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval drafts view: manager past due 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={true}
+    manager={true}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval drafts view: not manager 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={false}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval drafts view: not manager. no permissions. 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={false}
+    isPastDue={false}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval drafts view: not manager. past due 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={true}
+    isPastDue={true}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots DraftFooterApproval drafts view: not manager. past due. no permissions. 1`] = `
+<span>
+  <DraftFooterApproval
+    hasPermission={false}
+    isPastDue={true}
+    manager={false}
+    onApproveClick={[Function]}
+    onRequestApprovalClick={[Function]}
+    onRescheduleClick={[Function]}
+    view="drafts"
+  />
+</span>
+`;
+
 exports[`Snapshots DropdownItem default 1`] = `
 <span>
   <DropdownItem
@@ -164,6 +1479,338 @@ exports[`Snapshots HoverableText size = small 1`] = `
   >
     Hoverable Text!
   </HoverableText>
+</span>
+`;
+
+exports[`Snapshots ImageDraft approval image draft 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    manager={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots ImageDraft drafts image draft 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    isScheduled={true}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    manager={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots ImageDraft retweet 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": true,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots ImageDraft square image 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="http://lorempixel.com/400/400/cats/"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots ImageDraft tag 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    tag="GIF"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots ImageDraft tall image 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="http://lorempixel.com/400/900/cats/"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots ImageDraft wide image 1`] = `
+<span>
+  <ImageDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="http://lorempixel.com/900/400/cats/"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
 </span>
 `;
 
@@ -488,6 +2135,261 @@ exports[`Snapshots ImagePost wide image 1`] = `
 </span>
 `;
 
+exports[`Snapshots LinkDraft queued link post 1`] = `
+<span>
+  <LinkDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkDraft sent 1`] = `
+<span>
+  <LinkDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    sent={true}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkDraft square image 1`] = `
+<span>
+  <LinkDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "http://lorempixel.com/400/400/cats/",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkDraft tall image 1`] = `
+<span>
+  <LinkDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "http://lorempixel.com/400/900/cats/",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkDraft wide image 1`] = `
+<span>
+  <LinkDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "http://lorempixel.com/900/400/cats/",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
 exports[`Snapshots LinkPost error 1`] = `
 <span>
   <LinkPost
@@ -749,6 +2651,119 @@ exports[`Snapshots LinkPost wide image 1`] = `
     }
     sent={false}
     text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots MultipleImagesDraft queued multiple image post 1`] = `
+<span>
+  <MultipleImagesDraft
+    currentImage={0}
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageUrls={
+      Array [
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+      ]
+    }
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="drafts"
+  />
+</span>
+`;
+
+exports[`Snapshots MultipleImagesDraft sent multiple image post 1`] = `
+<span>
+  <MultipleImagesDraft
+    currentImage={0}
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageUrls={
+      Array [
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+      ]
+    }
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    manager={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={true}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
   />
 </span>
 `;
@@ -3129,6 +5144,378 @@ exports[`Snapshots Tabs default 1`] = `
 </span>
 `;
 
+exports[`Snapshots TextDraft default. All approval view. 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft manager 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    manager={true}
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft no permission 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft past due 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post was scheduled for March 12 at 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isPastDue={true}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRescheduleClick={[Function]}
+    scheduledAt={123456789}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft past due no permission 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post was scheduled for March 12 at 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={false}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isPastDue={true}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onRescheduleClick={[Function]}
+    scheduledAt={123456789}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft retweet 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": true,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft retweet with comment 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": true,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    retweetComment="Awesome book news here: http://buff.ly/2oZYTnY"
+    retweetCommentLinks={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/2oZYTnY",
+          "indices": Array [
+            24,
+            46,
+          ],
+          "rawString": "http://buff.ly/2oZYTnY",
+          "url": "https://www.theguardian.com/books",
+        },
+      ]
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots TextDraft scheduled 1`] = `
+<span>
+  <TextDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post is scheduled for 9:42pm (GMT)",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onApproveClick={[Function]}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    scheduledAt={123456789}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
 exports[`Snapshots TextPost error 1`] = `
 <span>
   <TextPost
@@ -3339,6 +5726,295 @@ exports[`Snapshots TextPost sent 1`] = `
     }
     sent={true}
     text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoDraft queued video post 1`] = `
+<span>
+  <VideoDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoDraft retweet 1`] = `
+<span>
+  <VideoDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": true,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoDraft sent 1`] = `
+<span>
+  <VideoDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={true}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoDraft square image 1`] = `
+<span>
+  <VideoDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="http://lorempixel.com/400/400/cats/"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoDraft tall image 1`] = `
+<span>
+  <VideoDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="http://lorempixel.com/400/900/cats/"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoDraft wide image 1`] = `
+<span>
+  <VideoDraft
+    draftDetails={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+        "createdAt": "on March 2nd at 12:45pm (GMT)",
+        "email": "ash@buffer.com",
+        "isRetweet": false,
+        "postAction": "This post will be added to the queue",
+        "userName": "Ash",
+        "via": "api",
+      }
+    }
+    hasPermission={true}
+    imageSrc="http://lorempixel.com/900/400/cats/"
+    isLightboxOpen={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onShareNowClick={[Function]}
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    view="approval"
   />
 </span>
 `;
