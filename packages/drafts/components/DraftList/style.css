@@ -1,0 +1,33 @@
+.container {
+  /* margin-left: 30px; */
+  margin-right: 8px;
+}
+
+/**
+ * Transitions
+ * https://github.com/reactjs/react-transition-group#custom-classes
+ */
+
+.enter {
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+.enter.enterActive {
+  opacity: 1;
+}
+
+.leave {
+  opacity: 1;
+}
+.leave.leaveActive {
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+
+.appear {
+  opacity: 0;
+}
+.appear.appearActive {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
