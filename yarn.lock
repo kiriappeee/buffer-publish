@@ -30,9 +30,9 @@
     react-day-picker "6.2.1"
     uuid "3.0.1"
 
-"@bufferapp/composer@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-0.0.3.tgz#357b8cb0d8e2fe822b649d436076bed15be8b54e"
+"@bufferapp/composer@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-0.0.4.tgz#3afaa0c4e91fb7c74e8ecf9e2853653a0ca66db7"
   dependencies:
     "@bufferapp/buffer-js-api" "0.3.0"
     "@bufferapp/buffer-js-metrics" "0.2.0"
