@@ -2,6 +2,7 @@ const { rpc } = require('@bufferapp/micro-rpc');
 const checkToken = require('./checkToken');
 const profilesMethod = require('./profiles');
 const queuedPostsMethod = require('./queuedPosts');
+const draftPostsMethod = require('./draftPosts');
 const sentPostsMethod = require('./sentPosts');
 const userMethod = require('./user');
 const deletePostMethod = require('./deletePost');
@@ -22,6 +23,7 @@ const savePublishBetaRedirect = require('./savePublishBetaRedirect');
 module.exports = checkToken(rpc(
   profilesMethod,
   queuedPostsMethod,
+  draftPostsMethod,
   sentPostsMethod,
   userMethod,
   deletePostMethod,
