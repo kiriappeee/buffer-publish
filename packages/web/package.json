@@ -14,6 +14,7 @@
     "@bufferapp/components": "1.1.0-beta.6",
     "@bufferapp/notifications": "1.2.7",
     "@bufferapp/profile-page": "1.2.7",
+    "@bufferapp/publish-drafts": "1.2.7",
     "@bufferapp/publish-app-switcher": "1.2.7",
     "@bufferapp/publish-beta-redirect": "1.2.7",
     "@bufferapp/publish-example": "1.2.7",
