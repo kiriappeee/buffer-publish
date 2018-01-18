@@ -20,6 +20,7 @@
     "@bufferapp/publish-queue": "1.2.7",
     "@bufferapp/publish-routes": "1.2.7",
     "@bufferapp/publish-sent": "1.2.7",
+    "@bufferapp/publish-drafts": "1.2.7",
     "@bufferapp/publish-settings": "1.2.7",
     "@bufferapp/publish-shared-components": "1.2.7",
     "@bufferapp/publish-store": "1.2.7",
