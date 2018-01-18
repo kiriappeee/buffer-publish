@@ -3,6 +3,7 @@ const checkToken = require('./checkToken');
 const profilesMethod = require('./profiles');
 const queuedPostsMethod = require('./queuedPosts');
 const sentPostsMethod = require('./sentPosts');
+const draftPostsMethod = require('./draftPosts');
 const userMethod = require('./user');
 const deletePostMethod = require('./deletePost');
 const sharePostNowMethod = require('./sharePostNow');
@@ -23,6 +24,7 @@ module.exports = checkToken(rpc(
   profilesMethod,
   queuedPostsMethod,
   sentPostsMethod,
+  draftPostsMethod,
   userMethod,
   deletePostMethod,
   sharePostNowMethod,
