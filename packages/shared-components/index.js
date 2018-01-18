@@ -12,6 +12,7 @@ export PostList from './PostList';
 export PostLists from './PostLists';
 export TextPost from './TextPost';
 export VideoPost from './VideoPost';
+export QueueItems from './QueueItems';
 export ScheduleTable from './ScheduleTable';
 export ScrollableContainer from './ScrollableContainer';
 export PostDragWrapper from './PostDragWrapper';

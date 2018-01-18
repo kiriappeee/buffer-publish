@@ -3962,6 +3962,240 @@ exports[`Snapshots PostLists default 1`] = `
 </span>
 `;
 
+exports[`Snapshots QueueItems default queue 1`] = `
+<span>
+  <QueueItems
+    draggable={false}
+    items={
+      Array [
+        Object {
+          "id": "header-1",
+          "queueItemType": "header",
+          "test": "Today",
+        },
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "error": "",
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 2nd",
+          },
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "text",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "error": "",
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 2nd",
+          },
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "text",
+        },
+        Object {
+          "id": "header-2",
+          "queueItemType": "header",
+          "test": "Tuesday May 3rd",
+        },
+        Object {
+          "id": "590a365d749c2018007b23c1",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "error": "",
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "text",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c2",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "error": "",
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "text",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onDropPost={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onRequeueClick={[Function]}
+    onShareNowClick={[Function]}
+    type="post"
+  />
+</span>
+`;
+
+exports[`Snapshots QueueItems no headers type drafts 1`] = `
+<span>
+  <QueueItems
+    draggable={false}
+    items={
+      Array [
+        Object {
+          "draftDetails": Object {
+            "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+            "createdAt": "on March 2nd at 12:45pm (GMT)",
+            "email": "ash@buffer.com",
+            "isRetweet": false,
+            "postAction": "This post will be added to the queue",
+            "userName": "Ash",
+            "via": "web",
+          },
+          "hasPermission": true,
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "text",
+          "view": "drafts",
+        },
+        Object {
+          "draftDetails": Object {
+            "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+            "createdAt": "on March 2nd at 12:45pm (GMT)",
+            "email": "ash@buffer.com",
+            "isRetweet": false,
+            "postAction": "This post will be added to the queue",
+            "userName": "Ash",
+            "via": "web",
+          },
+          "hasPermission": true,
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "text",
+          "view": "drafts",
+        },
+        Object {
+          "draftDetails": Object {
+            "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+            "createdAt": "on March 2nd at 12:45pm (GMT)",
+            "email": "ash@buffer.com",
+            "isRetweet": false,
+            "postAction": "This post will be added to the queue",
+            "userName": "Ash",
+            "via": "web",
+          },
+          "hasPermission": true,
+          "id": "590a365d749c2018007b23c1",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "text",
+          "view": "drafts",
+        },
+        Object {
+          "draftDetails": Object {
+            "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/510521020a19000b6a00001e/a476fed03b1de4e06563d6063d7d3ee0.jpg",
+            "createdAt": "on March 2nd at 12:45pm (GMT)",
+            "email": "ash@buffer.com",
+            "isRetweet": false,
+            "postAction": "This post will be added to the queue",
+            "userName": "Ash",
+            "via": "web",
+          },
+          "hasPermission": true,
+          "id": "590a3693749c200e007b23c2",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "queueItemType": "post",
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "text",
+          "view": "drafts",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onDropPost={[Function]}
+    onEditClick={[Function]}
+    onImageClick={[Function]}
+    onImageClickNext={[Function]}
+    onImageClickPrev={[Function]}
+    onImageClose={[Function]}
+    onRequeueClick={[Function]}
+    onShareNowClick={[Function]}
+    type="drafts"
+  />
+</span>
+`;
+
 exports[`Snapshots RetweetPanel default 1`] = `
 <span>
   <RetweetPanel
