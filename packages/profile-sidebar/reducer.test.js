@@ -10,6 +10,7 @@ describe('reducer', () => {
       lockedProfiles: [],
       loading: false,
       selectedProfileId: '',
+      selectedProfile: {},
     };
     const action = {
       type: 'INIT',

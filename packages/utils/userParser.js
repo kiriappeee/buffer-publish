@@ -9,6 +9,8 @@ module.exports = userData => ({
     (userData.plan_code >= 10 && userData.plan_code <= 19)
   ),
   is_free_user: userData.plan === 'free',
+  messages: userData.messages || [],
+  new_contributions_emails_subscribe_link: userData.new_contributions_emails_subscribe_link,
   skip_empty_text_alert: userData.messages.includes('remember_confirm_saving_modal'),
   profile_groups: userData.profile_groups || [],
   s3_upload_signature: userData.s3_upload_signature,

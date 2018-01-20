@@ -4,6 +4,7 @@ module.exports = profile => ({
   avatar_https: profile.avatar_https,
   type: profile.service,
   handle: profile.service_username,
+  isManager: profile.organization_role === 1,
   pendingCount: profile.counts.pending,
   sentCount: profile.counts.sent,
   timezone: profile.timezone,
@@ -21,4 +22,5 @@ module.exports = profile => ({
   default: profile.default,
   paused: profile.paused,
   open: false,
+  organizationRole: profile.organization_role,
 });

@@ -1,4 +1,4 @@
-const { getDateString } = require('./date');
+const { getDateString, isInThePast } = require('./date');
 const {
   parseTwitterLinks,
   parseFacebookEntities,
@@ -91,12 +91,19 @@ module.exports = (post) => {
     post.error
   );
 
+  const isPastDue = isInThePast(post.scheduled_at);
+
   return {
     day: post.day,
     id: post.id,
+    createdAt: post.created_at,
+    entities: post.entities,
+    profileId: post.profile_id,
     isConfirmingDelete: post.isDeleting && !post.requestingDraftAction,
     isDeleting: post.isDeleting && post.requestingDraftAction,
     isWorking: !post.isDeleting && post.requestingDraftAction,
+    isMoving: post.isMoving,
+    isPastDue,
     imageSrc: isVideo ? media.thumbnail : media.picture,
     imageUrls: getImageUrls(post),
     links: canHaveLinks ? links : [],
@@ -107,11 +114,15 @@ module.exports = (post) => {
       description: media.description,
       thumbnailUrl: media.preview,
     },
+    needsApproval: post.needs_approval,
     postDetails: getPostDetails({ post }),
+    profile_service: post.profile_service,
+    retweet: post.retweet,
     retweetComment,
     retweetCommentLinks: canHaveLinks ? links : [],
     retweetProfile: getRetweetProfileInfo(post),
     sent: post.status === 'sent',
+    source_url: post.source_url,
     text,
     type: getPostType({ post }),
     media,
@@ -119,6 +130,8 @@ module.exports = (post) => {
     subprofile_id: post.subprofile_id,
     due_at: post.due_at,
     scheduled_at: post.scheduled_at,
+    scheduledAt: post.scheduled_at,
+    sharedNext: post.shared_next,
     pinned: post.pinned,
     isFixed,
   };
