@@ -7,3 +7,4 @@ coverage
 .cache-loader
 .DS_Store
 packages/composer
+bundle.js
