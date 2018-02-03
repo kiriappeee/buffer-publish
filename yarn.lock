@@ -127,9 +127,9 @@
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@bufferapp/micro-rpc/-/micro-rpc-0.1.6.tgz#104417af8c4940c92d45164cc097d5d38fd7d957"
 
-"@bufferapp/performance-tracking@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@bufferapp/performance-tracking/-/performance-tracking-0.1.0.tgz#b64c3a17f58eebeeeaa86dba93255d8b2b6e27e5"
+"@bufferapp/performance-tracking@0.43.5":
+  version "0.43.5"
+  resolved "https://registry.yarnpkg.com/@bufferapp/performance-tracking/-/performance-tracking-0.43.5.tgz#20d4f4813e898e2fe0484522d67b4536177e05fd"
   dependencies:
     "@bufferapp/async-data-fetch" "0.5.36-beta01"
     "@bufferapp/chronos" "0.6.1"
