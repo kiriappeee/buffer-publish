@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/,
+        exclude: /node_modules(?!\/@bufferapp\/performance-tracking)(?!\/@bufferapp\/async-data-fetch)(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'stage-0', 'react'],
