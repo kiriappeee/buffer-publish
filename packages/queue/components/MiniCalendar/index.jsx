@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DayPicker from 'react-day-picker';
-import {
-  Text,
-} from '@bufferapp/components';
 
 const MiniCalendar = () =>
   <div>
