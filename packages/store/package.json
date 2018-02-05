@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,10 +20,10 @@
     "@bufferapp/publish-example": "1.2.7",
     "@bufferapp/publish-i18n": "1.2.7",
     "@bufferapp/publish-profile-sidebar": "1.2.9",
-    "@bufferapp/publish-pusher-sync": "1.2.9",
-    "@bufferapp/publish-queue": "1.2.9",
+    "@bufferapp/publish-pusher-sync": "1.2.12",
+    "@bufferapp/publish-queue": "1.2.12",
     "@bufferapp/publish-routes": "1.2.7",
-    "@bufferapp/publish-sent": "1.2.9",
+    "@bufferapp/publish-sent": "1.2.12",
     "@bufferapp/publish-settings": "1.2.9",
     "@bufferapp/publish-tabs": "1.2.9",
     "@bufferapp/unauthorized-redirect": "1.2.10"
