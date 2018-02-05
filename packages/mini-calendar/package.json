@@ -1,6 +1,6 @@
 {
-  "name": "@bufferapp/publish-mini-calendar",
-  "version": "1.3.0",
+  "name": "@bufferapp/mini-calendar",
+  "version": "1.3.1",
   "description": "A mini calendar for Buffer Publish",
   "main": "index.js",
   "scripts": {
