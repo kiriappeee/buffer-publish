@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DayPicker from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
 
 const containerStyle = {
   position: 'absolute',
@@ -11,9 +12,10 @@ const containerStyle = {
   border: '1px solid grey',
   padding: '10px',
 }
+
 const MiniCalendar = () =>
   <div style={containerStyle}>
-    <DayPicker />
+    <DayPicker showOutsideDays />
   </div>;
 
 MiniCalendar.propTypes = {
