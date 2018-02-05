@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-server",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "",
   "scripts": {
     "start": "micro",
@@ -18,12 +18,12 @@
     "body-parser": "1.17.2",
     "bugsnag": "1.11.0",
     "cookie-parser": "1.4.3",
-    "node-dogstatsd": "0.0.6",
     "express": "4.15.3",
     "jsonwebtoken": "7.4.1",
     "micro": "7.3.3",
     "micro-rpc-client": "0.1.2",
     "microrouter": "2.1.1",
+    "node-dogstatsd": "0.0.6",
     "pusher": "1.5.1",
     "request": "2.81.0",
     "request-promise": "4.2.1"
