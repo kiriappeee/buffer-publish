@@ -37,18 +37,6 @@ spec:
         - containerPort: 80
           protocol: TCP
         env:
-        - name: SESSION_SVC_HOST
-          value: session-service-1
-        - name: CLIENT_ID
-          valueFrom:
-            secretKeyRef:
-              key: client-id
-              name: buffer-publish-buffer-api-client
-        - name: CLIENT_SECRET
-          valueFrom:
-            secretKeyRef:
-              key: client-secret
-              name: buffer-publish-buffer-api-client
         - name: API_ADDR
           value: https://api.bufferapp.com
         - name: BUGSNAG_KEY
