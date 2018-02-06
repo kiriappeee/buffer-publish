@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Input,
   LoadingAnimation,
+  Button,
 } from '@bufferapp/components';
 import {
   EmptyState,
@@ -14,10 +15,16 @@ import {
 import ComposerPopover from '../ComposerPopover';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
+import MiniCalendar from  '../MiniCalendar';
 
 const composerStyle = {
   marginBottom: '1.5rem',
+  flexGrow: '1',
 };
+
+const topBarContainerStyle = {
+  display: 'flex',
+}
 
 const loadingContainerStyle = {
   width: '100%',
@@ -25,6 +32,11 @@ const loadingContainerStyle = {
   textAlign: 'center',
   paddingTop: '5rem',
 };
+
+const buttonStyle = {
+  height: '40px',
+  marginLeft: '1.5rem',
+}
 
 const QueuedPosts = ({
   total,
@@ -44,9 +56,12 @@ const QueuedPosts = ({
   onImageClose,
   onDropPost,
   showComposer,
+  showCalendar,
   editMode,
   paused,
   onUnpauseClick,
+  onCalendarToggleClick,
+  hasCalendarFeatureFlip,
 }) => {
   if (loading) {
     return (
@@ -59,18 +74,28 @@ const QueuedPosts = ({
   return (
     <div>
       <PostDragLayer />
-      <div style={composerStyle}>
-        {showComposer && !editMode &&
-          <ComposerPopover
-            onSave={onComposerCreateSuccess}
-            transparentOverlay
-            preserveComposerStateOnClose
+      <div style={topBarContainerStyle}>
+        <div style={composerStyle}>
+          {showComposer && !editMode &&
+            <ComposerPopover
+              onSave={onComposerCreateSuccess}
+              transparentOverlay
+              preserveComposerStateOnClose
+            />
+          }
+          <Input
+            placeholder={'What would you like to share?'}
+            onFocus={onComposerPlaceholderClick}
           />
-        }
-        <Input
-          placeholder={'What would you like to share?'}
-          onFocus={onComposerPlaceholderClick}
-        />
+        </div>
+        {hasCalendarFeatureFlip &&
+          <div style={buttonStyle}>
+            <Button secondary onClick={onCalendarToggleClick}>
+              {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
+            </Button>
+          </div>}
+        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar />}
+
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
       {total < 1 &&
@@ -130,6 +155,9 @@ QueuedPosts.propTypes = {
   editMode: PropTypes.bool,
   paused: PropTypes.bool,
   onUnpauseClick: PropTypes.func.isRequired,
+  showCalendar: PropTypes.bool,
+  onCalendarToggleClick: PropTypes.func.isRequired,
+  hasCalendarFeatureFlip: PropTypes.bool,
 };
 
 QueuedPosts.defaultProps = {
@@ -142,6 +170,8 @@ QueuedPosts.defaultProps = {
   enabledApplicationModes: [],
   editMode: false,
   paused: false,
+  showCalendar: false,
+  hasCalendarFeatureFlip: false,
 };
 
 export default QueuedPosts;

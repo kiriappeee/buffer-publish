@@ -36,6 +36,8 @@ export default connect(
         environment: state.environment.environment,
         editMode: state.queue.editMode,
         editingPostId: state.queue.editingPostId,
+        showCalendar: currentProfile.showCalendar,
+        hasCalendarFeatureFlip: state.appSidebar.user.features.includes('mini_calendar'),
         paused,
       };
     }
@@ -119,6 +121,9 @@ export default connect(
     },
     onComposerCreateSuccess: () => {
       dispatch(actions.handleComposerCreateSuccess());
+    },
+    onCalendarToggleClick: () => {
+      dispatch(actions.handleCalendarToggle({ profileId: ownProps.profileId }));
     },
   }),
 )(QueuedPosts);
