@@ -45,7 +45,7 @@ const AppSidebar = ({
       icon={<PublishIcon />}
       active={activeProduct === 'publish'}
       label="Publish"
-      href="/"
+      href="https://publish.buffer.com"
     />
     <PopoverButton
       icon={<ReplyIcon />}
