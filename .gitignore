@@ -6,6 +6,7 @@ coverage
 *.sublime*
 .cache-loader
 .DS_Store
-packages/buffer-composer
 packages/composer
+packages/buffer-composer
+packages/buffer-components
 bundle.js
