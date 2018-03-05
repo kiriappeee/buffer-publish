@@ -1,92 +1,140 @@
-# Buffer Publish
+<p align="middle"><h1 align="center"> Buffer Publish </h1></p>
 
-Previously Project Donut 🍩
+<p align="center" style="padding-top: -100px;">
+  <a href="https://buffer.com/">
+    <img src="https://rawgit.com/bufferapp/buffer-publish/master/logo.png" width="250" alt="Buffer Publish">
+  </a>
+</p>
 
 [![Build Status](https://travis-ci.org/bufferapp/buffer-publish.svg?branch=master)](https://travis-ci.org/bufferapp/buffer-publish)
 
+
+Welcome to the [Lerna](https://github.com/lerna/lerna)-based monorepo™ for Buffer Publish.
+<p>—<br><em>Formerly Project Donut</em>&nbsp; 🍩</p>
+
 ## Table of contents
 
+- [What is Buffer Publish?](#what-is-buffer-publish)
 - [Quick Start](#quick-start)
+- [The Publish Server](#the-publish-server)
+- [Lerna and Yarn Workspaces](#lerna-and-yarn-workspaces)
 - [Publishing Packages](#publishing-packages)
-- [NPM Commands](#npm-commands)
+- [Package Scripts](#package-scripts)
 - [Adding New Dependencies](#adding-new-dependencies)
 - [How Packages Communicate](#how-packages-communicate)
 
+## What is Buffer Publish?
+
+<img src="https://rawgit.com/bufferapp/buffer-publish/master/screenshot.png">
+
+Buffer Publish is [Buffer](https://buffer.com)'s new dashboard with a focus on one thing; **managing and publishing content on your social accounts.** It's a redesign and refresh of the current Buffer dashboard, both in appearance and front-end architecture.
+
+Buffer Publish is being actively developed right now! This code is open source for any and all to see and learn from — see our [copyright](#copyright) below for more details.
+
+If you have any questions feel free to [create an issue](https://github.com/bufferapp/buffer-publish/issues/new) or Tweet us [@bufferdevs](https://twitter.com/bufferdevs). We'd love to chat!
+
+⚠️  **Important Note**: While you can pull this code down freely, it won't work correctly without some key components (including our API) which are not open source.
+
 ## Quick Start
 
-To get started on development:
+To get started on local development and testing:
 
-Checkout the `publish` branch in [`buffer-dev`](https://github.com/bufferapp/buffer-dev) repo and then run `./dev setup && ./dev up`
+1. **Get your `buffer-dev` environment setup**
+  → https://github.com/bufferapp/buffer-dev
 
-If you need to start the server by itself:
+2. **Install the latest version of `yarn`**
+  → [Installing Yarn](https://yarnpkg.com/en/docs/install)
 
-```sh
-npm run init
-npm start
-```
+3. **Install Packages and Bootstrap**
+    ```bash
+    $ cd ~/buffer-dev/buffer-publish  # Or wherever yours is located
+    $ yarn
+    $ yarn run bootstrap
+   ```
 
-### Login/Logout
+4. **Start up the publish docker containers**
+    ```bash
+    $ cd ../buffer-dev
+    $ ./dev up session-service account publish
+   ```
 
-Currently the login service does not exist yet, however there are two methods exposed that trigger a login and logout
+   Publish relies on both the **session** and **account** services, so it's important to include them in our _up_ command. The order is important, since this relates to the way docker-compose starts up containers.
 
-#### Login
+5. **Start bundling the frontend with webpack**
+    ```bash
+    # in buffer-publish/
+    $ yarn run watch
+   ```
+     While you're waiting for the bundle to finish, head on over to https://local.buffer.com to login. (We're not quite ready to view Publish yet.)
 
-Type this in the Javascript Console (with your credentials):
+6. **Give yourself the correct feature flip**
+  In order to view Buffer Publish your user (usually admin@bufferap.com for local dev)
+ must have the _New Buffer Publish_ feature flip. Otherwise you'll just get redirected back to classic Buffer. To add the feature visit https://local.buffer.com/admin and browse to the _My Account_ page.
 
-`clientId` and `clientSecret` are credentials from creating a Buffer app: https://local.buffer.com/developers/apps
+   If you don't have the feature flip available, then you should probably pull down all the feature flips from production first:
+   ```bash
+   # in ~/buffer-dev
+   $ ./dev sync features
+   ```
+7. You should now be able to visit https://publish.local.buffer.com — party time! 🎉 🙌
 
-You'll likely need to grab `clientSecret` directly from Mongo using `./dev mongo`.
+### Troubleshooting Dev Environment Issues
 
-```js
-login({
-  email: 'admin@bufferapp.com',
-  password: 'password',
-  clientId: 'clientId',
-  clientSecret: 'clientSecret',
-});
-```
+Coming soon.
 
-#### Logout
+## The Publish Server
 
-Type this in the Javascript Console:
+When you run the `./dev up` command from the [quick start](#quick-start) it spins up a number of containers on which Publish depends. It also spins up the `publish` container itself, which is [an Express server](/packages/server/index.js) with two purposes:
 
-```js
-logout();
-```
+1. **Serve [`index.html`](/packages/server/index.html) for all requests to https://publish.local.buffer.com**
+3. **Provide an `/rpc` endpoint/proxy** for making API calls in the front-end
+
+In the past the publish container's Express server also ran webpack and bundled the front-end code, **we decoupled this however when we started seeing instability and broken file watching within the container**. Webpack bundling now happens **on the host system**; which is why you run `yarn run watch` as a final step.
+
+## Lerna and Yarn Workspaces
+
+Buffer Publish is a _monorepo_. That means it's composed of several separate parts, or _packages._ (You can take a look at these packages in the [`/packages` directory](/packages)) These are essentially the same as packages on npm. We use two very awesome tools to make this magic possible. 🎩.  (_And if you're confused by this at all, skimming their README files should help!_)
+
+1. **Lerna** — https://lernajs.io/
+2. **Yarn Workspaces** — https://yarnpkg.com/en/docs/workspaces
+
+**Lerna** is the core of what makes it all work, while Yarn Workspaces is an addition used in place of Lerna's package mgmt. logic. You can read more about how we [use Yarn Workspaces with Lerna here](https://github.com/lerna/lerna#--use-workspaces). The reason for using Yarn Workspaces is for better speed, and support of our workflows.
 
 ## Publishing Packages
 
+Since our app is made from a bunch of npm packages, we can publish them to the npm repository when we've made changes. All packages are namespaced under the `@bufferapp` organization.
+
+|ℹ️  &nbsp;**When should you publish?**|
+|--|
+|In general, you should publish to npm when you've made significant changes to any local package, like fixing a bug, or finishing a feature. Remember, **publishing your changes is NOT a requirement for deploys to production (or staging servers) to work correctly.** This is because the process that bundles and deploys Publish does not fetch packages from npm if they are present in the repository (i.e., anything commited in `/packages`). Conversely, you would want to publish any changes to the Buffer Composer (`@bufferapp/buffer-composer`) since it doesn't live in this repo.|
+
+
+
 **Login**
-- Login to your NPM user who has access to a Buffer NPM Organization. If you're not sure if you're part of the Buffer NPM Organization check this list: https://www.npmjs.com/org/bufferapp/members
+Login to your NPM user who has access to the [`@bufferapp` npm organization](https://www.npmjs.com/org/bufferapp). If you're not part of the organization, ask someone on the team for help.
 
 ```sh
 npm login
 ```
 **Make Package Changes**
-
-Make changes in a branch and get them reviewed in PR (our current flow)
+Make changes in a branch and get them reviewed in a PR, as usual.
 
 **Bring Changes Into Master**
+Merge or rebase the reviewed PR into `master`.
 
-Rebase (or merge if you're more comfortable with that flow) the reviewed branch into master (our current flow)
 
 **Pull Master**
-
-Sanity check to make sure you've got the latest changes
-
+Sanity check to make sure you've got the latest changes.
 ```
 git pull
 ```
 
 **Publish**
-
-*Important* - this command *must* be run with `npm run publish` - otherwise it doesn't pick up the logged in NPM user
-
 ```
-npm run publish
+yarn run publish
 ```
 
-After running this command you'll be prompted with the following menu
+After running this command you'll be prompted with a menu like this;
 
 ```sh
 lerna info Comparing with tag v0.5.27
@@ -101,45 +149,31 @@ lerna info Comparing with tag v0.5.27
   Custom
 ```
 
-Under most cases you'll likely use a Patch. If you're unsure, this is a great question to ask the team.
+In most cases you'll choose *Patch*. If you're unsure, this is a great question to ask the team in Slack. You can read more about [versioning with SemVer here](https://semver.org/).
 
-This picks up all changed packages and updates versions *automatically*. It also pushes the version tag to Git. For more info on the publish command: https://github.com/lerna/lerna#publish
+The `publish` command picks up all changed packages and updates their `package.json`  versions *automatically* ✨. It also ensures that dependant local packages have the updated version. Finally, it also pushes the version tag to Git.
 
-### Issues Seen
+For more info on the `publish`  command see https://github.com/lerna/lerna#publish.
 
-#### vundefined
+### Common Issues with Publishing
+
+#### `vundefined`
 
 If you run `git tags` you'll see `vundefined` listed as a tag. This happened when trying to do a publish on a branch that had git hashes changed due to a rebase. This also blocks publishing complaining about a git hash missing. To fix this one just delete the `vundefined` and undoing the related version update commits. This is a great one to ask for help!
 
-## NPM Commands
+## Package Scripts
 
-### bootstrap
+We have a few helpful commands defined in this project's `package.json`.
 
-This runs `yarn` (to install) on each package and symlinks local packages.
-
-### clean
-
-Deletes all `node_modules` from all packages. Use this first if you see any odd dependency errors and then follow with `npm run bootstrap`;
-
-### test
-
-Runs `yarn test` on all packages
-
-### test-update
-
-Runs `yarn run test-update` on all packages to update all snapshot tests
-
-### init
-
-Runs `yarn` on the top level package and then runs `yarn run bootstrap` to setup all packages.
-
-### start
-
-Start up the publish service (dev mode starts up webpack with hot module reloading).
-
-### publish
-
-This publishes the changed packages on NPM - **Important** this command *must* be run with `npm run publish` - otherwise it doesn't pick up the logged in NPM user
+| Command | Description |
+|--|--|
+| `yarn run bootstrap`  | This runs `yarn` (to install) on each package and links local packages together! ✨ |
+| `yarn run clean`  | Deletes all `node_modules` from all packages. Use this first if you see any odd dependency errors and then follow with a `yarn run bootstrap`. |
+| `yarn run test`  | Runs `yarn test` on all packages. |
+| `yarn run test-update`  | Runs `yarn run test-update` on all packages to update all snapshot tests. |
+| `yarn run init`  | Runs `yarn` on the top level package and then runs `yarn run bootstrap` to setup all packages. Generally you won't need to run this more than once to set things up. |
+| `yarn run start`  | Starts up the Publish Express server, [as explained above](#the-publish-server), and is run automatically when you start Publish with `./dev up`. (So in most cases you won't be running this command.) |
+| `yarn run publish`  | This publishes the changed packages to npm. |
 
 ## Adding New Dependencies
 
@@ -151,12 +185,12 @@ This is the most likely scenario you'll face.
 
 in the root directory (`buffer-publish/`) run the follwing commands:
 
-```sh
-npm run -SDE some-cool-package
-npm run bootstrap
+```bash
+$ yarn add -DE some-cool-package
+$ yarn run bootstrap
 ```
 
-This makes `some-cool-package` available to all packages
+Now `some-cool-package` is available to all packages.
 
 ### Creating A Dependency To Another Local Package
 
@@ -169,14 +203,13 @@ In the `example` package add the following entry in the `packages/example/packag
   //...other stuff...
   dependencies:{
     //...other dependencies...
-    "@bufferapp/login": "0.0.1", // this version must be exact otherwise it fetches from npm
+    "@bufferapp/login": "0.0.1", // this version must be exact otherwise it fetches from npm!
   }
 }
 ```
-
-**Important**
-
-The version number must be exact to link local packages, otherwise it will (try to) fetch the package from NPM.
+|⚠️  &nbsp;**Important**|
+|--|
+|The version number must be **exact** to link local packages, otherwise it will (try to) fetch the package from npm.|
 
 
 ### Add A Dependency That Runs A Binary
@@ -185,7 +218,7 @@ An example of this would be `eslint` or `jest`. These should be added to the ind
 
 ```sh
 cd packages/example/
-npm run -SDE jest
+yarn add -DE jest
 ```
 
 ## How Packages Communicate
@@ -219,7 +252,7 @@ export default (state, action) => {
 
 ## Copyright
 
-© 2017 Buffer Inc.
+© 2018 Buffer Inc.
 
 This project is open source as a way to transparently share our work with the
 community for the purpose of creating opportunities for learning. Buffer
