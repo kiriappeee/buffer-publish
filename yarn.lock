@@ -146,9 +146,9 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@bufferapp/react-keyframes/-/react-keyframes-0.2.5.tgz#fed847849f170c440ad6ea683224352e4b882b92"
 
-"@bufferapp/session-manager@0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@bufferapp/session-manager/-/session-manager-0.6.1.tgz#fcbd6b0c66750ad0bce4a9fd86b093d113b054e5"
+"@bufferapp/session-manager@0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@bufferapp/session-manager/-/session-manager-0.6.2.tgz#1c468cae20255ae49d2b3bfc9083fb9e64543ce3"
   dependencies:
     jsonwebtoken "8.1.0"
     micro-rpc-client "0.1.2"
