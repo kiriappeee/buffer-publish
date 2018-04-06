@@ -21,6 +21,7 @@ ComposerWrapper.propTypes = {
     skip_empty_text_alert: PropTypes.bool.isRequired,
     is_business_user: PropTypes.bool.isRequired,
     imageDimensionsKey: PropTypes.string.isRequired,
+    has_ig_direct_flip: PropTypes.bool.isRequired,
   }).isRequired,
   profiles: PropTypes.arrayOf(PropTypes.object),
   enabledApplicationModes: PropTypes.arrayOf(PropTypes.string),

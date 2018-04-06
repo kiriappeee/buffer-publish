@@ -16,4 +16,5 @@ module.exports = userData => ({
   s3_upload_signature: userData.s3_upload_signature,
   uses_24h_time: userData.twentyfour_hour_time,
   week_starts_monday: userData.week_starts_monday,
+  has_ig_direct_flip: userData.features.includes('instagram_direct_posting'),
 });

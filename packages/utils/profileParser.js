@@ -15,6 +15,7 @@ module.exports = profile => ({
   service_type: profile.service_type,
   serviceUsername: profile.service_username,
   service_username: profile.service_username,
+  should_post_direct: profile.should_post_direct,
   formatted_username: profile.formatted_username,
   subprofiles: profile.subprofiles,
   disabled: profile.disabled,
