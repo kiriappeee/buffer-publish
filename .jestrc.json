@@ -3,6 +3,7 @@
     "node_modules/(?!@bufferapp/*)"
   ],
   "verbose": true,
+  "collectCoverage": true,
   "moduleNameMapper": {
     "\\.(css|less)$": "identity-obj-proxy"
   }
