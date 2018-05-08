@@ -11,6 +11,9 @@ const CREDIT_CARD = '4242424242424242';
 const TOKEN = 'tok_visa';
 const SUCCESS_RESPONSE = {
   id: TOKEN,
+  card: {
+    name: 'Buffer',
+  },
 };
 
 const ERROR_RESPONSE = {
@@ -19,6 +22,11 @@ const ERROR_RESPONSE = {
   },
 };
 
+const CARD_WITHOUT_NAME_RESPONSE = {
+  card: {
+    name: null,
+  },
+};
 
 describe('middleware', () => {
   const next = jest.fn();
@@ -56,13 +64,26 @@ describe('middleware', () => {
     validateCreditCard();
   });
 
-  it('should trigger a throwValidationError action if response has an error message', (done) => {
-    global.Stripe.createToken = (card, cb) => {
-      cb(null, ERROR_RESPONSE);
-      expect(store.dispatch)
-        .toHaveBeenCalledWith(actions.throwValidationError(ERROR_RESPONSE.error.message));
-      done();
-    };
-    validateCreditCard();
+  describe('error handling', () => {
+    it('should trigger a throwValidationError action if response has an error message', (done) => {
+      global.Stripe.createToken = (card, cb) => {
+        cb(null, ERROR_RESPONSE);
+        expect(store.dispatch)
+          .toHaveBeenCalledWith(actions.throwValidationError(ERROR_RESPONSE.error.message));
+        done();
+      };
+      validateCreditCard();
+    });
+    it('should throw an error if the card does not have a name', (done) => {
+      global.Stripe.createToken = (card, cb) => {
+        cb(null, CARD_WITHOUT_NAME_RESPONSE);
+        expect(store.dispatch)
+          .toHaveBeenCalledWith(expect.objectContaining({
+            type: actionTypes.CREDIT_CARD_ERROR,
+          }));
+        done();
+      };
+      validateCreditCard();
+    });
   });
 });
