@@ -43,9 +43,9 @@ describe('middleware', () => {
   it('should trigger an approveCreditCard action on success', (done) => {
     global.Stripe.createToken = (card, cb) => {
       cb(null, SUCCESS_RESPONSE);
+      expect(store.dispatch).toHaveBeenCalledWith(actions.approveCreditCard(TOKEN));
       done();
     };
     validateCreditCard();
-    expect(store.dispatch).toHaveBeenCalledWith(actions.approveCreditCard(TOKEN));
   });
 });
