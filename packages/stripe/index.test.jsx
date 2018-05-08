@@ -2,6 +2,7 @@ import {
   reducer,
   actions,
   actionTypes,
+  middleware,
 } from './index';
 
 describe('StripeContainer', () => {
@@ -17,6 +18,11 @@ describe('StripeContainer', () => {
 
   it('should export actionTypes', () => {
     expect(actionTypes)
+      .toBeDefined();
+  });
+
+  it('should export middleware', () => {
+    expect(middleware)
       .toBeDefined();
   });
 });
