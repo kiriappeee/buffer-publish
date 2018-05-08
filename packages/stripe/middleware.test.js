@@ -8,10 +8,21 @@ global.Stripe = {
   createToken: jest.fn(),
 };
 
+const i18n = {
+  stripe: {
+    noNameError: 'no name',
+    invalidZipError: 'invalid zip',
+    noZipError: 'zip code missing',
+  },
+};
+
 describe('middleware', () => {
   const next = jest.fn();
   const store = {
     dispatch: jest.fn(),
+    getState: () => ({
+      i18n,
+    }),
   };
   const validateCreditCard = () => {
     const action = {
@@ -58,9 +69,7 @@ describe('middleware', () => {
       global.Stripe.createToken = (card, cb) => {
         cb(null, CARD_WITHOUT_NAME_RESPONSE);
         expect(store.dispatch)
-          .toHaveBeenCalledWith(expect.objectContaining({
-            type: actionTypes.CREDIT_CARD_ERROR,
-          }));
+          .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.noNameError));
         done();
       };
       validateCreditCard();
@@ -71,9 +80,7 @@ describe('middleware', () => {
         global.Stripe.createToken = (card, cb) => {
           cb(null, CARD_WITHOUT_ZIP_RESPONSE);
           expect(store.dispatch)
-            .toHaveBeenCalledWith(actions.throwValidationError(
-              'For extra security, please add the zip code associated with this card',
-            ));
+            .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.noZipError));
           done();
         };
         validateCreditCard();
@@ -83,9 +90,7 @@ describe('middleware', () => {
         global.Stripe.createToken = (card, cb) => {
           cb(null, CARD_WITH_WRONG_ZIP_RESPONSE);
           expect(store.dispatch)
-            .toHaveBeenCalledWith(actions.throwValidationError(
-              'Whoops, looks like that zip code doesn\'t match what your bank has on record - up for trying again?',
-            ));
+            .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.invalidZipError));
           done();
         };
         validateCreditCard();
