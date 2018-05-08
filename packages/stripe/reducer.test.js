@@ -1,7 +1,6 @@
 import reducer, { actions } from './reducer';
 
-const CREDIT_CARD = '4242424242424242';
-const TOKEN = 'tok_visa';
+import { CREDIT_CARD, TOKEN } from './test/constants';
 
 describe('reducer', () => {
   let state = {};

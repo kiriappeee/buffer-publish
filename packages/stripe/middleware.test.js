@@ -2,38 +2,10 @@
 
 import middleware from './middleware';
 import { actions, actionTypes } from './reducer';
+import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPONSE, CARD_WITHOUT_ZIP_RESPONSE } from './test/constants';
 
 global.Stripe = {
   createToken: jest.fn(),
-};
-
-const CREDIT_CARD = '4242424242424242';
-const TOKEN = 'tok_visa';
-const SUCCESS_RESPONSE = {
-  id: TOKEN,
-  card: {
-    name: 'Buffer',
-  },
-};
-
-const ERROR_RESPONSE = {
-  error: {
-    message: 'This is an error response',
-  },
-};
-
-const CARD_WITHOUT_NAME_RESPONSE = {
-  card: {
-    name: null,
-  },
-};
-
-const CARD_WITHOUT_ZIP_RESPONSE = {
-  card: {
-    name: 'Buffer',
-    country: 'US',
-    address_zip: false,
-  },
 };
 
 describe('middleware', () => {
