@@ -46,4 +46,16 @@ describe('reducer', () => {
     it('sets validating back to false', () => expect(state.validating).toBeFalsy());
     it('stores the token', () => expect(state.token).toBe(TOKEN));
   });
+
+  describe('changing billing cyles', () => {
+    it('setMonthlyCycle sets the cycle to "month"', () => {
+      state = reducer(undefined, actions.setMonthlyCycle());
+      expect(state.cycle).toBe('month');
+    });
+
+    it('setYearlyCycle sets the cycle to "year"', () => {
+      state = reducer(undefined, actions.setYearlyCycle());
+      expect(state.cycle).toBe('year');
+    });
+  });
 });

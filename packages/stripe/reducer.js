@@ -4,6 +4,9 @@ export const actionTypes = {
   CREDIT_CARD_APPROVED: 'CREDIT_CARD_APPROVED',
 };
 
+const MONTHLY_CYCLE = 'month';
+const YEARLY_CYCLE = 'year';
+
 const initialState = {
   error: null,
   card: null,
@@ -31,6 +34,11 @@ export default (state = initialState, action) => {
         validating: false,
         token: action.token,
       };
+    case actionTypes.CHANGE_BILLING_CYCLE:
+      return {
+        ...state,
+        cycle: action.cycle,
+      };
     default:
       return state;
   }
@@ -48,5 +56,13 @@ export const actions = {
   approveCreditCard: token => ({
     type: actionTypes.CREDIT_CARD_APPROVED,
     token,
+  }),
+  setMonthlyCycle: () => ({
+    type: actionTypes.CHANGE_BILLING_CYCLE,
+    cycle: MONTHLY_CYCLE,
+  }),
+  setYearlyCycle: () => ({
+    type: actionTypes.CHANGE_BILLING_CYCLE,
+    cycle: YEARLY_CYCLE,
   }),
 };
