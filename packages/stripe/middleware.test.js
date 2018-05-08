@@ -27,6 +27,14 @@ describe('middleware', () => {
     middleware(store)(next)(action);
   };
 
+  it('always calls next()', () => {
+    const action = {
+      type: 'TEST',
+    };
+    middleware(store)(next)(action);
+    expect(next).toHaveBeenCalledWith(action);
+  });
+
   it('should create a new Stripe token on CREDIT_CARD_VALIDATING', () => {
     validateCreditCard();
     expect(Stripe.createToken).toHaveBeenCalledWith(CREDIT_CARD, expect.any(Function));
