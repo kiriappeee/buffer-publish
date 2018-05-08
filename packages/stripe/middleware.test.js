@@ -28,6 +28,14 @@ const CARD_WITHOUT_NAME_RESPONSE = {
   },
 };
 
+const CARD_WITHOUT_ZIP_RESPONSE = {
+  card: {
+    name: 'Buffer',
+    country: 'US',
+    address_zip: false,
+  },
+};
+
 describe('middleware', () => {
   const next = jest.fn();
   const store = {
@@ -84,6 +92,20 @@ describe('middleware', () => {
         done();
       };
       validateCreditCard();
+    });
+
+    describe('US cards address checks', () => {
+      it('throws an error if there is no zip code', (done) => {
+        global.Stripe.createToken = (card, cb) => {
+          cb(null, CARD_WITHOUT_ZIP_RESPONSE);
+          expect(store.dispatch)
+            .toHaveBeenCalledWith(actions.throwValidationError(
+              'For extra security, please add the zip code associated with this card',
+            ));
+          done();
+        };
+        validateCreditCard();
+      });
     });
   });
 });

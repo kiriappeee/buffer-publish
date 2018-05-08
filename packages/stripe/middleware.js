@@ -8,6 +8,10 @@ const getErrorMessage = (response) => {
     message = response.error.message;
   } else if (!response.card.name) {
     message = 'Uh oh, please fill out the cardholder name :)';
+  } else if (response.card.country === 'US') {
+    if (!response.card.address_zip) {
+      message = 'For extra security, please add the zip code associated with this card';
+    }
   }
 
   return message;
