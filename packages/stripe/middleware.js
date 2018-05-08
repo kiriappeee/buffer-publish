@@ -11,6 +11,8 @@ const getErrorMessage = (response) => {
   } else if (response.card.country === 'US') {
     if (!response.card.address_zip) {
       message = 'For extra security, please add the zip code associated with this card';
+    } else if (response.card.address_zip_check === 'fail') {
+      message = 'Whoops, looks like that zip code doesn\'t match what your bank has on record - up for trying again?';
     }
   }
 

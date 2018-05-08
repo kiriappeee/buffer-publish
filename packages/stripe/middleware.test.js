@@ -2,7 +2,7 @@
 
 import middleware from './middleware';
 import { actions, actionTypes } from './reducer';
-import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPONSE, CARD_WITHOUT_ZIP_RESPONSE } from './test/constants';
+import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPONSE, CARD_WITHOUT_ZIP_RESPONSE, CARD_WITH_WRONG_ZIP_RESPONSE } from './test/constants';
 
 global.Stripe = {
   createToken: jest.fn(),
@@ -73,6 +73,18 @@ describe('middleware', () => {
           expect(store.dispatch)
             .toHaveBeenCalledWith(actions.throwValidationError(
               'For extra security, please add the zip code associated with this card',
+            ));
+          done();
+        };
+        validateCreditCard();
+      });
+
+      it('throws an error if the zip code does not match with the bank\'s one', (done) => {
+        global.Stripe.createToken = (card, cb) => {
+          cb(null, CARD_WITH_WRONG_ZIP_RESPONSE);
+          expect(store.dispatch)
+            .toHaveBeenCalledWith(actions.throwValidationError(
+              'Whoops, looks like that zip code doesn\'t match what your bank has on record - up for trying again?',
             ));
           done();
         };

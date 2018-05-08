@@ -1,4 +1,3 @@
-
 export const CREDIT_CARD = '4242424242424242';
 export const TOKEN = 'tok_visa';
 export const SUCCESS_RESPONSE = {
@@ -28,3 +27,11 @@ export const CARD_WITHOUT_ZIP_RESPONSE = {
   },
 };
 
+export const CARD_WITH_WRONG_ZIP_RESPONSE = {
+  card: {
+    name: 'Buffer',
+    country: 'US',
+    address_zip: '01901',
+    address_zip_check: 'fail',
+  },
+};
