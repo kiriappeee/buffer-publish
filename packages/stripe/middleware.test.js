@@ -49,7 +49,8 @@ describe('middleware', () => {
   it('should trigger an approveCreditCard action on success', (done) => {
     global.Stripe.createToken = (card, cb) => {
       cb(null, SUCCESS_RESPONSE);
-      expect(store.dispatch).toHaveBeenCalledWith(actions.approveCreditCard(TOKEN));
+      expect(store.dispatch)
+        .toHaveBeenCalledWith(actions.approveCreditCard(SUCCESS_RESPONSE.id));
       done();
     };
     validateCreditCard();
@@ -58,7 +59,8 @@ describe('middleware', () => {
   it('should trigger a throwValidationError action if response has an error message', (done) => {
     global.Stripe.createToken = (card, cb) => {
       cb(null, ERROR_RESPONSE);
-      expect(store.dispatch).toHaveBeenCalledWith(actions.throwValidationError(ERROR_RESPONSE.error.message));
+      expect(store.dispatch)
+        .toHaveBeenCalledWith(actions.throwValidationError(ERROR_RESPONSE.error.message));
       done();
     };
     validateCreditCard();
