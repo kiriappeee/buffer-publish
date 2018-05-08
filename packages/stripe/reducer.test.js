@@ -1,6 +1,7 @@
 import reducer, { actions } from './reducer';
 
 const CREDIT_CARD = '4242424242424242';
+const TOKEN = 'tok_visa';
 
 describe('reducer', () => {
   let state = {};
@@ -34,5 +35,15 @@ describe('reducer', () => {
 
     it('sets validating back to false', () => expect(state.validating).toBeFalsy());
     it('stores error message', () => expect(state.error).toBe('credit card expired!'));
+  });
+
+  describe('approveCreditCard', () => {
+    beforeEach(() => {
+      const validatingState = reducer(undefined, actions.validateCreditCard(CREDIT_CARD));
+      state = reducer(validatingState, actions.approveCreditCard(TOKEN));
+    });
+
+    it('sets validating back to false', () => expect(state.validating).toBeFalsy());
+    it('stores the token', () => expect(state.token).toBe(TOKEN));
   });
 });
