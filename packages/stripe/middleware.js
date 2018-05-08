@@ -6,7 +6,9 @@ export default ({ dispatch }) => next => (action) => {
   switch (action.type) {
     case actionTypes.CREDIT_CARD_VALIDATING:
       Stripe.createToken(action.card, (status, response) => {
-        dispatch(actions.approveCreditCard(response.id));
+        if (!response.error) {
+          dispatch(actions.approveCreditCard(response.id));
+        } else dispatch(actions.throwValidationError(response.error.message));
       });
       break;
     default:

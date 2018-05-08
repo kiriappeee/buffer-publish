@@ -13,6 +13,12 @@ const SUCCESS_RESPONSE = {
   id: TOKEN,
 };
 
+const ERROR_RESPONSE = {
+  error: {
+    message: 'This is an error response',
+  },
+};
+
 
 describe('middleware', () => {
   const next = jest.fn();
@@ -44,6 +50,15 @@ describe('middleware', () => {
     global.Stripe.createToken = (card, cb) => {
       cb(null, SUCCESS_RESPONSE);
       expect(store.dispatch).toHaveBeenCalledWith(actions.approveCreditCard(TOKEN));
+      done();
+    };
+    validateCreditCard();
+  });
+
+  it('should trigger a throwValidationError action if response has an error message', (done) => {
+    global.Stripe.createToken = (card, cb) => {
+      cb(null, ERROR_RESPONSE);
+      expect(store.dispatch).toHaveBeenCalledWith(actions.throwValidationError(ERROR_RESPONSE.error.message));
       done();
     };
     validateCreditCard();
