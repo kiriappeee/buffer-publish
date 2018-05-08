@@ -25,4 +25,14 @@ describe('reducer', () => {
     it('sets the state to validating', () => expect(state.validating).toBeTruthy());
     it('stores the card', () => expect(state.card).toBe(CREDIT_CARD));
   });
+
+  describe('throwValidationError', () => {
+    beforeEach(() => {
+      const validatingState = reducer(undefined, actions.validateCreditCard(CREDIT_CARD));
+      state = reducer(validatingState, actions.throwValidationError('credit card expired!'));
+    });
+
+    it('sets validating back to false', () => expect(state.validating).toBeFalsy());
+    it('stores error message', () => expect(state.error).toBe('credit card expired!'));
+  });
 });
