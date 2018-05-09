@@ -1,6 +1,11 @@
 import postParser from './postParser';
 
-const post = {
+const tweet = {
+  profile_service: 'twitter',
+  text: 'What Do the New Twitter Rules Mean for Social Media Managers (and Buffer Customers) https://buff.ly/2JNS3tL',
+  type: 'text',
+};
+const retweet = {
   profile_service: 'twitter',
   retweet: {
     user_id: 19475858,
@@ -15,8 +20,8 @@ const post = {
       http: 'http://pbs.twimg.com/profile_images/867425050043052033/Ci4OgTlV_normal.jpg',
       https: 'https://pbs.twimg.com/profile_images/867425050043052033/Ci4OgTlV_normal.jpg',
     },
-    comment: 'Fascinating',
-    comment_formatted: 'Fascinating',
+    comment: 'Fascinating #Really',
+    comment_formatted: 'Fascinating <a href="https://twitter.com/#!/search?q=%23Really" title="#Really" class="hashtag" rel="external nofollow" target="_blank">#Really</a>',
   },
   retweeted_tweet_id: '990952846110658560',
   text: 'Fascinating',
@@ -26,12 +31,17 @@ const post = {
 
 describe('post parser', () => {
   it('extracts links from retweet', () => {
-    const parsedPost = postParser(post);
+    const parsedPost = postParser(retweet);
     expect(parsedPost.links).toHaveLength(2);
   });
 
   it('stores links from retweet comment in retweetCommentLinks', () => {
-    const parsedPost = postParser(post);
+    const parsedPost = postParser(retweet);
+    expect(parsedPost.retweetCommentLinks).toHaveLength(1);
+  });
+
+  it('does not extract retweetCommentLinks if there is no retweetComment', () => {
+    const parsedPost = postParser(tweet);
     expect(parsedPost.retweetCommentLinks).toHaveLength(0);
   });
 });
