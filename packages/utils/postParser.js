@@ -84,6 +84,8 @@ module.exports = (post) => {
         .concat(post.profile_service === 'facebook' ? parseFacebookEntities(text, post.entities) : [])
         .sort(({ indices: [startIdxA] }, { indices: [startIdxB] }) => startIdxA - startIdxB);
 
+  const retweetCommentLinks = canHaveLinks ? parseTwitterLinks(retweetComment) : [];
+
   const isFixed = (
     post.pinned ||
     post.scheduled_at ||
@@ -119,7 +121,7 @@ module.exports = (post) => {
     profile_service: post.profile_service,
     retweet: post.retweet,
     retweetComment,
-    retweetCommentLinks: canHaveLinks ? links : [],
+    retweetCommentLinks,
     retweetProfile: getRetweetProfileInfo(post),
     sent: post.status === 'sent',
     source_url: post.source_url,
