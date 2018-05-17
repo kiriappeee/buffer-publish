@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import {
   Input,
-  LoadingAnimation,
   Button,
 } from '@bufferapp/components';
 import {
@@ -12,10 +11,12 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 
+import UpgradeModal from '@bufferapp/publish-upgrade-modal';
+
 import ComposerPopover from '../ComposerPopover';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
-import MiniCalendar from  '../MiniCalendar';
+import MiniCalendar from '../MiniCalendar';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -24,7 +25,7 @@ const composerStyle = {
 
 const topBarContainerStyle = {
   display: 'flex',
-}
+};
 
 const loadingContainerStyle = {
   width: '100%',
@@ -36,7 +37,7 @@ const loadingContainerStyle = {
 const buttonStyle = {
   height: '40px',
   marginLeft: '1.5rem',
-}
+};
 
 const QueuedPosts = ({
   total,
@@ -73,6 +74,10 @@ const QueuedPosts = ({
 
   return (
     <div>
+
+      {/* Always show upgrade modal for now, while testing */}
+      <UpgradeModal />
+
       <PostDragLayer />
       <div style={topBarContainerStyle}>
         <div style={composerStyle}>

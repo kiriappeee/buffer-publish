@@ -13,6 +13,7 @@ import { reducer as notificationsReducer } from '@bufferapp/notifications';
 import { reducer as environmentReducer } from '@bufferapp/environment';
 import { reducer as appSwitcherReducer } from '@bufferapp/publish-app-switcher';
 import { reducer as betaRedirectReducer } from '@bufferapp/publish-beta-redirect';
+import { reducer as upgradeModalReducer } from '@bufferapp/publish-upgrade-modal';
 
 export default combineReducers({
   form: formReducer,
@@ -29,4 +30,5 @@ export default combineReducers({
   environment: environmentReducer,
   appSwitcher: appSwitcherReducer,
   betaRedirect: betaRedirectReducer,
+  upgradeModal: upgradeModalReducer,
 });

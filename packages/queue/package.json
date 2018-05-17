@@ -12,11 +12,12 @@
   "author": "melissa@buffer.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.2.7",
-    "@bufferapp/components": "1.0.9",
-    "@bufferapp/composer": "1.5.9",
+    "@bufferapp/components": "2.1.4",
+    "@bufferapp/composer": "1.6.5",
     "@bufferapp/notifications": "1.4.0",
     "@bufferapp/publish-profile-sidebar": "1.4.0",
     "@bufferapp/publish-shared-components": "1.4.0",
+    "@bufferapp/publish-upgrade-modal": "1.0.0",
     "moment-timezone": "0.5.12",
     "react-day-picker": "7.0.7"
   },
