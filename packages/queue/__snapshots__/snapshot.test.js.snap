@@ -38,9 +38,9 @@ exports[`Snapshots QueuePausedBar default 1`] = `
             style={
               Object {
                 "color": "#59626a",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
-                "fontWeight": 600,
+                "fontWeight": 700,
               }
             }
           >
@@ -58,7 +58,7 @@ exports[`Snapshots QueuePausedBar default 1`] = `
             style={
               Object {
                 "color": "#59626a",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "0.9rem",
                 "fontWeight": 400,
               }
@@ -83,8 +83,8 @@ exports[`Snapshots QueuePausedBar default 1`] = `
               "color": "#fff",
               "cursor": "pointer",
               "display": "inline-block",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
               "margin": "0",
               "outline": "none",
@@ -112,8 +112,8 @@ exports[`Snapshots QueuePausedBar default 1`] = `
               "color": "#168eea",
               "cursor": "pointer",
               "display": "inline-block",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
               "margin": "0",
               "outline": "none",
@@ -134,6 +134,947 @@ exports[`Snapshots QueuedPosts default 1`] = `
 <div>
   <span>
     <div>
+      <span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": undefined,
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": "0",
+              "position": "absolute",
+              "right": undefined,
+              "top": "0",
+              "width": "100vw",
+              "zIndex": 3000,
+            }
+          }
+        >
+          <div
+            onMouseEnter={undefined}
+            onMouseLeave={undefined}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "border": "0.063rem solid #e6ebef",
+                "borderRadius": "0.126rem",
+                "color": "#323b43",
+                "fontSize": "0.9rem",
+                "lineHeight": 1.5,
+                "padding": "1.5rem",
+                "transition": "box-shadow 0.2s linear",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "margin": "0 25px",
+                  "width": "550px",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "margin": "0 0 1rem 0",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#323b43",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1.25rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                />
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flex": "1",
+                    }
+                  }
+                >
+                  <ul
+                    style={
+                      Object {
+                        "marginRight": "1.2rem",
+                        "padding": "0 1rem",
+                      }
+                    }
+                  >
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": "1",
+                    }
+                  }
+                >
+                  <ul
+                    style={
+                      Object {
+                        "padding": "0 1rem",
+                      }
+                    }
+                  >
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <hr
+                style={
+                  Object {
+                    "background": "#e6ebef",
+                    "border": "none",
+                    "boxSizing": "border-box",
+                    "height": "0.063rem",
+                    "marginBottom": "1.5rem",
+                    "marginTop": "",
+                    "width": "100%",
+                  }
+                }
+              />
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <button
+                  style={
+                    Object {
+                      "background": "white",
+                      "border": "1px solid #e6ebef",
+                      "borderRadius": "0.126rem",
+                      "cursor": "pointer",
+                      "display": "block",
+                      "flex": "1",
+                      "marginRight": "25px",
+                      "padding": "0.8rem 0.25rem",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 700,
+                      }
+                    }
+                  />
+                  <br />
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  />
+                </button>
+                <button
+                  style={
+                    Object {
+                      "background": "white",
+                      "border": "1px solid #e6ebef",
+                      "borderRadius": "0.126rem",
+                      "cursor": "pointer",
+                      "display": "block",
+                      "flex": "1",
+                      "marginRight": 0,
+                      "padding": "0.8rem 0.25rem",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 700,
+                      }
+                    }
+                  />
+                  <br />
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  />
+                </button>
+              </div>
+              <div
+                style={
+                  Object {
+                    "margin": "1.5rem 0 1rem",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                   
+                  <svg
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "#2fd566",
+                        "height": "1rem",
+                        "width": "1rem",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 16 16"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      className="shamrock"
+                    >
+                      <path
+                        d="M13,7 L13.9931545,7 C14.5492199,7 15,7.4463114 15,7.99754465 L15,15.0026639 C15,15.5534774 14.5500512,16 13.9931545,16 L2.00684547,16 C1.45078007,16 1,15.5468246 1,15.0026639 L1,7.99754465 C1,7.44661595 1.44994876,7 2.00684547,7 L3,7 L3,4.99668583 C3,2.23709245 5.24419519,0 8,0 C10.7614237,0 13,2.24157855 13,4.99668583 L13,7 Z M11,7 L11,4.99668583 C11,3.34461797 9.6553241,2 8,2 C6.34618032,2 5,3.34424456 5,4.99668583 L5,7 L11,7 Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardName"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardName"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "#fff",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardNumber"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardNumber"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "#fff",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "marginTop": "1rem",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardExpiryMonth"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <select
+                      id="cardExpiryMonth"
+                      name="cardExpiryMonth"
+                      style={
+                        Object {
+                          "border": "0.063rem solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "height": "37px",
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <option />
+                      <option
+                        value="01"
+                      >
+                        1 - Jan
+                      </option>
+                      <option
+                        value="02"
+                      >
+                        2 - Feb
+                      </option>
+                      <option
+                        value="03"
+                      >
+                        3 - Mar
+                      </option>
+                      <option
+                        value="04"
+                      >
+                        4 - Apr
+                      </option>
+                      <option
+                        value="05"
+                      >
+                        5 - May
+                      </option>
+                      <option
+                        value="06"
+                      >
+                        6 - Jun
+                      </option>
+                      <option
+                        value="07"
+                      >
+                        7 - Jul
+                      </option>
+                      <option
+                        value="08"
+                      >
+                        8 - Aug
+                      </option>
+                      <option
+                        value="09"
+                      >
+                        9 - Sep
+                      </option>
+                      <option
+                        value="10"
+                      >
+                        10 - Oct
+                      </option>
+                      <option
+                        value="11"
+                      >
+                        11 - Nov
+                      </option>
+                      <option
+                        value="12"
+                      >
+                        12 - Dec
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardExpiryYear"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <select
+                      id="cardExpiryYear"
+                      name="cardExpiryYear"
+                      style={
+                        Object {
+                          "border": "0.063rem solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "height": "37px",
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <option />
+                      <option
+                        value={2018}
+                      >
+                        2018
+                      </option>
+                      <option
+                        value={2019}
+                      >
+                        2019
+                      </option>
+                      <option
+                        value={2020}
+                      >
+                        2020
+                      </option>
+                      <option
+                        value={2021}
+                      >
+                        2021
+                      </option>
+                      <option
+                        value={2022}
+                      >
+                        2022
+                      </option>
+                      <option
+                        value={2023}
+                      >
+                        2023
+                      </option>
+                      <option
+                        value={2024}
+                      >
+                        2024
+                      </option>
+                      <option
+                        value={2025}
+                      >
+                        2025
+                      </option>
+                      <option
+                        value={2026}
+                      >
+                        2026
+                      </option>
+                      <option
+                        value={2027}
+                      >
+                        2027
+                      </option>
+                      <option
+                        value={2028}
+                      >
+                        2028
+                      </option>
+                      <option
+                        value={2029}
+                      >
+                        2029
+                      </option>
+                      <option
+                        value={2030}
+                      >
+                        2030
+                      </option>
+                      <option
+                        value={2031}
+                      >
+                        2031
+                      </option>
+                      <option
+                        value={2032}
+                      >
+                        2032
+                      </option>
+                      <option
+                        value={2033}
+                      >
+                        2033
+                      </option>
+                      <option
+                        value={2034}
+                      >
+                        2034
+                      </option>
+                      <option
+                        value={2035}
+                      >
+                        2035
+                      </option>
+                      <option
+                        value={2036}
+                      >
+                        2036
+                      </option>
+                      <option
+                        value={2037}
+                      >
+                        2037
+                      </option>
+                      <option
+                        value={2038}
+                      >
+                        2038
+                      </option>
+                      <option
+                        value={2039}
+                      >
+                        2039
+                      </option>
+                      <option
+                        value={2040}
+                      >
+                        2040
+                      </option>
+                      <option
+                        value={2041}
+                      >
+                        2041
+                      </option>
+                      <option
+                        value={2042}
+                      >
+                        2042
+                      </option>
+                      <option
+                        value={2043}
+                      >
+                        2043
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardCvc"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardCvc"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "right 6px center no-repeat url('data:image/svg+xml;utf8,<svg width=\\"31\\" height=\\"21\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path fill=\\"%23fff\\" d=\\"M0 0h31v21H0z\\"/><rect width=\\"31\\" height=\\"21\\" rx=\\"3\\" fill=\\"%232D98C8\\"/><path fill=\\"%23343E47\\" d=\\"M0 3h31v3H0z\\"/><path fill=\\"%23fff\\" d=\\"M6 9h20v4H6z\\"/><path fill=\\"%23FD232B\\" d=\\"M20 10h5v2h-5z\\"/></svg>')",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardZip"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardZip"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "#fff",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "margin": "2rem 0 0",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <button
+                  aria-label={null}
+                  disabled={undefined}
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "#168eea",
+                      "border": "0.063rem solid transparent",
+                      "borderRadius": "2rem",
+                      "color": "#fff",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                      "margin": "0",
+                      "outline": "none",
+                      "padding": "0.5rem 2rem",
+                      "transition": "background-color 0.2s linear",
+                    }
+                  }
+                />
+                <br />
+                <br />
+                <button
+                  aria-label={null}
+                  disabled={undefined}
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "border": 0,
+                      "borderColor": "#168eea",
+                      "borderRadius": "2rem",
+                      "color": "#168eea",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                      "margin": "0",
+                      "outline": "none",
+                      "padding": "0.5rem 2rem",
+                      "transition": "background-color 0.2s linear",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          onClick={undefined}
+          style={
+            Object {
+              "backgroundColor": "rgba(50, 59, 67, 0.8)",
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "zIndex": 2000,
+            }
+          }
+        />
+      </span>
       <div
         style={
           Object {
@@ -161,7 +1102,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                   "border": "0.063rem solid #ced7df",
                   "borderRadius": "0.126rem",
                   "boxSizing": "border-box",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "outline": 0,
                   "padding": "0.5rem",
@@ -188,7 +1129,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -281,7 +1222,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -318,8 +1259,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -387,8 +1328,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -442,8 +1383,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -499,8 +1440,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -605,7 +1546,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -642,8 +1583,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -711,8 +1652,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -766,8 +1707,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -823,8 +1764,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -856,7 +1797,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -949,7 +1890,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -986,8 +1927,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -1055,8 +1996,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -1110,8 +2051,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1167,8 +2108,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1273,7 +2214,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -1310,8 +2251,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -1379,8 +2320,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -1434,8 +2375,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1491,8 +2432,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1662,6 +2603,947 @@ exports[`Snapshots QueuedPosts paused 1`] = `
 <div>
   <span>
     <div>
+      <span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": undefined,
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": "0",
+              "position": "absolute",
+              "right": undefined,
+              "top": "0",
+              "width": "100vw",
+              "zIndex": 3000,
+            }
+          }
+        >
+          <div
+            onMouseEnter={undefined}
+            onMouseLeave={undefined}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "border": "0.063rem solid #e6ebef",
+                "borderRadius": "0.126rem",
+                "color": "#323b43",
+                "fontSize": "0.9rem",
+                "lineHeight": 1.5,
+                "padding": "1.5rem",
+                "transition": "box-shadow 0.2s linear",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "margin": "0 25px",
+                  "width": "550px",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "margin": "0 0 1rem 0",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#323b43",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1.25rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                />
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flex": "1",
+                    }
+                  }
+                >
+                  <ul
+                    style={
+                      Object {
+                        "marginRight": "1.2rem",
+                        "padding": "0 1rem",
+                      }
+                    }
+                  >
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": "1",
+                    }
+                  }
+                >
+                  <ul
+                    style={
+                      Object {
+                        "padding": "0 1rem",
+                      }
+                    }
+                  >
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                    <li
+                      style={
+                        Object {
+                          "marginBottom": "0.75rem",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <hr
+                style={
+                  Object {
+                    "background": "#e6ebef",
+                    "border": "none",
+                    "boxSizing": "border-box",
+                    "height": "0.063rem",
+                    "marginBottom": "1.5rem",
+                    "marginTop": "",
+                    "width": "100%",
+                  }
+                }
+              />
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <button
+                  style={
+                    Object {
+                      "background": "white",
+                      "border": "1px solid #e6ebef",
+                      "borderRadius": "0.126rem",
+                      "cursor": "pointer",
+                      "display": "block",
+                      "flex": "1",
+                      "marginRight": "25px",
+                      "padding": "0.8rem 0.25rem",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 700,
+                      }
+                    }
+                  />
+                  <br />
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  />
+                </button>
+                <button
+                  style={
+                    Object {
+                      "background": "white",
+                      "border": "1px solid #e6ebef",
+                      "borderRadius": "0.126rem",
+                      "cursor": "pointer",
+                      "display": "block",
+                      "flex": "1",
+                      "marginRight": 0,
+                      "padding": "0.8rem 0.25rem",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 700,
+                      }
+                    }
+                  />
+                  <br />
+                  <span
+                    style={
+                      Object {
+                        "color": "#666c72",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  />
+                </button>
+              </div>
+              <div
+                style={
+                  Object {
+                    "margin": "1.5rem 0 1rem",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                   
+                  <svg
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "#2fd566",
+                        "height": "1rem",
+                        "width": "1rem",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 16 16"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      className="shamrock"
+                    >
+                      <path
+                        d="M13,7 L13.9931545,7 C14.5492199,7 15,7.4463114 15,7.99754465 L15,15.0026639 C15,15.5534774 14.5500512,16 13.9931545,16 L2.00684547,16 C1.45078007,16 1,15.5468246 1,15.0026639 L1,7.99754465 C1,7.44661595 1.44994876,7 2.00684547,7 L3,7 L3,4.99668583 C3,2.23709245 5.24419519,0 8,0 C10.7614237,0 13,2.24157855 13,4.99668583 L13,7 Z M11,7 L11,4.99668583 C11,3.34461797 9.6553241,2 8,2 C6.34618032,2 5,3.34424456 5,4.99668583 L5,7 L11,7 Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardName"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardName"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "#fff",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardNumber"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardNumber"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "#fff",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "marginTop": "1rem",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardExpiryMonth"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <select
+                      id="cardExpiryMonth"
+                      name="cardExpiryMonth"
+                      style={
+                        Object {
+                          "border": "0.063rem solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "height": "37px",
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <option />
+                      <option
+                        value="01"
+                      >
+                        1 - Jan
+                      </option>
+                      <option
+                        value="02"
+                      >
+                        2 - Feb
+                      </option>
+                      <option
+                        value="03"
+                      >
+                        3 - Mar
+                      </option>
+                      <option
+                        value="04"
+                      >
+                        4 - Apr
+                      </option>
+                      <option
+                        value="05"
+                      >
+                        5 - May
+                      </option>
+                      <option
+                        value="06"
+                      >
+                        6 - Jun
+                      </option>
+                      <option
+                        value="07"
+                      >
+                        7 - Jul
+                      </option>
+                      <option
+                        value="08"
+                      >
+                        8 - Aug
+                      </option>
+                      <option
+                        value="09"
+                      >
+                        9 - Sep
+                      </option>
+                      <option
+                        value="10"
+                      >
+                        10 - Oct
+                      </option>
+                      <option
+                        value="11"
+                      >
+                        11 - Nov
+                      </option>
+                      <option
+                        value="12"
+                      >
+                        12 - Dec
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardExpiryYear"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <select
+                      id="cardExpiryYear"
+                      name="cardExpiryYear"
+                      style={
+                        Object {
+                          "border": "0.063rem solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "height": "37px",
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <option />
+                      <option
+                        value={2018}
+                      >
+                        2018
+                      </option>
+                      <option
+                        value={2019}
+                      >
+                        2019
+                      </option>
+                      <option
+                        value={2020}
+                      >
+                        2020
+                      </option>
+                      <option
+                        value={2021}
+                      >
+                        2021
+                      </option>
+                      <option
+                        value={2022}
+                      >
+                        2022
+                      </option>
+                      <option
+                        value={2023}
+                      >
+                        2023
+                      </option>
+                      <option
+                        value={2024}
+                      >
+                        2024
+                      </option>
+                      <option
+                        value={2025}
+                      >
+                        2025
+                      </option>
+                      <option
+                        value={2026}
+                      >
+                        2026
+                      </option>
+                      <option
+                        value={2027}
+                      >
+                        2027
+                      </option>
+                      <option
+                        value={2028}
+                      >
+                        2028
+                      </option>
+                      <option
+                        value={2029}
+                      >
+                        2029
+                      </option>
+                      <option
+                        value={2030}
+                      >
+                        2030
+                      </option>
+                      <option
+                        value={2031}
+                      >
+                        2031
+                      </option>
+                      <option
+                        value={2032}
+                      >
+                        2032
+                      </option>
+                      <option
+                        value={2033}
+                      >
+                        2033
+                      </option>
+                      <option
+                        value={2034}
+                      >
+                        2034
+                      </option>
+                      <option
+                        value={2035}
+                      >
+                        2035
+                      </option>
+                      <option
+                        value={2036}
+                      >
+                        2036
+                      </option>
+                      <option
+                        value={2037}
+                      >
+                        2037
+                      </option>
+                      <option
+                        value={2038}
+                      >
+                        2038
+                      </option>
+                      <option
+                        value={2039}
+                      >
+                        2039
+                      </option>
+                      <option
+                        value={2040}
+                      >
+                        2040
+                      </option>
+                      <option
+                        value={2041}
+                      >
+                        2041
+                      </option>
+                      <option
+                        value={2042}
+                      >
+                        2042
+                      </option>
+                      <option
+                        value={2043}
+                      >
+                        2043
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": "25px",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardCvc"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardCvc"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "right 6px center no-repeat url('data:image/svg+xml;utf8,<svg width=\\"31\\" height=\\"21\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path fill=\\"%23fff\\" d=\\"M0 0h31v21H0z\\"/><rect width=\\"31\\" height=\\"21\\" rx=\\"3\\" fill=\\"%232D98C8\\"/><path fill=\\"%23343E47\\" d=\\"M0 3h31v3H0z\\"/><path fill=\\"%23fff\\" d=\\"M6 9h20v4H6z\\"/><path fill=\\"%23FD232B\\" d=\\"M20 10h5v2h-5z\\"/></svg>')",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <div>
+                    <label
+                      htmlFor="cardZip"
+                      style={
+                        Object {
+                          "display": "block",
+                          "padding": "0 0 0.25rem 0",
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      />
+                    </label>
+                    <input
+                      autoComplete="off"
+                      id="cardZip"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      style={
+                        Object {
+                          "background": "#fff",
+                          "border": "1px solid #ced7df",
+                          "borderRadius": "0.126rem",
+                          "boxSizing": "border-box",
+                          "fontFamily": "\\"Roboto\\", sans-serif",
+                          "fontSize": "1rem",
+                          "outline": 0,
+                          "padding": "0.5rem",
+                          "width": "100%",
+                        }
+                      }
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "margin": "2rem 0 0",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <button
+                  aria-label={null}
+                  disabled={undefined}
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "#168eea",
+                      "border": "0.063rem solid transparent",
+                      "borderRadius": "2rem",
+                      "color": "#fff",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                      "margin": "0",
+                      "outline": "none",
+                      "padding": "0.5rem 2rem",
+                      "transition": "background-color 0.2s linear",
+                    }
+                  }
+                />
+                <br />
+                <br />
+                <button
+                  aria-label={null}
+                  disabled={undefined}
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "border": 0,
+                      "borderColor": "#168eea",
+                      "borderRadius": "2rem",
+                      "color": "#168eea",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                      "margin": "0",
+                      "outline": "none",
+                      "padding": "0.5rem 2rem",
+                      "transition": "background-color 0.2s linear",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          onClick={undefined}
+          style={
+            Object {
+              "backgroundColor": "rgba(50, 59, 67, 0.8)",
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "zIndex": 2000,
+            }
+          }
+        />
+      </span>
       <div
         style={
           Object {
@@ -1689,7 +3571,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   "border": "0.063rem solid #ced7df",
                   "borderRadius": "0.126rem",
                   "boxSizing": "border-box",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "outline": 0,
                   "padding": "0.5rem",
@@ -1738,9 +3620,9 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
                     "fontSize": "1rem",
-                    "fontWeight": 600,
+                    "fontWeight": 700,
                   }
                 }
               >
@@ -1758,7 +3640,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
                     "fontSize": "0.9rem",
                     "fontWeight": 400,
                   }
@@ -1783,8 +3665,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   "color": "#fff",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -1812,8 +3694,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   "color": "#168eea",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -1841,7 +3723,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -1919,7 +3801,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -1956,8 +3838,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2025,8 +3907,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -2080,8 +3962,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2137,8 +4019,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2227,7 +4109,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -2264,8 +4146,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2333,8 +4215,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -2388,8 +4270,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2445,8 +4327,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2477,7 +4359,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -2555,7 +4437,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -2592,8 +4474,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2661,8 +4543,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -2716,8 +4598,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2773,8 +4655,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2863,7 +4745,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -2900,8 +4782,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2969,8 +4851,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -3024,8 +4906,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -3081,8 +4963,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }

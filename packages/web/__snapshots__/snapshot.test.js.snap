@@ -127,8 +127,8 @@ exports[`Snapshots App should render application 1`] = `
             style={
               Object {
                 "color": "#fff",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
                 "fontWeight": 400,
               }
             }
@@ -237,8 +237,8 @@ exports[`Snapshots App should render application 1`] = `
             style={
               Object {
                 "color": "#fff",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
                 "fontWeight": 400,
               }
             }
@@ -354,8 +354,8 @@ exports[`Snapshots App should render application 1`] = `
             style={
               Object {
                 "color": "#fff",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
                 "fontWeight": 400,
               }
             }
@@ -479,8 +479,8 @@ exports[`Snapshots App should render application 1`] = `
               style={
                 Object {
                   "color": "#fff",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                 }
               }
@@ -504,7 +504,7 @@ exports[`Snapshots App should render application 1`] = `
                     style={
                       Object {
                         "color": "#fff",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }

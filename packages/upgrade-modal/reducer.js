@@ -1,11 +1,7 @@
-// import {
-//   actionTypes as dataFetchActionTypes,
-// } from '@bufferapp/async-data-fetch';
-
 export const actionTypes = {};
 
 const initialState = {
-  cycle: 'year'
+  cycle: 'year',
 };
 
 export default (state = initialState, action) => {

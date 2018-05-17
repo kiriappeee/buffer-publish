@@ -26,9 +26,9 @@ exports[`Snapshots PostingTimeForm default 1`] = `
           style={
             Object {
               "color": "#000",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
-              "fontWeight": 300,
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 100,
             }
           }
         >
@@ -87,7 +87,7 @@ exports[`Snapshots PostingTimeForm default 1`] = `
                       "border": "0.063rem solid #e6ebef",
                       "borderRadius": "0.126rem",
                       "color": "#59626a",
-                      "fontSize": "0.8rem",
+                      "fontSize": "0.75rem",
                       "height": "2rem",
                       "padding": "0 1.5rem 0 0.5rem",
                       "width": "100%",
@@ -188,9 +188,9 @@ exports[`Snapshots PostingTimeForm default 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
-                "fontWeight": 300,
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 100,
               }
             }
           >
@@ -247,7 +247,7 @@ exports[`Snapshots PostingTimeForm default 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -439,7 +439,7 @@ exports[`Snapshots PostingTimeForm default 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -871,7 +871,7 @@ exports[`Snapshots PostingTimeForm default 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -1005,8 +1005,8 @@ exports[`Snapshots PostingTimeForm default 1`] = `
                   "color": "#fff",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -1051,9 +1051,9 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
           style={
             Object {
               "color": "#000",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
-              "fontWeight": 300,
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 100,
             }
           }
         >
@@ -1112,7 +1112,7 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
                       "border": "0.063rem solid #e6ebef",
                       "borderRadius": "0.126rem",
                       "color": "#59626a",
-                      "fontSize": "0.8rem",
+                      "fontSize": "0.75rem",
                       "height": "2rem",
                       "padding": "0 1.5rem 0 0.5rem",
                       "width": "100%",
@@ -1213,9 +1213,9 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
-                "fontWeight": 300,
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 100,
               }
             }
           >
@@ -1272,7 +1272,7 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -1524,7 +1524,7 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -1948,8 +1948,8 @@ exports[`Snapshots PostingTimeForm with 24hour time 1`] = `
                   "color": "#fff",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -1994,9 +1994,9 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
           style={
             Object {
               "color": "#000",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
-              "fontWeight": 300,
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 100,
             }
           }
         >
@@ -2055,7 +2055,7 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
                       "border": "0.063rem solid #e6ebef",
                       "borderRadius": "0.126rem",
                       "color": "#59626a",
-                      "fontSize": "0.8rem",
+                      "fontSize": "0.75rem",
                       "height": "2rem",
                       "padding": "0 1.5rem 0 0.5rem",
                       "width": "100%",
@@ -2156,9 +2156,9 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
-                "fontWeight": 300,
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 100,
               }
             }
           >
@@ -2215,7 +2215,7 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -2407,7 +2407,7 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -2839,7 +2839,7 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
                         "border": "0.063rem solid #e6ebef",
                         "borderRadius": "0.126rem",
                         "color": "#59626a",
-                        "fontSize": "0.8rem",
+                        "fontSize": "0.75rem",
                         "height": "2rem",
                         "padding": "0 1.5rem 0 0.5rem",
                         "paddingRight": "1rem",
@@ -2973,8 +2973,8 @@ exports[`Snapshots PostingTimeForm with submitting delay 1`] = `
                   "color": "#fff",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -3008,7 +3008,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
         style={
           Object {
             "color": "#000",
-            "fontFamily": "\\"Open Sans\\", sans-serif",
+            "fontFamily": "\\"Roboto\\", sans-serif",
             "fontSize": "1rem",
             "fontWeight": 400,
           }
@@ -3071,9 +3071,9 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 style={
                   Object {
                     "color": "#000",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                    "fontSize": "0.8rem",
-                    "fontWeight": 300,
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 100,
                   }
                 }
               >
@@ -3159,8 +3159,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
           style={
             Object {
               "color": "#59626a",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
             }
           }
@@ -3171,8 +3171,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
           style={
             Object {
               "color": "#59626a",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
             }
           }
@@ -3187,7 +3187,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
             style={
               Object {
                 "color": "#168eea",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "padding": "0",
               }
             }
@@ -3219,8 +3219,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 "color": "#fff",
                 "cursor": "pointer",
                 "display": "inline-block",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
                 "fontWeight": 400,
                 "margin": "0",
                 "outline": "none",
@@ -3280,9 +3280,9 @@ exports[`Snapshots ProfileSettings default 1`] = `
               style={
                 Object {
                   "color": "#000",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
-                  "fontWeight": 300,
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
+                  "fontWeight": 100,
                 }
               }
             >
@@ -3341,7 +3341,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                           "border": "0.063rem solid #e6ebef",
                           "borderRadius": "0.126rem",
                           "color": "#59626a",
-                          "fontSize": "0.8rem",
+                          "fontSize": "0.75rem",
                           "height": "2rem",
                           "padding": "0 1.5rem 0 0.5rem",
                           "width": "100%",
@@ -3442,9 +3442,9 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 style={
                   Object {
                     "color": "#000",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                    "fontSize": "0.8rem",
-                    "fontWeight": 300,
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 100,
                   }
                 }
               >
@@ -3501,7 +3501,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             "border": "0.063rem solid #e6ebef",
                             "borderRadius": "0.126rem",
                             "color": "#59626a",
-                            "fontSize": "0.8rem",
+                            "fontSize": "0.75rem",
                             "height": "2rem",
                             "padding": "0 1.5rem 0 0.5rem",
                             "paddingRight": "1rem",
@@ -3693,7 +3693,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             "border": "0.063rem solid #e6ebef",
                             "borderRadius": "0.126rem",
                             "color": "#59626a",
-                            "fontSize": "0.8rem",
+                            "fontSize": "0.75rem",
                             "height": "2rem",
                             "padding": "0 1.5rem 0 0.5rem",
                             "paddingRight": "1rem",
@@ -4125,7 +4125,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             "border": "0.063rem solid #e6ebef",
                             "borderRadius": "0.126rem",
                             "color": "#59626a",
-                            "fontSize": "0.8rem",
+                            "fontSize": "0.75rem",
                             "height": "2rem",
                             "padding": "0 1.5rem 0 0.5rem",
                             "paddingRight": "1rem",
@@ -4259,8 +4259,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#fff",
                       "cursor": "pointer",
                       "display": "inline-block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0",
                       "outline": "none",
@@ -4313,9 +4313,9 @@ exports[`Snapshots ProfileSettings default 1`] = `
           style={
             Object {
               "color": "#000",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
-              "fontWeight": 300,
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 100,
             }
           }
         >
@@ -4420,8 +4420,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#fff",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -4461,8 +4461,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
             "color": "#168eea",
             "cursor": "pointer",
             "display": "inline-block",
-            "fontFamily": "\\"Open Sans\\", sans-serif",
-            "fontSize": "0.8rem",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.75rem",
             "fontWeight": 400,
             "margin": "0",
             "outline": "none",
@@ -4477,13 +4477,17 @@ exports[`Snapshots ProfileSettings default 1`] = `
         <div
           style={
             Object {
+              "alignItems": "center",
               "bottom": undefined,
-              "display": "none",
-              "left": "50%",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": "0",
               "position": "absolute",
               "right": undefined,
-              "top": "50%",
-              "transform": "translate(-50%, -50%)",
+              "top": "0",
+              "width": "100vw",
               "zIndex": 3000,
             }
           }
@@ -4680,8 +4684,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                     "color": "#323b43",
                     "cursor": "pointer",
                     "display": "inline-block",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                    "fontSize": "0.8rem",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
                     "fontWeight": 400,
                     "margin": "0",
                     "outline": "none",
@@ -4709,8 +4713,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                     "color": "#323b43",
                     "cursor": "pointer",
                     "display": "inline-block",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                    "fontSize": "0.8rem",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
                     "fontWeight": 400,
                     "margin": "0",
                     "outline": "none",
@@ -4724,6 +4728,21 @@ exports[`Snapshots ProfileSettings default 1`] = `
             </div>
           </div>
         </div>
+        <div
+          onClick={undefined}
+          style={
+            Object {
+              "backgroundColor": "rgba(50, 59, 67, 0.8)",
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "zIndex": 2000,
+            }
+          }
+        />
       </span>
       <div
         style={
@@ -4792,8 +4811,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -4817,8 +4836,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -4907,7 +4926,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -4996,8 +5015,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -5041,7 +5060,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -5391,7 +5410,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -5559,7 +5578,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -5648,8 +5667,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -5693,7 +5712,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -6043,7 +6062,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -6182,8 +6201,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -6207,8 +6226,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -6297,7 +6316,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -6386,8 +6405,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -6431,7 +6450,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -6781,7 +6800,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -6949,7 +6968,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -7038,8 +7057,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -7083,7 +7102,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -7433,7 +7452,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -7572,8 +7591,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -7597,8 +7616,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -7687,7 +7706,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -7776,8 +7795,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -7821,7 +7840,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -8171,7 +8190,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -8339,7 +8358,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -8428,8 +8447,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -8473,7 +8492,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -8823,7 +8842,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -8962,8 +8981,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -8987,8 +9006,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -9077,7 +9096,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -9166,8 +9185,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -9211,7 +9230,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -9561,7 +9580,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -9729,7 +9748,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -9818,8 +9837,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -9863,7 +9882,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -10213,7 +10232,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -10352,8 +10371,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -10377,8 +10396,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -10467,7 +10486,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -10556,8 +10575,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -10601,7 +10620,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -10951,7 +10970,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -11119,7 +11138,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -11208,8 +11227,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -11253,7 +11272,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -11603,7 +11622,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -11742,8 +11761,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -11767,8 +11786,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -11857,7 +11876,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -11946,8 +11965,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -11991,7 +12010,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -12341,7 +12360,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -12509,7 +12528,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -12598,8 +12617,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -12643,7 +12662,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -12993,7 +13012,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -13132,8 +13151,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   style={
                     Object {
                       "color": "#323b43",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                     }
                   }
@@ -13157,8 +13176,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                       "color": "#168eea",
                       "cursor": "pointer",
                       "display": "block",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.8rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
                       "fontWeight": 400,
                       "margin": "0 auto",
                       "outline": "none",
@@ -13247,7 +13266,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -13336,8 +13355,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -13381,7 +13400,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -13731,7 +13750,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -13899,7 +13918,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -13988,8 +14007,8 @@ exports[`Snapshots ProfileSettings default 1`] = `
                             style={
                               Object {
                                 "color": "#59626a",
-                                "fontFamily": "\\"Open Sans\\", sans-serif",
-                                "fontSize": "0.8rem",
+                                "fontFamily": "\\"Roboto\\", sans-serif",
+                                "fontSize": "0.75rem",
                                 "fontWeight": 400,
                               }
                             }
@@ -14033,7 +14052,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -14383,7 +14402,7 @@ exports[`Snapshots ProfileSettings default 1`] = `
                                   "border": 0,
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.8rem",
+                                  "fontSize": "0.75rem",
                                   "height": "auto",
                                   "margin": 0,
                                   "padding": 0,
@@ -14513,9 +14532,9 @@ exports[`Snapshots SettingsTooltip default 1`] = `
         style={
           Object {
             "color": "#000",
-            "fontFamily": "\\"Open Sans\\", sans-serif",
-            "fontSize": "0.8rem",
-            "fontWeight": 300,
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.75rem",
+            "fontWeight": 100,
           }
         }
       >
@@ -14555,8 +14574,8 @@ exports[`Snapshots SettingsTooltip default 1`] = `
             style={
               Object {
                 "color": "#fff",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
-                "fontSize": "0.8rem",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
                 "fontWeight": 400,
               }
             }
@@ -14568,8 +14587,8 @@ exports[`Snapshots SettingsTooltip default 1`] = `
           style={
             Object {
               "color": "#fff",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
             }
           }
@@ -14608,9 +14627,9 @@ exports[`Snapshots TimezoneInputForm default 1`] = `
           style={
             Object {
               "color": "#000",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
-              "fontWeight": 300,
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 100,
             }
           }
         >
