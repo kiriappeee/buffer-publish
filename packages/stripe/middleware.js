@@ -1,5 +1,6 @@
 /* global Stripe */
 
+import { actions as notification } from '@bufferapp/notifications';
 import { actions, actionTypes } from './reducer';
 
 const getErrorMessage = (response, errorMessages) => {
@@ -27,6 +28,10 @@ export default ({ dispatch, getState }) => next => (action) => {
         const errorMessage = getErrorMessage(response, errorMessages);
         if (errorMessage) {
           dispatch(actions.throwValidationError(errorMessage));
+          dispatch(notification.createNotification({
+            notificationType: 'error',
+            message: errorMessage,
+          }));
         } else dispatch(actions.approveCreditCard(response.id));
       });
       break;

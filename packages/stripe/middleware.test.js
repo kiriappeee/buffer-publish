@@ -1,5 +1,6 @@
 /* global Stripe */
 
+import { actions as notification } from '@bufferapp/notifications';
 import middleware from './middleware';
 import { actions, actionTypes } from './reducer';
 import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPONSE, CARD_WITHOUT_ZIP_RESPONSE, CARD_WITH_WRONG_ZIP_RESPONSE } from './test/constants';
@@ -70,6 +71,19 @@ describe('middleware', () => {
         cb(null, CARD_WITHOUT_NAME_RESPONSE);
         expect(store.dispatch)
           .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.noNameError));
+        done();
+      };
+      validateCreditCard();
+    });
+
+    it('creates an error notification for the user to know', (done) => {
+      global.Stripe.createToken = (card, cb) => {
+        cb(null, CARD_WITHOUT_NAME_RESPONSE);
+        expect(store.dispatch)
+          .toHaveBeenCalledWith(expect.objectContaining({
+            notificationType: 'error',
+            message: i18n.stripe.noNameError,
+          }));
         done();
       };
       validateCreditCard();
