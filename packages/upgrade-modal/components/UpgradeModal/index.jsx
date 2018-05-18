@@ -39,8 +39,9 @@ ListItem.propTypes = { text: PropTypes.string.isRequired };
 
 const currentYear = new Date().getFullYear();
 const creditCardSvg = '<svg width="31" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="%23fff" d="M0 0h31v21H0z"/><rect width="31" height="21" rx="3" fill="%232D98C8"/><path fill="%23343E47" d="M0 3h31v3H0z"/><path fill="%23fff" d="M6 9h20v4H6z"/><path fill="%23FD232B" d="M20 10h5v2h-5z"/></svg>';
+const creditCardBackground = `right 6px center no-repeat url('data:image/svg+xml;utf8,${creditCardSvg}')`;
 
-const UpgradeModal = ({ translations, cycle }) => (
+const UpgradeModal = ({ translations, cycle, validating, upgradePlan, storeValue }) => (
   <Popover>
     <Card>
       <div style={{ width: '550px', margin: '0 25px' }}>
@@ -78,16 +79,16 @@ const UpgradeModal = ({ translations, cycle }) => (
 
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1, paddingRight: '25px' }}>
-            <InputText id="cardName" label={translations.nameOnCard} />
+            <InputText id="name" label={translations.nameOnCard} store={storeValue} />
           </div>
           <div style={{ flex: 1 }}>
-            <InputText id="cardNumber" label={translations.cardNumber} />
+            <InputText id="number" label={translations.cardNumber} store={storeValue} />
           </div>
         </div>
 
         <div style={{ display: 'flex', marginTop: '1rem' }}>
           <div style={{ flex: 1, paddingRight: '25px' }}>
-            <Select id="cardExpiryMonth" label={translations.expirationMonth}>
+            <Select id="expMonth" label={translations.expirationMonth} store={storeValue}>
               <option />
               <option value="01">1 - Jan</option>
               <option value="02">2 - Feb</option>
@@ -105,7 +106,7 @@ const UpgradeModal = ({ translations, cycle }) => (
           </div>
 
           <div style={{ flex: 1, paddingRight: '25px' }}>
-            <Select id="cardExpiryYear" label={translations.expirationYear}>
+            <Select id="expYear" label={translations.expirationYear} store={storeValue}>
               <option />
               {[...Array(26).keys()].map(i => (
                 <option
@@ -120,19 +121,22 @@ const UpgradeModal = ({ translations, cycle }) => (
 
           <div style={{ flex: 1, paddingRight: '25px', position: 'relative' }}>
             <InputText
-              id="cardCvc"
+              id="cvc"
               label={translations.securityCode}
-              backgroundStyle={`right 6px center no-repeat url('data:image/svg+xml;utf8,${creditCardSvg}')`}
+              backgroundStyle={creditCardBackground}
+              store={storeValue}
             />
           </div>
 
           <div style={{ flex: 1 }}>
-            <InputText id="cardZip" label={translations.zipCode} note={translations.zipLeaveBlank} />
+            <InputText id="addressZip" label={translations.zipCode} note={translations.zipLeaveBlank} store={storeValue} />
           </div>
         </div>
 
         <div style={{ textAlign: 'center', margin: '2rem 0 0' }}>
-          <Button large>{translations.upgradeCta}</Button>
+          <Button large disabled={validating} onClick={upgradePlan}>
+            {validating ? translations.validating : translations.upgradeCta }
+          </Button>
           <br /><br />
           <Button secondary large borderless>{translations.stayOnFreeCta}</Button>
         </div>
@@ -144,6 +148,9 @@ const UpgradeModal = ({ translations, cycle }) => (
 UpgradeModal.propTypes = {
   translations: PropTypes.object.isRequired, // eslint-disable-line
   cycle: PropTypes.string.isRequired,
+  upgradePlan: PropTypes.func.isRequired,
+  storeValue: PropTypes.func.isRequired,
+  validating: PropTypes.bool.isRequired,
 };
 
 export default UpgradeModal;

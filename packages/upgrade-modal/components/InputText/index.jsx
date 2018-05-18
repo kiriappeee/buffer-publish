@@ -55,7 +55,7 @@ class InputText extends React.Component {
     this.setState({ focused: false });
   }
   render() {
-    const { id, label, autoComplete, note, backgroundStyle } = this.props;
+    const { id, label, autoComplete, note, backgroundStyle, store } = this.props;
     const { focused } = this.state;
     return (
       <div>
@@ -69,6 +69,7 @@ class InputText extends React.Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           autoComplete={autoComplete}
+          onKeyUp={ev => store(id, ev.target.value.trim())}
         />
         {note && <Text size="extra-small">{note}</Text>}
       </div>
@@ -82,6 +83,7 @@ InputText.propTypes = {
   autoComplete: PropTypes.string,
   note: PropTypes.string,
   backgroundStyle: PropTypes.string,
+  store: PropTypes.func.isRequired,
 };
 
 InputText.defaultProps = {

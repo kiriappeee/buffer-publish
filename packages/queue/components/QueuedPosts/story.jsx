@@ -24,6 +24,7 @@ const store = storeFake({
     },
   },
   upgradeModal: {},
+  stripe: {},
 });
 
 const UpgradeModalDecorator = storyFn => (

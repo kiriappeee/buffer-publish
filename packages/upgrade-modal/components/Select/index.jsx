@@ -36,12 +36,12 @@ const selectStyle = {
   height: '37px',
 };
 
-const Select = ({ id, children, label }) => (
+const Select = ({ id, children, label, store }) => (
   <div>
     <label htmlFor={id} style={formLabelStyle}>
       <Text size="small">{label}</Text>
     </label>
-    <select name={id} id={id} style={selectStyle}>
+    <select name={id} id={id} style={selectStyle} onChange={ev => store(id, ev.target.value)}>
       {children}
     </select>
   </div>
@@ -51,6 +51,7 @@ Select.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  store: PropTypes.func.isRequired,
 };
 
 export default Select;
