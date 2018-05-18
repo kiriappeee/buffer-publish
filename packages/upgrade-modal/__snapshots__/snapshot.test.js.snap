@@ -248,6 +248,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             }
           >
             <button
+              onClick={[Function]}
               style={
                 Object {
                   "background": "white",
@@ -289,6 +290,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
               </span>
             </button>
             <button
+              onClick={[Function]}
               style={
                 Object {
                   "background": "#168eea",
@@ -426,7 +428,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             >
               <div>
                 <label
-                  htmlFor="cardName"
+                  htmlFor="name"
                   style={
                     Object {
                       "display": "block",
@@ -449,9 +451,10 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 </label>
                 <input
                   autoComplete="off"
-                  id="cardName"
+                  id="name"
                   onBlur={[Function]}
                   onFocus={[Function]}
+                  onKeyUp={[Function]}
                   style={
                     Object {
                       "background": "#fff",
@@ -478,7 +481,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             >
               <div>
                 <label
-                  htmlFor="cardNumber"
+                  htmlFor="number"
                   style={
                     Object {
                       "display": "block",
@@ -501,9 +504,10 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 </label>
                 <input
                   autoComplete="off"
-                  id="cardNumber"
+                  id="number"
                   onBlur={[Function]}
                   onFocus={[Function]}
+                  onKeyUp={[Function]}
                   style={
                     Object {
                       "background": "#fff",
@@ -540,7 +544,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             >
               <div>
                 <label
-                  htmlFor="cardExpiryMonth"
+                  htmlFor="expMonth"
                   style={
                     Object {
                       "display": "block",
@@ -562,8 +566,9 @@ exports[`Snapshots UpgradeModal default 1`] = `
                   </span>
                 </label>
                 <select
-                  id="cardExpiryMonth"
-                  name="cardExpiryMonth"
+                  id="expMonth"
+                  name="expMonth"
+                  onChange={[Function]}
                   style={
                     Object {
                       "border": "0.063rem solid #ced7df",
@@ -651,7 +656,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             >
               <div>
                 <label
-                  htmlFor="cardExpiryYear"
+                  htmlFor="expYear"
                   style={
                     Object {
                       "display": "block",
@@ -673,8 +678,9 @@ exports[`Snapshots UpgradeModal default 1`] = `
                   </span>
                 </label>
                 <select
-                  id="cardExpiryYear"
-                  name="cardExpiryYear"
+                  id="expYear"
+                  name="expYear"
+                  onChange={[Function]}
                   style={
                     Object {
                       "border": "0.063rem solid #ced7df",
@@ -833,7 +839,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             >
               <div>
                 <label
-                  htmlFor="cardCvc"
+                  htmlFor="cvc"
                   style={
                     Object {
                       "display": "block",
@@ -856,9 +862,10 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 </label>
                 <input
                   autoComplete="off"
-                  id="cardCvc"
+                  id="cvc"
                   onBlur={[Function]}
                   onFocus={[Function]}
+                  onKeyUp={[Function]}
                   style={
                     Object {
                       "background": "right 6px center no-repeat url('data:image/svg+xml;utf8,<svg width=\\"31\\" height=\\"21\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path fill=\\"%23fff\\" d=\\"M0 0h31v21H0z\\"/><rect width=\\"31\\" height=\\"21\\" rx=\\"3\\" fill=\\"%232D98C8\\"/><path fill=\\"%23343E47\\" d=\\"M0 3h31v3H0z\\"/><path fill=\\"%23fff\\" d=\\"M6 9h20v4H6z\\"/><path fill=\\"%23FD232B\\" d=\\"M20 10h5v2h-5z\\"/></svg>')",
@@ -885,7 +892,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
             >
               <div>
                 <label
-                  htmlFor="cardZip"
+                  htmlFor="addressZip"
                   style={
                     Object {
                       "display": "block",
@@ -908,9 +915,10 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 </label>
                 <input
                   autoComplete="off"
-                  id="cardZip"
+                  id="addressZip"
                   onBlur={[Function]}
                   onFocus={[Function]}
+                  onKeyUp={[Function]}
                   style={
                     Object {
                       "background": "#fff",

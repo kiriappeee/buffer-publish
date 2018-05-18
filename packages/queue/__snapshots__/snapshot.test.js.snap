@@ -366,6 +366,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                 }
               >
                 <button
+                  onClick={[Function]}
                   style={
                     Object {
                       "background": "white",
@@ -403,6 +404,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                   />
                 </button>
                 <button
+                  onClick={[Function]}
                   style={
                     Object {
                       "background": "white",
@@ -2841,6 +2843,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                 }
               >
                 <button
+                  onClick={[Function]}
                   style={
                     Object {
                       "background": "white",
@@ -2878,6 +2881,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   />
                 </button>
                 <button
+                  onClick={[Function]}
                   style={
                     Object {
                       "background": "white",

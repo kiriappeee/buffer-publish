@@ -1,6 +1,7 @@
 export const actionTypes = {
   STORE_VALUE: 'STORE_VALUE',
   UPGRADE: 'UPGRADE',
+  SELECT_CYCLE: 'SELECT_CYCLE',
 };
 
 const initialState = {
@@ -10,6 +11,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.SELECT_CYCLE:
+      return {
+        ...state,
+        cycle: action.cycle,
+      };
     case actionTypes.STORE_VALUE:
       return {
         ...state,
@@ -31,5 +37,9 @@ export const actions = {
   }),
   upgrade: () => ({
     type: actionTypes.UPGRADE,
+  }),
+  selectCycle: cycle => ({
+    type: actionTypes.SELECT_CYCLE,
+    cycle,
   }),
 };
