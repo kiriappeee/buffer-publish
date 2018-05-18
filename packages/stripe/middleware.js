@@ -1,6 +1,7 @@
 /* global Stripe */
 
 import { actions as notification } from '@bufferapp/notifications';
+import { actions as asyncDataFetchActions } from '@bufferapp/async-data-fetch';
 import { actions, actionTypes } from './reducer';
 
 const getErrorMessage = (response, errorMessages) => {
@@ -21,7 +22,7 @@ const getErrorMessage = (response, errorMessages) => {
 };
 
 export default ({ dispatch, getState }) => next => (action) => {
-  const errorMessages = getState().i18n.stripe;
+  const errorMessages = getState().i18n.translations.stripe;
   switch (action.type) {
     case actionTypes.CREDIT_CARD_VALIDATING:
       Stripe.createToken(action.card, (status, response) => {
@@ -32,7 +33,16 @@ export default ({ dispatch, getState }) => next => (action) => {
             notificationType: 'error',
             message: errorMessage,
           }));
-        } else dispatch(actions.approveCreditCard(response.id));
+        } else {
+          dispatch(asyncDataFetchActions.fetch({
+            name: 'upgradeToPro',
+            args: {
+              next: window.location.pathname,
+              cycle: getState().upgradeModal.cycle,
+              token: response.id,
+            },
+          }));
+        }
       });
       break;
     default:

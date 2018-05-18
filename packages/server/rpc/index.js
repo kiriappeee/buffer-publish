@@ -20,6 +20,7 @@ const updatePausedSchedules = require('./updatePausedSchedules');
 const sendFeedback = require('./sendFeedback');
 const savePublishBetaRedirect = require('./savePublishBetaRedirect');
 const performanceTrackingMethod = require('./performanceTracking');
+const upgradeToPro = require('./upgradeToPro');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -42,4 +43,5 @@ module.exports = checkToken(rpc(
   sendFeedback,
   savePublishBetaRedirect,
   performanceTrackingMethod,
+  upgradeToPro,
 ));
