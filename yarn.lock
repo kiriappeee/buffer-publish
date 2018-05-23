@@ -155,6 +155,12 @@
     "@bufferapp/async-data-fetch" "0.5.36-beta01"
     "@bufferapp/chronos" "0.6.1"
 
+"@bufferapp/publish-utils@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@bufferapp/publish-utils/-/publish-utils-1.4.0.tgz#d9f405a584ec33a401ec9cb2b946ad1cae3dc580"
+  dependencies:
+    moment-timezone "0.5.12"
+
 "@bufferapp/react-images-loaded@^1.1.0-fork.0":
   version "1.1.0-fork.0"
   resolved "https://registry.yarnpkg.com/@bufferapp/react-images-loaded/-/react-images-loaded-1.1.0-fork.0.tgz#fb3e2e13df30c806cf17ebf11b19a20d32c02e46"
@@ -6980,9 +6986,9 @@ moment@2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.16.0.tgz#f38f2c97c9889b0ee18fc6cc392e1e443ad2da8e"
 
-moment@2.18.1:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
+moment@2.19.3:
+  version "2.19.3"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.3.tgz#bdb99d270d6d7fda78cc0fbace855e27fe7da69f"
 
 moment@2.x.x, "moment@>= 2.9.0", moment@^2.10.6, moment@^2.6.0:
   version "2.22.0"
