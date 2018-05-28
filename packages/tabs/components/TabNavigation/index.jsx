@@ -4,13 +4,14 @@ import {
   Tabs,
   Tab,
 } from '@bufferapp/publish-shared-components';
-import { Link } from '@bufferapp/components';
+import { Link, Text } from '@bufferapp/components';
 
-const getClassicBufferPricingURL = () => {
-  if (window.location.hostname === 'publish.local.buffer.com') {
-    return 'https://local.buffer.com/pricing';
-  }
-  return 'https://buffer.com/pricing';
+const upgradeCtaStyle = {
+  transform: 'translate(0, 1px)',
+  margin: '0 42px 0 0',
+  display: 'inline-block',
+  minWidth: '60px',
+  textAlign: 'center',
 };
 
 const TabNavigation = ({
@@ -29,13 +30,19 @@ const TabNavigation = ({
       <Tab tabId={'sent'}>Sent Posts</Tab>
       <Tab tabId={'settings'}>Settings</Tab>
       {shouldShowUpgradeCta &&
-        <Link
-          href={getClassicBufferPricingURL()}
-          unstyled
-          newTab
-        >
-          Upgrade
-        </Link>
+        <div style={upgradeCtaStyle}>
+          <Text size="mini">
+            <Link
+              padding="18px 13px 17px 13px"
+              block
+              unstyled
+              newTab
+              onClick={() => { console.log('Clicked!'); }}
+            >
+              Upgrade
+            </Link>
+          </Text>
+        </div>
       }
     </Tabs>
   </div>;

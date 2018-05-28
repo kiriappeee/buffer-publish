@@ -22,7 +22,7 @@ const Tab = ({
     style={calculateStyles({
       default: {
         transform: 'translate(0, 1px)',
-        margin: '0 42px 0 0',
+        margin: '0 22px 0 0',
         display: 'inline-block',
         minWidth: '60px',
         textAlign: 'center',
