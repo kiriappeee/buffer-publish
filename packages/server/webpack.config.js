@@ -1,10 +1,11 @@
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin');
 const PostCSSImport = require('postcss-import');
 const PostCSSCustomProperties = require('postcss-custom-properties');
 const PostCSSCalc = require('postcss-calc');
 const PostCSSColorFunction = require('postcss-color-function');
+
 
 module.exports = {
   context: __dirname,
@@ -26,14 +27,28 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract([
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-          'postcss-loader',
-          `autoprefixer-loader?${JSON.stringify({
-            browsers: ['last 2 versions', '> 1%', 'ie 9', 'firefox >= 21', 'safari >= 5'],
-            cascade: false,
-          })}`,
-        ].join('!')),
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[local]___[hash:base64:5]',
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              autoprefixer: {
+                browsers: ['last 2 versions'],
+              },
+              plugins: () => [
+                'autoprefixer',
+              ],
+            },
+          },
+        ],
       },
       {
         test: /\.jsx?$/,
@@ -67,10 +82,10 @@ module.exports = {
 
     // Output CSS to a separate, CSS-only bundle
     // TODO: don't hardcode css bundle name if we want to start using css modules in other pkgs
-    new ExtractTextPlugin('composer-bundle.css'),
+    new MiniCssExtractPlugin('composer-bundle.css'),
 
     // Further optimize CSS once it's been extracted and put in a single bundle
-    // by ExtractTextPlugin – essentially deduplicate classes that are imported
+    // by MiniCssExtractPlugin – essentially deduplicate classes that are imported
     // from different files.
     new OptimizeCssAssets({
       canPrint: false,
