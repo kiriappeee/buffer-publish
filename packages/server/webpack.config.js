@@ -82,7 +82,9 @@ module.exports = {
 
     // Output CSS to a separate, CSS-only bundle
     // TODO: don't hardcode css bundle name if we want to start using css modules in other pkgs
-    new MiniCssExtractPlugin('composer-bundle.css'),
+    new MiniCssExtractPlugin({
+      filename: 'composer-bundle.css'
+    }),
 
     // Further optimize CSS once it's been extracted and put in a single bundle
     // by MiniCssExtractPlugin – essentially deduplicate classes that are imported
