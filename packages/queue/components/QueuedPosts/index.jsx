@@ -60,6 +60,7 @@ const QueuedPosts = ({
   showCalendar,
   editMode,
   paused,
+  visibleModals,
   onUnpauseClick,
   onCalendarToggleClick,
   hasCalendarFeatureFlip,
@@ -75,8 +76,8 @@ const QueuedPosts = ({
   return (
     <div>
 
-      {/* Always show upgrade modal for now, while testing */}
-      <UpgradeModal />
+      {/* Modals */}
+      {visibleModals.upgrade && <UpgradeModal />}
 
       <PostDragLayer />
       <div style={topBarContainerStyle}>
@@ -159,6 +160,7 @@ QueuedPosts.propTypes = {
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
   paused: PropTypes.bool,
+  visibleModals: PropTypes.object.isRequired, // eslint-disable-line
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,

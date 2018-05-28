@@ -39,6 +39,7 @@ export default connect(
         showCalendar: currentProfile.showCalendar,
         hasCalendarFeatureFlip: state.appSidebar.user.features.includes('mini_calendar'),
         paused,
+        visibleModals: state.queue.visibleModals,
       };
     }
     return {};

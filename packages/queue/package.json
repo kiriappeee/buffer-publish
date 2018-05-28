@@ -7,7 +7,8 @@
     "start": "start-storybook -p 9001",
     "lint": "eslint . --ignore-pattern coverage node_modules",
     "test": "yarn run lint && sh ../../package_test.sh",
-    "test-update": "jest -u --config=../../.jestrc.json"
+    "test-update": "jest -u --config=../../.jestrc.json",
+    "test-watch": "jest --watch --config=../../.jestrc.json"
   },
   "author": "melissa@buffer.com",
   "dependencies": {

@@ -6,5 +6,6 @@
   "collectCoverage": true,
   "moduleNameMapper": {
     "\\.(css|less)$": "identity-obj-proxy"
-  }
+  },
+  "setupFiles": ["../../jest-raf-shim.js"]
 }
