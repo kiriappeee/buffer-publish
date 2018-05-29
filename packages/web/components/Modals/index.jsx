@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import UpgradeModal from '@bufferapp/publish-upgrade-modal';
 
@@ -6,4 +7,8 @@ const Modals = ({ showUpgradeModal }) => (
   (showUpgradeModal && <UpgradeModal />)
 );
 
-export default Modals;
+const mapStateToProps = state => ({
+  showUpgradeModal: state.queue.showUpgradeModal,
+});
+
+export default connect(mapStateToProps)(Modals);
