@@ -56,8 +56,8 @@ TabNavigation.defaultProps = {
 TabNavigation.propTypes = {
   selectedTabId: PropTypes.string.isRequired,
   onTabClick: PropTypes.func.isRequired,
-  shouldShowUpgradeCta: PropTypes.bool,
-  showModal: PropTypes.func.isRequired,
+  shouldShowUpgradeCta: PropTypes.bool.isRequired,
+  showUpgradeModal: PropTypes.func.isRequired,
 };
 
 export default TabNavigation;

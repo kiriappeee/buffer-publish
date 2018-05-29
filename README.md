@@ -106,8 +106,7 @@ Since our app is made from a bunch of npm packages, we can publish them to the n
 
 |ℹ️  &nbsp;**When should you publish?**|
 |--|
-|In general, you should publish to npm when you've made significant changes to any local package, like fixing a bug, or finishing a feature. Remember, **publishing your changes is NOT a requirement for deploys to production (or staging servers) to work correctly.** This is because the process that bundles and deploys Publish does not fetch packages from npm if they are present in the repository (i.e., anything commited in `/packages`). Conversely, you would want to publish any changes to the Buffer Composer (`@bufferapp/buffer-composer`) since it doesn't live in this repo.|
-
+|In general, you should publish to npm when you've made significant changes to any local package, like fixing a bug, or finishing a feature. **Publishing your changes is usually* not a requirement for deploys to production (or staging servers) to work correctly.** This is because the process that bundles and deploys Publish does not fetch packages from npm if they are present in the repository (i.e., anything commited in `/packages`). Conversely, you would want to publish any changes to the Buffer Composer (`@bufferapp/buffer-composer`) since it doesn't live in this repo. (* The exception to this rule is any changes to the `@bufferapp/publish-utils` package that are consumed by the `server` package — since at this point the build process will grab the code from npm. See [this JIRA issue](https://buffer.atlassian.net/browse/ENG-163) for more context.) |
 
 
 **Login**
