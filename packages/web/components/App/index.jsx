@@ -12,6 +12,7 @@ import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 
 import DefaultPage from '../DefaultPage';
+import Modals from '../Modals';
 
 const appStyle = {
   display: 'flex',
@@ -29,6 +30,7 @@ class App extends Component { // eslint-disable-line
     return (
       <div style={appStyle}>
         <AppSidebar activeProduct="publish" />
+
         <div style={contentStyle}>
           <EnsurePublishBetaUser>
             <Switch>
@@ -40,8 +42,10 @@ class App extends Component { // eslint-disable-line
             </Switch>
           </EnsurePublishBetaUser>
         </div>
+
         <Notifications />
         <AppSwitcher />
+        <Modals />
       </div>
     );
   }

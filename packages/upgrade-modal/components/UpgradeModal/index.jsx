@@ -41,8 +41,16 @@ const currentYear = new Date().getFullYear();
 const creditCardSvg = '<svg width="31" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="%23fff" d="M0 0h31v21H0z"/><rect width="31" height="21" rx="3" fill="%232D98C8"/><path fill="%23343E47" d="M0 3h31v3H0z"/><path fill="%23fff" d="M6 9h20v4H6z"/><path fill="%23FD232B" d="M20 10h5v2h-5z"/></svg>';
 const creditCardBackground = `right 6px center no-repeat url('data:image/svg+xml;utf8,${creditCardSvg}')`;
 
-const UpgradeModal = ({ translations, cycle, validating, upgradePlan, storeValue, selectCycle }) => (
-  <Popover>
+const UpgradeModal = ({
+  translations,
+  cycle,
+  validating,
+  upgradePlan,
+  storeValue,
+  selectCycle,
+  hideModal,
+}) => (
+  <Popover onOverlayClick={hideModal}>
     <Card>
       <div style={{ width: '550px', margin: '0 25px' }}>
         <div style={{ textAlign: 'center', margin: '0 0 1rem 0' }}>
@@ -139,7 +147,9 @@ const UpgradeModal = ({ translations, cycle, validating, upgradePlan, storeValue
             {validating ? translations.validating : translations.upgradeCta }
           </Button>
           <br /><br />
-          <Button secondary large borderless>{translations.stayOnFreeCta}</Button>
+          <Button secondary large borderless onClick={hideModal}>
+            {translations.stayOnFreeCta}
+          </Button>
         </div>
       </div>
     </Card>
@@ -153,6 +163,7 @@ UpgradeModal.propTypes = {
   storeValue: PropTypes.func.isRequired,
   validating: PropTypes.bool.isRequired,
   selectCycle: PropTypes.func.isRequired,
+  hideModal: PropTypes.func.isRequired,
 };
 
 export default UpgradeModal;

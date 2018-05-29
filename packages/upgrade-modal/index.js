@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { actions as queueActions } from '@bufferapp/publish-queue';
 
 import UpgradeModal from './components/UpgradeModal';
 import { actions } from './reducer';
@@ -13,6 +14,7 @@ export default connect(
     storeValue: (id, value) => dispatch(actions.storeValue(id, value)),
     upgradePlan: () => dispatch(actions.upgrade()),
     selectCycle: cycle => dispatch(actions.selectCycle(cycle)),
+    hideModal: () => dispatch(queueActions.hideUpgradeModal()),
   }),
 )(UpgradeModal);
 

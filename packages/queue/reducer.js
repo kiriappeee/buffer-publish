@@ -22,8 +22,8 @@ export const actionTypes = {
   REORDERED_UPDATES: 'REORDERED_UPDATES',
   POST_REQUEUE: 'POST_REQUEUE',
   TOGGLE_CALENDAR: 'TOGGLE_CALENDAR',
-  SHOW_MODAL: 'SHOW_MODAL',
-  HIDE_MODAL: 'HIDE_MODAL',
+  SHOW_UPGRADE_MODAL: 'SHOW_UPGRADE_MODAL',
+  HIDE_UPGRADE_MODAL: 'HIDE_UPGRADE_MODAL',
 };
 
 export const initialState = {
@@ -34,9 +34,7 @@ export const initialState = {
   editMode: false,
   editingPostId: '',
   hasCalendarFeatureFlip: false,
-  visibleModals: {
-    upgrade: false,
-  },
+  showUpgradeModal: false,
 };
 
 const profileInitialState = {
@@ -457,21 +455,15 @@ export default (state = initialState, action) => {
         showComposer: false,
         editMode: false,
       };
-    case actionTypes.SHOW_MODAL:
+    case actionTypes.SHOW_UPGRADE_MODAL:
       return {
         ...state,
-        visibleModals: {
-          ...state.visibleModals,
-          [action.modalName]: true,
-        },
+        showUpgradeModal: true,
       };
-    case actionTypes.HIDE_MODAL:
+    case actionTypes.HIDE_UPGRADE_MODAL:
       return {
         ...state,
-        visibleModals: {
-          ...state.visibleModals,
-          [action.modalName]: false,
-        },
+        showUpgradeModal: false,
       };
     default:
       return state;
@@ -564,12 +556,10 @@ export const actions = {
     type: actionTypes.TOGGLE_CALENDAR,
     profileId,
   }),
-  showModal: ({ modalName }) => ({
-    type: actionTypes.SHOW_MODAL,
-    modalName,
+  showUpgradeModal: () => ({
+    type: actionTypes.SHOW_UPGRADE_MODAL,
   }),
-  hideModal: ({ modalName }) => ({
-    type: actionTypes.HIDE_MODAL,
-    modalName,
+  hideUpgradeModal: () => ({
+    type: actionTypes.HIDE_UPGRADE_MODAL,
   }),
 };

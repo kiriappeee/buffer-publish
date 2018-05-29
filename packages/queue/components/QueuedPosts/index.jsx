@@ -11,8 +11,6 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 
-import UpgradeModal from '@bufferapp/publish-upgrade-modal';
-
 import ComposerPopover from '../ComposerPopover';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
@@ -60,7 +58,6 @@ const QueuedPosts = ({
   showCalendar,
   editMode,
   paused,
-  visibleModals,
   onUnpauseClick,
   onCalendarToggleClick,
   hasCalendarFeatureFlip,
@@ -75,11 +72,8 @@ const QueuedPosts = ({
 
   return (
     <div>
-
-      {/* Modals */}
-      {visibleModals.upgrade && <UpgradeModal />}
-
       <PostDragLayer />
+
       <div style={topBarContainerStyle}>
         <div style={composerStyle}>
           {showComposer && !editMode &&
@@ -160,7 +154,6 @@ QueuedPosts.propTypes = {
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
   paused: PropTypes.bool,
-  visibleModals: PropTypes.object.isRequired, // eslint-disable-line
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,

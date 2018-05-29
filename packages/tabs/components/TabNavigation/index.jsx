@@ -18,6 +18,7 @@ const TabNavigation = ({
   selectedTabId,
   onTabClick,
   shouldShowUpgradeCta,
+  showUpgradeModal,
 }) =>
   /* wrapper div with "tabs" id necessary as a selector
   for a11y focus after selecting profile in sidebar */
@@ -37,7 +38,8 @@ const TabNavigation = ({
               block
               unstyled
               newTab
-              onClick={() => { console.log('Clicked!'); }}
+              href={'#'}
+              onClick={(e) => { e.preventDefault(); showUpgradeModal(); }}
             >
               Upgrade
             </Link>
@@ -55,6 +57,7 @@ TabNavigation.propTypes = {
   selectedTabId: PropTypes.string.isRequired,
   onTabClick: PropTypes.func.isRequired,
   shouldShowUpgradeCta: PropTypes.bool,
+  showModal: PropTypes.func.isRequired,
 };
 
 export default TabNavigation;
