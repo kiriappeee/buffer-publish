@@ -1,6 +1,6 @@
 /* global Stripe */
 
-import { actions as notification } from '@bufferapp/notifications';
+import { actions as asyncDataFetchActions } from '@bufferapp/async-data-fetch';
 import middleware from './middleware';
 import { actions, actionTypes } from './reducer';
 import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPONSE, CARD_WITHOUT_ZIP_RESPONSE, CARD_WITH_WRONG_ZIP_RESPONSE } from './test/constants';
@@ -10,10 +10,12 @@ global.Stripe = {
 };
 
 const i18n = {
-  stripe: {
-    noNameError: 'no name',
-    invalidZipError: 'invalid zip',
-    noZipError: 'zip code missing',
+  translations: {
+    stripe: {
+      noNameError: 'no name',
+      invalidZipError: 'invalid zip',
+      noZipError: 'zip code missing',
+    },
   },
 };
 
@@ -23,6 +25,9 @@ describe('middleware', () => {
     dispatch: jest.fn(),
     getState: () => ({
       i18n,
+      upgradeModal: {
+        cycle: 'year',
+      },
     }),
   };
   const validateCreditCard = () => {
@@ -46,11 +51,17 @@ describe('middleware', () => {
     expect(Stripe.createToken).toHaveBeenCalledWith(CREDIT_CARD, expect.any(Function));
   });
 
-  it('should trigger an approveCreditCard action on success', (done) => {
+  it('should trigger an upgradeToPro call on success', (done) => {
     global.Stripe.createToken = (card, cb) => {
       cb(null, SUCCESS_RESPONSE);
       expect(store.dispatch)
-        .toHaveBeenCalledWith(actions.approveCreditCard(SUCCESS_RESPONSE.id));
+        .toHaveBeenCalledWith(asyncDataFetchActions.fetch(({
+          name: 'upgradeToPro',
+          args: {
+            cycle: 'year',
+            token: SUCCESS_RESPONSE.id,
+          },
+        })));
       done();
     };
     validateCreditCard();
@@ -70,7 +81,7 @@ describe('middleware', () => {
       global.Stripe.createToken = (card, cb) => {
         cb(null, CARD_WITHOUT_NAME_RESPONSE);
         expect(store.dispatch)
-          .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.noNameError));
+          .toHaveBeenCalledWith(actions.throwValidationError(i18n.translations.stripe.noNameError));
         done();
       };
       validateCreditCard();
@@ -82,7 +93,7 @@ describe('middleware', () => {
         expect(store.dispatch)
           .toHaveBeenCalledWith(expect.objectContaining({
             notificationType: 'error',
-            message: i18n.stripe.noNameError,
+            message: i18n.translations.stripe.noNameError,
           }));
         done();
       };
@@ -94,7 +105,7 @@ describe('middleware', () => {
         global.Stripe.createToken = (card, cb) => {
           cb(null, CARD_WITHOUT_ZIP_RESPONSE);
           expect(store.dispatch)
-            .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.noZipError));
+            .toHaveBeenCalledWith(actions.throwValidationError(i18n.translations.stripe.noZipError));
           done();
         };
         validateCreditCard();
@@ -104,7 +115,7 @@ describe('middleware', () => {
         global.Stripe.createToken = (card, cb) => {
           cb(null, CARD_WITH_WRONG_ZIP_RESPONSE);
           expect(store.dispatch)
-            .toHaveBeenCalledWith(actions.throwValidationError(i18n.stripe.invalidZipError));
+            .toHaveBeenCalledWith(actions.throwValidationError(i18n.translations.stripe.invalidZipError));
           done();
         };
         validateCreditCard();

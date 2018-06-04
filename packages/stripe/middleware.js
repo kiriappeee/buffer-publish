@@ -37,7 +37,6 @@ export default ({ dispatch, getState }) => next => (action) => {
           dispatch(asyncDataFetchActions.fetch({
             name: 'upgradeToPro',
             args: {
-              next: window.location.pathname,
               cycle: getState().upgradeModal.cycle,
               token: response.id,
             },
