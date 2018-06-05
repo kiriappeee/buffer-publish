@@ -133,7 +133,7 @@ exports[`Snapshots Notifications 1 notification 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.9rem",
                     "fontWeight": 400,
                   }
@@ -310,7 +310,7 @@ exports[`Snapshots Notifications default 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.9rem",
                     "fontWeight": 400,
                   }
@@ -459,7 +459,7 @@ exports[`Snapshots Notifications default 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
                     "fontSize": "0.9rem",
                     "fontWeight": 400,
                   }

@@ -6,7 +6,7 @@ exports[`Snapshots LoggedIn should show user is logged in 1`] = `
     style={
       Object {
         "color": "#59626a",
-        "fontFamily": "\\"Roboto\\", sans-serif",
+        "fontFamily": "\\"Open Sans\\", sans-serif",
         "fontSize": "1rem",
         "fontWeight": 400,
       }
@@ -23,7 +23,7 @@ exports[`Snapshots LoggedIn should show user is not logged in 1`] = `
     style={
       Object {
         "color": "#59626a",
-        "fontFamily": "\\"Roboto\\", sans-serif",
+        "fontFamily": "\\"Open Sans\\", sans-serif",
         "fontSize": "1rem",
         "fontWeight": 400,
       }
