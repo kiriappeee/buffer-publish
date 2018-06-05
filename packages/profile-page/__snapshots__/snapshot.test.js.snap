@@ -190,7 +190,7 @@ exports[`Snapshots ProfilePage should render 1`] = `
             style={
               Object {
                 "display": "inline-block",
-                "margin": "0 42px 0 0",
+                "margin": "0 22px 0 0",
                 "minWidth": "60px",
                 "textAlign": "center",
                 "transform": "translate(0, 1px)",
@@ -239,7 +239,7 @@ exports[`Snapshots ProfilePage should render 1`] = `
             style={
               Object {
                 "display": "inline-block",
-                "margin": "0 42px 0 0",
+                "margin": "0 22px 0 0",
                 "minWidth": "60px",
                 "textAlign": "center",
                 "transform": "translate(0, 1px)",
@@ -288,7 +288,7 @@ exports[`Snapshots ProfilePage should render 1`] = `
             style={
               Object {
                 "display": "inline-block",
-                "margin": "0 42px 0 0",
+                "margin": "0 22px 0 0",
                 "minWidth": "60px",
                 "textAlign": "center",
                 "transform": "translate(0, 1px)",
@@ -555,7 +555,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
             style={
               Object {
                 "display": "inline-block",
-                "margin": "0 42px 0 0",
+                "margin": "0 22px 0 0",
                 "minWidth": "60px",
                 "textAlign": "center",
                 "transform": "translate(0, 1px)",
@@ -604,7 +604,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
             style={
               Object {
                 "display": "inline-block",
-                "margin": "0 42px 0 0",
+                "margin": "0 22px 0 0",
                 "minWidth": "60px",
                 "textAlign": "center",
                 "transform": "translate(0, 1px)",
@@ -654,7 +654,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
               Object {
                 "borderBottom": "2px solid #168eea",
                 "display": "inline-block",
-                "margin": "0 42px 0 0",
+                "margin": "0 22px 0 0",
                 "minWidth": "60px",
                 "textAlign": "center",
                 "transform": "translate(0, 1px)",
@@ -2265,9 +2265,18 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                       </svg>
                     </button>
                   </span>
-                  <h1>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
                     Are you sure?
-                  </h1>
+                  </span>
                   <div
                     style={
                       Object {
@@ -2284,26 +2293,36 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                         }
                       }
                     >
-                      <span>
+                      <span
+                        style={
+                          Object {
+                            "color": "#59626a",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                          }
+                        }
+                      >
                         Would you us to remove all your posting times for the 
-                      </span>
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": "bold",
+                        <span
+                          style={
+                            Object {
+                              "fontWeight": "bold",
+                            }
                           }
-                        }
-                      >
-                        
-                      </span>
-                      <span
-                        style={
-                          Object {
-                            "textTransform": "capitalize",
+                        >
+                          
+                        </span>
+                         
+                        <span
+                          style={
+                            Object {
+                              "textTransform": "capitalize",
+                            }
                           }
-                        }
-                      >
-                          ?
+                        >
+                            ?
+                        </span>
                       </span>
                     </div>
                     <div

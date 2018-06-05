@@ -4563,9 +4563,18 @@ exports[`Snapshots ProfileSettings default 1`] = `
                 </svg>
               </button>
             </span>
-            <h1>
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "1.25rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
               Are you sure?
-            </h1>
+            </span>
             <div
               style={
                 Object {
@@ -4582,24 +4591,34 @@ exports[`Snapshots ProfileSettings default 1`] = `
                   }
                 }
               >
-                <span>
-                  Would you us to remove all your posting times for the 
-                </span>
                 <span
                   style={
                     Object {
-                      "fontWeight": "bold",
-                    }
-                  }
-                />
-                <span
-                  style={
-                    Object {
-                      "textTransform": "capitalize",
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
                     }
                   }
                 >
-                   undefined undefined?
+                  Would you us to remove all your posting times for the 
+                  <span
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  />
+                   
+                  <span
+                    style={
+                      Object {
+                        "textTransform": "capitalize",
+                      }
+                    }
+                  >
+                     undefined undefined?
+                  </span>
                 </span>
               </div>
               <div
