@@ -1,7 +1,8 @@
 import { push } from 'react-router-redux';
 import { generateProfilePageRoute } from '@bufferapp/publish-routes';
 import { connect } from 'react-redux';
-// load the presentational component
+import { actions as queueActions } from '@bufferapp/publish-queue';
+
 import TabNavigation from './components/TabNavigation';
 
 
@@ -16,6 +17,7 @@ export default connect(
       tabId,
       profileId: ownProps.profileId,
     }))),
+    showUpgradeModal: () => dispatch(queueActions.showUpgradeModal()),
   }),
 )(TabNavigation);
 

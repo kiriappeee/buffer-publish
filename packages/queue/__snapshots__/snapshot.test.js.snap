@@ -38,9 +38,9 @@ exports[`Snapshots QueuePausedBar default 1`] = `
             style={
               Object {
                 "color": "#59626a",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
-                "fontWeight": 600,
+                "fontWeight": 700,
               }
             }
           >
@@ -58,7 +58,7 @@ exports[`Snapshots QueuePausedBar default 1`] = `
             style={
               Object {
                 "color": "#59626a",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "0.9rem",
                 "fontWeight": 400,
               }
@@ -83,8 +83,8 @@ exports[`Snapshots QueuePausedBar default 1`] = `
               "color": "#fff",
               "cursor": "pointer",
               "display": "inline-block",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
               "margin": "0",
               "outline": "none",
@@ -112,8 +112,8 @@ exports[`Snapshots QueuePausedBar default 1`] = `
               "color": "#168eea",
               "cursor": "pointer",
               "display": "inline-block",
-              "fontFamily": "\\"Open Sans\\", sans-serif",
-              "fontSize": "0.8rem",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
               "fontWeight": 400,
               "margin": "0",
               "outline": "none",
@@ -161,7 +161,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                   "border": "0.063rem solid #ced7df",
                   "borderRadius": "0.126rem",
                   "boxSizing": "border-box",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "outline": 0,
                   "padding": "0.5rem",
@@ -188,7 +188,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -281,7 +281,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -318,8 +318,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -387,8 +387,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -442,8 +442,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -499,8 +499,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -605,7 +605,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -642,8 +642,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -711,8 +711,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -766,8 +766,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -823,8 +823,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -856,7 +856,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -949,7 +949,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -986,8 +986,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -1055,8 +1055,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -1110,8 +1110,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1167,8 +1167,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1273,7 +1273,7 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
                               "fontSize": "0.9rem",
                               "fontWeight": 400,
                             }
@@ -1310,8 +1310,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                           style={
                             Object {
                               "color": "#000",
-                              "fontFamily": "\\"Open Sans\\", sans-serif",
-                              "fontSize": "0.8rem",
+                              "fontFamily": "\\"Roboto\\", sans-serif",
+                              "fontSize": "0.75rem",
                               "fontWeight": 400,
                             }
                           }
@@ -1379,8 +1379,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                     style={
                                       Object {
                                         "color": "#000",
-                                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                                        "fontSize": "0.8rem",
+                                        "fontFamily": "\\"Roboto\\", sans-serif",
+                                        "fontSize": "0.75rem",
                                         "fontWeight": 400,
                                       }
                                     }
@@ -1434,8 +1434,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1491,8 +1491,8 @@ exports[`Snapshots QueuedPosts default 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -1689,7 +1689,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   "border": "0.063rem solid #ced7df",
                   "borderRadius": "0.126rem",
                   "boxSizing": "border-box",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "outline": 0,
                   "padding": "0.5rem",
@@ -1738,9 +1738,9 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
                     "fontSize": "1rem",
-                    "fontWeight": 600,
+                    "fontWeight": 700,
                   }
                 }
               >
@@ -1758,7 +1758,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                 style={
                   Object {
                     "color": "#59626a",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
                     "fontSize": "0.9rem",
                     "fontWeight": 400,
                   }
@@ -1783,8 +1783,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   "color": "#fff",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -1812,8 +1812,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                   "color": "#168eea",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
-                  "fontSize": "0.8rem",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
                   "fontWeight": 400,
                   "margin": "0",
                   "outline": "none",
@@ -1841,7 +1841,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -1919,7 +1919,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -1956,8 +1956,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2025,8 +2025,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -2080,8 +2080,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2137,8 +2137,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2227,7 +2227,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -2264,8 +2264,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2333,8 +2333,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -2388,8 +2388,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2445,8 +2445,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2477,7 +2477,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
             style={
               Object {
                 "color": "#000",
-                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontFamily": "\\"Roboto\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 400,
               }
@@ -2555,7 +2555,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -2592,8 +2592,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2661,8 +2661,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -2716,8 +2716,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2773,8 +2773,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -2863,7 +2863,7 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
                             "fontSize": "0.9rem",
                             "fontWeight": 400,
                           }
@@ -2900,8 +2900,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                         style={
                           Object {
                             "color": "#000",
-                            "fontFamily": "\\"Open Sans\\", sans-serif",
-                            "fontSize": "0.8rem",
+                            "fontFamily": "\\"Roboto\\", sans-serif",
+                            "fontSize": "0.75rem",
                             "fontWeight": 400,
                           }
                         }
@@ -2969,8 +2969,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                   style={
                                     Object {
                                       "color": "#000",
-                                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                                      "fontSize": "0.8rem",
+                                      "fontFamily": "\\"Roboto\\", sans-serif",
+                                      "fontSize": "0.75rem",
                                       "fontWeight": 400,
                                     }
                                   }
@@ -3024,8 +3024,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }
@@ -3081,8 +3081,8 @@ exports[`Snapshots QueuedPosts paused 1`] = `
                                 style={
                                   Object {
                                     "color": "#000",
-                                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                                    "fontSize": "0.8rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "0.75rem",
                                     "fontWeight": 400,
                                   }
                                 }

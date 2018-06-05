@@ -18,6 +18,8 @@ import { middleware as environmentMiddleware } from '@bufferapp/environment';
 import { middleware as unauthorizedRedirectMiddleware } from '@bufferapp/unauthorized-redirect';
 import { middleware as appSwitcherMiddleware } from '@bufferapp/publish-app-switcher';
 import { middleware as betaRedirectMiddleware } from '@bufferapp/publish-beta-redirect';
+import { middleware as upgradeModalMiddleware } from '@bufferapp/publish-upgrade-modal';
+import { middleware as stripeMiddleware } from '@bufferapp/stripe';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -49,6 +51,8 @@ const configureStore = (initialstate) => {
         unauthorizedRedirectMiddleware,
         appSwitcherMiddleware,
         betaRedirectMiddleware,
+        upgradeModalMiddleware,
+        stripeMiddleware,
       ),
     ),
   );

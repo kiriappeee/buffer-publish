@@ -45,9 +45,18 @@ if (isProduction) {
   }
 }
 
+const stripePublishableKey = process.env.STRIPE_PUBLISHABLE;
+
+const stripeScript = `<script src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    Stripe.setPublishableKey('${stripePublishableKey}');
+</script>
+`;
+
 const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
                                     .replace('{{{bundle}}}', staticAssets['bundle.js'])
                                     .replace('{{{composer-css-bundle}}}', staticAssets['composer-bundle.css'])
+                                    .replace('{{{stripeScript}}}', stripeScript)
                                     .replace('{{{bugsnagScript}}}', bugsnagScript);
 
 app.use(logMiddleware({ name: 'BufferPublish' }));

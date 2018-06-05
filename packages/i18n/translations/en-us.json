@@ -7,5 +7,37 @@
     "connectButton": "Connect a Social Account",
     "lockedList": "Locked Social Accounts",
     "lockedListTooltip": "Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!"
+  },
+  "stripe": {
+    "noNameError": "Uh oh, please fill out the cardholder name :)",
+    "noZipError": "For extra security, please add the zip code associated with this card",
+    "invalidZipError": "Whoops, looks like that zip code doesn't match what your bank has on record - up for trying again?"
+  },
+  "upgrade-modal": {
+    "proUpgradeHeader": "Upgrade to the Pro Plan!",
+    "proPlanSocialAccounts": "Connect up to 8 social accounts, including Pinterest",
+    "proPlanFiltering": "Get powerful post filtering on your recent posts",
+    "proPlanCuration": "Curate your content with RSS integrations",
+    "proPlanScheduling": "Schedule 100 posts per social account",
+    "proPlanCalendar": "Manage everything at a glance with the Social Media Calendar",
+    "proPlanBitly": "Shorten your links with Bitly",
+
+    "proPlanMonthlyPrice": "$15 per month",
+    "proPlanMonthlyDescription": "Cancel and get a refund any time",
+    "proPlanYearlyPrice": "$144 per year",
+    "proPlanYearlyDescription": "Save 15% vs paying monthly",
+
+    "enterPaymentDetails": "Enter your payment details securely",
+    "nameOnCard": "Name on card",
+    "cardNumber": "Card number",
+    "expirationMonth": "Expiration month",
+    "expirationYear": "Expiration year",
+    "securityCode": "Security code",
+    "zipCode": "Zip code",
+    "zipLeaveBlank": "Leave blank for non-US cards",
+
+    "upgradeCta": "Upgrade to the Pro Plan!",
+    "validating": "One moment...",
+    "stayOnFreeCta": "Stay on the Free Plan for now"
   }
 }

@@ -9,7 +9,6 @@ import ProfileSettings from '@bufferapp/publish-settings';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import { ScrollableContainer } from '@bufferapp/publish-shared-components';
-import { getProfilePageParams } from '@bufferapp/publish-routes';
 import { Button } from '@bufferapp/components';
 
 const profilePageStyle = {

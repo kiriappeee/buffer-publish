@@ -22,9 +22,11 @@ export const actionTypes = {
   REORDERED_UPDATES: 'REORDERED_UPDATES',
   POST_REQUEUE: 'POST_REQUEUE',
   TOGGLE_CALENDAR: 'TOGGLE_CALENDAR',
+  SHOW_UPGRADE_MODAL: 'SHOW_UPGRADE_MODAL',
+  HIDE_UPGRADE_MODAL: 'HIDE_UPGRADE_MODAL',
 };
 
-const initialState = {
+export const initialState = {
   byProfileId: {},
   showComposer: false,
   enabledApplicationModes: [],
@@ -32,6 +34,7 @@ const initialState = {
   editMode: false,
   editingPostId: '',
   hasCalendarFeatureFlip: false,
+  showUpgradeModal: false,
 };
 
 const profileInitialState = {
@@ -452,6 +455,16 @@ export default (state = initialState, action) => {
         showComposer: false,
         editMode: false,
       };
+    case actionTypes.SHOW_UPGRADE_MODAL:
+      return {
+        ...state,
+        showUpgradeModal: true,
+      };
+    case actionTypes.HIDE_UPGRADE_MODAL:
+      return {
+        ...state,
+        showUpgradeModal: false,
+      };
     default:
       return state;
   }
@@ -542,5 +555,11 @@ export const actions = {
   handleCalendarToggle: ({ profileId }) => ({
     type: actionTypes.TOGGLE_CALENDAR,
     profileId,
+  }),
+  showUpgradeModal: () => ({
+    type: actionTypes.SHOW_UPGRADE_MODAL,
+  }),
+  hideUpgradeModal: () => ({
+    type: actionTypes.HIDE_UPGRADE_MODAL,
   }),
 };

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { checkA11y } from 'storybook-addon-a11y';
@@ -8,6 +9,29 @@ import { DragDropContext } from 'react-dnd';
 
 import QueuedPosts from './index';
 import postLists from './postData';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  i18n: {
+    translations: {
+      'upgrade-modal': {},
+    },
+  },
+  upgradeModal: {},
+  stripe: {},
+});
+
+const UpgradeModalDecorator = storyFn => (
+  <Provider store={store}>
+    {storyFn()}
+  </Provider>
+);
 
 /* eslint-disable react/prop-types */
 class _TestContextContainer extends Component { // eslint-disable-line
@@ -23,6 +47,7 @@ const TestContextContainer = DragDropContext(TestBackend)(_TestContextContainer)
 
 storiesOf('QueuedPosts')
   .addDecorator(checkA11y)
+  .addDecorator(UpgradeModalDecorator)
   .addDecorator(getStory => <TestContextContainer>{getStory()}</TestContextContainer>)
   .add('default', () => (
     <QueuedPosts

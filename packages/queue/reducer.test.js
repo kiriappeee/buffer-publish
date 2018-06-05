@@ -1,19 +1,11 @@
 import deepFreeze from 'deep-freeze';
-import reducer from './reducer';
+import reducer, { initialState, actions } from './reducer';
 
 const profileId = '123456';
 
 describe('reducer', () => {
   it('should initialize default state', () => {
-    const stateAfter = {
-      byProfileId: {},
-      enabledApplicationModes: [],
-      showComposer: false,
-      environment: 'production',
-      editMode: false,
-      editingPostId: '',
-      hasCalendarFeatureFlip: false,
-    };
+    const stateAfter = initialState;
     const action = {
       type: 'INIT',
     };
@@ -24,6 +16,7 @@ describe('reducer', () => {
 
   it('should handle queuedPosts_FETCH_START action type', () => {
     const stateAfter = {
+      ...initialState,
       byProfileId: {
         [profileId]: {
           loading: true,
@@ -35,12 +28,6 @@ describe('reducer', () => {
           showCalendar: false,
         },
       },
-      enabledApplicationModes: [],
-      showComposer: false,
-      environment: 'production',
-      editMode: false,
-      editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const action = {
       profileId,
@@ -57,6 +44,7 @@ describe('reducer', () => {
   it('should handle queuedPosts_FETCH_SUCCESS action type', () => {
     const post = { post: { id: 'foo', text: 'i love buffer' } };
     const stateAfter = {
+      ...initialState,
       byProfileId: {
         [profileId]: {
           loading: false,
@@ -68,12 +56,6 @@ describe('reducer', () => {
           showCalendar: false,
         },
       },
-      enabledApplicationModes: [],
-      showComposer: false,
-      environment: 'production',
-      editMode: false,
-      editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const action = {
       profileId,
@@ -93,6 +75,7 @@ describe('reducer', () => {
 
   it('should handle queuedPosts_FETCH_FAIL action type', () => {
     const stateAfter = {
+      ...initialState,
       byProfileId: {
         [profileId]: {
           loading: false,
@@ -104,12 +87,6 @@ describe('reducer', () => {
           showCalendar: false,
         },
       },
-      enabledApplicationModes: [],
-      showComposer: false,
-      environment: 'production',
-      editMode: false,
-      editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const action = {
       profileId,
@@ -123,6 +100,7 @@ describe('reducer', () => {
   it('should handle POST_CREATED action type', () => {
     const postCreated = { id: '12345', text: 'i love buffer so much' };
     const stateAfter = {
+      ...initialState,
       byProfileId: {
         [profileId]: {
           loading: true,
@@ -134,12 +112,6 @@ describe('reducer', () => {
           total: 0, // still 0 because counts are updated separately
         },
       },
-      enabledApplicationModes: [],
-      showComposer: false,
-      environment: 'production',
-      editMode: false,
-      editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const action = {
       type: 'POST_CREATED',
@@ -398,5 +370,16 @@ describe('reducer', () => {
     deepFreeze(action);
     expect(reducer(stateBefore, action))
       .toEqual(stateAfter);
+  });
+
+  it('should handle showUpgradeModal action', () => {
+    const showUpgradeModalAction = actions.showUpgradeModal();
+
+    expect(reducer(undefined, showUpgradeModalAction).showUpgradeModal)
+      .toBeTruthy();
+
+    const hideUpgradeModalAction = actions.hideUpgradeModal();
+    expect(reducer(undefined, hideUpgradeModalAction).showUpgradeModal)
+      .toBeFalsy();
   });
 });

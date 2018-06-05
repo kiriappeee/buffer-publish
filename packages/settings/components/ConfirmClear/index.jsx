@@ -6,8 +6,9 @@ import {
   CircleFacebookIcon,
   CircleInstagramIcon,
   CircleLinkedInIcon,
-   Button,
-   CloseIcon,
+  Button,
+  CloseIcon,
+  Text,
 } from '@bufferapp/components';
 
 const profileBadgeStyle = {
@@ -102,12 +103,11 @@ const ConfirmClear = ({
          <CloseIcon />
        </Button>
      </span>
-     <h1>Are you sure?</h1>
+     <Text size="large">Are you sure?</Text>
      <div style={middleContainerStyle}>
        <div style={textContainerStyle}>
-         <span>{'Would you us to remove all your posting times for the '}</span>
-         <span style={profileNameStyle}>{profileName}</span>
-         <span style={profileTypeStyle}>{` ${profileService} ${profileType}?`}</span>
+         <Text>Would you us to remove all your posting times for the <span style={profileNameStyle}>{profileName}</span> <span style={profileTypeStyle}>{` ${profileService} ${profileType}?`}</span>
+         </Text>
        </div>
        <div style={profileBadgeStyle}>
          <Image

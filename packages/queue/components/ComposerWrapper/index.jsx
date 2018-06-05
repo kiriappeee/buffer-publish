@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bufferPublishComposer as Composer } from '@bufferapp/composer';
 
 // TODO: move this component to container directory since it's connected
-const ComposerWrapper = (props) => (
+const ComposerWrapper = props => (
   <div>
     <Composer {...props} />
   </div>
