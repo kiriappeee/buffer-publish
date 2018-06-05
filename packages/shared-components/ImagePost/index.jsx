@@ -79,9 +79,9 @@ const ImagePost = ({
       <div style={imageWrapperStyle} onClick={onImageClick}>
         <Image
           src={imageSrc}
-          width={'15rem'}
-          maxHeight={'20rem'}
-          minHeight={'10rem'}
+          width={'12rem'}
+          maxHeight={'7rem'}
+          minHeight={'5rem'}
           border={'rounded'}
           objectFit={'cover'}
         />

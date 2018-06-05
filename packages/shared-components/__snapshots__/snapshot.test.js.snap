@@ -1644,7 +1644,7 @@ exports[`Snapshots ImageDraft square image 1`] = `
       }
     }
     hasPermission={true}
-    imageSrc="http://lorempixel.com/400/400/cats/"
+    imageSrc="http://via.placeholder.com/400x400"
     isLightboxOpen={false}
     links={
       Array [
@@ -1737,7 +1737,7 @@ exports[`Snapshots ImageDraft tall image 1`] = `
       }
     }
     hasPermission={true}
-    imageSrc="http://lorempixel.com/400/900/cats/"
+    imageSrc="http://via.placeholder.com/400x900"
     isLightboxOpen={false}
     links={
       Array [
@@ -1783,7 +1783,7 @@ exports[`Snapshots ImageDraft wide image 1`] = `
       }
     }
     hasPermission={true}
-    imageSrc="http://lorempixel.com/900/400/cats/"
+    imageSrc="http://via.placeholder.com/900x400"
     isLightboxOpen={false}
     links={
       Array [
@@ -1981,7 +1981,7 @@ exports[`Snapshots ImagePost sent image post 1`] = `
 exports[`Snapshots ImagePost square image 1`] = `
 <span>
   <ImagePost
-    imageSrc="http://lorempixel.com/400/400/cats/"
+    imageSrc="http://via.placeholder.com/400x400"
     isLightboxOpen={false}
     links={
       Array [
@@ -2060,7 +2060,7 @@ exports[`Snapshots ImagePost tag 1`] = `
 exports[`Snapshots ImagePost tall image 1`] = `
 <span>
   <ImagePost
-    imageSrc="http://lorempixel.com/400/900/cats/"
+    imageSrc="http://via.placeholder.com/400x900"
     isLightboxOpen={false}
     links={
       Array [
@@ -2099,7 +2099,7 @@ exports[`Snapshots ImagePost tall image 1`] = `
 exports[`Snapshots ImagePost wide image 1`] = `
 <span>
   <ImagePost
-    imageSrc="http://lorempixel.com/900/400/cats/"
+    imageSrc="http://via.placeholder.com/900x400"
     isLightboxOpen={false}
     links={
       Array [
@@ -2673,10 +2673,10 @@ exports[`Snapshots MultipleImagesDraft queued multiple image post 1`] = `
     hasPermission={true}
     imageUrls={
       Array [
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
       ]
     }
     isConfirmingDelete={false}
@@ -2729,10 +2729,10 @@ exports[`Snapshots MultipleImagesDraft sent multiple image post 1`] = `
     hasPermission={true}
     imageUrls={
       Array [
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
       ]
     }
     isConfirmingDelete={false}
@@ -2775,10 +2775,10 @@ exports[`Snapshots MultipleImagesPost error 1`] = `
     fixed={false}
     imageUrls={
       Array [
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
       ]
     }
     isConfirmingDelete={false}
@@ -2825,10 +2825,10 @@ exports[`Snapshots MultipleImagesPost queued multiple image post 1`] = `
     fixed={false}
     imageUrls={
       Array [
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
       ]
     }
     isConfirmingDelete={false}
@@ -2874,10 +2874,10 @@ exports[`Snapshots MultipleImagesPost sent multiple image post 1`] = `
     fixed={false}
     imageUrls={
       Array [
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
-        "http://lorempixel.com/400/400/cats/",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
+        "http://via.placeholder.com/400x400",
       ]
     }
     isConfirmingDelete={false}

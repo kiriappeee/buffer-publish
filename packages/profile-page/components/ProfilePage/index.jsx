@@ -38,6 +38,10 @@ const buttonContainerStyle = {
   alignSelf: 'center',
 };
 
+const tabContentStyle = {
+  maxWidth: '49rem',
+};
+
 const TabContent = ({ tabId, profileId }) => {
   switch (tabId) {
     case 'queue':
@@ -102,16 +106,18 @@ const ProfilePage = ({
         <ScrollableContainer
           tabId={tabId}
         >
-          {TabContent({ tabId, profileId })}
-          {showLoadMoreButton &&
-            <div style={buttonContainerStyle}>
-              <Button
-                disabled={loadingMore} secondary
-                onClick={() => onLoadMoreClick({ profileId, page, tabId })}
-              >
-                {loadingMore ? 'Loading...' : 'Load more'}
-              </Button>
-            </div>}
+          <div style={tabContentStyle}>
+            {TabContent({ tabId, profileId })}
+            {showLoadMoreButton &&
+              <div style={buttonContainerStyle}>
+                <Button
+                  disabled={loadingMore} secondary
+                  onClick={() => onLoadMoreClick({ profileId, page, tabId })}
+                >
+                  {loadingMore ? 'Loading...' : 'Load more'}
+                </Button>
+              </div>}
+          </div>
         </ScrollableContainer>
       </div>
     </div>

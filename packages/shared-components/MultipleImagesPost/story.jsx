@@ -25,10 +25,10 @@ const postDetailsError = {
 };
 
 const imageUrls = [
-  'http://lorempixel.com/400/400/cats/',
-  'http://lorempixel.com/400/400/cats/',
-  'http://lorempixel.com/400/400/cats/',
-  'http://lorempixel.com/400/400/cats/',
+  'http://via.placeholder.com/400x400',
+  'http://via.placeholder.com/400x400',
+  'http://via.placeholder.com/400x400',
+  'http://via.placeholder.com/400x400',
 ];
 
 storiesOf('MultipleImagesPost')

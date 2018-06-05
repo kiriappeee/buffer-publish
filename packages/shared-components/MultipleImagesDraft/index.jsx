@@ -69,9 +69,9 @@ const MultipleImagesDraft = ({
       <div style={imagesWrapperStyle} onClick={onImageClick}>
         <MultipleImages
           border={'rounded'}
-          height={'15rem'}
+          height={'7rem'}
           urls={imageUrls}
-          width={'20rem'}
+          width={'12rem'}
         />
         <Lightbox
           images={images}
