@@ -6,12 +6,17 @@ exports[`Snapshots UpgradeModal default 1`] = `
     <div
       style={
         Object {
+          "alignItems": "center",
           "bottom": undefined,
-          "left": "50%",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "100vh",
+          "justifyContent": "center",
+          "left": "0",
           "position": "absolute",
           "right": undefined,
-          "top": "50%",
-          "transform": "translate(-50%, -50%)",
+          "top": "0",
+          "width": "100vw",
           "zIndex": 3000,
         }
       }
@@ -52,7 +57,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
               style={
                 Object {
                   "color": "#323b43",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1.25rem",
                   "fontWeight": 400,
                 }
@@ -94,7 +99,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }
@@ -114,7 +119,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }
@@ -134,7 +139,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }
@@ -170,7 +175,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }
@@ -190,7 +195,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }
@@ -210,7 +215,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
                         "fontSize": "1rem",
                         "fontWeight": 400,
                       }
@@ -262,9 +267,9 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 style={
                   Object {
                     "color": "#666c72",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
                     "fontSize": "1.25rem",
-                    "fontWeight": 600,
+                    "fontWeight": 700,
                   }
                 }
               >
@@ -275,8 +280,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 style={
                   Object {
                     "color": "#666c72",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                    "fontSize": "0.8rem",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
                     "fontWeight": 400,
                   }
                 }
@@ -304,9 +309,9 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 style={
                   Object {
                     "color": "#fff",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
                     "fontSize": "1.25rem",
-                    "fontWeight": 600,
+                    "fontWeight": 700,
                   }
                 }
               >
@@ -317,8 +322,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                 style={
                   Object {
                     "color": "#fff",
-                    "fontFamily": "\\"Open Sans\\", sans-serif",
-                    "fontSize": "0.8rem",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
                     "fontWeight": 400,
                   }
                 }
@@ -373,7 +378,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
               style={
                 Object {
                   "color": "#59626a",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "fontWeight": 400,
                 }
@@ -435,8 +440,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                        "fontSize": "0.8rem",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
                         "fontWeight": 400,
                       }
                     }
@@ -456,7 +461,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                       "border": "1px solid #ced7df",
                       "borderRadius": "0.126rem",
                       "boxSizing": "border-box",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
                       "fontSize": "1rem",
                       "outline": 0,
                       "padding": "0.5rem",
@@ -488,8 +493,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                        "fontSize": "0.8rem",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
                         "fontWeight": 400,
                       }
                     }
@@ -509,7 +514,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                       "border": "1px solid #ced7df",
                       "borderRadius": "0.126rem",
                       "boxSizing": "border-box",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
                       "fontSize": "1rem",
                       "outline": 0,
                       "padding": "0.5rem",
@@ -551,8 +556,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                        "fontSize": "0.8rem",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
                         "fontWeight": 400,
                       }
                     }
@@ -569,7 +574,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                       "border": "0.063rem solid #ced7df",
                       "borderRadius": "0.126rem",
                       "boxSizing": "border-box",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
                       "fontSize": "1rem",
                       "height": "37px",
                       "padding": "0.5rem",
@@ -663,8 +668,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                        "fontSize": "0.8rem",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
                         "fontWeight": 400,
                       }
                     }
@@ -681,7 +686,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                       "border": "0.063rem solid #ced7df",
                       "borderRadius": "0.126rem",
                       "boxSizing": "border-box",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
                       "fontSize": "1rem",
                       "height": "37px",
                       "padding": "0.5rem",
@@ -846,8 +851,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                        "fontSize": "0.8rem",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
                         "fontWeight": 400,
                       }
                     }
@@ -867,7 +872,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                       "border": "1px solid #ced7df",
                       "borderRadius": "0.126rem",
                       "boxSizing": "border-box",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
                       "fontSize": "1rem",
                       "outline": 0,
                       "padding": "0.5rem",
@@ -899,8 +904,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                     style={
                       Object {
                         "color": "#59626a",
-                        "fontFamily": "\\"Open Sans\\", sans-serif",
-                        "fontSize": "0.8rem",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
                         "fontWeight": 400,
                       }
                     }
@@ -920,7 +925,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                       "border": "1px solid #ced7df",
                       "borderRadius": "0.126rem",
                       "boxSizing": "border-box",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
                       "fontSize": "1rem",
                       "outline": 0,
                       "padding": "0.5rem",
@@ -933,8 +938,8 @@ exports[`Snapshots UpgradeModal default 1`] = `
                   style={
                     Object {
                       "color": "#59626a",
-                      "fontFamily": "\\"Open Sans\\", sans-serif",
-                      "fontSize": "0.7rem",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.5rem",
                       "fontWeight": 400,
                     }
                   }
@@ -968,7 +973,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                   "color": "#fff",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "fontWeight": 400,
                   "margin": "0",
@@ -999,7 +1004,7 @@ exports[`Snapshots UpgradeModal default 1`] = `
                   "color": "#168eea",
                   "cursor": "pointer",
                   "display": "inline-block",
-                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
                   "fontSize": "1rem",
                   "fontWeight": 400,
                   "margin": "0",
