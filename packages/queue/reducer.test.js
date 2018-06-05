@@ -1,5 +1,5 @@
 import deepFreeze from 'deep-freeze';
-import reducer, { initialState } from './reducer';
+import reducer, { initialState, actions } from './reducer';
 
 const profileId = '123456';
 
@@ -372,21 +372,14 @@ describe('reducer', () => {
       .toEqual(stateAfter);
   });
 
-  // SHOW_MODAL
-  it('should handle SHOW_MODAL action type', () => {
-    const stateBefore = {
-      visibleModals: {
-        upgrade: false,
-      },
-    };
-    const stateAfter = {
-      visibleModals: {
-        upgrade: true,
-      },
-    };
-    const action = { type: 'SHOW_MODAL', modalName: 'upgrade' };
+  it('should handle showUpgradeModal action', () => {
+    const showUpgradeModalAction = actions.showUpgradeModal();
 
-    expect(reducer(stateBefore, action))
-      .toEqual(stateAfter);
+    expect(reducer(undefined, showUpgradeModalAction).showUpgradeModal)
+      .toBeTruthy();
+
+    const hideUpgradeModalAction = actions.hideUpgradeModal();
+    expect(reducer(undefined, hideUpgradeModalAction).showUpgradeModal)
+      .toBeFalsy();
   });
 });
