@@ -12,6 +12,7 @@ const {
   setRequestSession,
   validateSession,
 } = require('@bufferapp/session-manager/middleware');
+const bufferMetricsMiddleware = require('@bufferapp/buffermetrics/middleware');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
 const pusher = require('./lib/pusher');
@@ -61,6 +62,12 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
 
 app.use(logMiddleware({ name: 'BufferPublish' }));
 app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bufferMetricsMiddleware({
+  name: 'Buffer-Publish',
+  debug: !isProduction,
+  trackVisits: true,
+}));
 
 // All routes after this have access to the user session
 app.use(setRequestSession({
