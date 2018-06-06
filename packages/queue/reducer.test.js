@@ -1,5 +1,5 @@
 import deepFreeze from 'deep-freeze';
-import reducer, { initialState, actions } from './reducer';
+import reducer, { initialState, actions, actionTypes } from './reducer';
 
 const profileId = '123456';
 
@@ -114,7 +114,7 @@ describe('reducer', () => {
       },
     };
     const action = {
-      type: 'POST_CREATED',
+      type: actionTypes.POST_CREATED,
       profileId,
       post: postCreated,
     };
@@ -165,7 +165,7 @@ describe('reducer', () => {
       hasCalendarFeatureFlip: false,
     };
     const action = {
-      type: 'POST_UPDATED',
+      type: actionTypes.POST_UPDATED,
       profileId,
       post: postEdited,
     };
@@ -205,7 +205,7 @@ describe('reducer', () => {
       },
     };
     const action = {
-      type: 'POST_CLICKED_DELETE',
+      type: actionTypes.POST_CLICKED_DELETE,
       profileId,
       post: postAfter,
     };
@@ -245,7 +245,7 @@ describe('reducer', () => {
       },
     };
     const action = {
-      type: 'POST_CONFIRMED_DELETE',
+      type: actionTypes.POST_CONFIRMED_DELETE,
       profileId,
       post: postAfter,
     };
@@ -284,7 +284,7 @@ describe('reducer', () => {
       },
     };
     const action = {
-      type: 'POST_DELETED',
+      type: actionTypes.POST_DELETED,
       profileId,
       post,
     };
@@ -324,7 +324,7 @@ describe('reducer', () => {
       },
     };
     const action = {
-      type: 'POST_CANCELED_DELETE',
+      type: actionTypes.POST_CANCELED_DELETE,
       profileId,
       post: postAfter,
     };
@@ -363,7 +363,7 @@ describe('reducer', () => {
       },
     };
     const action = {
-      type: 'TOGGLE_CALENDAR',
+      type: actionTypes.TOGGLE_CALENDAR,
       profileId,
       post,
     };
