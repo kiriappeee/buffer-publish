@@ -1,8 +1,10 @@
-export const actionTypes = {
-  STORE_VALUE: 'STORE_VALUE',
-  UPGRADE: 'UPGRADE',
-  SELECT_CYCLE: 'SELECT_CYCLE',
-};
+import keyWrapper from '@bufferapp/keywrapper';
+
+export const actionTypes = keyWrapper('UPGRADE_MODAL', {
+  STORE_VALUE: 0,
+  UPGRADE: 0,
+  SELECT_CYCLE: 0,
+});
 
 const initialState = {
   cycle: 'year',
