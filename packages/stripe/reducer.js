@@ -1,9 +1,11 @@
-export const actionTypes = {
-  CREDIT_CARD_VALIDATING: 'CREDIT_CARD_VALIDATING',
-  CREDIT_CARD_ERROR: 'CREDIT_CARD_ERROR',
-  CREDIT_CARD_APPROVED: 'CREDIT_CARD_APPROVED',
-  CHANGE_BILLING_CYCLE: 'CHANGE_BILLING_CYCLE',
-};
+import keyWrapper from '@bufferapp/keywrapper';
+
+export const actionTypes = keyWrapper('STRIPE', {
+  CREDIT_CARD_VALIDATING: 0,
+  CREDIT_CARD_ERROR: 0,
+  CREDIT_CARD_APPROVED: 0,
+  CHANGE_BILLING_CYCLE: 0,
+});
 
 const MONTHLY_CYCLE = 'month';
 const YEARLY_CYCLE = 'year';
