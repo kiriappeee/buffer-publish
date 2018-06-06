@@ -23,7 +23,7 @@
   "dependencies": {
     "@bufferapp/publish-i18n": "1.2.7",
     "@bufferapp/async-data-fetch": "1.2.7",
-    "@bufferapp/components": "2.1.4",
+    "@bufferapp/components": "2.1.5",
     "@bufferapp/publish-shared-components": "1.4.0",
     "@bufferapp/stripe": "0.0.1"
   },
