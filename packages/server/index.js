@@ -62,12 +62,6 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
 
 app.use(logMiddleware({ name: 'BufferPublish' }));
 app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(bufferMetricsMiddleware({
-  name: 'Buffer-Publish',
-  debug: !isProduction,
-  trackVisits: true,
-}));
 
 // All routes after this have access to the user session
 app.use(setRequestSession({
@@ -89,6 +83,13 @@ app.post('/rpc', (req, res, next) => {
       }
     });
 });
+
+app.use(bodyParser.json());
+app.use(bufferMetricsMiddleware({
+  name: 'Buffer-Publish',
+  debug: !isProduction,
+  trackVisits: true,
+}));
 
 // make sure we have a valid session
 app.use(validateSession({
