@@ -1,7 +1,7 @@
 import { push } from 'react-router-redux';
 import { generateProfilePageRoute } from '@bufferapp/publish-routes';
 import { connect } from 'react-redux';
-import { actions as queueActions } from '@bufferapp/publish-queue';
+import { actions as modalsActions } from '@bufferapp/publish-modals';
 
 import TabNavigation from './components/TabNavigation';
 
@@ -17,7 +17,7 @@ export default connect(
       tabId,
       profileId: ownProps.profileId,
     }))),
-    showUpgradeModal: () => dispatch(queueActions.showUpgradeModal()),
+    showUpgradeModal: () => dispatch(modalsActions.showUpgradeModal()),
   }),
 )(TabNavigation);
 

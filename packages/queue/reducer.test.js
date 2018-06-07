@@ -371,15 +371,4 @@ describe('reducer', () => {
     expect(reducer(stateBefore, action))
       .toEqual(stateAfter);
   });
-
-  it('should handle showUpgradeModal action', () => {
-    const showUpgradeModalAction = actions.showUpgradeModal();
-
-    expect(reducer(undefined, showUpgradeModalAction).showUpgradeModal)
-      .toBeTruthy();
-
-    const hideUpgradeModalAction = actions.hideUpgradeModal();
-    expect(reducer(undefined, hideUpgradeModalAction).showUpgradeModal)
-      .toBeFalsy();
-  });
 });

@@ -10,9 +10,9 @@ import Notifications from '@bufferapp/notifications';
 import ProfilePage from '@bufferapp/profile-page';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
+import AppModals from '@bufferapp/publish-modals';
 
 import DefaultPage from '../DefaultPage';
-import Modals from '../Modals';
 
 const appStyle = {
   display: 'flex',
@@ -45,7 +45,7 @@ class App extends Component { // eslint-disable-line
 
         <Notifications />
         <AppSwitcher />
-        <Modals />
+        <AppModals />
       </div>
     );
   }
