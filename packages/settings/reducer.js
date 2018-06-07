@@ -2,6 +2,7 @@
 import { actionTypes as profileActionTypes } from '@bufferapp/publish-profile-sidebar';
 import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import cloneDeep from 'lodash.clonedeep';
+import keyWrapper from '@bufferapp/keywrapper';
 import {
   transformSchedules,
   mergeSchedules,
@@ -18,23 +19,23 @@ import {
   updateScheduleTimeForApi,
   deleteAllTimesFromSchedule } from './utils/scheduleUtils';
 
-export const actionTypes = {
-  REMOVE_SCHEDULE_TIME: 'REMOVE_SCHEDULE_TIME',
-  UPDATE_SCHEDULE_TIME: 'UPDATE_SCHEDULE_TIME',
-  ADD_SCHEDULE_TIME: 'ADD_SCHEDULE_TIME',
-  UPDATE_TIMEZONE: 'UPDATE_TIMEZONE',
-  GET_TIMEZONES: 'GET_TIMEZONES',
-  CLEAR_TIMEZONE_INPUT: 'CLEAR_TIMEZONE_INPUT',
-  RESET_TIMEZONE_INPUT: 'RESET_TIMEZONE_INPUT',
-  PAUSE_DAY: 'PAUSE_DAY',
-  UNPAUSE_DAY: 'UNPAUSE_DAY',
-  UPDATE_PAUSED_SCHEDULE: 'UPDATE_PAUSED_SCHEDULE',
-  REMOVE_PAUSED_TIME: 'REMOVE_PAUSED_TIME',
-  UPDATE_PAUSED_SCHEDULE_STATE: 'UPDATE_PAUSED_SCHEDULE_STATE',
-  CONFIRM_CLEAR_ALL_TIMES: 'CONFIRM_CLEAR_ALL_TIMES',
-  CLOSE_POPOVER: 'CLOSE_POPOVER',
-  CLEAR_ALL_TIMES: 'CLEAR_ALL_TIMES',
-};
+export const actionTypes = keyWrapper('SETTINGS', {
+  REMOVE_SCHEDULE_TIME: 0,
+  UPDATE_SCHEDULE_TIME: 0,
+  ADD_SCHEDULE_TIME: 0,
+  UPDATE_TIMEZONE: 0,
+  GET_TIMEZONES: 0,
+  CLEAR_TIMEZONE_INPUT: 0,
+  RESET_TIMEZONE_INPUT: 0,
+  PAUSE_DAY: 0,
+  UNPAUSE_DAY: 0,
+  UPDATE_PAUSED_SCHEDULE: 0,
+  REMOVE_PAUSED_TIME: 0,
+  UPDATE_PAUSED_SCHEDULE_STATE: 0,
+  CONFIRM_CLEAR_ALL_TIMES: 0,
+  CLOSE_POPOVER: 0,
+  CLEAR_ALL_TIMES: 0,
+});
 
 const initialState = {
   settingsHeader: 'Your posting schedule',

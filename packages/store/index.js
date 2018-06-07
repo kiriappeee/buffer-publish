@@ -5,6 +5,7 @@ import {
 } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
+import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/buffermetrics/redux';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
@@ -24,6 +25,14 @@ import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
 export const history = createHistory();
+
+const bufferMetricsMiddleware = createBufferMetricsMiddleware({
+  application: 'PUBLISH',
+  metadata: state => ({
+    userId: state.appSidebar.user.id,
+    profileId: state.profileSidebar.selectedProfileId,
+  }),
+});
 
 const configureStore = (initialstate) => {
   const composeEnhancers =
@@ -53,6 +62,7 @@ const configureStore = (initialstate) => {
         betaRedirectMiddleware,
         upgradeModalMiddleware,
         stripeMiddleware,
+        bufferMetricsMiddleware,
       ),
     ),
   );

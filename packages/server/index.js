@@ -12,6 +12,7 @@ const {
   setRequestSession,
   validateSession,
 } = require('@bufferapp/session-manager/middleware');
+const bufferMetricsMiddleware = require('@bufferapp/buffermetrics/middleware');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
 const pusher = require('./lib/pusher');
@@ -82,6 +83,13 @@ app.post('/rpc', (req, res, next) => {
       }
     });
 });
+
+app.use(bodyParser.json());
+app.use(bufferMetricsMiddleware({
+  name: 'Buffer-Publish',
+  debug: !isProduction,
+  trackVisits: true,
+}));
 
 // make sure we have a valid session
 app.use(validateSession({

@@ -12,6 +12,7 @@
   "dependencies": {
     "@bufferapp/app-sidebar": "1.4.0",
     "@bufferapp/async-data-fetch": "1.2.7",
+    "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/environment": "1.2.7",
     "@bufferapp/notifications": "1.4.0",
     "@bufferapp/performance-tracking": "0.43.5",

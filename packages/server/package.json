@@ -10,6 +10,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
+    "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/logger": "0.7.0",
     "@bufferapp/micro-rpc": "0.1.6",
     "@bufferapp/publish-utils": "^1.4.1",

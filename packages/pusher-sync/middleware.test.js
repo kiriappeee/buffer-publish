@@ -1,5 +1,6 @@
 import Pusher from 'pusher-js';
 import { actionTypes as profileSidebarActionTypes } from '@bufferapp/publish-profile-sidebar';
+import { actionTypes as queueActionTypes } from '@bufferapp/publish-queue';
 import { postParser } from '@bufferapp/publish-utils';
 
 import middleware from './middleware';
@@ -62,7 +63,7 @@ describe('middleware', () => {
     const update = { id: '00012345', text: 'Hello, world.' };
     Pusher.simulate('private-updates-12345', 'added_update', { update });
     expect(store.dispatch).toHaveBeenCalledWith({
-      type: 'POST_CREATED',
+      type: queueActionTypes.POST_CREATED,
       profileId: '12345',
       post: postParser(update),
     });

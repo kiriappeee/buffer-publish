@@ -1,13 +1,14 @@
 import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
+import keyWrapper from '@bufferapp/keywrapper';
 
-export const actionTypes = {
-  SELECT_PROFILE: 'SELECT_PROFILE',
-  POST_COUNT_UPDATED: 'POST_COUNT_UPDATED',
-  PROFILE_UNPAUSED: 'PROFILE_UNPAUSED',
-  PROFILE_PAUSED: 'PROFILE_PAUSED',
-  PUSHER_PROFILE_PAUSED_STATE: 'PUSHER_PROFILE_PAUSED_STATE',
-  CONNECT_SOCIAL_ACCOUNT: 'CONNECT_SOCIAL_ACCOUNT',
-};
+export const actionTypes = keyWrapper('PROFILE_SIDEBAR', {
+  SELECT_PROFILE: 0,
+  POST_COUNT_UPDATED: 0,
+  PROFILE_UNPAUSED: 0,
+  PROFILE_PAUSED: 0,
+  PUSHER_PROFILE_PAUSED_STATE: 0,
+  CONNECT_SOCIAL_ACCOUNT: 0,
+});
 
 const initialState = {
   profiles: [],

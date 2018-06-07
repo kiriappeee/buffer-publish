@@ -10,6 +10,9 @@
     "test-update": "jest -u --config=../../.jestrc.json"
   },
   "author": "hharnisc@gmail.com",
+  "dependencies": {
+    "@bufferapp/keywrapper": "0.2.0"
+  },
   "devDependencies": {
     "eslint": "3.19.0",
     "jest": "19.0.2"

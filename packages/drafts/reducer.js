@@ -1,11 +1,12 @@
 import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import { actionTypes as profileSidebarActionTypes } from '@bufferapp/publish-profile-sidebar';
+import keyWrapper from '@bufferapp/keywrapper';
 
-export const actionTypes = {
-  DRAFT_CLICKED_DELETE: 'DRAFT_CLICKED_DELETE',
-  DRAFT_CANCELED_DELETE: 'DRAFT_CANCELED_DELETE',
-  DRAFT_CONFIRMED_DELETE: 'DRAFT_CONFIRMED_DELETE',
-};
+export const actionTypes = keyWrapper('DRAFTS', {
+  DRAFT_CLICKED_DELETE: 0,
+  DRAFT_CANCELED_DELETE: 0,
+  DRAFT_CONFIRMED_DELETE: 0,
+});
 
 const initialState = {
   byProfileId: {},
