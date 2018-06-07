@@ -1,5 +1,5 @@
 import deepFreeze from 'deep-freeze';
-import reducer, { initialState, actions, actionTypes } from './reducer';
+import reducer, { initialState, actionTypes } from './reducer';
 
 const profileId = '123456';
 
@@ -370,16 +370,5 @@ describe('reducer', () => {
     deepFreeze(action);
     expect(reducer(stateBefore, action))
       .toEqual(stateAfter);
-  });
-
-  it('should handle showUpgradeModal action', () => {
-    const showUpgradeModalAction = actions.showUpgradeModal();
-
-    expect(reducer(undefined, showUpgradeModalAction).showUpgradeModal)
-      .toBeTruthy();
-
-    const hideUpgradeModalAction = actions.hideUpgradeModal();
-    expect(reducer(undefined, hideUpgradeModalAction).showUpgradeModal)
-      .toBeFalsy();
   });
 });
