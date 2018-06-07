@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { action, storiesOf } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import ScheduleTableHeader from './index';
 
@@ -10,5 +10,15 @@ storiesOf('ScheduleTableHeader')
   .add('default', () => (
     <ScheduleTableHeader
       dayName={dayName}
+      paused={false}
+      onPauseToggleClick={action('on-pause-toggle-click')}
+    />
+  ))
+  .add('paused', () => (
+    <ScheduleTableHeader
+      dayName={dayName}
+      paused
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ));
+

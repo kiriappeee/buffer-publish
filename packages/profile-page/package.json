@@ -13,7 +13,7 @@
   "dependencies": {
     "@bufferapp/app-sidebar": "1.4.0",
     "@bufferapp/async-data-fetch": "1.2.7",
-    "@bufferapp/components": "2.1.4",
+    "@bufferapp/components": "2.1.5",
     "@bufferapp/notifications": "1.4.0",
     "@bufferapp/publish-profile-sidebar": "1.4.0",
     "@bufferapp/publish-pusher-sync": "1.4.0",

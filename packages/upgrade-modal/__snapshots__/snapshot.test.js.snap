@@ -2,21 +2,29 @@
 
 exports[`Snapshots UpgradeModal default 1`] = `
 <span>
-  <span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100vh",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100vw",
+      }
+    }
+  >
     <div
       style={
         Object {
-          "alignItems": "center",
           "bottom": undefined,
-          "display": "flex",
-          "flexDirection": "column",
-          "height": "100vh",
-          "justifyContent": "center",
-          "left": "0",
+          "left": undefined,
           "position": "absolute",
           "right": undefined,
-          "top": "0",
-          "width": "100vw",
+          "top": undefined,
           "zIndex": 3000,
         }
       }
@@ -1035,6 +1043,6 @@ exports[`Snapshots UpgradeModal default 1`] = `
         }
       }
     />
-  </span>
+  </div>
 </span>
 `;

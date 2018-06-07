@@ -7,7 +7,7 @@
 </p>
 
 [![Build Status](https://travis-ci.org/bufferapp/buffer-publish.svg?branch=master)](https://travis-ci.org/bufferapp/buffer-publish)
-
+&nbsp; [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 Welcome to the [Lerna](https://github.com/lerna/lerna)-based monorepo™ for Buffer Publish.
 <p>—<br><em>Formerly Project Donut</em>&nbsp; 🍩</p>

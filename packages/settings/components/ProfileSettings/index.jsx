@@ -222,8 +222,7 @@ const ProfileSettings = ({
             <Button secondary onClick={onClearAllClick}>
               Clear all Posting Times
             </Button>}
-        <Popover
-          hidden={!showClearAllModal}
+        {showClearAllModal && <Popover
           onOverlayClick={closePopover}
         >
           <ConfirmClear
@@ -235,7 +234,7 @@ const ProfileSettings = ({
             onCloseClick={closePopover}
             avatar={avatar}
           />
-        </Popover>
+        </Popover>}
         <div style={tableStyle}>
           <Divider color="white" />
           {scheduleLoading &&
