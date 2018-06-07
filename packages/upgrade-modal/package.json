@@ -8,7 +8,7 @@
     "lint": "eslint . --ignore-pattern coverage node_modules",
     "test": "yarn run lint && sh ../../package_test.sh",
     "test-watch": "jest --watch",
-    "test-update": "jest -u"
+    "test-update": "jest -u --config=../../.jestrc.json"
   },
   "jest": {
     "transformIgnorePatterns": [
@@ -23,7 +23,7 @@
   "dependencies": {
     "@bufferapp/publish-i18n": "1.2.7",
     "@bufferapp/async-data-fetch": "1.2.7",
-    "@bufferapp/components": "2.1.4",
+    "@bufferapp/components": "2.1.5",
     "@bufferapp/publish-shared-components": "1.4.0",
     "@bufferapp/stripe": "0.0.1"
   },

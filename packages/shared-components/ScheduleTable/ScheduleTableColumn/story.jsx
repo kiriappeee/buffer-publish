@@ -13,16 +13,12 @@ const times = [
       hours: 9,
       minutes: 41,
     },
-    onChange: action('on-change'),
-    onRemoveTimeClick: action('on-remove-time-click'),
   },
   {
     value: {
       hours: 19,
       minutes: 0,
     },
-    onChange: action('on-change'),
-    onRemoveTimeClick: action('on-remove-time-click'),
   },
 ];
 const timesSingle = [
@@ -31,8 +27,6 @@ const timesSingle = [
       hours: 9,
       minutes: 41,
     },
-    onChange: action('on-change'),
-    onRemoveTimeClick: action('on-remove-time-click'),
   },
 ];
 
@@ -43,46 +37,74 @@ storiesOf('ScheduleTableColumn')
   .add('default', () => (
     <ScheduleTableColumn
       dayName={dayName}
+      paused={false}
       times={times}
       onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
+    />
+  ))
+  .add('pasued', () => (
+    <ScheduleTableColumn
+      dayName={dayName}
+      paused
+      times={times}
+      onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ))
   .add('disabled', () => (
     <ScheduleTableColumn
       dayName={dayName}
+      paused={false}
       disabled
       times={times}
       onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ))
   .add('24-hour time setting', () => (
     <ScheduleTableColumn
       dayName={dayName}
+      paused={false}
       select24Hours
       times={times}
       onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ))
   .add('24-hour time setting, disabled', () => (
     <ScheduleTableColumn
       dayName={dayName}
+      paused={false}
       disabled
       select24Hours
       times={times}
       onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ))
   .add('single time', () => (
     <ScheduleTableColumn
       dayName={dayName}
+      paused={false}
       times={timesSingle}
       onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ))
   .add('without times', () => (
     <ScheduleTableColumn
+      paused={false}
       dayName={dayName}
       times={timesEmpty}
       onUpdateTime={action('on-update-time')}
+      onRemoveTimeClick={action('on-remove-time-click')}
+      onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ));
