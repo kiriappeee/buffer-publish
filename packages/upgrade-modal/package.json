@@ -8,7 +8,7 @@
     "lint": "eslint . --ignore-pattern coverage node_modules",
     "test": "yarn run lint && sh ../../package_test.sh",
     "test-watch": "jest --watch",
-    "test-update": "jest -u"
+    "test-update": "jest -u --config=../../.jestrc.json"
   },
   "jest": {
     "transformIgnorePatterns": [

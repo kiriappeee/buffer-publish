@@ -4246,16 +4246,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4268,16 +4264,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4290,16 +4282,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4312,16 +4300,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4334,16 +4318,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4356,16 +4336,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4378,16 +4354,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4398,6 +4370,8 @@ exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
       ]
     }
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
     select24Hours={true}
   />
@@ -4414,16 +4388,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4436,16 +4406,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4458,16 +4424,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4480,16 +4442,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4502,16 +4460,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4524,16 +4478,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4546,16 +4496,12 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4566,6 +4512,8 @@ exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
       ]
     }
     disabled={true}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
     select24Hours={true}
   />
@@ -4582,16 +4530,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4604,16 +4548,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4626,16 +4566,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4648,16 +4584,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4670,16 +4602,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4692,16 +4620,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4714,16 +4638,12 @@ exports[`Snapshots ScheduleTable default 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4734,6 +4654,8 @@ exports[`Snapshots ScheduleTable default 1`] = `
       ]
     }
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
     select24Hours={false}
   />
@@ -4750,16 +4672,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4772,16 +4690,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4794,16 +4708,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4816,16 +4726,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4838,16 +4744,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4860,16 +4762,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4882,16 +4780,12 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
           "postingTimesTotal": 2,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
               },
             },
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 19,
                 "minutes": 0,
@@ -4902,6 +4796,8 @@ exports[`Snapshots ScheduleTable disabled 1`] = `
       ]
     }
     disabled={true}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
     select24Hours={false}
   />
@@ -4951,6 +4847,8 @@ exports[`Snapshots ScheduleTable no times 1`] = `
       ]
     }
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
     select24Hours={false}
   />
@@ -4967,8 +4865,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -4981,8 +4877,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -4995,8 +4889,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -5009,8 +4901,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -5023,8 +4913,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -5037,8 +4925,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -5051,8 +4937,6 @@ exports[`Snapshots ScheduleTable single time 1`] = `
           "postingTimesTotal": 1,
           "times": Array [
             Object {
-              "onChange": [Function],
-              "onRemoveTimeClick": [Function],
               "value": Object {
                 "hours": 9,
                 "minutes": 41,
@@ -5063,6 +4947,8 @@ exports[`Snapshots ScheduleTable single time 1`] = `
       ]
     }
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
     select24Hours={false}
   />
@@ -5074,12 +4960,12 @@ exports[`Snapshots ScheduleTableCell 24-hour time setting 1`] = `
   <ScheduleTableCell
     dayName="Monday"
     disabled={false}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={true}
     time={
       Object {
-        "onChange": [Function],
-        "onRemoveTimeClick": [Function],
         "value": Object {
           "hours": 19,
           "minutes": 41,
@@ -5096,12 +4982,12 @@ exports[`Snapshots ScheduleTableCell 24-hour time setting, disabled 1`] = `
   <ScheduleTableCell
     dayName="Monday"
     disabled={true}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={true}
     time={
       Object {
-        "onChange": [Function],
-        "onRemoveTimeClick": [Function],
         "value": Object {
           "hours": 19,
           "minutes": 41,
@@ -5118,12 +5004,12 @@ exports[`Snapshots ScheduleTableCell default 1`] = `
   <ScheduleTableCell
     dayName="Monday"
     disabled={false}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={false}
     time={
       Object {
-        "onChange": [Function],
-        "onRemoveTimeClick": [Function],
         "value": Object {
           "hours": 19,
           "minutes": 41,
@@ -5140,12 +5026,34 @@ exports[`Snapshots ScheduleTableCell disabled 1`] = `
   <ScheduleTableCell
     dayName="Monday"
     disabled={true}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={false}
     time={
       Object {
-        "onChange": [Function],
-        "onRemoveTimeClick": [Function],
+        "value": Object {
+          "hours": 19,
+          "minutes": 41,
+        },
+      }
+    }
+    timeIndex={0}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableCell paused 1`] = `
+<span>
+  <ScheduleTableCell
+    dayName="Monday"
+    disabled={false}
+    onRemoveTimeClick={[Function]}
+    onUpdateTime={[Function]}
+    paused={true}
+    select24Hours={false}
+    time={
+      Object {
         "value": Object {
           "hours": 19,
           "minutes": 41,
@@ -5162,21 +5070,20 @@ exports[`Snapshots ScheduleTableColumn 24-hour time setting 1`] = `
   <ScheduleTableColumn
     dayName="Monday"
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={true}
     times={
       Array [
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 9,
             "minutes": 41,
           },
         },
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 19,
             "minutes": 0,
@@ -5193,21 +5100,20 @@ exports[`Snapshots ScheduleTableColumn 24-hour time setting, disabled 1`] = `
   <ScheduleTableColumn
     dayName="Monday"
     disabled={true}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={true}
     times={
       Array [
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 9,
             "minutes": 41,
           },
         },
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 19,
             "minutes": 0,
@@ -5224,21 +5130,20 @@ exports[`Snapshots ScheduleTableColumn default 1`] = `
   <ScheduleTableColumn
     dayName="Monday"
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={false}
     times={
       Array [
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 9,
             "minutes": 41,
           },
         },
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 19,
             "minutes": 0,
@@ -5255,21 +5160,50 @@ exports[`Snapshots ScheduleTableColumn disabled 1`] = `
   <ScheduleTableColumn
     dayName="Monday"
     disabled={true}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={false}
     times={
       Array [
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 9,
             "minutes": 41,
           },
         },
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 19,
+            "minutes": 0,
+          },
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn pasued 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
+    onUpdateTime={[Function]}
+    paused={true}
+    select24Hours={false}
+    times={
+      Array [
+        Object {
+          "value": Object {
+            "hours": 9,
+            "minutes": 41,
+          },
+        },
+        Object {
           "value": Object {
             "hours": 19,
             "minutes": 0,
@@ -5286,13 +5220,14 @@ exports[`Snapshots ScheduleTableColumn single time 1`] = `
   <ScheduleTableColumn
     dayName="Monday"
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={false}
     times={
       Array [
         Object {
-          "onChange": [Function],
-          "onRemoveTimeClick": [Function],
           "value": Object {
             "hours": 9,
             "minutes": 41,
@@ -5309,7 +5244,10 @@ exports[`Snapshots ScheduleTableColumn without times 1`] = `
   <ScheduleTableColumn
     dayName="Monday"
     disabled={false}
+    onPauseToggleClick={[Function]}
+    onRemoveTimeClick={[Function]}
     onUpdateTime={[Function]}
+    paused={false}
     select24Hours={false}
     times={Array []}
   />
@@ -5320,6 +5258,18 @@ exports[`Snapshots ScheduleTableHeader default 1`] = `
 <span>
   <ScheduleTableHeader
     dayName="Monday"
+    onPauseToggleClick={[Function]}
+    paused={false}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableHeader paused 1`] = `
+<span>
+  <ScheduleTableHeader
+    dayName="Monday"
+    onPauseToggleClick={[Function]}
+    paused={true}
   />
 </span>
 `;

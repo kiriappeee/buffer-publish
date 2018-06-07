@@ -6,8 +6,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
-    "test": "if [ -n \"$CI\" ]; then yarn run init; fi && lerna run test",
-    "test-update": "lerna run test-update",
+    "test": "if [ -n \"$CI\" ]; then yarn run init; fi && lerna run test --ignore @bufferapp/composer",
+    "test-update": "lerna run test-update --ignore @bufferapp/composer",
     "init": "yarn install && lerna bootstrap --loglevel verbose",
     "start": "cd ./packages/server/ && yarn run start",
     "publish": "lerna publish --exact",
