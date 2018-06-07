@@ -14,7 +14,8 @@
     "publish-beta": "lerna publish --npm-tag=beta --exact",
     "watch": "webpack-dev-server --config ./packages/server/webpack.config.dev.js --colors",
     "build": "webpack  --config ./packages/server/webpack.config.js --output-path=`pwd`",
-    "updated": "lerna updated"
+    "updated": "lerna updated",
+    "postinstall": "npm rebuild grpc --target_arch=x64 --target_platform=linux --target_libc=glibc"
   },
   "repository": {
     "type": "git",

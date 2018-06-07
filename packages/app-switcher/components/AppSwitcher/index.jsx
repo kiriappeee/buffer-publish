@@ -162,7 +162,7 @@ class AppSwitcher extends React.Component {
                   <CloseIcon />
                 </Button>
               </div>
-              <Text size="extra-small">
+              <Text size="small">
                 Thanks for using our beta!
                 You can switch back and forth at any time.
               </Text>
