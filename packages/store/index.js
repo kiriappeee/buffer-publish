@@ -5,6 +5,7 @@ import {
 } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
+import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/buffermetrics/redux';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
@@ -20,13 +21,12 @@ import { middleware as appSwitcherMiddleware } from '@bufferapp/publish-app-swit
 import { middleware as betaRedirectMiddleware } from '@bufferapp/publish-beta-redirect';
 import { middleware as upgradeModalMiddleware } from '@bufferapp/publish-upgrade-modal';
 import { middleware as stripeMiddleware } from '@bufferapp/stripe';
-import { createMiddleware } from '@bufferapp/buffermetrics/redux';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
 export const history = createHistory();
 
-const bufferMetricsMiddleware = createMiddleware({
+const bufferMetricsMiddleware = createBufferMetricsMiddleware({
   application: 'PUBLISH',
   metadata: state => ({
     userId: state.appSidebar.user.id,
