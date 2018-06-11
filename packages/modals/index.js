@@ -23,6 +23,14 @@ export const reducer = (state = initialState, action) => {
         ...state,
         showUpgradeModal: false,
       };
+    case 'COMPOSER_EVENT':
+      if (action.eventType === 'show-upgrade-modal') {
+        return {
+          ...state,
+          showUpgradeModal: true,
+        };
+      }
+      return state;
     default:
       return state;
   }
