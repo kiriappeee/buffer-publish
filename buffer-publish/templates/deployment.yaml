@@ -64,6 +64,11 @@ spec:
             secretKeyRef:
               key: pusher-cluster
               name: buffer-publish-keys
+        - name: STRIPE_PUBLISHABLE
+          valueFrom:
+            secretKeyRef:
+              key: stripe-publishable
+              name: buffer-publish-keys
         livenessProbe:
           httpGet:
             path: /health-check
