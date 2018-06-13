@@ -47,5 +47,13 @@ describe('reducer', () => {
       expect(reducer(stateWithVisibleModal, actions.hideUpgradeModal()))
         .toEqual(Object.assign(initialState, { showUpgradeModal: false }));
     });
+    it('should show upgrade modal when triggered from composer', () => {
+      const action = {
+        type: 'COMPOSER_EVENT',
+        eventType: 'show-upgrade-modal',
+      };
+      expect(reducer(initialState, action))
+        .toEqual(Object.assign(initialState, { showUpgradeModal: true }));
+    });
   });
 });
