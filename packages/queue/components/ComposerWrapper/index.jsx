@@ -56,4 +56,9 @@ export default connect(
     }
     return {};
   },
+  (dispatch) => ({
+    onEvent: (type, data) => {
+      dispatch({ type: 'COMPOSER_EVENT', eventType: type, data })
+    }
+  }),
 )(ComposerWrapper);
