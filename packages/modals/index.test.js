@@ -55,5 +55,13 @@ describe('reducer', () => {
       expect(reducer(initialState, action))
         .toEqual(Object.assign(initialState, { showUpgradeModal: true }));
     });
+    it('should ignore other composer events', () => {
+      const action = {
+        type: 'COMPOSER_EVENT',
+        eventType: 'some-other-event',
+      };
+      expect(reducer(initialState, action))
+        .toEqual(initialState);
+    });
   });
 });
