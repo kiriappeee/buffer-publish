@@ -13,6 +13,7 @@
     "@bufferapp/app-sidebar": "^1.5.0",
     "@bufferapp/async-data-fetch": "1.2.7",
     "@bufferapp/buffermetrics": "0.5.2",
+    "@bufferapp/edit-email": "0.0.1",
     "@bufferapp/environment": "1.2.7",
     "@bufferapp/notifications": "^1.5.0",
     "@bufferapp/performance-tracking": "0.43.5",
