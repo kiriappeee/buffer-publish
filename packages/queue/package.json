@@ -14,7 +14,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.2.7",
     "@bufferapp/components": "2.1.5",
-    "@bufferapp/composer": "1.9.3",
+    "@bufferapp/composer": "1.9.4",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "^1.5.0",
     "@bufferapp/publish-profile-sidebar": "^1.5.0",
