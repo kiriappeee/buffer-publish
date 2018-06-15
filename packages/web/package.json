@@ -20,7 +20,8 @@
     "@bufferapp/publish-profile-sidebar": "^1.5.0",
     "@bufferapp/publish-routes": "1.2.7",
     "@bufferapp/publish-store": "^1.5.0",
-    "@bufferapp/publish-modals": "1.0.0"
+    "@bufferapp/publish-modals": "1.0.0",
+    "@bufferapp/publish-preferences": "^1.5.0"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
   "devDependencies": {

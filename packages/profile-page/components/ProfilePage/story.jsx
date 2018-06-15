@@ -11,8 +11,6 @@ import ProfilePage from './index';
 
 const history = createHistory();
 const store = createStore();
-// TODO: Use MemoryRouter for testing?
-// https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/MemoryRouter.md
 const stubbedHistory = {
   location: {
     pathname: '/profile/1234/tab/queue',

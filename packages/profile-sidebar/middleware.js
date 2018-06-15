@@ -2,6 +2,7 @@ import { push } from 'react-router-redux';
 import {
   generateProfilePageRoute,
   getProfilePageParams,
+  getPreferencePageParams,
 } from '@bufferapp/publish-routes';
 import {
   actionTypes as dataFetchActionTypes,
@@ -29,14 +30,18 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case `profiles_${dataFetchActionTypes.FETCH_SUCCESS}`: {
+      const path = getState().router.location.pathname;
       const params = getProfilePageParams({
-        path: getState().router.location.pathname,
+        path,
+      });
+      const isPreferencePage = !!getPreferencePageParams({
+        path,
       });
       if (params && params.profileId) {
         dispatch(actions.selectProfile({
           profile: action.result.find(profile => profile.id === params.profileId),
         }));
-      } else if (action.result.length > 0) {
+      } else if (!isPreferencePage && action.result.length > 0) {
         const selectedProfile = action.result[0];
         dispatch(actions.selectProfile({
           profile: selectedProfile,

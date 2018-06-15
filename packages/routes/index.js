@@ -10,10 +10,29 @@ export const getProfilePageParams = ({ path }) => {
   };
 };
 
-export const generateProfilePageRoute = ({ profileId, tabId }) =>
+export const generateProfilePageRoute = ({ profileId, tabId = 'queue' }) =>
   `/profile/${profileId}/tab/${tabId}`;
 
 export const profilePageRoute = generateProfilePageRoute({
   profileId: ':profileId',
   tabId: ':tabId',
 });
+
+
+export const generatePreferencePageRoute = ({ preferenceId }) =>
+  `/preferences/${preferenceId}`;
+
+export const preferencePageRoute = generatePreferencePageRoute({
+  preferenceId: ':preferenceId',
+});
+
+const preferenceRouteRegex = /preferences\/(\w+)/;
+export const getPreferencePageParams = ({ path }) => {
+  const match = preferenceRouteRegex.exec(path);
+  if (!match) {
+    return null;
+  }
+  return {
+    preferenceId: match[1],
+  };
+};

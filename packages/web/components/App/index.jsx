@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { profilePageRoute } from '@bufferapp/publish-routes';
+import { profilePageRoute, preferencePageRoute } from '@bufferapp/publish-routes';
 import { Route, Switch } from 'react-router';
 
 import { DragDropContext } from 'react-dnd';
@@ -8,6 +8,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import AppSidebar from '@bufferapp/app-sidebar';
 import Notifications from '@bufferapp/notifications';
 import ProfilePage from '@bufferapp/profile-page';
+import Preferences from '@bufferapp/publish-preferences';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 import AppModals from '@bufferapp/publish-modals';
@@ -34,6 +35,10 @@ class App extends Component { // eslint-disable-line
         <div style={contentStyle}>
           <EnsurePublishBetaUser>
             <Switch>
+              <Route
+                path={preferencePageRoute}
+                component={Preferences}
+              />
               <Route
                 path={profilePageRoute}
                 component={ProfilePage}

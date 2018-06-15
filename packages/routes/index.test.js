@@ -1,7 +1,10 @@
 import {
   getProfilePageParams,
   generateProfilePageRoute,
+  preferencePageRoute,
   profilePageRoute,
+  generatePreferencePageRoute,
+  getPreferencePageParams,
  } from './index';
 
 describe('publish-routes', () => {
@@ -40,6 +43,34 @@ describe('publish-routes', () => {
     it('should return profile page route template', () => {
       expect(profilePageRoute)
         .toBe('/profile/:profileId/tab/:tabId');
+    });
+  });
+
+  describe('preferencePageRoute', () => {
+    it('should return a preferences page route template', () => {
+      expect(preferencePageRoute)
+        .toBe('/preferences/:preferenceId');
+    });
+  });
+
+  describe('generatePreferencePageRoute', () => {
+    it('should generate preference page route', () => {
+      const preferenceId = '1234adf';
+      expect(generatePreferencePageRoute({
+        preferenceId,
+      }))
+        .toBe(`/preferences/${preferenceId}`);
+    });
+  });
+
+  describe('getPreferencePageParams', () => {
+    it('should get params from path', () => {
+      const preferenceId = '1234adf';
+      const path = `/preferences/${preferenceId}`;
+      expect(getPreferencePageParams({ path }))
+        .toEqual({
+          preferenceId,
+        });
     });
   });
 });
