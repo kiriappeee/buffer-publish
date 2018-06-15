@@ -31,6 +31,14 @@ export const reducer = (state = initialState, action) => {
         };
       }
       return state;
+    case 'APP_INIT':
+      if (action.hash === '#upgrade-to-pro') {
+        return {
+          ...state,
+          showUpgradeModal: true,
+        };
+      }
+      return state;
     default:
       return state;
   }
