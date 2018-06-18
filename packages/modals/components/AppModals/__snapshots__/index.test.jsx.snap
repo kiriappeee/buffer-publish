@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modals renders a connected upgrade modal 1`] = `<Connect(AppModals) />`;
+
 exports[`Modals renders nothing when no modals are visible 1`] = `false`;
 
 exports[`Modals renders upgrade modal 1`] = `<Connect(UpgradeModal) />`;

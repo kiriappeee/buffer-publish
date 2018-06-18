@@ -21,6 +21,7 @@ import { middleware as appSwitcherMiddleware } from '@bufferapp/publish-app-swit
 import { middleware as betaRedirectMiddleware } from '@bufferapp/publish-beta-redirect';
 import { middleware as upgradeModalMiddleware } from '@bufferapp/publish-upgrade-modal';
 import { middleware as stripeMiddleware } from '@bufferapp/stripe';
+import { middleware as modalsMiddleware } from '@bufferapp/publish-modals';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -62,6 +63,7 @@ const configureStore = (initialstate) => {
         betaRedirectMiddleware,
         upgradeModalMiddleware,
         stripeMiddleware,
+        modalsMiddleware,
         bufferMetricsMiddleware,
       ),
     ),

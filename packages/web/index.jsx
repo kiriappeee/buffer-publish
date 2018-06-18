@@ -15,7 +15,6 @@ const store = createStore();
 
 store.dispatch({
   type: 'APP_INIT',
-  hash: window.location.hash,
 });
 
 const renderApp = (AppComponent) => {
