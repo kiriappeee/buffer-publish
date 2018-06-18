@@ -63,5 +63,13 @@ describe('reducer', () => {
       expect(reducer(initialState, action))
         .toEqual(initialState);
     });
+    it('should show upgrade modal when the correct location hash is present', () => {
+      const action = {
+        type: 'APP_INIT',
+        hash: '#upgrade-modal',
+      };
+      expect(reducer(initialState, action))
+        .toEqual(Object.assign(initialState, { showUpgradeModal: true }));
+    });
   });
 });
