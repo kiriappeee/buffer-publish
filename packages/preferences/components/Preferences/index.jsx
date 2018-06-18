@@ -5,13 +5,14 @@ import {
   Tab,
 } from '@bufferapp/publish-shared-components';
 import { Link, ArrowLeftIcon, Text } from '@bufferapp/components';
+import EditEmail from '@bufferapp/edit-email';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
     case 'general':
-      return <Text>General Content Goes Here</Text>;
+      return <EditEmail />;
     case 'security':
       return <Text>Security Content Goes Here</Text>;
     case 'appsandextras':

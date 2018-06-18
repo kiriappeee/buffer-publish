@@ -20,6 +20,7 @@ import { middleware as unauthorizedRedirectMiddleware } from '@bufferapp/unautho
 import { middleware as appSwitcherMiddleware } from '@bufferapp/publish-app-switcher';
 import { middleware as betaRedirectMiddleware } from '@bufferapp/publish-beta-redirect';
 import { middleware as upgradeModalMiddleware } from '@bufferapp/publish-upgrade-modal';
+import { middleware as editEmailMiddlware } from '@bufferapp/edit-email';
 import { middleware as stripeMiddleware } from '@bufferapp/stripe';
 import { middleware as modalsMiddleware } from '@bufferapp/publish-modals';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
@@ -64,6 +65,7 @@ const configureStore = (initialstate) => {
         upgradeModalMiddleware,
         stripeMiddleware,
         modalsMiddleware,
+        editEmailMiddlware,
         bufferMetricsMiddleware,
       ),
     ),

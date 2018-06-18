@@ -15,6 +15,7 @@ import { reducer as appSwitcherReducer } from '@bufferapp/publish-app-switcher';
 import { reducer as betaRedirectReducer } from '@bufferapp/publish-beta-redirect';
 import { reducer as upgradeModalReducer } from '@bufferapp/publish-upgrade-modal';
 import { reducer as stripeReducer } from '@bufferapp/stripe';
+import { reducer as editEmailReducer } from '@bufferapp/edit-email';
 import { reducer as modalsReducer } from '@bufferapp/publish-modals';
 
 export default combineReducers({
@@ -34,5 +35,6 @@ export default combineReducers({
   betaRedirect: betaRedirectReducer,
   upgradeModal: upgradeModalReducer,
   stripe: stripeReducer,
+  editEmail: editEmailReducer,
   modals: modalsReducer,
 });

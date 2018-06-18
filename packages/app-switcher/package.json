@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-app-switcher",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Displays a popup and modal for beta publish users to switch to classic Buffer",
   "main": "index.js",
   "scripts": {
