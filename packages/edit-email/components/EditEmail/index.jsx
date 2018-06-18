@@ -10,6 +10,7 @@ import Modal from '../Modal';
 const rowStyle = {
   display: 'flex',
   justifyContent: 'space-between',
+  padding: '.5rem 0',
 };
 
 const editStyle = {

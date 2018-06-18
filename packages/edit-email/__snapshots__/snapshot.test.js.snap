@@ -257,6 +257,7 @@ exports[`Snapshots EditEmail clicking on the edit link displays the modal 1`] = 
         Object {
           "display": "flex",
           "justifyContent": "space-between",
+          "padding": ".5rem 0",
         }
       }
     >
