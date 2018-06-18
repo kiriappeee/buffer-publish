@@ -1,5 +1,7 @@
 import 'babel-polyfill';
+
 import React from 'react';
+
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
@@ -8,7 +10,6 @@ import {
 } from 'react-router-redux';
 import createStore, { history } from '@bufferapp/publish-store';
 import App from './components/App';
-
 
 const store = createStore();
 
