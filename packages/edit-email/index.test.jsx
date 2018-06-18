@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount, configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount, shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import EditEmailContainer, {
@@ -11,9 +10,6 @@ import EditEmailContainer, {
   Modal,
 } from './index';
 import EditEmail from './components/EditEmail';
-
-
-configure({ adapter: new Adapter() });
 
 const storeFake = state => ({
   default: () => {},

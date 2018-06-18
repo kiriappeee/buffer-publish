@@ -1,13 +1,10 @@
 import React from 'react';
-import { mount, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount } from 'enzyme';
 import PostList from './index';
 import {
   posts,
   confirmDeletePosts,
 } from './postData';
-
-configure({ adapter: new Adapter() });
 
 describe('PostList', () => {
   it('should trigger onEditClick', () => {
