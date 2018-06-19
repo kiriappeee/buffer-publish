@@ -11,13 +11,13 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/components": "2.1.5",
+    "@bufferapp/components": "2.1.6",
     "@bufferapp/publish-profile-sidebar": "^1.6.0",
     "@bufferapp/publish-shared-components": "^1.5.0",
     "@bufferapp/publish-store": "^1.6.0",
     "@bufferapp/publish-profile-sidebar": "^1.5.0",
     "@bufferapp/change-password": "^1.5.0",
-    "@bufferapp/components": "2.1.5"
+    "@bufferapp/components": "2.1.6"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",
