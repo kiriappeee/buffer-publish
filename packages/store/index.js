@@ -1,8 +1,4 @@
-import {
-  createStore,
-  applyMiddleware,
-  compose,
-} from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/buffermetrics/redux';
@@ -23,6 +19,7 @@ import { middleware as upgradeModalMiddleware } from '@bufferapp/publish-upgrade
 import { middleware as editEmailMiddlware } from '@bufferapp/edit-email';
 import { middleware as stripeMiddleware } from '@bufferapp/stripe';
 import { middleware as modalsMiddleware } from '@bufferapp/publish-modals';
+import { middleware as changePasswordMiddleware } from '@bufferapp/change-password';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -38,9 +35,9 @@ const bufferMetricsMiddleware = createBufferMetricsMiddleware({
 
 const configureStore = (initialstate) => {
   const composeEnhancers =
-    typeof window === 'object' &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+      : compose;
 
   return createStore(
     reducers,
@@ -63,6 +60,7 @@ const configureStore = (initialstate) => {
         appSwitcherMiddleware,
         betaRedirectMiddleware,
         upgradeModalMiddleware,
+        changePasswordMiddleware,
         stripeMiddleware,
         modalsMiddleware,
         editEmailMiddlware,

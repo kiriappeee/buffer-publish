@@ -22,6 +22,7 @@ const savePublishBetaRedirect = require('./savePublishBetaRedirect');
 const performanceTrackingMethod = require('./performanceTracking');
 const upgradeToPro = require('./upgradeToPro');
 const updateEmail = require('./updateEmail');
+const changePassword = require('./changePassword');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -46,4 +47,5 @@ module.exports = checkToken(rpc(
   performanceTrackingMethod,
   upgradeToPro,
   updateEmail,
+  changePassword,
 ));

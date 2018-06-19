@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Tabs,
-  Tab,
-} from '@bufferapp/publish-shared-components';
+import { Tabs, Tab } from '@bufferapp/publish-shared-components';
 import { Link, ArrowLeftIcon, Text } from '@bufferapp/components';
 import EditEmail from '@bufferapp/edit-email';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
+import Security from '../Security';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
     case 'general':
       return <EditEmail />;
     case 'security':
-      return <Text>Security Content Goes Here</Text>;
+      return <Security />;
     case 'appsandextras':
       return <Text>Apps & Extras Content Goes Here</Text>;
     default:
@@ -35,7 +33,7 @@ const Preferences = ({
   onUnknownTab,
   selectedProfileId,
   profiles,
-}) =>
+}) => (
   <div
     style={{
       display: 'flex',
@@ -60,13 +58,8 @@ const Preferences = ({
         flexDirection: 'column',
       }}
     >
-      <div
-        id={'tabs'}
-      >
-        <Tabs
-          selectedTabId={selectedTabId}
-          onTabClick={onTabClick}
-        >
+      <div id={'tabs'}>
+        <Tabs selectedTabId={selectedTabId} onTabClick={onTabClick}>
           <Tab tabId={'general'}>General</Tab>
           <Tab tabId={'security'}>Security</Tab>
           <Tab tabId={'appsandextras'}>Apps & Extras</Tab>
@@ -97,10 +90,7 @@ const Preferences = ({
             }}
           />
           <div style={{ marginLeft: '0.5rem' }}>
-            <Text
-              size={'mini'}
-              color={'curiousBlue'}
-            >
+            <Text size={'mini'} color={'curiousBlue'}>
               Back To Dashboard
             </Text>
           </div>
@@ -115,7 +105,8 @@ const Preferences = ({
         <PreferenceContent tabId={selectedTabId} onUnknownTab={onUnknownTab} />
       </div>
     </div>
-  </div>;
+  </div>
+);
 
 Preferences.propTypes = {
   selectedTabId: PropTypes.string.isRequired,

@@ -30,8 +30,7 @@
     "@bufferapp/publish-settings": "^1.6.0",
     "@bufferapp/publish-tabs": "^1.6.0",
     "@bufferapp/publish-upgrade-modal": "^1.6.0",
-    "@bufferapp/unauthorized-redirect": "1.3.3"
-  },
+    "@bufferapp/unauthorized-redirect": "1.3.3"  },
   "devDependencies": {
     "eslint": "3.19.0",
     "jest": "19.0.2"
