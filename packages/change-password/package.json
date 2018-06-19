@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/change-password",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Buffer Password Change component",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/components": "2.1.6",
-    "@bufferapp/notifications": "1.6.1"
+    "@bufferapp/notifications": "1.6.2"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

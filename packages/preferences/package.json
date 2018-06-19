@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-preferences",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Buffer Publish perferences",
   "main": "index.js",
   "scripts": {
@@ -11,11 +11,11 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/change-password": "1.6.1",
+    "@bufferapp/change-password": "1.6.2",
     "@bufferapp/components": "2.1.6",
-    "@bufferapp/publish-profile-sidebar": "1.6.1",
-    "@bufferapp/publish-shared-components": "1.6.1",
-    "@bufferapp/publish-store": "1.6.1"
+    "@bufferapp/publish-profile-sidebar": "1.6.2",
+    "@bufferapp/publish-shared-components": "1.6.2",
+    "@bufferapp/publish-store": "1.6.2"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

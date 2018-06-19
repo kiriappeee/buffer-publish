@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-server",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "",
   "scripts": {
     "start": "micro",
@@ -13,7 +13,7 @@
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/logger": "0.7.0",
     "@bufferapp/micro-rpc": "0.1.6",
-    "@bufferapp/publish-utils": "^1.4.1",
+    "@bufferapp/publish-utils": "1.6.2",
     "@bufferapp/session-manager": "0.6.2",
     "@bufferapp/shutdown-helper": "0.2.0",
     "body-parser": "1.17.2",
