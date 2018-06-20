@@ -8,7 +8,7 @@ exports[`Snapshots DateTimePreferences a story 1`] = `
         Object {
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": "1rem 0",
+          "padding": ".5rem 0",
         }
       }
     >
@@ -24,18 +24,26 @@ exports[`Snapshots DateTimePreferences a story 1`] = `
       >
         Time format
       </span>
-      <form
-        onChange={undefined}
-      >
+      <form>
         <input
-          checked={true}
+          checked={false}
           id="twelveHourFormat"
-          name="time-format"
+          name="format"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
           type="radio"
           value="12"
         />
         <label
-          for="twelveHourFormat"
+          htmlFor="twelveHourFormat"
+          style={
+            Object {
+              "marginRight": ".5rem",
+            }
+          }
         >
           <span
             style={
@@ -51,14 +59,19 @@ exports[`Snapshots DateTimePreferences a story 1`] = `
           </span>
         </label>
         <input
-          checked={undefined}
+          checked={false}
           id="twentyFourHourFormat"
-          name="time-format"
+          name="format"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
           type="radio"
           value="24"
         />
         <label
-          for="twentyFourHourFormat"
+          htmlFor="twentyFourHourFormat"
         >
           <span
             style={
@@ -93,7 +106,7 @@ exports[`Snapshots DateTimePreferences a story 1`] = `
         Object {
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": "1rem 0",
+          "padding": ".5rem 0",
         }
       }
     >
@@ -142,7 +155,7 @@ exports[`Snapshots DateTimePreferences a story 1`] = `
                 "width": "100%",
               }
             }
-            value="Sunday"
+            value=""
           >
             <option
               value="Sunday"
@@ -205,7 +218,7 @@ exports[`Snapshots DateTimePreferences time format can be 24 hour 1`] = `
         Object {
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": "1rem 0",
+          "padding": ".5rem 0",
         }
       }
     >
@@ -221,18 +234,26 @@ exports[`Snapshots DateTimePreferences time format can be 24 hour 1`] = `
       >
         Time format
       </span>
-      <form
-        onChange={[Function]}
-      >
+      <form>
         <input
           checked={false}
           id="twelveHourFormat"
-          name="time-format"
+          name="format"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
           type="radio"
           value="12"
         />
         <label
-          for="twelveHourFormat"
+          htmlFor="twelveHourFormat"
+          style={
+            Object {
+              "marginRight": ".5rem",
+            }
+          }
         >
           <span
             style={
@@ -248,14 +269,19 @@ exports[`Snapshots DateTimePreferences time format can be 24 hour 1`] = `
           </span>
         </label>
         <input
-          checked={true}
+          checked={false}
           id="twentyFourHourFormat"
-          name="time-format"
+          name="format"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
           type="radio"
           value="24"
         />
         <label
-          for="twentyFourHourFormat"
+          htmlFor="twentyFourHourFormat"
         >
           <span
             style={
@@ -290,7 +316,7 @@ exports[`Snapshots DateTimePreferences time format can be 24 hour 1`] = `
         Object {
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": "1rem 0",
+          "padding": ".5rem 0",
         }
       }
     >
@@ -339,7 +365,7 @@ exports[`Snapshots DateTimePreferences time format can be 24 hour 1`] = `
                 "width": "100%",
               }
             }
-            value="Sunday"
+            value=""
           >
             <option
               value="Sunday"
@@ -402,7 +428,7 @@ exports[`Snapshots DateTimePreferences week can start on Monday 1`] = `
         Object {
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": "1rem 0",
+          "padding": ".5rem 0",
         }
       }
     >
@@ -418,18 +444,26 @@ exports[`Snapshots DateTimePreferences week can start on Monday 1`] = `
       >
         Time format
       </span>
-      <form
-        onChange={[Function]}
-      >
+      <form>
         <input
-          checked={true}
+          checked={false}
           id="twelveHourFormat"
-          name="time-format"
+          name="format"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
           type="radio"
           value="12"
         />
         <label
-          for="twelveHourFormat"
+          htmlFor="twelveHourFormat"
+          style={
+            Object {
+              "marginRight": ".5rem",
+            }
+          }
         >
           <span
             style={
@@ -445,14 +479,19 @@ exports[`Snapshots DateTimePreferences week can start on Monday 1`] = `
           </span>
         </label>
         <input
-          checked={undefined}
+          checked={false}
           id="twentyFourHourFormat"
-          name="time-format"
+          name="format"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
           type="radio"
           value="24"
         />
         <label
-          for="twentyFourHourFormat"
+          htmlFor="twentyFourHourFormat"
         >
           <span
             style={
@@ -487,7 +526,7 @@ exports[`Snapshots DateTimePreferences week can start on Monday 1`] = `
         Object {
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": "1rem 0",
+          "padding": ".5rem 0",
         }
       }
     >
@@ -536,7 +575,7 @@ exports[`Snapshots DateTimePreferences week can start on Monday 1`] = `
                 "width": "100%",
               }
             }
-            value="Monday"
+            value=""
           >
             <option
               value="Sunday"

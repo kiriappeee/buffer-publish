@@ -1,10 +1,16 @@
 import React from 'react';
 import { action, storiesOf } from '@storybook/react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { reducer as formReducer } from 'redux-form';
 import { checkA11y } from 'storybook-addon-a11y';
 import DateTimePreferences from './index';
 
+const store = createStore(formReducer);
+
 storiesOf('DateTimePreferences')
   .addDecorator(checkA11y)
+  .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
   .add('a story', () => (
     <DateTimePreferences />
   ))
