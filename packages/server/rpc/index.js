@@ -23,6 +23,7 @@ const performanceTrackingMethod = require('./performanceTracking');
 const upgradeToPro = require('./upgradeToPro');
 const updateEmail = require('./updateEmail');
 const changePassword = require('./changePassword');
+const changeDateTimePreferences = require('./changeDateTimePreferences');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -48,4 +49,5 @@ module.exports = checkToken(rpc(
   upgradeToPro,
   updateEmail,
   changePassword,
+  changeDateTimePreferences,
 ));
