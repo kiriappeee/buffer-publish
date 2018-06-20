@@ -17,3 +17,6 @@ export default connect(
       dispatch(actions.changeStartOfWeek(event.target.value === 'Monday')),
   }),
 )(DateTimePreferences);
+
+export middleware from './middleware';
+export * from './actions';
