@@ -28,13 +28,12 @@ DayToStartTheWeek.propTypes = {
 };
 
 
-const SelectDayToStartTheWeek = ({ onChange }) =>
+const SelectDayToStartTheWeek = () =>
   <Row>
     <Text>Day to start the week</Text>
     <form style={{ minWidth: '185px' }}>
       <Field
         component={DayToStartTheWeek}
-        onChange={onChange}
         name="dayToStartTheWeek"
       />
     </form>

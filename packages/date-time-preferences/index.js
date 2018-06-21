@@ -13,8 +13,8 @@ export default connect(
   dispatch => ({
     changeTwentyFourHourFormat: ({ format }) =>
       dispatch(actions.changeTwentyFourHourFormat(Number(format) === 24)),
-    changeStartOfWeek: event =>
-      dispatch(actions.changeStartOfWeek(event.target.value === 'Monday')),
+    changeStartOfWeek: ({ dayToStartTheWeek }) =>
+      dispatch(actions.changeStartOfWeek(dayToStartTheWeek === 'Monday')),
   }),
 )(DateTimePreferences);
 
