@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/app-sidebar",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "The sidebar for the Buffer suite of products",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.6.2",
     "@bufferapp/components": "2.1.6",
-    "@bufferapp/date-time-preferences": "0.0.1",
+    "@bufferapp/date-time-preferences": "^1.7.0",
     "@bufferapp/session-manager": "0.6.2"
   },
   "devDependencies": {
