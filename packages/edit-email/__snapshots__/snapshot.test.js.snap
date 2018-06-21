@@ -252,7 +252,7 @@ exports[`Snapshots EditEmail clicking on the edit link displays the modal 1`] = 
       }
     }
   >
-    <div
+    <section
       style={
         Object {
           "display": "flex",
@@ -326,7 +326,7 @@ exports[`Snapshots EditEmail clicking on the edit link displays the modal 1`] = 
           </span>
         </span>
       </section>
-    </div>
+    </section>
   </div>
 </span>
 `;

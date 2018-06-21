@@ -1,20 +1,25 @@
 {
-  "name": "@bufferapp/app-sidebar",
-  "version": "1.6.2",
-  "description": "The sidebar for the Buffer suite of products",
+  "name": "@bufferapp/date-time-preferences",
+  "version": "0.0.1",
+  "description": "Package to allow the user to edit their date and time preferences",
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9001",
     "lint": "eslint . --ignore-pattern coverage node_modules",
-    "test": "yarn run lint && sh ../../package_test.sh",
+    "test": "sh ../../package_test.sh",
     "test-update": "jest -u --config=../../.jestrc.json"
   },
-  "author": "hamstu@gmail.com",
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@bufferapp/*)"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "author": "mike@msanroman.io",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.1.6",
-    "@bufferapp/date-time-preferences": "0.0.1",
-    "@bufferapp/session-manager": "0.6.2"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

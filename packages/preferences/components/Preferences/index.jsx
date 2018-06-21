@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab } from '@bufferapp/publish-shared-components';
-import { Link, ArrowLeftIcon, Text } from '@bufferapp/components';
+import { Divider, Link, ArrowLeftIcon, Text } from '@bufferapp/components';
 import EditEmail from '@bufferapp/edit-email';
+import DateTimePreferences from '@bufferapp/date-time-preferences';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
 import Security from '../Security';
@@ -10,7 +11,13 @@ import Security from '../Security';
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
     case 'general':
-      return <EditEmail />;
+      return (
+        <div>
+          <EditEmail />
+          <Divider />
+          <DateTimePreferences />
+        </div>
+      );
     case 'security':
       return <Security />;
     case 'appsandextras':
