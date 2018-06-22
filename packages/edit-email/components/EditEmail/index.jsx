@@ -4,28 +4,23 @@ import {
   Text,
   Link,
 } from '@bufferapp/components';
+import { Row } from '@bufferapp/publish-shared-components';
 
 import Modal from '../Modal';
-
-const rowStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  padding: '.5rem 0',
-};
 
 const editStyle = {
   marginLeft: '1rem',
 };
 
 const EditEmail = ({ email, onClick, displayModal, updateEmail, saveEmail, hideModal }) =>
-  <div style={rowStyle}>
+  <Row>
     <Text>Email address</Text>
     <section>
       <Text>{email}</Text>
       <span style={editStyle}><Text><Link onClick={onClick} unstyled href="#">Edit</Link></Text></span>
     </section>
     { displayModal && <Modal email={email} updateEmail={updateEmail} hideModal={hideModal} saveEmail={saveEmail} /> }
-  </div>;
+  </Row>;
 
 EditEmail.propTypes = {
   email: PropTypes.string.isRequired,

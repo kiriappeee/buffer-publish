@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-sent",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Sent Posts package",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "@bufferapp/async-data-fetch": "1.6.2",
     "@bufferapp/components": "2.1.6",
     "@bufferapp/publish-profile-sidebar": "1.6.2",
-    "@bufferapp/publish-pusher-sync": "1.6.2",
-    "@bufferapp/publish-queue": "1.6.2",
-    "@bufferapp/publish-shared-components": "1.6.2"
+    "@bufferapp/publish-pusher-sync": "^1.7.0",
+    "@bufferapp/publish-queue": "^1.7.0",
+    "@bufferapp/publish-shared-components": "^1.7.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

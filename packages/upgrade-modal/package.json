@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-upgrade-modal",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "A modal that allows the user to upgrade to higher plans",
   "main": "index.js",
   "scripts": {
@@ -25,8 +25,8 @@
     "@bufferapp/components": "2.1.6",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/publish-i18n": "1.6.2",
-    "@bufferapp/publish-modals": "1.6.2",
-    "@bufferapp/publish-shared-components": "1.6.2",
+    "@bufferapp/publish-modals": "^1.7.0",
+    "@bufferapp/publish-shared-components": "^1.7.0",
     "@bufferapp/stripe": "1.6.2"
   },
   "devDependencies": {

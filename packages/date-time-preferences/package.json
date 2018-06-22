@@ -1,0 +1,32 @@
+{
+  "name": "@bufferapp/date-time-preferences",
+  "version": "1.7.0",
+  "description": "Package to allow the user to edit their date and time preferences",
+  "main": "index.js",
+  "scripts": {
+    "start": "start-storybook -p 9001",
+    "lint": "eslint . --ignore-pattern coverage node_modules",
+    "test": "sh ../../package_test.sh",
+    "test-update": "jest -u --config=../../.jestrc.json"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@bufferapp/*)"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "author": "mike@msanroman.io",
+  "devDependencies": {
+    "@storybook/addon-storyshots": "3.1.4",
+    "@storybook/react": "3.1.3",
+    "eslint": "3.19.0",
+    "jest": "19.0.2",
+    "storybook-addon-a11y": "3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

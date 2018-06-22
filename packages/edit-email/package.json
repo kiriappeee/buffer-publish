@@ -1,13 +1,13 @@
 {
   "name": "@bufferapp/edit-email",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Edit email form",
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9001",
     "lint": "eslint . --ignore-pattern coverage node_modules",
     "test": "sh ../../package_test.sh",
-    "test-update": "jest -u"
+    "test-update": "jest -u --config=../../.jestrc.json"
   },
   "jest": {
     "transformIgnorePatterns": [

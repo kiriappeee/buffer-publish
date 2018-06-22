@@ -25,6 +25,7 @@ export default (state = initialState, action) => {
           loading: true,
         },
       };
+    case `changeDateTimePreferences_${dataFetchActionTypes.FETCH_SUCCESS}`:
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
