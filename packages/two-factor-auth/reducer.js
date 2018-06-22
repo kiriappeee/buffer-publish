@@ -1,26 +1,26 @@
-import { handleTransition } from "./machine";
+import { handleTransition } from './machine';
 
 export const initialState = {
-  machineState: "disabled",
+  machineState: 'disabled',
   isEnabled: false,
   editMode: false,
-  type: "SMS",
+  type: 'SMS',
   phoneAreaCode: null,
   phoneNumber: null,
   confirmationCode: null,
-  recoveryCode: null
+  recoveryCode: null,
 };
 
 export const actionTypes = {
-  TRANSITION: "TRANSITION"
+  TRANSITION: 'TRANSITION',
 };
 
 export const actions = {
   transition: (name, params) => ({
     type: actionTypes.TRANSITION,
     name,
-    params
-  })
+    params,
+  }),
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,7 +30,7 @@ const reducer = (state = initialState, action) => {
       return handleTransition({
         state,
         name,
-        params
+        params,
       });
     }
     default:

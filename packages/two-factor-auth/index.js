@@ -3,10 +3,7 @@ import TwoFactorAuth from './components/TwoFactorAuth';
 
 export default connect(
   state => ({
-    //
-  }),
-  dispatch => ({
-    //
+    machineState: state.twoFactorAuth.machineState,
   }),
 )(TwoFactorAuth);
 
