@@ -4,51 +4,52 @@ import {
   Image,
   CircleTwitterIcon,
   CircleFacebookIcon,
+  CircleGooglePlusIcon,
   CircleInstagramIcon,
+  CirclePinterestIcon,
   CircleLinkedInIcon,
 } from '@bufferapp/components';
+
+import { geyser } from '@bufferapp/components/style/color';
+
+import { constants } from '@bufferapp/publish-utils';
 
 const profileBadgeStyle = {
   position: 'relative',
   height: '2rem',
   width: '2rem',
+  background: geyser,
+  borderRadius: '100%',
 };
 
 const profileBadgeIconStyle = {
   position: 'absolute',
-  bottom: '0',
-  right: '0',
-  height: '1rem',
-  width: '1rem',
-  display: 'flex',
+  bottom: '-2px',
+  right: '-4px',
+  borderRadius: '100%',
+  height: '16px',
+  width: '16px',
+  boxShadow: 'inset 0 0 16px 16px #fff',
 };
 
-const profileBadgeBackgroundStyle = {
-  position: 'absolute',
-  bottom: '0.05rem',
-  right: '0.05rem',
-  background: 'white',
-  borderRadius: '50%',
-  height: '0.90rem',
-  width: '0.90rem',
-};
+const badgeTypes = PropTypes.oneOf(constants.SERVICE_NAMES);
 
-const badgeTypes = PropTypes.oneOf(['twitter', 'facebook', 'instagram', 'linkedin']);
+const profileBadgeIconMap = new Map([
+  [constants.SERVICE_TWITTER, { component: CircleTwitterIcon, color: 'twitter' }],
+  [constants.SERVICE_FACEBOOK, { component: CircleFacebookIcon, color: 'facebook' }],
+  [constants.SERVICE_LINKEDIN, { component: CircleLinkedInIcon, color: 'linkedin' }],
+  [constants.SERVICE_GOOGLE, { component: CircleGooglePlusIcon, color: 'googleplus' }],
+  [constants.SERVICE_PINTEREST, { component: CirclePinterestIcon, color: 'pinterest' }],
+  [constants.SERVICE_INSTAGRAM, { component: CircleInstagramIcon, color: 'instagram' }],
+]);
 
 const ProfileBadgeIcon = ({ type }) => {
-  switch (type) {
-    case 'twitter':
-      return <CircleTwitterIcon color={'twitter'} />;
-    case 'facebook':
-      return <CircleFacebookIcon color={'facebook'} />;
-    case 'instagram':
-      // TODO: need instagram color
-      return <CircleInstagramIcon color={'torchRed'} />;
-    case 'linkedin':
-      return <CircleLinkedInIcon color={'linkedin'} />;
-    default:
-      return null;
+  const icon = profileBadgeIconMap.get(type);
+  if (icon) {
+    const { component: IconComponent, color } = icon;
+    return <IconComponent color={color} />;
   }
+  return null;
 };
 
 ProfileBadgeIcon.propTypes = {
@@ -67,7 +68,6 @@ const ProfileBadge = ({
       width={'100%'}
       verticalAlignBottom
     />
-    <div style={profileBadgeBackgroundStyle} />
     <div style={profileBadgeIconStyle}>
       <ProfileBadgeIcon type={type} />
     </div>

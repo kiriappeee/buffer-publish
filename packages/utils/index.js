@@ -4,6 +4,7 @@ const profileParser = require('./profileParser');
 const userParser = require('./userParser');
 const linkParsing = require('./linkParsing');
 const buildPostMap = require('./buildPostMap');
+const constants = require('./constants');
 
 module.exports = {
   date,
@@ -12,4 +13,5 @@ module.exports = {
   userParser,
   linkParsing,
   buildPostMap,
+  constants,
 };
