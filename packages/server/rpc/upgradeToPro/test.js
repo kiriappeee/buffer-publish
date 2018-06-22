@@ -28,4 +28,9 @@ describe('rpc/upgradeToPro', () => {
     expect(rp.mock.calls[0][0].body.cycle).toBe('year');
     expect(rp.mock.calls[0][0].body.stripeToken).toBe('stripe token');
   });
+
+  it('sets up product/plan to identify it is an upgrade to the Pro plan in Publish', () => {
+    expect(rp.mock.calls[0][0].body.plan).toBe('pro');
+    expect(rp.mock.calls[0][0].body.product).toBe('publish');
+  });
 });

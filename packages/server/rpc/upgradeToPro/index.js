@@ -6,16 +6,18 @@ module.exports = method(
   'upgrade user to the pro plan',
   ({ cycle, token }, { session }) =>
     rp({
-      uri: `${process.env.API_ADDR}/1/upgrade_to_pro.json`,
+      uri: `${process.env.API_ADDR}/1/billing/start-or-upgrade-subscription.json`,
       method: 'POST',
       strictSSL: process.env.NODE_ENV !== 'development',
       body: {
         cycle,
         stripeToken: token,
         access_token: session.publish.accessToken,
+        product: 'publish',
+        plan: 'pro',
       },
     })
     .then(result => JSON.parse(result))
-    .catch(e => console.log(e)),
+    .catch(e => console.log(e)), // eslint-disable-line no-console
 );
 
