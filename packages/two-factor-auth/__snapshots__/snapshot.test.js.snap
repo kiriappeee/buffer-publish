@@ -1,0 +1,1786 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots TwoFactorAuth chooseMethod 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100vw",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": undefined,
+                "left": undefined,
+                "position": "absolute",
+                "right": undefined,
+                "top": undefined,
+                "zIndex": 3000,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "30rem",
+                }
+              }
+            >
+              <div
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "border": "0.063rem solid #e6ebef",
+                    "borderRadius": "0.126rem",
+                    "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+                    "color": "#323b43",
+                    "fontSize": "0.9rem",
+                    "lineHeight": 1.5,
+                    "padding": "1.5rem",
+                    "transition": "box-shadow 0.2s linear",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Choose your method!
+                </span>
+                <div>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Text Message
+                  </button>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Authenticator App
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(50, 59, 67, 0.8)",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "zIndex": 2000,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "opacity": 0.3,
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth confirmAppCode 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100vw",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": undefined,
+                "left": undefined,
+                "position": "absolute",
+                "right": undefined,
+                "top": undefined,
+                "zIndex": 3000,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "30rem",
+                }
+              }
+            >
+              <div
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "border": "0.063rem solid #e6ebef",
+                    "borderRadius": "0.126rem",
+                    "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+                    "color": "#323b43",
+                    "fontSize": "0.9rem",
+                    "lineHeight": 1.5,
+                    "padding": "1.5rem",
+                    "transition": "box-shadow 0.2s linear",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Confirm Code
+                </span>
+                <div>
+                  <a
+                    href="#"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "color": "#168eea",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "padding": "0",
+                      }
+                    }
+                    target="_self"
+                  >
+                    Simulate rejected code
+                  </a>
+                </div>
+                <div>
+                  <input
+                    disabled={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onFocus={undefined}
+                    placeholder={undefined}
+                    style={
+                      Object {
+                        "border": "0.063rem solid #ced7df",
+                        "borderRadius": "0.126rem",
+                        "boxSizing": "border-box",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1rem",
+                        "outline": 0,
+                        "padding": "0.5rem",
+                        "width": "100%",
+                      }
+                    }
+                    type="text"
+                    value={undefined}
+                  />
+                </div>
+                <div>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "border": "0.063rem solid transparent",
+                        "borderColor": "#ced7df",
+                        "borderRadius": "2rem",
+                        "color": "#323b43",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(50, 59, 67, 0.8)",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "zIndex": 2000,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "opacity": 0.3,
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth confirmSMSCode 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100vw",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": undefined,
+                "left": undefined,
+                "position": "absolute",
+                "right": undefined,
+                "top": undefined,
+                "zIndex": 3000,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "30rem",
+                }
+              }
+            >
+              <div
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "border": "0.063rem solid #e6ebef",
+                    "borderRadius": "0.126rem",
+                    "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+                    "color": "#323b43",
+                    "fontSize": "0.9rem",
+                    "lineHeight": 1.5,
+                    "padding": "1.5rem",
+                    "transition": "box-shadow 0.2s linear",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Confirm Code
+                </span>
+                <div>
+                  <a
+                    href="#"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "color": "#168eea",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "padding": "0",
+                      }
+                    }
+                    target="_self"
+                  >
+                    Simulate rejected code
+                  </a>
+                </div>
+                <div>
+                  <input
+                    disabled={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onFocus={undefined}
+                    placeholder={undefined}
+                    style={
+                      Object {
+                        "border": "0.063rem solid #ced7df",
+                        "borderRadius": "0.126rem",
+                        "boxSizing": "border-box",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1rem",
+                        "outline": 0,
+                        "padding": "0.5rem",
+                        "width": "100%",
+                      }
+                    }
+                    type="text"
+                    value={undefined}
+                  />
+                </div>
+                <div>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "border": "0.063rem solid transparent",
+                        "borderColor": "#ced7df",
+                        "borderRadius": "2rem",
+                        "color": "#323b43",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(50, 59, 67, 0.8)",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "zIndex": 2000,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "opacity": 0.3,
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth disabled 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth enabled 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Enabled!
+        </span>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Disable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth recovery 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100vw",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": undefined,
+                "left": undefined,
+                "position": "absolute",
+                "right": undefined,
+                "top": undefined,
+                "zIndex": 3000,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "30rem",
+                }
+              }
+            >
+              <div
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "border": "0.063rem solid #e6ebef",
+                    "borderRadius": "0.126rem",
+                    "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+                    "color": "#323b43",
+                    "fontSize": "0.9rem",
+                    "lineHeight": 1.5,
+                    "padding": "1.5rem",
+                    "transition": "box-shadow 0.2s linear",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Save this one-time recovery code
+                </span>
+                <div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    pKaA-p6yx-gIa5-mM7k
+                  </span>
+                </div>
+                <div>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Done
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(50, 59, 67, 0.8)",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "zIndex": 2000,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "opacity": 0.3,
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth setupApp 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100vw",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": undefined,
+                "left": undefined,
+                "position": "absolute",
+                "right": undefined,
+                "top": undefined,
+                "zIndex": 3000,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "30rem",
+                }
+              }
+            >
+              <div
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "border": "0.063rem solid #e6ebef",
+                    "borderRadius": "0.126rem",
+                    "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+                    "color": "#323b43",
+                    "fontSize": "0.9rem",
+                    "lineHeight": 1.5,
+                    "padding": "1.5rem",
+                    "transition": "box-shadow 0.2s linear",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Set up your authenticator app
+                </span>
+                <div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    QR CODE HERE
+                  </span>
+                </div>
+                <div>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "border": "0.063rem solid transparent",
+                        "borderColor": "#ced7df",
+                        "borderRadius": "2rem",
+                        "color": "#323b43",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(50, 59, 67, 0.8)",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "zIndex": 2000,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "opacity": 0.3,
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Snapshots TwoFactorAuth setupSMS 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Two Factor Authentication
+      </span>
+      <div
+        style={
+          Object {
+            "marginTop": "0.5rem",
+            "maxWidth": "700px",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.9rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Two factor authentication adds an extra layer of security for your Buffer account. Whenever you log in to your account, after entering your username and password, you will be asked for a second authentication code that was sent to your mobile phone via text or a free mobile app. 
+          <a
+            href="#"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_self"
+          >
+            Learn more
+          </a>
+        </span>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "height": "100vh",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100vw",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": undefined,
+                "left": undefined,
+                "position": "absolute",
+                "right": undefined,
+                "top": undefined,
+                "zIndex": 3000,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "30rem",
+                }
+              }
+            >
+              <div
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "border": "0.063rem solid #e6ebef",
+                    "borderRadius": "0.126rem",
+                    "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+                    "color": "#323b43",
+                    "fontSize": "0.9rem",
+                    "lineHeight": 1.5,
+                    "padding": "1.5rem",
+                    "transition": "box-shadow 0.2s linear",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Set up your phone number
+                </span>
+                <div>
+                  <a
+                    href="#"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "color": "#168eea",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "padding": "0",
+                      }
+                    }
+                    target="_self"
+                  >
+                    Simulate invalid phone
+                  </a>
+                </div>
+                <div>
+                  <input
+                    disabled={undefined}
+                    onBlur={undefined}
+                    onChange={undefined}
+                    onFocus={undefined}
+                    placeholder={undefined}
+                    style={
+                      Object {
+                        "border": "0.063rem solid #ced7df",
+                        "borderRadius": "0.126rem",
+                        "boxSizing": "border-box",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "1rem",
+                        "outline": 0,
+                        "padding": "0.5rem",
+                        "width": "100%",
+                      }
+                    }
+                    type="text"
+                    value={undefined}
+                  />
+                </div>
+                <div>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "border": "0.063rem solid transparent",
+                        "borderColor": "#ced7df",
+                        "borderRadius": "2rem",
+                        "color": "#323b43",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    aria-label={null}
+                    disabled={undefined}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#168eea",
+                        "border": "0.063rem solid transparent",
+                        "borderRadius": "2rem",
+                        "color": "#fff",
+                        "cursor": "pointer",
+                        "display": "inline-block",
+                        "fontFamily": "\\"Roboto\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "0.5rem 2rem",
+                        "transition": "background-color 0.2s linear",
+                      }
+                    }
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(50, 59, 67, 0.8)",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "zIndex": 2000,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label={null}
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "0.063rem solid transparent",
+          "borderColor": "#ced7df",
+          "borderRadius": "2rem",
+          "color": "#323b43",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "fontFamily": "\\"Roboto\\", sans-serif",
+          "fontSize": "0.75rem",
+          "fontWeight": 400,
+          "margin": "0",
+          "opacity": 0.3,
+          "outline": "none",
+          "padding": "0.5rem 2rem",
+          "transition": "background-color 0.2s linear",
+        }
+      }
+    >
+      Enable
+    </button>
+  </div>
+</span>
+`;
