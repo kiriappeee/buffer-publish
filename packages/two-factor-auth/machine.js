@@ -52,7 +52,7 @@ const stateFromTransition = ({
 }) => {
   const { machineState: currentMachineState } = state;
   switch (nextMachineState) {
-    // If we're changing phone/qpp settings directly from 'enabled'
+    // If we're changing phone/app settings directly from 'enabled'
     // then mark this as 'editMode' so we don't show the 'recovery'
     // screen again
     case 'setupSMS':
@@ -60,6 +60,16 @@ const stateFromTransition = ({
       return {
         ...state,
         editMode: currentMachineState === 'enabled',
+      };
+    case 'enabled':
+      return {
+        ...state,
+        isEnabled: true,
+      };
+    case 'disabled':
+      return {
+        ...state,
+        isEnabled: false,
       };
     default:
       return state;
