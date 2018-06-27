@@ -10,8 +10,8 @@ const machine = {
     CLOSE: handleEnabled,
   },
   setupSMS: {
-    PHONE_ACCEPTED: 'confirmSMSCode',
-    PHONE_REJECTED: 'setupSMS',
+    NEXT: 'confirmSMSCode',
+    ERROR: 'setupSMS',
     BACK: 'chooseMethod',
     CLOSE: handleEnabled,
   },

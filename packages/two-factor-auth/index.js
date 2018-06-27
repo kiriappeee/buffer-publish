@@ -6,10 +6,8 @@ export default connect(
   state => ({
     machineState: state.twoFactorAuth.machineState,
     isEnabled: state.twoFactorAuth.isEnabled,
-    // TODO: May not need to pass all the below state down
     editMode: state.twoFactorAuth.editMode,
-    type: state.twoFactorAuth.type,
-    phoneAreaCode: state.twoFactorAuth.phoneAreaCode,
+    method: state.twoFactorAuth.method,
     phoneNumber: state.twoFactorAuth.phoneNumber,
     confirmationCode: state.twoFactorAuth.confirmationCode,
     recoveryCode: state.twoFactorAuth.recoveryCode,
@@ -17,8 +15,10 @@ export default connect(
   dispatch => ({
     transition: (action, params) => dispatch(actions.transition(action, params)),
     setPhoneNumber: value => dispatch(actions.setPhoneNumber(value)),
+    submitPhoneNumber: () => dispatch(actions.submitPhoneNumber()),
   }),
 )(TwoFactorAuth);
 
 // export reducer, actions and action types
 export reducer, { actions, actionTypes } from './reducer';
+export middleware from './middleware';

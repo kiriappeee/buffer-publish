@@ -16,6 +16,7 @@ const TwoFactorAuth = ({
   recoveryCode, */
   transition,
   setPhoneNumber,
+  submitPhoneNumber,
 }) => (
   <div
     style={{
@@ -44,6 +45,7 @@ const TwoFactorAuth = ({
           transition={transition}
           phoneNumber={phoneNumber}
           setPhoneNumber={setPhoneNumber}
+          submitPhoneNumber={submitPhoneNumber}
         />
       </div>
     </div>
@@ -71,6 +73,7 @@ TwoFactorAuth.propTypes = {
   recoveryCode: PropTypes.string.isRequired, */
   transition: PropTypes.func.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
+  submitPhoneNumber: PropTypes.func.isRequired,
 };
 
 export default TwoFactorAuth;

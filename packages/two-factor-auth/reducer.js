@@ -1,18 +1,23 @@
+import {
+  actionTypes as dataFetchActionTypes,
+} from '@bufferapp/async-data-fetch';
+
 import { handleTransition } from './machine';
 
 export const initialState = {
   machineState: 'disabled',
   isEnabled: false,
   editMode: false,
-  type: 'SMS',
+  method: false,
   phoneNumber: '',
-  confirmationCode: null,
+  confirmationCode: '',
   recoveryCode: null,
 };
 
 export const actionTypes = {
   TRANSITION: 'TRANSITION',
   SET_PHONE_NUMBER: 'SET_PHONE_NUMBER',
+  SUBMIT_PHONE_NUMBER: 'SUBMIT_PHONE_NUMBER',
 };
 
 export const actions = {
@@ -25,6 +30,9 @@ export const actions = {
     type: actionTypes.SET_PHONE_NUMBER,
     value,
   }),
+  submitPhoneNumber: () => ({
+    type: actionTypes.SUBMIT_PHONE_NUMBER,
+  }),
 };
 
 const reducer = (state = initialState, action) => {
@@ -36,6 +44,16 @@ const reducer = (state = initialState, action) => {
         name,
         params,
       });
+    }
+    case `user_${dataFetchActionTypes.FETCH_SUCCESS}`: {
+      const twofactor = action.result.twofactor;
+      return {
+        ...state,
+        machineState: twofactor ? 'enabled' : 'disabled',
+        isEnabled: !!twofactor,
+        method: twofactor ? twofactor.type : false,
+        phoneNumber: twofactor ? twofactor.tel : '',
+      };
     }
     case actionTypes.SET_PHONE_NUMBER: {
       return {

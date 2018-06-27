@@ -6,6 +6,7 @@ class SetupSMS extends React.Component {
   constructor() {
     super();
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount() {
     const input = this.inputContainer.querySelector('input');
@@ -14,6 +15,9 @@ class SetupSMS extends React.Component {
   }
   handlePhoneChange(event) {
     this.props.setPhoneNumber(event.target.value);
+  }
+  handleSubmit() {
+    this.props.submitPhoneNumber();
   }
   render() {
     const { transition, phoneNumber } = this.props;
@@ -41,7 +45,7 @@ class SetupSMS extends React.Component {
           <div style={{ display: 'inline', paddingRight: '20px' }}>
             <Button tertiary onClick={() => transition('CLOSE')}>Cancel</Button>
           </div>
-          <Button onClick={() => transition('PHONE_ACCEPTED')}>Next</Button>
+          <Button onClick={this.handleSubmit}>Next</Button>
         </div>
       </React.Fragment>
     );
@@ -52,6 +56,7 @@ SetupSMS.propTypes = {
   transition: PropTypes.func.isRequired,
   phoneNumber: PropTypes.string.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
+  submitPhoneNumber: PropTypes.func.isRequired,
 };
 
 export default SetupSMS;
