@@ -12,7 +12,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.1.6"
+    "@bufferapp/components": "2.2.1"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

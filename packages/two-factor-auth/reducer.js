@@ -5,7 +5,6 @@ export const initialState = {
   isEnabled: false,
   editMode: false,
   type: 'SMS',
-  phoneAreaCode: null,
   phoneNumber: null,
   confirmationCode: null,
   recoveryCode: null,
@@ -13,6 +12,7 @@ export const initialState = {
 
 export const actionTypes = {
   TRANSITION: 'TRANSITION',
+  SET_PHONE_NUMBER: 'SET_PHONE_NUMBER',
 };
 
 export const actions = {
@@ -20,6 +20,10 @@ export const actions = {
     type: actionTypes.TRANSITION,
     name,
     params,
+  }),
+  setPhoneNumber: value => ({
+    type: actionTypes.SET_PHONE_NUMBER,
+    value,
   }),
 };
 
@@ -32,6 +36,12 @@ const reducer = (state = initialState, action) => {
         name,
         params,
       });
+    }
+    case actionTypes.SET_PHONE_NUMBER: {
+      return {
+        ...state,
+        phoneNumber: action.value,
+      };
     }
     default:
       return state;

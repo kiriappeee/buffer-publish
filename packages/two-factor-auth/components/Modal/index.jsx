@@ -8,11 +8,13 @@ const ModalWrapper = ({ children, handleClose }) => (
   <Popover onOverlayClick={handleClose}>
     <div
       style={{
-        width: '30rem',
+        width: '500px',
       }}
     >
       <Card shadowHeight={2}>
-        {children}
+        <div style={{ margin: '16px 40px' }}>
+          {children}
+        </div>
       </Card>
     </div>
   </Popover>
@@ -23,12 +25,16 @@ ModalWrapper.propTypes = {
   handleClose: PropTypes.func.isRequired,
 };
 
-const TwoFactorModal = ({ machineState, transition }) => {
+const TwoFactorModal = ({ machineState, transition, phoneNumber, setPhoneNumber }) => {
   const ModalScreen = ModalScreens[machineState];
   if (ModalScreen) {
     return (
       <ModalWrapper handleClose={() => transition('CLOSE')}>
-        <ModalScreen transition={transition} />
+        <ModalScreen
+          transition={transition}
+          setPhoneNumber={setPhoneNumber}
+          phoneNumber={phoneNumber}
+        />
       </ModalWrapper>
     );
   }
@@ -37,6 +43,8 @@ const TwoFactorModal = ({ machineState, transition }) => {
 TwoFactorModal.propTypes = {
   machineState: PropTypes.string.isRequired,
   transition: PropTypes.func.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
+  setPhoneNumber: PropTypes.func.isRequired,
 };
 
 export default TwoFactorModal;

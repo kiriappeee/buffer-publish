@@ -16,6 +16,7 @@ export default connect(
   }),
   dispatch => ({
     transition: (action, params) => dispatch(actions.transition(action, params)),
+    setPhoneNumber: value => dispatch(actions.setPhoneNumber(value)),
   }),
 )(TwoFactorAuth);
 

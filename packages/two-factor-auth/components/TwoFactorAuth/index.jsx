@@ -10,13 +10,13 @@ import Toggle from '../Toggle';
 const TwoFactorAuth = ({
   machineState,
   isEnabled,
+  phoneNumber,
   /* editMode,
   type,
-  phoneAreaCode,
-  phoneNumber,
   confirmationCode,
   recoveryCode, */
   transition,
+  setPhoneNumber,
 }) => (
   <div
     style={{
@@ -43,6 +43,8 @@ const TwoFactorAuth = ({
         <Modal
           machineState={machineState}
           transition={transition}
+          phoneNumber={phoneNumber}
+          setPhoneNumber={setPhoneNumber}
         />
       </div>
     </div>
@@ -57,13 +59,13 @@ const TwoFactorAuth = ({
 TwoFactorAuth.propTypes = {
   machineState: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
   /* editMode: PropTypes.bool.isRequired,
   type: PropTypes.type.isRequired,
-  phoneAreaCode: PropTypes.phoneAreaCode.isRequired,
-  phoneNumber: PropTypes.phoneNumber.isRequired,
   confirmationCode: PropTypes.confirmationCode.isRequired,
   recoveryCode: PropTypes.string.isRequired, */
   transition: PropTypes.func.isRequired,
+  setPhoneNumber: PropTypes.func.isRequired,
 };
 
 export default TwoFactorAuth;
