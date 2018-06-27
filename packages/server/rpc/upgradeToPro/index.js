@@ -12,7 +12,7 @@ module.exports = method(
         method: 'POST',
         strictSSL: process.env.NODE_ENV !== 'development',
         json: true,
-        body: {
+        form: {
           cycle,
           stripeToken: token,
           access_token: session.publish.accessToken,

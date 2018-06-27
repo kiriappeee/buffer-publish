@@ -23,21 +23,21 @@ describe('rpc/upgradeToPro', () => {
   it('sends over a request to Buffer\'s API with Publish\'s access token', () => {
     rp.mockReturnValueOnce(Promise.resolve({}));
     upgradeToPro();
-    expect(rp.mock.calls[0][0].body.access_token).toBe(accessToken);
+    expect(rp.mock.calls[0][0].form.access_token).toBe(accessToken);
   });
 
   it('sends over the selected cycle and current stripe token', () => {
     rp.mockReturnValueOnce(Promise.resolve({}));
     upgradeToPro();
-    expect(rp.mock.calls[0][0].body.cycle).toBe('year');
-    expect(rp.mock.calls[0][0].body.stripeToken).toBe('stripe token');
+    expect(rp.mock.calls[0][0].form.cycle).toBe('year');
+    expect(rp.mock.calls[0][0].form.stripeToken).toBe('stripe token');
   });
 
   it('sets up product/plan to identify it is an upgrade to the Pro plan in Publish', () => {
     rp.mockReturnValueOnce(Promise.resolve({}));
     upgradeToPro();
-    expect(rp.mock.calls[0][0].body.plan).toBe('pro');
-    expect(rp.mock.calls[0][0].body.product).toBe('publish');
+    expect(rp.mock.calls[0][0].form.plan).toBe('pro');
+    expect(rp.mock.calls[0][0].form.product).toBe('publish');
   });
 
   it('an error response gets returned too', () => {
