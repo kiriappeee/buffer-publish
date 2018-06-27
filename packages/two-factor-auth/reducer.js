@@ -5,7 +5,7 @@ export const initialState = {
   isEnabled: false,
   editMode: false,
   type: 'SMS',
-  phoneNumber: null,
+  phoneNumber: '',
   confirmationCode: null,
   recoveryCode: null,
 };

@@ -7,6 +7,11 @@ class SetupSMS extends React.Component {
     super();
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
   }
+  componentDidMount() {
+    const input = this.inputContainer.querySelector('input');
+    input.focus();
+    input.select();
+  }
   handlePhoneChange(event) {
     this.props.setPhoneNumber(event.target.value);
   }
@@ -22,7 +27,7 @@ class SetupSMS extends React.Component {
             </Text>
           </div>
         </div>
-        <div style={{ padding: '16px 0 20px' }}>
+        <div style={{ padding: '16px 0 20px' }} ref={(el) => { this.inputContainer = el; }}>
           <div style={{ paddingBottom: '4px' }}>
             <Text size="mini" weight="medium">Phone number (incl. country code)</Text>
           </div>
