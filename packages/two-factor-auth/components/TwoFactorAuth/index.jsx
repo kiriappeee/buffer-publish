@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Text } from '@bufferapp/components';
+import { Text, Toggle } from '@bufferapp/components';
 
 import Modal from '../Modal';
 import PreferencesRow from '../PreferencesRow';
-import Toggle from '../Toggle';
 
 const TwoFactorAuth = ({
   machineState,
@@ -48,11 +47,13 @@ const TwoFactorAuth = ({
         />
       </div>
     </div>
-    <Toggle
-      machineState={machineState}
-      enabled={isEnabled}
-      onClick={() => transition(isEnabled ? 'DISABLE' : 'ENABLE')}
-    />
+    <div
+      style={{
+        paddingRight: '0.5rem',
+      }}
+    >
+      <Toggle enabled={isEnabled} onClick={() => transition(isEnabled ? 'DISABLE' : 'ENABLE')} />
+    </div>
   </div>
 );
 
