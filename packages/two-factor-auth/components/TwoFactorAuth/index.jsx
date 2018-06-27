@@ -52,7 +52,11 @@ const TwoFactorAuth = ({
         paddingRight: '0.5rem',
       }}
     >
-      <Toggle enabled={isEnabled} onClick={() => transition(isEnabled ? 'DISABLE' : 'ENABLE')} />
+      <Toggle
+        on={isEnabled}
+        onClick={() => transition(isEnabled ? 'DISABLE' : 'ENABLE')}
+        disabled={!['enabled', 'disabled'].includes(machineState)}
+      />
     </div>
   </div>
 );
