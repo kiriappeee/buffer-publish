@@ -8,7 +8,7 @@ module.exports = method(
     let result;
     try {
       result = await rp({
-        uri: `${process.env.API_ADDR}/1/billing/start-or-upgrade-subscription.json`,
+        uri: `${process.env.API_ADDR}/1/billing/start-or-update-subscription.json`,
         method: 'POST',
         strictSSL: process.env.NODE_ENV !== 'development',
         json: true,
