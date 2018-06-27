@@ -53,9 +53,9 @@
     react-autocomplete "1.7.2"
     react-day-picker "6.2.1"
 
-"@bufferapp/components@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.2.1.tgz#79aeb47dbb38ea5f1e4c770e3978ceea1c8b4f5b"
+"@bufferapp/components@2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.2.3.tgz#dec8f764294de9edaa3de07086d40fc5c9c6b42b"
   dependencies:
     "@bufferapp/react-keyframes" "0.2.5"
     raf "3.4.0"
