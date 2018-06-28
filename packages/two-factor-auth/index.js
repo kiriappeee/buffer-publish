@@ -16,6 +16,7 @@ export default connect(
     transition: (action, params) => dispatch(actions.transition(action, params)),
     setPhoneNumber: value => dispatch(actions.setPhoneNumber(value)),
     submitPhoneNumber: () => dispatch(actions.submitPhoneNumber()),
+    handleRecoveryCodeSelect: () => dispatch(actions.recoveryCodeSelected()),
   }),
 )(TwoFactorAuth);
 

@@ -12,9 +12,7 @@ const ModalWrapper = ({ children, handleClose }) => (
       }}
     >
       <Card shadowHeight={2}>
-        <div style={{ margin: '16px 40px' }}>
-          {children}
-        </div>
+        <div style={{ margin: '16px 40px' }}>{children}</div>
       </Card>
     </div>
   </Popover>
@@ -25,7 +23,14 @@ ModalWrapper.propTypes = {
   handleClose: PropTypes.func.isRequired,
 };
 
-const TwoFactorModal = ({ machineState, transition, phoneNumber, setPhoneNumber, submitPhoneNumber }) => {
+const TwoFactorModal = ({
+  machineState,
+  transition,
+  phoneNumber,
+  setPhoneNumber,
+  submitPhoneNumber,
+  handleRecoveryCodeSelect,
+}) => {
   const ModalScreen = ModalScreens[machineState];
   if (ModalScreen) {
     return (
@@ -35,6 +40,7 @@ const TwoFactorModal = ({ machineState, transition, phoneNumber, setPhoneNumber,
           setPhoneNumber={setPhoneNumber}
           phoneNumber={phoneNumber}
           submitPhoneNumber={submitPhoneNumber}
+          handleRecoveryCodeSelect={handleRecoveryCodeSelect}
         />
       </ModalWrapper>
     );
@@ -47,6 +53,7 @@ TwoFactorModal.propTypes = {
   phoneNumber: PropTypes.string.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   submitPhoneNumber: PropTypes.func.isRequired,
+  handleRecoveryCodeSelect: PropTypes.func.isRequired,
 };
 
 export default TwoFactorModal;

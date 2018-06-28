@@ -17,6 +17,7 @@ const TwoFactorAuth = ({
   transition,
   setPhoneNumber,
   submitPhoneNumber,
+  handleRecoveryCodeSelect,
 }) => (
   <div
     style={{
@@ -37,15 +38,14 @@ const TwoFactorAuth = ({
           maxWidth: '700px',
         }}
       >
-        <PreferencesRow
-          machineState={machineState}
-        />
+        <PreferencesRow machineState={machineState} />
         <Modal
           machineState={machineState}
           transition={transition}
           phoneNumber={phoneNumber}
           setPhoneNumber={setPhoneNumber}
           submitPhoneNumber={submitPhoneNumber}
+          handleRecoveryCodeSelect={handleRecoveryCodeSelect}
         />
       </div>
     </div>
@@ -74,6 +74,7 @@ TwoFactorAuth.propTypes = {
   transition: PropTypes.func.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   submitPhoneNumber: PropTypes.func.isRequired,
+  handleRecoveryCodeSelect: PropTypes.func.isRequired,
 };
 
 export default TwoFactorAuth;
