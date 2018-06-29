@@ -1,6 +1,4 @@
-import {
-  actionTypes as dataFetchActionTypes,
-} from '@bufferapp/async-data-fetch';
+import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
 
 import { handleTransition } from './machine';
 
@@ -25,6 +23,7 @@ export const actionTypes = {
   SUBMIT_PHONE_NUMBER: 'SUBMIT_PHONE_NUMBER',
   SETUP_APP: 'SETUP_APP',
   SUBMIT_CODE: 'SUBMIT_CODE',
+  RECOVERY_CODE_SELECTED: 'RECOVERY_CODE_SELECTED',
 };
 
 export const actions = {
@@ -46,6 +45,9 @@ export const actions = {
   submitCode: code => ({
     type: actionTypes.SUBMIT_CODE,
     code,
+  }),
+  recoveryCodeSelected: () => ({
+    type: actionTypes.RECOVERY_CODE_SELECTED,
   }),
 };
 

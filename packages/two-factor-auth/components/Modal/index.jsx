@@ -12,9 +12,7 @@ const ModalWrapper = ({ children, handleClose }) => (
       }}
     >
       <Card shadowHeight={2}>
-        <div style={{ margin: '16px 40px' }}>
-          {children}
-        </div>
+        <div style={{ margin: '16px 40px' }}>{children}</div>
       </Card>
     </div>
   </Popover>
@@ -37,6 +35,9 @@ const TwoFactorModal = ({
   qrCode,
   updateMethod,
   submitCode,
+  handleRecoveryCodeSelect,
+  editMode,
+  recoveryCode,
 }) => {
   const ModalScreen = ModalScreens[machineState];
   if (ModalScreen) {
@@ -53,6 +54,9 @@ const TwoFactorModal = ({
           qrCode={qrCode}
           updateMethod={updateMethod}
           submitCode={submitCode}
+          handleRecoveryCodeSelect={handleRecoveryCodeSelect}
+          editMode={editMode}
+          recoveryCode={recoveryCode}
         />
       </ModalWrapper>
     );
@@ -71,6 +75,9 @@ TwoFactorModal.propTypes = {
   qrCode: PropTypes.string.isRequired,
   updateMethod: PropTypes.string.isRequired,
   submitCode: PropTypes.func.isRequired,
+  handleRecoveryCodeSelect: PropTypes.func.isRequired,
+  editMode: PropTypes.bool.isRequired,
+  recoveryCode: PropTypes.string.isRequired,
 };
 
 export default TwoFactorModal;

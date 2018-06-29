@@ -9,7 +9,6 @@ export default connect(
     editMode: state.twoFactorAuth.editMode,
     method: state.twoFactorAuth.method,
     phoneNumber: state.twoFactorAuth.phoneNumber,
-    confirmationCode: state.twoFactorAuth.confirmationCode,
     recoveryCode: state.twoFactorAuth.recoveryCode,
     loading: state.twoFactorAuth.loading,
     error: state.twoFactorAuth.error,
@@ -22,6 +21,7 @@ export default connect(
     submitPhoneNumber: () => dispatch(actions.submitPhoneNumber()),
     setupApp: () => dispatch(actions.setupApp()),
     submitCode: code => dispatch(actions.submitCode(code)),
+    handleRecoveryCodeSelect: () => dispatch(actions.recoveryCodeSelected()),
   }),
 )(TwoFactorAuth);
 

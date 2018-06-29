@@ -10,10 +10,8 @@ const TwoFactorAuth = ({
   machineState,
   isEnabled,
   phoneNumber,
-  /* editMode,
-  type,
-  confirmationCode,
-  recoveryCode, */
+  editMode,
+  recoveryCode,
   transition,
   setPhoneNumber,
   submitPhoneNumber,
@@ -23,6 +21,7 @@ const TwoFactorAuth = ({
   qrCode,
   updateMethod,
   submitCode,
+  handleRecoveryCodeSelect,
 }) => (
   <div
     style={{
@@ -43,9 +42,7 @@ const TwoFactorAuth = ({
           maxWidth: '700px',
         }}
       >
-        <PreferencesRow
-          machineState={machineState}
-        />
+        <PreferencesRow machineState={machineState} />
         <Modal
           machineState={machineState}
           transition={transition}
@@ -58,6 +55,9 @@ const TwoFactorAuth = ({
           qrCode={qrCode}
           updateMethod={updateMethod}
           submitCode={submitCode}
+          handleRecoveryCodeSelect={handleRecoveryCodeSelect}
+          editMode={editMode}
+          recoveryCode={recoveryCode}
         />
       </div>
     </div>
@@ -79,10 +79,8 @@ TwoFactorAuth.propTypes = {
   machineState: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool.isRequired,
   phoneNumber: PropTypes.string.isRequired,
-  /* editMode: PropTypes.bool.isRequired,
-  type: PropTypes.type.isRequired,
-  confirmationCode: PropTypes.confirmationCode.isRequired,
-  recoveryCode: PropTypes.string.isRequired, */
+  editMode: PropTypes.bool.isRequired,
+  recoveryCode: PropTypes.string.isRequired,
   transition: PropTypes.func.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   submitPhoneNumber: PropTypes.func.isRequired,
@@ -92,6 +90,7 @@ TwoFactorAuth.propTypes = {
   qrCode: PropTypes.string.isRequired,
   updateMethod: PropTypes.string.isRequired,
   submitCode: PropTypes.func.isRequired,
+  handleRecoveryCodeSelect: PropTypes.func.isRequired,
 };
 
 export default TwoFactorAuth;

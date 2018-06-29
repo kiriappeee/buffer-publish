@@ -3,7 +3,7 @@ import {
   actionTypes as dataFetchActionTypes,
 } from '@bufferapp/async-data-fetch';
 
-// import { actions as notificationActions } from '@bufferapp/notifications';
+import { actions as notificationActions } from '@bufferapp/notifications';
 
 import { actionTypes, actions } from './reducer';
 
@@ -11,14 +11,16 @@ export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
     case actionTypes.SUBMIT_PHONE_NUMBER:
-      dispatch(dataFetchActions.fetch({
-        name: 'twoFactorUpdate',
-        args: {
-          tfaMethod: 'sms',
-          tel: getState().twoFactorAuth.phoneNumber,
-          edit: getState().twoFactorAuth.editMode,
-        },
-      }));
+      dispatch(
+        dataFetchActions.fetch({
+          name: 'twoFactorUpdate',
+          args: {
+            tfaMethod: 'sms',
+            tel: getState().twoFactorAuth.phoneNumber,
+            edit: getState().twoFactorAuth.editMode,
+          },
+        }),
+      );
       break;
     case actionTypes.SETUP_APP:
       dispatch(dataFetchActions.fetch({
@@ -54,6 +56,14 @@ export default ({ dispatch, getState }) => next => (action) => {
       break;
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(actions.transition('CODE_ACCEPTED'));
+      break;
+    case actionTypes.RECOVERY_CODE_SELECTED:
+      dispatch(
+        notificationActions.createNotification({
+          notificationType: 'success',
+          message: 'Recovery code is copied to your clipboard!',
+        }),
+      );
       break;
     default:
       break;
