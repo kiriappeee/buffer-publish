@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Button, Input } from '@bufferapp/components';
 
@@ -27,7 +27,7 @@ class SetupSMS extends React.Component {
       error,
     } = this.props;
     return (
-      <React.Fragment>
+      <Fragment>
         <div style={{ textAlign: 'center' }}>
           <Text size="large">Set up your phone number</Text>
           <div style={{ margin: '12px 0' }}>
@@ -62,7 +62,7 @@ class SetupSMS extends React.Component {
             {loading ? 'Please wait…' : 'Next'}
           </Button>
         </div>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Link, Button } from '@bufferapp/components';
 import QrCode from './_qr-code';
 
 const SetupApp = ({ transition, qrCode }) => (
-  <React.Fragment>
+  <Fragment>
     <div style={{ textAlign: 'center' }}>
       <Text size="large">Set up your authenticator app</Text>
       <div style={{ margin: '12px 0' }}>
@@ -26,12 +26,11 @@ const SetupApp = ({ transition, qrCode }) => (
 
     <div style={{ textAlign: 'center', paddingTop: '8px' }}>
       <div style={{ display: 'inline', paddingRight: '20px' }}>
-        <Button tertiary onClick={() => transition('CLOSE')}>Cancel</Button>
         <Button tertiary onClick={() => transition('BACK')}>Back</Button>
       </div>
       <Button onClick={() => transition('NEXT')}>Next</Button>
     </div>
-  </React.Fragment>
+  </Fragment>
 );
 
 SetupApp.propTypes = {

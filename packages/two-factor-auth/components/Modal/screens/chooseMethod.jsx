@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Button } from '@bufferapp/components';
 
 const ChooseMethod = ({ transition, setupApp, loading }) => (
-  <React.Fragment>
+  <Fragment>
     {loading && <Text size="large">Please wait...</Text>}
     <div style={{ display: loading ? 'none' : 'block' }}>
       <div style={{ textAlign: 'center' }}>
@@ -21,7 +21,7 @@ const ChooseMethod = ({ transition, setupApp, loading }) => (
         </div>
       </div>
     </div>
-  </React.Fragment>
+  </Fragment>
 );
 
 ChooseMethod.propTypes = {
