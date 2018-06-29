@@ -152,13 +152,16 @@ exports[`Snapshots QueuedPosts default 1`] = `
           <div>
             <input
               disabled={undefined}
-              onBlur={undefined}
+              onBlur={[Function]}
               onChange={undefined}
-              onFocus={undefined}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               placeholder="What would you like to share?"
               style={
                 Object {
                   "border": "0.063rem solid #ced7df",
+                  "borderColor": "#ced7df",
                   "borderRadius": "0.126rem",
                   "boxSizing": "border-box",
                   "fontFamily": "\\"Roboto\\", sans-serif",
@@ -1680,13 +1683,16 @@ exports[`Snapshots QueuedPosts paused 1`] = `
           <div>
             <input
               disabled={undefined}
-              onBlur={undefined}
+              onBlur={[Function]}
               onChange={undefined}
-              onFocus={undefined}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               placeholder="What would you like to share?"
               style={
                 Object {
                   "border": "0.063rem solid #ced7df",
+                  "borderColor": "#ced7df",
                   "borderRadius": "0.126rem",
                   "boxSizing": "border-box",
                   "fontFamily": "\\"Roboto\\", sans-serif",

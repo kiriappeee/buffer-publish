@@ -1087,8 +1087,10 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   "border": "0.063rem solid #e6ebef",
                                   "borderRadius": "0.126rem",
                                   "color": "#59626a",
-                                  "fontSize": "0.75rem",
-                                  "height": "2rem",
+                                  "fontFamily": "\\"Roboto\\", sans-serif",
+                                  "fontSize": "1rem",
+                                  "height": "2.3rem",
+                                  "outline": "none",
                                   "padding": "0 1.5rem 0 0.5rem",
                                   "width": "100%",
                                 }
@@ -1247,8 +1249,10 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                     "border": "0.063rem solid #e6ebef",
                                     "borderRadius": "0.126rem",
                                     "color": "#59626a",
-                                    "fontSize": "0.75rem",
-                                    "height": "2rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "1rem",
+                                    "height": "2.3rem",
+                                    "outline": "none",
                                     "padding": "0 1.5rem 0 0.5rem",
                                     "paddingRight": "1rem",
                                     "width": "100%",
@@ -1327,7 +1331,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                     "borderRadiusTopRight": "0.126rem",
                                     "display": "flex",
                                     "flexDirection": "column",
-                                    "height": "1.874rem",
+                                    "height": "2.174rem",
                                     "pointerEvents": "none",
                                     "position": "absolute",
                                     "right": "0.063rem",
@@ -1340,7 +1344,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   style={
                                     Object {
                                       "fontFamily": "none",
-                                      "height": "0.937rem",
+                                      "height": "1.087rem",
                                     }
                                   }
                                 >
@@ -1373,7 +1377,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   style={
                                     Object {
                                       "fontFamily": "none",
-                                      "height": "0.937rem",
+                                      "height": "1.087rem",
                                     }
                                   }
                                 >
@@ -1439,8 +1443,10 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                     "border": "0.063rem solid #e6ebef",
                                     "borderRadius": "0.126rem",
                                     "color": "#59626a",
-                                    "fontSize": "0.75rem",
-                                    "height": "2rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "1rem",
+                                    "height": "2.3rem",
+                                    "outline": "none",
                                     "padding": "0 1.5rem 0 0.5rem",
                                     "paddingRight": "1rem",
                                     "width": "100%",
@@ -1759,7 +1765,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                     "borderRadiusTopRight": "0.126rem",
                                     "display": "flex",
                                     "flexDirection": "column",
-                                    "height": "1.874rem",
+                                    "height": "2.174rem",
                                     "pointerEvents": "none",
                                     "position": "absolute",
                                     "right": "0.063rem",
@@ -1772,7 +1778,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   style={
                                     Object {
                                       "fontFamily": "none",
-                                      "height": "0.937rem",
+                                      "height": "1.087rem",
                                     }
                                   }
                                 >
@@ -1805,7 +1811,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   style={
                                     Object {
                                       "fontFamily": "none",
-                                      "height": "0.937rem",
+                                      "height": "1.087rem",
                                     }
                                   }
                                 >
@@ -1871,8 +1877,10 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                     "border": "0.063rem solid #e6ebef",
                                     "borderRadius": "0.126rem",
                                     "color": "#59626a",
-                                    "fontSize": "0.75rem",
-                                    "height": "2rem",
+                                    "fontFamily": "\\"Roboto\\", sans-serif",
+                                    "fontSize": "1rem",
+                                    "height": "2.3rem",
+                                    "outline": "none",
                                     "padding": "0 1.5rem 0 0.5rem",
                                     "paddingRight": "1rem",
                                     "width": "100%",
@@ -1901,7 +1909,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                     "borderRadiusTopRight": "0.126rem",
                                     "display": "flex",
                                     "flexDirection": "column",
-                                    "height": "1.874rem",
+                                    "height": "2.174rem",
                                     "pointerEvents": "none",
                                     "position": "absolute",
                                     "right": "0.063rem",
@@ -1914,7 +1922,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   style={
                                     Object {
                                       "fontFamily": "none",
-                                      "height": "0.937rem",
+                                      "height": "1.087rem",
                                     }
                                   }
                                 >
@@ -1947,7 +1955,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
                                   style={
                                     Object {
                                       "fontFamily": "none",
-                                      "height": "0.937rem",
+                                      "height": "1.087rem",
                                     }
                                   }
                                 >
