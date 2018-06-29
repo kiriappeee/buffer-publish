@@ -1,4 +1,6 @@
 const handleEnabled = state => (state.isEnabled ? 'enabled' : 'disabled');
+const handleEditMode = state => (state.editMode ? 'enabled' : 'recovery');
+const handleConfirmBack = state => (state.updateMethod === 'app' ? 'setupApp' : 'setupSMS');
 
 const machine = {
   disabled: {
@@ -21,9 +23,8 @@ const machine = {
     CLOSE: handleEnabled,
   },
   confirm: {
-    CODE_ACCEPTED: state => (state.editMode ? 'enabled' : 'recovery'),
-    CODE_REJECTED: 'confirm',
-    BACK: state => (state.updateMethod === 'app' ? 'setupApp' : 'setupSMS'),
+    CODE_ACCEPTED: handleEditMode,
+    BACK: handleConfirmBack,
     CLOSE: handleEnabled,
   },
   recovery: {
