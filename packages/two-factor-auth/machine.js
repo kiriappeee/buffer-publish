@@ -6,30 +6,24 @@ const machine = {
   },
   chooseMethod: {
     CHOOSE_SMS: 'setupSMS',
-    CHOOSE_APP: 'setupApp',
+    SETUP_APP: 'setupApp',
     CLOSE: handleEnabled,
   },
   setupSMS: {
-    NEXT: 'confirmSMSCode',
+    NEXT: 'confirm',
     ERROR: 'setupSMS',
     BACK: 'chooseMethod',
     CLOSE: handleEnabled,
   },
   setupApp: {
-    NEXT: 'confirmAppCode',
+    NEXT: 'confirm',
     BACK: 'chooseMethod',
     CLOSE: handleEnabled,
   },
-  confirmSMSCode: {
+  confirm: {
     CODE_ACCEPTED: state => (state.editMode ? 'enabled' : 'recovery'),
-    CODE_REJECTED: 'confirmSMSCode',
-    BACK: 'setupSMS',
-    CLOSE: handleEnabled,
-  },
-  confirmAppCode: {
-    CODE_ACCEPTED: state => (state.editMode ? 'enabled' : 'recovery'),
-    CODE_REJECTED: 'confirmAppCode',
-    BACK: 'setupApp',
+    CODE_REJECTED: 'confirm',
+    BACK: state => (state.updateMethod === 'app' ? 'setupApp' : 'setupSMS'),
     CLOSE: handleEnabled,
   },
   recovery: {
@@ -46,34 +40,57 @@ const machine = {
 
 const stateFromTransition = ({
   state,
-  /* transitionName, */
+  transitionName,
   nextMachineState,
   /* params, */
 }) => {
   const { machineState: currentMachineState } = state;
+  let newState = {};
+
+  // Clear any errors when closed
+  if (transitionName === 'CLOSE') {
+    newState = { error: '' };
+  }
+
+  // Store the new TFA method that we're setting up when
+  // it's associated screen is viewed
+  if (nextMachineState === 'setupSMS') {
+    newState = { ...newState, updateMethod: 'sms' };
+  }
+  if (nextMachineState === 'setupApp') {
+    newState = { ...newState, updateMethod: 'app' };
+  }
+
   switch (nextMachineState) {
-    // If we're changing phone/app settings directly from 'enabled'
+    // If we're going to phone/app setup directly from 'enabled'
     // then mark this as 'editMode' so we don't show the 'recovery'
     // screen again
     case 'setupSMS':
     case 'setupApp':
-      return {
-        ...state,
+      newState = {
+        ...newState,
         editMode: currentMachineState === 'enabled',
       };
+      break;
     case 'enabled':
-      return {
-        ...state,
+      newState = {
+        ...newState,
         isEnabled: true,
       };
+      break;
     case 'disabled':
-      return {
-        ...state,
+      newState = {
+        ...newState,
         isEnabled: false,
       };
+      break;
     default:
-      return state;
+      break;
   }
+  return {
+    ...state,
+    ...newState,
+  };
 };
 
 export const handleTransition = ({ state, name: transitionName, params }) => {

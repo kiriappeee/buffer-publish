@@ -25,7 +25,19 @@ ModalWrapper.propTypes = {
   handleClose: PropTypes.func.isRequired,
 };
 
-const TwoFactorModal = ({ machineState, transition, phoneNumber, setPhoneNumber, submitPhoneNumber }) => {
+const TwoFactorModal = ({
+  machineState,
+  transition,
+  phoneNumber,
+  setPhoneNumber,
+  submitPhoneNumber,
+  loading,
+  error,
+  setupApp,
+  qrCode,
+  updateMethod,
+  submitCode,
+}) => {
   const ModalScreen = ModalScreens[machineState];
   if (ModalScreen) {
     return (
@@ -35,6 +47,12 @@ const TwoFactorModal = ({ machineState, transition, phoneNumber, setPhoneNumber,
           setPhoneNumber={setPhoneNumber}
           phoneNumber={phoneNumber}
           submitPhoneNumber={submitPhoneNumber}
+          loading={loading}
+          error={error}
+          setupApp={setupApp}
+          qrCode={qrCode}
+          updateMethod={updateMethod}
+          submitCode={submitCode}
         />
       </ModalWrapper>
     );
@@ -47,6 +65,12 @@ TwoFactorModal.propTypes = {
   phoneNumber: PropTypes.string.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   submitPhoneNumber: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  setupApp: PropTypes.func.isRequired,
+  qrCode: PropTypes.string.isRequired,
+  updateMethod: PropTypes.string.isRequired,
+  submitCode: PropTypes.func.isRequired,
 };
 
 export default TwoFactorModal;

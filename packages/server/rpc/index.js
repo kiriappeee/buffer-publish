@@ -25,6 +25,7 @@ const updateEmail = require('./updateEmail');
 const changePassword = require('./changePassword');
 const changeDateTimePreferences = require('./changeDateTimePreferences');
 const twoFactorUpdate = require('./twoFactorUpdate');
+const twoFactorConfirm = require('./twoFactorConfirm');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -52,4 +53,5 @@ module.exports = checkToken(rpc(
   changePassword,
   changeDateTimePreferences,
   twoFactorUpdate,
+  twoFactorConfirm,
 ));

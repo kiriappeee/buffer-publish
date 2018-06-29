@@ -22,8 +22,7 @@ describe('machine', () => {
       'chooseMethod',
       'setupSMS',
       'setupApp',
-      'confirmSMSCode',
-      'confirmAppCode',
+      'confirm',
     ];
     closableMachineStates.forEach((machineState) => {
       it(`from ${machineState} to enabled`, () => {
@@ -46,7 +45,7 @@ describe('machine', () => {
   });
 
   describe('transitions with CODE_ACCEPTED to enabled when in editMode', () => {
-    const editModeMachineStates = ['confirmSMSCode', 'confirmAppCode'];
+    const editModeMachineStates = ['confirm'];
     editModeMachineStates.forEach((machineState) => {
       it(`for ${machineState}`, () => {
         const nextState = handleTransition({

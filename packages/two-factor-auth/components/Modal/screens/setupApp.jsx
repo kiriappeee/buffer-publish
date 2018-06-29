@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, Link, Button } from '@bufferapp/components';
-import QrCode from './_qr-code-hidden-surprise';
+import QrCode from './_qr-code';
 
-const SetupApp = ({ transition }) => (
+const SetupApp = ({ transition, qrCode }) => (
   <React.Fragment>
     <div style={{ textAlign: 'center' }}>
       <Text size="large">Set up your authenticator app</Text>
@@ -20,7 +20,9 @@ const SetupApp = ({ transition }) => (
       </div>
     </div>
 
-    <QrCode />
+    <div style={{ textAlign: 'center' }}>
+      <QrCode data={qrCode} />
+    </div>
 
     <div style={{ textAlign: 'center', paddingTop: '8px' }}>
       <div style={{ display: 'inline', paddingRight: '20px' }}>
@@ -33,6 +35,7 @@ const SetupApp = ({ transition }) => (
 
 SetupApp.propTypes = {
   transition: PropTypes.func.isRequired,
+  qrCode: PropTypes.string.isRequired,
 };
 
 export default SetupApp;

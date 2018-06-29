@@ -1,51 +1,58 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Button, Input } from '@bufferapp/components';
 
-class SetupSMS extends React.Component {
+class Confirm extends React.Component {
   constructor() {
     super();
-    this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.state = {
+      code: '',
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCodeChange = this.handleCodeChange.bind(this);
   }
   componentDidMount() {
     const input = this.inputContainer.querySelector('input');
     input.focus();
-    input.select();
-  }
-  handlePhoneChange(event) {
-    this.props.setPhoneNumber(event.target.value);
   }
   handleSubmit() {
-    this.props.submitPhoneNumber();
+    this.props.submitCode(this.state.code);
+  }
+  handleCodeChange(event) {
+    this.setState({ code: event.target.value });
   }
   render() {
     const {
       transition,
-      phoneNumber,
+      updateMethod,
       loading,
       error,
     } = this.props;
     return (
-      <React.Fragment>
+      <Fragment>
         <div style={{ textAlign: 'center' }}>
-          <Text size="large">Set up your phone number</Text>
-          <div style={{ margin: '12px 0' }}>
+          <Text size="large">Enter confirmation code</Text>
+          <div style={{ margin: '12px 0 8px' }}>
             <Text size="mini" weight="medium">
-              This will be the device we send verification codes each time you log into Buffer.
+              Awesome! Now we just need to confirm everything.{' '}
             </Text>
+            {updateMethod === 'app' && <Text size="mini">
+              Open your authenticator app and input the generated code.
+            </Text>}
+            {updateMethod === 'sms' && <Text size="mini">
+              Please input the code that we just texted you.
+            </Text>}
           </div>
         </div>
-        <div style={{ padding: '16px 0 20px' }} ref={(el) => { this.inputContainer = el; }}>
+        <div style={{ padding: '0 0 24px' }} ref={(el) => { this.inputContainer = el; }}>
           <div style={{ paddingBottom: '4px' }}>
-            <Text size="mini" weight="medium">Phone number (incl. country code)</Text>
+            <Text size="mini" weight="medium">Code</Text>
           </div>
           <Input
-            type="text"
-            placeholder="e.g., +1 123-555-1234"
+            type="number"
             input={{
-              value: phoneNumber,
-              onChange: this.handlePhoneChange,
+              value: this.state.code,
+              onChange: this.handleCodeChange,
             }}
             meta={{
               error,
@@ -62,18 +69,17 @@ class SetupSMS extends React.Component {
             {loading ? 'Please wait…' : 'Next'}
           </Button>
         </div>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
 
-SetupSMS.propTypes = {
+Confirm.propTypes = {
   transition: PropTypes.func.isRequired,
-  phoneNumber: PropTypes.string.isRequired,
-  setPhoneNumber: PropTypes.func.isRequired,
-  submitPhoneNumber: PropTypes.func.isRequired,
+  updateMethod: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string.isRequired,
+  submitCode: PropTypes.func.isRequired,
 };
 
-export default SetupSMS;
+export default Confirm;

@@ -11,11 +11,17 @@ export default connect(
     phoneNumber: state.twoFactorAuth.phoneNumber,
     confirmationCode: state.twoFactorAuth.confirmationCode,
     recoveryCode: state.twoFactorAuth.recoveryCode,
+    loading: state.twoFactorAuth.loading,
+    error: state.twoFactorAuth.error,
+    qrCode: state.twoFactorAuth.qrCode,
+    updateMethod: state.twoFactorAuth.updateMethod,
   }),
   dispatch => ({
     transition: (action, params) => dispatch(actions.transition(action, params)),
     setPhoneNumber: value => dispatch(actions.setPhoneNumber(value)),
     submitPhoneNumber: () => dispatch(actions.submitPhoneNumber()),
+    setupApp: () => dispatch(actions.setupApp()),
+    submitCode: code => dispatch(actions.submitCode(code)),
   }),
 )(TwoFactorAuth);
 

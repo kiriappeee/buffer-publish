@@ -17,6 +17,12 @@ const TwoFactorAuth = ({
   transition,
   setPhoneNumber,
   submitPhoneNumber,
+  loading,
+  error,
+  setupApp,
+  qrCode,
+  updateMethod,
+  submitCode,
 }) => (
   <div
     style={{
@@ -46,6 +52,12 @@ const TwoFactorAuth = ({
           phoneNumber={phoneNumber}
           setPhoneNumber={setPhoneNumber}
           submitPhoneNumber={submitPhoneNumber}
+          loading={loading}
+          error={error}
+          setupApp={setupApp}
+          qrCode={qrCode}
+          updateMethod={updateMethod}
+          submitCode={submitCode}
         />
       </div>
     </div>
@@ -74,6 +86,12 @@ TwoFactorAuth.propTypes = {
   transition: PropTypes.func.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   submitPhoneNumber: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  setupApp: PropTypes.func.isRequired,
+  qrCode: PropTypes.string.isRequired,
+  updateMethod: PropTypes.string.isRequired,
+  submitCode: PropTypes.func.isRequired,
 };
 
 export default TwoFactorAuth;
