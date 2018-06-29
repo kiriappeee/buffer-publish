@@ -9,9 +9,11 @@ class SetupSMS extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount() {
-    const input = this.inputContainer.querySelector('input');
-    input.focus();
-    input.select();
+    if (this.inputContainer) {
+      const input = this.inputContainer.querySelector('input');
+      input.focus();
+      input.select();
+    }
   }
   handlePhoneChange(event) {
     this.props.setPhoneNumber(event.target.value);

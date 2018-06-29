@@ -12,8 +12,10 @@ class Confirm extends React.Component {
     this.handleCodeChange = this.handleCodeChange.bind(this);
   }
   componentDidMount() {
-    const input = this.inputContainer.querySelector('input');
-    input.focus();
+    if (this.inputContainer) {
+      const input = this.inputContainer.querySelector('input');
+      input.focus();
+    }
   }
   handleSubmit() {
     this.props.submitCode(this.state.code);
@@ -49,7 +51,7 @@ class Confirm extends React.Component {
             <Text size="mini" weight="medium">Code</Text>
           </div>
           <Input
-            type="number"
+            type="text"
             input={{
               value: this.state.code,
               onChange: this.handleCodeChange,
