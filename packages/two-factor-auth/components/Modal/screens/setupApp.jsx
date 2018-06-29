@@ -27,6 +27,7 @@ const SetupApp = ({ transition, qrCode }) => (
     <div style={{ textAlign: 'center', paddingTop: '8px' }}>
       <div style={{ display: 'inline', paddingRight: '20px' }}>
         <Button tertiary onClick={() => transition('CLOSE')}>Cancel</Button>
+        <Button tertiary onClick={() => transition('BACK')}>Back</Button>
       </div>
       <Button onClick={() => transition('NEXT')}>Next</Button>
     </div>

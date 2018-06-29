@@ -56,7 +56,7 @@ class SetupSMS extends React.Component {
         </div>
         <div style={{ textAlign: 'center', paddingTop: '8px' }}>
           <div style={{ display: 'inline', paddingRight: '20px' }}>
-            <Button tertiary onClick={() => transition('CLOSE')}>Cancel</Button>
+            <Button tertiary onClick={() => transition('BACK')}>Back</Button>
           </div>
           <Button onClick={this.handleSubmit} disabled={loading}>
             {loading ? 'Please wait…' : 'Next'}
