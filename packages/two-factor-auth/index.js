@@ -14,6 +14,7 @@ export default connect(
     error: state.twoFactorAuth.error,
     qrCode: state.twoFactorAuth.qrCode,
     updateMethod: state.twoFactorAuth.updateMethod,
+    updatePhoneNumber: state.twoFactorAuth.updatePhoneNumber,
   }),
   dispatch => ({
     transition: (action, params) => dispatch(actions.transition(action, params)),

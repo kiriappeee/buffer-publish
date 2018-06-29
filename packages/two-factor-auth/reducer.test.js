@@ -18,7 +18,7 @@ describe('reducer', () => {
   });
   it('sets phone number', () => {
     const actual = reducer(initialState, actions.setPhoneNumber('foo'));
-    expect(actual.phoneNumber).toEqual('foo');
+    expect(actual.updatePhoneNumber).toEqual('foo');
   });
   it('loads enabled twofactor data from user', () => {
     const actual = reducer(initialState, {
@@ -36,6 +36,7 @@ describe('reducer', () => {
       isEnabled: true,
       method: 'sms',
       phoneNumber: '5146766445',
+      updatePhoneNumber: '5146766445',
     });
   });
   it('loads disabled twofactor data from user', () => {
@@ -51,6 +52,7 @@ describe('reducer', () => {
       isEnabled: false,
       method: false,
       phoneNumber: '',
+      updatePhoneNumber: '',
     });
   });
   it('sets loading and error state when starting TFA update', () => {
@@ -98,8 +100,12 @@ describe('reducer', () => {
       error: '',
     });
   });
-  it('sets the recovery code after code confirmed', () => {
-    const actual = reducer(initialState, {
+  it('sets the tfa data after the code is confirmed', () => {
+    const actual = reducer({
+      ...initialState,
+      updateMethod: 'sms',
+      updatePhoneNumber: 'phone',
+    }, {
       type: 'twoFactorConfirm_FETCH_SUCCESS',
       result: {
         recovery: 'recovery',
@@ -107,6 +113,10 @@ describe('reducer', () => {
     });
     expect(actual).toEqual({
       ...initialState,
+      updateMethod: 'sms',
+      updatePhoneNumber: 'phone',
+      method: 'sms',
+      phoneNumber: 'phone',
       recoveryCode: 'recovery',
       loading: false,
       error: '',

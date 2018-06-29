@@ -6,15 +6,17 @@ export const initialState = {
   machineState: 'disabled',
   isEnabled: false,
   editMode: false,
-  method: false,
+  method: 'sms',
   phoneNumber: '',
-  confirmationCode: '',
-  recoveryCode: null,
+  recoveryCode: '',
   loading: false,
   error: '',
   initKey: '',
   qrCode: '',
-  updateMethod: false,
+
+  // Fields for in-progress edits
+  updateMethod: 'sms',
+  updatePhoneNumber: '',
 };
 
 export const actionTypes = {
@@ -76,12 +78,13 @@ const reducer = (state = initialState, action) => {
         isEnabled: !!twofactor,
         method: twofactor ? twofactor.type : false,
         phoneNumber: twofactor ? twofactor.tel : '',
+        updatePhoneNumber: twofactor ? twofactor.tel : '',
       };
     }
     case actionTypes.SET_PHONE_NUMBER:
       return {
         ...state,
-        phoneNumber: action.value,
+        updatePhoneNumber: action.value,
       };
     /**
      * Handle loading states
@@ -115,6 +118,8 @@ const reducer = (state = initialState, action) => {
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
+        method: state.updateMethod,
+        phoneNumber: state.updatePhoneNumber,
         recoveryCode: action.result.recovery,
         loading: false,
         error: '',

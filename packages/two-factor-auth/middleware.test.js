@@ -36,7 +36,7 @@ describe('middleware', () => {
       name: 'twoFactorUpdate',
       args: {
         tfaMethod: 'sms',
-        tel: store.getState().twoFactorAuth.phoneNumber,
+        tel: store.getState().twoFactorAuth.updatePhoneNumber,
         edit: store.getState().twoFactorAuth.editMode,
       },
     }));
@@ -108,7 +108,7 @@ describe('middleware', () => {
         code: '1234',
         initKey: store.getState().twoFactorAuth.initKey,
         tfaMethod: store.getState().twoFactorAuth.updateMethod,
-        tel: store.getState().twoFactorAuth.phoneNumber,
+        tel: store.getState().twoFactorAuth.updatePhoneNumber,
         edit: store.getState().twoFactorAuth.editMode,
       },
     }));

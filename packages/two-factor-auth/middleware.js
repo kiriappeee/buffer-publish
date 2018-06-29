@@ -27,7 +27,7 @@ export default ({ dispatch, getState }) => next => (action) => {
           name: 'twoFactorUpdate',
           args: {
             tfaMethod: 'sms',
-            tel: getState().twoFactorAuth.phoneNumber,
+            tel: getState().twoFactorAuth.updatePhoneNumber,
             edit: getState().twoFactorAuth.editMode,
           },
         }),
@@ -68,7 +68,7 @@ export default ({ dispatch, getState }) => next => (action) => {
           code: action.code,
           initKey: getState().twoFactorAuth.initKey,
           tfaMethod: getState().twoFactorAuth.updateMethod,
-          tel: getState().twoFactorAuth.phoneNumber,
+          tel: getState().twoFactorAuth.updatePhoneNumber,
           edit: getState().twoFactorAuth.editMode,
         },
       }));

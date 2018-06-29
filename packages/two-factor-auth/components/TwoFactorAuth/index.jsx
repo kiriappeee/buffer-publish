@@ -9,7 +9,9 @@ import PreferencesRow from '../PreferencesRow';
 const TwoFactorAuth = ({
   machineState,
   isEnabled,
+  method,
   phoneNumber,
+  updatePhoneNumber,
   editMode,
   recoveryCode,
   transition,
@@ -42,11 +44,16 @@ const TwoFactorAuth = ({
           maxWidth: '700px',
         }}
       >
-        <PreferencesRow machineState={machineState} />
+        <PreferencesRow
+          machineState={machineState}
+          transition={transition}
+          method={method}
+          phoneNumber={phoneNumber}
+        />
         <Modal
           machineState={machineState}
           transition={transition}
-          phoneNumber={phoneNumber}
+          updatePhoneNumber={updatePhoneNumber}
           setPhoneNumber={setPhoneNumber}
           submitPhoneNumber={submitPhoneNumber}
           loading={loading}
@@ -78,7 +85,9 @@ const TwoFactorAuth = ({
 TwoFactorAuth.propTypes = {
   machineState: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool.isRequired,
+  method: PropTypes.string.isRequired,
   phoneNumber: PropTypes.string.isRequired,
+  updatePhoneNumber: PropTypes.string.isRequired,
   editMode: PropTypes.bool.isRequired,
   recoveryCode: PropTypes.string.isRequired,
   transition: PropTypes.func.isRequired,

@@ -24,19 +24,23 @@ class SetupSMS extends React.Component {
   render() {
     const {
       transition,
-      phoneNumber,
+      updatePhoneNumber,
       loading,
       error,
+      editMode,
     } = this.props;
     return (
       <Fragment>
         <div style={{ textAlign: 'center' }}>
-          <Text size="large">Set up your phone number</Text>
-          <div style={{ margin: '12px 0' }}>
+          <Text size="large">
+            {!editMode && 'Set up your phone number'}
+            {editMode && 'Change your phone number'}
+          </Text>
+          {!editMode && <div style={{ margin: '12px 0' }}>
             <Text size="mini" weight="medium">
               This will be the device we send verification codes each time you log into Buffer.
             </Text>
-          </div>
+          </div>}
         </div>
         <div style={{ padding: '16px 0 20px' }} ref={(el) => { this.inputContainer = el; }}>
           <div style={{ paddingBottom: '4px' }}>
@@ -46,7 +50,7 @@ class SetupSMS extends React.Component {
             type="text"
             placeholder="e.g., +1 123-555-1234"
             input={{
-              value: phoneNumber,
+              value: updatePhoneNumber,
               onChange: this.handlePhoneChange,
             }}
             meta={{
@@ -58,7 +62,8 @@ class SetupSMS extends React.Component {
         </div>
         <div style={{ textAlign: 'center', paddingTop: '8px' }}>
           <div style={{ display: 'inline', paddingRight: '20px' }}>
-            <Button tertiary onClick={() => transition('BACK')}>Back</Button>
+            {!editMode && <Button tertiary onClick={() => transition('BACK')}>Back</Button>}
+            {editMode && <Button tertiary onClick={() => transition('CLOSE')}>Cancel</Button>}
           </div>
           <Button onClick={this.handleSubmit} disabled={loading}>
             {loading ? 'Please wait…' : 'Next'}
@@ -71,11 +76,12 @@ class SetupSMS extends React.Component {
 
 SetupSMS.propTypes = {
   transition: PropTypes.func.isRequired,
-  phoneNumber: PropTypes.string.isRequired,
+  updatePhoneNumber: PropTypes.string.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   submitPhoneNumber: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string.isRequired,
+  editMode: PropTypes.bool.isRequired,
 };
 
 export default SetupSMS;
