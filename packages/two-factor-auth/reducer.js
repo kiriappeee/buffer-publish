@@ -53,6 +53,9 @@ export const actions = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    /**
+     * Handle transitions with our state machine (see machine.js)
+     */
     case actionTypes.TRANSITION: {
       const { name, params } = action;
       return handleTransition({
@@ -61,6 +64,10 @@ const reducer = (state = initialState, action) => {
         params,
       });
     }
+    /**
+     * This is the initial user data that comes in, we
+     * pull out the relevant twofactor details if present.
+     */
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`: {
       const twofactor = action.result.twofactor;
       return {
@@ -76,6 +83,9 @@ const reducer = (state = initialState, action) => {
         ...state,
         phoneNumber: action.value,
       };
+    /**
+     * Handle loading states
+     */
     case `twoFactorUpdate_${dataFetchActionTypes.FETCH_START}`:
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_START}`:
       return {
@@ -83,6 +93,11 @@ const reducer = (state = initialState, action) => {
         loading: true,
         error: '',
       };
+    /**
+     * This happens either
+     *   a) after the user has entered a phone number or
+     *   b) they clicked 'auth. app'
+     */
     case `twoFactorUpdate_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
@@ -91,6 +106,9 @@ const reducer = (state = initialState, action) => {
         loading: false,
         error: '',
       };
+    /**
+     * This happens after they've confirmed the code from SMS or App
+     */
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
@@ -98,6 +116,9 @@ const reducer = (state = initialState, action) => {
         loading: false,
         error: '',
       };
+    /**
+     * In case something goes wrong...
+     */
     case `twoFactorUpdate_${dataFetchActionTypes.FETCH_FAIL}`:
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_FAIL}`:
       return {
