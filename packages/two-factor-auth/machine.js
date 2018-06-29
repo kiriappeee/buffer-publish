@@ -49,12 +49,12 @@ const stateFromTransition = ({
   let newState = {};
 
   // Clear any errors when closed
-  if (transitionName === 'CLOSE') {
+  if (['CLOSE', 'BACK'].includes(transitionName)) {
     newState = { error: '' };
   }
 
   // Store the new TFA method that we're setting up when
-  // it's associated screen is viewed
+  // it's associated screen is viewed.
   if (nextMachineState === 'setupSMS') {
     newState = { ...newState, updateMethod: 'sms' };
   }
@@ -65,7 +65,7 @@ const stateFromTransition = ({
   switch (nextMachineState) {
     // If we're going to phone/app setup directly from 'enabled'
     // then mark this as 'editMode' so we don't show the 'recovery'
-    // screen again
+    // screen later on
     case 'setupSMS':
     case 'setupApp':
       newState = {
@@ -73,6 +73,7 @@ const stateFromTransition = ({
         editMode: currentMachineState === 'enabled',
       };
       break;
+    // Keep the machine state and `isEnabled` in sync
     case 'enabled':
       newState = {
         ...newState,
