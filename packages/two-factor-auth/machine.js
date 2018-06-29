@@ -13,7 +13,6 @@ const machine = {
   },
   setupSMS: {
     NEXT: 'confirm',
-    ERROR: 'setupSMS',
     BACK: 'chooseMethod',
     CLOSE: handleEnabled,
   },
@@ -97,7 +96,7 @@ const stateFromTransition = ({
 
 export const handleTransition = ({ state, name: transitionName, params }) => {
   const { machineState } = state;
-  if (machineState) {
+  if (machine[machineState]) {
     if (machine[machineState][transitionName]) {
       let nextMachineState = machine[machineState][transitionName];
       if (typeof nextMachineState === 'function') {
