@@ -66,6 +66,9 @@ describe('reducer', () => {
   it('sets the TFA data after successful update', () => {
     const actual = reducer(initialState, {
       type: 'twoFactorUpdate_FETCH_SUCCESS',
+      args: {
+        tfaMethod: 'app',
+      },
       result: {
         init_key: 'init_key',
         qr_code: 'qr_code',
@@ -75,6 +78,22 @@ describe('reducer', () => {
       ...initialState,
       initKey: 'init_key',
       qrCode: 'qr_code',
+      loading: false,
+      error: '',
+    });
+  });
+  it('handles successful disabling of TFA', () => {
+    const actual = reducer(initialState, {
+      type: 'twoFactorUpdate_FETCH_SUCCESS',
+      args: {
+        tfaMethod: 'off',
+      },
+      result: {
+        success: true,
+      },
+    });
+    expect(actual).toEqual({
+      ...initialState,
       loading: false,
       error: '',
     });

@@ -94,18 +94,21 @@ const reducer = (state = initialState, action) => {
         error: '',
       };
     /**
-     * This happens either
-     *   a) after the user has entered a phone number or
-     *   b) they clicked 'auth. app'
+     * This happens when
+     *   a) the user enters a phone number and clicks 'next'
+     *   b) the user chooses 'authenticator app'
+     *   c) the user disables TFA with the toggle switch
      */
-    case `twoFactorUpdate_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case `twoFactorUpdate_${dataFetchActionTypes.FETCH_SUCCESS}`: {
+      const turnedOff = action.args.tfaMethod === 'off';
       return {
         ...state,
-        initKey: action.result.init_key,
-        qrCode: action.result.qr_code,
+        initKey: turnedOff ? state.initKey : action.result.init_key,
+        qrCode: turnedOff ? state.qrCode : action.result.qr_code,
         loading: false,
         error: '',
       };
+    }
     /**
      * This happens after they've confirmed the code from SMS or App
      */

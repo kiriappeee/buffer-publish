@@ -10,6 +10,17 @@ import { actionTypes, actions } from './reducer';
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
+    case actionTypes.TRANSITION:
+      if (getState().twoFactorAuth.machineState === 'disabled' &&
+          action.name === 'DISABLE') {
+        dispatch(
+          dataFetchActions.fetch({
+            name: 'twoFactorUpdate',
+            args: { tfaMethod: 'off' },
+          }),
+        );
+      }
+      break;
     case actionTypes.SUBMIT_PHONE_NUMBER:
       dispatch(
         dataFetchActions.fetch({
@@ -41,6 +52,14 @@ export default ({ dispatch, getState }) => next => (action) => {
         // We're on chooseMethod, show the QR code now
         dispatch(actions.transition('SETUP_APP'));
       }
+      if (action.args.tfaMethod === 'off') {
+        dispatch(
+          notificationActions.createNotification({
+            notificationType: 'success',
+            message: 'Two Factor Authentication has been disabled',
+          }),
+        );
+      }
       break;
     case actionTypes.SUBMIT_CODE:
       dispatch(dataFetchActions.fetch({
@@ -56,6 +75,12 @@ export default ({ dispatch, getState }) => next => (action) => {
       break;
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(actions.transition('CODE_ACCEPTED'));
+      dispatch(
+        notificationActions.createNotification({
+          notificationType: 'success',
+          message: 'Two Factor Authentication has been enabled for your account!',
+        }),
+      );
       break;
     case actionTypes.RECOVERY_CODE_SELECTED:
       dispatch(
