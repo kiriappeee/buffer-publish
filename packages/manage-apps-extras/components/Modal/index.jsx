@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Popover, Card, Text, Button } from '@bufferapp/components';
 
-const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appId, appName }) => (
+const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appName }) => (
   <Popover onOverlayClick={() => onRequestCloseModal()}>
     <div
       style={{
@@ -76,7 +76,6 @@ Modal.propTypes = {
   submitting: PropTypes.bool.isRequired,
   onRequestCloseModal: PropTypes.func.isRequired,
   appName: PropTypes.string.isRequired,
-  appId: PropTypes.string.isRequired,
 };
 
 export default Modal;

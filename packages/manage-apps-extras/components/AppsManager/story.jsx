@@ -11,8 +11,8 @@ const connectedApps = [
   {
     id: 2,
     name: 'Buffer client 2',
-  }
-]
+  },
+];
 
 storiesOf('AppsManager')
   .addDecorator(checkA11y)
