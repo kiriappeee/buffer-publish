@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Text,
   Button,
@@ -13,7 +13,7 @@ const stylesFlexRow = {
   alignItems: 'center',
 };
 
-const AppsManager = () => (
+const AppsManager = ({ connectedApps }) => (
   <div
     style={{
       display: 'block',
@@ -40,10 +40,37 @@ const AppsManager = () => (
         >
           {'Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! https://buffer.com/extras'}
         </LinkifiedText>
+        <Divider />
+
+        {connectedApps.map(app => (
+          <div>
+            <div
+              style={{
+                ...stylesFlexRow,
+                margin: '1rem 0',
+              }}
+              key={app.id}
+            >
+              <Text size={'mini'}>{app.name}</Text>
+              <Button tertiary>Revoke Access</Button>
+            </div>
+            <Divider />
+          </div>
+        ))}
       </div>
     </div>
-    <Divider />
   </div>
 );
+
+AppsManager.propTypes = {
+  connectedApps: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  })),
+};
+
+AppsManager.defaultProps = {
+  connectedApps: [],
+};
 
 export default AppsManager;
