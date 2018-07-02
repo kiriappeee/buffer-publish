@@ -18,7 +18,13 @@ const openLinkAppStore = () => {
   window.open('https://itunes.apple.com/app/apple-store/id490474324?pt=936146&ct=Web%20App%20Sidebar&mt=8', '_blank');
 };
 
-const AppsAndExtras = () => (
+const stylesFlexRow = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+};
+
+const ExtrasLinks = () => (
   <div
     style={{
       display: 'block',
@@ -39,9 +45,7 @@ const AppsAndExtras = () => (
 
     <div
       style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        ...stylesFlexRow,
         margin: '1rem 0',
       }}
     >
@@ -51,20 +55,12 @@ const AppsAndExtras = () => (
     <Divider />
     <div
       style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        ...stylesFlexRow,
         margin: '1rem 0',
       }}
     >
       <Text size={'mini'}>Mobile Apps</Text>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+      <div style={stylesFlexRow}>
         <div
           style={{
             marginRight: '0.5rem',
@@ -79,16 +75,4 @@ const AppsAndExtras = () => (
   </div>
 );
 
-// AppsAndExtras.propTypes = {
-//   loggedIn: PropTypes.bool,
-//   translations: PropTypes.shape({
-//     loggedIn: PropTypes.string,
-//     loggedOut: PropTypes.string,
-//   }).isRequired,
-// };
-
-// AppsAndExtras.defaultProps = {
-//   loggedIn: false,
-// };
-
-export default AppsAndExtras;
+export default ExtrasLinks;
