@@ -12,6 +12,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/change-password": "1.6.2",
+    "@bufferapp/manage-apps-extras": "0.0.1",
     "@bufferapp/components": "2.1.6",
     "@bufferapp/date-time-preferences": "^1.7.0",
     "@bufferapp/publish-profile-sidebar": "1.6.2",

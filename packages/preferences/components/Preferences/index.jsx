@@ -7,6 +7,7 @@ import DateTimePreferences from '@bufferapp/date-time-preferences';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
 import Security from '../Security';
+import AppsAndExtras from '../AppsAndExtras';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
@@ -21,7 +22,7 @@ const PreferenceContent = ({ tabId, onUnknownTab }) => {
     case 'security':
       return <Security />;
     case 'appsandextras':
-      return <Text>Apps & Extras Content Goes Here</Text>;
+      return <AppsAndExtras />;
     default:
       onUnknownTab();
       return <Text>Redirecting...</Text>;
