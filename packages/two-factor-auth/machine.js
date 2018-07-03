@@ -62,11 +62,11 @@ const stateFromTransition = ({
   }
 
   switch (nextMachineState) {
-    // If we're going to phone/app setup directly from 'enabled'
-    // then mark this as 'editMode' so we don't show the 'recovery'
-    // screen later on
+    // If we're going to sms/app/recovery directly from 'enabled'
+    // then mark this as 'editMode'
     case 'setupSMS':
     case 'setupApp':
+    case 'recovery':
       newState = {
         ...newState,
         editMode: currentMachineState === 'enabled',
