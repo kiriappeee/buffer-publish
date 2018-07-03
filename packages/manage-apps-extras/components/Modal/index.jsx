@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Popover, Card, Text, Button } from '@bufferapp/components';
 
-const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appName }) => (
+const Modal = ({
+  handleSubmit,
+  onRequestCloseModal,
+  submitting,
+  appId,
+  appName,
+}) => (
   <Popover onOverlayClick={() => onRequestCloseModal()}>
     <div
       style={{
@@ -23,9 +29,7 @@ const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appName }) => (
               marginBottom: '1rem',
             }}
           >
-            <Text size={'large'} color={'outerSpace'}>
-              Are you sure?
-            </Text>
+            <Text size={'large'} color={'outerSpace'}>Are you sure?</Text>
           </div>
           <div
             style={{
@@ -34,7 +38,7 @@ const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appName }) => (
             }}
           >
             <Text size={'small'} color={'shuttleGray'}>
-              You{"'"}re about to revoke access to {appName}.
+              You're about to revoke access to {appId}: {appName}.
               This will prevent the app from working with your Buffer account.
               Are you sure you want to continue?
             </Text>
@@ -49,10 +53,7 @@ const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appName }) => (
             <Button
               tertiary
               disabled={submitting}
-              onClick={(e) => {
-                e.preventDefault();
-                onRequestCloseModal();
-              }}
+              onClick={() => onRequestCloseModal()}
             >
               Cancel
             </Button>
@@ -62,7 +63,7 @@ const Modal = ({ handleSubmit, submitting, onRequestCloseModal, appName }) => (
               }}
             />
             <Button onClick={handleSubmit} disabled={submitting}>
-              Yes, revoke acess
+              Yes, revoke access
             </Button>
           </div>
         </div>
@@ -75,6 +76,7 @@ Modal.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   submitting: PropTypes.bool.isRequired,
   onRequestCloseModal: PropTypes.func.isRequired,
+  appId: PropTypes.string.isRequired,
   appName: PropTypes.string.isRequired,
 };
 

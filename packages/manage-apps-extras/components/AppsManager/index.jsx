@@ -6,6 +6,7 @@ import {
   Divider,
   LinkifiedText,
 } from '@bufferapp/components';
+import Modal from '../Modal';
 
 const stylesFlexRow = {
   display: 'flex',
@@ -13,7 +14,21 @@ const stylesFlexRow = {
   alignItems: 'center',
 };
 
-const AppsManager = ({ connectedApps }) => (
+const linkGetMoreApps = {
+  rawString: 'https://buffer.com/extras',
+  displayString: 'Get More Apps →',
+  url: 'https://buffer.com/extras',
+  indices: [86, 111],
+};
+
+const AppsManager = ({
+  connectedApps,
+  showModalAppId,
+  showModalAppName,
+  onRequestOpenModal,
+  onRequestCloseModal,
+  onSubmit,
+}) => (
   <div
     style={{
       display: 'block',
@@ -28,14 +43,7 @@ const AppsManager = ({ connectedApps }) => (
         <LinkifiedText
           size={'small'}
           color={'shuttleGray'}
-          links={[
-            {
-              rawString: 'https://buffer.com/extras',
-              displayString: 'Get More Apps →',
-              url: 'https://buffer.com/extras',
-              indices: [86, 111],
-            },
-          ]}
+          links={[linkGetMoreApps]}
           newTab
         >
           {'Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! https://buffer.com/extras'}
@@ -52,13 +60,21 @@ const AppsManager = ({ connectedApps }) => (
               key={app.id}
             >
               <Text size={'mini'}>{app.name}</Text>
-              <Button tertiary>Revoke Access</Button>
+              <Button tertiary onClick={() => onRequestOpenModal({ appId: app.id, appName: app.name })}>Revoke Access</Button>
             </div>
             <Divider />
           </div>
         ))}
       </div>
     </div>
+    {showModalAppId !== null &&
+      <Modal
+        appId={showModalAppId}
+        appName={showModalAppName}
+        onRequestCloseModal={onRequestCloseModal}
+        onSubmit={onSubmit}
+      />
+    }
   </div>
 );
 
@@ -67,10 +83,17 @@ AppsManager.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   })),
+  showModalAppId: PropTypes.string,
+  showModalAppName: PropTypes.string,
+  onRequestCloseModal: PropTypes.func.isRequired,
+  onRequestOpenModal: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 AppsManager.defaultProps = {
   connectedApps: [],
+  showModalAppId: null,
+  showModalAppName: '',
 };
 
 export default AppsManager;

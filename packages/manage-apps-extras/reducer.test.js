@@ -1,11 +1,12 @@
 import deepFreeze from 'deep-freeze';
-import { actionTypes as asyncDataFetchActions } from '@bufferapp/async-data-fetch';
-import reducer from './reducer';
+// import { actionTypes as asyncDataFetchActions } from '@bufferapp/async-data-fetch';
+import reducer, { actionTypes } from './reducer';
 
 describe('reducer', () => {
   it('should initialize default state', () => {
     const stateAfter = {
-      loggedIn: false,
+      showModalAppId: null,
+      showModalAppName: '',
     };
     const action = {
       type: 'INIT',
@@ -15,47 +16,31 @@ describe('reducer', () => {
       .toEqual(stateAfter);
   });
 
-  it('should handle LOGIN_SUCCESS action type', () => {
+  it('should handle REQUEST OPEN MODAL action type', () => {
     const stateAfter = {
-      loggedIn: true,
+      showModalAppId: 1,
+      showModalAppName: 'App 1',
     };
     const action = {
-      type: `login_${asyncDataFetchActions.FETCH_SUCCESS}`,
+      type: actionTypes.REQUEST_OPEN_MODAL,
+      appId: 1,
+      appName: 'App 1',
     };
     deepFreeze(action);
     expect(reducer(undefined, action))
       .toEqual(stateAfter);
   });
 
-  it('should handle `logout_FETCH_START` actionType', () => {
-    const stateBefore = {
-      loggedIn: true,
-    };
+  it('should handle REQUEST CLOSE MODAL action type', () => {
     const stateAfter = {
-      loggedIn: false,
+      showModalAppId: null,
+      showModalAppName: '',
     };
     const action = {
-      type: `logout_${asyncDataFetchActions.FETCH_START}`,
+      type: actionTypes.REQUEST_CLOSE_MODAL,
     };
-    deepFreeze(stateBefore);
     deepFreeze(action);
-    expect(reducer(stateBefore, action))
-      .toEqual(stateAfter);
-  });
-
-  it('should handle login_FETCH_FAIL actionType', () => {
-    const stateBefore = {
-      loggedIn: true,
-    };
-    const stateAfter = {
-      loggedIn: false,
-    };
-    const action = {
-      type: `login_${asyncDataFetchActions.FETCH_FAIL}`,
-    };
-    deepFreeze(stateBefore);
-    deepFreeze(action);
-    expect(reducer(stateBefore, action))
+    expect(reducer(undefined, action))
       .toEqual(stateAfter);
   });
 });

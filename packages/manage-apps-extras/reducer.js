@@ -1,27 +1,39 @@
-import { actionTypes as asyncDataFetchActionTypes } from '@bufferapp/async-data-fetch';
+// import { actionTypes as asyncDataFetchActionTypes } from '@bufferapp/async-data-fetch';
+import keyWrapper from '@bufferapp/keywrapper';
 
-export const actionTypes = {};
+export const actionTypes = keyWrapper('MANAGE_APPS', {
+  REQUEST_OPEN_MODAL: 0,
+  REQUEST_CLOSE_MODAL: 0,
+});
 
 const initialState = {
-  loggedIn: false,
+  showModalAppId: null,
+  showModalAppName: '',
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case `login_${asyncDataFetchActionTypes.FETCH_SUCCESS}`:
+    case actionTypes.REQUEST_OPEN_MODAL:
       return {
-        ...state,
-        loggedIn: true,
+        showModalAppId: action.appId,
+        showModalAppName: action.appName,
       };
-    case `logout_${asyncDataFetchActionTypes.FETCH_START}`:
-    case `login_${asyncDataFetchActionTypes.FETCH_FAIL}`:
+    case actionTypes.REQUEST_CLOSE_MODAL:
       return {
-        ...state,
-        loggedIn: false,
+        ...initialState,
       };
     default:
       return state;
   }
 };
 
-export const actions = {};
+export const actions = {
+  requestOpenModal: ({ appId, appName }) => ({
+    type: actionTypes.REQUEST_OPEN_MODAL,
+    appId,
+    appName,
+  }),
+  requestCloseModal: () => ({
+    type: actionTypes.REQUEST_CLOSE_MODAL,
+  }),
+};
