@@ -6,7 +6,7 @@ export const initialState = {
   machineState: 'disabled',
   isEnabled: false,
   editMode: false,
-  method: 'sms',
+  method: '',
   phoneNumber: '',
   recoveryCode: '',
   loading: false,
@@ -76,7 +76,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         machineState: twofactor ? 'enabled' : 'disabled',
         isEnabled: !!twofactor,
-        method: twofactor ? twofactor.type : false,
+        method: twofactor ? twofactor.type : '',
         phoneNumber: twofactor ? twofactor.tel : '',
         updatePhoneNumber: twofactor ? twofactor.tel : '',
       };
@@ -91,6 +91,7 @@ const reducer = (state = initialState, action) => {
      */
     case `twoFactorUpdate_${dataFetchActionTypes.FETCH_START}`:
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_START}`:
+    case `twoFactorRecovery_${dataFetchActionTypes.FETCH_START}`:
       return {
         ...state,
         loading: true,
@@ -104,10 +105,26 @@ const reducer = (state = initialState, action) => {
      */
     case `twoFactorUpdate_${dataFetchActionTypes.FETCH_SUCCESS}`: {
       const turnedOff = action.args.tfaMethod === 'off';
+      const initKey = action.result.init_key || '';
+      const qrCode = action.result.qr_code || '';
+      if (turnedOff) {
+        return {
+          ...state,
+          isEnabled: false,
+          editMode: false,
+          method: '',
+          phoneNumber: '',
+          recoveryCode: '',
+          loading: false,
+          error: '',
+          initKey: '',
+          qrCode: '',
+        };
+      }
       return {
         ...state,
-        initKey: turnedOff ? state.initKey : action.result.init_key,
-        qrCode: turnedOff ? state.qrCode : action.result.qr_code,
+        initKey: turnedOff ? state.initKey : initKey,
+        qrCode: turnedOff ? state.qrCode : qrCode,
         loading: false,
         error: '',
       };
@@ -125,10 +142,21 @@ const reducer = (state = initialState, action) => {
         error: '',
       };
     /**
+     * We fetched their recovery code
+     */
+    case `twoFactorRecovery_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        recoveryCode: action.result.recovery,
+        loading: false,
+        error: '',
+      };
+    /**
      * In case something goes wrong...
      */
     case `twoFactorUpdate_${dataFetchActionTypes.FETCH_FAIL}`:
     case `twoFactorConfirm_${dataFetchActionTypes.FETCH_FAIL}`:
+    case `twoFactorRecovery_${dataFetchActionTypes.FETCH_FAIL}`:
       return {
         ...state,
         loading: false,

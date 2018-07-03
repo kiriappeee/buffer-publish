@@ -11,6 +11,10 @@ export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
     case actionTypes.TRANSITION:
+      /**
+       * When the user clicks the disable toggle we hit the API
+       * with an 'off' method to disable TFA
+       */
       if (getState().twoFactorAuth.machineState === 'disabled' &&
           action.name === 'DISABLE') {
         dispatch(
@@ -19,6 +23,14 @@ export default ({ dispatch, getState }) => next => (action) => {
             args: { tfaMethod: 'off' },
           }),
         );
+      }
+      if (action.name === 'SHOW_RECOVERY') {
+        const { twoFactorAuth: { recoveryCode } } = getState();
+        if (!recoveryCode) {
+          dispatch(
+            dataFetchActions.fetch({ name: 'twoFactorRecovery' }),
+          );
+        }
       }
       break;
     case actionTypes.SUBMIT_PHONE_NUMBER:
