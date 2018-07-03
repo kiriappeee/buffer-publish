@@ -11,7 +11,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/components": "2.1.6",
+    "@bufferapp/components": "2.2.6",
     "@bufferapp/keywrapper": "0.2.0"
   },
   "devDependencies": {

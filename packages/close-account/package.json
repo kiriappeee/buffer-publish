@@ -1,7 +1,7 @@
 {
-  "name": "@bufferapp/change-password",
+  "name": "@bufferapp/close-account",
   "version": "1.6.2",
-  "description": "Buffer Password Change component",
+  "description": "Buffer Close Account component",
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9001",

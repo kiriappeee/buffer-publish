@@ -22,7 +22,7 @@
   "author": "hamstu@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.1.6",
+    "@bufferapp/components": "2.2.6",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/publish-i18n": "1.6.2",
     "@bufferapp/publish-modals": "^1.7.0",

@@ -21,6 +21,7 @@ import { middleware as stripeMiddleware } from '@bufferapp/stripe';
 import { middleware as modalsMiddleware } from '@bufferapp/publish-modals';
 import { middleware as changePasswordMiddleware } from '@bufferapp/change-password';
 import { middleware as dateTimePreferencesMiddleware } from '@bufferapp/date-time-preferences';
+import { middleware as closeAccountMiddleware } from '@bufferapp/close-account';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -66,6 +67,7 @@ const configureStore = (initialstate) => {
         modalsMiddleware,
         editEmailMiddlware,
         dateTimePreferencesMiddleware,
+        closeAccountMiddleware,
         bufferMetricsMiddleware,
       ),
     ),
