@@ -3,10 +3,19 @@ import PropTypes from 'prop-types';
 import { Text, Button } from '@bufferapp/components';
 import { AutoSelectText } from '@bufferapp/publish-shared-components';
 
-const Recovery = ({ transition, recoveryCode, handleRecoveryCodeSelect }) => (
+const Recovery = ({
+  transition,
+  loading,
+  editMode,
+  recoveryCode,
+  handleRecoveryCodeSelect,
+}) => (
   <Fragment>
     <div style={{ textAlign: 'center' }}>
-      <Text size="large">Save this one-time recovery code</Text>
+      <Text size="large">
+        {editMode && 'Your Recovery Code'}
+        {!editMode && 'Save this one-time recovery code'}
+      </Text>
       <div style={{ margin: '12px 0 20px' }}>
         <Text size="mini">
           With Two Factor Authentication, if you lose your phone there&apos;s a possibility
@@ -17,7 +26,7 @@ const Recovery = ({ transition, recoveryCode, handleRecoveryCodeSelect }) => (
     </div>
 
     <AutoSelectText onSelect={handleRecoveryCodeSelect} copyToClipboard>
-      {recoveryCode}
+      {loading ? 'Please wait...' : recoveryCode}
     </AutoSelectText>
 
     <div style={{ textAlign: 'center', marginTop: '16px' }}>
@@ -28,6 +37,8 @@ const Recovery = ({ transition, recoveryCode, handleRecoveryCodeSelect }) => (
 
 Recovery.propTypes = {
   transition: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  editMode: PropTypes.bool.isRequired,
   handleRecoveryCodeSelect: PropTypes.func.isRequired,
   recoveryCode: PropTypes.string.isRequired,
 };
