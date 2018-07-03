@@ -18,6 +18,7 @@ import { reducer as stripeReducer } from '@bufferapp/stripe';
 import { reducer as editEmailReducer } from '@bufferapp/edit-email';
 import { reducer as modalsReducer } from '@bufferapp/publish-modals';
 import { reducer as changePasswordReducer } from '@bufferapp/change-password';
+import { reducer as manageAppsReducer } from '@bufferapp/manage-apps-extras';
 
 export default combineReducers({
   form: formReducer,
@@ -39,4 +40,5 @@ export default combineReducers({
   editEmail: editEmailReducer,
   modals: modalsReducer,
   changePassword: changePasswordReducer,
+  manageAppsExtras: manageAppsReducer,
 });
