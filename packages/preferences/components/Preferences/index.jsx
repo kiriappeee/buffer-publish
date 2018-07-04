@@ -6,6 +6,7 @@ import EditEmail from '@bufferapp/edit-email';
 import DateTimePreferences from '@bufferapp/date-time-preferences';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
+import CloseAccount from '@bufferapp/close-account';
 import Security from '../Security';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
@@ -16,6 +17,8 @@ const PreferenceContent = ({ tabId, onUnknownTab }) => {
           <EditEmail />
           <Divider />
           <DateTimePreferences />
+          <Divider />
+          <CloseAccount />
         </div>
       );
     case 'security':

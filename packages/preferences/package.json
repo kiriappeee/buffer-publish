@@ -12,12 +12,12 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/change-password": "1.6.2",
-    "@bufferapp/components": "2.2.4",
+    "@bufferapp/close-account": "1.6.2",
+    "@bufferapp/components": "2.2.6",
     "@bufferapp/date-time-preferences": "^1.7.0",
     "@bufferapp/publish-profile-sidebar": "1.6.2",
     "@bufferapp/publish-shared-components": "^1.7.0",
-    "@bufferapp/publish-store": "^1.7.0",
-    "@bufferapp/publish-two-factor-auth": "1.6.2"
+    "@bufferapp/publish-store": "^1.7.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

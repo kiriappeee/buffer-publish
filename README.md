@@ -44,15 +44,20 @@ To get started on local development and testing:
 
 2. **Install the latest version of `yarn`**
   → [Installing Yarn](https://yarnpkg.com/en/docs/install)
+  
+3. **Make sure you have node with version <= 9 (Node v10 is not compatible)**
+    ```
+    $ node -v
+    ```
 
-3. **Install Packages and Bootstrap**
+4. **Install Packages and Bootstrap**
     ```bash
     $ cd ~/buffer-dev/buffer-publish  # Or wherever yours is located
     $ yarn
     $ yarn run bootstrap
    ```
 
-4. **Start up the publish docker containers**
+5. **Start up the publish docker containers**
     ```bash
     $ cd ../buffer-dev
     $ ./dev up session-service login account publish
@@ -60,14 +65,14 @@ To get started on local development and testing:
 
    Publish relies on both the **session** and **account** services, so it's important to include them in our _up_ command. The order is important, since this relates to the way docker-compose starts up containers.
 
-5. **Start bundling the frontend with webpack**
+6. **Start bundling the frontend with webpack**
     ```bash
     # in buffer-publish/
     $ yarn run watch
    ```
      While you're waiting for the bundle to finish, head on over to https://local.buffer.com to login. (We're not quite ready to view Publish yet.)
 
-6. **Give yourself the correct feature flip**
+7. **Give yourself the correct feature flip**
   In order to view Buffer Publish your user (usually admin@bufferap.com for local dev)
  must have the _New Buffer Publish_ feature flip. Otherwise you'll just get redirected back to classic Buffer. To add the feature visit https://local.buffer.com/admin and browse to the _My Account_ page.
 
@@ -76,7 +81,7 @@ To get started on local development and testing:
    # in ~/buffer-dev
    $ ./dev sync features
    ```
-7. You should now be able to visit https://publish.local.buffer.com — party time! 🎉 🙌
+8. You should now be able to visit https://publish.local.buffer.com — party time! 🎉 🙌
 
 ### Troubleshooting Dev Environment Issues
 

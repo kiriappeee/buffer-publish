@@ -22,6 +22,7 @@ import { middleware as modalsMiddleware } from '@bufferapp/publish-modals';
 import { middleware as changePasswordMiddleware } from '@bufferapp/change-password';
 import { middleware as twoFactorAuthMiddleware } from '@bufferapp/publish-two-factor-auth';
 import { middleware as dateTimePreferencesMiddleware } from '@bufferapp/date-time-preferences';
+import { middleware as closeAccountMiddleware } from '@bufferapp/close-account';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -68,6 +69,7 @@ const configureStore = (initialstate) => {
         editEmailMiddlware,
         twoFactorAuthMiddleware,
         dateTimePreferencesMiddleware,
+        closeAccountMiddleware,
         bufferMetricsMiddleware,
       ),
     ),
