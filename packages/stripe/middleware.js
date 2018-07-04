@@ -1,7 +1,8 @@
 /* global Stripe */
 
+import { getClassicBufferURL } from '@bufferapp/publish-utils';
 import { actions as notification } from '@bufferapp/notifications';
-import { actions as asyncDataFetchActions } from '@bufferapp/async-data-fetch';
+import { actions as asyncDataFetchActions, actionTypes as asyncDataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import { actions, actionTypes } from './reducer';
 
 const getErrorMessage = (response, errorMessages) => {
@@ -43,6 +44,9 @@ export default ({ dispatch, getState }) => next => (action) => {
           }));
         }
       });
+      break;
+    case `upgradeToPro_${asyncDataFetchActionTypes.FETCH_SUCCESS}`:
+      window.location.assign(getClassicBufferURL());
       break;
     default:
       break;
