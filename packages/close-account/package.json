@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/close-account",
-  "version": "1.6.2",
+  "version": "1.8.0",
   "description": "Buffer Close Account component",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/components": "2.2.6",
-    "@bufferapp/notifications": "1.6.2"
+    "@bufferapp/notifications": "1.8.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

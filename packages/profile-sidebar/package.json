@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-profile-sidebar",
-  "version": "1.6.2",
+  "version": "1.8.0",
   "description": "Load and display a list of profiles",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "@bufferapp/async-data-fetch": "1.6.2",
     "@bufferapp/components": "2.2.6",
     "@bufferapp/keywrapper": "0.2.0",
-    "@bufferapp/notifications": "1.6.2",
+    "@bufferapp/notifications": "1.8.0",
     "@bufferapp/publish-routes": "1.6.2",
-    "@bufferapp/publish-utils": "1.6.2"
+    "@bufferapp/publish-utils": "1.8.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",
