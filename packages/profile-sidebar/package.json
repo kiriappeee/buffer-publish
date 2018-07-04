@@ -15,7 +15,8 @@
     "@bufferapp/components": "2.2.6",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "1.6.2",
-    "@bufferapp/publish-routes": "1.6.2"
+    "@bufferapp/publish-routes": "1.6.2",
+    "@bufferapp/publish-utils": "1.6.2"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",
