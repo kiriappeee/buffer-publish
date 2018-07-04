@@ -13,7 +13,9 @@ Object.keys(machine).forEach((machineState) => {
       machineState={machineState}
       isEnabled={machineState === 'enabled'}
       transition={transitionAction}
+      method={'sms'}
       phoneNumber="+15142345566"
+      updatePhoneNumber=""
       editMode={false}
       recoveryCode={'ABCD-EFG-HIJK-LKM'}
       setPhoneNumber={action('setPhoneNumber')}

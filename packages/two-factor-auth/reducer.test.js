@@ -50,7 +50,7 @@ describe('reducer', () => {
       ...initialState,
       machineState: 'disabled',
       isEnabled: false,
-      method: false,
+      method: '',
       phoneNumber: '',
       updatePhoneNumber: '',
     });
