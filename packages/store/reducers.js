@@ -18,6 +18,7 @@ import { reducer as stripeReducer } from '@bufferapp/stripe';
 import { reducer as editEmailReducer } from '@bufferapp/edit-email';
 import { reducer as modalsReducer } from '@bufferapp/publish-modals';
 import { reducer as changePasswordReducer } from '@bufferapp/change-password';
+import { reducer as twoFactorAuthReducer } from '@bufferapp/publish-two-factor-auth';
 import { reducer as closeAccountReducer } from '@bufferapp/close-account';
 
 export default combineReducers({
@@ -40,5 +41,6 @@ export default combineReducers({
   editEmail: editEmailReducer,
   modals: modalsReducer,
   changePassword: changePasswordReducer,
+  twoFactorAuth: twoFactorAuthReducer,
   closeAccount: closeAccountReducer,
 });

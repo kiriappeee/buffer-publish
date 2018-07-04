@@ -1,22 +1,27 @@
 {
-  "name": "@bufferapp/publish-profile-sidebar",
+  "name": "@bufferapp/publish-two-factor-auth",
   "version": "1.6.2",
-  "description": "Load and display a list of profiles",
+  "description": "Two factor authentication setup and management",
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9001",
     "lint": "eslint . --ignore-pattern coverage node_modules",
     "test": "yarn run lint && sh ../../package_test.sh",
+    "test-watch": "jest --watch --config=../../.jestrc.json",
     "test-update": "jest -u --config=../../.jestrc.json"
   },
-  "author": "hharnisc@gmail.com",
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@bufferapp/*)"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "author": "hamstu@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.2.6",
-    "@bufferapp/keywrapper": "0.2.0",
-    "@bufferapp/notifications": "1.6.2",
-    "@bufferapp/publish-routes": "1.6.2",
-    "@bufferapp/publish-utils": "1.6.2"
+    "@bufferapp/async-data-fetch": "1.6.2"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

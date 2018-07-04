@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshots AutoSelectText copyToClipboard 1`] = `
+<span>
+  <AutoSelectText
+    copyToClipboard={true}
+    onSelect={[Function]}
+  >
+    pKaA-p6yx-gIa5-mM7k
+  </AutoSelectText>
+</span>
+`;
+
+exports[`Snapshots AutoSelectText default 1`] = `
+<span>
+  <AutoSelectText
+    onSelect={[Function]}
+  >
+    pKaA-p6yx-gIa5-mM7k
+  </AutoSelectText>
+</span>
+`;
+
 exports[`Snapshots BufferLoading default 1`] = `
 <span>
   <BufferLoading

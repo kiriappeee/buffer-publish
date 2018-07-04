@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshots ProfileBadge should display facebook profile 1`] = `
+exports[`Snapshots ProfileBadge facebook 1`] = `
 <span>
   <div
     style={
       Object {
+        "background": "#ced7df",
+        "borderRadius": "100%",
         "height": "2rem",
         "position": "relative",
         "width": "2rem",
@@ -33,25 +35,13 @@ exports[`Snapshots ProfileBadge should display facebook profile 1`] = `
     <div
       style={
         Object {
-          "background": "white",
-          "borderRadius": "50%",
-          "bottom": "0.05rem",
-          "height": "0.90rem",
+          "borderRadius": "100%",
+          "bottom": "-2px",
+          "boxShadow": "inset 0 0 16px 16px #fff",
+          "height": "16px",
           "position": "absolute",
-          "right": "0.05rem",
-          "width": "0.90rem",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "bottom": "0",
-          "display": "flex",
-          "height": "1rem",
-          "position": "absolute",
-          "right": "0",
-          "width": "1rem",
+          "right": "-4px",
+          "width": "16px",
         }
       }
     >
@@ -87,11 +77,13 @@ exports[`Snapshots ProfileBadge should display facebook profile 1`] = `
 </span>
 `;
 
-exports[`Snapshots ProfileBadge should display instagram profile 1`] = `
+exports[`Snapshots ProfileBadge google 1`] = `
 <span>
   <div
     style={
       Object {
+        "background": "#ced7df",
+        "borderRadius": "100%",
         "height": "2rem",
         "position": "relative",
         "width": "2rem",
@@ -120,25 +112,13 @@ exports[`Snapshots ProfileBadge should display instagram profile 1`] = `
     <div
       style={
         Object {
-          "background": "white",
-          "borderRadius": "50%",
-          "bottom": "0.05rem",
-          "height": "0.90rem",
+          "borderRadius": "100%",
+          "bottom": "-2px",
+          "boxShadow": "inset 0 0 16px 16px #fff",
+          "height": "16px",
           "position": "absolute",
-          "right": "0.05rem",
-          "width": "0.90rem",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "bottom": "0",
-          "display": "flex",
-          "height": "1rem",
-          "position": "absolute",
-          "right": "0",
-          "width": "1rem",
+          "right": "-4px",
+          "width": "16px",
         }
       }
     >
@@ -146,7 +126,7 @@ exports[`Snapshots ProfileBadge should display instagram profile 1`] = `
         height="100%"
         style={
           Object {
-            "fill": "#ff1e1e",
+            "fill": "#dd4b39",
             "height": "1rem",
             "width": "1rem",
           }
@@ -158,7 +138,84 @@ exports[`Snapshots ProfileBadge should display instagram profile 1`] = `
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <g
-          className="torchRed"
+          className="googleplus"
+        >
+          <g
+            fillRule="evenodd"
+          >
+            <path
+              d="M0,8 C0,3.581722 3.59071231,0 8,0 C12.418278,0 16,3.59071231 16,8 C16,12.418278 12.4092877,16 8,16 C3.581722,16 0,12.4092877 0,8 Z M6.56122449,7.57142857 L6.56122449,8.6 L8.29737609,8.6 C8.22740525,9.04142857 7.77259475,9.89428571 6.56122449,9.89428571 C5.51603499,9.89428571 4.66326531,9.04571429 4.66326531,8 C4.66326531,6.95428571 5.51603499,6.10571429 6.56122449,6.10571429 C7.15597668,6.10571429 7.55393586,6.35428571 7.78134111,6.56857143 L8.6122449,5.78428571 C8.0787172,5.29571429 7.3877551,5 6.56122449,5 C4.86880466,5 3.5,6.34142857 3.5,8 C3.5,9.65857143 4.86880466,11 6.56122449,11 C8.32798834,11 9.5,9.78285714 9.5,8.06857143 C9.5,7.87142857 9.47813411,7.72142857 9.45189504,7.57142857 L6.56122449,7.57142857 Z M12.5,7.66666667 L11.8333333,7.66666667 L11.8333333,7 L11.1666667,7 L11.1666667,7.66666667 L10.5,7.66666667 L10.5,8.33333333 L11.1666667,8.33333333 L11.1666667,9 L11.8333333,9 L11.8333333,8.33333333 L12.5,8.33333333 L12.5,7.66666667 Z"
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`Snapshots ProfileBadge instagram 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "background": "#ced7df",
+        "borderRadius": "100%",
+        "height": "2rem",
+        "position": "relative",
+        "width": "2rem",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "marginBottom": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "objectFit": undefined,
+          "verticalAlign": "bottom",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "borderRadius": "100%",
+          "bottom": "-2px",
+          "boxShadow": "inset 0 0 16px 16px #fff",
+          "height": "16px",
+          "position": "absolute",
+          "right": "-4px",
+          "width": "16px",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        style={
+          Object {
+            "fill": "#e53c5f",
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        version="1.1"
+        viewBox="0 0 16 16"
+        width="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g
+          className="instagram"
         >
           <circle
             cx="8"
@@ -189,11 +246,13 @@ exports[`Snapshots ProfileBadge should display instagram profile 1`] = `
 </span>
 `;
 
-exports[`Snapshots ProfileBadge should display twitter profile 1`] = `
+exports[`Snapshots ProfileBadge linkedin 1`] = `
 <span>
   <div
     style={
       Object {
+        "background": "#ced7df",
+        "borderRadius": "100%",
         "height": "2rem",
         "position": "relative",
         "width": "2rem",
@@ -222,25 +281,167 @@ exports[`Snapshots ProfileBadge should display twitter profile 1`] = `
     <div
       style={
         Object {
-          "background": "white",
-          "borderRadius": "50%",
-          "bottom": "0.05rem",
-          "height": "0.90rem",
+          "borderRadius": "100%",
+          "bottom": "-2px",
+          "boxShadow": "inset 0 0 16px 16px #fff",
+          "height": "16px",
           "position": "absolute",
-          "right": "0.05rem",
-          "width": "0.90rem",
+          "right": "-4px",
+          "width": "16px",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        style={
+          Object {
+            "fill": "#007bb6",
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        version="1.1"
+        viewBox="0 0 16 16"
+        width="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g
+          className="linkedin"
+        >
+          <g
+            fillRule="evenodd"
+          >
+            <path
+              d="M0,8 C0,3.581722 3.59071231,0 8,0 C12.418278,0 16,3.59071231 16,8 C16,12.418278 12.4092877,16 8,16 C3.581722,16 0,12.4092877 0,8 Z M4.96185043,4 C4.42938642,4 4,4.43141524 4,4.962986 C4,5.49486781 4.42938642,5.92628305 4.96185043,5.92628305 C5.49214111,5.92628305 5.92245896,5.49486781 5.92245896,4.962986 C5.92245896,4.43141524 5.49214111,4 4.96185043,4 Z M4.13164125,6.6562986 L4.13164125,12 L5.79112819,12 L5.79112819,6.6562986 L4.13164125,6.6562986 Z M6.83090775,6.6562986 L6.83090775,12 L8.486669,12 L8.486669,9.35707621 C8.486669,8.65972006 8.61831024,7.9844479 9.48111926,7.9844479 C10.3318198,7.9844479 10.3423759,8.78164852 10.3423759,9.40124417 L10.3423759,12 L12,12 L12,9.06936236 C12,7.63017107 11.6898358,6.52379471 10.0110995,6.52379471 C9.20479683,6.52379471 8.66395001,6.96671851 8.44289207,7.38693624 L8.41991695,7.38693624 L8.41991695,6.6562986 L6.83090775,6.6562986 Z"
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`Snapshots ProfileBadge pinterest 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "background": "#ced7df",
+        "borderRadius": "100%",
+        "height": "2rem",
+        "position": "relative",
+        "width": "2rem",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "marginBottom": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "objectFit": undefined,
+          "verticalAlign": "bottom",
+          "width": "100%",
         }
       }
     />
     <div
       style={
         Object {
-          "bottom": "0",
-          "display": "flex",
-          "height": "1rem",
+          "borderRadius": "100%",
+          "bottom": "-2px",
+          "boxShadow": "inset 0 0 16px 16px #fff",
+          "height": "16px",
           "position": "absolute",
-          "right": "0",
-          "width": "1rem",
+          "right": "-4px",
+          "width": "16px",
+        }
+      }
+    >
+      <svg
+        height="100%"
+        style={
+          Object {
+            "fill": "#bd081c",
+            "height": "1rem",
+            "width": "1rem",
+          }
+        }
+        version="1.1"
+        viewBox="0 0 16 16"
+        width="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g
+          className="pinterest"
+        >
+          <g
+            fillRule="evenodd"
+          >
+            <path
+              d="M8,16 C12.418278,16 16,12.418278 16,8 C16,3.581722 12.418278,0 8,0 C3.581722,0 0,3.581722 0,8 C0,12.418278 3.581722,16 8,16 Z M8.03835433,3 C5.3349892,3 3.8999939,4.75634512 3.8999939,6.67031096 C3.8999939,7.55913615 4.38866975,8.66649982 5.17113092,9.018866 C5.29025266,9.07257569 5.35317372,9.04903783 5.38018694,8.93817389 C5.40113866,8.85371827 5.50721499,8.44241177 5.55438931,8.2504092 C5.57000427,8.18910871 5.56229562,8.13648342 5.51057518,8.0758846 C5.25302712,7.77314566 5.04555236,7.21353152 5.04555236,6.69263684 C5.04555236,5.35550796 6.09149132,4.06162751 7.87311244,4.06162751 C9.4126687,4.06162751 10.4892446,5.0761793 10.4892446,6.52812699 C10.4892446,8.16882405 9.63483602,9.30495621 8.52090279,9.30495621 C7.90585774,9.30495621 7.44544694,8.81353169 7.5930314,8.20869169 C7.77026452,7.48833121 8.11208067,6.7096045 8.11208067,6.19049589 C8.11208067,5.72401257 7.85380787,5.33573361 7.3193413,5.33573361 C6.69105318,5.33573361 6.18577407,5.96538723 6.18577407,6.80898657 C6.18577407,7.34595589 6.37354894,7.70878334 6.37354894,7.70878334 C6.37354894,7.70878334 5.75310124,10.2504254 5.63971158,10.7234789 C5.44620463,11.5262537 5.66494588,12.8270233 5.68425046,12.9406302 C5.69406746,13.0016117 5.7640383,13.0222153 5.80356985,12.9709296 C5.86458022,12.8921511 6.61284659,11.80571 6.82447216,11.0200941 C6.89958211,10.7366192 7.21366028,9.57854393 7.21366028,9.57854393 C7.41896081,9.95572373 8.01456951,10.2746649 8.64931445,10.2746649 C10.5381978,10.2746649 11.8999939,8.59205896 11.8999939,6.50286685 C11.8999939,4.49908719 10.2114696,3 8.03835433,3"
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`Snapshots ProfileBadge twitter 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "background": "#ced7df",
+        "borderRadius": "100%",
+        "height": "2rem",
+        "position": "relative",
+        "width": "2rem",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+      style={
+        Object {
+          "borderRadius": "50%",
+          "height": "100%",
+          "marginBottom": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "objectFit": undefined,
+          "verticalAlign": "bottom",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "borderRadius": "100%",
+          "bottom": "-2px",
+          "boxShadow": "inset 0 0 16px 16px #fff",
+          "height": "16px",
+          "position": "absolute",
+          "right": "-4px",
+          "width": "16px",
         }
       }
     >
@@ -334,6 +535,8 @@ exports[`Snapshots ProfileList should display a list of profiles 1`] = `
             <div
               style={
                 Object {
+                  "background": "#ced7df",
+                  "borderRadius": "100%",
                   "height": "2rem",
                   "position": "relative",
                   "width": "2rem",
@@ -362,25 +565,13 @@ exports[`Snapshots ProfileList should display a list of profiles 1`] = `
               <div
                 style={
                   Object {
-                    "background": "white",
-                    "borderRadius": "50%",
-                    "bottom": "0.05rem",
-                    "height": "0.90rem",
+                    "borderRadius": "100%",
+                    "bottom": "-2px",
+                    "boxShadow": "inset 0 0 16px 16px #fff",
+                    "height": "16px",
                     "position": "absolute",
-                    "right": "0.05rem",
-                    "width": "0.90rem",
-                  }
-                }
-              />
-              <div
-                style={
-                  Object {
-                    "bottom": "0",
-                    "display": "flex",
-                    "height": "1rem",
-                    "position": "absolute",
-                    "right": "0",
-                    "width": "1rem",
+                    "right": "-4px",
+                    "width": "16px",
                   }
                 }
               >
@@ -493,6 +684,8 @@ exports[`Snapshots ProfileList should display a list of profiles 1`] = `
             <div
               style={
                 Object {
+                  "background": "#ced7df",
+                  "borderRadius": "100%",
                   "height": "2rem",
                   "position": "relative",
                   "width": "2rem",
@@ -521,25 +714,13 @@ exports[`Snapshots ProfileList should display a list of profiles 1`] = `
               <div
                 style={
                   Object {
-                    "background": "white",
-                    "borderRadius": "50%",
-                    "bottom": "0.05rem",
-                    "height": "0.90rem",
+                    "borderRadius": "100%",
+                    "bottom": "-2px",
+                    "boxShadow": "inset 0 0 16px 16px #fff",
+                    "height": "16px",
                     "position": "absolute",
-                    "right": "0.05rem",
-                    "width": "0.90rem",
-                  }
-                }
-              />
-              <div
-                style={
-                  Object {
-                    "bottom": "0",
-                    "display": "flex",
-                    "height": "1rem",
-                    "position": "absolute",
-                    "right": "0",
-                    "width": "1rem",
+                    "right": "-4px",
+                    "width": "16px",
                   }
                 }
               >
@@ -651,6 +832,8 @@ exports[`Snapshots ProfileListItem should display locked 1`] = `
         <div
           style={
             Object {
+              "background": "#ced7df",
+              "borderRadius": "100%",
               "height": "2rem",
               "position": "relative",
               "width": "2rem",
@@ -679,25 +862,13 @@ exports[`Snapshots ProfileListItem should display locked 1`] = `
           <div
             style={
               Object {
-                "background": "white",
-                "borderRadius": "50%",
-                "bottom": "0.05rem",
-                "height": "0.90rem",
+                "borderRadius": "100%",
+                "bottom": "-2px",
+                "boxShadow": "inset 0 0 16px 16px #fff",
+                "height": "16px",
                 "position": "absolute",
-                "right": "0.05rem",
-                "width": "0.90rem",
-              }
-            }
-          />
-          <div
-            style={
-              Object {
-                "bottom": "0",
-                "display": "flex",
-                "height": "1rem",
-                "position": "absolute",
-                "right": "0",
-                "width": "1rem",
+                "right": "-4px",
+                "width": "16px",
               }
             }
           >
@@ -820,6 +991,8 @@ exports[`Snapshots ProfileListItem should display number of notifications 1`] = 
         <div
           style={
             Object {
+              "background": "#ced7df",
+              "borderRadius": "100%",
               "height": "2rem",
               "position": "relative",
               "width": "2rem",
@@ -848,25 +1021,13 @@ exports[`Snapshots ProfileListItem should display number of notifications 1`] = 
           <div
             style={
               Object {
-                "background": "white",
-                "borderRadius": "50%",
-                "bottom": "0.05rem",
-                "height": "0.90rem",
+                "borderRadius": "100%",
+                "bottom": "-2px",
+                "boxShadow": "inset 0 0 16px 16px #fff",
+                "height": "16px",
                 "position": "absolute",
-                "right": "0.05rem",
-                "width": "0.90rem",
-              }
-            }
-          />
-          <div
-            style={
-              Object {
-                "bottom": "0",
-                "display": "flex",
-                "height": "1rem",
-                "position": "absolute",
-                "right": "0",
-                "width": "1rem",
+                "right": "-4px",
+                "width": "16px",
               }
             }
           >
@@ -980,6 +1141,8 @@ exports[`Snapshots ProfileListItem should display selected 1`] = `
         <div
           style={
             Object {
+              "background": "#ced7df",
+              "borderRadius": "100%",
               "height": "2rem",
               "position": "relative",
               "width": "2rem",
@@ -1008,25 +1171,13 @@ exports[`Snapshots ProfileListItem should display selected 1`] = `
           <div
             style={
               Object {
-                "background": "white",
-                "borderRadius": "50%",
-                "bottom": "0.05rem",
-                "height": "0.90rem",
+                "borderRadius": "100%",
+                "bottom": "-2px",
+                "boxShadow": "inset 0 0 16px 16px #fff",
+                "height": "16px",
                 "position": "absolute",
-                "right": "0.05rem",
-                "width": "0.90rem",
-              }
-            }
-          />
-          <div
-            style={
-              Object {
-                "bottom": "0",
-                "display": "flex",
-                "height": "1rem",
-                "position": "absolute",
-                "right": "0",
-                "width": "1rem",
+                "right": "-4px",
+                "width": "16px",
               }
             }
           >
@@ -1138,6 +1289,8 @@ exports[`Snapshots ProfileListItem should display twitter profile list item 1`] 
         <div
           style={
             Object {
+              "background": "#ced7df",
+              "borderRadius": "100%",
               "height": "2rem",
               "position": "relative",
               "width": "2rem",
@@ -1166,25 +1319,13 @@ exports[`Snapshots ProfileListItem should display twitter profile list item 1`] 
           <div
             style={
               Object {
-                "background": "white",
-                "borderRadius": "50%",
-                "bottom": "0.05rem",
-                "height": "0.90rem",
+                "borderRadius": "100%",
+                "bottom": "-2px",
+                "boxShadow": "inset 0 0 16px 16px #fff",
+                "height": "16px",
                 "position": "absolute",
-                "right": "0.05rem",
-                "width": "0.90rem",
-              }
-            }
-          />
-          <div
-            style={
-              Object {
-                "bottom": "0",
-                "display": "flex",
-                "height": "1rem",
-                "position": "absolute",
-                "right": "0",
-                "width": "1rem",
+                "right": "-4px",
+                "width": "16px",
               }
             }
           >
@@ -1383,6 +1524,8 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -1411,25 +1554,13 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -1542,6 +1673,8 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -1570,25 +1703,13 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -1865,6 +1986,8 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -1893,25 +2016,13 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -2037,6 +2148,8 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -2065,25 +2178,13 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -2091,7 +2192,7 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -2103,7 +2204,7 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -2365,6 +2466,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -2393,25 +2496,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -2524,6 +2615,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -2552,25 +2645,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -2849,6 +2930,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -2877,25 +2960,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -3023,6 +3094,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -3051,25 +3124,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -3077,7 +3138,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -3089,7 +3150,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -3212,6 +3273,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -3240,25 +3303,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -3386,6 +3437,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -3414,25 +3467,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -3440,7 +3481,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -3452,7 +3493,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -3575,6 +3616,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -3603,25 +3646,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -3749,6 +3780,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -3777,25 +3810,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -3803,7 +3824,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -3815,7 +3836,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -3938,6 +3959,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -3966,25 +3989,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -4112,6 +4123,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -4140,25 +4153,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -4166,7 +4167,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -4178,7 +4179,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -4301,6 +4302,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -4329,25 +4332,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -4475,6 +4466,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -4503,25 +4496,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -4529,7 +4510,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -4541,7 +4522,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -4664,6 +4645,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -4692,25 +4675,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -4838,6 +4809,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -4866,25 +4839,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -4892,7 +4853,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -4904,7 +4865,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -5027,6 +4988,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -5055,25 +5018,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -5201,6 +5152,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -5229,25 +5182,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -5255,7 +5196,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -5267,7 +5208,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -5390,6 +5331,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -5418,25 +5361,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -5564,6 +5495,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -5592,25 +5525,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -5618,7 +5539,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -5630,7 +5551,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -5753,6 +5674,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -5781,25 +5704,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -5927,6 +5838,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -5955,25 +5868,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -5981,7 +5882,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -5993,7 +5894,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
@@ -6116,6 +6017,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -6144,25 +6047,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -6290,6 +6181,8 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                 <div
                   style={
                     Object {
+                      "background": "#ced7df",
+                      "borderRadius": "100%",
                       "height": "2rem",
                       "position": "relative",
                       "width": "2rem",
@@ -6318,25 +6211,13 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                   <div
                     style={
                       Object {
-                        "background": "white",
-                        "borderRadius": "50%",
-                        "bottom": "0.05rem",
-                        "height": "0.90rem",
+                        "borderRadius": "100%",
+                        "bottom": "-2px",
+                        "boxShadow": "inset 0 0 16px 16px #fff",
+                        "height": "16px",
                         "position": "absolute",
-                        "right": "0.05rem",
-                        "width": "0.90rem",
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "bottom": "0",
-                        "display": "flex",
-                        "height": "1rem",
-                        "position": "absolute",
-                        "right": "0",
-                        "width": "1rem",
+                        "right": "-4px",
+                        "width": "16px",
                       }
                     }
                   >
@@ -6344,7 +6225,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       height="100%"
                       style={
                         Object {
-                          "fill": "#ff1e1e",
+                          "fill": "#e53c5f",
                           "height": "1rem",
                           "width": "1rem",
                         }
@@ -6356,7 +6237,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
                       <g
-                        className="torchRed"
+                        className="instagram"
                       >
                         <circle
                           cx="8"
