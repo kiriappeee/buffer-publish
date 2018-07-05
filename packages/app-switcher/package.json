@@ -12,7 +12,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.6.2",
     "@bufferapp/notifications": "1.8.0",
-    "@bufferapp/publish-utils": "1.6.2"
+    "@bufferapp/publish-utils": "1.9.0"
   },
   "devDependencies": {
     "eslint": "3.19.0",
