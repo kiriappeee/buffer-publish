@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "@bufferapp/environment": "1.6.2",
     "@bufferapp/notifications": "1.8.0",
     "@bufferapp/performance-tracking": "0.43.5",
-    "@bufferapp/publish-app-switcher": "^1.9.0",
+    "@bufferapp/publish-app-switcher": "^1.9.1",
     "@bufferapp/publish-beta-redirect": "1.8.0",
     "@bufferapp/publish-example": "1.8.0",
     "@bufferapp/publish-i18n": "1.6.2",

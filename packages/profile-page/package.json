@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/profile-page",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "profile page package",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "@bufferapp/publish-sent": "^1.9.0",
     "@bufferapp/publish-settings": "^1.9.0",
     "@bufferapp/publish-shared-components": "1.8.0",
-    "@bufferapp/publish-store": "^1.9.0",
+    "@bufferapp/publish-store": "^1.9.1",
     "@bufferapp/publish-tabs": "^1.9.0"
   },
   "devDependencies": {
