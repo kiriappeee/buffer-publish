@@ -1,6 +1,6 @@
 /* global Stripe */
 
-import { actions as asyncDataFetchActions } from '@bufferapp/async-data-fetch';
+import { actions as asyncDataFetchActions, actionTypes as asyncDataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import middleware from './middleware';
 import { actions, actionTypes } from './reducer';
 import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPONSE, CARD_WITHOUT_ZIP_RESPONSE, CARD_WITH_WRONG_ZIP_RESPONSE } from './test/constants';
@@ -8,6 +8,10 @@ import { CREDIT_CARD, SUCCESS_RESPONSE, ERROR_RESPONSE, CARD_WITHOUT_NAME_RESPON
 global.Stripe = {
   createToken: jest.fn(),
 };
+
+Object.defineProperty(window.location, 'hostname', {
+  value: 'publish.local.buffer.com',
+});
 
 const i18n = {
   translations: {
@@ -65,6 +69,15 @@ describe('middleware', () => {
       done();
     };
     validateCreditCard();
+  });
+
+  it('if upgraded to pro, it redirects to classic Buffer', () => {
+    window.location.assign = jest.fn();
+    const action = {
+      type: `upgradeToPro_${asyncDataFetchActionTypes.FETCH_SUCCESS}`,
+    };
+    middleware(store)(next)(action);
+    expect(window.location.assign).toHaveBeenCalledWith('https://local.buffer.com/classic');
   });
 
   describe('error handling', () => {

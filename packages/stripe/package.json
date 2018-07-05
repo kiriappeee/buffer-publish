@@ -21,6 +21,7 @@
   },
   "author": "mike@msanroman.io",
   "dependencies": {
+    "@bufferapp/publish-utils": "1.8.0",
     "@bufferapp/keywrapper": "0.2.0"
   },
   "devDependencies": {
