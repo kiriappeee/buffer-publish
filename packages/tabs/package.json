@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-tabs",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Buffer Tabs Package",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "emily@buffer.com",
   "dependencies": {
-    "@bufferapp/publish-modals": "1.8.0",
+    "@bufferapp/publish-modals": "^1.9.0",
     "@bufferapp/publish-routes": "1.6.2",
     "@bufferapp/publish-shared-components": "1.8.0"
   },
