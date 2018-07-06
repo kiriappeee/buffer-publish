@@ -50,7 +50,7 @@ const UpgradeModal = ({
   selectCycle,
   hideModal,
 }) => (
-  <div style={{ position: 'fixed', zIndex: '1000'}}>
+  <div style={{ position: 'fixed', zIndex: '1000' }}>
     <Popover onOverlayClick={hideModal}>
       <div style={{ maxHeight: '100vh', overflow: 'auto' }}>
         <Card>
