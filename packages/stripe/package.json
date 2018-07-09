@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/stripe",
-  "version": "1.6.2",
+  "version": "1.9.0",
   "description": "A Stripe library logic encapsulation",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,8 @@
   },
   "author": "mike@msanroman.io",
   "dependencies": {
-    "@bufferapp/keywrapper": "0.2.0"
+    "@bufferapp/keywrapper": "0.2.0",
+    "@bufferapp/publish-utils": "^1.9.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "3.1.4",

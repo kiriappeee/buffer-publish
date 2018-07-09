@@ -19,6 +19,8 @@ import { reducer as editEmailReducer } from '@bufferapp/edit-email';
 import { reducer as modalsReducer } from '@bufferapp/publish-modals';
 import { reducer as changePasswordReducer } from '@bufferapp/change-password';
 import { reducer as manageAppsReducer } from '@bufferapp/manage-apps-extras';
+import { reducer as twoFactorAuthReducer } from '@bufferapp/publish-two-factor-auth';
+import { reducer as closeAccountReducer } from '@bufferapp/close-account';
 
 export default combineReducers({
   form: formReducer,
@@ -41,4 +43,6 @@ export default combineReducers({
   modals: modalsReducer,
   changePassword: changePasswordReducer,
   manageAppsExtras: manageAppsReducer,
+  twoFactorAuth: twoFactorAuthReducer,
+  closeAccount: closeAccountReducer,
 });
