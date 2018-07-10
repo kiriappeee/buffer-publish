@@ -15,16 +15,8 @@ export default connect(
     onRequestCloseModal: () => {
       dispatch(actions.requestCloseModal());
     },
-    onSubmit: () => {
-      // dispatch(
-      //   asyncDataFetchActions.fetch({
-      //     name: 'AppsAndExtras',
-      //     args: {
-      //       password,
-      //       newPassword,
-      //     },
-      //   }),
-      // );
+    onConfirmRevokeApp: ({ appId }) => {
+      dispatch(actions.requestRevokeApp({ appId }));
     },
   }),
 )(AppsAndExtras);

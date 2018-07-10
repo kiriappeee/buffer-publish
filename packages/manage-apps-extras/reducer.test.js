@@ -46,6 +46,34 @@ describe('reducer', () => {
       .toEqual(stateAfter);
   });
 
+  it('should handle REQUEST REVOKE APP action type', () => {
+    const app1 = {
+      id: 'app1',
+      name: 'App One',
+    };
+    const app2 = {
+      id: 'app2',
+      name: 'App Two',
+    };
+    const stateBefore = {
+      showModalAppId: 1,
+      showModalAppName: 'App 1',
+      connectedApps: [app1, app2],
+    };
+    const stateAfter = {
+      showModalAppId: null,
+      showModalAppName: '',
+      connectedApps: [app2],
+    };
+    const action = {
+      type: actionTypes.REQUEST_REVOKE_APP,
+      appId: 'app1',
+    };
+    deepFreeze(action);
+    expect(reducer(stateBefore, action))
+      .toEqual(stateAfter);
+  });
+
   it('should handle connectedApps_FETCH_SUCCESS action type', () => {
     const app1 = {
       id: 'id1',
@@ -82,6 +110,13 @@ describe('actions', () => {
   it('requestCloseModal triggers a REQUEST_CLOSE_MODAL action', () => {
     expect(actions.requestCloseModal()).toEqual({
       type: actionTypes.REQUEST_CLOSE_MODAL,
+    });
+  });
+  it('requestRevokeApp triggers a REQUEST_REVOKE_APP action', () => {
+    const appId = 'app1';
+    expect(actions.requestRevokeApp({ appId })).toEqual({
+      type: actionTypes.REQUEST_REVOKE_APP,
+      appId,
     });
   });
 });

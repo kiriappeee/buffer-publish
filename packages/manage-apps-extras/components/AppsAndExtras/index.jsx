@@ -9,7 +9,7 @@ const AppsAndExtras = ({
   showModalAppId,
   showModalAppName,
   onRequestCloseModal,
-  onSubmit,
+  onConfirmRevokeApp,
 }) => (
   <div>
     <ExtrasLinks />
@@ -19,7 +19,7 @@ const AppsAndExtras = ({
       onRequestCloseModal={onRequestCloseModal}
       showModalAppId={showModalAppId}
       showModalAppName={showModalAppName}
-      onSubmit={onSubmit}
+      onConfirmRevokeApp={onConfirmRevokeApp}
     />
   </div>
 );
@@ -31,7 +31,7 @@ AppsAndExtras.propTypes = {
   })),
   onRequestCloseModal: PropTypes.func.isRequired,
   onRequestOpenModal: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onConfirmRevokeApp: PropTypes.func.isRequired,
   showModalAppId: PropTypes.string,
   showModalAppName: PropTypes.string,
 };

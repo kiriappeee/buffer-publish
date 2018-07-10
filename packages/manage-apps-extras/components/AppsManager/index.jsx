@@ -27,7 +27,7 @@ const AppsManager = ({
   showModalAppName,
   onRequestOpenModal,
   onRequestCloseModal,
-  onSubmit,
+  onConfirmRevokeApp,
 }) => (
   <div
     style={{
@@ -70,8 +70,8 @@ const AppsManager = ({
       <Modal
         appId={showModalAppId}
         appName={showModalAppName}
-        onRequestCloseModal={onRequestCloseModal}
-        onSubmit={onSubmit}
+        onCancelClick={onRequestCloseModal}
+        onConfirmClick={onConfirmRevokeApp}
       />
     }
   </div>
@@ -86,7 +86,7 @@ AppsManager.propTypes = {
   showModalAppName: PropTypes.string,
   onRequestCloseModal: PropTypes.func.isRequired,
   onRequestOpenModal: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onConfirmRevokeApp: PropTypes.func.isRequired,
 };
 
 AppsManager.defaultProps = {

@@ -1,17 +1,18 @@
 import { actions as fetchActions } from '@bufferapp/async-data-fetch';
 import { constants as tabsNames } from '@bufferapp/publish-preferences';
 import { LOCATION_CHANGE } from 'react-router-redux';
+import { actions as notificationActions } from '@bufferapp/notifications';
+
 import middleware from './middleware';
+import { actionTypes } from './reducer';
 
 describe('middleware', () => {
-  const RPC_NAME = 'connectedApps';
   const next = jest.fn();
-  const dispatch = jest.fn();
-  const store = {
-    dispatch,
-  };
   it('should call connectedApps when location change to apps and extras', () => {
-    jest.resetAllMocks();
+    const dispatch = jest.fn();
+    const store = {
+      dispatch,
+    };
     const action = {
       type: LOCATION_CHANGE,
       payload: {
@@ -20,12 +21,55 @@ describe('middleware', () => {
     };
     middleware(store)(next)(action);
     expect(dispatch).toHaveBeenCalledWith(fetchActions.fetch({
-      name: RPC_NAME,
+      name: 'connectedApps',
     }));
   });
 
+  it('should call revokeConnectedApp when the action requestRevokeApp is received', () => {
+    const dispatch = jest.fn();
+    const store = {
+      dispatch,
+    };
+    const action = {
+      type: actionTypes.REQUEST_REVOKE_APP,
+      appId: 'app1',
+    };
+    middleware(store)(next)(action);
+    expect(dispatch).toHaveBeenCalledWith(fetchActions.fetch({
+      name: 'revokeConnectedApp',
+      args: {
+        appId: 'app1',
+      },
+    }));
+  });
+
+  it('should call createNotification when the action revokeConnectedApps_FETCH_SUCCESS is received', () => {
+    const dispatch = jest.fn();
+    const store = {
+      dispatch,
+    };
+    notificationActions.createNotification = jest.fn();
+
+    const action = {
+      type: `revokeConnectedApp_${fetchActions.FETCH_SUCCESS}`,
+      appId: 'app1',
+    };
+
+    middleware(store)(next)(action);
+    expect(dispatch).toHaveBeenCalledWith(
+      notificationActions.createNotification(
+        expect.objectContaining({
+          notificationType: 'success',
+        }),
+      ),
+    );
+  });
+
   it('should not call connectedApps when location change to another path', () => {
-    jest.resetAllMocks();
+    const dispatch = jest.fn();
+    const store = {
+      dispatch,
+    };
     const action = {
       type: LOCATION_CHANGE,
       payload: {
@@ -34,11 +78,15 @@ describe('middleware', () => {
     };
     middleware(store)(next)(action);
     expect(dispatch).not.toHaveBeenCalledWith(fetchActions.fetch({
-      name: RPC_NAME,
+      name: 'connectedApps',
     }));
   });
 
   it('always propagates the action', () => {
+    const dispatch = jest.fn();
+    const store = {
+      dispatch,
+    };
     const action = {};
     middleware(store)(next)(action);
     expect(next).toHaveBeenCalledWith(action);

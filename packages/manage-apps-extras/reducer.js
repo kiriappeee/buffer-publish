@@ -5,6 +5,7 @@ import keyWrapper from '@bufferapp/keywrapper';
 export const actionTypes = keyWrapper('MANAGE_APPS', {
   REQUEST_OPEN_MODAL: 0,
   REQUEST_CLOSE_MODAL: 0,
+  REQUEST_REVOKE_APP: 0,
 });
 
 const initialState = {
@@ -33,6 +34,11 @@ export default (state = initialState, action) => {
         showModalAppId: null,
         showModalAppName: '',
       };
+    case actionTypes.REQUEST_REVOKE_APP:
+      return {
+        ...initialState,
+        connectedApps: state.connectedApps.filter(app => app.id !== action.appId),
+      };
     default:
       return state;
   }
@@ -46,5 +52,9 @@ export const actions = {
   }),
   requestCloseModal: () => ({
     type: actionTypes.REQUEST_CLOSE_MODAL,
+  }),
+  requestRevokeApp: ({ appId }) => ({
+    type: actionTypes.REQUEST_REVOKE_APP,
+    appId,
   }),
 };

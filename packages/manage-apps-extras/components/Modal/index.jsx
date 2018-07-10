@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { Popover, Card, Text, Button } from '@bufferapp/components';
 
 const Modal = ({
-  handleSubmit,
-  onRequestCloseModal,
+  onConfirmClick,
+  onCancelClick,
   submitting,
   appId,
   appName,
 }) => (
-  <Popover onOverlayClick={() => onRequestCloseModal()}>
+  <Popover onOverlayClick={() => onCancelClick()}>
     <div style={{ width: '30rem', margin: '0 25px' }}>
       <Card doublePadding>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -24,11 +24,11 @@ const Modal = ({
             </Text>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <Button tertiary disabled={submitting} onClick={() => onRequestCloseModal()}>
+            <Button tertiary disabled={submitting} onClick={() => onCancelClick()}>
               Cancel
             </Button>
             <div style={{ margin: '0.5rem' }} />
-            <Button onClick={handleSubmit} disabled={submitting}>
+            <Button onClick={() => onConfirmClick({ appId })} disabled={submitting}>
               Yes, revoke access
             </Button>
           </div>
@@ -39,9 +39,9 @@ const Modal = ({
 );
 
 Modal.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
+  onConfirmClick: PropTypes.func.isRequired,
+  onCancelClick: PropTypes.func.isRequired,
   submitting: PropTypes.bool.isRequired,
-  onRequestCloseModal: PropTypes.func.isRequired,
   appId: PropTypes.string.isRequired,
   appName: PropTypes.string.isRequired,
 };
