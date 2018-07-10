@@ -10,58 +10,24 @@ const Modal = ({
   appName,
 }) => (
   <Popover onOverlayClick={() => onRequestCloseModal()}>
-    <div
-      style={{
-        width: '30rem',
-        margin: '0 25px',
-      }}
-    >
+    <div style={{ width: '30rem', margin: '0 25px' }}>
       <Card doublePadding>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          <div
-            style={{
-              textAlign: 'center',
-              marginBottom: '1rem',
-            }}
-          >
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <Text size={'large'} color={'outerSpace'}>Are you sure?</Text>
           </div>
-          <div
-            style={{
-              margin: '0 2.5rem',
-              textAlign: 'center',
-            }}
-          >
+          <div style={{ margin: '0 2.5rem', textAlign: 'center' }}>
             <Text size={'small'} color={'shuttleGray'}>
               You're about to revoke access to {appId}: {appName}.
               This will prevent the app from working with your Buffer account.
               Are you sure you want to continue?
             </Text>
           </div>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              marginTop: '2rem',
-            }}
-          >
-            <Button
-              tertiary
-              disabled={submitting}
-              onClick={() => onRequestCloseModal()}
-            >
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            <Button tertiary disabled={submitting} onClick={() => onRequestCloseModal()}>
               Cancel
             </Button>
-            <div
-              style={{
-                margin: '0.5rem',
-              }}
-            />
+            <div style={{ margin: '0.5rem' }} />
             <Button onClick={handleSubmit} disabled={submitting}>
               Yes, revoke access
             </Button>
