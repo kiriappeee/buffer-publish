@@ -9,10 +9,11 @@ import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/componen
 import CloseAccount from '@bufferapp/close-account';
 import Security from '../Security';
 import AppsAndExtras from '../AppsAndExtras';
+import TabsNames from '../../constants';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
-    case 'general':
+    case TabsNames.GENERAL:
       return (
         <div>
           <EditEmail />
@@ -22,9 +23,9 @@ const PreferenceContent = ({ tabId, onUnknownTab }) => {
           <CloseAccount />
         </div>
       );
-    case 'security':
+    case TabsNames.SECURITY:
       return <Security />;
-    case 'appsandextras':
+    case TabsNames.APPS_EXTRAS:
       return <AppsAndExtras />;
     default:
       onUnknownTab();
@@ -71,9 +72,9 @@ const Preferences = ({
     >
       <div id={'tabs'}>
         <Tabs selectedTabId={selectedTabId} onTabClick={onTabClick}>
-          <Tab tabId={'general'}>General</Tab>
-          <Tab tabId={'security'}>Security</Tab>
-          <Tab tabId={'appsandextras'}>Apps & Extras</Tab>
+          <Tab tabId={TabsNames.GENERAL}>General</Tab>
+          <Tab tabId={TabsNames.SECURITY}>Security</Tab>
+          <Tab tabId={TabsNames.APPS_EXTRAS}>Apps & Extras</Tab>
         </Tabs>
       </div>
       <Link
