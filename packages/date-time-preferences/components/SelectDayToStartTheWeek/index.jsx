@@ -1,24 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import {
-  Select,
-  Text,
-} from '@bufferapp/components';
+import { Select, Text } from '@bufferapp/components';
 import { Row } from '@bufferapp/publish-shared-components';
 
-const DayToStartTheWeek = ({ input }) =>
+const DayToStartTheWeek = ({ input }) => (
   <Select
     value={input.value}
-    options={[{
-      value: 'Sunday',
-      name: 'Sunday',
-    }, {
-      value: 'Monday',
-      name: 'Monday',
-    }]}
+    color={'outerSpace'}
+    options={[
+      {
+        value: 'Sunday',
+        name: 'Sunday',
+      },
+      {
+        value: 'Monday',
+        name: 'Monday',
+      },
+    ]}
     onChange={input.onChange}
-  />;
+  />
+);
 
 DayToStartTheWeek.propTypes = {
   input: PropTypes.shape({
@@ -27,17 +29,18 @@ DayToStartTheWeek.propTypes = {
   }).isRequired,
 };
 
-
-const SelectDayToStartTheWeek = () =>
+const SelectDayToStartTheWeek = () => (
   <Row>
-    <Text>Day to start the week</Text>
-    <form style={{ minWidth: '185px' }}>
-      <Field
-        component={DayToStartTheWeek}
-        name="dayToStartTheWeek"
-      />
-    </form>
-  </Row>;
+    <div>
+      <Text color={'outerSpace'}>Day to start the week</Text>
+    </div>
+    <div>
+      <form style={{ minWidth: '185px' }}>
+        <Field component={DayToStartTheWeek} name="dayToStartTheWeek" />
+      </form>
+    </div>
+  </Row>
+);
 
 SelectDayToStartTheWeek.propTypes = {
   onChange: PropTypes.func.isRequired,

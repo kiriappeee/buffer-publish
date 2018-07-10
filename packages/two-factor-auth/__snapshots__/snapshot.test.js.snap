@@ -2,12 +2,13 @@
 
 exports[`Snapshots TwoFactorAuth chooseMethod 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -503,18 +504,19 @@ exports[`Snapshots TwoFactorAuth chooseMethod 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots TwoFactorAuth confirm 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -1058,18 +1060,19 @@ exports[`Snapshots TwoFactorAuth confirm 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots TwoFactorAuth disabled 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -1354,18 +1357,19 @@ exports[`Snapshots TwoFactorAuth disabled 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots TwoFactorAuth enabled 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -1650,18 +1654,19 @@ exports[`Snapshots TwoFactorAuth enabled 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots TwoFactorAuth recovery 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -2165,18 +2170,19 @@ exports[`Snapshots TwoFactorAuth recovery 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots TwoFactorAuth setupApp 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -2705,18 +2711,19 @@ exports[`Snapshots TwoFactorAuth setupApp 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots TwoFactorAuth setupSMS 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "space-between",
+        "padding": "1rem 0",
       }
     }
   >
@@ -3247,6 +3254,6 @@ exports[`Snapshots TwoFactorAuth setupSMS 1`] = `
         </div>
       </button>
     </div>
-  </div>
+  </section>
 </span>
 `;

@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, Button } from '@bufferapp/components';
+import { Row } from '@bufferapp/publish-shared-components';
 import Modal from '../Modal';
 
 const ChangePassword = ({ showModal, onRequestOpenModal, onRequestCloseModal, onSubmit }) => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    }}
-  >
+  <Row>
     <div
       style={{
         marginRight: '1rem',
@@ -32,7 +27,7 @@ const ChangePassword = ({ showModal, onRequestOpenModal, onRequestCloseModal, on
       Change Your Password
     </Button>
     {showModal ? <Modal onRequestCloseModal={onRequestCloseModal} onSubmit={onSubmit} /> : null}
-  </div>
+  </Row>
 );
 
 ChangePassword.propTypes = {
