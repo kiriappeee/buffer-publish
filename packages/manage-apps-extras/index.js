@@ -7,6 +7,7 @@ export default connect(
     showModalAppId: state.manageAppsExtras.showModalAppId,
     showModalAppName: state.manageAppsExtras.showModalAppName,
     connectedApps: state.manageAppsExtras.connectedApps,
+    submitting: state.manageAppsExtras.submitting,
   }),
   dispatch => ({
     onRequestOpenModal: ({ appId, appName }) => {

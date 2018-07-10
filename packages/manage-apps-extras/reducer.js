@@ -22,6 +22,11 @@ export default (state = initialState, action) => {
         connectedApps: action.result,
       };
     }
+    case `revokeConnectedApp_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        submitting: true,
+      };
     case actionTypes.REQUEST_OPEN_MODAL:
       return {
         ...state,

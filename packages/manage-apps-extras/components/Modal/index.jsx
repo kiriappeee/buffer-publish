@@ -24,7 +24,7 @@ const Modal = ({
             </Text>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <Button tertiary disabled={submitting} onClick={() => onCancelClick()}>
+            <Button tertiary disabled={submitting} onClick={onCancelClick}>
               Cancel
             </Button>
             <div style={{ margin: '0.5rem' }} />
@@ -41,9 +41,13 @@ const Modal = ({
 Modal.propTypes = {
   onConfirmClick: PropTypes.func.isRequired,
   onCancelClick: PropTypes.func.isRequired,
-  submitting: PropTypes.bool.isRequired,
+  submitting: PropTypes.bool,
   appId: PropTypes.string.isRequired,
   appName: PropTypes.string.isRequired,
+};
+
+Modal.defaultProps = {
+  submitting: false,
 };
 
 export default Modal;

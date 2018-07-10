@@ -28,6 +28,7 @@ const AppsManager = ({
   onRequestOpenModal,
   onRequestCloseModal,
   onConfirmRevokeApp,
+  submitting,
 }) => (
   <div
     style={{
@@ -59,7 +60,12 @@ const AppsManager = ({
               }}
             >
               <Text size={'mini'}>{app.name}</Text>
-              <Button tertiary onClick={() => onRequestOpenModal({ appId: app.id, appName: app.name })}>Revoke Access</Button>
+              <Button
+                tertiary
+                onClick={() => onRequestOpenModal({ appId: app.id, appName: app.name })}
+              >
+                Revoke Access
+              </Button>
             </div>
             <Divider />
           </div>
@@ -72,6 +78,7 @@ const AppsManager = ({
         appName={showModalAppName}
         onCancelClick={onRequestCloseModal}
         onConfirmClick={onConfirmRevokeApp}
+        submitting={submitting}
       />
     }
   </div>
@@ -87,12 +94,14 @@ AppsManager.propTypes = {
   onRequestCloseModal: PropTypes.func.isRequired,
   onRequestOpenModal: PropTypes.func.isRequired,
   onConfirmRevokeApp: PropTypes.func.isRequired,
+  submitting: PropTypes.bool,
 };
 
 AppsManager.defaultProps = {
   connectedApps: [],
   showModalAppId: null,
   showModalAppName: '',
+  submitting: false,
 };
 
 export default AppsManager;

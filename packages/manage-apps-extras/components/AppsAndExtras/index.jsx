@@ -10,6 +10,7 @@ const AppsAndExtras = ({
   showModalAppName,
   onRequestCloseModal,
   onConfirmRevokeApp,
+  submitting,
 }) => (
   <div>
     <ExtrasLinks />
@@ -20,6 +21,7 @@ const AppsAndExtras = ({
       showModalAppId={showModalAppId}
       showModalAppName={showModalAppName}
       onConfirmRevokeApp={onConfirmRevokeApp}
+      submitting={submitting}
     />
   </div>
 );
@@ -34,12 +36,14 @@ AppsAndExtras.propTypes = {
   onConfirmRevokeApp: PropTypes.func.isRequired,
   showModalAppId: PropTypes.string,
   showModalAppName: PropTypes.string,
+  submitting: PropTypes.bool,
 };
 
 AppsAndExtras.defaultProps = {
   connectedApps: [],
   showModalAppId: null,
   showModalAppName: '',
+  submitting: false,
 };
 
 export default AppsAndExtras;

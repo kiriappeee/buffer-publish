@@ -2,13 +2,12 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 
-import Example, {
+import AppsAndExtras, {
   reducer,
   actions,
   actionTypes,
   middleware,
 } from './index';
-import LoggedIn from './components/LoggedIn';
 
 const storeFake = state => ({
   default: () => {},
@@ -17,27 +16,33 @@ const storeFake = state => ({
   getState: () => ({ ...state }),
 });
 
-describe('Example', () => {
+describe('AppsAndExtras', () => {
+  const app1 = {
+    id: 'appid1',
+    name: 'App 1',
+  };
+  const store = storeFake({
+    manageAppsExtras: {
+      showModalAppId: null,
+      showModalAppName: '',
+      connectedApps: [app1],
+      submitting: false,
+    },
+    environment: {
+      environment: 'production',
+    },
+    i18n: {
+      translations: {},
+    },
+  });
+
   it('should render', () => {
-    const store = storeFake({
-      example: {
-        loggedIn: false,
-      },
-      i18n: {
-        translations: {
-          example: {
-            loggedIn: 'Logged In...',
-            loggedOut: 'Logged Out...',
-          },
-        },
-      },
-    });
     const wrapper = mount(
       <Provider store={store}>
-        <Example />
+        <AppsAndExtras />
       </Provider>,
     );
-    expect(wrapper.find(LoggedIn).length)
+    expect(wrapper.find(AppsAndExtras).length)
       .toBe(1);
   });
 

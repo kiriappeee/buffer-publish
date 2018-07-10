@@ -6,11 +6,11 @@ import AppsManager from './index';
 
 const connectedApps = [
   {
-    id: 1,
+    id: 'id1',
     name: 'Buffer client 1',
   },
   {
-    id: 2,
+    id: 'id2',
     name: 'Buffer client 2',
   },
 ];
@@ -18,18 +18,27 @@ const connectedApps = [
 storiesOf('AppsManager')
   .addDecorator(checkA11y)
   .add('without connected apps', () => (
-    <AppsManager />
+    <AppsManager
+      onRequestCloseModal={action('onRequestCloseModal')}
+      connectedApps={[]}
+      onRequestOpenModal={action('onRequestOpenModal')}
+      onConfirmRevokeApp={action('onConfirmRevokeApp')}
+    />
   ))
   .add('with connected apps', () => (
     <AppsManager
       connectedApps={connectedApps}
+      onRequestOpenModal={action('onRequestOpenModal')}
+      onRequestCloseModal={action('onRequestCloseModal')}
+      onConfirmRevokeApp={action('onConfirmRevokeApp')}
     />
   ))
   .add('show modal with name', () => (
     <AppsManager
       connectedApps={connectedApps}
+      onRequestOpenModal={action('onRequestOpenModal')}
       onRequestCloseModal={action('onRequestCloseModal')}
-      onSubmit={action('onRequestCloseModal')}
+      onConfirmRevokeApp={action('onConfirmRevokeApp')}
       showModalAppId={'1'}
       showModalAppName={'App 1'}
     />

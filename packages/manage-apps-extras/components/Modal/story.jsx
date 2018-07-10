@@ -8,8 +8,18 @@ storiesOf('Modal', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <Modal
-      handleSubmit={action('onSubmit')}
-      onRequestCloseModal={action('onRequestCloseModal')}
+      onConfirmClick={action('onConfirmClick')}
+      onCancelClick={action('onCancelClick')}
       appName={'Client 1'}
+      appId={'appId1'}
+    />
+  ))
+  .add('submitting', () => (
+    <Modal
+      onConfirmClick={action('onConfirmClick')}
+      onCancelClick={action('onCancelClick')}
+      appName={'Client 1'}
+      appId={'appId1'}
+      submitting
     />
   ));
