@@ -1,29 +1,46 @@
+import { actions as fetchActions } from '@bufferapp/async-data-fetch';
+import { constants as tabsNames } from '@bufferapp/publish-preferences';
+import { LOCATION_CHANGE } from 'react-router-redux';
 import middleware from './middleware';
 
 describe('middleware', () => {
-  beforeEach(() => {
-    global.console.group = jest.fn();
-    global.console.log = jest.fn();
-    global.console.groupEnd = jest.fn();
-  });
-  it('should handle action', () => {
-    const next = jest.fn();
+  const RPC_NAME = 'connectedApps';
+  const next = jest.fn();
+  const dispatch = jest.fn();
+  const store = {
+    dispatch,
+  };
+  it('should call connectedApps when location change to apps and extras', () => {
+    jest.resetAllMocks();
     const action = {
-      type: 'type',
+      type: LOCATION_CHANGE,
+      payload: {
+        pathname: `/preferences/${tabsNames.APPS_EXTRAS}`,
+      },
     };
-    middleware(undefined)(next)(action);
-    expect(next)
-      .toBeCalledWith(action);
-    expect(global.console.group)
-      .toHaveBeenCalled();
-    expect(global.console.log)
-      .toHaveBeenCalledWith('action', action);
-    expect(global.console.groupEnd)
-      .toHaveBeenCalled();
+    middleware(store)(next)(action);
+    expect(dispatch).toHaveBeenCalledWith(fetchActions.fetch({
+      name: RPC_NAME,
+    }));
   });
-  afterEach(() => {
-    global.console.group.mockRestore();
-    global.console.log.mockRestore();
-    global.console.groupEnd.mockRestore();
+
+  it('should not call connectedApps when location change to another path', () => {
+    jest.resetAllMocks();
+    const action = {
+      type: LOCATION_CHANGE,
+      payload: {
+        pathname: '/preferences/test',
+      },
+    };
+    middleware(store)(next)(action);
+    expect(dispatch).not.toHaveBeenCalledWith(fetchActions.fetch({
+      name: RPC_NAME,
+    }));
+  });
+
+  it('always propagates the action', () => {
+    const action = {};
+    middleware(store)(next)(action);
+    expect(next).toHaveBeenCalledWith(action);
   });
 });
