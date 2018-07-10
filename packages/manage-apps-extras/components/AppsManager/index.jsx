@@ -51,13 +51,12 @@ const AppsManager = ({
         <Divider />
 
         {connectedApps.map(app => (
-          <div>
+          <div key={app.id}>
             <div
               style={{
                 ...stylesFlexRow,
                 margin: '1rem 0',
               }}
-              key={app.id}
             >
               <Text size={'mini'}>{app.name}</Text>
               <Button tertiary onClick={() => onRequestOpenModal({ appId: app.id, appName: app.name })}>Revoke Access</Button>
