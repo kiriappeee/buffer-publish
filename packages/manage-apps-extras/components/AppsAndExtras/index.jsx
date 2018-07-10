@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import AppsManager from '../AppsManager';
 import ExtrasLinks from '../ExtrasLinks';
 
-
-const AppsAndExtras = ({ connectedApps, onRequestOpenModal, showModalAppId, showModalAppName, onRequestCloseModal, onSubmit }) => (
+const AppsAndExtras = ({
+  connectedApps,
+  onRequestOpenModal,
+  showModalAppId,
+  showModalAppName,
+  onRequestCloseModal,
+  onSubmit,
+}) => (
   <div>
     <ExtrasLinks />
     <AppsManager
@@ -36,6 +41,5 @@ AppsAndExtras.defaultProps = {
   showModalAppId: null,
   showModalAppName: '',
 };
-
 
 export default AppsAndExtras;
