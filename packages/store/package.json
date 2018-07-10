@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,17 +22,17 @@
     "@bufferapp/publish-beta-redirect": "1.8.0",
     "@bufferapp/publish-example": "1.8.0",
     "@bufferapp/publish-i18n": "1.6.2",
-    "@bufferapp/publish-modals": "^1.9.0",
+    "@bufferapp/publish-modals": "^1.9.2",
     "@bufferapp/publish-profile-sidebar": "^1.9.0",
-    "@bufferapp/publish-pusher-sync": "^1.9.0",
-    "@bufferapp/publish-queue": "^1.9.0",
+    "@bufferapp/publish-pusher-sync": "^1.9.2",
+    "@bufferapp/publish-queue": "^1.9.2",
     "@bufferapp/publish-routes": "1.6.2",
-    "@bufferapp/publish-sent": "^1.9.0",
+    "@bufferapp/publish-sent": "^1.9.2",
     "@bufferapp/publish-settings": "^1.9.0",
-    "@bufferapp/publish-tabs": "^1.9.0",
+    "@bufferapp/publish-tabs": "^1.9.2",
     "@bufferapp/publish-two-factor-auth": "1.8.0",
     "@bufferapp/manage-apps-extras": "0.0.1",
-    "@bufferapp/publish-upgrade-modal": "^1.9.0",
+    "@bufferapp/publish-upgrade-modal": "^1.9.2",
     "@bufferapp/unauthorized-redirect": "1.6.2"
   },
   "devDependencies": {
