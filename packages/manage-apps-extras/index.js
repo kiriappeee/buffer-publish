@@ -6,10 +6,15 @@ export default connect(
   state => ({
     showModalAppId: state.manageAppsExtras.showModalAppId,
     showModalAppName: state.manageAppsExtras.showModalAppName,
+    connectedApps: state.manageAppsExtras.connectedApps,
   }),
   dispatch => ({
-    onRequestOpenModal: ({ appId, appName }) => dispatch(actions.requestOpenModal({ appId, appName })),
-    onRequestCloseModal: () => dispatch(actions.requestCloseModal()),
+    onRequestOpenModal: ({ appId, appName }) => {
+      dispatch(actions.requestOpenModal({ appId, appName }));
+    },
+    onRequestCloseModal: () => {
+      dispatch(actions.requestCloseModal());
+    },
     onSubmit: () => {
       // dispatch(
       //   asyncDataFetchActions.fetch({
