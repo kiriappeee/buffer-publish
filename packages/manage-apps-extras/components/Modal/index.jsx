@@ -18,7 +18,7 @@ const Modal = ({
           </div>
           <div style={{ margin: '0 2.5rem', textAlign: 'center' }}>
             <Text size={'small'} color={'shuttleGray'}>
-              You're about to revoke access to {appId}: {appName}.
+              You're about to revoke access to <b>{appName}</b>.
               This will prevent the app from working with your Buffer account.
               Are you sure you want to continue?
             </Text>
