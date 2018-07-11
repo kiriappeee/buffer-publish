@@ -22,17 +22,18 @@ const stylesFlexRow = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  margin: '1rem 0',
+};
+
+const styleBlockRow = {
+  display: 'block',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  marginRight: '1rem',
 };
 
 const ExtrasLinks = () => (
-  <div
-    style={{
-      display: 'block',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginRight: '1rem',
-    }}
-  >
+  <div style={styleBlockRow}>
     <div>
       <Text color={'outerSpace'} size={'mini'} weight={'bold'}>Buffer Apps & Extras</Text>
       <div>
@@ -43,22 +44,12 @@ const ExtrasLinks = () => (
     </div>
     <Divider />
 
-    <div
-      style={{
-        ...stylesFlexRow,
-        margin: '1rem 0',
-      }}
-    >
+    <div style={stylesFlexRow}>
       <Text size={'mini'}>Browser Extension</Text>
       <Button onClick={openExtensionLink}>Install the browser extension</Button>
     </div>
     <Divider />
-    <div
-      style={{
-        ...stylesFlexRow,
-        margin: '1rem 0',
-      }}
-    >
+    <div style={stylesFlexRow}>
       <Text size={'mini'}>Mobile Apps</Text>
       <div style={stylesFlexRow}>
         <div
