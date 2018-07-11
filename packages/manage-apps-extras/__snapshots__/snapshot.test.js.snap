@@ -2,13 +2,12 @@
 
 exports[`Snapshots AppsManager show modal with name 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
-        "alignItems": "center",
-        "display": "block",
+        "display": "flex",
         "justifyContent": "space-between",
-        "marginRight": "1rem",
+        "padding": ".5rem 0",
       }
     }
   >
@@ -51,7 +50,7 @@ exports[`Snapshots AppsManager show modal with name 1`] = `
                 "padding": "0",
               }
             }
-            target="_blank"
+            target="_self"
           >
             Get More Apps →
           </a>
@@ -303,9 +302,9 @@ exports[`Snapshots AppsManager show modal with name 1`] = `
                   }
                 >
                   You're about to revoke access to 
-                  1
-                  : 
-                  App 1
+                  <b>
+                    App 1
+                  </b>
                   . This will prevent the app from working with your Buffer account. Are you sure you want to continue?
                 </span>
               </div>
@@ -403,19 +402,18 @@ exports[`Snapshots AppsManager show modal with name 1`] = `
         }
       />
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots AppsManager with connected apps 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
-        "alignItems": "center",
-        "display": "block",
+        "display": "flex",
         "justifyContent": "space-between",
-        "marginRight": "1rem",
+        "padding": ".5rem 0",
       }
     }
   >
@@ -458,7 +456,7 @@ exports[`Snapshots AppsManager with connected apps 1`] = `
                 "padding": "0",
               }
             }
-            target="_blank"
+            target="_self"
           >
             Get More Apps →
           </a>
@@ -612,19 +610,18 @@ exports[`Snapshots AppsManager with connected apps 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
 exports[`Snapshots AppsManager without connected apps 1`] = `
 <span>
-  <div
+  <section
     style={
       Object {
-        "alignItems": "center",
-        "display": "block",
+        "display": "flex",
         "justifyContent": "space-between",
-        "marginRight": "1rem",
+        "padding": ".5rem 0",
       }
     }
   >
@@ -667,7 +664,7 @@ exports[`Snapshots AppsManager without connected apps 1`] = `
                 "padding": "0",
               }
             }
-            target="_blank"
+            target="_self"
           >
             Get More Apps →
           </a>
@@ -687,7 +684,7 @@ exports[`Snapshots AppsManager without connected apps 1`] = `
         />
       </div>
     </div>
-  </div>
+  </section>
 </span>
 `;
 
@@ -836,6 +833,7 @@ exports[`Snapshots ExtrasLinks should show text and links 1`] = `
             "alignItems": "center",
             "display": "flex",
             "justifyContent": "space-between",
+            "margin": "1rem 0",
           }
         }
       >
@@ -1024,9 +1022,9 @@ exports[`Snapshots Modal default 1`] = `
                 }
               >
                 You're about to revoke access to 
-                appId1
-                : 
-                Client 1
+                <b>
+                  Client 1
+                </b>
                 . This will prevent the app from working with your Buffer account. Are you sure you want to continue?
               </span>
             </div>
@@ -1227,9 +1225,9 @@ exports[`Snapshots Modal submitting 1`] = `
                 }
               >
                 You're about to revoke access to 
-                appId1
-                : 
-                Client 1
+                <b>
+                  Client 1
+                </b>
                 . This will prevent the app from working with your Buffer account. Are you sure you want to continue?
               </span>
             </div>

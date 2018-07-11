@@ -2,51 +2,48 @@ import deepFreeze from 'deep-freeze';
 import reducer, { actions, actionTypes } from './reducer';
 
 describe('reducer', () => {
+  const initialState = {
+    showModalAppId: null,
+    showModalAppName: '',
+    connectedApps: [],
+    submitting: false,
+  };
+
   it('should initialize default state', () => {
-    const stateAfter = {
-      showModalAppId: null,
-      showModalAppName: '',
-      connectedApps: [],
-    };
     const action = {
       type: 'INIT',
     };
     deepFreeze(action);
     expect(reducer(undefined, action))
-      .toEqual(stateAfter);
+      .toEqual(initialState);
   });
 
-  it('should handle REQUEST OPEN MODAL action type', () => {
+  it('REQUEST_OPEN_MODAL sets the app ID and app name for the modal', () => {
     const stateAfter = {
-      showModalAppId: 1,
-      showModalAppName: 'App 1',
-      connectedApps: [],
+      ...initialState,
+      showModalAppId: 'App1',
+      showModalAppName: 'App One',
     };
     const action = {
       type: actionTypes.REQUEST_OPEN_MODAL,
-      appId: 1,
-      appName: 'App 1',
+      appId: 'App1',
+      appName: 'App One',
     };
     deepFreeze(action);
     expect(reducer(undefined, action))
       .toEqual(stateAfter);
   });
 
-  it('should handle REQUEST CLOSE MODAL action type', () => {
-    const stateAfter = {
-      showModalAppId: null,
-      showModalAppName: '',
-      connectedApps: [],
-    };
+  it('REQUEST_CLOSE_MODAL removes app ID and app name set for the modal', () => {
     const action = {
       type: actionTypes.REQUEST_CLOSE_MODAL,
     };
     deepFreeze(action);
     expect(reducer(undefined, action))
-      .toEqual(stateAfter);
+      .toEqual(initialState);
   });
 
-  it('should handle REQUEST REVOKE APP action type', () => {
+  it('REQUEST_REVOKE_APP removes the app from connected apps and the selected app ID and name', () => {
     const app1 = {
       id: 'app1',
       name: 'App One',
@@ -56,13 +53,13 @@ describe('reducer', () => {
       name: 'App Two',
     };
     const stateBefore = {
+      ...initialState,
       showModalAppId: 1,
       showModalAppName: 'App 1',
       connectedApps: [app1, app2],
     };
     const stateAfter = {
-      showModalAppId: null,
-      showModalAppName: '',
+      ...initialState,
       connectedApps: [app2],
     };
     const action = {
@@ -74,15 +71,14 @@ describe('reducer', () => {
       .toEqual(stateAfter);
   });
 
-  it('should handle connectedApps_FETCH_SUCCESS action type', () => {
+  it('connectedApps_FETCH_SUCCESS adds the connected app', () => {
     const app1 = {
       id: 'id1',
       name: 'app1',
     };
 
     const stateAfter = {
-      showModalAppId: null,
-      showModalAppName: '',
+      ...initialState,
       connectedApps: [app1],
     };
 
@@ -94,6 +90,51 @@ describe('reducer', () => {
     deepFreeze(action);
     expect(reducer(undefined, action))
       .toEqual(stateAfter);
+  });
+
+  it('revokeConnectedApp_FETCH_START sets submitting to true', () => {
+    const stateAfter = {
+      ...initialState,
+      submitting: true,
+    };
+
+    const action = {
+      type: 'revokeConnectedApp_FETCH_START',
+    };
+
+    deepFreeze(action);
+    expect(reducer(undefined, action))
+      .toEqual(stateAfter);
+  });
+
+  it('revokeConnectedApp_FETCH_FAIL sets submitting to false', () => {
+    const stateBefore = {
+      ...initialState,
+      submitting: true,
+    };
+
+    const action = {
+      type: 'revokeConnectedApp_FETCH_FAIL',
+    };
+
+    deepFreeze(action);
+    expect(reducer(stateBefore, action))
+      .toEqual(initialState);
+  });
+
+  it('revokeConnectedApp_FETCH_SUCCESS sets submitting to false', () => {
+    const stateBefore = {
+      ...initialState,
+      submitting: true,
+    };
+
+    const action = {
+      type: 'revokeConnectedApp_FETCH_SUCCESS',
+    };
+
+    deepFreeze(action);
+    expect(reducer(stateBefore, action))
+      .toEqual(initialState);
   });
 });
 

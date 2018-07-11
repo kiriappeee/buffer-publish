@@ -12,6 +12,7 @@ const initialState = {
   showModalAppId: null,
   showModalAppName: '',
   connectedApps: [],
+  submitting: false,
 };
 
 export default (state = initialState, action) => {
@@ -22,10 +23,16 @@ export default (state = initialState, action) => {
         connectedApps: action.result,
       };
     }
-    case `revokeConnectedApp_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case `revokeConnectedApp_${dataFetchActionTypes.FETCH_START}`:
       return {
         ...state,
         submitting: true,
+      };
+    case `revokeConnectedApp_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case `revokeConnectedApp_${dataFetchActionTypes.FETCH_FAIL}`:
+      return {
+        ...state,
+        submitting: false,
       };
     case actionTypes.REQUEST_OPEN_MODAL:
       return {
