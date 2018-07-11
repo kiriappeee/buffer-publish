@@ -4,21 +4,17 @@ import {
   Text,
   Button,
   Divider,
-  LinkifiedText,
+  Link,
 } from '@bufferapp/components';
+
+import { Row } from '@bufferapp/publish-shared-components';
 import Modal from '../Modal';
 
 const stylesFlexRow = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-};
-
-const linkGetMoreApps = {
-  rawString: 'https://buffer.com/extras',
-  displayString: 'Get More Apps →',
-  url: 'https://buffer.com/extras',
-  indices: [86, 111],
+  margin: '1rem 0',
 };
 
 const AppsManager = ({
@@ -30,35 +26,18 @@ const AppsManager = ({
   onConfirmRevokeApp,
   submitting,
 }) => (
-  <div
-    style={{
-      display: 'block',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginRight: '1rem',
-    }}
-  >
+  <Row>
     <div>
       <Text color={'outerSpace'} size={'mini'} weight={'bold'}>Connected Apps</Text>
       <div>
-        <LinkifiedText
-          size={'small'}
-          color={'shuttleGray'}
-          links={[linkGetMoreApps]}
-          newTab
-        >
-          {'Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! https://buffer.com/extras'}
-        </LinkifiedText>
+        <Text size={'small'} color={'shuttleGray'}>
+          Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! <Link newtab href={'https://buffer.com/extras'}>Get More Apps →</Link>
+        </Text>
         <Divider />
 
         {connectedApps.map(app => (
           <div key={app.id}>
-            <div
-              style={{
-                ...stylesFlexRow,
-                margin: '1rem 0',
-              }}
-            >
+            <div style={stylesFlexRow}>
               <Text size={'mini'}>{app.name}</Text>
               <Button
                 tertiary
@@ -81,7 +60,7 @@ const AppsManager = ({
         submitting={submitting}
       />
     }
-  </div>
+  </Row>
 );
 
 AppsManager.propTypes = {
