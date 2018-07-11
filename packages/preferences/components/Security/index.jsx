@@ -7,8 +7,9 @@ import { Divider } from '@bufferapp/components';
 const Security = () => (
   <Fragment>
     <ChangePassword />
-    <Divider marginTop="1.5rem" marginBottom="1.5rem" />
+    <Divider />
     <TwoFactorAuth />
+    <Divider />
   </Fragment>
 );
 

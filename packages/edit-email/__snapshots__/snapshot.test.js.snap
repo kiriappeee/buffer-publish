@@ -257,16 +257,17 @@ exports[`Snapshots EditEmail clicking on the edit link displays the modal 1`] = 
     <section
       style={
         Object {
+          "alignItems": "center",
           "display": "flex",
           "justifyContent": "space-between",
-          "padding": ".5rem 0",
+          "padding": "1rem 0",
         }
       }
     >
       <span
         style={
           Object {
-            "color": "#59626a",
+            "color": "#323b43",
             "fontFamily": "\\"Roboto\\", sans-serif",
             "fontSize": "1rem",
             "fontWeight": 400,
@@ -279,7 +280,7 @@ exports[`Snapshots EditEmail clicking on the edit link displays the modal 1`] = 
         <span
           style={
             Object {
-              "color": "#59626a",
+              "color": "#323b43",
               "fontFamily": "\\"Roboto\\", sans-serif",
               "fontSize": "1rem",
               "fontWeight": 400,

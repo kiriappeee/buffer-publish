@@ -2,15 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, Button, CloseIcon } from '@bufferapp/components';
 import Modal from '../Modal';
+import { Row } from '@bufferapp/publish-shared-components';
 
 const CloseAccount = ({ showModal, onRequestOpenModal, onRequestCloseModal, onSubmit }) => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    }}
-  >
+  <Row>
     <div
       style={{
         marginRight: '1rem',
@@ -29,14 +24,16 @@ const CloseAccount = ({ showModal, onRequestOpenModal, onRequestCloseModal, onSu
       <div
         style={{
           display: 'flex',
+          alignItems: 'center',
         }}
       >
         <div
           style={{
             marginRight: '0.5rem',
+            marginBottom: '0.25rem',
           }}
         >
-          <Text>Delete Buffer Account</Text>
+          <Text color={'outerSpace'}>Delete Buffer Account</Text>
         </div>
         <div>
           <CloseIcon color={'torchRed'} />
@@ -44,7 +41,7 @@ const CloseAccount = ({ showModal, onRequestOpenModal, onRequestCloseModal, onSu
       </div>
     </Button>
     {showModal ? <Modal onRequestCloseModal={onRequestCloseModal} onSubmit={onSubmit} /> : null}
-  </div>
+  </Row>
 );
 
 CloseAccount.propTypes = {

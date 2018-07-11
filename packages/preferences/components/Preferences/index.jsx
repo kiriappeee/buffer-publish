@@ -1,28 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab } from '@bufferapp/publish-shared-components';
-import { Divider, Link, ArrowLeftIcon, Text } from '@bufferapp/components';
-import EditEmail from '@bufferapp/edit-email';
-import DateTimePreferences from '@bufferapp/date-time-preferences';
+import { Link, ArrowLeftIcon, Text } from '@bufferapp/components';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import ManageAppsAndExtras from '@bufferapp/manage-apps-extras';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
-import CloseAccount from '@bufferapp/close-account';
-import Security from '../Security';
 import TabsNames from '../../constants';
+import Security from '../Security';
+import General from '../General';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
     case TabsNames.GENERAL:
-      return (
-        <div>
-          <EditEmail />
-          <Divider />
-          <DateTimePreferences />
-          <Divider />
-          <CloseAccount />
-        </div>
-      );
+      return <General />;
     case TabsNames.SECURITY:
       return <Security />;
     case TabsNames.APPS_EXTRAS:

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Text, Toggle } from '@bufferapp/components';
+import { Row } from '@bufferapp/publish-shared-components';
 
 import Modal from '../Modal';
 import PreferencesRow from '../PreferencesRow';
@@ -25,13 +26,7 @@ const TwoFactorAuth = ({
   submitCode,
   handleRecoveryCodeSelect,
 }) => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    }}
-  >
+  <Row>
     <div
       style={{
         marginRight: '1rem',
@@ -79,7 +74,7 @@ const TwoFactorAuth = ({
         disabled={!['enabled', 'disabled'].includes(machineState)}
       />
     </div>
-  </div>
+  </Row>
 );
 
 TwoFactorAuth.propTypes = {
