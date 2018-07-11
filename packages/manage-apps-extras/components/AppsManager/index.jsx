@@ -7,7 +7,6 @@ import {
   Link,
 } from '@bufferapp/components';
 
-import { Row } from '@bufferapp/publish-shared-components';
 import Modal from '../Modal';
 
 const stylesFlexRow = {
@@ -15,6 +14,13 @@ const stylesFlexRow = {
   justifyContent: 'space-between',
   alignItems: 'center',
   margin: '1rem 0',
+};
+
+const rowBlockStyle = {
+  display: 'block',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  marginRight: '1rem',
 };
 
 const AppsManager = ({
@@ -26,12 +32,12 @@ const AppsManager = ({
   onConfirmRevokeApp,
   submitting,
 }) => (
-  <Row>
+  <section style={rowBlockStyle}>
     <div>
       <Text color={'outerSpace'} size={'mini'} weight={'bold'}>Connected Apps</Text>
       <div>
         <Text size={'small'} color={'shuttleGray'}>
-          Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! <Link newtab href={'https://buffer.com/extras'}>Get More Apps →</Link>
+          Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! <Link newTab href={'https://buffer.com/extras'}>Get More Apps →</Link>
         </Text>
         <Divider />
 
@@ -60,7 +66,7 @@ const AppsManager = ({
         submitting={submitting}
       />
     }
-  </Row>
+  </section>
 );
 
 AppsManager.propTypes = {

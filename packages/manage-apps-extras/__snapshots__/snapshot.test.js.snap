@@ -5,9 +5,10 @@ exports[`Snapshots AppsManager show modal with name 1`] = `
   <section
     style={
       Object {
-        "display": "flex",
+        "alignItems": "center",
+        "display": "block",
         "justifyContent": "space-between",
-        "padding": ".5rem 0",
+        "marginRight": "1rem",
       }
     }
   >
@@ -50,7 +51,7 @@ exports[`Snapshots AppsManager show modal with name 1`] = `
                 "padding": "0",
               }
             }
-            target="_self"
+            target="_blank"
           >
             Get More Apps →
           </a>
@@ -411,9 +412,10 @@ exports[`Snapshots AppsManager with connected apps 1`] = `
   <section
     style={
       Object {
-        "display": "flex",
+        "alignItems": "center",
+        "display": "block",
         "justifyContent": "space-between",
-        "padding": ".5rem 0",
+        "marginRight": "1rem",
       }
     }
   >
@@ -456,7 +458,7 @@ exports[`Snapshots AppsManager with connected apps 1`] = `
                 "padding": "0",
               }
             }
-            target="_self"
+            target="_blank"
           >
             Get More Apps →
           </a>
@@ -619,9 +621,10 @@ exports[`Snapshots AppsManager without connected apps 1`] = `
   <section
     style={
       Object {
-        "display": "flex",
+        "alignItems": "center",
+        "display": "block",
         "justifyContent": "space-between",
-        "padding": ".5rem 0",
+        "marginRight": "1rem",
       }
     }
   >
@@ -664,7 +667,7 @@ exports[`Snapshots AppsManager without connected apps 1`] = `
                 "padding": "0",
               }
             }
-            target="_self"
+            target="_blank"
           >
             Get More Apps →
           </a>
