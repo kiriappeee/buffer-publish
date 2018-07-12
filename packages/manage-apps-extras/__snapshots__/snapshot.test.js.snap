@@ -1,0 +1,1334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots AppsManager show modal with name 1`] = `
+<span>
+  <section
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "block",
+        "justifyContent": "space-between",
+        "marginRight": "1rem",
+      }
+    }
+  >
+    <div>
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.9rem",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Connected Apps
+      </span>
+      <div>
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! 
+          <a
+            href="https://buffer.com/extras"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_blank"
+          >
+            Get More Apps →
+          </a>
+        </span>
+        <hr
+          style={
+            Object {
+              "background": "#e6ebef",
+              "border": "none",
+              "boxSizing": "border-box",
+              "height": "0.063rem",
+              "marginBottom": "0.5rem",
+              "marginTop": "0.5rem",
+              "width": "100%",
+            }
+          }
+        />
+        <div>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "space-between",
+                "margin": "1rem 0",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.9rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Buffer client 1
+            </span>
+            <button
+              aria-label={null}
+              disabled={undefined}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "border": "0.063rem solid transparent",
+                  "borderColor": "#ced7df",
+                  "borderRadius": "2rem",
+                  "color": "#323b43",
+                  "cursor": "pointer",
+                  "display": "inline-block",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
+                  "fontWeight": 400,
+                  "margin": "0",
+                  "outline": "none",
+                  "padding": "0.5rem 2rem",
+                  "transition": "background-color 0.2s linear",
+                }
+              }
+            >
+              Revoke Access
+            </button>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "space-between",
+                "margin": "1rem 0",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.9rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Buffer client 2
+            </span>
+            <button
+              aria-label={null}
+              disabled={undefined}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "border": "0.063rem solid transparent",
+                  "borderColor": "#ced7df",
+                  "borderRadius": "2rem",
+                  "color": "#323b43",
+                  "cursor": "pointer",
+                  "display": "inline-block",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
+                  "fontWeight": 400,
+                  "margin": "0",
+                  "outline": "none",
+                  "padding": "0.5rem 2rem",
+                  "transition": "background-color 0.2s linear",
+                }
+              }
+            >
+              Revoke Access
+            </button>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "100vh",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100vw",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "bottom": undefined,
+            "left": undefined,
+            "position": "absolute",
+            "right": undefined,
+            "top": undefined,
+            "zIndex": 3000,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "margin": "0 25px",
+              "width": "30rem",
+            }
+          }
+        >
+          <div
+            onMouseEnter={undefined}
+            onMouseLeave={undefined}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "border": "0.063rem solid #e6ebef",
+                "borderRadius": "0.126rem",
+                "fontSize": "0.9rem",
+                "lineHeight": 1.5,
+                "padding": "3rem",
+                "transition": "box-shadow 0.2s linear",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "1rem",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#323b43",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "1.25rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Are you sure?
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "margin": "0 2.5rem",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  You're about to revoke access to 
+                  <b>
+                    App 1
+                  </b>
+                  . This will prevent the app from working with your Buffer account. Are you sure you want to continue?
+                </span>
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "marginTop": "2rem",
+                  }
+                }
+              >
+                <button
+                  aria-label={null}
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "border": "0.063rem solid transparent",
+                      "borderColor": "#ced7df",
+                      "borderRadius": "2rem",
+                      "color": "#323b43",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
+                      "fontWeight": 400,
+                      "margin": "0",
+                      "outline": "none",
+                      "padding": "0.5rem 2rem",
+                      "transition": "background-color 0.2s linear",
+                    }
+                  }
+                >
+                  Cancel
+                </button>
+                <div
+                  style={
+                    Object {
+                      "margin": "0.5rem",
+                    }
+                  }
+                />
+                <button
+                  aria-label={null}
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "#168eea",
+                      "border": "0.063rem solid transparent",
+                      "borderRadius": "2rem",
+                      "color": "#fff",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "\\"Roboto\\", sans-serif",
+                      "fontSize": "0.75rem",
+                      "fontWeight": 400,
+                      "margin": "0",
+                      "outline": "none",
+                      "padding": "0.5rem 2rem",
+                      "transition": "background-color 0.2s linear",
+                    }
+                  }
+                >
+                  Yes, revoke access
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgba(50, 59, 67, 0.8)",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 2000,
+          }
+        }
+      />
+    </div>
+  </section>
+</span>
+`;
+
+exports[`Snapshots AppsManager with connected apps 1`] = `
+<span>
+  <section
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "block",
+        "justifyContent": "space-between",
+        "marginRight": "1rem",
+      }
+    }
+  >
+    <div>
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.9rem",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Connected Apps
+      </span>
+      <div>
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! 
+          <a
+            href="https://buffer.com/extras"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_blank"
+          >
+            Get More Apps →
+          </a>
+        </span>
+        <hr
+          style={
+            Object {
+              "background": "#e6ebef",
+              "border": "none",
+              "boxSizing": "border-box",
+              "height": "0.063rem",
+              "marginBottom": "0.5rem",
+              "marginTop": "0.5rem",
+              "width": "100%",
+            }
+          }
+        />
+        <div>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "space-between",
+                "margin": "1rem 0",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.9rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Buffer client 1
+            </span>
+            <button
+              aria-label={null}
+              disabled={undefined}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "border": "0.063rem solid transparent",
+                  "borderColor": "#ced7df",
+                  "borderRadius": "2rem",
+                  "color": "#323b43",
+                  "cursor": "pointer",
+                  "display": "inline-block",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
+                  "fontWeight": 400,
+                  "margin": "0",
+                  "outline": "none",
+                  "padding": "0.5rem 2rem",
+                  "transition": "background-color 0.2s linear",
+                }
+              }
+            >
+              Revoke Access
+            </button>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "space-between",
+                "margin": "1rem 0",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.9rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Buffer client 2
+            </span>
+            <button
+              aria-label={null}
+              disabled={undefined}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "border": "0.063rem solid transparent",
+                  "borderColor": "#ced7df",
+                  "borderRadius": "2rem",
+                  "color": "#323b43",
+                  "cursor": "pointer",
+                  "display": "inline-block",
+                  "fontFamily": "\\"Roboto\\", sans-serif",
+                  "fontSize": "0.75rem",
+                  "fontWeight": 400,
+                  "margin": "0",
+                  "outline": "none",
+                  "padding": "0.5rem 2rem",
+                  "transition": "background-color 0.2s linear",
+                }
+              }
+            >
+              Revoke Access
+            </button>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</span>
+`;
+
+exports[`Snapshots AppsManager without connected apps 1`] = `
+<span>
+  <section
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "block",
+        "justifyContent": "space-between",
+        "marginRight": "1rem",
+      }
+    }
+  >
+    <div>
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.9rem",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Connected Apps
+      </span>
+      <div>
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Get the most out of Buffer and share from your mobile, news reader, blog or anywhere! 
+          <a
+            href="https://buffer.com/extras"
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "#168eea",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "padding": "0",
+              }
+            }
+            target="_blank"
+          >
+            Get More Apps →
+          </a>
+        </span>
+        <hr
+          style={
+            Object {
+              "background": "#e6ebef",
+              "border": "none",
+              "boxSizing": "border-box",
+              "height": "0.063rem",
+              "marginBottom": "0.5rem",
+              "marginTop": "0.5rem",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </section>
+</span>
+`;
+
+exports[`Snapshots ExtrasLinks should show text and links 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "block",
+        "justifyContent": "space-between",
+        "marginRight": "1rem",
+      }
+    }
+  >
+    <div>
+      <span
+        style={
+          Object {
+            "color": "#323b43",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.9rem",
+            "fontWeight": 700,
+          }
+        }
+      >
+        Buffer Apps & Extras
+      </span>
+      <div>
+        <span
+          style={
+            Object {
+              "color": "#59626a",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 400,
+            }
+          }
+        >
+          Get the most out of Buffer with our mobile apps and browser extension
+        </span>
+      </div>
+    </div>
+    <hr
+      style={
+        Object {
+          "background": "#e6ebef",
+          "border": "none",
+          "boxSizing": "border-box",
+          "height": "0.063rem",
+          "marginBottom": "0.5rem",
+          "marginTop": "0.5rem",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "margin": "1rem 0",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#59626a",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.9rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Browser Extension
+      </span>
+      <button
+        aria-label={null}
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#168eea",
+            "border": "0.063rem solid transparent",
+            "borderRadius": "2rem",
+            "color": "#fff",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.75rem",
+            "fontWeight": 400,
+            "margin": "0",
+            "outline": "none",
+            "padding": "0.5rem 2rem",
+            "transition": "background-color 0.2s linear",
+          }
+        }
+      >
+        Install the browser extension
+      </button>
+    </div>
+    <hr
+      style={
+        Object {
+          "background": "#e6ebef",
+          "border": "none",
+          "boxSizing": "border-box",
+          "height": "0.063rem",
+          "marginBottom": "0.5rem",
+          "marginTop": "0.5rem",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "margin": "0.6rem 0",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#59626a",
+            "fontFamily": "\\"Roboto\\", sans-serif",
+            "fontSize": "0.9rem",
+            "fontWeight": 400,
+          }
+        }
+      >
+        Mobile Apps
+      </span>
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "margin": "0.6rem 0",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "marginRight": "0.5rem",
+            }
+          }
+        >
+          <button
+            aria-label={null}
+            disabled={undefined}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "border": "0.063rem solid transparent",
+                "borderColor": "#ced7df",
+                "borderRadius": "2rem",
+                "color": "#323b43",
+                "cursor": "pointer",
+                "display": "inline-block",
+                "fontFamily": "\\"Roboto\\", sans-serif",
+                "fontSize": "0.75rem",
+                "fontWeight": 400,
+                "margin": "0",
+                "outline": "none",
+                "padding": "0.5rem 2rem",
+                "transition": "background-color 0.2s linear",
+              }
+            }
+          >
+            View on Apple Store
+          </button>
+        </div>
+        <button
+          aria-label={null}
+          disabled={undefined}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "border": "0.063rem solid transparent",
+              "borderColor": "#ced7df",
+              "borderRadius": "2rem",
+              "color": "#323b43",
+              "cursor": "pointer",
+              "display": "inline-block",
+              "fontFamily": "\\"Roboto\\", sans-serif",
+              "fontSize": "0.75rem",
+              "fontWeight": 400,
+              "margin": "0",
+              "outline": "none",
+              "padding": "0.5rem 2rem",
+              "transition": "background-color 0.2s linear",
+            }
+          }
+        >
+          View on Google Play
+        </button>
+      </div>
+    </div>
+    <hr
+      style={
+        Object {
+          "background": "#e6ebef",
+          "border": "none",
+          "boxSizing": "border-box",
+          "height": "0.063rem",
+          "marginBottom": "0.5rem",
+          "marginTop": "0.5rem",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</span>
+`;
+
+exports[`Snapshots Modal default 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100vh",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100vw",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "bottom": undefined,
+          "left": undefined,
+          "position": "absolute",
+          "right": undefined,
+          "top": undefined,
+          "zIndex": 3000,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "margin": "0 25px",
+            "width": "30rem",
+          }
+        }
+      >
+        <div
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "border": "0.063rem solid #e6ebef",
+              "borderRadius": "0.126rem",
+              "fontSize": "0.9rem",
+              "lineHeight": 1.5,
+              "padding": "3rem",
+              "transition": "box-shadow 0.2s linear",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                  "textAlign": "center",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#323b43",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "1.25rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                Are you sure?
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "margin": "0 2.5rem",
+                  "textAlign": "center",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#59626a",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                You're about to revoke access to 
+                <b>
+                  Client 1
+                </b>
+                . This will prevent the app from working with your Buffer account. Are you sure you want to continue?
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "marginTop": "2rem",
+                }
+              }
+            >
+              <button
+                aria-label={null}
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "border": "0.063rem solid transparent",
+                    "borderColor": "#ced7df",
+                    "borderRadius": "2rem",
+                    "color": "#323b43",
+                    "cursor": "pointer",
+                    "display": "inline-block",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 400,
+                    "margin": "0",
+                    "outline": "none",
+                    "padding": "0.5rem 2rem",
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Cancel
+              </button>
+              <div
+                style={
+                  Object {
+                    "margin": "0.5rem",
+                  }
+                }
+              />
+              <button
+                aria-label={null}
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
+                    "cursor": "pointer",
+                    "display": "inline-block",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 400,
+                    "margin": "0",
+                    "outline": "none",
+                    "padding": "0.5rem 2rem",
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Yes, revoke access
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(50, 59, 67, 0.8)",
+          "bottom": 0,
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "zIndex": 2000,
+        }
+      }
+    />
+  </div>
+</span>
+`;
+
+exports[`Snapshots Modal submitting 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100vh",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100vw",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "bottom": undefined,
+          "left": undefined,
+          "position": "absolute",
+          "right": undefined,
+          "top": undefined,
+          "zIndex": 3000,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "margin": "0 25px",
+            "width": "30rem",
+          }
+        }
+      >
+        <div
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "border": "0.063rem solid #e6ebef",
+              "borderRadius": "0.126rem",
+              "fontSize": "0.9rem",
+              "lineHeight": 1.5,
+              "padding": "3rem",
+              "transition": "box-shadow 0.2s linear",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                  "textAlign": "center",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#323b43",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "1.25rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                Are you sure?
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "margin": "0 2.5rem",
+                  "textAlign": "center",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#59626a",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                You're about to revoke access to 
+                <b>
+                  Client 1
+                </b>
+                . This will prevent the app from working with your Buffer account. Are you sure you want to continue?
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "marginTop": "2rem",
+                }
+              }
+            >
+              <button
+                aria-label={null}
+                disabled={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "border": "0.063rem solid transparent",
+                    "borderColor": "#ced7df",
+                    "borderRadius": "2rem",
+                    "color": "#323b43",
+                    "cursor": "pointer",
+                    "display": "inline-block",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 400,
+                    "margin": "0",
+                    "opacity": 0.3,
+                    "outline": "none",
+                    "padding": "0.5rem 2rem",
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Cancel
+              </button>
+              <div
+                style={
+                  Object {
+                    "margin": "0.5rem",
+                  }
+                }
+              />
+              <button
+                aria-label={null}
+                disabled={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#168eea",
+                    "border": "0.063rem solid transparent",
+                    "borderRadius": "2rem",
+                    "color": "#fff",
+                    "cursor": "pointer",
+                    "display": "inline-block",
+                    "fontFamily": "\\"Roboto\\", sans-serif",
+                    "fontSize": "0.75rem",
+                    "fontWeight": 400,
+                    "margin": "0",
+                    "opacity": 0.3,
+                    "outline": "none",
+                    "padding": "0.5rem 2rem",
+                    "transition": "background-color 0.2s linear",
+                  }
+                }
+              >
+                Yes, revoke access
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(50, 59, 67, 0.8)",
+          "bottom": 0,
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "zIndex": 2000,
+        }
+      }
+    />
+  </div>
+</span>
+`;

@@ -6,7 +6,6 @@ import {
   generateProfilePageRoute,
 } from '@bufferapp/publish-routes';
 import { actions as profileSidebarActions } from '@bufferapp/publish-profile-sidebar';
-
 import Preferences from './components/Preferences';
 
 export default connect(
@@ -40,3 +39,5 @@ export default connect(
     },
   }),
 )(Preferences);
+
+export constants from './constants';

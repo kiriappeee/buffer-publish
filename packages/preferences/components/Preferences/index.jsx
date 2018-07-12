@@ -3,18 +3,20 @@ import PropTypes from 'prop-types';
 import { Tabs, Tab } from '@bufferapp/publish-shared-components';
 import { Link, ArrowLeftIcon, Text } from '@bufferapp/components';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
+import ManageAppsAndExtras from '@bufferapp/manage-apps-extras';
 import ProfileSidebarComponent from '@bufferapp/publish-profile-sidebar/components/ProfileSidebar';
+import TabsNames from '../../constants';
 import Security from '../Security';
 import General from '../General';
 
 const PreferenceContent = ({ tabId, onUnknownTab }) => {
   switch (tabId) {
-    case 'general':
+    case TabsNames.GENERAL:
       return <General />;
-    case 'security':
+    case TabsNames.SECURITY:
       return <Security />;
-    case 'appsandextras':
-      return <Text>Apps & Extras Content Goes Here</Text>;
+    case TabsNames.APPS_EXTRAS:
+      return <ManageAppsAndExtras />;
     default:
       onUnknownTab();
       return <Text>Redirecting...</Text>;
@@ -60,9 +62,9 @@ const Preferences = ({
     >
       <div id={'tabs'}>
         <Tabs selectedTabId={selectedTabId} onTabClick={onTabClick}>
-          <Tab tabId={'general'}>General</Tab>
-          <Tab tabId={'security'}>Security</Tab>
-          <Tab tabId={'appsandextras'}>Apps & Extras</Tab>
+          <Tab tabId={TabsNames.GENERAL}>General</Tab>
+          <Tab tabId={TabsNames.SECURITY}>Security</Tab>
+          <Tab tabId={TabsNames.APPS_EXTRAS}>Apps & Extras</Tab>
         </Tabs>
       </div>
       <Link

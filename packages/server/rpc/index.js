@@ -28,6 +28,8 @@ const twoFactorUpdate = require('./twoFactorUpdate');
 const twoFactorConfirm = require('./twoFactorConfirm');
 const twoFactorRecovery = require('./twoFactorRecovery');
 const closeAccount = require('./closeAccount');
+const connectedApps = require('./connectedApps');
+const revokeConnectedApp = require('./revokeConnectedApp');
 
 module.exports = checkToken(rpc(
   profilesMethod,
@@ -58,4 +60,6 @@ module.exports = checkToken(rpc(
   twoFactorConfirm,
   twoFactorRecovery,
   closeAccount,
+  connectedApps,
+  revokeConnectedApp,
 ));

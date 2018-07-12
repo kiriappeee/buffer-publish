@@ -20,6 +20,7 @@ import { middleware as editEmailMiddlware } from '@bufferapp/edit-email';
 import { middleware as stripeMiddleware } from '@bufferapp/stripe';
 import { middleware as modalsMiddleware } from '@bufferapp/publish-modals';
 import { middleware as changePasswordMiddleware } from '@bufferapp/change-password';
+import { middleware as manageAppsMiddleware } from '@bufferapp/manage-apps-extras';
 import { middleware as twoFactorAuthMiddleware } from '@bufferapp/publish-two-factor-auth';
 import { middleware as dateTimePreferencesMiddleware } from '@bufferapp/date-time-preferences';
 import { middleware as closeAccountMiddleware } from '@bufferapp/close-account';
@@ -64,6 +65,7 @@ const configureStore = (initialstate) => {
         betaRedirectMiddleware,
         upgradeModalMiddleware,
         changePasswordMiddleware,
+        manageAppsMiddleware,
         stripeMiddleware,
         modalsMiddleware,
         editEmailMiddlware,
