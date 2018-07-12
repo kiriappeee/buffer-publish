@@ -1,4 +1,4 @@
-import { actions as fetchActions } from '@bufferapp/async-data-fetch';
+import { actions as fetchActions, actionTypes as fetchActionTypes } from '@bufferapp/async-data-fetch';
 import { constants as tabsNames } from '@bufferapp/publish-preferences';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import { actions as notificationActions } from '@bufferapp/notifications';
@@ -51,7 +51,7 @@ describe('middleware', () => {
     notificationActions.createNotification = jest.fn();
 
     const action = {
-      type: `revokeConnectedApp_${fetchActions.FETCH_SUCCESS}`,
+      type: `revokeConnectedApp_${fetchActionTypes.FETCH_SUCCESS}`,
       appId: 'app1',
     };
 

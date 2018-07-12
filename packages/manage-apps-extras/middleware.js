@@ -1,10 +1,9 @@
 import { constants as tabsNames } from '@bufferapp/publish-preferences';
 import { LOCATION_CHANGE } from 'react-router-redux';
-import { actions as dataFetchActions } from '@bufferapp/async-data-fetch';
+import { actions as dataFetchActions, actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import { actions as notificationActions } from '@bufferapp/notifications';
 
 import { actionTypes } from './reducer';
-
 
 const isAppsAndExtrasTab = path => (path === `/preferences/${tabsNames.APPS_EXTRAS}`);
 
@@ -24,7 +23,7 @@ export default ({ dispatch }) => next => (action) => {
         args: { appId: action.appId },
       }));
       break;
-    case `revokeConnectedApp_${dataFetchActions.FETCH_SUCCESS}`:
+    case `revokeConnectedApp_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(notificationActions.createNotification({
         notificationType: 'success',
         message: 'We\'ve revoked the access of the app',
