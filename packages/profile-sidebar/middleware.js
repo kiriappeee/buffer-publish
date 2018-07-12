@@ -16,9 +16,9 @@ import {
 
 const getConnectAccountURL = () => {
   if (window.location.hostname === 'publish.local.buffer.com') {
-    return 'https://local.buffer.com/manage';
+    return 'https://local.buffer.com/manage/own';
   }
-  return 'https://buffer.com/manage';
+  return 'https://buffer.com/manage/own';
 };
 
 export default ({ dispatch, getState }) => next => (action) => {
