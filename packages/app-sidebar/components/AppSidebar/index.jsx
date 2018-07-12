@@ -1,13 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  PublishIcon,
-  ReplyIcon,
-  AnalyzeIcon,
-  QuestionIcon,
-  Divider,
-} from '@bufferapp/components';
+import { PublishIcon, ReplyIcon, AnalyzeIcon, QuestionIcon, Divider } from '@bufferapp/components';
 
 import { calculateStyles } from '@bufferapp/components/lib/utils';
 import { sidebarBackgroundBlue } from '@bufferapp/components/style/color';
@@ -33,11 +27,7 @@ const style = calculateStyles({
   },
 });
 
-const AppSidebar = ({
-  activeProduct,
-  user,
-  environment,
-}) => (
+const AppSidebar = ({ activeProduct, user, environment, onMenuItemClick }) => (
   <nav style={style} aria-label="sidebar" role="menubar">
     <BufferLogo />
 
@@ -50,7 +40,8 @@ const AppSidebar = ({
     <PopoverButton
       icon={<ReplyIcon />}
       active={activeProduct === 'reply'}
-      label="Reply" href="https://reply.buffer.com/"
+      label="Reply"
+      href="https://reply.buffer.com/"
       newWindow
     />
     <PopoverButton
@@ -68,22 +59,33 @@ const AppSidebar = ({
           <PopoverMenuItem href="https://faq.buffer.com">FAQ</PopoverMenuItem>
           <PopoverMenuItem href="http://status.buffer.com/">Status</PopoverMenuItem>
           <PopoverMenuItem href="https://buffer.com/pricing">Pricing &amp; Plans</PopoverMenuItem>
-          <PopoverMenuItem href="https://buffersurvey.typeform.com/to/ZEiVmL">Wishlist</PopoverMenuItem>
-        </PopoverMenu>
-      </PopoverButton>
-      {!user.loading && <PopoverButton icon={<UserAvatar />} label="My Account" popoverPosition="above" large>
-        <PopoverMenu>
-          <PopoverMenuItem href="https://buffer.com/app/account/email" newWindow subtitle="Notifications, time / date, apps&hellip;">Preferences</PopoverMenuItem>
-          <Divider color="sidebarBackgroundBlue" />
-          <PopoverMenuItem
-            href={logoutUrl({
-              production: environment === 'production',
-            })}
-          >
-            Sign out
+          <PopoverMenuItem href="https://buffersurvey.typeform.com/to/ZEiVmL">
+            Wishlist
           </PopoverMenuItem>
         </PopoverMenu>
-      </PopoverButton>}
+      </PopoverButton>
+      {!user.loading && (
+        <PopoverButton icon={<UserAvatar />} label="My Account" popoverPosition="above" large>
+          <PopoverMenu>
+            <PopoverMenuItem
+              href="/preferences/general"
+              onClick={() => onMenuItemClick({ menuItemKey: 'preferences' })}
+              newWindow
+              subtitle="Notifications, time / date, apps&hellip;"
+            >
+              Preferences
+            </PopoverMenuItem>
+            <Divider color="sidebarBackgroundBlue" />
+            <PopoverMenuItem
+              href={logoutUrl({
+                production: environment === 'production',
+              })}
+            >
+              Sign out
+            </PopoverMenuItem>
+          </PopoverMenu>
+        </PopoverButton>
+      )}
     </div>
   </nav>
 );
@@ -97,6 +99,7 @@ AppSidebar.propTypes = {
     email: PropTypes.string.isRequired,
   }).isRequired,
   environment: PropTypes.string.isRequired,
+  onMenuItemClick: PropTypes.func.isRequired,
 };
 
 AppSidebar.defaultProps = {

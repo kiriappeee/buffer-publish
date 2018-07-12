@@ -544,6 +544,7 @@ exports[`Snapshots App should render application 1`] = `
                   >
                     <a
                       href="https://faq.buffer.com"
+                      onClick={[Function]}
                       role="menuitem"
                       style={
                         Object {
@@ -565,6 +566,7 @@ exports[`Snapshots App should render application 1`] = `
                   >
                     <a
                       href="http://status.buffer.com/"
+                      onClick={[Function]}
                       role="menuitem"
                       style={
                         Object {
@@ -586,6 +588,7 @@ exports[`Snapshots App should render application 1`] = `
                   >
                     <a
                       href="https://buffer.com/pricing"
+                      onClick={[Function]}
                       role="menuitem"
                       style={
                         Object {
@@ -607,6 +610,7 @@ exports[`Snapshots App should render application 1`] = `
                   >
                     <a
                       href="https://buffersurvey.typeform.com/to/ZEiVmL"
+                      onClick={[Function]}
                       role="menuitem"
                       style={
                         Object {
