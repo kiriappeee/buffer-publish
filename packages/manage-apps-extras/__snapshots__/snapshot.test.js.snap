@@ -814,7 +814,7 @@ exports[`Snapshots ExtrasLinks should show text and links 1`] = `
           "alignItems": "center",
           "display": "flex",
           "justifyContent": "space-between",
-          "margin": "1rem 0",
+          "margin": "0.6rem 0",
         }
       }
     >
@@ -836,7 +836,7 @@ exports[`Snapshots ExtrasLinks should show text and links 1`] = `
             "alignItems": "center",
             "display": "flex",
             "justifyContent": "space-between",
-            "margin": "1rem 0",
+            "margin": "0.6rem 0",
           }
         }
       >
