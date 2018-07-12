@@ -160,7 +160,7 @@ exports[`Snapshots ProfilePage should render 1`] = `
               }
             }
           >
-            Connect a Social Account
+            Manage Social Accounts
           </button>
         </div>
       </div>
@@ -533,7 +533,7 @@ exports[`Snapshots ProfilePage should render settings 1`] = `
               }
             }
           >
-            Connect a Social Account
+            Manage Social Accounts
           </button>
         </div>
       </div>

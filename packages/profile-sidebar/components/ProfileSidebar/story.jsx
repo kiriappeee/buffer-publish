@@ -10,7 +10,7 @@ const lotsOfProfiles = () =>
   [...Array(10)].reduce(p => [...p, ...lockedProfiles], []);
 
 const translations = {
-  connectButton: 'Connect a Social Account',
+  connectButton: 'Manage Social Accounts',
   lockedList: 'Locked Social Accounts',
   lockedListTooltip: 'Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!',
 };

@@ -14,11 +14,11 @@ import {
   actionTypes,
 } from './reducer';
 
-const getClassicBufferConnectAccountURL = () => {
+const getConnectAccountURL = () => {
   if (window.location.hostname === 'publish.local.buffer.com') {
-    return 'https://local.buffer.com/app/profile/connect';
+    return 'https://local.buffer.com/manage';
   }
-  return 'https://buffer.com/app/profile/connect';
+  return 'https://buffer.com/manage';
 };
 
 export default ({ dispatch, getState }) => next => (action) => {
@@ -64,7 +64,7 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case actionTypes.CONNECT_SOCIAL_ACCOUNT:
-      window.location = getClassicBufferConnectAccountURL();
+      window.location = getConnectAccountURL();
       break;
     case `pauseQueue_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(notificationActions.createNotification({

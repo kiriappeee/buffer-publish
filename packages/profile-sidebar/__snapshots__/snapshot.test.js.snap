@@ -2332,7 +2332,7 @@ exports[`Snapshots ProfileSidebar should display a list of profiles 1`] = `
           }
         }
       >
-        Connect a Social Account
+        Manage Social Accounts
       </button>
     </div>
   </div>
@@ -6365,7 +6365,7 @@ exports[`Snapshots ProfileSidebar should display a long list of profiles 1`] = `
           }
         }
       >
-        Connect a Social Account
+        Manage Social Accounts
       </button>
     </div>
   </div>
