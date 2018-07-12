@@ -25,6 +25,11 @@ const stylesFlexRow = {
   margin: '1rem 0',
 };
 
+const stylesFlexRowLessMargin = {
+  ...stylesFlexRow,
+  margin: '0.6rem 0',
+};
+
 const styleBlockRow = {
   display: 'block',
   justifyContent: 'space-between',
@@ -49,9 +54,9 @@ const ExtrasLinks = () => (
       <Button onClick={openExtensionLink}>Install the browser extension</Button>
     </div>
     <Divider />
-    <div style={stylesFlexRow}>
+    <div style={stylesFlexRowLessMargin}>
       <Text size={'mini'}>Mobile Apps</Text>
-      <div style={stylesFlexRow}>
+      <div style={stylesFlexRowLessMargin}>
         <div
           style={{
             marginRight: '0.5rem',
