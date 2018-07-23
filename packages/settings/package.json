@@ -12,7 +12,7 @@
   "author": "melissa@buffer.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.3.0",
+    "@bufferapp/components": "2.3.2",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "1.8.0",
     "@bufferapp/publish-profile-sidebar": "^1.9.0",
