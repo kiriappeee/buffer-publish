@@ -103,5 +103,15 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "payload": {
+    "scripts": [
+      "yarn",
+      "yarn run build"
+    ],
+    "files": [
+      "bundle.js",
+      "composer-bundle.css"
+    ]
+  }
 }
