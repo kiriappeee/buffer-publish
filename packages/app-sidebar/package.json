@@ -12,7 +12,7 @@
   "author": "hamstu@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.3.0",
+    "@bufferapp/components": "2.3.2",
     "@bufferapp/date-time-preferences": "1.8.0",
     "@bufferapp/session-manager": "0.6.2"
   },
