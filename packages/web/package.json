@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@bufferapp/app-sidebar": "1.8.0",
-    "@bufferapp/components": "2.3.0",
+    "@bufferapp/components": "2.3.2",
     "@bufferapp/notifications": "1.8.0",
     "@bufferapp/profile-page": "^1.9.2",
     "@bufferapp/publish-app-switcher": "^1.9.1",
