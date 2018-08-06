@@ -10,3 +10,4 @@ packages/composer
 packages/buffer-composer
 packages/buffer-components
 bundle.js
+.idea/
