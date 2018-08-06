@@ -49,7 +49,7 @@ const children = (
   </Text>
 );
 
-storiesOf('Post')
+storiesOf('Post', module)
   .addDecorator(checkA11y)
   .add('queued post', () => (
     <Post

@@ -55,7 +55,7 @@ daysOfWeek.forEach((dayName) => {
   });
 });
 
-storiesOf('ScheduleTable')
+storiesOf('ScheduleTable', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <ScheduleTable

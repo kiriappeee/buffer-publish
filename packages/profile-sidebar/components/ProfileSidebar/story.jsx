@@ -15,7 +15,7 @@ const translations = {
   lockedListTooltip: 'Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!',
 };
 
-storiesOf('ProfileSidebar')
+storiesOf('ProfileSidebar', module)
   .addDecorator(checkA11y)
   .add('should display a list of profiles', () => (
     <ProfileSidebar

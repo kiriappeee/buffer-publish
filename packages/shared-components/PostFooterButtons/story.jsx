@@ -6,7 +6,7 @@ import {
 import { checkA11y } from 'storybook-addon-a11y';
 import PostFooterButtons from './index';
 
-storiesOf('PostFooterButtons')
+storiesOf('PostFooterButtons', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <PostFooterButtons

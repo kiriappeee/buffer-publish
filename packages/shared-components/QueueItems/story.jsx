@@ -10,7 +10,7 @@ import {
   postListsNoHeaders,
 } from './postData';
 
-storiesOf('QueueItems')
+storiesOf('QueueItems', module)
   .addDecorator(checkA11y)
   .add('default queue', () => (
     <QueueItems

@@ -5,7 +5,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 
 import QueuePausedBar from './index';
 
-storiesOf('QueuePausedBar')
+storiesOf('QueuePausedBar', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <QueuePausedBar handleClickUnpause={action('handleClickUnpause')} />

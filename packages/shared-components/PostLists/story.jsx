@@ -7,7 +7,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 import PostLists from './index';
 import postLists from './postListData';
 
-storiesOf('PostLists')
+storiesOf('PostLists', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <PostLists

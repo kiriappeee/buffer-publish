@@ -8,7 +8,7 @@ import DateTimePreferences from './index';
 
 const store = createStore(formReducer);
 
-storiesOf('DateTimePreferences')
+storiesOf('DateTimePreferences', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
   .add('a story', () => (

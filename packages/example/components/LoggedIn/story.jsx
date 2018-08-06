@@ -8,7 +8,7 @@ const translations = {
   loggedOut: 'Logged Out...',
 };
 
-storiesOf('LoggedIn')
+storiesOf('LoggedIn', module)
   .addDecorator(checkA11y)
   .add('should show user is logged in', () => (
     <LoggedIn

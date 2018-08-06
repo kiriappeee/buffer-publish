@@ -1,32 +1,35 @@
-const webpack = require('webpack');
-const config = require('./webpack.config');
 const fs = require('fs');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const common = require('./webpack.config.common.js');
 
-// NOTE: Bugsnag will not notify in local setup with current weback configuration
-// https://docs.bugsnag.com/platforms/browsers/faq/#4-code-generated-with-eval-e-g-from-webpack
-config.devtool = 'cheap-module-eval-source-map';
-
-config.entry.unshift(
-  'react-hot-loader/patch',
-  // 'webpack-hot-middleware/client',
-);
-
-config.devServer = {
-  hot: true,
-  publicPath: config.output.publicPath,
-  contentBase: false,
-  port: 8080,
-  host: 'local.buffer.com',
-  headers: { 'Access-Control-Allow-Origin': '*' },
-  https: {
-    key: fs.readFileSync('../reverseproxy/certs/local.buffer.com-wildcard.key'),
-    cert: fs.readFileSync('../reverseproxy/certs/local.buffer.com-wildcard.crt'),
+const merged = merge.strategy({
+  plugins: 'prepend',
+  'entry.bundle': 'prepend',
+})(common, {
+  entry: {
+    bundle: ['react-hot-loader/patch'],
   },
-};
+  mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
+    hot: true,
+    publicPath: 'https://local.buffer.com:8080/static/',
+    contentBase: false,
+    port: 8080,
+    host: 'local.buffer.com',
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    https: {
+      key: fs.readFileSync('../reverseproxy/certs/local.buffer.com-wildcard.key'),
+      cert: fs.readFileSync('../reverseproxy/certs/local.buffer.com-wildcard.crt'),
+    },
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    // new BundleAnalyzerPlugin(),
+  ],
+});
 
-config.plugins.unshift(
-  new webpack.HotModuleReplacementPlugin(),
-  new webpack.NamedModulesPlugin(),
-);
-
-module.exports = config;
+module.exports = merged;

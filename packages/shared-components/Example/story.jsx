@@ -4,7 +4,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 import Example from './index';
 
 
-storiesOf('Example')
+storiesOf('Example', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <Example />

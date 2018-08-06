@@ -16,7 +16,7 @@ const postDetailsError = {
   error: 'Woops! Something went wrong. Try again?',
 };
 
-storiesOf('PostFooter')
+storiesOf('PostFooter', module)
   .addDecorator(checkA11y)
   .add('queued post', () => (
     <PostFooter

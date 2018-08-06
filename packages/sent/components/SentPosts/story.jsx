@@ -7,7 +7,7 @@ import {
   postLists,
 } from './postData';
 
-storiesOf('SentPosts')
+storiesOf('SentPosts', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <SentPosts

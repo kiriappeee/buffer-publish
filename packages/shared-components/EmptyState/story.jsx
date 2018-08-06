@@ -4,7 +4,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 import EmptyState from './index';
 
 
-storiesOf('EmptyState')
+storiesOf('EmptyState', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <EmptyState

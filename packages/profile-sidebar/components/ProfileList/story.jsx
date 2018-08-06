@@ -5,7 +5,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 import ProfileList from './index';
 import profiles from '../../mockData/profiles';
 
-storiesOf('ProfileList')
+storiesOf('ProfileList', module)
   .addDecorator(checkA11y)
   .add('should display a list of profiles', () => (
     <ProfileList

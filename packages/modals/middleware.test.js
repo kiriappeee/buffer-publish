@@ -1,13 +1,14 @@
 import middleware from './middleware';
 import { actions } from './reducer';
 
-Object.defineProperty(window.location, 'hash', {
-  writable: true,
-  value: '#upgrade-to-pro',
-});
+// Object.defineProperty(window.location, 'hash', {
+//   writable: true,
+//   value: '#upgrade-to-pro',
+// });
 
 describe('middleware', () => {
   it('should show modal on APP_INIT when hash is present', () => {
+    history.replaceState(undefined, undefined, '#upgrade-to-pro');
     const next = jest.fn();
     const dispatch = jest.fn();
     const action = {

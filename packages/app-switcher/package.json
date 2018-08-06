@@ -4,9 +4,7 @@
   "description": "Displays a popup and modal for beta publish users to switch to classic Buffer",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ignore-pattern coverage node_modules",
-    "test": "yarn run lint && sh ../../package_test.sh",
-    "test-watch": "jest --watch"
+    "lint": "eslint . --ignore-pattern coverage node_modules"
   },
   "author": "hamstu@gmail.com",
   "dependencies": {
@@ -15,8 +13,7 @@
     "@bufferapp/publish-utils": "1.9.0"
   },
   "devDependencies": {
-    "eslint": "3.19.0",
-    "jest": "19.0.2"
+    "eslint": "3.19.0"
   },
   "publishConfig": {
     "access": "public"

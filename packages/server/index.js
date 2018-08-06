@@ -8,23 +8,20 @@ const fs = require('fs');
 const { join } = require('path');
 const shutdownHelper = require('@bufferapp/shutdown-helper');
 const { apiError } = require('./middleware');
-const {
-  setRequestSession,
-  validateSession,
-} = require('@bufferapp/session-manager/middleware');
+const { setRequestSession, validateSession } = require('@bufferapp/session-manager/middleware');
 const bufferMetricsMiddleware = require('@bufferapp/buffermetrics/middleware');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
 const pusher = require('./lib/pusher');
 
-
 const app = express();
 const server = http.createServer(app);
 
 let staticAssets = {
-  // 'bundle.js': '/static/bundle.js',
   'bundle.js': 'https://local.buffer.com:8080/static/bundle.js',
-  'composer-bundle.css': 'https://local.buffer.com:8080/static/composer-bundle.css',
+  'bundle.css': 'https://local.buffer.com:8080/static/bundle.css',
+  'vendor.js': 'https://local.buffer.com:8080/static/vendor.js',
+  'vendor.css': 'https://local.buffer.com:8080/static/vendor.css',
 };
 
 // NOTE: Bugsnag will not notify in local setup with current weback configuration
@@ -54,20 +51,26 @@ const stripeScript = `<script src="https://js.stripe.com/v2/"></script>
 </script>
 `;
 
-const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
-                                    .replace('{{{bundle}}}', staticAssets['bundle.js'])
-                                    .replace('{{{composer-css-bundle}}}', staticAssets['composer-bundle.css'])
-                                    .replace('{{{stripeScript}}}', stripeScript)
-                                    .replace('{{{bugsnagScript}}}', bugsnagScript);
+const getHtml = () =>
+  fs
+    .readFileSync(join(__dirname, 'index.html'), 'utf8')
+    .replace('{{{vendor}}}', staticAssets['vendor.js'])
+    .replace('{{{vendor-css}}}', staticAssets['vendor.css'])
+    .replace('{{{bundle}}}', staticAssets['bundle.js'])
+    .replace('{{{bundle-css}}}', staticAssets['bundle.css'])
+    .replace('{{{stripeScript}}}', stripeScript)
+    .replace('{{{bugsnagScript}}}', bugsnagScript);
 
 app.use(logMiddleware({ name: 'BufferPublish' }));
 app.use(cookieParser());
 
 // All routes after this have access to the user session
-app.use(setRequestSession({
-  production: isProduction,
-  sessionKeys: ['publish', 'global'],
-}));
+app.use(
+  setRequestSession({
+    production: isProduction,
+    sessionKeys: ['publish', 'global'],
+  }),
+);
 
 app.post('/rpc', (req, res, next) => {
   rpc(req, res)
@@ -85,22 +88,27 @@ app.post('/rpc', (req, res, next) => {
 });
 
 app.use(bodyParser.json());
-app.use(bufferMetricsMiddleware({
-  name: 'Buffer-Publish',
-  debug: !isProduction,
-  trackVisits: true,
-}));
+app.use(
+  bufferMetricsMiddleware({
+    name: 'Buffer-Publish',
+    debug: !isProduction,
+    trackVisits: true,
+  }),
+);
 
 // make sure we have a valid session
-app.use(validateSession({
-  production: isProduction,
-  requiredSessionKeys: ['publish.accessToken', 'global.userId'],
-}));
+app.use(
+  validateSession({
+    production: isProduction,
+    requiredSessionKeys: ['publish.accessToken', 'global.userId'],
+  }),
+);
 
 app.get('/health-check', controller.healthCheck);
 
 // Pusher Auth
-app.post('/pusher/auth',
+app.post(
+  '/pusher/auth',
   bodyParser.json(),
   bodyParser.urlencoded({ extended: false }),
   (req, res) => {

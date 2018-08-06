@@ -5,7 +5,7 @@ import ScheduleTableHeader from './index';
 
 const dayName = 'Monday';
 
-storiesOf('ScheduleTableHeader')
+storiesOf('ScheduleTableHeader', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <ScheduleTableHeader
@@ -21,4 +21,3 @@ storiesOf('ScheduleTableHeader')
       onPauseToggleClick={action('on-pause-toggle-click')}
     />
   ));
-

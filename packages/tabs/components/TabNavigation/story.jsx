@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-actions';
 import TabNavigation from './index';
 
-storiesOf('TabNavigation')
+storiesOf('TabNavigation', module)
   .add('default', () => (
     <TabNavigation
       selectedTabId={'queue'}
