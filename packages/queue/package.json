@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-queue",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "Queue UI package",
   "main": "index.js",
   "scripts": {
@@ -8,13 +8,13 @@
   },
   "author": "melissa@buffer.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2",
+    "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/composer": "1.10.1",
     "@bufferapp/keywrapper": "0.2.0",
-    "@bufferapp/notifications": "1.8.0",
-    "@bufferapp/publish-profile-sidebar": "^1.9.0",
-    "@bufferapp/publish-shared-components": "1.8.0",
-    "@bufferapp/publish-upgrade-modal": "^1.9.2",
+    "@bufferapp/notifications": "1.9.3",
+    "@bufferapp/publish-profile-sidebar": "1.9.3",
+    "@bufferapp/publish-shared-components": "1.9.3",
+    "@bufferapp/publish-upgrade-modal": "1.9.3",
     "react-day-picker": "7.0.7"
   },
   "devDependencies": {

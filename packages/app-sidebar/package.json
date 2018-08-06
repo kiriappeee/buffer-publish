@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/app-sidebar",
-  "version": "1.8.0",
+  "version": "1.9.3",
   "description": "The sidebar for the Buffer suite of products",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
   },
   "author": "hamstu@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/date-time-preferences": "1.8.0",
+    "@bufferapp/async-data-fetch": "1.9.3",
+    "@bufferapp/date-time-preferences": "1.9.3",
     "@bufferapp/session-manager": "0.6.2"
   },
   "devDependencies": {

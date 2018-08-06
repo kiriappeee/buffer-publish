@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/change-password",
-  "version": "1.8.0",
+  "version": "1.9.3",
   "description": "Buffer Password Change component",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/notifications": "1.8.0"
+    "@bufferapp/notifications": "1.9.3"
   },
   "devDependencies": {
     "eslint": "3.19.0"

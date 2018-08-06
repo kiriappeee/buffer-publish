@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-i18n",
-  "version": "1.6.2",
+  "version": "1.9.3",
   "description": "Buffer i18n Package",
   "main": "index.js",
   "scripts": {

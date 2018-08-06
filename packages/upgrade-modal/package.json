@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-upgrade-modal",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "A modal that allows the user to upgrade to higher plans",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "author": "hamstu@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2",
+    "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/keywrapper": "0.2.0",
-    "@bufferapp/publish-i18n": "1.6.2",
-    "@bufferapp/publish-modals": "1.9.2",
-    "@bufferapp/publish-shared-components": "1.8.0",
-    "@bufferapp/stripe": "^1.9.0"
+    "@bufferapp/publish-i18n": "1.9.3",
+    "@bufferapp/publish-modals": "1.9.3",
+    "@bufferapp/publish-shared-components": "1.9.3",
+    "@bufferapp/stripe": "1.9.3"
   },
   "devDependencies": {
     "eslint": "3.19.0"

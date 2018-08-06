@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/manage-apps-extras",
-  "version": "0.0.1",
+  "version": "1.9.3",
   "description": "Buffer Apps and extras UI settings component",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "jose@buffer.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2"
+    "@bufferapp/async-data-fetch": "1.9.3"
   },
   "devDependencies": {
     "eslint": "3.19.0"
