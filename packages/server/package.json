@@ -22,6 +22,7 @@
     "micro": "7.3.3",
     "micro-rpc-client": "0.1.2",
     "microrouter": "2.1.1",
+    "moment-timezone": "0.5.13",
     "node-dogstatsd": "0.0.6",
     "pusher": "1.5.1",
     "request": "2.81.0",

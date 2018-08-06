@@ -73,7 +73,7 @@
     "micro-rpc-client": "0.1.2",
     "mini-css-extract-plugin": "^0.4.1",
     "moment": "2.19.3",
-    "moment-timezone": "0.5.12",
+    "moment-timezone": "0.5.13",
     "object-path": "0.11.4",
     "prop-types": "15.5.10",
     "react": "16.3.0",
