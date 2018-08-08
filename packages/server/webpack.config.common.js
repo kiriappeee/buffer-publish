@@ -22,7 +22,12 @@ module.exports = {
         },
       },
       {
+        test: /node_modules\/@bufferapp\/draft-js-emoji-plugin\/lib\/plugin\.css/,
+        loaders: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.css$/,
+        exclude: /node_modules\/@bufferapp\/draft-js-emoji-plugin\/lib\/plugin\.css/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
