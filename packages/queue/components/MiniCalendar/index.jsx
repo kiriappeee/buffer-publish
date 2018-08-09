@@ -91,11 +91,18 @@ const renderDay = (day) => {
 
 const modifiers = {
   isToday: new Date(),
+  disabled: {
+    before: new Date(),
+  },
 };
 
 const MiniCalendar = () =>
   <div style={containerStyle}>
-    <DayPicker navbarElement={<NavBar/>} renderDay={renderDay} modifiers={modifiers} showOutsideDays />
+    <DayPicker
+      navbarElement={<NavBar/>}
+      renderDay={renderDay}
+      modifiers={modifiers}
+      showOutsideDays />
   </div>;
 
 MiniCalendar.propTypes = {
