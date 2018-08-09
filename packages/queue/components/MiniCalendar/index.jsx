@@ -4,6 +4,7 @@ import DayPicker from 'react-day-picker';
 import { ArrowRightIcon, ArrowLeftIcon } from '@bufferapp/components/Icon/Icons';
 import { Button } from '@bufferapp/components';
 import 'react-day-picker/lib/style.css';
+import moment from 'moment-timezone';
 
 const containerStyle = {
   position: 'absolute',
@@ -38,6 +39,8 @@ const numPostsStyle = {
   position: 'relative',
   top: '-0.3rem',
 }
+
+const previousMonth = moment().subtract(1, 'month').toDate();
 
 const NavBar = ({
   nextMonth,
@@ -101,9 +104,11 @@ const MiniCalendar = () =>
   <div style={containerStyle}>
     <DayPicker
       navbarElement={<NavBar/>}
+      fromMonth={previousMonth}
       renderDay={renderDay}
       modifiers={modifiers}
-      showOutsideDays />
+      showOutsideDays
+    />
   </div>;
 
 MiniCalendar.propTypes = {
