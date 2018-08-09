@@ -14,6 +14,7 @@ const containerStyle = {
   border: '1px solid #dce0e0',
   padding: '0.5rem',
   overflow: 'hidden',
+  zIndex: '1',
 }
 
 const fakeDateData = {
