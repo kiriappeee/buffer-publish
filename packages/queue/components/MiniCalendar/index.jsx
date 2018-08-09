@@ -7,7 +7,7 @@ import 'react-day-picker/lib/style.css';
 
 const containerStyle = {
   position: 'absolute',
-  right: '2.3rem',
+  right: '0',
   marginTop: '3rem',
   backgroundColor: 'white',
   borderRadius: '4px',
