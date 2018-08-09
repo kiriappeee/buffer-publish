@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
-        showGoBackToClassic: true,
+        showGoBackToClassic: !action.result.is_free_user,
         user: {
           ...action.result,
           loading: false,
