@@ -65,7 +65,7 @@ const NavBar = ({
   return (
     <div className={className}>
       <div style={styleLeft}>
-        <Button style={styleLeft} noStyle onClick={onNext}>
+        <Button style={styleLeft} noStyle onClick={onPrev}>
           <ArrowLeftIcon/>
         </Button>
       </div>
