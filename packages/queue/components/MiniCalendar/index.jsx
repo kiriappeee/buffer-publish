@@ -1,9 +1,15 @@
+/*
+This DatePicker is not importing react-day-picker styles,
+it is using DatePicker.css from the buffer-composer.
+In the future the styles should probably be independent.
+*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import DayPicker from 'react-day-picker';
 import { ArrowRightIcon, ArrowLeftIcon } from '@bufferapp/components/Icon/Icons';
 import { Button } from '@bufferapp/components';
-import 'react-day-picker/lib/style.css';
+import 'react-day-picker/lib/style.css'; // Not being used.
 import moment from 'moment-timezone';
 
 const containerStyle = {
