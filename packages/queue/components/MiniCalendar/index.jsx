@@ -70,12 +70,16 @@ const NavBar = ({
     // add our hooks here
   };
 
+  const showPreviousButton = (moment(month).isAfter(firstMonthDisplay, 'month')) ? true : false;
+
   return (
     <div className={className}>
       <div style={styleLeft}>
-        <Button style={styleLeft} noStyle onClick={onPrev}>
-          <ArrowLeftIcon/>
-        </Button>
+        { showPreviousButton &&
+          <Button style={styleLeft} noStyle onClick={onPrev}>
+            <ArrowLeftIcon/>
+          </Button>
+        }
       </div>
       <div style={styleRight}>
         <Button noStyle onClick={onNext}>
