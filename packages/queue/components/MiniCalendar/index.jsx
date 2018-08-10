@@ -16,7 +16,7 @@ const containerStyle = {
   padding: '0.5rem',
   overflow: 'hidden',
   zIndex: '1',
-}
+};
 
 const fakeDateData = {
   'Tue Feb 06 2018': 4,
@@ -27,23 +27,24 @@ const fakeDateData = {
 const cellStyle = {
   height: '1.6rem',
   width: '1.9rem',
-}
+};
 
 const dateStyle = {
   top: '-0.3rem',
   position: 'relative',
-}
+};
 
 const numPostsStyle = {
   fontSize: '0.3rem',
   position: 'relative',
   top: '-0.3rem',
-}
+};
 
 /* MiniCalendar displays one month in the past */
 const firstMonthDisplay = moment().subtract(1, 'month').toDate();
 
 const NavBar = ({
+  month,
   nextMonth,
   previousMonth,
   onPreviousClick,
@@ -54,6 +55,7 @@ const NavBar = ({
   const styleLeft = {
     float: 'left',
   };
+
   const styleRight = {
     float: 'right',
   };
