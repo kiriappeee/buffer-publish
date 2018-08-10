@@ -15,7 +15,7 @@
     "@bufferapp/publish-profile-sidebar": "1.9.3",
     "@bufferapp/publish-shared-components": "1.9.3",
     "@bufferapp/publish-upgrade-modal": "1.9.3",
-    "react-day-picker": "7.0.7"
+    "react-day-picker": "7.1.10"
   },
   "devDependencies": {
     "eslint": "3.19.0"
