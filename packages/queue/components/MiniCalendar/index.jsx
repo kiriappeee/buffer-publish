@@ -40,7 +40,8 @@ const numPostsStyle = {
   top: '-0.3rem',
 }
 
-const previousMonth = moment().subtract(1, 'month').toDate();
+/* MiniCalendar displays one month in the past */
+const firstMonthDisplay = moment().subtract(1, 'month').toDate();
 
 const NavBar = ({
   nextMonth,
@@ -56,6 +57,7 @@ const NavBar = ({
   const styleRight = {
     float: 'right',
   };
+
   const onNext = () => {
     onNextClick();
     // add our hooks here
@@ -104,7 +106,7 @@ const MiniCalendar = () =>
   <div style={containerStyle}>
     <DayPicker
       navbarElement={<NavBar/>}
-      fromMonth={previousMonth}
+      fromMonth={firstMonthDisplay}
       renderDay={renderDay}
       modifiers={modifiers}
       showOutsideDays
