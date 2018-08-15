@@ -50,11 +50,10 @@ To get started on local development and testing:
     $ node -v
     ```
 
-4. **Install Packages and Bootstrap**
+4. **Install Dependencies**
     ```bash
     $ cd ~/buffer-dev/buffer-publish  # Or wherever yours is located
     $ yarn
-    $ yarn run bootstrap
    ```
 
 5. **Start up the publish docker containers**
