@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.9.3",
+  "version": "1.9.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/app-sidebar": "1.9.3",
+    "@bufferapp/app-sidebar": "1.9.5",
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/close-account": "1.9.3",
@@ -17,21 +17,21 @@
     "@bufferapp/manage-apps-extras": "1.9.3",
     "@bufferapp/notifications": "1.9.3",
     "@bufferapp/performance-tracking": "0.43.5",
-    "@bufferapp/publish-app-switcher": "1.9.3",
+    "@bufferapp/publish-app-switcher": "1.9.5",
     "@bufferapp/publish-beta-redirect": "1.9.3",
     "@bufferapp/publish-example": "1.9.3",
     "@bufferapp/publish-i18n": "1.9.3",
     "@bufferapp/publish-modals": "1.9.3",
     "@bufferapp/publish-profile-sidebar": "1.9.3",
-    "@bufferapp/publish-pusher-sync": "1.9.3",
-    "@bufferapp/publish-queue": "1.9.3",
+    "@bufferapp/publish-pusher-sync": "1.9.5",
+    "@bufferapp/publish-queue": "1.9.5",
     "@bufferapp/publish-routes": "1.9.3",
-    "@bufferapp/publish-sent": "1.9.3",
+    "@bufferapp/publish-sent": "1.9.5",
     "@bufferapp/publish-settings": "1.9.3",
     "@bufferapp/publish-tabs": "1.9.3",
     "@bufferapp/publish-two-factor-auth": "1.9.3",
     "@bufferapp/publish-upgrade-modal": "1.9.3",
-    "@bufferapp/unauthorized-redirect": "1.9.3"
+    "@bufferapp/unauthorized-redirect": "1.9.5"
   },
   "devDependencies": {
     "eslint": "3.19.0"
