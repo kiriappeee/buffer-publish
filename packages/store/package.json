@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-store",
-  "version": "1.9.5",
+  "version": "1.9.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/app-sidebar": "1.9.5",
+    "@bufferapp/app-sidebar": "1.9.6",
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/close-account": "1.9.3",
@@ -31,7 +31,7 @@
     "@bufferapp/publish-tabs": "1.9.3",
     "@bufferapp/publish-two-factor-auth": "1.9.3",
     "@bufferapp/publish-upgrade-modal": "1.9.3",
-    "@bufferapp/unauthorized-redirect": "1.9.5"
+    "@bufferapp/unauthorized-redirect": "1.9.6"
   },
   "devDependencies": {
     "eslint": "3.19.0"
