@@ -10,7 +10,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/date-time-preferences": "1.9.3",
-    "@bufferapp/session-manager": "0.7.0"
+    "@bufferapp/session-manager": "0.7.1"
   },
   "devDependencies": {
     "eslint": "3.19.0"
