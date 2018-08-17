@@ -69,7 +69,7 @@ describe('middleware', () => {
     }));
   });
 
-  it('should requeuePost_${dataFetchActionTypes.FETCH_SUCCESS}', () => {
+  it('should fetch posts again after a post is requeued', () => {
     const RPC_NAME = 'requeuePost';
     const action = dataFetchActions.fetchSuccess({
       name: RPC_NAME,
