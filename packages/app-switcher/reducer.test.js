@@ -9,7 +9,7 @@ describe('reducer', () => {
   describe('actions', () => {
     it('user_fetchSuccess triggers a FETCH_SUCCESS action', () => {
       const id = 1;
-      const name = 'sendFeedback';
+      const name = 'user';
       const result = 'result';
       const args = {
         body: 'test',
