@@ -1,72 +1,112 @@
 import {
   actionTypes as dataFetchActionTypes,
-  actions as dataFetchActions,
 } from '@bufferapp/async-data-fetch';
-
+import deepFreeze from 'deep-freeze';
 import reducer from './reducer';
 
 describe('reducer', () => {
   describe('actions', () => {
-    it('user_fetchSuccess triggers a FETCH_SUCCESS action', () => {
-      const id = 1;
-      const name = 'user';
-      const result = 'result';
-      const args = {
-        body: 'test',
+    it('should initialize default state', () => {
+      const stateAfter = {
+        redirecting: false,
+        showGoBackToClassic: false,
+        submittingFeedback: false,
+        user: {
+          loading: true,
+        },
       };
-      expect(dataFetchActions.fetchSuccess({ name, args, id, result })).toEqual({
+      const action = {
+        type: 'INIT',
+      };
+      deepFreeze(action);
+      expect(reducer(undefined, action))
+        .toEqual(stateAfter);
+    });
+
+    it('user_fetchSuccess triggers a FETCH_SUCCESS action', () => {
+      const redirecting = false;
+      const showGoBackToClassic = true;
+      const submittingFeedback = false;
+      const loading = false;
+      const result = { features: ['...'] };
+
+      const action = {
         type: `user_${dataFetchActionTypes.FETCH_SUCCESS}`,
-        name,
-        args,
-        id,
+        redirecting,
+        showGoBackToClassic,
+        submittingFeedback,
+        user: { loading },
         result,
-      });
+      };
+      const stateAfter = { redirecting, showGoBackToClassic, submittingFeedback, user: { loading, features: ['...'] } };
+      deepFreeze(action);
+      expect(reducer(undefined, action))
+        .toEqual(stateAfter);
     });
 
     it('sendFeedback_fetchStart triggers a FETCH_START action', () => {
-      const id = 1;
-      const name = 'sendFeedback';
-      const args = {
-        body: 'test',
-      };
-      expect(dataFetchActions.fetchStart({ name, args, id })).toEqual({
+      const submittingFeedback = true;
+      const redirecting = false;
+      const showGoBackToClassic = false;
+      const loading = true;
+      const result = { features: ['...'] };
+
+      const action = {
         type: `sendFeedback_${dataFetchActionTypes.FETCH_START}`,
-        name,
-        args,
-        id,
-      });
+        redirecting,
+        showGoBackToClassic,
+        submittingFeedback,
+        user: { loading },
+        result,
+      };
+      const stateAfter = { redirecting, showGoBackToClassic, submittingFeedback, user: { loading } };
+      deepFreeze(action);
+      expect(reducer(undefined, action))
+        .toEqual(stateAfter);
     });
 
     it('sendFeedback_fetchSuccess triggers a FETCH_SUCCESS action', () => {
-      const id = 1;
-      const name = 'sendFeedback';
-      const result = 'result';
-      const args = {
-        body: 'test',
-      };
-      expect(dataFetchActions.fetchSuccess({ name, args, id, result })).toEqual({
+      const submittingFeedback = false;
+      const redirecting = true;
+      const showGoBackToClassic = false;
+      const loading = true;
+      const result = { features: ['...'] };
+
+      const action = {
         type: `sendFeedback_${dataFetchActionTypes.FETCH_SUCCESS}`,
-        name,
-        args,
-        id,
+        redirecting,
+        showGoBackToClassic,
+        submittingFeedback,
+        user: { loading },
         result,
-      });
+      };
+
+      const stateAfter = { redirecting, showGoBackToClassic, submittingFeedback, user: { loading } };
+      deepFreeze(action);
+      expect(reducer(undefined, action))
+        .toEqual(stateAfter);
     });
 
     it('sendFeedback_fetchFail triggers a FETCH_FAIL action', () => {
-      const id = 1;
-      const name = 'sendFeedback';
-      const error = 'error';
-      const args = {
-        body: 'test',
-      };
-      expect(dataFetchActions.fetchFail({ name, args, id, error })).toEqual({
+      const submittingFeedback = false;
+      const redirecting = false;
+      const showGoBackToClassic = false;
+      const loading = true;
+      const result = { features: ['...'] };
+
+      const action = {
         type: `sendFeedback_${dataFetchActionTypes.FETCH_FAIL}`,
-        name,
-        args,
-        id,
-        error,
-      });
+        redirecting,
+        showGoBackToClassic,
+        submittingFeedback,
+        user: { loading },
+        result,
+      };
+
+      const stateAfter = { redirecting, showGoBackToClassic, submittingFeedback, user: { loading } };
+      deepFreeze(action);
+      expect(reducer(undefined, action))
+        .toEqual(stateAfter);
     });
   });
 });
