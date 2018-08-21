@@ -24,6 +24,14 @@ export default ({ dispatch, getState }) => next => (action) => {
         },
       }));
       break;
+    case `COMPOSER_EVENT`:
+      if (action.eventType === 'saved-drafts') {
+        dispatch(notificationActions.createNotification({
+          notificationType: 'success',
+          message: action.data.message,
+        }));
+      }
+      break;
     case `requeuePost_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(dataFetchActions.fetch({
         name: 'queuedPosts',
