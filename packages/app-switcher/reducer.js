@@ -19,6 +19,8 @@ export default (state = initialState, action) => {
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
+        // TODO: uncomment this back in when we can roll out to free users
+        // showGoBackToClassic: !action.result.is_free_user,
         showGoBackToClassic: true,
         user: {
           ...action.result,

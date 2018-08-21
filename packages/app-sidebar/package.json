@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/app-sidebar",
-  "version": "1.9.3",
+  "version": "1.9.6",
   "description": "The sidebar for the Buffer suite of products",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/date-time-preferences": "1.9.3",
-    "@bufferapp/session-manager": "0.6.2"
+    "@bufferapp/session-manager": "0.7.1"
   },
   "devDependencies": {
     "eslint": "3.19.0"

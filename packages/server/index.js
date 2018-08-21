@@ -8,7 +8,10 @@ const fs = require('fs');
 const { join } = require('path');
 const shutdownHelper = require('@bufferapp/shutdown-helper');
 const { apiError } = require('./middleware');
-const { setRequestSession, validateSession } = require('@bufferapp/session-manager/middleware');
+const {
+  setRequestSessionMiddleware,
+  validateSessionMiddleware,
+} = require('@bufferapp/session-manager');
 const bufferMetricsMiddleware = require('@bufferapp/buffermetrics/middleware');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
@@ -66,7 +69,7 @@ app.use(cookieParser());
 
 // All routes after this have access to the user session
 app.use(
-  setRequestSession({
+  setRequestSessionMiddleware({
     production: isProduction,
     sessionKeys: ['publish', 'global'],
   }),
@@ -98,7 +101,7 @@ app.use(
 
 // make sure we have a valid session
 app.use(
-  validateSession({
+  validateSessionMiddleware({
     production: isProduction,
     requiredSessionKeys: ['publish.accessToken', 'global.userId'],
   }),

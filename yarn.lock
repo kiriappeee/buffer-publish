@@ -156,9 +156,9 @@
     react-autocomplete "1.7.2"
     react-day-picker "6.2.1"
 
-"@bufferapp/composer@1.10.3":
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-1.10.3.tgz#b0edda2482959f9212b0346aa5e48cf7b0738cb4"
+"@bufferapp/composer@1.10.4":
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-1.10.4.tgz#50b7ca1b253a735b5bdb603032d3b03d6c2b9dc1"
   dependencies:
     "@bufferapp/buffer-js-api" "0.3.0"
     "@bufferapp/buffer-js-metrics" "0.2.0"
@@ -304,11 +304,11 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@bufferapp/react-keyframes/-/react-keyframes-0.2.5.tgz#fed847849f170c440ad6ea683224352e4b882b92"
 
-"@bufferapp/session-manager@0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@bufferapp/session-manager/-/session-manager-0.6.2.tgz#1c468cae20255ae49d2b3bfc9083fb9e64543ce3"
+"@bufferapp/session-manager@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@bufferapp/session-manager/-/session-manager-0.7.1.tgz#e460f36f9f5b2fa61115983cb7931559a9cefe4e"
   dependencies:
-    jsonwebtoken "8.1.0"
+    jsonwebtoken "8.2.2"
     micro-rpc-client "0.1.2"
     object-path "0.11.4"
 
@@ -6722,11 +6722,11 @@ jsonwebtoken@7.4.1:
     ms "^2.0.0"
     xtend "^4.0.1"
 
-jsonwebtoken@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.1.0.tgz#c6397cd2e5fd583d65c007a83dc7bb78e6982b83"
+jsonwebtoken@8.2.2:
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.2.2.tgz#76d7993fda79660d71bd0f933109e1f133734b20"
   dependencies:
-    jws "^3.1.4"
+    jws "^3.1.5"
     lodash.includes "^4.3.0"
     lodash.isboolean "^3.0.3"
     lodash.isinteger "^4.0.4"
@@ -6734,7 +6734,7 @@ jsonwebtoken@8.1.0:
     lodash.isplainobject "^4.0.6"
     lodash.isstring "^4.0.1"
     lodash.once "^4.0.0"
-    ms "^2.0.0"
+    ms "^2.1.1"
     xtend "^4.0.1"
 
 jsprim@^1.2.2:
@@ -6758,7 +6758,7 @@ jwa@^1.1.5:
     ecdsa-sig-formatter "1.0.10"
     safe-buffer "^5.0.1"
 
-jws@^3.1.4:
+jws@^3.1.4, jws@^3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/jws/-/jws-3.1.5.tgz#80d12d05b293d1e841e7cb8b4e69e561adcf834f"
   dependencies:
@@ -7548,7 +7548,7 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-ms@2.1.1, ms@^2.0.0:
+ms@2.1.1, ms@^2.0.0, ms@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
