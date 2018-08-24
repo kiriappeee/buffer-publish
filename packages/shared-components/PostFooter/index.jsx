@@ -40,10 +40,14 @@ const postControlsStyle = {
 
 /* eslint-disable react/prop-types */
 
-const renderIcon = ({ postDetails }, hasError) =>
+const renderCustomScheduledIcon = () =>
   (<div style={postActionDetailsIconStyle}>
-    {hasError ? <WarningIcon color={'torchRed'} /> : ''}
-    {postDetails.isCustomScheduled ? <ClockIcon color={'outerSpace'} /> : ''}
+    <ClockIcon color={'outerSpace'} />
+  </div>);
+
+const renderErrorIcon = () =>
+  (<div style={postActionDetailsIconStyle}>
+    <WarningIcon color={'torchRed'} />
   </div>);
 
 const renderText = ({ postDetails }, hasError) =>
@@ -73,9 +77,11 @@ const PostFooter = ({
   dragging,
 }) => {
   const hasError = postDetails.error && postDetails.error.length > 0;
+  const isCustomScheduled = postDetails.isCustomScheduled;
   return (<div style={getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
-      {renderIcon({ postDetails }, hasError)}
+      {hasError && renderErrorIcon()}
+      {isCustomScheduled && renderCustomScheduledIcon()}
       {renderText({ postDetails }, hasError)}
     </div>
     { !sent && (
