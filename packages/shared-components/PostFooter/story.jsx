@@ -11,6 +11,11 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsCustomScheduled = {
+  postAction: 'This post is custom scheduled for 9:21 (GMT)',
+  isCustomScheduled: true,
+};
+
 const postDetailsError = {
   postAction: 'This post will be sent at 9:21 (GMT)',
   error: 'Woops! Something went wrong. Try again?',
@@ -32,6 +37,12 @@ storiesOf('PostFooter', module)
   .add('sent post', () => (
     <PostFooter
       postDetails={postDetails}
+      sent
+    />
+  ))
+  .add('custom scheduled post', () => (
+    <PostFooter
+      postDetails={postDetailsCustomScheduled}
       sent
     />
   ))
