@@ -1,10 +1,11 @@
 import React from 'react';
 
 import {
-  Text,
+  Text
 } from '@bufferapp/components';
 
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
+import { EmptyState } from '@bufferapp/publish-shared-components';
 
 const pageStyle = {
   display: 'flex',
@@ -30,7 +31,11 @@ export default () => (
       <ProfileSidebar />
     </div>
     <div style={defaultPageStyle}>
-      <Text>Welcome to Buffer Publish</Text>
+      <EmptyState
+        heroImg="https://s3.amazonaws.com/buffer-publish/images/buffer-social-media-management.svg"
+        title="Let's get your account set up!"
+        heroImgSize={{ width: '560', height: '284'}}
+      />
     </div>
   </div>
 );
