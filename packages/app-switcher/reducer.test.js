@@ -2,43 +2,37 @@ import {
   actionTypes as dataFetchActionTypes,
 } from '@bufferapp/async-data-fetch';
 import deepFreeze from 'deep-freeze';
-import reducer from './reducer';
+import reducer, { initialState } from './reducer';
 
 describe('reducer', () => {
   describe('actions', () => {
     it('should initialize default state', () => {
-      const stateAfter = {
-        redirecting: false,
-        showGoBackToClassic: false,
-        submittingFeedback: false,
-        user: {
-          loading: true,
-        },
-      };
       const action = {
         type: 'INIT',
       };
       deepFreeze(action);
       expect(reducer(undefined, action))
-        .toEqual(stateAfter);
+        .toEqual(initialState);
     });
 
-    it('user_fetchSuccess triggers a FETCH_SUCCESS action', () => {
-      const redirecting = false;
-      const showGoBackToClassic = true;
-      const submittingFeedback = false;
-      const loading = false;
-      const result = { features: ['...'] };
+    it('sets showGoBackToClassic to true when the user is on new publish beta', () => {
+      const features = ['new_publish_beta', 'new_publish_beta_redirect'];
+      const stateAfter = {
+        ...initialState,
+        showGoBackToClassic: true,
+        user: {
+          loading: false,
+          features,
+        },
+      };
 
       const action = {
         type: `user_${dataFetchActionTypes.FETCH_SUCCESS}`,
-        redirecting,
-        showGoBackToClassic,
-        submittingFeedback,
-        user: { loading },
-        result,
+        result: {
+          features,
+        },
       };
-      const stateAfter = { redirecting, showGoBackToClassic, submittingFeedback, user: { loading, features: ['...'] } };
+
       deepFreeze(action);
       expect(reducer(undefined, action))
         .toEqual(stateAfter);

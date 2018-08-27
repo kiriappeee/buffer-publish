@@ -5,7 +5,7 @@ import {
 
 export const actionTypes = {};
 
-const initialState = {
+export const initialState = {
   redirecting: false,
   showGoBackToClassic: false,
   submittingFeedback: false,
