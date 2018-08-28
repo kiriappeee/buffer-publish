@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Text,
   WarningIcon,
+  ClockIcon,
 } from '@bufferapp/components';
 import {
   borderWidth,
@@ -39,7 +40,12 @@ const postControlsStyle = {
 
 /* eslint-disable react/prop-types */
 
-const renderIcon = () =>
+const renderCustomScheduledIcon = () =>
+  (<div style={postActionDetailsIconStyle}>
+    <ClockIcon color={'outerSpace'} />
+  </div>);
+
+const renderErrorIcon = () =>
   (<div style={postActionDetailsIconStyle}>
     <WarningIcon color={'torchRed'} />
   </div>);
@@ -71,9 +77,11 @@ const PostFooter = ({
   dragging,
 }) => {
   const hasError = postDetails.error && postDetails.error.length > 0;
+  const isCustomScheduled = postDetails.isCustomScheduled;
   return (<div style={getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
-      {hasError && renderIcon()}
+      {hasError && renderErrorIcon()}
+      {isCustomScheduled && renderCustomScheduledIcon()}
       {renderText({ postDetails }, hasError)}
     </div>
     { !sent && (

@@ -27,6 +27,10 @@ const getPostActionString = ({ post }) => {
       twentyFourHourTime: post.twentyfour_hour_time,
     },
   );
+
+  if (post.scheduled_at) {
+    return `This post ${post.sent_at ? 'was' : 'is'} custom scheduled for ${dateString}.`;
+  }
   return `This post ${post.sent_at ? 'was' : 'will be'} sent ${dateString}.`;
 };
 
@@ -34,6 +38,7 @@ const getPostDetails = ({ post }) => ({
   postAction: getPostActionString({ post }),
   isRetweet: post.retweet !== undefined,
   error: post.error || '',
+  isCustomScheduled: post.scheduled_at ? true : false,
 });
 
 const getRetweetProfileInfo = (post) => {
