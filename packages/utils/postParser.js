@@ -29,7 +29,7 @@ const getPostActionString = ({ post }) => {
   );
 
   if (post.scheduled_at) {
-    return `This post ${post.sent_at ? 'was ' : 'is '} custom scheduled for ${dateString}.`;
+    return `This post ${post.sent_at ? 'was' : 'is'} custom scheduled for ${dateString}.`;
   }
   return `This post ${post.sent_at ? 'was' : 'will be'} sent ${dateString}.`;
 };
