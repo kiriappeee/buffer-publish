@@ -7,6 +7,7 @@ export const actionTypes = {};
 const initialState = {
   hasPublishBeta: false,
   hasPublishBetaRedirect: false,
+  hasNewPublishNewFreeUser: false,
   loading: true,
 };
 
