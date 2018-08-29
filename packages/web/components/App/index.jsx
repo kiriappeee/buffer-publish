@@ -13,7 +13,7 @@ import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 import AppModals from '@bufferapp/publish-modals';
 
-import DefaultPage from '../../../default-page';
+import DefaultPage from '@bufferapp/default-page';
 
 const appStyle = {
   display: 'flex',
