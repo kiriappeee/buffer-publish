@@ -1,5 +1,5 @@
 import { push } from 'react-router-redux';
-import { getConnectSocialAccountURL } from '@bufferapp/publish-utils';
+import { getManageSocialAccountURL } from '@bufferapp/publish-utils';
 
 import {
   generateProfilePageRoute,
@@ -59,7 +59,7 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case actionTypes.CONNECT_SOCIAL_ACCOUNT:
-      window.location = getConnectSocialAccountURL();
+      window.location = getManageSocialAccountURL();
       break;
     case `pauseQueue_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(notificationActions.createNotification({
