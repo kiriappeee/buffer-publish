@@ -6,6 +6,7 @@ const linkParsing = require('./linkParsing');
 const buildPostMap = require('./buildPostMap');
 const constants = require('./constants');
 const getClassicBufferURL = require('./getClassicBufferURL');
+const getConnectSocialAccountURL = require('./getConnectSocialAccountURL');
 
 module.exports = {
   date,
@@ -16,4 +17,5 @@ module.exports = {
   buildPostMap,
   constants,
   getClassicBufferURL,
+  getConnectSocialAccountURL,
 };
