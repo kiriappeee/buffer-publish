@@ -7,7 +7,6 @@ import DefaultPage, {
   middleware,
 } from './index';
 
-
 describe('DefaultPage', () => {
 
   it('should export actions', () => {
