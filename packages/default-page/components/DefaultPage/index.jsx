@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
-  Text
+  Text,
+  Button
 } from '@bufferapp/components';
 
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
@@ -23,9 +25,13 @@ const defaultPageStyle = {
   padding: '1rem',
   textAlign: 'center',
   flex: '1',
+  marginTop: '10vh'
 };
 
-export default () => (
+const DefaultPage = ({
+  onConnectSocialAccountClick,
+  translations
+}) => (
   <div style={pageStyle}>
     <div style={profileSideBarStyle}>
       <ProfileSidebar />
@@ -33,9 +39,24 @@ export default () => (
     <div style={defaultPageStyle}>
       <EmptyState
         heroImg="https://s3.amazonaws.com/buffer-publish/images/buffer-social-media-management.svg"
-        title="Let's get your account set up!"
+        title={translations.defaultTitle}
         heroImgSize={{ width: '560', height: '284'}}
+        height='auto'
       />
+      <Button
+        onClick={() => { onConnectSocialAccountClick(); }}>
+        {translations.connectButton}
+      </Button>
     </div>
   </div>
 );
+
+DefaultPage.propTypes = {
+  onConnectSocialAccountClick: PropTypes.func.isRequired,
+  translations: PropTypes.shape({
+    connectButton: PropTypes.string,
+    defaultTitle: PropTypes.string,
+  }).isRequired,
+};
+
+export default DefaultPage;

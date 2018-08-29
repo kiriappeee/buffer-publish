@@ -21,6 +21,7 @@ import { reducer as changePasswordReducer } from '@bufferapp/change-password';
 import { reducer as manageAppsReducer } from '@bufferapp/manage-apps-extras';
 import { reducer as twoFactorAuthReducer } from '@bufferapp/publish-two-factor-auth';
 import { reducer as closeAccountReducer } from '@bufferapp/close-account';
+import { reducer as defaultPageReducer } from '../default-page';
 
 export default combineReducers({
   form: formReducer,
@@ -45,4 +46,5 @@ export default combineReducers({
   manageAppsExtras: manageAppsReducer,
   twoFactorAuth: twoFactorAuthReducer,
   closeAccount: closeAccountReducer,
+  defaultPage: defaultPageReducer,
 });
