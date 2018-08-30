@@ -1,6 +1,4 @@
-import configureMockStore from 'redux-mock-store';
-import { mount, shallow } from 'enzyme';
-import React from 'react';
+// import React from 'react';
 import DefaultPage, {
   actions,
   actionTypes,

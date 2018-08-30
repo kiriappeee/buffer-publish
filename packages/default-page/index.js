@@ -10,9 +10,9 @@ export default connect(
   (dispatch, ownProps) => ({
     onConnectSocialAccountClick: () => {
       dispatch(actions.handleConnectSocialAccountClick());
-    },
+    }, 
   }),
 )(DefaultPage);
 
-export reducer, { actions, actionTypes } from './reducer';
+export { actions, actionTypes } from './reducer';
 export middleware from './middleware';

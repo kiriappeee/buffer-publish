@@ -5,7 +5,6 @@ import {
   actionTypes,
 } from './reducer';
 
-
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
