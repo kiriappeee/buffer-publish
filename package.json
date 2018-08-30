@@ -113,7 +113,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!@bufferapp/*)"
+      "/node_modules(?!\/@bufferapp\/performance-tracking)(?!\/@bufferapp\/async-data-fetch)(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/"
     ],
     "verbose": true,
     "collectCoverage": true,
