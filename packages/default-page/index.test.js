@@ -1,12 +1,10 @@
-// import React from 'react';
-import DefaultPage, {
+import {
   actions,
   actionTypes,
   middleware,
 } from './index';
 
 describe('DefaultPage', () => {
-
   it('should export actions', () => {
     expect(actions)
       .toBeDefined();

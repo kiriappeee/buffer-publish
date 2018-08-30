@@ -17,5 +17,5 @@ module.exports = {
       return 'https://local.buffer.com/manage/own';
     }
     return 'https://buffer.com/manage/own';
-  }
+  },
 };

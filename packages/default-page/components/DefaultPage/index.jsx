@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import {
-  Text,
-  Button
+  Button,
 } from '@bufferapp/components';
-
-import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import { EmptyState } from '@bufferapp/publish-shared-components';
 
 const pageStyle = {
@@ -15,36 +11,28 @@ const pageStyle = {
   height: '100%',
 };
 
-const profileSideBarStyle = {
-  flexBasis: '16rem',
-  width: '16rem',
-  minWidth: '16rem',
-};
-
 const defaultPageStyle = {
   padding: '1rem',
   textAlign: 'center',
   flex: '1',
-  marginTop: '10vh'
+  marginTop: '10vh',
 };
 
 const DefaultPage = ({
   onConnectSocialAccountClick,
-  translations
+  translations,
 }) => (
   <div style={pageStyle}>
-    <div style={profileSideBarStyle}>
-      <ProfileSidebar />
-    </div>
     <div style={defaultPageStyle}>
       <EmptyState
         heroImg="https://s3.amazonaws.com/buffer-publish/images/buffer-social-media-management.svg"
         title={translations.defaultTitle}
-        heroImgSize={{ width: '560', height: '284'}}
-        height='auto'
+        heroImgSize={{ width: '560', height: '284' }}
+        height="auto"
       />
       <Button
-        onClick={() => { onConnectSocialAccountClick(); }}>
+        onClick={() => { onConnectSocialAccountClick(); }}
+      >
         {translations.connectButton}
       </Button>
     </div>

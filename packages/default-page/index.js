@@ -1,16 +1,16 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import { actions } from './reducer';
 
 import DefaultPage from './components/DefaultPage';
 
 export default connect(
-  (state, ownProps) => ({
+  state => ({
     translations: state.i18n.translations['default-page'],
   }),
-  (dispatch, ownProps) => ({
+  dispatch => ({
     onConnectSocialAccountClick: () => {
       dispatch(actions.handleConnectSocialAccountClick());
-    }, 
+    },
   }),
 )(DefaultPage);
 
