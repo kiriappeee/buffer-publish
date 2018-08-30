@@ -32,7 +32,7 @@ const timesSingle = [
 
 const timesEmpty = [];
 
-storiesOf('ScheduleTableColumn')
+storiesOf('ScheduleTableColumn', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <ScheduleTableColumn

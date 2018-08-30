@@ -54,6 +54,7 @@ const PostingTimeForm = ({
   handleSubmit,
   submitting,
   twentyfourHourTime,
+  fontSize,
 }) => (
   <form>
     <div style={editScheduleStyle}>
@@ -72,6 +73,7 @@ const PostingTimeForm = ({
             <Field
               name={'day'}
               component={InputWeekday}
+              fontSize={'small'}
             />
           </div>
           <Text
@@ -86,6 +88,7 @@ const PostingTimeForm = ({
               name={'time'}
               component={InputTime}
               select24Hours={twentyfourHourTime}
+              fontSize={'small'}
             />
           </div>
           <div style={addPostingTimeStyle}>

@@ -1,22 +1,18 @@
 {
   "name": "@bufferapp/publish-beta-redirect",
-  "version": "1.8.0",
+  "version": "1.9.7",
   "description": "Redirect to classic Buffer web when the user is not in the publish beta",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ignore-pattern coverage node_modules",
-    "test": "yarn run lint && sh ../../package_test.sh",
-    "test-watch": "jest --watch"
+    "lint": "eslint . --ignore-pattern coverage node_modules"
   },
   "author": "hamstu@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.6.2",
-    "@bufferapp/components": "2.3.0",
-    "@bufferapp/publish-shared-components": "1.8.0"
+    "@bufferapp/async-data-fetch": "1.9.3",
+    "@bufferapp/publish-shared-components": "1.9.7"
   },
   "devDependencies": {
-    "eslint": "3.19.0",
-    "jest": "19.0.2"
+    "eslint": "3.19.0"
   },
   "publishConfig": {
     "access": "public"

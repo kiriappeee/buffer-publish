@@ -35,7 +35,7 @@ const squareImage = 'http://lorempixel.com/400/400/cats/';
 const tallImage = 'http://lorempixel.com/400/900/cats/';
 const wideImage = 'http://lorempixel.com/900/400/cats/';
 
-storiesOf('LinkPost')
+storiesOf('LinkPost', module)
   .addDecorator(checkA11y)
   .add('queued link post', () => (
     <LinkPost

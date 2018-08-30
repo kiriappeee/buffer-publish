@@ -24,7 +24,7 @@ import {
 const history = createHistory();
 const store = createStore(combineReducers({ form: formReducer }));
 
-storiesOf('ProfileSettings')
+storiesOf('ProfileSettings', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory =>
     <Provider store={store}>

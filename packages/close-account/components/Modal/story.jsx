@@ -9,7 +9,7 @@ import Modal from './index';
 
 const store = createStore(combineReducers({ form: formReducer }));
 
-storiesOf('Modal', module)
+storiesOf('Close Account Modal', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
   .add('default', () => (

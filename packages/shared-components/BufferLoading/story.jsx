@@ -8,7 +8,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 
 import BufferLoading from './index';
 
-storiesOf('BufferLoading')
+storiesOf('BufferLoading', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <BufferLoading />

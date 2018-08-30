@@ -39,6 +39,7 @@ const TableCellContents = ({
   time,
   onRemoveTimeClick,
   onUpdateTime,
+  fontSize,
 }) => {
   const buttonStyle = calculateStyles({
     default: {
@@ -73,6 +74,7 @@ const TableCellContents = ({
           minimal
           centerText
           displayTimeColon
+          fontSize={'small'}
         />
       </div>
       {RemoveButton(time, onRemoveTimeClick, buttonStyle)}

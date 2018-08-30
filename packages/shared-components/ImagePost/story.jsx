@@ -42,7 +42,7 @@ const squareImage = 'http://via.placeholder.com/400x400';
 const tallImage = 'http://via.placeholder.com/400x900';
 const wideImage = 'http://via.placeholder.com/900x400';
 
-storiesOf('ImagePost')
+storiesOf('ImagePost', module)
   .addDecorator(checkA11y)
   .add('queued image post', () => (
     <ImagePost

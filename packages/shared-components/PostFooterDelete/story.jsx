@@ -7,7 +7,7 @@ import {
 import { checkA11y } from 'storybook-addon-a11y';
 import PostFooterDelete from './index';
 
-storiesOf('PostFooterDelete')
+storiesOf('PostFooterDelete', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <PostFooterDelete

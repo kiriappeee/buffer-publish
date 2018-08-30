@@ -11,7 +11,7 @@ import PostingTimeForm from './index';
 
 const store = createStore(combineReducers({ form: formReducer }));
 
-storiesOf('PostingTimeForm')
+storiesOf('PostingTimeForm', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory =>
     <Provider store={store}>

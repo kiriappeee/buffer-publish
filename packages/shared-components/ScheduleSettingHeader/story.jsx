@@ -13,7 +13,7 @@ const timezoneOptions = [
   { value: 'Tokyo', name: 'Tokyo' },
 ];
 
-storiesOf('ScheduleSettingHeader')
+storiesOf('ScheduleSettingHeader', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <ScheduleSettingHeader

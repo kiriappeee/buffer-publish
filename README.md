@@ -50,17 +50,16 @@ To get started on local development and testing:
     $ node -v
     ```
 
-4. **Install Packages and Bootstrap**
+4. **Install Dependencies**
     ```bash
     $ cd ~/buffer-dev/buffer-publish  # Or wherever yours is located
     $ yarn
-    $ yarn run bootstrap
    ```
 
 5. **Start up the publish docker containers**
     ```bash
     $ cd ../buffer-dev
-    $ ./dev up session-service login account publish
+    $ ./dev up session-service core-authentication-service login publish
    ```
 
    Publish relies on both the **session** and **account** services, so it's important to include them in our _up_ command. The order is important, since this relates to the way docker-compose starts up containers.
@@ -73,7 +72,7 @@ To get started on local development and testing:
      While you're waiting for the bundle to finish, head on over to https://local.buffer.com to login. (We're not quite ready to view Publish yet.)
 
 7. **Give yourself the correct feature flip**
-  In order to view Buffer Publish your user (usually admin@bufferap.com for local dev)
+  In order to view Buffer Publish your user (usually admin@bufferapp.com for local dev)
  must have the _New Buffer Publish_ feature flip. Otherwise you'll just get redirected back to classic Buffer. To add the feature visit https://local.buffer.com/admin and browse to the _My Account_ page.
 
    If you don't have the feature flip available, then you should probably pull down all the feature flips from production first:
@@ -171,11 +170,10 @@ We have a few helpful commands defined in this project's `package.json`.
 
 | Command | Description |
 |--|--|
-| `yarn run bootstrap`  | This runs `yarn` (to install) on each package and links local packages together! ✨ |
-| `yarn run clean`  | Deletes all `node_modules` from all packages. Use this first if you see any odd dependency errors and then follow with a `yarn run bootstrap`. |
+| `yarn`  | This goes through all packages, installs dependencies and links local packages together! ✨ |
+| `yarn run clean`  | Deletes all `node_modules` from all packages. Use this first if you see any odd dependency errors and then follow with `yarn`. |
 | `yarn run test`  | Runs `yarn test` on all packages. |
 | `yarn run test-update`  | Runs `yarn run test-update` on all packages to update all snapshot tests. |
-| `yarn run init`  | Runs `yarn` on the top level package and then runs `yarn run bootstrap` to setup all packages. Generally you won't need to run this more than once to set things up. |
 | `yarn run start`  | Starts up the Publish Express server, [as explained above](#the-publish-server), and is run automatically when you start Publish with `./dev up`. (So in most cases you won't be running this command.) |
 | `yarn run publish`  | This publishes the changed packages to npm. |
 
@@ -191,7 +189,7 @@ in the root directory (`buffer-publish/`) run the follwing commands:
 
 ```bash
 $ yarn add -DE some-cool-package
-$ yarn run bootstrap
+$ yarn
 ```
 
 Now `some-cool-package` is available to all packages.

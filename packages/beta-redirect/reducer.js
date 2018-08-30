@@ -7,6 +7,7 @@ export const actionTypes = {};
 const initialState = {
   hasPublishBeta: false,
   hasPublishBetaRedirect: false,
+  hasNewPublishNewFreeUser: false,
   loading: true,
 };
 
@@ -18,6 +19,7 @@ export default (state = initialState, action) => {
         loading: false,
         hasPublishBeta: features.includes('new_publish_beta'),
         hasPublishBetaRedirect: features.includes('new_publish_beta_redirect'),
+        hasNewPublishNewFreeUser: features.includes('new_publish_new_buffer_free_users'),
       };
     }
     default:

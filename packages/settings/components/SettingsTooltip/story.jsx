@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import SettingsTooltip from './index';
 
-storiesOf('SettingsTooltip')
+storiesOf('SettingsTooltip', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <SettingsTooltip />

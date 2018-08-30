@@ -7,7 +7,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 import DropdownTab from './index';
 import DropdownItem from '../DropdownItem/index';
 
-storiesOf('DropdownTab')
+storiesOf('DropdownTab', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <DropdownTab

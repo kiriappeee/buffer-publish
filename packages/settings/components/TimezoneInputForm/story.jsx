@@ -78,7 +78,7 @@ function sortStates(a, b, value) {
   return aLower < bLower ? -1 : 1;
 }
 
-storiesOf('TimezoneInputForm')
+storiesOf('TimezoneInputForm', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory =>
     <Provider store={store}>

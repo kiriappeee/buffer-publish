@@ -17,7 +17,7 @@ const notifications = [
   },
 ];
 
-storiesOf('Notifications')
+storiesOf('Notifications', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <Notifications
