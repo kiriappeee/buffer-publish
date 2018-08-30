@@ -1,12 +1,13 @@
 // component vs. container https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 import { connect } from 'react-redux';
+import { hot } from 'react-hot-loader';
 import { getProfilePageParams } from '@bufferapp/publish-routes';
 import { actions as dataFetchActions } from '@bufferapp/async-data-fetch';
 import ProfilePage from './components/ProfilePage';
 
 
 // default export = container
-export default connect(
+export default hot(module)(connect(
   (state, ownProps) => {
     const { tabId, profileId } =
       getProfilePageParams({ path: ownProps.history.location.pathname }) || {};
@@ -37,4 +38,4 @@ export default connect(
       );
     },
   }),
-)(ProfilePage);
+)(ProfilePage));
