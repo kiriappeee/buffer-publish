@@ -1,15 +1,11 @@
-import { getConnectSocialAccountURL } from '@bufferapp/publish-utils';
+import { getURL } from '@bufferapp/publish-utils';
+import { actionTypes } from './reducer';
 
-import {
-  actions,
-  actionTypes,
-} from './reducer';
-
-export default ({ dispatch, getState }) => next => (action) => {
+export default () => next => (action) => {
   next(action);
   switch (action.type) {
     case actionTypes.CONNECT_SOCIAL_ACCOUNT:
-      window.location = getConnectSocialAccountURL();
+      window.location = getURL.getConnectSocialAccountURL();
       break;
     default:
       break;
