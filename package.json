@@ -16,7 +16,7 @@
     "watch": "webpack-dev-server --config ./packages/server/webpack.config.dev.js --colors --display-error-details",
     "build": "webpack --config ./packages/server/webpack.config.prod.js --output-path=`pwd`",
     "updated": "lerna updated",
-    "postinstall": "if [ -z \"$CI\" ]; then npm rebuild grpc --target_arch=x64 --target_platform=linux --target_libc=glibc; else echo Skipping npm rebuild grpc; fi"
+    "rebuild-grpc": "docker exec -it bufferdev_publish_1 bash -c 'npm rebuild grpc --target_arch=x64 --target_platform=linux --target_libc=glibc'"
   },
   "repository": {
     "type": "git",
