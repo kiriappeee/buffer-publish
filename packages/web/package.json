@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-web",
-  "version": "1.9.7",
+  "version": "1.9.8",
   "description": "Buffer Web Dashboard",
   "main": "index.jsx",
   "scripts": {
@@ -9,15 +9,15 @@
   "dependencies": {
     "@bufferapp/app-sidebar": "1.9.6",
     "@bufferapp/notifications": "1.9.3",
-    "@bufferapp/profile-page": "1.9.7",
-    "@bufferapp/publish-app-switcher": "1.9.7",
-    "@bufferapp/publish-beta-redirect": "1.9.7",
+    "@bufferapp/profile-page": "1.9.8",
+    "@bufferapp/publish-app-switcher": "1.9.8",
+    "@bufferapp/publish-beta-redirect": "1.9.8",
     "@bufferapp/publish-example": "1.9.3",
-    "@bufferapp/publish-modals": "1.9.7",
-    "@bufferapp/publish-preferences": "1.9.7",
-    "@bufferapp/publish-profile-sidebar": "1.9.7",
+    "@bufferapp/publish-modals": "1.9.8",
+    "@bufferapp/publish-preferences": "1.9.8",
+    "@bufferapp/publish-profile-sidebar": "1.9.8",
     "@bufferapp/publish-routes": "1.9.3",
-    "@bufferapp/publish-store": "1.9.7"
+    "@bufferapp/publish-store": "1.9.8"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
   "devDependencies": {

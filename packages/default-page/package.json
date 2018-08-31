@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/default-page",
-  "version": "1.0.0",
+  "version": "1.9.8",
   "description": "Default Page package",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   },
   "author": "amylee@buffer.com",
   "dependencies": {
-    "@bufferapp/publish-shared-components": "1.9.3",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/publish-profile-sidebar": "1.9.3",
+    "@bufferapp/publish-shared-components": "1.9.3",
     "@bufferapp/publish-utils": "1.9.3"
   },
   "devDependencies": {

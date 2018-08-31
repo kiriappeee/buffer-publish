@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-utils",
-  "version": "1.9.7",
+  "version": "1.9.8",
   "description": "Misc. utils for dates, parsing, etc.",
   "main": "index.js",
   "scripts": {
