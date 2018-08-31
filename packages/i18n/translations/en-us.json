@@ -8,6 +8,10 @@
     "lockedList": "Locked Social Accounts",
     "lockedListTooltip": "Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!"
   },
+  "default-page": {
+    "connectButton": "Connect your social accounts",
+    "defaultTitle": "Let's get your account set up!"
+  },
   "stripe": {
     "noNameError": "Uh oh, please fill out the cardholder name :)",
     "noZipError": "For extra security, please add the zip code associated with this card",

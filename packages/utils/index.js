@@ -5,7 +5,7 @@ const userParser = require('./userParser');
 const linkParsing = require('./linkParsing');
 const buildPostMap = require('./buildPostMap');
 const constants = require('./constants');
-const getClassicBufferURL = require('./getClassicBufferURL');
+const getURL = require('./getURL');
 
 module.exports = {
   date,
@@ -15,5 +15,5 @@ module.exports = {
   linkParsing,
   buildPostMap,
   constants,
-  getClassicBufferURL,
+  getURL,
 };
