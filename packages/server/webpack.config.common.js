@@ -19,6 +19,9 @@ module.exports = {
         exclude: /node_modules(?!\/@bufferapp\/performance-tracking)(?!\/@bufferapp\/async-data-fetch)(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/,
         use: {
           loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          },
         },
       },
       {

@@ -91,11 +91,11 @@ module.exports = (post) => {
 
   const retweetCommentLinks = canHaveLinks ? parseTwitterLinks(retweetComment) : [];
 
-  const isFixed = (
+  const isFixed = Boolean(
     post.pinned ||
     post.scheduled_at ||
     post.due_at === 0 ||
-    post.error
+    post.error,
   );
 
   const isPastDue = isInThePast(post.scheduled_at);
