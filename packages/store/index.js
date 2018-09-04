@@ -24,6 +24,7 @@ import { middleware as manageAppsMiddleware } from '@bufferapp/manage-apps-extra
 import { middleware as twoFactorAuthMiddleware } from '@bufferapp/publish-two-factor-auth';
 import { middleware as dateTimePreferencesMiddleware } from '@bufferapp/date-time-preferences';
 import { middleware as closeAccountMiddleware } from '@bufferapp/close-account';
+import { middleware as defaultPageMiddleware } from '@bufferapp/default-page';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -72,7 +73,8 @@ const configureStore = (initialstate) => {
         twoFactorAuthMiddleware,
         dateTimePreferencesMiddleware,
         closeAccountMiddleware,
-        bufferMetricsMiddleware,
+        defaultPageMiddleware,
+        bufferMetricsMiddleware
       ),
     ),
   );

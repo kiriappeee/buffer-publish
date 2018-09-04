@@ -18,4 +18,6 @@ module.exports = userData => ({
   week_starts_monday: userData.week_starts_monday,
   has_ig_direct_flip: userData.features.includes('instagram_direct_posting'),
   twofactor: userData.twofactor,
+  has_simplified_free_plan_ux: userData.features.includes('has_simplified_free_plan_ux'),
+  hasIGLocationTaggingFeature: userData.features.includes('instagram-location-tagging'),
 });

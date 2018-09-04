@@ -13,6 +13,10 @@ import {
   boxShadowLevelTwo,
 } from '@bufferapp/components/style/dropShadow';
 
+import {
+  borderRadius
+} from '@bufferapp/components/style/border';
+
 import PostFooter from '../PostFooter';
 import RetweetPanel from '../RetweetPanel';
 
@@ -21,6 +25,7 @@ const getPostContainerStyle = ({ dragging, hovering }) => ({
   width: '100%',
   boxShadow: (hovering && !dragging) ? '0 2px 4px 0 rgba(0,0,0,0.50)' : 'none',
   transition: `box-shadow 0.1s ${transitionAnimationType}`,
+  borderRadius,
 });
 
 const postStyle = {

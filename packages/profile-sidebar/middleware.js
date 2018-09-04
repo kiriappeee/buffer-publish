@@ -1,4 +1,6 @@
 import { push } from 'react-router-redux';
+import { getURL } from '@bufferapp/publish-utils';
+
 import {
   generateProfilePageRoute,
   getProfilePageParams,
@@ -13,13 +15,6 @@ import {
   actions,
   actionTypes,
 } from './reducer';
-
-const getConnectAccountURL = () => {
-  if (window.location.hostname === 'publish.local.buffer.com') {
-    return 'https://local.buffer.com/manage/own';
-  }
-  return 'https://buffer.com/manage/own';
-};
 
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
@@ -64,7 +59,7 @@ export default ({ dispatch, getState }) => next => (action) => {
       }));
       break;
     case actionTypes.CONNECT_SOCIAL_ACCOUNT:
-      window.location = getConnectAccountURL();
+      window.location = getURL.getManageSocialAccountURL();
       break;
     case `pauseQueue_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(notificationActions.createNotification({
