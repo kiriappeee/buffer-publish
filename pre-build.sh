@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e # fail bash script on any error below
+
 yarn run init
 yarn run build
 
