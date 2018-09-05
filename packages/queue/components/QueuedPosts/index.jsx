@@ -23,6 +23,7 @@ const composerStyle = {
 
 const topBarContainerStyle = {
   display: 'flex',
+  position: 'relative'
 };
 
 const loadingContainerStyle = {
