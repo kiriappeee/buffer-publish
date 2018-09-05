@@ -4,11 +4,11 @@
   "version": "0.0.1",
   "description": "🍩",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "yarn",
     "clean": "lerna clean",
     "test": "if [ -n \"$CI\" ]; then yarn && jest --runInBand; else jest; fi",
     "test-update": "jest -u",
-    "init": "lerna init",
+    "init": "yarn",
     "start": "cd ./packages/server/ && yarn run start",
     "storybook": "start-storybook -p 9001",
     "publish": "lerna publish --exact",
