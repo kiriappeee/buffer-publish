@@ -1,6 +1,5 @@
 {
   "name": "web",
-  "lerna": "3.2.1",
   "version": "1.9.8",
   "independent": false,
   "npmClient": "yarn",
