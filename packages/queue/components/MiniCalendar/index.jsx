@@ -138,9 +138,12 @@ const MiniCalendar = ({numberPostsByDate, onMiniCalendarMonthChange}) => {
 };
 
 MiniCalendar.propTypes = {
+  onMiniCalendarMonthChange: PropTypes.func.isRequired,
+  numberPostsByDate: PropTypes.object,
 };
 
 MiniCalendar.defaultProps = {
+  numberPostsByDate: null,
 };
 
 export default MiniCalendar;

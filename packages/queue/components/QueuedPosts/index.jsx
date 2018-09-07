@@ -158,6 +158,8 @@ QueuedPosts.propTypes = {
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
+  onMiniCalendarMonthChange: PropTypes.func,
+  numberPostsByDate: PropTypes.object,
 };
 
 QueuedPosts.defaultProps = {
@@ -171,6 +173,7 @@ QueuedPosts.defaultProps = {
   editMode: false,
   paused: false,
   showCalendar: false,
+  numberPostsByDate: null,
 };
 
 export default QueuedPosts;
