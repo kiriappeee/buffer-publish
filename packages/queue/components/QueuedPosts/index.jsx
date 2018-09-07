@@ -61,7 +61,6 @@ const QueuedPosts = ({
   paused,
   onUnpauseClick,
   onCalendarToggleClick,
-  hasCalendarFeatureFlip,
   numberPostsByDate,
   onMiniCalendarMonthChange,
 }) => {
@@ -91,13 +90,12 @@ const QueuedPosts = ({
             onFocus={onComposerPlaceholderClick}
           />
         </div>
-        {hasCalendarFeatureFlip &&
-          <div style={buttonStyle}>
-            <Button secondary onClick={onCalendarToggleClick}>
-              {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
-            </Button>
-          </div>}
-        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar numberPostsByDate={numberPostsByDate} onMiniCalendarMonthChange={onMiniCalendarMonthChange}  />}
+        <div style={buttonStyle}>
+          <Button secondary onClick={onCalendarToggleClick}>
+            {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
+          </Button>
+        </div>
+        {showCalendar && <MiniCalendar numberPostsByDate={numberPostsByDate} onMiniCalendarMonthChange={onMiniCalendarMonthChange}  />}
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
@@ -160,7 +158,6 @@ QueuedPosts.propTypes = {
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
-  hasCalendarFeatureFlip: PropTypes.bool,
 };
 
 QueuedPosts.defaultProps = {
@@ -174,7 +171,6 @@ QueuedPosts.defaultProps = {
   editMode: false,
   paused: false,
   showCalendar: false,
-  hasCalendarFeatureFlip: false,
 };
 
 export default QueuedPosts;
