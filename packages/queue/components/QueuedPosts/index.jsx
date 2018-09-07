@@ -62,6 +62,8 @@ const QueuedPosts = ({
   onUnpauseClick,
   onCalendarToggleClick,
   hasCalendarFeatureFlip,
+  numberPostsByDate,
+  onMiniCalendarMonthChange,
 }) => {
   if (loading) {
     return (
@@ -95,7 +97,7 @@ const QueuedPosts = ({
               {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
             </Button>
           </div>}
-        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar />}
+        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar numberPostsByDate={numberPostsByDate} onMiniCalendarMonthChange={onMiniCalendarMonthChange}  />}
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}

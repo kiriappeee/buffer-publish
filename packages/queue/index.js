@@ -39,6 +39,7 @@ export default connect(
         showCalendar: currentProfile.showCalendar,
         hasCalendarFeatureFlip: state.appSidebar.user.features.includes('mini_calendar'),
         paused,
+        numberPostsByDate: state.queue.numberPostsByDate,
       };
     }
     return {};
@@ -124,6 +125,13 @@ export default connect(
     },
     onCalendarToggleClick: () => {
       dispatch(actions.handleCalendarToggle({ profileId: ownProps.profileId }));
+    },
+    onMiniCalendarMonthChange: (startDate, endDate) => {
+      dispatch(actions.handleMiniCalendarMonthChange({
+        profileId: ownProps.profileId,
+        startDate,
+        endDate,
+      }));
     },
   }),
 )(QueuedPosts);
