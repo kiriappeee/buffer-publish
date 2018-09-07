@@ -23,6 +23,7 @@ export const actionTypes = keyWrapper('QUEUE', {
   REORDERED_UPDATES: 0,
   POST_REQUEUE: 0,
   TOGGLE_CALENDAR: 0,
+  GET_NUMBER_POSTS: 0,
 });
 
 export const initialState = {
@@ -453,6 +454,11 @@ export default (state = initialState, action) => {
         showComposer: false,
         editMode: false,
       };
+    case `getNumberPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        numberPostsByDate: action.result.numberPostsByDate,
+      };
     default:
       return state;
   }
@@ -543,5 +549,11 @@ export const actions = {
   handleCalendarToggle: ({ profileId }) => ({
     type: actionTypes.TOGGLE_CALENDAR,
     profileId,
+  }),
+  handleMiniCalendarMonthChange: ({ profileId, startDate, endDate}) => ({
+    type: actionTypes.GET_NUMBER_POSTS,
+    profileId,
+    startDate,
+    endDate,
   }),
 };
