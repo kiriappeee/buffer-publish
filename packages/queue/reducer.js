@@ -428,6 +428,7 @@ export default (state = initialState, action) => {
       if (profileId) {
         return {
           ...state,
+          numberPostsByDate: null,
           byProfileId: {
             ...state.byProfileId,
             [profileId]: profileReducer(state.byProfileId[profileId], action),
