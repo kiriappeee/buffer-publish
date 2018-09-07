@@ -107,6 +107,12 @@ const modifiers = {
 
 const MiniCalendar = ({numberPostsByDate, onMiniCalendarMonthChange}) => {
 
+  if(!numberPostsByDate) {
+    const startDate = moment().startOf('month').unix();
+    const endDate = moment().endOf('month').unix();
+    onMiniCalendarMonthChange(startDate, endDate);
+  };
+
   const renderDay = (day) => {
     const dayString = day.toDateString();
     const numPosts = numberPostsByDate && numberPostsByDate[dayString];
