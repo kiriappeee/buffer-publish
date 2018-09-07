@@ -36,6 +36,7 @@ const loadingContainerStyle = {
 const buttonStyle = {
   height: '40px',
   marginLeft: '1.5rem',
+  minWidth: '150px',
 };
 
 const QueuedPosts = ({
