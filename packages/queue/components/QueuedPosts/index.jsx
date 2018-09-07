@@ -96,7 +96,7 @@ const QueuedPosts = ({
             {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
           </Button>
         </div>
-        {showCalendar && <MiniCalendar numberPostsByDate={numberPostsByDate} onMiniCalendarMonthChange={onMiniCalendarMonthChange}  />}
+        {showCalendar && <MiniCalendar numberPostsByDate={numberPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}

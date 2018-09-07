@@ -107,13 +107,13 @@ const modifiers = {
   },
 };
 
-const MiniCalendar = ({numberPostsByDate, onMiniCalendarMonthChange}) => {
+const MiniCalendar = ({numberPostsByDate, onMonthChange}) => {
 
   /* Requests the number of posts for the current month when open the calendar */
   if(!numberPostsByDate) {
     const startDate = moment().startOf('month').unix();
     const endDate = moment().endOf('month').unix();
-    onMiniCalendarMonthChange(startDate, endDate);
+    onMonthChange(startDate, endDate);
   };
 
   /* Renders content of each day cell and adds number of posts if they exist */
@@ -131,7 +131,7 @@ const MiniCalendar = ({numberPostsByDate, onMiniCalendarMonthChange}) => {
   return (
     <div style={containerStyle}>
       <DayPicker
-        navbarElement={<NavBar getNumberPostsByDate={onMiniCalendarMonthChange} />}
+        navbarElement={<NavBar getNumberPostsByDate={onMonthChange} />}
         fromMonth={firstMonthDisplay}
         renderDay={renderDay}
         modifiers={modifiers}
@@ -142,7 +142,7 @@ const MiniCalendar = ({numberPostsByDate, onMiniCalendarMonthChange}) => {
 };
 
 MiniCalendar.propTypes = {
-  onMiniCalendarMonthChange: PropTypes.func.isRequired,
+  onMonthChange: PropTypes.func.isRequired,
   numberPostsByDate: PropTypes.object,
 };
 
