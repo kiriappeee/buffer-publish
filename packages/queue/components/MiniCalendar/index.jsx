@@ -54,7 +54,7 @@ const NavBar = ({
   onNextClick,
   className,
   localeUtils,
-  getNumberPostsByDate,
+  getNumberOfPostsByDate,
 }) => {
   const styleLeft = {
     float: 'left',
@@ -66,18 +66,18 @@ const NavBar = ({
 
   const onNext = () => {
     onNextClick();
-    getNumberPosts(nextMonth);
+    getNumberOfPosts(nextMonth);
   };
 
   const onPrev = () => {
     onPreviousClick();
-    getNumberPosts(previousMonth);
+    getNumberOfPosts(previousMonth);
   };
 
-  const getNumberPosts = (newMonth) => {
+  const getNumberOfPosts = (newMonth) => {
     const startDate = moment(newMonth).startOf('month').unix();
     const endDate = moment(newMonth).endOf('month').unix();
-    getNumberPostsByDate(startDate, endDate);
+    getNumberOfPostsByDate(startDate, endDate);
   };
 
   const showPreviousButton = (moment(month).isAfter(firstMonthDisplay, 'month')) ? true : false;
@@ -107,10 +107,10 @@ const modifiers = {
   },
 };
 
-const MiniCalendar = ({numberPostsByDate, onMonthChange}) => {
+const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
   /* Requests the number of posts for the current month when open the calendar */
-  if(!numberPostsByDate) {
+  if(!numberOfPostsByDate) {
     const startDate = moment().startOf('month').unix();
     const endDate = moment().endOf('month').unix();
     onMonthChange(startDate, endDate);
@@ -119,7 +119,7 @@ const MiniCalendar = ({numberPostsByDate, onMonthChange}) => {
   /* Renders content of each day cell and adds number of posts if they exist */
   const renderDay = (day) => {
     const dayString = day.toDateString();
-    const numPosts = numberPostsByDate && numberPostsByDate[dayString];
+    const numPosts = numberOfPostsByDate && numberOfPostsByDate[dayString];
     return (
       <div style={cellStyle}>
         <div style={dateStyle}>{day.getDate()}</div>
@@ -131,7 +131,7 @@ const MiniCalendar = ({numberPostsByDate, onMonthChange}) => {
   return (
     <div style={containerStyle}>
       <DayPicker
-        navbarElement={<NavBar getNumberPostsByDate={onMonthChange} />}
+        navbarElement={<NavBar getNumberOfPostsByDate={onMonthChange} />}
         fromMonth={firstMonthDisplay}
         renderDay={renderDay}
         modifiers={modifiers}
@@ -143,11 +143,11 @@ const MiniCalendar = ({numberPostsByDate, onMonthChange}) => {
 
 MiniCalendar.propTypes = {
   onMonthChange: PropTypes.func.isRequired,
-  numberPostsByDate: PropTypes.object,
+  numberOfPostsByDate: PropTypes.object,
 };
 
 MiniCalendar.defaultProps = {
-  numberPostsByDate: null,
+  numberOfPostsByDate: null,
 };
 
 export default MiniCalendar;

@@ -2,7 +2,7 @@ const { method } = require('@bufferapp/micro-rpc');
 const rp = require('request-promise');
 
 module.exports = method(
-  'getNumberPosts',
+  'getNumberOfPosts',
   'fetch number posts',
   ({ profileId, startDate, endDate }, { session }) =>
     rp({
@@ -18,6 +18,6 @@ module.exports = method(
     })
       .then(result => JSON.parse(result))
       .then(parsedResult => ({
-        numberPostsByDate: parsedResult,
+        numberOfPostsByDate: parsedResult,
       }))
 );

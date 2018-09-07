@@ -38,7 +38,7 @@ export default connect(
         editingPostId: state.queue.editingPostId,
         showCalendar: currentProfile.showCalendar,
         paused,
-        numberPostsByDate: state.queue.numberPostsByDate,
+        numberOfPostsByDate: state.queue.numberOfPostsByDate,
       };
     }
     return {};

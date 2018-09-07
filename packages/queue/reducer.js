@@ -428,7 +428,7 @@ export default (state = initialState, action) => {
       if (profileId) {
         return {
           ...state,
-          numberPostsByDate: null,
+          numberOfPostsByDate: null,
           byProfileId: {
             ...state.byProfileId,
             [profileId]: profileReducer(state.byProfileId[profileId], action),
@@ -455,10 +455,10 @@ export default (state = initialState, action) => {
         showComposer: false,
         editMode: false,
       };
-    case `getNumberPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case `getNumberOfPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
-        numberPostsByDate: action.result.numberPostsByDate,
+        numberOfPostsByDate: action.result.numberOfPostsByDate,
       };
     default:
       return state;

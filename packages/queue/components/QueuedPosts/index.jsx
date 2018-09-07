@@ -62,7 +62,7 @@ const QueuedPosts = ({
   paused,
   onUnpauseClick,
   onCalendarToggleClick,
-  numberPostsByDate,
+  numberOfPostsByDate,
   onMiniCalendarMonthChange,
 }) => {
   if (loading) {
@@ -96,7 +96,7 @@ const QueuedPosts = ({
             {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
           </Button>
         </div>
-        {showCalendar && <MiniCalendar numberPostsByDate={numberPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
+        {showCalendar && <MiniCalendar numberOfPostsByDate={numberOfPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
@@ -160,7 +160,7 @@ QueuedPosts.propTypes = {
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
   onMiniCalendarMonthChange: PropTypes.func,
-  numberPostsByDate: PropTypes.object,
+  numberOfPostsByDate: PropTypes.object,
 };
 
 QueuedPosts.defaultProps = {
@@ -174,7 +174,7 @@ QueuedPosts.defaultProps = {
   editMode: false,
   paused: false,
   showCalendar: false,
-  numberPostsByDate: null,
+  numberOfPostsByDate: null,
 };
 
 export default QueuedPosts;

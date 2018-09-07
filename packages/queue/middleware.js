@@ -96,7 +96,7 @@ export default ({ dispatch, getState }) => next => (action) => {
       break;
     case actionTypes.GET_NUMBER_POSTS:
       dispatch(dataFetchActions.fetch({
-        name: 'getNumberPosts',
+        name: 'getNumberOfPosts',
         args: {
           profileId: action.profileId,
           startDate: action.startDate,
