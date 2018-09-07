@@ -107,12 +107,14 @@ const modifiers = {
 
 const MiniCalendar = ({numberPostsByDate, onMiniCalendarMonthChange}) => {
 
+  /* Requests the number of posts for the current month when open the calendar */
   if(!numberPostsByDate) {
     const startDate = moment().startOf('month').unix();
     const endDate = moment().endOf('month').unix();
     onMiniCalendarMonthChange(startDate, endDate);
   };
 
+  /* Renders content of each day cell and adds number of posts if they exist */
   const renderDay = (day) => {
     const dayString = day.toDateString();
     const numPosts = numberPostsByDate && numberPostsByDate[dayString];
