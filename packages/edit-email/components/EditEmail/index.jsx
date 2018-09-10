@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, Link } from '@bufferapp/components';
-import { Row } from '@bufferapp/publish-shared-components';
+import {
+  Row,
+  SensitiveData,
+} from '@bufferapp/publish-shared-components';
 
 import Modal from '../Modal';
 
@@ -13,7 +16,9 @@ const EditEmail = ({ email, onClick, displayModal, updateEmail, saveEmail, hideM
   <Row>
     <Text color={'outerSpace'}>Email address</Text>
     <section>
-      <Text color={'outerSpace'}>{email}</Text>
+      <SensitiveData>
+        <Text color={'outerSpace'}>{email}</Text>
+      </SensitiveData>
       <span style={editStyle}>
         <Text>
           <Link onClick={onClick} unstyled href="#">

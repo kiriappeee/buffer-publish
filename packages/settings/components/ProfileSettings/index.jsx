@@ -14,6 +14,7 @@ import {
 import {
   ScheduleTable,
   EmptyState,
+  SensitiveData,
 } from '@bufferapp/publish-shared-components';
 
 import PostingTimeForm from '../PostingTimeForm';
@@ -130,7 +131,9 @@ const ProfileSettings = ({
   return (
     <div>
       <div style={headerStyle}>
-        <Text color="black">{settingsHeader}</Text>
+        <SensitiveData>
+          <Text color="black">{settingsHeader}</Text>
+        </SensitiveData>
       </div>
       <Divider />
       <div style={timezoneAndPauseContainerStyle}>

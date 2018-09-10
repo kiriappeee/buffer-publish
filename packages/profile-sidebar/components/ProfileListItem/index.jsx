@@ -6,6 +6,9 @@ import {
   Link,
 } from '@bufferapp/components';
 import {
+  SensitiveData,
+} from '@bufferapp/publish-shared-components';
+import {
   calculateStyles,
 } from '@bufferapp/components/lib/utils';
 import {
@@ -88,12 +91,14 @@ const ProfileListItem = ({
             type={type}
           />
         </div>
-        <Text
-          size={'small'}
-          color={selected ? 'black' : 'shuttleGray'}
-        >
-          {handle}
-        </Text>
+        <SensitiveData>
+          <Text
+            size={'small'}
+            color={selected ? 'black' : 'shuttleGray'}
+          >
+            {handle}
+          </Text>
+        </SensitiveData>
         <div style={notificationsStyle}>
           { locked ? <LockIcon /> : <Notifications notifications={notifications} />}
         </div>
