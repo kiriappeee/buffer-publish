@@ -374,6 +374,12 @@ const profileReducer = (state = profileInitialState, action) => {
       return {
         ...state,
         showCalendar: !state.showCalendar,
+        numberOfPostsByDate: null,
+      };
+    case `getNumberOfPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        numberOfPostsByDate: action.result.numberOfPostsByDate,
       };
     case `sharePostNow_${dataFetchActionTypes.FETCH_FAIL}`:
     case actionTypes.POST_ERROR:
@@ -423,12 +429,12 @@ export default (state = initialState, action) => {
     case actionTypes.POST_SHARE_NOW:
     case actionTypes.POST_SENT:
     case actionTypes.POST_COUNT_UPDATED:
+    case `getNumberOfPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
     case actionTypes.TOGGLE_CALENDAR: {
       profileId = getProfileId(action);
       if (profileId) {
         return {
           ...state,
-          numberOfPostsByDate: null,
           byProfileId: {
             ...state.byProfileId,
             [profileId]: profileReducer(state.byProfileId[profileId], action),
@@ -454,11 +460,6 @@ export default (state = initialState, action) => {
         ...state,
         showComposer: false,
         editMode: false,
-      };
-    case `getNumberOfPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
-      return {
-        ...state,
-        numberOfPostsByDate: action.result.numberOfPostsByDate,
       };
     default:
       return state;
