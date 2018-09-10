@@ -8,6 +8,7 @@ const containerStyle = {
   paddingLeft: '0.5rem',
   display: 'flex',
   flexDirection: 'column',
+  flexGrow: 0,
 };
 
 class ScrollableContainer extends Component {
@@ -18,11 +19,11 @@ class ScrollableContainer extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, growthSpace } = this.props;
     return (
       <div
         ref={(container) => { this.containerEl = container; }}
-        style={containerStyle}
+        style={{ ...containerStyle, flexGrow: growthSpace || 0 }}
       >
         {children}
       </div>
@@ -33,6 +34,7 @@ class ScrollableContainer extends Component {
 ScrollableContainer.propTypes = {
   tabId: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  growthSpace: PropTypes.number,
 };
 
 export default ScrollableContainer;

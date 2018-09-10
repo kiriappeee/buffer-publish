@@ -105,6 +105,7 @@ const ProfilePage = ({
         />
         <ScrollableContainer
           tabId={tabId}
+          growthSpace={1}
         >
           <div style={tabContentStyle}>
             {TabContent({ tabId, profileId })}
