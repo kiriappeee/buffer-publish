@@ -1,24 +1,15 @@
 const ObjectPath = require('object-path');
-const {
-  json,
-  createError,
-} = require('micro');
 
+const whitelistedRPCNames = ['methods'];
 
-const whitelistedRPCNames = [
-  'methods',
-];
-
-module.exports = next => async (req, res) => {
-  const data = await json(req);
-  const { name } = data;
-  if (
-    whitelistedRPCNames.includes(name) ||
-    ObjectPath.has(req, 'session.publish')
-  ) {
-    return next(req, res);
+module.exports = (req, res, next) => {
+  const { name } = req.body;
+  if (whitelistedRPCNames.includes(name) || ObjectPath.has(req, 'session.publish')) {
+    return next();
   }
-  const errorMessage = 'Unauthorized';
-  res.statusMessage = errorMessage;
-  throw createError(401, errorMessage);
+  const error = 'Unauthorized';
+  res.statusMessage = error;
+  res.status(401).send({
+    error,
+  });
 };
