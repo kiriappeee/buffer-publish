@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-queue",
-  "version": "1.9.8",
+  "version": "1.9.9",
   "description": "Queue UI package",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "1.9.3",
     "@bufferapp/publish-profile-sidebar": "1.9.8",
-    "@bufferapp/publish-shared-components": "1.9.8",
-    "@bufferapp/publish-upgrade-modal": "1.9.8",
+    "@bufferapp/publish-shared-components": "^1.9.9",
+    "@bufferapp/publish-upgrade-modal": "^1.9.9",
     "react-day-picker": "7.1.10"
   },
   "devDependencies": {
