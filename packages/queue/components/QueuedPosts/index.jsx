@@ -62,6 +62,7 @@ const QueuedPosts = ({
   paused,
   onUnpauseClick,
   onCalendarToggleClick,
+  hasCalendarFeatureFlip,
   numberOfPostsByDate,
   onMiniCalendarMonthChange,
 }) => {
@@ -91,12 +92,14 @@ const QueuedPosts = ({
             onFocus={onComposerPlaceholderClick}
           />
         </div>
-        <div style={buttonStyle}>
-          <Button secondary onClick={onCalendarToggleClick}>
-            {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
-          </Button>
-        </div>
-        {showCalendar && <MiniCalendar numberOfPostsByDate={numberOfPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
+        {hasCalendarFeatureFlip &&
+          <div style={buttonStyle}>
+            <Button secondary onClick={onCalendarToggleClick}>
+              {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
+            </Button>
+          </div>
+        }
+        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar numberOfPostsByDate={numberOfPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
@@ -159,8 +162,12 @@ QueuedPosts.propTypes = {
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
+  hasCalendarFeatureFlip: PropTypes.bool,
   onMiniCalendarMonthChange: PropTypes.func,
-  numberOfPostsByDate: PropTypes.object,
+  numberOfPostsByDate: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 QueuedPosts.defaultProps = {
@@ -174,6 +181,7 @@ QueuedPosts.defaultProps = {
   editMode: false,
   paused: false,
   showCalendar: false,
+  hasCalendarFeatureFlip: false,
   numberOfPostsByDate: null,
 };
 
