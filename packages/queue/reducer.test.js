@@ -355,6 +355,7 @@ describe('reducer', () => {
           loading: true,
           loadingMore: false,
           moreToLoad: false,
+          numberOfPostsByDate: null,
           page: 1,
           posts: { 12345: post },
           total: 1,
