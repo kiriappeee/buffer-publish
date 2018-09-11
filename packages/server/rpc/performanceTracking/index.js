@@ -1,4 +1,4 @@
-const { method, createError } = require('@bufferapp/micro-rpc');
+const { method, createError } = require('@bufferapp/buffer-rpc');
 const StatsD = require('node-dogstatsd').StatsD;
 
 const dogstatsd = new StatsD('dd-agent.default');

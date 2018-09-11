@@ -14,7 +14,8 @@ const {
 } = require('@bufferapp/session-manager');
 const bufferMetricsMiddleware = require('@bufferapp/buffermetrics/middleware');
 const controller = require('./lib/controller');
-const rpc = require('./rpc');
+const rpcHandler = require('./rpc');
+const checkToken = require('./rpc/checkToken');
 const pusher = require('./lib/pusher');
 
 const app = express();
@@ -82,22 +83,10 @@ app.use(
   }),
 );
 
-app.post('/rpc', (req, res, next) => {
-  rpc(req, res)
-    // catch any unexpected errors
-    .catch((err) => {
-      if (err.statusCode !== 500) {
-        next({
-          httpCode: err.statusCode,
-          error: err.message,
-        });
-      } else {
-        next(err);
-      }
-    });
-});
-
 app.use(bodyParser.json());
+
+app.post('/rpc', checkToken, rpcHandler);
+
 app.use(
   bufferMetricsMiddleware({
     name: 'Buffer-Publish',

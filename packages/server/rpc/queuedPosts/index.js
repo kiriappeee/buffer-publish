@@ -1,5 +1,5 @@
 const { postParser, buildPostMap } = require('@bufferapp/publish-utils');
-const { method } = require('@bufferapp/micro-rpc');
+const { method } = require('@bufferapp/buffer-rpc');
 const rp = require('request-promise');
 
 module.exports = method(
