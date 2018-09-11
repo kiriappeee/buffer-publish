@@ -81,7 +81,7 @@ const PostFooter = ({
   return (<div style={getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
       {hasError && renderErrorIcon()}
-      {isCustomScheduled && renderCustomScheduledIcon()}
+      {isCustomScheduled && !hasError && renderCustomScheduledIcon()}
       {renderText({ postDetails }, hasError)}
     </div>
     { !sent && (
