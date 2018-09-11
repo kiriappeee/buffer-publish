@@ -36,6 +36,7 @@ const loadingContainerStyle = {
 const buttonStyle = {
   height: '40px',
   marginLeft: '1.5rem',
+  minWidth: '150px',
 };
 
 const QueuedPosts = ({
@@ -62,6 +63,8 @@ const QueuedPosts = ({
   onUnpauseClick,
   onCalendarToggleClick,
   hasCalendarFeatureFlip,
+  numberOfPostsByDate,
+  onMiniCalendarMonthChange,
 }) => {
   if (loading) {
     return (
@@ -94,8 +97,9 @@ const QueuedPosts = ({
             <Button secondary onClick={onCalendarToggleClick}>
               {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
             </Button>
-          </div>}
-        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar />}
+          </div>
+        }
+        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar numberOfPostsByDate={numberOfPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
@@ -159,6 +163,11 @@ QueuedPosts.propTypes = {
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
   hasCalendarFeatureFlip: PropTypes.bool,
+  onMiniCalendarMonthChange: PropTypes.func,
+  numberOfPostsByDate: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 QueuedPosts.defaultProps = {
@@ -173,6 +182,7 @@ QueuedPosts.defaultProps = {
   paused: false,
   showCalendar: false,
   hasCalendarFeatureFlip: false,
+  numberOfPostsByDate: null,
 };
 
 export default QueuedPosts;

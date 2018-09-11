@@ -29,6 +29,7 @@ const twoFactorRecovery = require('./twoFactorRecovery');
 const closeAccount = require('./closeAccount');
 const connectedApps = require('./connectedApps');
 const revokeConnectedApp = require('./revokeConnectedApp');
+const getNumberOfPostsMethod = require('./getNumberPosts');
 
 module.exports = rpc(
   profilesMethod,
@@ -61,4 +62,5 @@ module.exports = rpc(
   closeAccount,
   connectedApps,
   revokeConnectedApp,
+  getNumberOfPostsMethod,
 );

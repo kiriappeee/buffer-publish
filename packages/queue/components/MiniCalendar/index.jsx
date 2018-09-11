@@ -2,6 +2,9 @@
 This DatePicker is not importing react-day-picker styles,
 it is using DatePicker.css from the buffer-composer.
 In the future the styles should probably be independent.
+The react-day-picker styles were left here commented as
+a precaution, in case there's a change in buffer-composer
+and DatePicker.css no longer applies.
 */
 
 import React from 'react';
@@ -9,7 +12,7 @@ import PropTypes from 'prop-types';
 import DayPicker from 'react-day-picker';
 import { ArrowRightIcon, ArrowLeftIcon } from '@bufferapp/components/Icon/Icons';
 import { Button } from '@bufferapp/components';
-import 'react-day-picker/lib/style.css'; // Not being used.
+// import 'react-day-picker/lib/style.css'; // Not being used. See comment on top.
 import moment from 'moment-timezone';
 
 const containerStyle = {
@@ -22,12 +25,6 @@ const containerStyle = {
   padding: '0.5rem',
   overflow: 'hidden',
   zIndex: '1',
-};
-
-const fakeDateData = {
-  'Tue Feb 06 2018': 4,
-  'Wed Feb 07 2018': 2,
-  'Thu Feb 08 2018': 1,
 };
 
 const cellStyle = {
@@ -57,6 +54,7 @@ const NavBar = ({
   onNextClick,
   className,
   localeUtils,
+  getNumberOfPostsByDate,
 }) => {
   const styleLeft = {
     float: 'left',
@@ -68,12 +66,18 @@ const NavBar = ({
 
   const onNext = () => {
     onNextClick();
-    // add our hooks here
+    getNumberOfPosts(nextMonth);
   };
 
   const onPrev = () => {
     onPreviousClick();
-    // add our hooks here
+    getNumberOfPosts(previousMonth);
+  };
+
+  const getNumberOfPosts = (newMonth) => {
+    const startDate = moment(newMonth).startOf('month').unix();
+    const endDate = moment(newMonth).endOf('month').unix();
+    getNumberOfPostsByDate(startDate, endDate);
   };
 
   const showPreviousButton = (moment(month).isAfter(firstMonthDisplay, 'month')) ? true : false;
@@ -96,17 +100,6 @@ const NavBar = ({
   );
 };
 
-const renderDay = (day) => {
-  const dayString = day.toDateString();
-  const numPosts = fakeDateData[dayString];
-  return (
-    <div style={cellStyle}>
-      <div style={dateStyle}>{day.getDate()}</div>
-      {numPosts && <div style={numPostsStyle}>{numPosts + ' post'}{numPosts > 1 ? 's' : ''}</div>}
-    </div>
-  )
-};
-
 const modifiers = {
   isToday: new Date(),
   disabled: {
@@ -114,21 +107,50 @@ const modifiers = {
   },
 };
 
-const MiniCalendar = () =>
-  <div style={containerStyle}>
-    <DayPicker
-      navbarElement={<NavBar/>}
-      fromMonth={firstMonthDisplay}
-      renderDay={renderDay}
-      modifiers={modifiers}
-      showOutsideDays
-    />
-  </div>;
+const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
+
+  /* Requests the number of posts for the current month when open the calendar */
+  if(!numberOfPostsByDate) {
+    const startDate = moment().startOf('month').unix();
+    const endDate = moment().endOf('month').unix();
+    onMonthChange(startDate, endDate);
+  };
+
+  /* Renders content of each day cell and adds number of posts if they exist */
+  const renderDay = (day) => {
+    const dayString = day.toDateString();
+    const numPosts = numberOfPostsByDate && numberOfPostsByDate[dayString];
+    return (
+      <div style={cellStyle}>
+        <div style={dateStyle}>{day.getDate()}</div>
+        {numPosts && <div style={numPostsStyle}>{numPosts + ' post'}{numPosts > 1 ? 's' : ''}</div>}
+      </div>
+    )
+  };
+
+  return (
+    <div style={containerStyle}>
+      <DayPicker
+        navbarElement={<NavBar getNumberOfPostsByDate={onMonthChange} />}
+        fromMonth={firstMonthDisplay}
+        renderDay={renderDay}
+        modifiers={modifiers}
+        showOutsideDays
+      />
+    </div>
+  );
+};
 
 MiniCalendar.propTypes = {
+  onMonthChange: PropTypes.func.isRequired,
+  numberOfPostsByDate: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 MiniCalendar.defaultProps = {
+  numberOfPostsByDate: null,
 };
 
 export default MiniCalendar;
