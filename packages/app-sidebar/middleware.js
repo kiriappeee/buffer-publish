@@ -13,9 +13,7 @@ export default ({ dispatch }) => next => (action) => {
       break;
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
       if (window && window.FS && window.FS.identify) {
-        window.FS.identify(action.result.id, {
-          email: action.result.email,
-        });
+        window.FS.identify(action.result.id, {});
       }
       break;
     default:
