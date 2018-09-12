@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/edit-email",
-  "version": "1.9.3",
+  "version": "1.9.10",
   "description": "Edit email form",
   "main": "index.js",
   "scripts": {

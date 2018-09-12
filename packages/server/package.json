@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-server",
-  "version": "1.9.9",
+  "version": "1.9.10",
   "description": "",
   "scripts": {
     "start": "node index.js",
@@ -8,9 +8,9 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
+    "@bufferapp/buffer-rpc": "0.0.1",
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/logger": "0.7.0",
-    "@bufferapp/buffer-rpc": "0.0.1",
     "@bufferapp/publish-utils": "1.9.8",
     "@bufferapp/session-manager": "0.7.1",
     "@bufferapp/shutdown-helper": "0.2.0",

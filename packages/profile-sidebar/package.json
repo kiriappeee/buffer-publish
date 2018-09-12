@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-profile-sidebar",
-  "version": "1.9.8",
+  "version": "1.9.10",
   "description": "Load and display a list of profiles",
   "main": "index.js",
   "scripts": {

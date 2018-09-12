@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-two-factor-auth",
-  "version": "1.9.3",
+  "version": "1.9.10",
   "description": "Two factor authentication setup and management",
   "main": "index.js",
   "scripts": {

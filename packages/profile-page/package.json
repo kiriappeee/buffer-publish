@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/profile-page",
-  "version": "1.9.9",
+  "version": "1.9.10",
   "description": "profile page package",
   "main": "index.js",
   "scripts": {
@@ -8,18 +8,18 @@
   },
   "author": "melissa@buffer.com",
   "dependencies": {
-    "@bufferapp/app-sidebar": "1.9.6",
+    "@bufferapp/app-sidebar": "^1.9.10",
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/notifications": "1.9.3",
-    "@bufferapp/publish-profile-sidebar": "1.9.8",
-    "@bufferapp/publish-pusher-sync": "^1.9.9",
-    "@bufferapp/publish-queue": "^1.9.9",
+    "@bufferapp/publish-profile-sidebar": "^1.9.10",
+    "@bufferapp/publish-pusher-sync": "^1.9.10",
+    "@bufferapp/publish-queue": "^1.9.10",
     "@bufferapp/publish-routes": "1.9.3",
-    "@bufferapp/publish-sent": "^1.9.9",
-    "@bufferapp/publish-settings": "^1.9.9",
-    "@bufferapp/publish-shared-components": "^1.9.9",
-    "@bufferapp/publish-store": "^1.9.9",
-    "@bufferapp/publish-tabs": "^1.9.9"
+    "@bufferapp/publish-sent": "^1.9.10",
+    "@bufferapp/publish-settings": "^1.9.10",
+    "@bufferapp/publish-shared-components": "^1.9.10",
+    "@bufferapp/publish-store": "^1.9.10",
+    "@bufferapp/publish-tabs": "^1.9.10"
   },
   "devDependencies": {
     "eslint": "3.19.0"
