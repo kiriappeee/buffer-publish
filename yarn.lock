@@ -143,14 +143,6 @@
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@bufferapp/chronos/-/chronos-0.6.1.tgz#0213dff339459ca510103e5a72f558682a2675dd"
 
-"@bufferapp/components@2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.1.4.tgz#f36beed4d08bade1e25c75dade992cded70ece35"
-  dependencies:
-    "@bufferapp/react-keyframes" "0.2.5"
-    react-autocomplete "1.7.2"
-    react-day-picker "6.2.1"
-
 "@bufferapp/components@2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.3.2.tgz#ae23bf74abc5026c30751c37711cbba4852b624f"
@@ -160,14 +152,23 @@
     react-autocomplete "1.7.2"
     react-day-picker "6.2.1"
 
-"@bufferapp/composer@1.12.3":
-  version "1.12.3"
-  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-1.12.3.tgz#e5e884e940a6a2fda71a0386e916ff56aa16cfa9"
+"@bufferapp/components@2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.3.3.tgz#eb9ca5dc4e563a76d793420a9f8f675613526cd3"
+  dependencies:
+    "@bufferapp/react-keyframes" "0.2.5"
+    raf "3.4.0"
+    react-autocomplete "1.7.2"
+    react-day-picker "6.2.1"
+
+"@bufferapp/composer@1.12.4":
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-1.12.4.tgz#a2e9a8e2c12cd9b18e6806c644c4e5a776b1ce67"
   dependencies:
     "@bufferapp/buffer-js-api" "0.3.0"
     "@bufferapp/buffer-js-metrics" "0.2.0"
     "@bufferapp/buffer-js-request" "0.2.0"
-    "@bufferapp/components" "2.1.4"
+    "@bufferapp/components" "2.3.3"
     "@bufferapp/draft-js" "0.10.1-fork.5"
     "@bufferapp/draft-js-emoji-plugin" "^2.0.0-rc9.1"
     "@bufferapp/draft-js-mention-plugin" "2.0.0-rc8.3"
