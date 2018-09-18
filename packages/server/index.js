@@ -17,6 +17,7 @@ const controller = require('./lib/controller');
 const rpcHandler = require('./rpc');
 const checkToken = require('./rpc/checkToken');
 const pusher = require('./lib/pusher');
+const maintenanceHandler = require('./maintenanceHandler');
 
 const app = express();
 const server = http.createServer(app);
@@ -93,6 +94,8 @@ const getHtml = () =>
 
 app.use(logMiddleware({ name: 'BufferPublish' }));
 app.use(cookieParser());
+
+app.all('/maintenance', maintenanceHandler);
 
 // All routes after this have access to the user session
 app.use(

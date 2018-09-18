@@ -15,6 +15,7 @@
     "@bufferapp/edit-email": "^1.9.10",
     "@bufferapp/environment": "1.9.3",
     "@bufferapp/manage-apps-extras": "1.9.3",
+    "@bufferapp/maintenance-redirect": "1.9.6",
     "@bufferapp/notifications": "1.9.3",
     "@bufferapp/performance-tracking": "0.43.5",
     "@bufferapp/publish-app-switcher": "1.9.8",
