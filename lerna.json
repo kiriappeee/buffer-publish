@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "1.9.11",
+  "version": "1.9.12",
   "independent": false,
   "npmClient": "yarn",
   "useWorkspaces": true
