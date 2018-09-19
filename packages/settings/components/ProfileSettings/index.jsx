@@ -189,11 +189,18 @@ const ProfileSettings = ({
       <div style={sectionStyle}>
         <PostingTimeForm
           onSubmit={({ day, time }) => {
-            time.hours = time.hours < 10 ? `0${time.hours}` : time.hours;
-            time.minutes = time.minutes < 10 ? `0${time.minutes}` : time.minutes;
+            // spreading props so we don't modify the original object
+            let { hours, minutes } = time;
+            // check for null
+            hours = hours || 0;
+            minutes = minutes || 0;
+
+            hours = parseInt(hours, 10) < 10 ? `0${hours}` : hours;
+            minutes = parseInt(minutes, 10) < 10 ? `0${minutes}` : minutes;
+
             onAddPostingTime({
               day,
-              time,
+              time: { hours, minutes },
             });
           }}
           twentyfourHourTime={hasTwentyFourHourTimeFormat}
