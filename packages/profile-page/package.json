@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/profile-page",
-  "version": "1.9.11",
+  "version": "1.9.12",
   "description": "profile page package",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,9 @@
     "@bufferapp/publish-queue": "1.9.11",
     "@bufferapp/publish-routes": "1.9.3",
     "@bufferapp/publish-sent": "1.9.11",
-    "@bufferapp/publish-settings": "^1.9.10",
+    "@bufferapp/publish-settings": "^1.9.12",
     "@bufferapp/publish-shared-components": "^1.9.10",
-    "@bufferapp/publish-store": "1.9.11",
+    "@bufferapp/publish-store": "^1.9.12",
     "@bufferapp/publish-tabs": "^1.9.10"
   },
   "devDependencies": {
