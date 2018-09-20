@@ -16,8 +16,7 @@ const containerStyle = {
 };
 
 const cellStyle = {
-  height: '1.6rem',
-  width: '1.9rem',
+  maxHeight: '1rem',
 };
 
 const dateStyle = {
@@ -36,6 +35,7 @@ const firstMonthToDisplay = moment().subtract(1, 'month').toDate();
 
 const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
+  /* Used to update number of posts when navigate to another month on DateInputNavBar */
   const onNavigationClick = (newMonth) => {
     const startDate = moment(newMonth).startOf('month').unix();
     const endDate = moment(newMonth).endOf('month').unix();
@@ -44,9 +44,7 @@ const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
   /* Requests the number of posts for the current month when open the calendar */
   if(!numberOfPostsByDate) {
-    const startDate = moment().startOf('month').unix();
-    const endDate = moment().endOf('month').unix();
-    onMonthChange(startDate, endDate);
+    onNavigationClick();
   };
 
   /* Renders content of each day cell and adds number of posts if they exist */
@@ -60,12 +58,14 @@ const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
       </div>
     )
   };
+
   return (
     <div style={containerStyle}>
       <InputDate
         firstMonthToDisplay={firstMonthToDisplay}
         initialMonth={new Date()}
         onNavigationClick={onNavigationClick}
+        renderDay={renderDay}
       />
     </div>
   );
