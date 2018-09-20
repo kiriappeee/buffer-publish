@@ -14,6 +14,7 @@ import { ArrowRightIcon, ArrowLeftIcon } from '@bufferapp/components/Icon/Icons'
 import { Button } from '@bufferapp/components';
 // import 'react-day-picker/lib/style.css'; // Not being used. See comment on top.
 import moment from 'moment-timezone';
+import { InputDate } from '@bufferapp/components';
 
 const containerStyle = {
   position: 'absolute',
@@ -44,7 +45,7 @@ const numPostsStyle = {
 };
 
 /* MiniCalendar displays one month in the past */
-const firstMonthDisplay = moment().subtract(1, 'month').toDate();
+const firstMonthToDisplay = moment().subtract(1, 'month').toDate();
 
 const NavBar = ({
   month,
@@ -100,13 +101,6 @@ const NavBar = ({
   );
 };
 
-const modifiers = {
-  isToday: new Date(),
-  disabled: {
-    before: new Date(),
-  },
-};
-
 const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
   /* Requests the number of posts for the current month when open the calendar */
@@ -130,12 +124,9 @@ const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
   return (
     <div style={containerStyle}>
-      <DayPicker
-        navbarElement={<NavBar getNumberOfPostsByDate={onMonthChange} />}
-        fromMonth={firstMonthDisplay}
-        renderDay={renderDay}
-        modifiers={modifiers}
-        showOutsideDays
+      <InputDate
+        firstMonthToDisplay={firstMonthToDisplay}
+        initialMonth={new Date()}
       />
     </div>
   );
