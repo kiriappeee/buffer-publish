@@ -108,7 +108,7 @@ const ProfilePage = ({
           growthSpace={1}
         >
           <div style={tabContentStyle}>
-            {TabContent({ tabId, profileId })}
+            <TabContent tabId={tabId} profileId={profileId} />
             {showLoadMoreButton &&
               <div style={buttonContainerStyle}>
                 <Button
