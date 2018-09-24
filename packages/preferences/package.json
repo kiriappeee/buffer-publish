@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-preferences",
-  "version": "1.9.12",
+  "version": "1.9.13",
   "description": "Buffer Publish perferences",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "@bufferapp/manage-apps-extras": "1.9.3",
     "@bufferapp/publish-profile-sidebar": "^1.9.10",
     "@bufferapp/publish-shared-components": "^1.9.10",
-    "@bufferapp/publish-store": "^1.9.12"
+    "@bufferapp/publish-store": "^1.9.13"
   },
   "devDependencies": {
     "eslint": "3.19.0"

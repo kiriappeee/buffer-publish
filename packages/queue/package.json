@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-queue",
-  "version": "1.9.11",
+  "version": "1.9.13",
   "description": "Queue UI package",
   "main": "index.js",
   "scripts": {
