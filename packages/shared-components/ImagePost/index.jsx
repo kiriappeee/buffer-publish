@@ -70,6 +70,7 @@ const ImagePost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
