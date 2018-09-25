@@ -31,6 +31,11 @@ describe('Sent', () => {
           },
         },
       },
+      appSidebar: {
+        user: {
+          is_business_user: false,
+        },
+      },
     });
     const wrapper = mount(
       <Provider store={store}>

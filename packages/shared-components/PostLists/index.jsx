@@ -26,6 +26,7 @@ const renderPostList = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  isBusinessUser,
 }) =>
   <div style={postListStyle}>
     <PostList
@@ -43,6 +44,7 @@ const renderPostList = ({
       onImageClickPrev={onImageClickPrev}
       onImageClose={onImageClose}
       onDropPost={onDropPost}
+      isBusinessUser={isBusinessUser}
     />
   </div>;
 
@@ -50,6 +52,7 @@ const renderPostList = ({
 
 const PostLists = ({
   postLists,
+  isBusinessUser,
   onCancelConfirmClick,
   onDeleteClick,
   onDeleteConfirmClick,
@@ -78,6 +81,7 @@ const PostLists = ({
         onImageClickPrev,
         onImageClose,
         onDropPost,
+        isBusinessUser,
       }),
     )}
     fillContainer
@@ -105,6 +109,7 @@ PostLists.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
+  isBusinessUser: PropTypes.bool,
 };
 
 PostLists.defaultProps = {
