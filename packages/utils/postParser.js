@@ -141,5 +141,6 @@ module.exports = (post) => {
     sharedNext: post.shared_next,
     pinned: post.pinned,
     isFixed,
+    statistics: post.statistics,
   };
 };
