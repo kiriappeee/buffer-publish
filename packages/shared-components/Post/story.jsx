@@ -41,6 +41,14 @@ const links = [{
   indices: [74, 96],
 }];
 
+const statistics = {
+  clicks: 12,
+  favorites: 5,
+  mentions: 1,
+  reach: 122,
+  retweets: 2,
+};
+
 const retweetComment = 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv';
 
 const children = (
@@ -73,6 +81,7 @@ storiesOf('Post', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       sent
+      statistics={statistics}
     >
       {children}
     </Post>
