@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e # fail bash script on any error below
 
-yarn run init
+yarn install --non-interactive
 yarn run build
 
 UPLOADER="https://github.com/bufferapp/buffer-static-upload/releases/download/0.1.0/buffer-static-upload-`uname -s`"
