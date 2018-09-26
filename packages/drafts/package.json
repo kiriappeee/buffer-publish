@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-drafts",
-  "version": "1.9.15",
+  "version": "1.9.16",
   "description": "Queue UI package",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "1.9.3",
     "@bufferapp/publish-profile-sidebar": "1.9.15",
-    "@bufferapp/publish-shared-components": "1.9.14",
+    "@bufferapp/publish-shared-components": "^1.9.16",
     "@bufferapp/publish-utils": "1.4.0"
   },
   "devDependencies": {
