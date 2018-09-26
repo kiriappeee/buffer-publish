@@ -62,6 +62,7 @@ const ImagePost = ({
   draggable,
   dragging,
   hovering,
+  statistics,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -70,6 +71,7 @@ const ImagePost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
@@ -120,6 +122,7 @@ const ImagePost = ({
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
+      statistics={statistics}
     >
       {children}
     </Post>

@@ -46,6 +46,7 @@ const MultipleImagesPost = ({
   draggable,
   dragging,
   hovering,
+  statistics,
 }) => {
   const images = imageUrls.map(url => ({ src: `${url}` }));
   const children = (
@@ -55,6 +56,7 @@ const MultipleImagesPost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
@@ -101,6 +103,7 @@ const MultipleImagesPost = ({
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
+      statistics={statistics}
     >
       {children}
     </Post>

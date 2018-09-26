@@ -59,6 +59,7 @@ const LinkPost = ({
   draggable,
   dragging,
   hovering,
+  statistics,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -67,6 +68,7 @@ const LinkPost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
@@ -132,6 +134,7 @@ const LinkPost = ({
       dragging={dragging}
       hovering={hovering}
       onRequeueClick={onRequeueClick}
+      statistics={statistics}
     >
       {children}
     </Post>

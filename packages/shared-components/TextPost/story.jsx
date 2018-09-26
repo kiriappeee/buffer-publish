@@ -12,8 +12,13 @@ const links = [{
   url: 'https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x',
   indices: [74, 96],
 }];
+const multilineLinks = [{
+  ...links[0],
+  indices: [78, 100],
+}];
 
 const text = 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv';
+const multilineText = 'What is a Product Designer? \n\nAn awesome story by @jgadapee over on Medium! \n\nhttp://buff.ly/1LTbUqv';
 
 const retweetComment = 'Awesome book news here: http://buff.ly/2oZYTnY';
 
@@ -52,6 +57,19 @@ storiesOf('TextPost', module)
       links={links}
       postDetails={postDetails}
       text={text}
+      onCancelConfirmClick={action('cancel-confirm-click')}
+      onDeleteClick={action('delete-click')}
+      onDeleteConfirmClick={action('delete-confirm-click')}
+      onEditClick={action('edit-click')}
+      onShareNowClick={action('share-now-click')}
+      sent={false}
+    />
+  ))
+  .add('queued text post with multi-line text', () => (
+    <TextPost
+      links={multilineLinks}
+      postDetails={postDetails}
+      text={multilineText}
       onCancelConfirmClick={action('cancel-confirm-click')}
       onDeleteClick={action('delete-click')}
       onDeleteConfirmClick={action('delete-confirm-click')}

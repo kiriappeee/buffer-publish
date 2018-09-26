@@ -12,8 +12,13 @@ const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
   url: 'https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x',
 }];
+const multilineLinks = [{
+  ...links[0],
+  indices: [78, 100],
+}];
 
 const text = 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv';
+const multilineText = 'What is a Product Designer? \n\nAn awesome story by @jgadapee over on Medium! \n\nhttp://buff.ly/1LTbUqv';
 
 const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
@@ -44,6 +49,25 @@ storiesOf('MultipleImagesPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
+      sent={false}
+      onImageClick={action('image-click')}
+      onImageClickNext={action('image-click-next')}
+      onImageClickPrev={action('image-click-prev')}
+      onImageClose={action('image-close')}
+      currentImage={0}
+    />
+  ))
+  .add('queued multiple image post with multi-line text', () => (
+    <MultipleImagesPost
+      postDetails={postDetails}
+      links={multilineLinks}
+      imageUrls={imageUrls}
+      onCancelConfirmClick={action('cancel-confirm-click')}
+      onDeleteClick={action('delete-click')}
+      onDeleteConfirmClick={action('delete-confirm-click')}
+      onEditClick={action('edit-click')}
+      onShareNowClick={action('share-now-click')}
+      text={multilineText}
       sent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}

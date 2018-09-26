@@ -36,6 +36,7 @@ const TextPost = ({
   dragging,
   hovering,
   fixed,
+  statistics,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -44,6 +45,7 @@ const TextPost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
@@ -76,6 +78,7 @@ const TextPost = ({
       dragging={dragging}
       hovering={hovering}
       fixed={fixed}
+      statistics={statistics}
     >
       {children}
     </Post>

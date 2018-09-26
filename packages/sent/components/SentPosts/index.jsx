@@ -32,6 +32,7 @@ const SentPosts = ({
   total,
   loading,
   postLists,
+  isBusinessUser,
 }) => {
   if (loading) {
     return (
@@ -58,6 +59,7 @@ const SentPosts = ({
       </div>
       <PostLists
         postLists={postLists}
+        isBusinessUser={isBusinessUser}
       />
     </div>
   );
@@ -79,6 +81,7 @@ SentPosts.propTypes = {
     }),
   ),
   total: PropTypes.number,
+  isBusinessUser: PropTypes.bool,
 };
 
 SentPosts.defaultProps = {
@@ -88,6 +91,7 @@ SentPosts.defaultProps = {
   page: 1,
   postLists: [],
   total: 0,
+  isBusinessUser: false,
 };
 
 export default SentPosts;
