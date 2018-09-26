@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   List,
   Text,
+  Button,
 } from '@bufferapp/components';
 import TextPost from '../TextPost';
 import ImagePost from '../ImagePost';
@@ -11,7 +12,14 @@ import LinkPost from '../LinkPost';
 import VideoPost from '../VideoPost';
 import PostDragWrapper from '../PostDragWrapper';
 
+const reBufferWrapperStyle = {
+  paddingLeft: '1rem',
+  minWidth: '120px',
+};
+
 const postStyle = {
+  display: 'flex',
+  alignItems: 'baseline',
   marginBottom: '2rem',
 };
 
@@ -79,6 +87,7 @@ const PostList = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  isBusinessUser,
 }) =>
   <div>
     <div style={listHeaderStyle}>
@@ -106,6 +115,16 @@ const PostList = ({
               onDropPost,
             })
           }
+          {isBusinessUser ?
+            <div style={reBufferWrapperStyle}>
+              <Button
+                secondary
+                onClick={() => { onEditClick(); }}
+              >
+                Re-Buffer
+              </Button>
+            </div>
+          : null }
         </div>,
       )}
     />
@@ -128,6 +147,7 @@ PostList.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
+  isBusinessUser: PropTypes.bool,
 };
 
 PostList.defaultProps = {

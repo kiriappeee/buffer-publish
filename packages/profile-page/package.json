@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/profile-page",
-  "version": "1.9.13",
+  "version": "1.9.16",
   "description": "profile page package",
   "main": "index.js",
   "scripts": {
@@ -11,15 +11,15 @@
     "@bufferapp/app-sidebar": "^1.9.10",
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/notifications": "1.9.3",
-    "@bufferapp/publish-profile-sidebar": "^1.9.10",
-    "@bufferapp/publish-pusher-sync": "^1.9.13",
-    "@bufferapp/publish-queue": "^1.9.13",
+    "@bufferapp/publish-profile-sidebar": "1.9.15",
+    "@bufferapp/publish-pusher-sync": "^1.9.16",
+    "@bufferapp/publish-queue": "^1.9.16",
     "@bufferapp/publish-routes": "1.9.3",
-    "@bufferapp/publish-sent": "^1.9.13",
-    "@bufferapp/publish-settings": "^1.9.12",
-    "@bufferapp/publish-shared-components": "^1.9.10",
-    "@bufferapp/publish-store": "^1.9.13",
-    "@bufferapp/publish-tabs": "^1.9.10"
+    "@bufferapp/publish-sent": "^1.9.16",
+    "@bufferapp/publish-settings": "^1.9.16",
+    "@bufferapp/publish-shared-components": "^1.9.16",
+    "@bufferapp/publish-store": "^1.9.16",
+    "@bufferapp/publish-tabs": "^1.9.16"
   },
   "devDependencies": {
     "eslint": "3.19.0"

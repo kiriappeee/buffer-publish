@@ -35,6 +35,7 @@ export default connect(
         page: currentProfile.page,
         postLists: formatPostLists(currentProfile.posts),
         total: currentProfile.total,
+        isBusinessUser: state.appSidebar.user.is_business_user,
       };
     }
     return {};

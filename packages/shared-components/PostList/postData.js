@@ -101,3 +101,5 @@ export const confirmDeletePosts = posts.map(post => ({
 }));
 
 export const listHeader = 'List Header';
+
+export const isBusinessUser = true;

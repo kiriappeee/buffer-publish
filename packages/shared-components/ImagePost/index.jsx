@@ -62,6 +62,7 @@ const ImagePost = ({
   draggable,
   dragging,
   hovering,
+  statistics,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -121,6 +122,7 @@ const ImagePost = ({
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
+      statistics={statistics}
     >
       {children}
     </Post>

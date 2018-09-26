@@ -132,6 +132,7 @@ const Post = ({
   dragging,
   hovering,
   fixed,
+  statistics,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
