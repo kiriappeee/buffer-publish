@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
         ...state,
         loading: false,
         features: action.result.features,
-        product: (action.result.features || []).length > 0 ? 'pro' : 'free',
+        planName: action.result.planName,
       };
     default:
       return state;

@@ -1,6 +1,5 @@
 import {
-  actions as dataFetchActions,
-  actionTypes as dataFetchActionTypes,
+  actions as dataFetchActions
 } from '@bufferapp/async-data-fetch';
 
 export default ({ dispatch }) => next => (action) => {
