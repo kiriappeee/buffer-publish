@@ -7,6 +7,7 @@ import {
   QuestionIcon,
   IconArrowPopover,
 } from '@bufferapp/components';
+import FeatureLoader from '@bufferapp/product-features';
 import {
   offWhite,
   mystic,
@@ -73,6 +74,12 @@ const renderLockedHeader = translations => (
   </div>
 );
 
+const DefaultFallbackType = (
+  <Text size={'large'} >
+    Free
+  </Text>
+);
+
 const productTitle = (
   <div>
     <span style={productTitleStyle}>
@@ -84,11 +91,14 @@ const productTitle = (
         Publish
       </Text>
     </span>
-    <Text
-      size={'large'}
+    <FeatureLoader
+      fallback={DefaultFallbackType}
+      supportedPlans={'pro'}
     >
-      Free
-    </Text>
+      <Text size={'large'} >
+        Pro
+      </Text>
+    </FeatureLoader>
     <Divider marginTop={'1rem'} />
   </div>
 );

@@ -6,7 +6,7 @@ import FeatureLoader from './components/FeatureLoader';
 
 export default connect(
   state => ({
-    features: state.productFeatures,
+    productFeatures: state.productFeatures,
   }),
 )(FeatureLoader);
 

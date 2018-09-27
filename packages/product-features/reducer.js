@@ -7,17 +7,18 @@ export const actionTypes = {};
 const initialState = {
   loading: true,
   features: [],
-  product: 'free',
+  planName: 'free',
+  defaultPlan: 'free',
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case `feature_${dataFetchActionTypes.FETCH_START}`:
+    case `features_${dataFetchActionTypes.FETCH_START}`:
       return {
         ...state,
         loading: true,
       };
-    case `feature_${dataFetchActionTypes.FETCH_SUCCESS}`:
+    case `features_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
         loading: false,
