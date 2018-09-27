@@ -7,6 +7,7 @@ import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
+import { middleware as productFeatureMiddleware } from '@bufferapp/product-features';
 import { middleware as i18nMiddleware } from '@bufferapp/publish-i18n';
 import { middleware as asyncDataFetchMiddleware } from '@bufferapp/async-data-fetch';
 import { middleware as pusherSyncMiddleware } from '@bufferapp/publish-pusher-sync';
@@ -56,6 +57,7 @@ const configureStore = (initialstate) => {
         profileSidebarMiddleware,
         performanceMiddleware,
         appSidebarMiddleware,
+        productFeatureMiddleware,
         queueMiddleware,
         sentMiddleware,
         settingsMiddleware,
