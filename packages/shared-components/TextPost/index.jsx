@@ -37,6 +37,7 @@ const TextPost = ({
   hovering,
   fixed,
   statistics,
+  profile_service,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -79,6 +80,7 @@ const TextPost = ({
       hovering={hovering}
       fixed={fixed}
       statistics={statistics}
+      profileService={profile_service}
     >
       {children}
     </Post>

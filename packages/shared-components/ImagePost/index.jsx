@@ -63,6 +63,7 @@ const ImagePost = ({
   dragging,
   hovering,
   statistics,
+  profile_service,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -123,6 +124,7 @@ const ImagePost = ({
       dragging={dragging}
       hovering={hovering}
       statistics={statistics}
+      profileService={profile_service}
     >
       {children}
     </Post>

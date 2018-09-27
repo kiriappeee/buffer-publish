@@ -134,6 +134,7 @@ const Post = ({
   hovering,
   fixed,
   statistics,
+  profileService,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
@@ -168,6 +169,7 @@ const Post = ({
         {sent &&
           <PostStats
             statistics={statistics}
+            profileService={profileService}
           /> 
         }
       </Card>
