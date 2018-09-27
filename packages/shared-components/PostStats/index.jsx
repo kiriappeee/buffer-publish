@@ -74,6 +74,9 @@ const PostStats = ({
     if (typeStats === 'reach_twitter' && profileService === 'twitter') {
       value = statistics['reach'];
     }
+    if (typeStats === 'reach' && profileService === 'twitter') {
+      return;
+    }
     if ((typeStats !== 'reach' && typeStats !== 'reach_twitter' && typeStats !== 'plusOne') && value !== 1) {
       title += 's';
     }
@@ -94,6 +97,10 @@ const PostStats = ({
       {Object.keys(titles).map((typeStats) => createElement(typeStats))}
     </div>
   );
+};
+
+PostStats.propTypes = {
+  profileService: PropTypes.oneOf(['twitter', 'linkedin', 'google', 'facebook', 'instagram', 'pinterest']),
 };
 
 export default PostStats;
