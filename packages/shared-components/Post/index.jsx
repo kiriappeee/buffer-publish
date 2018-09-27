@@ -18,6 +18,7 @@ import {
 } from '@bufferapp/components/style/border';
 
 import PostFooter from '../PostFooter';
+import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
@@ -164,6 +165,11 @@ const Post = ({
           dragging={dragging}
           onRequeueClick={onRequeueClick}
         />
+        {sent &&
+          <PostStats
+            statistics={statistics}
+          /> 
+        }
       </Card>
     </div>
   </div>);
