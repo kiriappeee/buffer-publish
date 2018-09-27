@@ -14,7 +14,7 @@ import PostDragWrapper from '../PostDragWrapper';
 
 const reBufferWrapperStyle = {
   paddingLeft: '1rem',
-  minWidth: '120px',
+  minWidth: '132px',
 };
 
 const postStyle = {
@@ -87,6 +87,7 @@ const PostList = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  onShareAgainClick,
   isBusinessUser,
 }) =>
   <div>
@@ -113,15 +114,16 @@ const PostList = ({
               onImageClickPrev,
               onImageClose,
               onDropPost,
+              onShareAgainClick,
             })
           }
           {isBusinessUser ?
             <div style={reBufferWrapperStyle}>
               <Button
                 secondary
-                onClick={() => { onEditClick(); }}
+                onClick={() => { onShareAgainClick({ post }); }}
               >
-                Re-Buffer
+                Share Again
               </Button>
             </div>
           : null }
@@ -147,6 +149,7 @@ PostList.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
+  onShareAgainClick: PropTypes.func,
   isBusinessUser: PropTypes.bool,
 };
 

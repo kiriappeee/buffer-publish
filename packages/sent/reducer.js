@@ -1,14 +1,21 @@
 import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import { actionTypes as profileSidebarActionTypes } from '@bufferapp/publish-profile-sidebar';
 import { actionTypes as queueActionTypes } from '@bufferapp/publish-queue';
+import keyWrapper from '@bufferapp/keywrapper';
 import {
   header,
 } from './components/SentPosts/postData';
 
-export const actionTypes = { };
+export const actionTypes = keyWrapper('SENT', {
+  OPEN_COMPOSER: 0,
+  HIDE_COMPOSER: 0,
+});
 
 const initialState = {
   byProfileId: {},
+  showComposer: false,
+  editMode: false,
+  editingPostId: '',
 };
 
 const profileInitialState = {
@@ -111,9 +118,33 @@ export default (state = initialState, action) => {
         };
       }
       return state;
+    case actionTypes.OPEN_COMPOSER:
+      return {
+        ...state,
+        showComposer: true,
+        editMode: action.editMode,
+        editingPostId: action.updateId,
+      };
+    case actionTypes.HIDE_COMPOSER:
+      return {
+        ...state,
+        showComposer: false,
+        editMode: false,
+      };
     default:
       return state;
   }
 };
 
-export const actions = {};
+export const actions = {
+  handleShareAgainClick: ({ post, profileId }) => ({
+    type: actionTypes.OPEN_COMPOSER,
+    updateId: post.id,
+    editMode: false,
+    post,
+    profileId,
+  }),
+  handleComposerCreateSuccess: () => ({
+    type: actionTypes.HIDE_COMPOSER,
+  }),
+};
