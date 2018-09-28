@@ -1,69 +1,69 @@
 const { rpc } = require('@bufferapp/buffer-rpc');
 
-const changeDateTimePreferences = require('./changeDateTimePreferences');
-const changePassword = require('./changePassword');
-const closeAccount = require('./closeAccount');
-const composerApiProxyMethod = require('./composerApiProxy');
-const connectedApps = require('./connectedApps');
-const deletePostMethod = require('./deletePost');
-const draftPostsMethod = require('./draftPosts');
-const enabledApplicationModesMethod = require('./enabledApplicationModes');
-const environmentMethod = require('./environment');
-const featureMethod = require('./features');
-const getNumberOfPostsMethod = require('./getNumberPosts');
-const getTimezonesMethod = require('./getTimezones');
-const pauseQueueMethod = require('./pauseQueue');
-const performanceTrackingMethod = require('./performanceTracking');
 const profilesMethod = require('./profiles');
 const queuedPostsMethod = require('./queuedPosts');
-const reorderPostsMethod = require('./reorderPosts');
-const requeuePost = require('./requeuePost');
-const revokeConnectedApp = require('./revokeConnectedApp');
-const savePublishBetaRedirect = require('./savePublishBetaRedirect');
-const sendFeedback = require('./sendFeedback');
 const sentPostsMethod = require('./sentPosts');
+const draftPostsMethod = require('./draftPosts');
+const userMethod = require('./user');
+const deletePostMethod = require('./deletePost');
 const sharePostNowMethod = require('./sharePostNow');
+const enabledApplicationModesMethod = require('./enabledApplicationModes');
+const composerApiProxyMethod = require('./composerApiProxy');
+const environmentMethod = require('./environment');
+const updateScheduleMethod = require('./updateSchedule');
+const getTimezonesMethod = require('./getTimezones');
+const updateTimezoneMethod = require('./updateTimezone');
+const reorderPostsMethod = require('./reorderPosts');
+const pauseQueueMethod = require('./pauseQueue');
+const requeuePost = require('./requeuePost');
+const updatePausedSchedules = require('./updatePausedSchedules');
+const sendFeedback = require('./sendFeedback');
+const savePublishBetaRedirect = require('./savePublishBetaRedirect');
+const performanceTrackingMethod = require('./performanceTracking');
+const upgradeToPro = require('./upgradeToPro');
+const updateEmail = require('./updateEmail');
+const changePassword = require('./changePassword');
+const changeDateTimePreferences = require('./changeDateTimePreferences');
+const twoFactorUpdate = require('./twoFactorUpdate');
 const twoFactorConfirm = require('./twoFactorConfirm');
 const twoFactorRecovery = require('./twoFactorRecovery');
-const twoFactorUpdate = require('./twoFactorUpdate');
-const updateEmail = require('./updateEmail');
-const updatePausedSchedules = require('./updatePausedSchedules');
-const updateScheduleMethod = require('./updateSchedule');
-const updateTimezoneMethod = require('./updateTimezone');
-const upgradeToPro = require('./upgradeToPro');
-const userMethod = require('./user');
+const closeAccount = require('./closeAccount');
+const connectedApps = require('./connectedApps');
+const revokeConnectedApp = require('./revokeConnectedApp');
+const getNumberOfPostsMethod = require('./getNumberPosts');
+const featureMethod = require('./features');
 
 module.exports = rpc(
-  changeDateTimePreferences,
-  changePassword,
-  closeAccount,
-  composerApiProxyMethod,
-  connectedApps,
-  deletePostMethod,
-  draftPostsMethod,
-  enabledApplicationModesMethod,
-  environmentMethod,
-  featureMethod,
-  getNumberOfPostsMethod,
-  getTimezonesMethod,
-  pauseQueueMethod,
-  performanceTrackingMethod,
   profilesMethod,
   queuedPostsMethod,
-  reorderPostsMethod,
-  requeuePost,
-  revokeConnectedApp,
-  savePublishBetaRedirect,
-  sendFeedback,
   sentPostsMethod,
+  draftPostsMethod,
+  userMethod,
+  deletePostMethod,
   sharePostNowMethod,
+  enabledApplicationModesMethod,
+  composerApiProxyMethod,
+  environmentMethod,
+  updateScheduleMethod,
+  getTimezonesMethod,
+  updateTimezoneMethod,
+  reorderPostsMethod,
+  pauseQueueMethod,
+  requeuePost,
+  updatePausedSchedules,
+  sendFeedback,
+  savePublishBetaRedirect,
+  performanceTrackingMethod,
+  upgradeToPro,
+  updateEmail,
+  changePassword,
+  changeDateTimePreferences,
+  twoFactorUpdate,
   twoFactorConfirm,
   twoFactorRecovery,
-  twoFactorUpdate,
-  updateEmail,
-  updatePausedSchedules,
-  updateScheduleMethod,
-  updateTimezoneMethod,
-  upgradeToPro,
-  userMethod,
+  closeAccount,
+  connectedApps,
+  revokeConnectedApp,
+  getNumberOfPostsMethod,
+  featureMethod,
 );
