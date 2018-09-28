@@ -5,7 +5,7 @@ const { featureParser } = require('@bufferapp/publish-utils');
 module.exports = method(
   'features',
   'fetch user features for plan',
-  (_, { session }) =>
+  async (_, { session }) =>
     rp({
       uri: `${process.env.API_ADDR}/1/user/features.json`,
       method: 'GET',
