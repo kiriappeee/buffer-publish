@@ -113,6 +113,8 @@ const renderContent = ({
 
 /* eslint-enable react/prop-types */
 
+const isUserPro = false;
+
 const Post = ({
   children,
   isConfirmingDelete,
@@ -166,7 +168,7 @@ const Post = ({
           dragging={dragging}
           onRequeueClick={onRequeueClick}
         />
-        {sent &&
+        {sent && isUserPro &&
           <PostStats
             statistics={statistics}
             profileService={profileService}
