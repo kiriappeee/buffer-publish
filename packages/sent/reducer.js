@@ -11,11 +11,12 @@ export const actionTypes = keyWrapper('SENT', {
   HIDE_COMPOSER: 0,
 });
 
-const initialState = {
+export const initialState = {
   byProfileId: {},
   showComposer: false,
   editMode: false,
   editingPostId: '',
+  environment: 'production',
 };
 
 const profileInitialState = {
