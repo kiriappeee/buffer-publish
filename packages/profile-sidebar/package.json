@@ -12,7 +12,8 @@
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "1.9.3",
     "@bufferapp/publish-routes": "1.9.3",
-    "@bufferapp/publish-utils": "1.9.15"
+    "@bufferapp/publish-utils": "1.9.15",
+    "@bufferapp/product-features": "1.9.10"
   },
   "devDependencies": {
     "eslint": "3.19.0"
