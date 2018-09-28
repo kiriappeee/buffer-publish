@@ -47,6 +47,7 @@ const MultipleImagesPost = ({
   dragging,
   hovering,
   statistics,
+  isSent,
 }) => {
   const images = imageUrls.map(url => ({ src: `${url}` }));
   const children = (
@@ -104,6 +105,7 @@ const MultipleImagesPost = ({
       dragging={dragging}
       hovering={hovering}
       statistics={statistics}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -128,6 +130,7 @@ MultipleImagesPost.propTypes = {
   onImageClose: PropTypes.func,
   onImageClick: PropTypes.func,
   currentImage: PropTypes.number,
+  isSent: PropTypes.bool,
 };
 
 MultipleImagesPost.defaultProps = Post.defaultProps;

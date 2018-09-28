@@ -27,6 +27,7 @@ const VideoPost = ({
   dragging,
   hovering,
   statistics,
+  isSent,
 }) =>
   <ImagePost
     isConfirmingDelete={isConfirmingDelete}
@@ -54,6 +55,7 @@ const VideoPost = ({
     dragging={dragging}
     hovering={hovering}
     statistics={statistics}
+    isSent={isSent}
   />;
 
 VideoPost.propTypes = ImagePost.propTypes;

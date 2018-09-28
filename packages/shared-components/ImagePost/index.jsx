@@ -63,6 +63,7 @@ const ImagePost = ({
   dragging,
   hovering,
   statistics,
+  isSent,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -123,6 +124,7 @@ const ImagePost = ({
       dragging={dragging}
       hovering={hovering}
       statistics={statistics}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -147,6 +149,7 @@ ImagePost.propTypes = {
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 ImagePost.defaultProps = ImagePost.defaultProps;

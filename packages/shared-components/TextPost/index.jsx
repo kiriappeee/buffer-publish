@@ -37,6 +37,7 @@ const TextPost = ({
   hovering,
   fixed,
   statistics,
+  isSent,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -79,6 +80,7 @@ const TextPost = ({
       hovering={hovering}
       fixed={fixed}
       statistics={statistics}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -104,6 +106,7 @@ TextPost.propTypes = {
     }),
   ),
   text: PropTypes.string.isRequired,
+  isSent: PropTypes.bool,
 };
 
 TextPost.defaultProps = Post.defaultProps;

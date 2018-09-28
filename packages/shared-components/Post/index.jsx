@@ -133,6 +133,7 @@ const Post = ({
   hovering,
   fixed,
   statistics,
+  isSent,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
@@ -163,6 +164,7 @@ const Post = ({
           sent={sent}
           dragging={dragging}
           onRequeueClick={onRequeueClick}
+          isSent={isSent}
         />
       </Card>
     </div>
@@ -203,6 +205,7 @@ Post.commonPropTypes = {
   hovering: PropTypes.bool,
   fixed: PropTypes.bool,
   onDropPost: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 Post.propTypes = {
@@ -215,6 +218,7 @@ Post.defaultProps = {
   isDeleting: false,
   isWorking: false,
   fixed: false,
+  isSent: false,
 };
 
 export default Post;
