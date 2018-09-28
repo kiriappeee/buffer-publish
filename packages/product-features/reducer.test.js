@@ -7,14 +7,10 @@ import reducer from './reducer';
 describe('reducer', () => {
   it('should initialize default state', () => {
     const stateAfter = {
-      user: {
-        loading: true,
-        id: '0',
-        name: '...',
-        email: '...',
-        avatar: '',
-      },
-      environment: 'production',
+      loading: true,
+      features: [],
+      planName: 'free',
+      defaultPlan: 'free',
     };
     const action = {
       type: 'INIT',
@@ -23,18 +19,23 @@ describe('reducer', () => {
     expect(reducer(undefined, action))
       .toEqual(stateAfter);
   });
-  it('should save user into state', () => {
-    const user = {
-      id: 1,
-      email: 'hamish@buffer.com',
-      avatar: 'http://fake.com/avatar.webm',
-      loading: false,
+  it('should save feature into state', () => {
+    const features = {
+      features: {
+        show_stuff: true,
+        not_here: false,
+      },
+      planName: 'pro',
+      defaultPlan: 'free',
     };
     const action = {
-      type: `user_${dataFetchActionTypes.FETCH_SUCCESS}`,
-      result: user,
+      type: `features_${dataFetchActionTypes.FETCH_SUCCESS}`,
+      result: features,
     };
-    const stateAfter = { user, environment: 'production' };
+    const stateAfter = {
+      ...features,
+      loading: false,
+    };
     deepFreeze(action);
     expect(reducer(undefined, action))
       .toEqual(stateAfter);

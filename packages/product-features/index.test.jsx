@@ -1,10 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import AppSidebar, {
+import FeatureLoader, {
   reducer,
-  actions,
-  actionTypes,
   middleware,
 } from './index';
 
@@ -15,31 +13,26 @@ const storeFake = state => ({
   getState: () => ({ ...state }),
 });
 
-describe('Example', () => {
+describe.only('Example', () => {
   it('should render', () => {
     const store = storeFake({
-      appSidebar: {
-        user: {
-          loading: false,
-          id: '1234',
-          name: 'Hamish Macpherson',
-          email: '...',
-          avatar: '',
+      productFeatures: {
+        loading: false,
+        features: {
+          show_stuff: true,
+          not_here: false,
         },
       },
-      environment: {
-        environment: 'production',
-      },
-      i18n: {
-        translations: { },
-      },
+      planName: 'free',
     });
     const wrapper = mount(
       <Provider store={store}>
-        <AppSidebar />
+        <FeatureLoader>
+          <div>Hello</div>
+        </FeatureLoader>
       </Provider>,
     );
-    expect(wrapper.find(AppSidebar).length)
+    expect(wrapper.find(FeatureLoader).length)
       .toBe(1);
   });
 
@@ -47,17 +40,6 @@ describe('Example', () => {
     expect(reducer)
       .toBeDefined();
   });
-
-  it('should export actions', () => {
-    expect(actions)
-      .toBeDefined();
-  });
-
-  it('should export actionTypes', () => {
-    expect(actionTypes)
-      .toBeDefined();
-  });
-
   it('should export middleware', () => {
     expect(middleware)
       .toBeDefined();

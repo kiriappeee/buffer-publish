@@ -4,7 +4,7 @@ import {
 import middleware from './middleware';
 
 describe('middleware', () => {
-  it('should fetch user APP_INIT', () => {
+  it('should fetch features APP_INIT', () => {
     const next = jest.fn();
     const dispatch = jest.fn();
     const action = {
@@ -14,6 +14,7 @@ describe('middleware', () => {
     expect(next)
       .toBeCalledWith(action);
     expect(dispatch)
-      .toBeCalledWith(dataFetchActions.fetch({ name: 'user' }));
+      .toBeCalledWith(dataFetchActions.fetch({ name: 'features' }));
+
   });
 });
