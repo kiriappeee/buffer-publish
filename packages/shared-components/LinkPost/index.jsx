@@ -55,7 +55,6 @@ const LinkPost = ({
   onRequeueClick,
   postDetails,
   scheduledAt,
-  sent,
   text,
   draggable,
   dragging,
@@ -130,7 +129,6 @@ const LinkPost = ({
       onShareNowClick={onShareNowClick}
       postDetails={postDetails}
       scheduledAt={scheduledAt}
-      sent={sent}
       text={text}
       draggable={draggable}
       dragging={dragging}

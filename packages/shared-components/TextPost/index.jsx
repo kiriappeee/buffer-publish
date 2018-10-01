@@ -31,7 +31,6 @@ const TextPost = ({
   retweetProfile,
   retweetComment,
   retweetCommentLinks,
-  sent,
   draggable,
   dragging,
   hovering,
@@ -74,7 +73,6 @@ const TextPost = ({
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
       retweetCommentLinks={retweetCommentLinks}
-      sent={sent}
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}

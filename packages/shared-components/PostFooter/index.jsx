@@ -73,7 +73,6 @@ const PostFooter = ({
   onEditClick,
   onShareNowClick,
   postDetails,
-  sent,
   dragging,
   isSent,
 }) => {
@@ -117,7 +116,6 @@ PostFooter.propTypes = {
     error: PropTypes.string,
     postAction: PropTypes.string,
   }).isRequired,
-  sent: PropTypes.bool.isRequired,
   dragging: PropTypes.bool,
   onRequeueClick: PropTypes.func,
   isSent: PropTypes.bool,

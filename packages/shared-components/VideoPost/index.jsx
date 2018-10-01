@@ -17,7 +17,6 @@ const VideoPost = ({
   text,
   tag,
   retweetProfile,
-  sent,
   onImageClick,
   onImageClickNext,
   onImageClickPrev,
@@ -45,7 +44,6 @@ const VideoPost = ({
     onShareNowClick={onShareNowClick}
     onRequeueClick={onRequeueClick}
     retweetProfile={retweetProfile}
-    sent={sent}
     onImageClick={onImageClick}
     onImageClickNext={onImageClickNext}
     onImageClickPrev={onImageClickPrev}

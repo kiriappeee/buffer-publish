@@ -35,7 +35,6 @@ const MultipleImagesPost = ({
   onShareNowClick,
   onRequeueClick,
   retweetProfile,
-  sent,
   text,
   isLightboxOpen,
   onImageClickPrev,
@@ -99,7 +98,6 @@ const MultipleImagesPost = ({
       onShareNowClick={onShareNowClick}
       onRequeueClick={onRequeueClick}
       retweetProfile={retweetProfile}
-      sent={sent}
       text={text}
       draggable={draggable}
       dragging={dragging}

@@ -127,7 +127,6 @@ const Post = ({
   retweetComment,
   retweetCommentLinks,
   retweetProfile,
-  sent,
   draggable,
   dragging,
   hovering,
@@ -161,7 +160,6 @@ const Post = ({
           onEditClick={onEditClick}
           onShareNowClick={onShareNowClick}
           postDetails={postDetails}
-          sent={sent}
           dragging={dragging}
           onRequeueClick={onRequeueClick}
           isSent={isSent}
@@ -199,7 +197,6 @@ Post.commonPropTypes = {
       indices: PropTypes.arrayOf(PropTypes.number),
     }),
   ),
-  sent: PropTypes.bool.isRequired,
   draggable: PropTypes.bool,
   dragging: PropTypes.bool,
   hovering: PropTypes.bool,

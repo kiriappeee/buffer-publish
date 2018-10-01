@@ -50,7 +50,6 @@ const ImagePost = ({
   onShareNowClick,
   onRequeueClick,
   postDetails,
-  sent,
   text,
   tag,
   retweetProfile,
@@ -117,7 +116,6 @@ const ImagePost = ({
       onShareNowClick={onShareNowClick}
       onRequeueClick={onRequeueClick}
       postDetails={postDetails}
-      sent={sent}
       text={text}
       retweetProfile={retweetProfile}
       draggable={draggable}
