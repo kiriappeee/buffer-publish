@@ -143,7 +143,6 @@ describe('reducer', () => {
       environment: 'production',
       editMode: false,
       editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const stateAfter = {
       byProfileId: {
@@ -162,7 +161,6 @@ describe('reducer', () => {
       environment: 'production',
       editMode: false,
       editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const action = {
       type: actionTypes.POST_UPDATED,
