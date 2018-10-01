@@ -38,8 +38,8 @@ const abbreviateNumber = (number, decPlaces) => {
     if(size <= number) {
       number = Math.round(number*decPlaces/size)/decPlaces;
       if((number == 1000) && (i < abbreviations.length - 1)) {
-         number = 1;
-         i++;
+        number = 1;
+        i++;
       }
       number += abbreviations[i];
       break;

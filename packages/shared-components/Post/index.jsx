@@ -20,6 +20,7 @@ import {
 import PostFooter from '../PostFooter';
 import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
+import FeatureLoader from '@bufferapp/product-features';
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
@@ -113,8 +114,6 @@ const renderContent = ({
 
 /* eslint-enable react/prop-types */
 
-const isUserPro = false;
-
 const Post = ({
   children,
   isConfirmingDelete,
@@ -168,12 +167,16 @@ const Post = ({
           dragging={dragging}
           onRequeueClick={onRequeueClick}
         />
-        {sent && isUserPro &&
-          <PostStats
-            statistics={statistics}
-            profileService={profileService}
-          /> 
-        }
+        <FeatureLoader
+          supportedFeatures={'post_stats'}
+        >
+          {sent &&
+            <PostStats
+              statistics={statistics}
+              profileService={profileService}
+            /> 
+          }
+        </FeatureLoader>
       </Card>
     </div>
   </div>);
