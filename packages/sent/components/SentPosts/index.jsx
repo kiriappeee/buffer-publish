@@ -48,7 +48,6 @@ const SentPosts = ({
   onComposerCreateSuccess,
   showComposer,
   editMode,
-  isBusinessUser,
 }) => {
   if (loading) {
     return (
@@ -88,7 +87,6 @@ const SentPosts = ({
       }
       <PostLists
         postLists={postLists}
-        isBusinessUser={isBusinessUser}
         onEditClick={onEditClick}
         onShareAgainClick={onShareAgainClick}
         isSent
@@ -113,7 +111,6 @@ SentPosts.propTypes = {
     }),
   ),
   total: PropTypes.number,
-  isBusinessUser: PropTypes.bool,
   showComposer: PropTypes.bool,
   editMode: PropTypes.bool,
   onComposerCreateSuccess: PropTypes.func.isRequired,
@@ -128,7 +125,6 @@ SentPosts.defaultProps = {
   page: 1,
   postLists: [],
   total: 0,
-  isBusinessUser: false,
   showComposer: false,
   editMode: false,
   onShareAgainClick: () => {},

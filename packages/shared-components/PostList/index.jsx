@@ -5,6 +5,7 @@ import {
   Text,
   Button,
 } from '@bufferapp/components';
+import FeatureLoader from '@bufferapp/product-features';
 import TextPost from '../TextPost';
 import ImagePost from '../ImagePost';
 import MultipleImagesPost from '../MultipleImagesPost';
@@ -90,7 +91,6 @@ const PostList = ({
   onImageClose,
   onDropPost,
   onShareAgainClick,
-  isBusinessUser,
   isSent,
 }) =>
   <div>
@@ -121,7 +121,9 @@ const PostList = ({
               isSent,
             })
           }
-          {isBusinessUser ?
+          <FeatureLoader
+            supportedPlans={'pro'}
+          >
             <div style={reBufferWrapperStyle}>
               <Button
                 secondary
@@ -130,7 +132,7 @@ const PostList = ({
                 Share Again
               </Button>
             </div>
-          : null }
+          </FeatureLoader>
         </div>,
       )}
     />
@@ -154,7 +156,6 @@ PostList.propTypes = {
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
   onShareAgainClick: PropTypes.func,
-  isBusinessUser: PropTypes.bool,
   isSent: PropTypes.bool,
 };
 

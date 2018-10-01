@@ -27,7 +27,6 @@ const renderPostList = ({
   onImageClose,
   onDropPost,
   onShareAgainClick,
-  isBusinessUser,
   isSent,
 }) =>
   <div style={postListStyle}>
@@ -47,7 +46,6 @@ const renderPostList = ({
       onImageClose={onImageClose}
       onDropPost={onDropPost}
       onShareAgainClick={onShareAgainClick}
-      isBusinessUser={isBusinessUser}
       isSent={isSent}
     />
   </div>;
@@ -56,7 +54,6 @@ const renderPostList = ({
 
 const PostLists = ({
   postLists,
-  isBusinessUser,
   onCancelConfirmClick,
   onDeleteClick,
   onDeleteConfirmClick,
@@ -88,7 +85,6 @@ const PostLists = ({
         onImageClose,
         onDropPost,
         onShareAgainClick,
-        isBusinessUser,
         isSent,
       }),
     )}
@@ -118,7 +114,6 @@ PostLists.propTypes = {
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
   onShareAgainClick: PropTypes.func,
-  isBusinessUser: PropTypes.bool,
   isSent: PropTypes.bool,
 };
 
