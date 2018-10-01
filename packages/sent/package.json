@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-sent",
-  "version": "1.9.18",
+  "version": "1.9.19",
   "description": "Sent Posts package",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,9 @@
   "author": "melissa@buffer.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
-    "@bufferapp/publish-profile-sidebar": "^1.9.18",
-    "@bufferapp/publish-pusher-sync": "^1.9.18",
-    "@bufferapp/publish-queue": "^1.9.18",
+    "@bufferapp/publish-profile-sidebar": "^1.9.19",
+    "@bufferapp/publish-pusher-sync": "^1.9.19",
+    "@bufferapp/publish-queue": "^1.9.19",
     "@bufferapp/publish-shared-components": "^1.9.18"
   },
   "devDependencies": {
