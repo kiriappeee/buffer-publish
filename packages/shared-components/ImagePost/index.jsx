@@ -50,7 +50,6 @@ const ImagePost = ({
   onShareNowClick,
   onRequeueClick,
   postDetails,
-  sent,
   text,
   tag,
   retweetProfile,
@@ -64,6 +63,7 @@ const ImagePost = ({
   hovering,
   statistics,
   profile_service,
+  isSent,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -117,7 +117,6 @@ const ImagePost = ({
       onShareNowClick={onShareNowClick}
       onRequeueClick={onRequeueClick}
       postDetails={postDetails}
-      sent={sent}
       text={text}
       retweetProfile={retweetProfile}
       draggable={draggable}
@@ -125,6 +124,7 @@ const ImagePost = ({
       hovering={hovering}
       statistics={statistics}
       profileService={profile_service}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -149,6 +149,7 @@ ImagePost.propTypes = {
   onImageClickNext: PropTypes.func,
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 ImagePost.defaultProps = ImagePost.defaultProps;

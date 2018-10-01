@@ -31,13 +31,13 @@ const TextPost = ({
   retweetProfile,
   retweetComment,
   retweetCommentLinks,
-  sent,
   draggable,
   dragging,
   hovering,
   fixed,
   statistics,
   profile_service,
+  isSent,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -74,13 +74,13 @@ const TextPost = ({
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
       retweetCommentLinks={retweetCommentLinks}
-      sent={sent}
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
       fixed={fixed}
       statistics={statistics}
       profileService={profile_service}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -106,6 +106,7 @@ TextPost.propTypes = {
     }),
   ),
   text: PropTypes.string.isRequired,
+  isSent: PropTypes.bool,
 };
 
 TextPost.defaultProps = Post.defaultProps;

@@ -8,6 +8,7 @@ import {
   Text,
 } from '@bufferapp/components';
 import Post from '../Post';
+import PostFooter from "../PostFooter";
 
 const postContentStyle = {
   display: 'flex',
@@ -54,13 +55,13 @@ const LinkPost = ({
   onRequeueClick,
   postDetails,
   scheduledAt,
-  sent,
   text,
   draggable,
   dragging,
   hovering,
   statistics,
   profile_service,
+  isSent,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -129,7 +130,6 @@ const LinkPost = ({
       onShareNowClick={onShareNowClick}
       postDetails={postDetails}
       scheduledAt={scheduledAt}
-      sent={sent}
       text={text}
       draggable={draggable}
       dragging={dragging}
@@ -137,6 +137,7 @@ const LinkPost = ({
       onRequeueClick={onRequeueClick}
       statistics={statistics}
       profileService={profile_service}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -160,6 +161,7 @@ LinkPost.propTypes = {
     thumbnailUrl: PropTypes.string,
   }).isRequired,
   text: PropTypes.string.isRequired,
+  isSent: PropTypes.bool,
 };
 
 LinkPost.defaultProps = Post.defaultProps;

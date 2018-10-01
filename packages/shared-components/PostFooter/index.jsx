@@ -73,8 +73,8 @@ const PostFooter = ({
   onEditClick,
   onShareNowClick,
   postDetails,
-  sent,
   dragging,
+  isSent,
 }) => {
   const hasError = postDetails.error && postDetails.error.length > 0;
   const isCustomScheduled = postDetails.isCustomScheduled;
@@ -84,7 +84,7 @@ const PostFooter = ({
       {isCustomScheduled && !hasError && renderCustomScheduledIcon()}
       {renderText({ postDetails }, hasError)}
     </div>
-    { !sent && (
+    { !isSent && (
       <div style={postControlsStyle}>
         <PostFooterButtons
           error={postDetails.error}
@@ -116,9 +116,9 @@ PostFooter.propTypes = {
     error: PropTypes.string,
     postAction: PropTypes.string,
   }).isRequired,
-  sent: PropTypes.bool.isRequired,
   dragging: PropTypes.bool,
   onRequeueClick: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 PostFooter.defaultProps = {

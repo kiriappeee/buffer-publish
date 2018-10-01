@@ -129,13 +129,13 @@ const Post = ({
   retweetComment,
   retweetCommentLinks,
   retweetProfile,
-  sent,
   draggable,
   dragging,
   hovering,
   fixed,
   statistics,
   profileService,
+  isSent,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
@@ -163,9 +163,9 @@ const Post = ({
           onEditClick={onEditClick}
           onShareNowClick={onShareNowClick}
           postDetails={postDetails}
-          sent={sent}
           dragging={dragging}
           onRequeueClick={onRequeueClick}
+          isSent={isSent}
         />
         <FeatureLoader
           supportedFeatures={'post_stats'}
@@ -210,12 +210,12 @@ Post.commonPropTypes = {
       indices: PropTypes.arrayOf(PropTypes.number),
     }),
   ),
-  sent: PropTypes.bool.isRequired,
   draggable: PropTypes.bool,
   dragging: PropTypes.bool,
   hovering: PropTypes.bool,
   fixed: PropTypes.bool,
   onDropPost: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 Post.propTypes = {
@@ -228,6 +228,7 @@ Post.defaultProps = {
   isDeleting: false,
   isWorking: false,
   fixed: false,
+  isSent: false,
 };
 
 export default Post;

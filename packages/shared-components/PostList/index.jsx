@@ -51,6 +51,7 @@ const renderPost = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  isSent,
 }) => {
   const postWithEventHandlers = {
     ...post,
@@ -65,6 +66,7 @@ const renderPost = ({
     onImageClickPrev: () => onImageClickPrev({ post }),
     onImageClose: () => onImageClose({ post }),
     onDropPost,
+    isSent,
   };
   let PostComponent = postTypeComponentMap.get(post.type);
   PostComponent = PostComponent || TextPost;
@@ -88,6 +90,7 @@ const PostList = ({
   onImageClose,
   onDropPost,
   isBusinessUser,
+  isSent,
 }) =>
   <div>
     <div style={listHeaderStyle}>
@@ -113,6 +116,7 @@ const PostList = ({
               onImageClickPrev,
               onImageClose,
               onDropPost,
+              isSent,
             })
           }
           {isBusinessUser ?
@@ -148,6 +152,7 @@ PostList.propTypes = {
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
   isBusinessUser: PropTypes.bool,
+  isSent: PropTypes.bool,
 };
 
 PostList.defaultProps = {
