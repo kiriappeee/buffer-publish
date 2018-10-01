@@ -170,7 +170,7 @@ const Post = ({
         <FeatureLoader
           supportedFeatures={'post_stats'}
         >
-          {sent &&
+          {isSent && !postDetails.isRetweet &&
             <PostStats
               statistics={statistics}
               profileService={profileService}
