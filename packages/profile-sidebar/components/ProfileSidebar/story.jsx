@@ -1,7 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
+import createStore from '@bufferapp/publish-store';
 import { action } from '@storybook/addon-actions';
+import { Provider } from 'react-redux';
 import ProfileSidebar from './index';
 import profiles from '../../mockData/profiles';
 import lockedProfiles from '../../mockData/lockedProfiles';
@@ -9,6 +11,7 @@ import lockedProfiles from '../../mockData/lockedProfiles';
 const lotsOfProfiles = () =>
   [...Array(10)].reduce(p => [...p, ...lockedProfiles], []);
 
+const store = createStore();
 const translations = {
   connectButton: 'Manage Social Accounts',
   lockedList: 'Locked Social Accounts',
@@ -17,6 +20,11 @@ const translations = {
 
 storiesOf('ProfileSidebar', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+        {getStory()}
+    </Provider>,
+  )
   .add('should display a list of profiles', () => (
     <ProfileSidebar
       selectedProfileId={'1234'}

@@ -17,7 +17,6 @@ const VideoPost = ({
   text,
   tag,
   retweetProfile,
-  sent,
   onImageClick,
   onImageClickNext,
   onImageClickPrev,
@@ -27,6 +26,7 @@ const VideoPost = ({
   dragging,
   hovering,
   statistics,
+  isSent,
 }) =>
   <ImagePost
     isConfirmingDelete={isConfirmingDelete}
@@ -44,7 +44,6 @@ const VideoPost = ({
     onShareNowClick={onShareNowClick}
     onRequeueClick={onRequeueClick}
     retweetProfile={retweetProfile}
-    sent={sent}
     onImageClick={onImageClick}
     onImageClickNext={onImageClickNext}
     onImageClickPrev={onImageClickPrev}
@@ -54,6 +53,7 @@ const VideoPost = ({
     dragging={dragging}
     hovering={hovering}
     statistics={statistics}
+    isSent={isSent}
   />;
 
 VideoPost.propTypes = ImagePost.propTypes;

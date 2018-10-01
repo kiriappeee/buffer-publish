@@ -8,6 +8,7 @@ import { reducer as settingsReducer } from '@bufferapp/publish-settings';
 import { reducer as i18nReducer } from '@bufferapp/publish-i18n';
 import { reducer as profileSidebarReducer } from '@bufferapp/publish-profile-sidebar';
 import { reducer as appSidebarReducer } from '@bufferapp/app-sidebar';
+import { reducer as productFeaturesReducer } from '@bufferapp/product-features';
 import { reducer as asyncDataFetchReducer } from '@bufferapp/async-data-fetch';
 import { reducer as notificationsReducer } from '@bufferapp/notifications';
 import { reducer as environmentReducer } from '@bufferapp/environment';
@@ -45,4 +46,5 @@ export default combineReducers({
   manageAppsExtras: manageAppsReducer,
   twoFactorAuth: twoFactorAuthReducer,
   closeAccount: closeAccountReducer,
+  productFeatures: productFeaturesReducer,
 });

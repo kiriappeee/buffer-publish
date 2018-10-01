@@ -45,8 +45,6 @@ describe('Queue', () => {
       environment: {
         environment: 'production',
       },
-      hasCalendarFeatureFlip: false,
-
     });
     const wrapper = mount(
       <Provider store={store}>

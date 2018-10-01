@@ -33,7 +33,6 @@ export const initialState = {
   environment: 'production',
   editMode: false,
   editingPostId: '',
-  hasCalendarFeatureFlip: false,
 };
 
 const profileInitialState = {

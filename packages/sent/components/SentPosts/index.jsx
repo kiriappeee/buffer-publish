@@ -91,6 +91,7 @@ const SentPosts = ({
         isBusinessUser={isBusinessUser}
         onEditClick={onEditClick}
         onShareAgainClick={onShareAgainClick}
+        isSent
       />
     </div>
   );
