@@ -27,6 +27,7 @@ const renderPostList = ({
   onImageClose,
   onDropPost,
   isBusinessUser,
+  isSent,
 }) =>
   <div style={postListStyle}>
     <PostList
@@ -45,6 +46,7 @@ const renderPostList = ({
       onImageClose={onImageClose}
       onDropPost={onDropPost}
       isBusinessUser={isBusinessUser}
+      isSent={isSent}
     />
   </div>;
 
@@ -64,6 +66,7 @@ const PostLists = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  isSent,
 }) =>
   <List
     items={postLists.map((postList, index) =>
@@ -82,6 +85,7 @@ const PostLists = ({
         onImageClose,
         onDropPost,
         isBusinessUser,
+        isSent,
       }),
     )}
     fillContainer
@@ -110,6 +114,7 @@ PostLists.propTypes = {
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
   isBusinessUser: PropTypes.bool,
+  isSent: PropTypes.bool,
 };
 
 PostLists.defaultProps = {

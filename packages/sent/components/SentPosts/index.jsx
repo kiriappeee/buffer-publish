@@ -60,6 +60,7 @@ const SentPosts = ({
       <PostLists
         postLists={postLists}
         isBusinessUser={isBusinessUser}
+        isSent
       />
     </div>
   );
