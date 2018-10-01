@@ -1,4 +1,5 @@
 const { rpc } = require('@bufferapp/buffer-rpc');
+
 const profilesMethod = require('./profiles');
 const queuedPostsMethod = require('./queuedPosts');
 const sentPostsMethod = require('./sentPosts');
@@ -30,6 +31,7 @@ const closeAccount = require('./closeAccount');
 const connectedApps = require('./connectedApps');
 const revokeConnectedApp = require('./revokeConnectedApp');
 const getNumberOfPostsMethod = require('./getNumberPosts');
+const featureMethod = require('./features');
 
 module.exports = rpc(
   profilesMethod,
@@ -63,4 +65,5 @@ module.exports = rpc(
   connectedApps,
   revokeConnectedApp,
   getNumberOfPostsMethod,
+  featureMethod,
 );
