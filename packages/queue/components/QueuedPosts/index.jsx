@@ -15,6 +15,7 @@ import ComposerPopover from '../ComposerPopover';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
 import MiniCalendar from '../MiniCalendar';
+import FeatureLoader from '@bufferapp/product-features';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -62,7 +63,6 @@ const QueuedPosts = ({
   paused,
   onUnpauseClick,
   onCalendarToggleClick,
-  hasCalendarFeatureFlip,
   numberOfPostsByDate,
   onMiniCalendarMonthChange,
 }) => {
@@ -92,14 +92,25 @@ const QueuedPosts = ({
             onFocus={onComposerPlaceholderClick}
           />
         </div>
-        {hasCalendarFeatureFlip &&
+        <FeatureLoader
+          supportedFeatures={'mini_calendar'}
+        >
           <div style={buttonStyle}>
-            <Button secondary onClick={onCalendarToggleClick}>
+            <Button
+              secondary
+              onClick={onCalendarToggleClick}
+            >
               {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
             </Button>
           </div>
-        }
-        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar numberOfPostsByDate={numberOfPostsByDate} onMonthChange={onMiniCalendarMonthChange}  />}
+
+          {showCalendar && 
+            <MiniCalendar 
+              numberOfPostsByDate={numberOfPostsByDate} 
+              onMonthChange={onMiniCalendarMonthChange}  
+            />
+          }
+        </FeatureLoader>
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
@@ -162,7 +173,6 @@ QueuedPosts.propTypes = {
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
-  hasCalendarFeatureFlip: PropTypes.bool,
   onMiniCalendarMonthChange: PropTypes.func,
   numberOfPostsByDate: PropTypes.oneOfType([
     PropTypes.object,
@@ -181,7 +191,6 @@ QueuedPosts.defaultProps = {
   editMode: false,
   paused: false,
   showCalendar: false,
-  hasCalendarFeatureFlip: false,
   numberOfPostsByDate: null,
 };
 
