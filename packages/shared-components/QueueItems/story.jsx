@@ -9,9 +9,18 @@ import {
   postLists,
   postListsNoHeaders,
 } from './postData';
+import createStore from '@bufferapp/publish-store';
+import { Provider } from 'react-redux';
+
+const store = createStore();
 
 storiesOf('QueueItems', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('default queue', () => (
     <QueueItems
       items={postLists}

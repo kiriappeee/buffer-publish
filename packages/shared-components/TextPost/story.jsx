@@ -5,6 +5,10 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import TextPost from './index';
+import createStore from '@bufferapp/publish-store';
+import { Provider } from 'react-redux';
+
+const store = createStore();
 
 const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
@@ -52,6 +56,11 @@ const retweetProfile = {
 
 storiesOf('TextPost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued text post', () => (
     <TextPost
       links={links}

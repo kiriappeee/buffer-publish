@@ -5,6 +5,10 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import MultipleImagesPost from './index';
+import createStore from '@bufferapp/publish-store';
+import { Provider } from 'react-redux';
+
+const store = createStore();
 
 const links = [{
   displayString: 'http://buff.ly/1LTbUqv',
@@ -38,6 +42,11 @@ const imageUrls = [
 
 storiesOf('MultipleImagesPost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued multiple image post', () => (
     <MultipleImagesPost
       postDetails={postDetails}

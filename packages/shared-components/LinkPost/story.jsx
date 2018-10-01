@@ -5,6 +5,10 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import LinkPost from './index';
+import createStore from '@bufferapp/publish-store';
+import { Provider } from 'react-redux';
+
+const store = createStore();
 
 const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
@@ -42,6 +46,11 @@ const wideImage = 'http://lorempixel.com/900/400/cats/';
 
 storiesOf('LinkPost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued link post', () => (
     <LinkPost
       links={links}

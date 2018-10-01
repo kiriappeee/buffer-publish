@@ -16,9 +16,18 @@ import {
   listHeader,
   isBusinessUser,
 } from './postData';
+import createStore from '@bufferapp/publish-store';
+import { Provider } from 'react-redux';
+
+const store = createStore();
 
 storiesOf('PostList', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('default', () => (
     <PostList
       listHeader={listHeader}
