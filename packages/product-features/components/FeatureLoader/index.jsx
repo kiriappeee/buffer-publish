@@ -18,7 +18,7 @@ const FeatureLoader = ({
       .map(p => p.toLowerCase());
     const currentPlan = planName.toLowerCase();
     if (!supportedPlanList.some((plan) => plan === currentPlan)) {
-      return fallback;
+      return fallback || null;
     }
   }
 
@@ -29,7 +29,7 @@ const FeatureLoader = ({
       .map(f => f.toLowerCase());
 
     if (!supportedFeatureNames.some(feature => currentFeatures.indexOf(feature) >= 0)) {
-      return fallback;
+      return fallback || null;
     }
   }
 

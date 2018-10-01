@@ -217,4 +217,17 @@ storiesOf('FeatureLoader', module)
         </Text>
       </FeatureLoader>
     </div>
+  ))
+  .add('should not show component if no fallback is provided and feature non existant', () => (
+    <div style={defaultStyles}>
+      <FeatureLoader
+        productFeatures={fakeFeatures}
+        supportedFeatures={['not_here']}
+        supportedPlans={['free']}
+      >
+        <Text size={'large'} >
+          Pro
+        </Text>
+      </FeatureLoader>
+    </div>
   ));
