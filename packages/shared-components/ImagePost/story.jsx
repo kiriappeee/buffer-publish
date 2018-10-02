@@ -5,6 +5,21 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import ImagePost from './index';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
@@ -49,6 +64,11 @@ const wideImage = 'http://via.placeholder.com/900x400';
 
 storiesOf('ImagePost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued image post', () => (
     <ImagePost
       imageSrc={imageSrc}

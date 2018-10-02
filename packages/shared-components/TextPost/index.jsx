@@ -36,6 +36,7 @@ const TextPost = ({
   hovering,
   fixed,
   statistics,
+  profile_service,
   isSent,
 }) => {
   const children = (
@@ -78,6 +79,7 @@ const TextPost = ({
       hovering={hovering}
       fixed={fixed}
       statistics={statistics}
+      profileService={profile_service}
       isSent={isSent}
     >
       {children}

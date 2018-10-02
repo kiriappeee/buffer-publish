@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import FeatureLoader, {
   reducer,
   middleware,
+  WithFeatureLoader,
 } from './index';
 
 const storeFake = state => ({
@@ -13,7 +14,7 @@ const storeFake = state => ({
   getState: () => ({ ...state }),
 });
 
-describe.only('Example', () => {
+describe('ProductFeatureComponent', () => {
   it('should render', () => {
     const store = storeFake({
       productFeatures: {
@@ -42,6 +43,10 @@ describe.only('Example', () => {
   });
   it('should export middleware', () => {
     expect(middleware)
+      .toBeDefined();
+  });
+  it('should export withFeatureLoader', () => {
+    expect(WithFeatureLoader)
       .toBeDefined();
   });
 });

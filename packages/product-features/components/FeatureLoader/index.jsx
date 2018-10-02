@@ -1,43 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { isSupportedPlan, isSupportedFeature } from '../../utils';
 
 const FeatureLoader = ({
-   productFeatures,
-   supportedFeatures,
-   children,
-   fallback,
-   supportedPlans,
- }) => {
+                         productFeatures,
+                         supportedFeatures,
+                         children,
+                         fallback,
+                         supportedPlans,
+                       }) => {
   const {
     planName,
     features,
   } = productFeatures;
 
-  if (typeof supportedPlans !== 'undefined') {
-    const supportedPlanList = (typeof supportedPlans === 'string' ? [supportedPlans] : supportedPlans)
-      .map(p => p.toLowerCase());
-    const currentPlan = planName.toLowerCase();
-    if (!supportedPlanList.some((plan) => plan === currentPlan)) {
-      return fallback || null;
-    }
+  if (!isSupportedPlan(supportedPlans, planName)) {
+    return fallback || null;
   }
 
-  if (typeof supportedFeatures !== 'undefined') {
-    const supportedFeatureList = typeof supportedFeatures === 'string' ? [supportedFeatures] : supportedFeatures;
-    const supportedFeatureNames = supportedFeatureList.map(f => f.toLowerCase());
-    const currentFeatures = Object.keys(features).filter(f => features[f])
-      .map(f => f.toLowerCase());
-
-    if (!supportedFeatureNames.some(feature => currentFeatures.indexOf(feature) >= 0)) {
-      return fallback || null;
-    }
+  if (!isSupportedFeature(supportedFeatures, features)) {
+    return fallback || null;
   }
 
   return children;
 };
 
 FeatureLoader.propTypes = {
-  featureNames: PropTypes.oneOfType([
+  supportedFeatures: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
@@ -46,14 +35,16 @@ FeatureLoader.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
   fallback: PropTypes.node,
-  supportPlans: PropTypes.oneOfType([
+  productFeatures: PropTypes.shape({
+    planName: PropTypes.string,
+    features: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  }),
+  supportedPlans: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
 };
 
-FeatureLoader.defaultProps = {
-  features: [],
-};
+FeatureLoader.defaultProps = {};
 
 export default FeatureLoader;

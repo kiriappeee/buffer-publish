@@ -1,14 +1,25 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import createStore from '@bufferapp/publish-store';
 import PostList from './index';
 import {
   posts,
   confirmDeletePosts,
 } from './postData';
 
-const store = createStore();
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  },
+});
 
 describe('PostList', () => {
   it('should trigger onEditClick', () => {

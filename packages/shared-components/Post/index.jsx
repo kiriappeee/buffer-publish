@@ -18,7 +18,9 @@ import {
 } from '@bufferapp/components/style/border';
 
 import PostFooter from '../PostFooter';
+import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
+import FeatureLoader from '@bufferapp/product-features';
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
@@ -132,6 +134,7 @@ const Post = ({
   hovering,
   fixed,
   statistics,
+  profileService,
   isSent,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
@@ -164,6 +167,16 @@ const Post = ({
           onRequeueClick={onRequeueClick}
           isSent={isSent}
         />
+        <FeatureLoader
+          supportedFeatures={'post_stats'}
+        >
+          {isSent && !postDetails.isRetweet &&
+            <PostStats
+              statistics={statistics}
+              profileService={profileService}
+            /> 
+          }
+        </FeatureLoader>
       </Card>
     </div>
   </div>);

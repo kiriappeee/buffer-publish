@@ -7,6 +7,21 @@ import {
 import { checkA11y } from 'storybook-addon-a11y';
 import { Text } from '@bufferapp/components';
 import Post from './index';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const postDetails = {
   isRetweet: false,
@@ -59,6 +74,11 @@ const children = (
 
 storiesOf('Post', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued post', () => (
     <Post
       postDetails={postDetails}
