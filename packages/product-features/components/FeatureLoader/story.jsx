@@ -2,7 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import { Text } from '@bufferapp/components';
+import PropTypes from 'prop-types';
 import FeatureLoader from './index';
+import WithFeatureLoader from './withFeatureLoader';
 
 const fakeFeatures = {
   features: {
@@ -110,7 +112,7 @@ storiesOf('FeatureLoader', module)
       <FeatureLoader
         productFeatures={{
           ...fakeFeatures,
-          features: {'SHOW_STUFF': true},
+          features: { SHOW_STUFF: true },
         }}
         supportedFeatures={'Show_stuff'}
         fallback={Fallback}
@@ -230,4 +232,24 @@ storiesOf('FeatureLoader', module)
         </Text>
       </FeatureLoader>
     </div>
-  ));
+  ))
+  .add('load Feature Component ', () => {
+    const TextComponent = ({ features, ...other }) => {
+      if (features.isFreeUser()) {
+        return (<Text {...other}>Free User</Text>);
+      }
+      return null;
+    };
+
+    TextComponent.propTypes = {
+      features: PropTypes.any.isRequired,
+    };
+    const TestComponentWithFeatureLoader = WithFeatureLoader(TextComponent);
+
+    return (
+      <div style={defaultStyles}>
+        <TestComponentWithFeatureLoader size={'large'} productFeatures={fakeFeatures} />
+      </div>
+    );
+  });
+
