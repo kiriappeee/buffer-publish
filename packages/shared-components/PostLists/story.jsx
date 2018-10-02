@@ -6,10 +6,21 @@ import {
 import { checkA11y } from 'storybook-addon-a11y';
 import PostLists from './index';
 import postLists from './postListData';
-import createStore from '@bufferapp/publish-store';
 import { Provider } from 'react-redux';
 
-const store = createStore();
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 storiesOf('PostLists', module)
   .addDecorator(checkA11y)

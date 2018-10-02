@@ -7,10 +7,21 @@ import {
 import { checkA11y } from 'storybook-addon-a11y';
 import { Text } from '@bufferapp/components';
 import Post from './index';
-import createStore from '@bufferapp/publish-store';
 import { Provider } from 'react-redux';
 
-const store = createStore();
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const postDetails = {
   isRetweet: false,

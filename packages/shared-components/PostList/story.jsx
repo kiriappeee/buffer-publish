@@ -16,10 +16,21 @@ import {
   listHeader,
   isBusinessUser,
 } from './postData';
-import createStore from '@bufferapp/publish-store';
 import { Provider } from 'react-redux';
 
-const store = createStore();
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 storiesOf('PostList', module)
   .addDecorator(checkA11y)
