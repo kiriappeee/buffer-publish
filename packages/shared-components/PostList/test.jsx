@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Provider } from 'react-redux';
 import PostList from './index';
+import { Provider } from 'react-redux';
 import {
   posts,
   confirmDeletePosts,
@@ -18,7 +18,7 @@ const store = storeFake({
   productFeatures: {
     planName: 'free',
     features: {},
-  },
+  }
 });
 
 describe('PostList', () => {
