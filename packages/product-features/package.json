@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/product-features",
-  "version": "1.9.19",
+  "version": "1.9.20",
   "description": "Product feature loader for buffer",
   "main": "index.js",
   "scripts": {
