@@ -10,6 +10,9 @@ import {
 import {
   mystic,
 } from '@bufferapp/components/style/color';
+import { 
+  constants,
+} from '@bufferapp/publish-utils';
 
 const statsBarStyle = {
   display: 'flex',
@@ -100,7 +103,7 @@ const PostStats = ({
 };
 
 PostStats.propTypes = {
-  profileService: PropTypes.oneOf(['twitter', 'linkedin', 'google', 'facebook', 'instagram', 'pinterest']),
+  profileService: PropTypes.oneOf(constants.SERVICE_NAMES),
 };
 
 export default PostStats;
