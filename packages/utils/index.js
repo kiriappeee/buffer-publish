@@ -7,6 +7,7 @@ const linkParsing = require('./linkParsing');
 const buildPostMap = require('./buildPostMap');
 const constants = require('./constants');
 const getURL = require('./getURL');
+const number = require('./number');
 
 module.exports = {
   date,
@@ -18,4 +19,5 @@ module.exports = {
   buildPostMap,
   constants,
   getURL,
+  number,
 };

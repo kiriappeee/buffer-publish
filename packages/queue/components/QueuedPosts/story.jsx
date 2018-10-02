@@ -28,7 +28,7 @@ const store = storeFake({
   productFeatures: {
     planName: 'free',
     features: {},
-  }
+  },
 });
 
 const UpgradeModalDecorator = storyFn => (

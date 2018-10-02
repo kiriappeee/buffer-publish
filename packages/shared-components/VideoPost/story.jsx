@@ -5,6 +5,21 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import VideoPost from './index';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
@@ -47,6 +62,11 @@ const wideImage = 'http://lorempixel.com/900/400/cats/';
 
 storiesOf('VideoPost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued video post', () => (
     <VideoPost
       imageSrc={imageSrc}

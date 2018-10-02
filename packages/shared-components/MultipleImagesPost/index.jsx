@@ -46,6 +46,7 @@ const MultipleImagesPost = ({
   dragging,
   hovering,
   statistics,
+  profile_service,
   isSent,
 }) => {
   const images = imageUrls.map(url => ({ src: `${url}` }));
@@ -103,6 +104,7 @@ const MultipleImagesPost = ({
       dragging={dragging}
       hovering={hovering}
       statistics={statistics}
+      profileService={profile_service}
       isSent={isSent}
     >
       {children}

@@ -60,6 +60,7 @@ const LinkPost = ({
   dragging,
   hovering,
   statistics,
+  profile_service,
   isSent,
 }) => {
   const children = (
@@ -135,6 +136,7 @@ const LinkPost = ({
       hovering={hovering}
       onRequeueClick={onRequeueClick}
       statistics={statistics}
+      profileService={profile_service}
       isSent={isSent}
     >
       {children}
