@@ -43,9 +43,9 @@ export default connect(
     return {};
   },
   (dispatch, ownProps) => ({
-    onShareAgainClick: (post) => {
+    onShareAgainClick: ({ post }) => {
       dispatch(actions.handleShareAgainClick({
-        post: post.post,
+        post,
         profileId: ownProps.profileId,
       }));
     },
