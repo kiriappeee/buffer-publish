@@ -1,8 +1,6 @@
-const { postParser, date } = require('@bufferapp/publish-utils');
+const { postParser } = require('@bufferapp/publish-utils');
 const { method } = require('@bufferapp/buffer-rpc');
 const rp = require('request-promise');
-
-const { daysAgoTimestamp } = date;
 
 module.exports = method(
   'sentPosts',
