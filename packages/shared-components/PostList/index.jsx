@@ -122,7 +122,7 @@ const PostList = ({
             })
           }
           <FeatureLoader
-            supportedPlans={'pro'}
+            supportedFeatures={'share_again'}
           >
             <div style={reBufferWrapperStyle}>
               <Button
