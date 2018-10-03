@@ -27,12 +27,13 @@ const statsCellStyle = {
   flexGrow: 1,
   flexBasis: 0,
   display: 'flex',
-  alignItems: 'baseline',
-  justifyContent: 'center',
   borderTop: `${borderWidth} solid ${mystic}`,
-  padding: '0.5rem',
+  padding: '0.125rem',
   borderRight: `${borderWidth} solid ${mystic}`,
+  alignItems: 'center',
+  flexDirection: 'column',
 };
+
 
 const PostStats = ({
   statistics,
@@ -69,11 +70,13 @@ const PostStats = ({
 
     return value === undefined ? null : (
       <div style={statsCellStyle} key={typeStats}>
-        <Text size={'extra-large'} color={'black'}>{abbreviateNumber(value, 1)}</Text>
-        <Text size={'mini'}>&nbsp; {title}</Text>
-        {isLinkedinClicks && 
-          <Link href={'https://faq.buffer.com/article/181-why-does-linkedin-sometimes-show-a-different-number-for-clicks'} unstyled>*</Link>
-        }
+        <Text size={'large'} color={'black'}>{abbreviateNumber(value, 1)}</Text>
+        <span>
+          <Text size={'mini'}>{title}</Text>
+          {isLinkedinClicks && 
+            <Link href={'https://faq.buffer.com/article/181-why-does-linkedin-sometimes-show-a-different-number-for-clicks'} unstyled>*</Link>
+          }
+        </span>
       </div>
     );
   };

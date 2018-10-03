@@ -49,6 +49,11 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsSent = {
+  isRetweet: false,
+  postAction: 'This post was sent at 9:21 (GMT)',
+};
+
 const isARetweetPostDetails = {
   ...postDetails,
   isRetweet: true,
@@ -82,7 +87,7 @@ storiesOf('TextPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('queued text post with multi-line text', () => (
@@ -95,20 +100,20 @@ storiesOf('TextPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('sent', () => (
     <TextPost
       links={links}
-      postDetails={postDetails}
+      postDetails={postDetailsSent}
       text={text}
       onCancelConfirmClick={action('cancel-confirm-click')}
       onDeleteClick={action('delete-click')}
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent
+      isSent
     />
   ))
   .add('retweet', () => (
@@ -122,7 +127,7 @@ storiesOf('TextPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       retweetProfile={retweetProfile}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('retweet with comment', () => (
@@ -138,7 +143,7 @@ storiesOf('TextPost', module)
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
       retweetCommentLinks={retweetCommentLinks}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('error', () => (
@@ -151,6 +156,6 @@ storiesOf('TextPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ));
