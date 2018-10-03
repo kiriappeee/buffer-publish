@@ -16,7 +16,6 @@ module.exports = method(
         access_token: session.publish.accessToken,
         page,
         count: 20,
-        since: daysAgoTimestamp(30),
       },
     })
       .then(result => JSON.parse(result))
