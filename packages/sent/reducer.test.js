@@ -96,4 +96,34 @@ describe('reducer', () => {
     expect(reducer(undefined, action))
       .toEqual(stateAfter);
   });
+
+  it('should handle OPEN_COMPOSER action type', () => {
+    const stateComposerHidden = Object.assign(
+      initialState,
+      { showComposer: false },
+    );
+
+    const action = {
+      profileId,
+      type: 'OPEN_COMPOSER',
+    };
+
+    expect(reducer(stateComposerHidden, action))
+      .toEqual(Object.assign(initialState, { showComposer: true }));
+  });
+
+  it('should handle HIDE_COMPOSER action type', () => {
+    const stateComposerVisible = Object.assign(
+      initialState,
+      { showComposer: true },
+    );
+
+    const action = {
+      profileId,
+      type: 'HIDE_COMPOSER',
+    };
+
+    expect(reducer(stateComposerVisible, action))
+      .toEqual(Object.assign(initialState, { showComposer: false }));
+  });
 });
