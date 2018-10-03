@@ -46,6 +46,10 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsSent = {
+  postAction: 'This post was sent at 9:21 (GMT)',
+};
+
 const postDetailsError = {
   ...postDetails,
   error: 'Woops something went wrong. Try again?',
@@ -73,7 +77,7 @@ storiesOf('LinkPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('queued link post with multiline text', () => (
@@ -87,21 +91,21 @@ storiesOf('LinkPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('sent', () => (
     <LinkPost
       links={links}
       linkAttachment={linkAttachment}
-      postDetails={postDetails}
+      postDetails={postDetailsSent}
       text={text}
       onCancelConfirmClick={action('cancel-confirm-click')}
       onDeleteClick={action('delete-click')}
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent
+      isSent
     />
   ))
   .add('square image', () => (
@@ -115,7 +119,7 @@ storiesOf('LinkPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('tall image', () => (
@@ -129,7 +133,7 @@ storiesOf('LinkPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('wide image', () => (
@@ -143,7 +147,7 @@ storiesOf('LinkPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('error', () => (
@@ -157,6 +161,6 @@ storiesOf('LinkPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ));

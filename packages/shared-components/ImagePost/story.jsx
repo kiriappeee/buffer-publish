@@ -40,6 +40,11 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsSent = {
+  isRetweet: false,
+  postAction: 'This post was sent at 9:21 (GMT)',
+};
+
 const isARetweetPostDetails = {
   ...postDetails,
   isRetweet: true,
@@ -80,7 +85,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -99,7 +104,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -111,14 +116,14 @@ storiesOf('ImagePost', module)
     <ImagePost
       imageSrc={imageSrc}
       links={links}
-      postDetails={postDetails}
+      postDetails={postDetailsSent}
       text={text}
       onCancelConfirmClick={action('cancel-confirm-click')}
       onDeleteClick={action('delete-click')}
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent
+      isSent
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -137,7 +142,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -156,7 +161,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -175,7 +180,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -195,7 +200,7 @@ storiesOf('ImagePost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       retweetProfile={retweetProfile}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -214,7 +219,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -234,7 +239,7 @@ storiesOf('ImagePost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}

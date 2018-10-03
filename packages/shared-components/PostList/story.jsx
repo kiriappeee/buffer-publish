@@ -67,6 +67,7 @@ storiesOf('PostList', module)
       onImageClickNext={action('onImageClickNext')}
       onImageClickPrev={action('onImageClickPrev')}
       onImageClose={action('onImageClose')}
+      isSent
     />
   ))
   .add('missing type', () => (

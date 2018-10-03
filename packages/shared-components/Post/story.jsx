@@ -87,7 +87,7 @@ storiesOf('Post', module)
       onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       onEditClick={action('edit-click')}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -100,7 +100,7 @@ storiesOf('Post', module)
       onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
-      sent
+      isSent
       statistics={statistics}
     >
       {children}
@@ -116,7 +116,7 @@ storiesOf('Post', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetailsError}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -130,7 +130,7 @@ storiesOf('Post', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -144,7 +144,7 @@ storiesOf('Post', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -158,7 +158,7 @@ storiesOf('Post', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -174,7 +174,7 @@ storiesOf('Post', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       retweetProfile={retweetProfile}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -192,7 +192,7 @@ storiesOf('Post', module)
       onShareNowClick={linkTo('Post', 'isWorking')}
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>

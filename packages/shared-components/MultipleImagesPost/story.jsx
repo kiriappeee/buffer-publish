@@ -39,6 +39,10 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsSent = {
+  postAction: 'This post was sent at 9:21 (GMT)',
+};
+
 const postDetailsError = {
   ...postDetails,
   error: 'Sharing failed. Try again?',
@@ -69,7 +73,7 @@ storiesOf('MultipleImagesPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -88,7 +92,7 @@ storiesOf('MultipleImagesPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={multilineText}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -98,7 +102,7 @@ storiesOf('MultipleImagesPost', module)
   ))
   .add('sent multiple image post', () => (
     <MultipleImagesPost
-      postDetails={postDetails}
+      postDetails={postDetailsSent}
       links={links}
       imageUrls={imageUrls}
       onCancelConfirmClick={action('cancel-confirm-click')}
@@ -107,7 +111,7 @@ storiesOf('MultipleImagesPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
-      sent
+      isSent
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -126,7 +130,7 @@ storiesOf('MultipleImagesPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
