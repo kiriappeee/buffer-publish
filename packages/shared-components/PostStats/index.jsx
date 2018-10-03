@@ -71,10 +71,12 @@ const PostStats = ({
     return value === undefined ? null : (
       <div style={statsCellStyle} key={typeStats}>
         <Text size={'large'} color={'black'}>{abbreviateNumber(value, 1)}</Text>
-        <Text size={'mini'}>{title}</Text>
-        {isLinkedinClicks && 
-          <Link href={'https://faq.buffer.com/article/181-why-does-linkedin-sometimes-show-a-different-number-for-clicks'} unstyled>*</Link>
-        }
+        <span>
+          <Text size={'mini'}>{title}</Text>
+          {isLinkedinClicks && 
+            <Link href={'https://faq.buffer.com/article/181-why-does-linkedin-sometimes-show-a-different-number-for-clicks'} unstyled>*</Link>
+          }
+        </span>
       </div>
     );
   };
