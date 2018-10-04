@@ -28,9 +28,14 @@ const getPostActionString = ({ post }) => {
     },
   );
 
-  if (post.scheduled_at) {
+  if (post.scheduled_at && post.can_send_direct !== false) {
     return `This post ${post.sent_at ? 'was' : 'is'} custom scheduled for ${dateString}.`;
   }
+
+  if (post.profile_service === 'instagram' && !post.can_send_direct && !post.sent_at) {
+    return `You will receive a reminder on ${dateString} when it's time to post.`;
+  }
+
   return `This post ${post.sent_at ? 'was' : 'will be'} sent ${dateString}.`;
 };
 
@@ -39,6 +44,7 @@ const getPostDetails = ({ post }) => ({
   isRetweet: post.retweet !== undefined,
   error: post.error || '',
   isCustomScheduled: post.scheduled_at ? true : false,
+  isInstagramReminder: (post.profile_service === 'instagram' && !post.can_send_direct) ? true : false,
 });
 
 const getRetweetProfileInfo = (post) => {
