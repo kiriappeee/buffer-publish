@@ -25,7 +25,7 @@ export default hot(module)(connect(
     return {};
   },
   dispatch => ({
-    onLoadMoreClick: ({ profileId, page, tabId }) => {
+    onLoadMore: ({ profileId, page, tabId }) => {
       dispatch(
         dataFetchActions.fetch({
           name: `${tabId === 'queue' ? 'queued' : 'sent'}Posts`,
