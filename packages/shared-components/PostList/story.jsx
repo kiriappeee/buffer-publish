@@ -4,6 +4,7 @@ import {
   action,
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
+import { Provider } from 'react-redux';
 import PostList from './index';
 import {
   posts,
@@ -14,9 +15,7 @@ import {
   sentPosts,
   videoPosts,
   listHeader,
-  isBusinessUser,
 } from './postData';
-import { Provider } from 'react-redux';
 
 const storeFake = state => ({
   default: () => {},
@@ -134,22 +133,6 @@ storiesOf('PostList', module)
     <PostList
       listHeader={listHeader}
       posts={videoPosts}
-      onCancelConfirmClick={action('onCancelConfirmClick')}
-      onDeleteClick={action('onDeleteClick')}
-      onDeleteConfirmClick={action('onDeleteConfirmClick')}
-      onEditClick={action('onEditClick')}
-      onShareNowClick={action('onShareNowClick')}
-      onImageClick={action('onImageClick')}
-      onImageClickNext={action('onImageClickNext')}
-      onImageClickPrev={action('onImageClickPrev')}
-      onImageClose={action('onImageClose')}
-    />
-  ))
-  .add('post with re-buffer', () => (
-    <PostList
-      listHeader={listHeader}
-      posts={posts}
-      isBusinessUser={isBusinessUser}
       onCancelConfirmClick={action('onCancelConfirmClick')}
       onDeleteClick={action('onDeleteClick')}
       onDeleteConfirmClick={action('onDeleteConfirmClick')}

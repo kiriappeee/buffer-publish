@@ -4,9 +4,9 @@ import {
   action,
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
+import { Provider } from 'react-redux';
 import PostLists from './index';
 import postLists from './postListData';
-import { Provider } from 'react-redux';
 
 const storeFake = state => ({
   default: () => {},
