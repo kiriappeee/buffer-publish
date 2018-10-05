@@ -5,6 +5,7 @@ import {
   Text,
   Button,
 } from '@bufferapp/components';
+import FeatureLoader from '@bufferapp/product-features';
 import TextPost from '../TextPost';
 import ImagePost from '../ImagePost';
 import MultipleImagesPost from '../MultipleImagesPost';
@@ -14,7 +15,7 @@ import PostDragWrapper from '../PostDragWrapper';
 
 const reBufferWrapperStyle = {
   paddingLeft: '1rem',
-  minWidth: '120px',
+  minWidth: '132px',
 };
 
 const postStyle = {
@@ -89,7 +90,7 @@ const PostList = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
-  isBusinessUser,
+  onShareAgainClick,
   isSent,
 }) =>
   <div>
@@ -116,19 +117,22 @@ const PostList = ({
               onImageClickPrev,
               onImageClose,
               onDropPost,
+              onShareAgainClick,
               isSent,
             })
           }
-          {isBusinessUser ?
+          <FeatureLoader
+            supportedFeatures={'share_again'}
+          >
             <div style={reBufferWrapperStyle}>
               <Button
                 secondary
-                onClick={() => { onEditClick(); }}
+                onClick={() => { onShareAgainClick({ post }); }}
               >
-                Re-Buffer
+                Share Again
               </Button>
             </div>
-          : null }
+          </FeatureLoader>
         </div>,
       )}
     />
@@ -151,7 +155,7 @@ PostList.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
-  isBusinessUser: PropTypes.bool,
+  onShareAgainClick: PropTypes.func,
   isSent: PropTypes.bool,
 };
 

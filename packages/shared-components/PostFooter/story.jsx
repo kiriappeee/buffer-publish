@@ -20,6 +20,11 @@ const postDetailsCustomScheduled = {
   isCustomScheduled: true,
 };
 
+const postDetailsCustomScheduledSent = {
+  postAction: 'This post was custom scheduled for 9:21 (GMT)',
+  isCustomScheduled: true,
+};
+
 const postDetailsError = {
   postAction: 'This post will be sent at 9:21 (GMT)',
   error: 'Woops! Something went wrong. Try again?',
@@ -48,6 +53,12 @@ storiesOf('PostFooter', module)
     <PostFooter
       postDetails={postDetailsCustomScheduled}
       isSent={false}
+    />
+  ))
+    .add('sent custom scheduled post', () => (
+    <PostFooter
+      postDetails={postDetailsCustomScheduledSent}
+      isSent
     />
   ))
   .add('post with error', () => (

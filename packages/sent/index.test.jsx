@@ -41,6 +41,7 @@ describe('Sent', () => {
       <Provider store={store}>
         <Sent
           profileId="abc"
+          onShareAgainClick={jest.fn()}
         />
       </Provider>,
     );

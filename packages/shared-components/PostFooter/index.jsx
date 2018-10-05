@@ -45,9 +45,9 @@ const postControlsStyle = {
 
 /* eslint-disable react/prop-types */
 
-const renderCustomScheduledIcon = () =>
+const renderCustomScheduledIcon = (isSent) =>
   (<div style={postActionDetailsIconStyle}>
-    <ClockIcon color={'outerSpace'} />
+    <ClockIcon color={isSent ? 'shuttleGray' : 'outerSpace'} />
   </div>);
 
 const renderErrorIcon = () =>
@@ -86,7 +86,7 @@ const PostFooter = ({
   return (<div style={isSent? sentPostDetailsStyle : getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
       {hasError && renderErrorIcon()}
-      {isCustomScheduled && !hasError && renderCustomScheduledIcon()}
+      {isCustomScheduled && !hasError && renderCustomScheduledIcon(isSent)}
       {renderText({ postDetails }, hasError, isSent)}
     </div>
     { !isSent && (
