@@ -62,7 +62,8 @@ const ImagePost = ({
   dragging,
   hovering,
   statistics,
-  profile_service,
+  profile_service: profileService,
+  service_geolocation_name: locationName,
   isSent,
 }) => {
   const children = (
@@ -123,7 +124,8 @@ const ImagePost = ({
       dragging={dragging}
       hovering={hovering}
       statistics={statistics}
-      profileService={profile_service}
+      profileService={profileService}
+      locationName={locationName}
       isSent={isSent}
     >
       {children}
