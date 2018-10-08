@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/default-page",
-  "version": "1.9.23-alpha.0",
+  "version": "1.9.22",
   "description": "Default Page package",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,8 @@
   "dependencies": {
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/publish-profile-sidebar": "^1.9.20",
-    "@bufferapp/publish-shared-components": "^1.9.23-alpha.0",
-    "@bufferapp/publish-utils": "^1.9.23-alpha.0"
+    "@bufferapp/publish-shared-components": "^1.9.22",
+    "@bufferapp/publish-utils": "1.9.21"
   },
   "devDependencies": {
     "eslint": "3.19.0"

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-beta-redirect",
-  "version": "1.9.23-alpha.0",
+  "version": "1.9.22",
   "description": "Redirect to classic Buffer web when the user is not in the publish beta",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "hamstu@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
-    "@bufferapp/publish-shared-components": "^1.9.23-alpha.0"
+    "@bufferapp/publish-shared-components": "^1.9.22"
   },
   "devDependencies": {
     "eslint": "3.19.0"

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-tabs",
-  "version": "1.9.23-alpha.0",
+  "version": "1.9.22",
   "description": "Buffer Tabs Package",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,9 @@
   },
   "author": "emily@buffer.com",
   "dependencies": {
-    "@bufferapp/publish-modals": "^1.9.23-alpha.0",
+    "@bufferapp/publish-modals": "^1.9.22",
     "@bufferapp/publish-routes": "1.9.3",
-    "@bufferapp/publish-shared-components": "^1.9.23-alpha.0"
+    "@bufferapp/publish-shared-components": "^1.9.22"
   },
   "devDependencies": {
     "eslint": "3.19.0"
