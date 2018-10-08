@@ -152,9 +152,9 @@
     react-autocomplete "1.7.2"
     react-day-picker "6.2.1"
 
-"@bufferapp/components@2.3.5":
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.3.5.tgz#b47cfc86f1193b616fe77b3fe473f548a11111a7"
+"@bufferapp/components@2.3.8":
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-2.3.8.tgz#4b1c3a788ab76d88cda35b93da862a35c4f12dbc"
   dependencies:
     "@bufferapp/react-keyframes" "0.2.5"
     raf "3.4.0"
@@ -287,11 +287,9 @@
     "@bufferapp/async-data-fetch" "0.5.36-beta01"
     "@bufferapp/chronos" "0.6.1"
 
-"@bufferapp/publish-utils@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@bufferapp/publish-utils/-/publish-utils-1.4.0.tgz#d9f405a584ec33a401ec9cb2b946ad1cae3dc580"
-  dependencies:
-    moment-timezone "0.5.12"
+"@bufferapp/publish-utils@1.9.15":
+  version "1.9.15"
+  resolved "https://registry.yarnpkg.com/@bufferapp/publish-utils/-/publish-utils-1.9.15.tgz#de37a8b22499260d36509802532d4289c8779833"
 
 "@bufferapp/react-images-loaded@^1.1.0-fork.0":
   version "1.1.0-fork.0"
