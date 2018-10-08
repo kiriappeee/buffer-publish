@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-app-switcher",
-  "version": "1.9.21",
+  "version": "1.9.23",
   "description": "Displays a popup and modal for beta publish users to switch to classic Buffer",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/notifications": "1.9.3",
-    "@bufferapp/publish-utils": "1.9.21"
+    "@bufferapp/publish-utils": "^1.9.23"
   },
   "devDependencies": {
     "eslint": "3.19.0"
