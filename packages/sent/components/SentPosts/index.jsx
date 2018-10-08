@@ -14,6 +14,7 @@ import {
   fillColor,
   curiousBlue,
 } from '@bufferapp/components/style/color';
+import ComposerPopover from '../ComposerPopover';
 
 const headerStyle = {
   marginBottom: '1.5rem',
@@ -27,12 +28,26 @@ const loadingContainerStyle = {
   paddingTop: '5rem',
 };
 
+const topBarContainerStyle = {
+  display: 'flex',
+  position: 'relative',
+};
+
+const composerStyle = {
+  marginBottom: '1.5rem',
+  flexGrow: '1',
+};
+
 const SentPosts = ({
   header,
   total,
   loading,
   postLists,
-  isBusinessUser,
+  onEditClick,
+  onShareAgainClick,
+  onComposerCreateSuccess,
+  showComposer,
+  editMode,
 }) => {
   if (loading) {
     return (
@@ -57,9 +72,23 @@ const SentPosts = ({
         <Text color={'black'}>{header}</Text>
         <Divider />
       </div>
+      <div style={topBarContainerStyle}>
+        <div style={composerStyle}>
+          {showComposer && !editMode &&
+            <ComposerPopover
+              onSave={onComposerCreateSuccess}
+              transparentOverlay
+            />
+          }
+        </div>
+      </div>
+      {showComposer && editMode &&
+        <ComposerPopover onSave={onComposerCreateSuccess} />
+      }
       <PostLists
         postLists={postLists}
-        isBusinessUser={isBusinessUser}
+        onEditClick={onEditClick}
+        onShareAgainClick={onShareAgainClick}
         isSent
       />
     </div>
@@ -82,7 +111,11 @@ SentPosts.propTypes = {
     }),
   ),
   total: PropTypes.number,
-  isBusinessUser: PropTypes.bool,
+  showComposer: PropTypes.bool,
+  editMode: PropTypes.bool,
+  onComposerCreateSuccess: PropTypes.func.isRequired,
+  onEditClick: PropTypes.func.isRequired,
+  onShareAgainClick: PropTypes.func,
 };
 
 SentPosts.defaultProps = {
@@ -92,7 +125,9 @@ SentPosts.defaultProps = {
   page: 1,
   postLists: [],
   total: 0,
-  isBusinessUser: false,
+  showComposer: false,
+  editMode: false,
+  onShareAgainClick: () => {},
 };
 
 export default SentPosts;

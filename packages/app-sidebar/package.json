@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/app-sidebar",
-  "version": "1.9.10",
+  "version": "1.9.22",
   "description": "The sidebar for the Buffer suite of products",
   "main": "index.js",
   "scripts": {

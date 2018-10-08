@@ -11,8 +11,17 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsSent = {
+  postAction: 'This post was sent at 9:21 (GMT)',
+};
+
 const postDetailsCustomScheduled = {
   postAction: 'This post is custom scheduled for 9:21 (GMT)',
+  isCustomScheduled: true,
+};
+
+const postDetailsCustomScheduledSent = {
+  postAction: 'This post was custom scheduled for 9:21 (GMT)',
   isCustomScheduled: true,
 };
 
@@ -31,19 +40,25 @@ storiesOf('PostFooter', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('PostFooter', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('sent post', () => (
     <PostFooter
-      postDetails={postDetails}
-      sent
+      postDetails={postDetailsSent}
+      isSent
     />
   ))
   .add('custom scheduled post', () => (
     <PostFooter
       postDetails={postDetailsCustomScheduled}
-      sent
+      isSent={false}
+    />
+  ))
+    .add('sent custom scheduled post', () => (
+    <PostFooter
+      postDetails={postDetailsCustomScheduledSent}
+      isSent
     />
   ))
   .add('post with error', () => (
@@ -54,7 +69,7 @@ storiesOf('PostFooter', module)
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('PostFooter', 'isWorking')}
       postDetails={postDetailsError}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('isConfirmingDelete', () => (
@@ -65,7 +80,7 @@ storiesOf('PostFooter', module)
       onEditClick={action('edit-click')}
       postDetails={postDetails}
       isConfirmingDelete
-      sent={false}
+      isSent={false}
     />
   ))
   .add('isDeleting', () => (
@@ -76,7 +91,7 @@ storiesOf('PostFooter', module)
       onEditClick={action('edit-click')}
       postDetails={postDetails}
       isDeleting
-      sent={false}
+      isSent={false}
     />
   ))
   .add('isWorking', () => (
@@ -87,6 +102,6 @@ storiesOf('PostFooter', module)
       onEditClick={action('edit-click')}
       postDetails={postDetails}
       isWorking
-      sent={false}
+      isSent={false}
     />
   ));

@@ -23,6 +23,11 @@ const getPostDetailsStyle = dragging => ({
   opacity: dragging ? 0 : 1,
 });
 
+const sentPostDetailsStyle = {
+  display: 'flex',
+  padding: '0.5rem 1rem',
+};
+
 const postActionDetailsStyle = {
   flexGrow: 1,
   display: 'flex',
@@ -41,9 +46,9 @@ const postControlsStyle = {
 
 /* eslint-disable react/prop-types */
 
-const renderCustomScheduledIcon = () =>
+const renderCustomScheduledIcon = (isSent) =>
   (<div style={postActionDetailsIconStyle}>
-    <ClockIcon color={'outerSpace'} />
+    <ClockIcon color={isSent ? 'shuttleGray' : 'outerSpace'} />
   </div>);
 
 const renderErrorIcon = () =>
@@ -51,11 +56,11 @@ const renderErrorIcon = () =>
     <WarningIcon color={'torchRed'} />
   </div>);
 
-const renderText = ({ postDetails }, hasError) =>
+const renderText = ({ postDetails }, hasError, isSent) =>
   (<span>
     <Text
       size={'small'}
-      color={hasError ? 'torchRed' : 'black'}
+      color={hasError ? 'torchRed' : (isSent ? 'shuttleGray': 'black')}
     >
       {hasError ? postDetails.error : postDetails.postAction}
     </Text>
@@ -79,11 +84,11 @@ const PostFooter = ({
 }) => {
   const hasError = postDetails.error && postDetails.error.length > 0;
   const isCustomScheduled = postDetails.isCustomScheduled;
-  return (<div style={getPostDetailsStyle(dragging)}>
+  return (<div style={isSent? sentPostDetailsStyle : getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
       {hasError && renderErrorIcon()}
-      {isCustomScheduled && !hasError && renderCustomScheduledIcon()}
-      {renderText({ postDetails }, hasError)}
+      {isCustomScheduled && !hasError && renderCustomScheduledIcon(isSent)}
+      {renderText({ postDetails }, hasError, isSent)}
     </div>
     { !isSent && (
       <div style={postControlsStyle}>
