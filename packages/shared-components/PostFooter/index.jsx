@@ -4,6 +4,7 @@ import {
   Text,
   WarningIcon,
   ClockIcon,
+  CircleInstReminderIcon,
 } from '@bufferapp/components';
 import {
   borderWidth,
@@ -45,16 +46,6 @@ const postControlsStyle = {
 
 /* eslint-disable react/prop-types */
 
-const renderCustomScheduledIcon = (isSent) =>
-  (<div style={postActionDetailsIconStyle}>
-    <ClockIcon color={isSent ? 'shuttleGray' : 'outerSpace'} />
-  </div>);
-
-const renderErrorIcon = () =>
-  (<div style={postActionDetailsIconStyle}>
-    <WarningIcon color={'torchRed'} />
-  </div>);
-
 const renderText = ({ postDetails }, hasError, isSent) =>
   (<span>
     <Text
@@ -64,6 +55,16 @@ const renderText = ({ postDetails }, hasError, isSent) =>
       {hasError ? postDetails.error : postDetails.postAction}
     </Text>
   </span>);
+
+const renderIcon = (hasError, isSent, isCustomScheduled, isInstagramReminder) => {
+  if (!hasError && !isCustomScheduled && !isInstagramReminder) return;
+
+  return (<div style={postActionDetailsIconStyle}>
+    {hasError ? <WarningIcon color={'torchRed'} /> : null}
+    {isInstagramReminder && !hasError ? <CircleInstReminderIcon color={'instagram'} /> : null}
+    {isCustomScheduled && !hasError && !isInstagramReminder ? <ClockIcon color={isSent ? 'shuttleGray' : 'outerSpace'} /> : null}
+  </div>);
+};
 
 /* eslint-enable react/prop-types */
 
@@ -83,10 +84,10 @@ const PostFooter = ({
 }) => {
   const hasError = postDetails.error && postDetails.error.length > 0;
   const isCustomScheduled = postDetails.isCustomScheduled;
+  const isInstagramReminder = postDetails.isInstagramReminder;
   return (<div style={isSent? sentPostDetailsStyle : getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
-      {hasError && renderErrorIcon()}
-      {isCustomScheduled && !hasError && renderCustomScheduledIcon(isSent)}
+      {renderIcon(hasError, isSent, isCustomScheduled, isInstagramReminder)}
       {renderText({ postDetails }, hasError, isSent)}
     </div>
     { !isSent && (
