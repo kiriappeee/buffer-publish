@@ -6,6 +6,7 @@ import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
 import { middleware as draftsMiddleware } from '@bufferapp/publish-drafts';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
+import { middleware as settingsMiddleware } from '../settings/post-schedule/index';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
 import { middleware as productFeatureMiddleware } from '@bufferapp/product-features';

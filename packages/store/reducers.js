@@ -6,6 +6,7 @@ import { reducer as queueReducer } from '@bufferapp/publish-queue';
 import { reducer as sentReducer } from '@bufferapp/publish-sent';
 import { reducer as draftsReducer } from '@bufferapp/publish-drafts';
 import { reducer as settingsReducer } from '@bufferapp/publish-settings';
+import { reducer as settingsReducer } from '../settings/post-schedule/index';
 import { reducer as i18nReducer } from '@bufferapp/publish-i18n';
 import { reducer as profileSidebarReducer } from '@bufferapp/publish-profile-sidebar';
 import { reducer as appSidebarReducer } from '@bufferapp/app-sidebar';
