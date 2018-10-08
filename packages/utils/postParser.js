@@ -28,6 +28,7 @@ const getPostActionString = ({ post }) => {
     },
   );
 
+  // to run in every situation except when can_send_direct is explicitly false.
   if (post.scheduled_at && post.can_send_direct !== false) {
     return `This post ${post.sent_at ? 'was' : 'is'} custom scheduled for ${dateString}.`;
   }
