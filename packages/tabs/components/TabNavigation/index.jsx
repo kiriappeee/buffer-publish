@@ -18,7 +18,9 @@ const TabNavigation = ({
   isBusinessAccount,
   isManager,
   selectedTabId,
+  selectedChildTabId,
   onTabClick,
+  onChildTabClick,
   shouldShowUpgradeCta,
   shouldShowNestedSettingsTab,
   showUpgradeModal,
@@ -61,9 +63,12 @@ const TabNavigation = ({
         }
     </Tabs>
       {shouldShowNestedSettingsTab &&
-          <Tabs>
-              <Tab tabId={'general'}>General</Tab>
-              <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
+          <Tabs
+              selectedTabId={selectedChildTabId}
+              onTabClick={onChildTabClick}
+          >
+              <Tab childTabId={'general'}>General</Tab>
+              <Tab childTtabId={'posting-schedule'}>Posting Schedule</Tab>
           </Tabs>
       }
   </div>;
