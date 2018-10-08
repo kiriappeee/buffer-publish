@@ -25,6 +25,12 @@ const postDetailsCustomScheduledSent = {
   isCustomScheduled: true,
 };
 
+const postDetailsInstagramReminder = {
+  postAction: 'You will receive a reminder at 9:21 (GMT) when it is time to post',
+  isCustomScheduled: true,
+  isInstagramReminder: true,
+};
+
 const postDetailsError = {
   postAction: 'This post will be sent at 9:21 (GMT)',
   error: 'Woops! Something went wrong. Try again?',
@@ -55,10 +61,16 @@ storiesOf('PostFooter', module)
       isSent={false}
     />
   ))
-    .add('sent custom scheduled post', () => (
+  .add('sent custom scheduled post', () => (
     <PostFooter
       postDetails={postDetailsCustomScheduledSent}
       isSent
+    />
+  ))
+  .add('instagram reminder post', () => (
+    <PostFooter
+      postDetails={postDetailsInstagramReminder}
+      isSent={false}
     />
   ))
   .add('post with error', () => (
