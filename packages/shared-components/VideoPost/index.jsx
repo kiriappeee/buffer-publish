@@ -26,7 +26,8 @@ const VideoPost = ({
   dragging,
   hovering,
   statistics,
-  profile_service,
+  profile_service: profileService,
+  service_geolocation_name: locationName,
   isSent,
 }) =>
   <ImagePost
@@ -54,7 +55,8 @@ const VideoPost = ({
     dragging={dragging}
     hovering={hovering}
     statistics={statistics}
-    profileService={profile_service}
+    profileService={profileService}
+    service_geolocation_name={locationName}
     isSent={isSent}
   />;
 

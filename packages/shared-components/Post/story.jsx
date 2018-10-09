@@ -196,4 +196,33 @@ storiesOf('Post', module)
     >
       {children}
     </Post>
+  ))
+  .add('Instragram post with Location', () => (
+    <Post
+      postDetails={postDetails}
+      onCancelConfirmClick={linkTo('Post', 'hovered')}
+      onDeleteClick={linkTo('Post', 'isConfirmingDelete')}
+      onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
+      onShareNowClick={linkTo('Post', 'isWorking')}
+      onEditClick={action('edit-click')}
+      locationName="Buffer, Earth"
+      profileService="instagram"
+      isSent={false}
+    >
+      {children}
+    </Post>
+  ))
+  .add('Instragram post without Location', () => (
+    <Post
+      postDetails={postDetails}
+      onCancelConfirmClick={linkTo('Post', 'hovered')}
+      onDeleteClick={linkTo('Post', 'isConfirmingDelete')}
+      onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
+      onShareNowClick={linkTo('Post', 'isWorking')}
+      onEditClick={action('edit-click')}
+      profileService="instagram"
+      isSent={false}
+    >
+      {children}
+    </Post>
   ));

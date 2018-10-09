@@ -11,6 +11,7 @@ import {
 } from '@bufferapp/components/style/border';
 import {
   mystic,
+  offWhite,
 } from '@bufferapp/components/style/color';
 
 import PostFooterButtons from '../PostFooterButtons';
@@ -18,7 +19,7 @@ import PostFooterButtons from '../PostFooterButtons';
 const getPostDetailsStyle = dragging => ({
   display: 'flex',
   padding: '0.5rem 1rem',
-  backgroundColor: '#fcfcfc',
+  backgroundColor: offWhite,
   borderTop: `${borderWidth} solid ${mystic}`,
   opacity: dragging ? 0 : 1,
 });
