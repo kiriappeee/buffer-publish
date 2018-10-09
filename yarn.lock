@@ -161,9 +161,9 @@
     react-autocomplete "1.7.2"
     react-day-picker "6.2.1"
 
-"@bufferapp/composer@1.12.4":
-  version "1.12.4"
-  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-1.12.4.tgz#a2e9a8e2c12cd9b18e6806c644c4e5a776b1ce67"
+"@bufferapp/composer@1.12.5":
+  version "1.12.5"
+  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-1.12.5.tgz#de1f26fa56dfe347c122a22eb533d237e08c33f3"
   dependencies:
     "@bufferapp/buffer-js-api" "0.3.0"
     "@bufferapp/buffer-js-metrics" "0.2.0"
