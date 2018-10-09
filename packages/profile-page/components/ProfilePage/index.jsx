@@ -8,6 +8,7 @@ import SentPosts from '@bufferapp/publish-sent';
 import DraftList from '@bufferapp/publish-drafts'
 import ProfileSettings from '@bufferapp/publish-settings';
 import ProfileSettings from '../../../settings/post-schedule/index';
+import GeneralSettings from '../../../settings/general/index';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import { ScrollableContainer } from '@bufferapp/publish-shared-components';
@@ -43,7 +44,7 @@ const tabContentStyle = {
   maxWidth: '49rem',
 };
 
-const TabContent = ({ tabId, profileId }) => {
+const TabContent = ({ tabId, profileId, childTabId }) => {
   switch (tabId) {
     case 'queue':
       return (
@@ -63,8 +64,9 @@ const TabContent = ({ tabId, profileId }) => {
       );
     case 'settings':
       return (
-        <ProfileSettings
+        <GeneralSettings
           profileId={profileId}
+          childTabId={childTabId}
         />
       );
     default:
@@ -76,11 +78,13 @@ const TabContent = ({ tabId, profileId }) => {
 
 TabContent.propTypes = {
   tabId: PropTypes.string,
+  childTabId: PropTypes.string,
   profileId: PropTypes.string.isRequired,
 };
 
 TabContent.defaultProps = {
   tabId: '',
+ childTabId: '',
 };
 
 const ProfilePage = ({
@@ -88,6 +92,7 @@ const ProfilePage = ({
     params: {
       profileId,
       tabId,
+     childTabId,
     },
   },
   onLoadMore,
@@ -120,7 +125,7 @@ const ProfilePage = ({
           growthSpace={1}
         >
           <div style={tabContentStyle}>
-            <TabContent tabId={tabId} profileId={profileId} />
+            <TabContent tabId={tabId} profileId={profileId} childTabId={childTabId} />
             {loadingMore &&
               <div style={loadingAnimationStyle}>
                 <LoadingAnimation marginTop={'1rem'} />
