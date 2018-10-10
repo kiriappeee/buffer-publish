@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-sent",
-  "version": "1.9.22",
+  "version": "1.9.24",
   "description": "Sent Posts package",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
     "@bufferapp/publish-profile-sidebar": "^1.9.20",
-    "@bufferapp/publish-pusher-sync": "^1.9.22",
-    "@bufferapp/publish-queue": "^1.9.22",
-    "@bufferapp/publish-shared-components": "^1.9.22"
+    "@bufferapp/publish-pusher-sync": "^1.9.24",
+    "@bufferapp/publish-queue": "^1.9.24",
+    "@bufferapp/publish-shared-components": "^1.9.24"
   },
   "devDependencies": {
     "eslint": "3.19.0"

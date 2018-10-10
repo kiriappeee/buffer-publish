@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Card,
   LinkifiedText,
+  Text,
 } from '@bufferapp/components';
 
 import {
@@ -14,13 +15,25 @@ import {
 } from '@bufferapp/components/style/dropShadow';
 
 import {
-  borderRadius
+  borderRadius,
+  borderWidth,
 } from '@bufferapp/components/style/border';
 
 import PostFooter from '../PostFooter';
 import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
 import FeatureLoader from '@bufferapp/product-features';
+import { mystic, offWhite } from '@bufferapp/components/style/color';
+
+const getLocationBarStyle = dragging => ({
+  display: 'flex',
+  padding: '0.5rem 1rem',
+  backgroundColor: offWhite,
+  borderTop: `${borderWidth} solid ${mystic}`,
+  borderBottom: `${borderWidth} solid ${mystic}`,
+  opacity: dragging ? 0 : 1,
+  marginBottom: 10,
+});
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
@@ -114,6 +127,22 @@ const renderContent = ({
 
 /* eslint-enable react/prop-types */
 
+const LocationBar = ({ locationName, dragging }) => (
+  <div>
+    <div style={getLocationBarStyle(dragging)}>
+      <Text
+        size={'small'}
+        color={'black'}
+      >Location: {locationName}</Text>
+    </div>
+  </div>
+);
+
+LocationBar.propTypes = {
+  locationName: PropTypes.string,
+  dragging: PropTypes.bool,
+};
+
 const Post = ({
   children,
   isConfirmingDelete,
@@ -129,6 +158,7 @@ const Post = ({
   retweetComment,
   retweetCommentLinks,
   retweetProfile,
+  locationName,
   draggable,
   dragging,
   hovering,
@@ -153,6 +183,11 @@ const Post = ({
           draggable,
           dragging,
         })}
+        {profileService === 'instagram' && locationName != null &&
+        <LocationBar
+          locationName={locationName}
+          dragging={dragging}
+        />}
         <PostFooter
           isDeleting={isDeleting}
           isConfirmingDelete={isConfirmingDelete}
@@ -174,7 +209,7 @@ const Post = ({
             <PostStats
               statistics={statistics}
               profileService={profileService}
-            /> 
+            />
           }
         </FeatureLoader>
       </Card>

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-modals",
-  "version": "1.9.22",
+  "version": "1.9.24",
   "description": "Modals state management",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "hamish@buffer.com",
   "dependencies": {
     "@bufferapp/keywrapper": "0.2.0",
-    "@bufferapp/publish-upgrade-modal": "^1.9.22"
+    "@bufferapp/publish-upgrade-modal": "^1.9.24"
   },
   "devDependencies": {
     "eslint": "3.19.0"
