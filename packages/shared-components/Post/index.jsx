@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
   Card,
   LinkifiedText,
-  Text,
 } from '@bufferapp/components';
 
 import {
@@ -11,29 +10,14 @@ import {
 } from '@bufferapp/components/style/animation';
 
 import {
-  boxShadowLevelTwo,
-} from '@bufferapp/components/style/dropShadow';
-
-import {
   borderRadius,
-  borderWidth,
 } from '@bufferapp/components/style/border';
 
+import FeatureLoader from '@bufferapp/product-features';
 import PostFooter from '../PostFooter';
 import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
-import FeatureLoader from '@bufferapp/product-features';
-import { mystic, offWhite } from '@bufferapp/components/style/color';
-
-const getLocationBarStyle = dragging => ({
-  display: 'flex',
-  padding: '0.5rem 1rem',
-  backgroundColor: offWhite,
-  borderTop: `${borderWidth} solid ${mystic}`,
-  borderBottom: `${borderWidth} solid ${mystic}`,
-  opacity: dragging ? 0 : 1,
-  marginBottom: 10,
-});
+import PostMetaBar from '../PostMetaBar';
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
@@ -75,6 +59,45 @@ const commentStyle = {
 };
 
 /* eslint-disable react/prop-types */
+
+const stripUrlToDomainName = (sourceUrl) => {
+  /* create href a tag to easily grab hostname */
+  const a = document.createElement('a');
+  a.href = sourceUrl;
+  /* domainnames don't allow ".", so remove it & everything after it. With using split,
+  there's no issue if a "." isn't present in url  */
+  const domainName = a.hostname.split('.')[0];
+  const capitalizedDomainName = domainName.charAt(0).toUpperCase() + domainName.slice(1);
+  return capitalizedDomainName;
+};
+
+const renderPostMetaBar = ({
+  profileService,
+  dragging,
+  locationName,
+  sourceUrl,
+  subprofileID,
+  subprofiles,
+}) => {
+  let postMetaBarObj = null;
+  if (profileService === 'instagram' && locationName !== null) {
+    postMetaBarObj = { leftContent: { title: 'Location:', text: locationName }, dragging };
+  } else if (profileService === 'pinterest' && subprofileID !== null) {
+    /*  having a subprofileID is required, sourceUrl is not */
+    const subprofile = subprofiles.find((profile => profile.id === subprofileID));
+    postMetaBarObj =
+      { dragging, leftContent: { title: 'Pinned to:', text: subprofile.name, avatarUrl: subprofile.avatar } };
+    if (sourceUrl) postMetaBarObj.rightContent = { title: 'Source:', text: stripUrlToDomainName(sourceUrl) };
+  }
+  if (!postMetaBarObj) return;
+  return (
+    <PostMetaBar
+      dragging={dragging}
+      leftContent={postMetaBarObj.leftContent}
+      rightContent={postMetaBarObj.rightContent}
+    />
+  );
+};
 
 const renderRetweetComment = ({
   retweetComment,
@@ -127,22 +150,6 @@ const renderContent = ({
 
 /* eslint-enable react/prop-types */
 
-const LocationBar = ({ locationName, dragging }) => (
-  <div>
-    <div style={getLocationBarStyle(dragging)}>
-      <Text
-        size={'small'}
-        color={'black'}
-      >Location: {locationName}</Text>
-    </div>
-  </div>
-);
-
-LocationBar.propTypes = {
-  locationName: PropTypes.string,
-  dragging: PropTypes.bool,
-};
-
 const Post = ({
   children,
   isConfirmingDelete,
@@ -186,11 +193,14 @@ const Post = ({
           draggable,
           dragging,
         })}
-        {profileService === 'instagram' && locationName != null &&
-        <LocationBar
-          locationName={locationName}
-          dragging={dragging}
-        />}
+        {renderPostMetaBar({
+          profileService,
+          dragging,
+          locationName,
+          sourceUrl,
+          subprofileID,
+          subprofiles,
+        })}
         <PostFooter
           isDeleting={isDeleting}
           isConfirmingDelete={isConfirmingDelete}
