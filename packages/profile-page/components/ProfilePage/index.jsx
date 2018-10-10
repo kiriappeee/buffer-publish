@@ -6,8 +6,7 @@ import { Redirect } from 'react-router';
 import QueuedPosts from '@bufferapp/publish-queue';
 import SentPosts from '@bufferapp/publish-sent';
 import DraftList from '@bufferapp/publish-drafts'
-import ProfileSettings from '@bufferapp/publish-settings';
-import ProfileSettings from '../../../settings/post-schedule/index';
+import PostingSchedule from '../../../settings/posting-schedule/index';
 import GeneralSettings from '../../../settings/general/index';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
@@ -44,6 +43,8 @@ const tabContentStyle = {
   maxWidth: '49rem',
 };
 
+
+
 const TabContent = ({ tabId, profileId, childTabId }) => {
   switch (tabId) {
     case 'queue':
@@ -63,12 +64,23 @@ const TabContent = ({ tabId, profileId, childTabId }) => {
         />
       );
     case 'settings':
-      return (
-        <GeneralSettings
-          profileId={profileId}
-          childTabId={childTabId}
-        />
-      );
+      switch (childTabId) {
+        case 'posting-schedule':
+            return (
+                <PostingSchedule
+                    profileId={profileId}
+                    childTabId={childTabId}
+                />
+            );
+          case 'general':
+          default:
+          return (
+            <GeneralSettings
+              profileId={profileId}
+              childTabId={childTabId}
+            />
+          );
+      }
     default:
       return (
         <Redirect to="/" />
@@ -119,6 +131,7 @@ const ProfilePage = ({
         <TabNavigation
           profileId={profileId}
           tabId={tabId}
+          childTabId={childTabId}
         />
         <ScrollableContainer
           tabId={tabId}
@@ -143,6 +156,7 @@ ProfilePage.propTypes = {
     params: PropTypes.shape({
       tabId: PropTypes.string,
       profileId: PropTypes.string,
+      childTabId: PropTypes.string,
     }),
   }).isRequired,
   onLoadMore: PropTypes.func.isRequired,

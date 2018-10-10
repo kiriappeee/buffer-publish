@@ -84,7 +84,9 @@ TabNavigation.propTypes = {
   onTabClick: PropTypes.func.isRequired,
   shouldShowUpgradeCta: PropTypes.bool.isRequired,
   showUpgradeModal: PropTypes.func.isRequired,
-  hasDraftsFeatureFlip: PropTypes.bool
+  hasDraftsFeatureFlip: PropTypes.bool,
+  onChildTabClick: PropTypes.func.isRequired,
+  selectedChildTabId: PropTypes.string
 };
 
 export default TabNavigation;
