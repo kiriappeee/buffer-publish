@@ -4,6 +4,7 @@ import {
   action,
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
+import { Provider } from 'react-redux';
 import PostList from './index';
 import {
   posts,
@@ -16,8 +17,27 @@ import {
   listHeader,
 } from './postData';
 
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
+
 storiesOf('PostList', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('default', () => (
     <PostList
       listHeader={listHeader}
@@ -46,6 +66,7 @@ storiesOf('PostList', module)
       onImageClickNext={action('onImageClickNext')}
       onImageClickPrev={action('onImageClickPrev')}
       onImageClose={action('onImageClose')}
+      isSent
     />
   ))
   .add('missing type', () => (

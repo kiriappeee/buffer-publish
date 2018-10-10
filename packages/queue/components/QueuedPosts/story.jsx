@@ -25,6 +25,10 @@ const store = storeFake({
   },
   upgradeModal: {},
   stripe: {},
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  },
 });
 
 const UpgradeModalDecorator = storyFn => (

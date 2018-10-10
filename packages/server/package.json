@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/publish-server",
-  "version": "1.9.12",
+  "version": "1.9.24",
   "description": "",
   "scripts": {
     "start": "node index.js",
@@ -8,10 +8,10 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/buffer-rpc": "0.0.1",
+    "@bufferapp/buffer-rpc": "0.0.4",
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/logger": "0.7.0",
-    "@bufferapp/publish-utils": "1.9.8",
+    "@bufferapp/publish-utils": "^1.9.24",
     "@bufferapp/session-manager": "0.7.1",
     "@bufferapp/shutdown-helper": "0.2.0",
     "body-parser": "1.17.2",
@@ -19,7 +19,7 @@
     "cookie-parser": "1.4.3",
     "express": "4.15.3",
     "jsonwebtoken": "7.4.1",
-    "micro-rpc-client": "0.1.2",
+    "micro-rpc-client": "0.1.4",
     "moment-timezone": "0.5.13",
     "node-dogstatsd": "0.0.6",
     "pusher": "1.5.1",

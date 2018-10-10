@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bufferapp/project-donut#readme",
   "devDependencies": {
-    "@bufferapp/components": "2.3.4",
+    "@bufferapp/components": "2.3.8",
     "@storybook/addon-storyshots": "3.4.8",
     "@storybook/react": "3.4.8",
     "axe-core": "2.2.0",
@@ -47,8 +47,8 @@
     "css-loader": "0.27.3",
     "decorate-component-with-props": "1.0.2",
     "deep-freeze": "0.0.1",
-    "enzyme": "3.1.0",
-    "enzyme-adapter-react-16": "1.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
@@ -70,7 +70,7 @@
     "lodash.throttle": "4.1.1",
     "lodash.uniqby": "4.7.0",
     "lru-cache": "4.1.1",
-    "micro-rpc-client": "0.1.2",
+    "micro-rpc-client": "0.1.4",
     "mini-css-extract-plugin": "^0.4.1",
     "moment": "2.19.3",
     "moment-timezone": "0.5.13",
@@ -113,7 +113,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "/node_modules(?!\/@bufferapp\/performance-tracking)(?!\/@bufferapp\/async-data-fetch)(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/"
+      "/node_modules(?!/@bufferapp/performance-tracking)(?!/@bufferapp/async-data-fetch)(?!/@bufferapp/components)(?!/@bufferapp/web-components)(?!/@bufferapp/composer)/"
     ],
     "verbose": true,
     "collectCoverage": true,

@@ -1,7 +1,7 @@
 {
   "name": "@bufferapp/publish-utils",
-  "version": "1.9.8",
-  "description": "Misc. utils for dates, parsing, etc.",
+  "version": "1.9.24",
+  "description": "Misc. publish utils for dates, parsing, etc.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ignore-pattern coverage node_modules"

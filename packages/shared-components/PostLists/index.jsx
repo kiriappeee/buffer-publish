@@ -26,6 +26,8 @@ const renderPostList = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  onShareAgainClick,
+  isSent,
 }) =>
   <div style={postListStyle}>
     <PostList
@@ -43,6 +45,8 @@ const renderPostList = ({
       onImageClickPrev={onImageClickPrev}
       onImageClose={onImageClose}
       onDropPost={onDropPost}
+      onShareAgainClick={onShareAgainClick}
+      isSent={isSent}
     />
   </div>;
 
@@ -61,6 +65,8 @@ const PostLists = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  onShareAgainClick,
+  isSent,
 }) =>
   <List
     items={postLists.map((postList, index) =>
@@ -78,6 +84,8 @@ const PostLists = ({
         onImageClickPrev,
         onImageClose,
         onDropPost,
+        onShareAgainClick,
+        isSent,
       }),
     )}
     fillContainer
@@ -105,6 +113,8 @@ PostLists.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
+  onShareAgainClick: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 PostLists.defaultProps = {

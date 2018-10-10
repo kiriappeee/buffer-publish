@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Card,
   LinkifiedText,
+  Text,
 } from '@bufferapp/components';
 
 import {
@@ -14,11 +15,25 @@ import {
 } from '@bufferapp/components/style/dropShadow';
 
 import {
-  borderRadius
+  borderRadius,
+  borderWidth,
 } from '@bufferapp/components/style/border';
 
 import PostFooter from '../PostFooter';
+import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
+import FeatureLoader from '@bufferapp/product-features';
+import { mystic, offWhite } from '@bufferapp/components/style/color';
+
+const getLocationBarStyle = dragging => ({
+  display: 'flex',
+  padding: '0.5rem 1rem',
+  backgroundColor: offWhite,
+  borderTop: `${borderWidth} solid ${mystic}`,
+  borderBottom: `${borderWidth} solid ${mystic}`,
+  opacity: dragging ? 0 : 1,
+  marginBottom: 10,
+});
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
@@ -112,6 +127,22 @@ const renderContent = ({
 
 /* eslint-enable react/prop-types */
 
+const LocationBar = ({ locationName, dragging }) => (
+  <div>
+    <div style={getLocationBarStyle(dragging)}>
+      <Text
+        size={'small'}
+        color={'black'}
+      >Location: {locationName}</Text>
+    </div>
+  </div>
+);
+
+LocationBar.propTypes = {
+  locationName: PropTypes.string,
+  dragging: PropTypes.bool,
+};
+
 const Post = ({
   children,
   isConfirmingDelete,
@@ -127,11 +158,14 @@ const Post = ({
   retweetComment,
   retweetCommentLinks,
   retweetProfile,
-  sent,
+  locationName,
   draggable,
   dragging,
   hovering,
   fixed,
+  statistics,
+  profileService,
+  isSent,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
@@ -149,6 +183,11 @@ const Post = ({
           draggable,
           dragging,
         })}
+        {profileService === 'instagram' && locationName != null &&
+        <LocationBar
+          locationName={locationName}
+          dragging={dragging}
+        />}
         <PostFooter
           isDeleting={isDeleting}
           isConfirmingDelete={isConfirmingDelete}
@@ -159,10 +198,20 @@ const Post = ({
           onEditClick={onEditClick}
           onShareNowClick={onShareNowClick}
           postDetails={postDetails}
-          sent={sent}
           dragging={dragging}
           onRequeueClick={onRequeueClick}
+          isSent={isSent}
         />
+        <FeatureLoader
+          supportedFeatures={'post_stats'}
+        >
+          {isSent && !postDetails.isRetweet &&
+            <PostStats
+              statistics={statistics}
+              profileService={profileService}
+            />
+          }
+        </FeatureLoader>
       </Card>
     </div>
   </div>);
@@ -196,12 +245,12 @@ Post.commonPropTypes = {
       indices: PropTypes.arrayOf(PropTypes.number),
     }),
   ),
-  sent: PropTypes.bool.isRequired,
   draggable: PropTypes.bool,
   dragging: PropTypes.bool,
   hovering: PropTypes.bool,
   fixed: PropTypes.bool,
   onDropPost: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 Post.propTypes = {
@@ -214,6 +263,7 @@ Post.defaultProps = {
   isDeleting: false,
   isWorking: false,
   fixed: false,
+  isSent: false,
 };
 
 export default Post;

@@ -5,6 +5,21 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import TextPost from './index';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
@@ -12,8 +27,13 @@ const links = [{
   url: 'https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x',
   indices: [74, 96],
 }];
+const multilineLinks = [{
+  ...links[0],
+  indices: [78, 100],
+}];
 
 const text = 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv';
+const multilineText = 'What is a Product Designer? \n\nAn awesome story by @jgadapee over on Medium! \n\nhttp://buff.ly/1LTbUqv';
 
 const retweetComment = 'Awesome book news here: http://buff.ly/2oZYTnY';
 
@@ -27,6 +47,11 @@ const retweetCommentLinks = [{
 const postDetails = {
   isRetweet: false,
   postAction: 'This post will be sent at 9:21 (GMT)',
+};
+
+const postDetailsSent = {
+  isRetweet: false,
+  postAction: 'This post was sent at 9:21 (GMT)',
 };
 
 const isARetweetPostDetails = {
@@ -47,6 +72,11 @@ const retweetProfile = {
 
 storiesOf('TextPost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued text post', () => (
     <TextPost
       links={links}
@@ -57,20 +87,33 @@ storiesOf('TextPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
+    />
+  ))
+  .add('queued text post with multi-line text', () => (
+    <TextPost
+      links={multilineLinks}
+      postDetails={postDetails}
+      text={multilineText}
+      onCancelConfirmClick={action('cancel-confirm-click')}
+      onDeleteClick={action('delete-click')}
+      onDeleteConfirmClick={action('delete-confirm-click')}
+      onEditClick={action('edit-click')}
+      onShareNowClick={action('share-now-click')}
+      isSent={false}
     />
   ))
   .add('sent', () => (
     <TextPost
       links={links}
-      postDetails={postDetails}
+      postDetails={postDetailsSent}
       text={text}
       onCancelConfirmClick={action('cancel-confirm-click')}
       onDeleteClick={action('delete-click')}
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent
+      isSent
     />
   ))
   .add('retweet', () => (
@@ -84,7 +127,7 @@ storiesOf('TextPost', module)
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       retweetProfile={retweetProfile}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('retweet with comment', () => (
@@ -100,7 +143,7 @@ storiesOf('TextPost', module)
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
       retweetCommentLinks={retweetCommentLinks}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('error', () => (
@@ -113,6 +156,6 @@ storiesOf('TextPost', module)
       onDeleteConfirmClick={action('delete-confirm-click')}
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
-      sent={false}
+      isSent={false}
     />
   ));

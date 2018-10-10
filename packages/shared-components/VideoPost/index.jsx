@@ -17,7 +17,6 @@ const VideoPost = ({
   text,
   tag,
   retweetProfile,
-  sent,
   onImageClick,
   onImageClickNext,
   onImageClickPrev,
@@ -26,6 +25,10 @@ const VideoPost = ({
   draggable,
   dragging,
   hovering,
+  statistics,
+  profile_service: profileService,
+  service_geolocation_name: locationName,
+  isSent,
 }) =>
   <ImagePost
     isConfirmingDelete={isConfirmingDelete}
@@ -43,7 +46,6 @@ const VideoPost = ({
     onShareNowClick={onShareNowClick}
     onRequeueClick={onRequeueClick}
     retweetProfile={retweetProfile}
-    sent={sent}
     onImageClick={onImageClick}
     onImageClickNext={onImageClickNext}
     onImageClickPrev={onImageClickPrev}
@@ -52,6 +54,10 @@ const VideoPost = ({
     draggable={draggable}
     dragging={dragging}
     hovering={hovering}
+    statistics={statistics}
+    profileService={profileService}
+    service_geolocation_name={locationName}
+    isSent={isSent}
   />;
 
 VideoPost.propTypes = ImagePost.propTypes;

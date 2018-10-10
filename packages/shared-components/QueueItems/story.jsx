@@ -9,9 +9,29 @@ import {
   postLists,
   postListsNoHeaders,
 } from './postData';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 storiesOf('QueueItems', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('default queue', () => (
     <QueueItems
       items={postLists}

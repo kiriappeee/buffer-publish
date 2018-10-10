@@ -31,11 +31,14 @@ const TextPost = ({
   retweetProfile,
   retweetComment,
   retweetCommentLinks,
-  sent,
   draggable,
   dragging,
   hovering,
   fixed,
+  statistics,
+  profile_service: profileService,
+  service_geolocation_name: locationName,
+  isSent,
 }) => {
   const children = (
     <div style={postContentStyle}>
@@ -44,6 +47,7 @@ const TextPost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
@@ -71,11 +75,14 @@ const TextPost = ({
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
       retweetCommentLinks={retweetCommentLinks}
-      sent={sent}
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
       fixed={fixed}
+      statistics={statistics}
+      profileService={profileService}
+      locationName={locationName}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -101,6 +108,7 @@ TextPost.propTypes = {
     }),
   ),
   text: PropTypes.string.isRequired,
+  isSent: PropTypes.bool,
 };
 
 TextPost.defaultProps = Post.defaultProps;

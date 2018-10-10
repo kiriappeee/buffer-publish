@@ -9,7 +9,8 @@ import ProfileSettings from '@bufferapp/publish-settings';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import { ScrollableContainer } from '@bufferapp/publish-shared-components';
-import { Button } from '@bufferapp/components';
+
+import { LoadingAnimation } from '@bufferapp/components';
 
 const profilePageStyle = {
   display: 'flex',
@@ -32,10 +33,8 @@ const contentStyle = {
   height: '100vh',
 };
 
-const buttonContainerStyle = {
-  flexShrink: '0',
-  marginBottom: '40px',
-  alignSelf: 'center',
+const loadingAnimationStyle = {
+  textAlign: 'center',
 };
 
 const tabContentStyle = {
@@ -83,13 +82,18 @@ const ProfilePage = ({
       tabId,
     },
   },
-  onLoadMoreClick,
+  onLoadMore,
   loadingMore,
   moreToLoad,
   page,
 }) => {
   const isPostsTab = ['queue', 'sent'].includes(tabId);
-  const showLoadMoreButton = moreToLoad && isPostsTab;
+  const handleScroll = (o) => {
+    const reachedBottom = o.scrollHeight - o.scrollTop === o.clientHeight;
+    if (reachedBottom && moreToLoad && isPostsTab && !loadingMore) {
+      onLoadMore({ profileId, page, tabId });
+    }
+  };
   return (
     <div style={profilePageStyle}>
       <div style={profileSideBarStyle}>
@@ -98,7 +102,7 @@ const ProfilePage = ({
           tabId={tabId}
         />
       </div>
-      <div style={contentStyle}>
+      <div style={contentStyle} onScroll={e => handleScroll(e.target)}>
         <TabNavigation
           profileId={profileId}
           tabId={tabId}
@@ -108,16 +112,12 @@ const ProfilePage = ({
           growthSpace={1}
         >
           <div style={tabContentStyle}>
-            {TabContent({ tabId, profileId })}
-            {showLoadMoreButton &&
-              <div style={buttonContainerStyle}>
-                <Button
-                  disabled={loadingMore} secondary
-                  onClick={() => onLoadMoreClick({ profileId, page, tabId })}
-                >
-                  {loadingMore ? 'Loading...' : 'Load more'}
-                </Button>
-              </div>}
+            <TabContent tabId={tabId} profileId={profileId} />
+            {loadingMore &&
+              <div style={loadingAnimationStyle}>
+                <LoadingAnimation marginTop={'1rem'} />
+              </div>
+            }
           </div>
         </ScrollableContainer>
       </div>
@@ -132,7 +132,7 @@ ProfilePage.propTypes = {
       profileId: PropTypes.string,
     }),
   }).isRequired,
-  onLoadMoreClick: PropTypes.func.isRequired,
+  onLoadMore: PropTypes.func.isRequired,
   loadingMore: PropTypes.bool.isRequired,
   moreToLoad: PropTypes.bool.isRequired,
   page: PropTypes.number.isRequired,
