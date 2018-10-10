@@ -65,6 +65,7 @@ const QueuedPosts = ({
   onCalendarToggleClick,
   numberOfPostsByDate,
   onMiniCalendarMonthChange,
+  subprofiles,
 }) => {
   if (loading) {
     return (
@@ -127,6 +128,7 @@ const QueuedPosts = ({
       }
       <QueueItems
         items={postLists}
+        subprofiles={subprofiles}
         onCancelConfirmClick={onCancelConfirmClick}
         onRequeueClick={onRequeueClick}
         onDeleteClick={onDeleteClick}
@@ -153,6 +155,11 @@ QueuedPosts.propTypes = {
       type: PropTypes.string,
     }),
   ).isRequired,
+  subprofiles: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string,
+    }),
+  ),
   total: PropTypes.number,
   onComposerPlaceholderClick: PropTypes.func.isRequired,
   onComposerCreateSuccess: PropTypes.func.isRequired,
@@ -192,6 +199,7 @@ QueuedPosts.defaultProps = {
   paused: false,
   showCalendar: false,
   numberOfPostsByDate: null,
+  subprofiles: [],
 };
 
 export default QueuedPosts;

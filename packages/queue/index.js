@@ -39,6 +39,7 @@ export default connect(
         showCalendar: currentProfile.showCalendar,
         paused,
         numberOfPostsByDate: currentProfile.numberOfPostsByDate,
+        subprofiles: state.profileSidebar.selectedProfile.subprofiles,
       };
     }
     return {};

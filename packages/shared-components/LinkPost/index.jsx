@@ -60,8 +60,11 @@ const LinkPost = ({
   dragging,
   hovering,
   statistics,
+  subprofiles,
   profile_service: profileService,
   service_geolocation_name: locationName,
+  source_url: sourceUrl,
+  subprofile_id: subprofileID,
   isSent,
 }) => {
   const children = (
@@ -139,6 +142,9 @@ const LinkPost = ({
       statistics={statistics}
       profileService={profileService}
       locationName={locationName}
+      subprofiles={subprofiles}
+      subprofileID={subprofileID}
+      sourceUrl={sourceUrl}
       isSent={isSent}
     >
       {children}

@@ -36,6 +36,7 @@ const postTypeComponentMap = new Map([
 
 const renderPost = ({
   post,
+  subprofiles,
   onCancelConfirmClick,
   onRequeueClick,
   onDeleteClick,
@@ -53,6 +54,7 @@ const renderPost = ({
     ...post,
     key: post.id,
     postDetails: post.postDetails,
+    subprofiles,
     onCancelConfirmClick: () => onCancelConfirmClick({ post }),
     onDeleteClick: () => onDeleteClick({ post }),
     onDeleteConfirmClick: () => onDeleteConfirmClick({ post }),
@@ -145,6 +147,11 @@ QueueItems.propTypes = {
       type: PropTypes.string,
     }),
   ),
+  subprofiles: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string,
+    }),
+  ),
   onCancelConfirmClick: PropTypes.func,
   onDeleteClick: PropTypes.func,
   onDeleteConfirmClick: PropTypes.func,
@@ -161,6 +168,7 @@ QueueItems.propTypes = {
 
 QueueItems.defaultProps = {
   items: [],
+  subprofiles: [],
   draggable: false,
 };
 
