@@ -7,22 +7,23 @@ import PostMetaBar from './index';
 
 storiesOf('PostMetaBar', module)
   .addDecorator(checkA11y)
-  .add('Instagram', () => (
-    <PostMetaBar
-      leftContent={{ title: 'Location:', text: 'Kathmandu, Nepal' }}
-      dragging
-    />
-  ))
-  .add('Pinterest without sourceUrl', () => (
-    <PostMetaBar
-      leftContent={{ title: 'Pinned to:', text: 'Art' }}
-      dragging
-    />
-  ))
-  .add('Pinterest with sourceUrl', () => (
+  .add('Pinterest bar with boards and sourceUrl', () => (
     <PostMetaBar
       leftContent={{ title: 'Pinned to:', text: 'Art' }}
       rightContent={{ title: 'SourceUrl', text: 'Google' }}
       dragging
     />
-  ));
+  ))
+  .add('Pinterest bar with only boards', () => (
+    <PostMetaBar
+      leftContent={{ title: 'Pinned to:', text: 'Art' }}
+      rightContent={{ title: 'SourceUrl', text: 'Google' }}
+      dragging
+    />
+  ))
+  .add('Instagram bar with location', () => (
+    <PostMetaBar
+      leftContent={{ title: 'Location:', text: 'New Zealand' }}
+      dragging
+    />
+));
