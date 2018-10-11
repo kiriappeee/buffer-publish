@@ -64,6 +64,8 @@ const stripUrlToDomainName = (sourceUrl) => {
   /* create href a tag to easily grab hostname */
   const a = document.createElement('a');
   a.href = sourceUrl;
+  /* the way we're handling sourceUrls, they shouldnt contain www., but just a safety check */
+  if (a.href.includes('www.')) a.href.replace('www.', '');
   /* domainnames don't allow ".", so remove it & everything after it. With using split,
   there's no issue if a "." isn't present in url  */
   const domainName = a.hostname.split('.')[0];
@@ -87,6 +89,7 @@ const renderPostMetaBar = ({
     const subprofile = subprofiles.find((profile => profile.id === subprofileID));
     postMetaBarObj =
       { dragging, leftContent: { title: 'Pinned to:', text: subprofile.name, avatarUrl: subprofile.avatar } };
+
     if (sourceUrl) postMetaBarObj.rightContent = { title: 'Source:', text: stripUrlToDomainName(sourceUrl) };
   }
   if (!postMetaBarObj) return;
