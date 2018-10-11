@@ -12,6 +12,7 @@ export PostDragLayer from './PostDragLayer';
 export PostDragWrapper from './PostDragWrapper';
 export PostList from './PostList';
 export PostLists from './PostLists';
+export PostMetaBar from './PostMetaBar';
 export QueueItems from './QueueItems';
 export Row from './Row';
 export ScheduleTable from './ScheduleTable';
