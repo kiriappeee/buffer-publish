@@ -24,6 +24,7 @@ export default connect(
     const paused =
       (state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length) > 0;
     if (currentProfile) {
+      const { profileSidebar: { selectedProfile } = {} } = state;
       return {
         loading: currentProfile.loading,
         loadingMore: currentProfile.loadingMore,
@@ -39,7 +40,7 @@ export default connect(
         showCalendar: currentProfile.showCalendar,
         paused,
         numberOfPostsByDate: currentProfile.numberOfPostsByDate,
-        subprofiles: state.profileSidebar.selectedProfile.subprofiles,
+        subprofiles: state.profileSidebar && selectedProfile ? selectedProfile.subprofiles : [],
       };
     }
     return {};
