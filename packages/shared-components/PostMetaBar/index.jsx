@@ -39,7 +39,9 @@ const renderLeftContent = leftContent => (
     <div style={getImageWrapperStyle(leftContent.avatarUrl)}>
       { leftContent.avatarUrl &&
         <Image
-          height="1.3rem"
+          maxHeight="1.3rem"
+          height="100%"
+          maxWidth="5rem"
           src={leftContent.avatarUrl}
         />
       }
