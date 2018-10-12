@@ -52,7 +52,7 @@ const buttonDividerStyle = {
   marginBottom: '1rem',
 };
 
-const renderLockedHeader = translations => (
+const renderLockedHeader = ({translations, profileLimit}) => (
   <div style={lockedAccountHeaderStyle}>
     <Text size={'small'}>
       {translations.lockedList}
@@ -67,7 +67,9 @@ const renderLockedHeader = translations => (
         label={translations.lockedList}
       >
         <div style={{ padding: '.5rem .25rem' }}>
-          {translations.lockedListTooltip}
+          {translations.lockedListTooltip1}
+          {profileLimit}
+          {translations.lockedListTooltip2}
         </div>
       </IconArrowPopover>
     </div>
@@ -121,6 +123,7 @@ const ProfileSidebar = ({
   translations,
   onProfileClick,
   onConnectSocialAccountClick,
+  profileLimit,
 }) =>
   <div style={profileSidebarStyle}>
     {productTitle}
@@ -131,7 +134,7 @@ const ProfileSidebar = ({
         profiles={profiles}
         onProfileClick={onProfileClick}
       />
-      {lockedProfiles.length > 0 && renderLockedHeader(translations) }
+      {lockedProfiles.length > 0 && renderLockedHeader({translations, profileLimit}) }
       {lockedProfiles.length > 0 && <Divider />}
       <ProfileList
         selectedProfileId={selectedProfileId}
@@ -169,6 +172,7 @@ ProfileSidebar.propTypes = {
     lockedList: PropTypes.string,
     lockedListTooltip: PropTypes.string,
   }).isRequired,
+  profileLimit: PropTypes.number,
 };
 
 ProfileSidebar.defaultProps = {
