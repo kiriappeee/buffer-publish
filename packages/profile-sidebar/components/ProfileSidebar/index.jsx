@@ -46,6 +46,7 @@ const lockedAccountHeaderStyle = {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'row',
+  position: 'relative',
 };
 
 const buttonDividerStyle = {
@@ -60,10 +61,10 @@ const renderLockedHeader = ({translations, profileLimit}) => (
     <div style={{ position: 'absolute', marginLeft: '13rem' }}>
       <IconArrowPopover
         icon={<QuestionIcon />}
-        position="above"
+        position='above'
         shadow
         oneLine={false}
-        width="320px"
+        width='320px'
         label={translations.lockedList}
       >
         <div style={{ padding: '.5rem .25rem' }}>
@@ -108,10 +109,10 @@ const productTitle = (
 const renderLoadingProfiles = () => (
   <div>
     <LoadingProfileListItem />
-    <LoadingProfileListItem offset="100ms" />
-    <LoadingProfileListItem offset="200ms" />
-    <LoadingProfileListItem offset="300ms" />
-    <LoadingProfileListItem offset="400ms" />
+    <LoadingProfileListItem offset='100ms' />
+    <LoadingProfileListItem offset='200ms' />
+    <LoadingProfileListItem offset='300ms' />
+    <LoadingProfileListItem offset='400ms' />
   </div>
 );
 
