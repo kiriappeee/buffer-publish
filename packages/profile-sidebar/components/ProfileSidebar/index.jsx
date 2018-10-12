@@ -68,9 +68,7 @@ const renderLockedHeader = ({translations, profileLimit}) => (
         label={translations.lockedList}
       >
         <div style={{ padding: '.5rem .25rem' }}>
-          {translations.lockedListTooltip1}
-          {profileLimit}
-          {translations.lockedListTooltip2}
+          {translations.lockedListTooltip1 + profileLimit + translations.lockedListTooltip2}
         </div>
       </IconArrowPopover>
     </div>
