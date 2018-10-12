@@ -15,7 +15,8 @@ const store = createStore();
 const translations = {
   connectButton: 'Manage Social Accounts',
   lockedList: 'Locked Social Accounts',
-  lockedListTooltip: 'Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!',
+  lockedListTooltip1: 'Sorry, your current plan lets you access up to ',
+  lockedListTooltip2: ' social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!',
 };
 
 storiesOf('ProfileSidebar', module)
@@ -33,6 +34,7 @@ storiesOf('ProfileSidebar', module)
       translations={translations}
       onProfileClick={action('profile click')}
       onConnectSocialAccountClick={action('connect social account click')}
+      profileLimit={'3'}
     />
   ))
   .add('should display a long list of profiles', () => (
@@ -43,5 +45,6 @@ storiesOf('ProfileSidebar', module)
       onProfileClick={action('profile click')}
       selectedProfile={profiles[0]}
       onConnectSocialAccountClick={action('connect social account click')}
+      profileLimit={'3'}
     />
   ));
