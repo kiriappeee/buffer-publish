@@ -20,4 +20,5 @@ module.exports = userData => ({
   twofactor: userData.twofactor,
   has_simplified_free_plan_ux: userData.features.includes('has_simplified_free_plan_ux'),
   hasIGLocationTaggingFeature: userData.features.includes('instagram-location-tagging'),
+  profile_limit: userData.profile_limit,
 });
