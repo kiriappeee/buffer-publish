@@ -16,7 +16,7 @@ const translations = {
   connectButton: 'Manage Social Accounts',
   lockedList: 'Locked Social Accounts',
   lockedListTooltip1: 'Sorry, your current plan lets you access up to ',
-  lockedListTooltip2: ' social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!',
+  lockedListTooltip2: ' social accounts at the same time (and any business accounts you’re a team member on as long as the owner is on a Business Plan). We’ll keep these other ones safe and sound until you’re ready to upgrade!',
 };
 
 storiesOf('ProfileSidebar', module)
