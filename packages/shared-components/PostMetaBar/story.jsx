@@ -15,7 +15,7 @@ storiesOf('PostMetaBar', module)
         text: 'Art'
       }}
       rightContent={{ title: 'Source:', text: 'google.com' }}
-      dragging
+      dragging={false}
     />
   ))
   .add('Pinterest bar with only boards', () => (
@@ -25,13 +25,12 @@ storiesOf('PostMetaBar', module)
         avatarUrl: 'http://i.pinimg.com/200x150/76/4a/36/764a36f92e012937b13d150690747365.jpg',
         text: 'Art',
       }}
-      rightContent={{ title: 'Source:' }}
-      dragging
+      dragging={false}
     />
   ))
   .add('Instagram bar with location', () => (
     <PostMetaBar
       leftContent={{ title: 'Location:', text: 'New Zealand' }}
-      dragging
+      dragging={false}
     />
 ));
