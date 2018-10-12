@@ -17,7 +17,7 @@ import FeatureLoader from '@bufferapp/product-features';
 import PostFooter from '../PostFooter';
 import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
-import PostMetaBar from '../PostMetaBar';
+import RenderPostMetaBar from './RenderPostMetaBar';
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
@@ -59,48 +59,6 @@ const commentStyle = {
 };
 
 /* eslint-disable react/prop-types */
-
-const stripUrlToDomainName = (sourceUrl) => {
-  /* create href a tag to easily grab hostname */
-  const a = document.createElement('a');
-  a.href = sourceUrl;
-  /* the way we're handling sourceUrls, they shouldnt contain www., but just a safety check */
-  if (a.href.includes('www.')) a.href.replace('www.', '');
-  /* domainnames don't allow ".", so remove it & everything after it. With using split,
-  there's no issue if a "." isn't present in url  */
-  const domainName = a.hostname.split('.')[0];
-  const capitalizedDomainName = domainName.charAt(0).toUpperCase() + domainName.slice(1);
-  return capitalizedDomainName;
-};
-
-const renderPostMetaBar = ({
-  profileService,
-  dragging,
-  locationName,
-  sourceUrl,
-  subprofileID,
-  subprofiles,
-}) => {
-  let postMetaBarObj = null;
-  if (profileService === 'instagram' && locationName !== null) {
-    postMetaBarObj = { leftContent: { title: 'Location:', text: locationName }, dragging };
-  } else if (profileService === 'pinterest' && subprofileID !== null) {
-    /*  having a subprofileID is required, sourceUrl is not */
-    const subprofile = subprofiles.find((profile => profile.id === subprofileID));
-    postMetaBarObj =
-      { dragging, leftContent: { title: 'Pinned to:', text: subprofile.name, avatarUrl: subprofile.avatar } };
-
-    if (sourceUrl) postMetaBarObj.rightContent = { title: 'Source:', text: stripUrlToDomainName(sourceUrl) };
-  }
-  if (!postMetaBarObj) return;
-  return (
-    <PostMetaBar
-      dragging={dragging}
-      leftContent={postMetaBarObj.leftContent}
-      rightContent={postMetaBarObj.rightContent}
-    />
-  );
-};
 
 const renderRetweetComment = ({
   retweetComment,
@@ -196,14 +154,14 @@ const Post = ({
           draggable,
           dragging,
         })}
-        {renderPostMetaBar({
-          profileService,
-          dragging,
-          locationName,
-          sourceUrl,
-          subprofileID,
-          subprofiles,
-        })}
+        <RenderPostMetaBar
+          profileService={profileService}
+          dragging={dragging}
+          locationName={locationName}
+          sourceUrl={sourceUrl}
+          subprofileID={subprofileID}
+          subprofiles={subprofiles}
+        />
         <PostFooter
           isDeleting={isDeleting}
           isConfirmingDelete={isConfirmingDelete}

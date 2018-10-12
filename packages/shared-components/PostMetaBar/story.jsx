@@ -9,15 +9,23 @@ storiesOf('PostMetaBar', module)
   .addDecorator(checkA11y)
   .add('Pinterest bar with boards and sourceUrl', () => (
     <PostMetaBar
-      leftContent={{ title: 'Pinned to:', text: 'Art' }}
-      rightContent={{ title: 'SourceUrl', text: 'Google' }}
+      leftContent={{
+        title: 'Pinned to:',
+        avatarUrl: 'http://i.pinimg.com/200x150/76/4a/36/764a36f92e012937b13d150690747365.jpg',
+        text: 'Art'
+      }}
+      rightContent={{ title: 'Source:', text: 'google.com' }}
       dragging
     />
   ))
   .add('Pinterest bar with only boards', () => (
     <PostMetaBar
-      leftContent={{ title: 'Pinned to:', text: 'Art' }}
-      rightContent={{ title: 'SourceUrl', text: 'Google' }}
+      leftContent={{
+        title: 'Pinned to:',
+        avatarUrl: 'http://i.pinimg.com/200x150/76/4a/36/764a36f92e012937b13d150690747365.jpg',
+        text: 'Art',
+      }}
+      rightContent={{ title: 'Source:' }}
       dragging
     />
   ))
