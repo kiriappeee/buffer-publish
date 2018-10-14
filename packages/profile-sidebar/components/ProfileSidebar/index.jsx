@@ -46,7 +46,6 @@ const lockedAccountHeaderStyle = {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'row',
-  position: 'relative',
 };
 
 const buttonDividerStyle = {
