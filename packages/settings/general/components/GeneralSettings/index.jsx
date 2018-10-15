@@ -1,12 +1,12 @@
-import {LoadingAnimation} from "@bufferapp/components";
+import {Divider, LoadingAnimation} from "@bufferapp/components";
 import React from "react";
 import InstagramDirectUpload from "../InstagramDirectUpload/index";
 
 const GeneralSettings = ({}) => {
     return (
         <div>
-            <h1> General </h1>
             <InstagramDirectUpload/>
+            <Divider />
         </div>
     )
 };
