@@ -12,6 +12,7 @@ export default connect(
     profiles: state.profileSidebar.profiles,
     lockedProfiles: state.profileSidebar.lockedProfiles,
     translations: state.i18n.translations['profile-sidebar'],
+    profileLimit: state.appSidebar.user.profile_limit,
   }),
   (dispatch, ownProps) => ({
     onProfileClick: (profile) => {
