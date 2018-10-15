@@ -36,8 +36,11 @@ const TextPost = ({
   hovering,
   fixed,
   statistics,
+  subprofiles,
   profile_service: profileService,
   service_geolocation_name: locationName,
+  source_url: sourceUrl,
+  subprofile_id: subprofileID,
   isSent,
 }) => {
   const children = (
@@ -80,8 +83,11 @@ const TextPost = ({
       hovering={hovering}
       fixed={fixed}
       statistics={statistics}
+      subprofiles={subprofiles}
       profileService={profileService}
       locationName={locationName}
+      sourceUrl={sourceUrl}
+      subprofileID={subprofileID}
       isSent={isSent}
     >
       {children}

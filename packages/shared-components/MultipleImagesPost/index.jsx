@@ -46,8 +46,11 @@ const MultipleImagesPost = ({
   dragging,
   hovering,
   statistics,
+  subprofiles,
   profile_service: profileService,
   service_geolocation_name: locationName,
+  source_url: sourceUrl,
+  subprofile_id: subprofileID,
   isSent,
 }) => {
   const images = imageUrls.map(url => ({ src: `${url}` }));
@@ -105,8 +108,11 @@ const MultipleImagesPost = ({
       dragging={dragging}
       hovering={hovering}
       statistics={statistics}
+      subprofiles={subprofiles}
       profileService={profileService}
       locationName={locationName}
+      sourceUrl={sourceUrl}
+      subprofileID={subprofileID}
       isSent={isSent}
     >
       {children}

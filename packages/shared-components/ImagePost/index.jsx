@@ -64,6 +64,9 @@ const ImagePost = ({
   statistics,
   profile_service: profileService,
   service_geolocation_name: locationName,
+  source_url: sourceUrl,
+  subprofile_id: subprofileID,
+  subprofiles,
   isSent,
 }) => {
   const children = (
@@ -126,6 +129,9 @@ const ImagePost = ({
       statistics={statistics}
       profileService={profileService}
       locationName={locationName}
+      sourceUrl={sourceUrl}
+      subprofileID={subprofileID}
+      subprofiles={subprofiles}
       isSent={isSent}
     >
       {children}
