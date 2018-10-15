@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-    Button, Divider,
+    Button,
     Text,
 } from '@bufferapp/components';
 
-const editScheduleStyle = {
+const instagramDirectPostingStyle = {
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
@@ -27,7 +27,7 @@ const setUpDirectPostingStyle = {
 
 
 let InstagramDirectUpload = ({}) => (
-    <div style={editScheduleStyle}>
+    <div style={instagramDirectPostingStyle}>
         <div>
             <div style={textWrapperStyle}>
                 <Text
