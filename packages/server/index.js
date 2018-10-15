@@ -13,6 +13,7 @@ const {
   validateSessionMiddleware,
 } = require('@bufferapp/session-manager');
 const bufferMetricsMiddleware = require('@bufferapp/buffermetrics/middleware');
+const { errorMiddleware } = require('@bufferapp/buffer-rpc');
 const controller = require('./lib/controller');
 const rpcHandler = require('./rpc');
 const checkToken = require('./rpc/checkToken');
@@ -107,7 +108,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-app.post('/rpc', checkToken, rpcHandler);
+app.post('/rpc', checkToken, rpcHandler, errorMiddleware);
 
 app.use(
   bufferMetricsMiddleware({
