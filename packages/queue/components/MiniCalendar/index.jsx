@@ -1,19 +1,7 @@
-/*
-This DatePicker is not importing react-day-picker styles,
-it is using DatePicker.css from the buffer-composer.
-In the future the styles should probably be independent.
-The react-day-picker styles were left here commented as
-a precaution, in case there's a change in buffer-composer
-and DatePicker.css no longer applies.
-*/
-
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayPicker from 'react-day-picker';
-import { ArrowRightIcon, ArrowLeftIcon } from '@bufferapp/components/Icon/Icons';
-import { Button } from '@bufferapp/components';
-// import 'react-day-picker/lib/style.css'; // Not being used. See comment on top.
 import moment from 'moment-timezone';
+import { InputDate } from '@bufferapp/components';
 
 const containerStyle = {
   position: 'absolute',
@@ -28,8 +16,7 @@ const containerStyle = {
 };
 
 const cellStyle = {
-  height: '1.6rem',
-  width: '1.9rem',
+  maxHeight: '1rem',
 };
 
 const dateStyle = {
@@ -44,76 +31,20 @@ const numPostsStyle = {
 };
 
 /* MiniCalendar displays one month in the past */
-const firstMonthDisplay = moment().subtract(1, 'month').toDate();
-
-const NavBar = ({
-  month,
-  nextMonth,
-  previousMonth,
-  onPreviousClick,
-  onNextClick,
-  className,
-  localeUtils,
-  getNumberOfPostsByDate,
-}) => {
-  const styleLeft = {
-    float: 'left',
-  };
-
-  const styleRight = {
-    float: 'right',
-  };
-
-  const onNext = () => {
-    onNextClick();
-    getNumberOfPosts(nextMonth);
-  };
-
-  const onPrev = () => {
-    onPreviousClick();
-    getNumberOfPosts(previousMonth);
-  };
-
-  const getNumberOfPosts = (newMonth) => {
-    const startDate = moment(newMonth).startOf('month').unix();
-    const endDate = moment(newMonth).endOf('month').unix();
-    getNumberOfPostsByDate(startDate, endDate);
-  };
-
-  const showPreviousButton = (moment(month).isAfter(firstMonthDisplay, 'month')) ? true : false;
-
-  return (
-    <div className={className}>
-      <div style={styleLeft}>
-        { showPreviousButton &&
-          <Button style={styleLeft} noStyle onClick={onPrev}>
-            <ArrowLeftIcon/>
-          </Button>
-        }
-      </div>
-      <div style={styleRight}>
-        <Button noStyle onClick={onNext}>
-          <ArrowRightIcon/>
-        </Button>
-      </div>
-    </div>
-  );
-};
-
-const modifiers = {
-  isToday: new Date(),
-  disabled: {
-    before: new Date(),
-  },
-};
+const firstMonthToDisplay = moment().subtract(1, 'month').toDate();
 
 const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
+  /* Used to update number of posts when navigate to another month on DateInputNavBar */
+  const onNavigationClick = (newMonth) => {
+    const startDate = moment(newMonth).startOf('month').unix();
+    const endDate = moment(newMonth).endOf('month').unix();
+    onMonthChange(startDate, endDate);
+  };
+
   /* Requests the number of posts for the current month when open the calendar */
   if(!numberOfPostsByDate) {
-    const startDate = moment().startOf('month').unix();
-    const endDate = moment().endOf('month').unix();
-    onMonthChange(startDate, endDate);
+    onNavigationClick();
   };
 
   /* Renders content of each day cell and adds number of posts if they exist */
@@ -130,12 +61,11 @@ const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
 
   return (
     <div style={containerStyle}>
-      <DayPicker
-        navbarElement={<NavBar getNumberOfPostsByDate={onMonthChange} />}
-        fromMonth={firstMonthDisplay}
+      <InputDate
+        firstMonthToDisplay={firstMonthToDisplay}
+        initialMonth={new Date()}
+        onNavigationClick={onNavigationClick}
         renderDay={renderDay}
-        modifiers={modifiers}
-        showOutsideDays
       />
     </div>
   );
