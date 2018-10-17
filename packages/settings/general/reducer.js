@@ -4,14 +4,14 @@ import { actionTypes as dataFetchActionTypes } from '../../async-data-fetch/inde
 import cloneDeep from 'lodash.clonedeep';
 import keyWrapper from '@bufferapp/keywrapper';
 
-export const actionTypes = keyWrapper('SETTINGS', {
-
+export const actionTypes = keyWrapper('GENERAL', {
+  DIRECT_POSTING_SET: 0,
 });
 
 const initialState = {
-  loading: false,
   profileId: null,
   showClearAllModal: false,
+  directPostingSet: false,
   profileName: '',
   profileType: '',
   profileService: '',
@@ -37,11 +37,14 @@ export default (state = initialState, action) => {
       return {
         ...state,
       };
+
     default:
       return state;
   }
 };
 
 export const actions = {
-
+  handleSetUpDirectPostingClick: () => ({
+    type: actionTypes.DIRECT_POSTING_SET,
+  }),
 };

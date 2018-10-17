@@ -4,7 +4,8 @@ import createHistory from 'history/createBrowserHistory';
 import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/buffermetrics/redux';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
-
+import { middleware as postingScheduleSettingsMiddleware } from '../settings/posting-schedule/index';
+import { middleware as generalSettingsMiddleware } from '../settings/general/index';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
 import { middleware as productFeatureMiddleware } from '@bufferapp/product-features';
@@ -60,7 +61,8 @@ const configureStore = (initialstate) => {
         productFeatureMiddleware,
         queueMiddleware,
         sentMiddleware,
-        settingsMiddleware,
+        postingScheduleSettingsMiddleware,
+        generalSettingsMiddleware,
         pusherSyncMiddleware,
         notificationsMiddleware,
         environmentMiddleware,
