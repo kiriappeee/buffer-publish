@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { actions as profileSidebarActions } from '../../profile-sidebar/index';
+import { actions as profileSidebarActions } from '../profile-sidebar/index';
 import { actions } from './reducer';
 
 import PostingSchedule from './components/PostingSchedule/index';

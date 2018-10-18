@@ -4,8 +4,12 @@ import { routerReducer } from 'react-router-redux';
 import { reducer as tabsReducer } from '@bufferapp/publish-tabs';
 import { reducer as queueReducer } from '@bufferapp/publish-queue';
 import { reducer as sentReducer } from '@bufferapp/publish-sent';
+<<<<<<< HEAD
 import { reducer as draftsReducer } from '@bufferapp/publish-drafts';
 import { reducer as settingsReducer } from '../settings/posting-schedule/index';
+=======
+import { reducer as settingsReducer } from '../posting-schedule/index';
+>>>>>>> move general-settings & posting-schedule up a level, rename refs
 import { reducer as i18nReducer } from '@bufferapp/publish-i18n';
 import { reducer as profileSidebarReducer } from '@bufferapp/publish-profile-sidebar';
 import { reducer as appSidebarReducer } from '@bufferapp/app-sidebar';

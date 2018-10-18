@@ -15,7 +15,7 @@ import {
   ScheduleTable,
   EmptyState,
   SensitiveData,
-} from '../../../../shared-components/index';
+} from '../../../shared-components/index';
 
 import PostingTimeForm from '../PostingTimeForm/index';
 import TimezoneInputForm from '../TimezoneInputForm/index';

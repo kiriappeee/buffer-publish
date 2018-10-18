@@ -11,7 +11,7 @@ export const getProfilePageParams = ({ path }) => {
   };
 };
 
-export const generateChildTabRoute = ({ profileId, tabId = 'queue', childTabId = 'general'}) =>
+export const generateChildTabRoute = ({ profileId, tabId = 'queue', childTabId = 'general-settings'}) =>
     `/profile/${profileId}/tab/${tabId}/${childTabId}`;
 
 export const generateProfilePageRoute = ({ profileId, tabId = 'queue' }) =>

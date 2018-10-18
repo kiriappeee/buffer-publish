@@ -22,9 +22,9 @@ export default connect(
     onTabClick: preferenceId => dispatch(push(generatePreferencePageRoute({
       preferenceId,
     }))),
-    // send to general when there is an unknown tab
+    // send to general-settings when there is an unknown tab
     onUnknownTab: () => dispatch(push(generatePreferencePageRoute({
-      preferenceId: 'general',
+      preferenceId: 'general-settings',
     }))),
     // go back to the last selected profile
     onBackToDashboardClick: ({ selectedProfileId, profiles }) => {

@@ -72,7 +72,7 @@ const TabContent = ({ tabId, profileId, childTabId }) => {
                     childTabId={childTabId}
                 />
             );
-          case 'general':
+          case 'general-settings':
           default:
           return (
             <GeneralSettings

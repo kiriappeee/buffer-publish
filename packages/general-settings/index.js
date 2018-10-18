@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { actions } from './reducer';
-import GeneralSettings from '../general/components/GeneralSettings/index';
+import GeneralSettings from './components/GeneralSettings/index';
 
 export default connect(
     state => ({
