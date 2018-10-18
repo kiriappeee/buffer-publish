@@ -18,10 +18,11 @@ module.exports = {
     }
     return 'https://buffer.com/manage/own';
   },
-  getInstagramDirectPostingURL: () => {
+  getInstagramDirectPostingURL: (profileId) => {
     if (window.location.hostname === 'publish.local.buffer.com') {
-      return 'https://local.buffer.com/instagram/setup';
+      return `https://local.buffer.com/instagram/setup?profile_id=${profileId.profileId
+        }`;
     }
-    return 'https://buffer.com/instagram/setup';
+    return `https://buffer.com/instagram/setup?profile_id=${profileId.profileId}`;
   },
 };

@@ -12,9 +12,11 @@ export default connect(
       profileService: state.settings.profileService,
       avatar: state.settings.avatar,
     }),
-    dispatch => ({
+    (dispatch, ownProps) => ({
       onSetUpDirectPostingClick: () => {
-        dispatch(actions.handleSetUpDirectPostingClick());
+        dispatch(actions.handleSetUpDirectPostingClick({
+          profileId: ownProps.profileId,
+        }));
       },
     }),
 )(GeneralSettings);

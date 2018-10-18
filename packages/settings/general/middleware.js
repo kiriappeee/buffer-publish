@@ -5,7 +5,7 @@ export default () => next => (action) => {
   next(action);
   switch (action.type) {
     case actionTypes.DIRECT_POSTING_SET:
-      window.location = getURL.getInstagramDirectPostingURL();
+      window.location = getURL.getInstagramDirectPostingURL(action.profileId);
       break;
     default:
       break;
