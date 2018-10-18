@@ -9,7 +9,7 @@
   "author": "melissa@buffer.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.3",
-    "@bufferapp/composer": "2.1.5",
+    "@bufferapp/composer": "2.1.6",
     "@bufferapp/keywrapper": "0.2.0",
     "@bufferapp/notifications": "1.9.3",
     "@bufferapp/publish-profile-sidebar": "^1.9.25",
