@@ -1,24 +1,26 @@
-import { Divider } from '@bufferapp/components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import InstagramDirectUpload from '../InstagramDirectUpload/index';
 
 const GeneralSettings = ({
   onSetUpDirectPostingClick,
+  showInstagramDirectPostingComponent,
 }) => (
   <div>
-    <InstagramDirectUpload
-      onSetUpDirectPostingClick={onSetUpDirectPostingClick}
-    />
-    <Divider />
+    {!showInstagramDirectPostingComponent &&
+      <InstagramDirectUpload
+        onSetUpDirectPostingClick={onSetUpDirectPostingClick}
+      />
+    }
   </div>
 );
 GeneralSettings.defaultProps = {
-  loading: false,
+  showInstagramDirectPostingComponent: PropTypes.bool,
 };
 
 GeneralSettings.propTypes = {
   onSetUpDirectPostingClick: PropTypes.func.isRequired,
+  showInstagramDirectPostingComponent: PropTypes.bool,
 };
 
 export default GeneralSettings;

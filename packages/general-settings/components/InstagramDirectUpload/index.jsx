@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-    Button,
-    Text,
+  Button, Divider,
+  Text,
 } from '@bufferapp/components';
 
 const instagramDirectPostingStyle = {
@@ -28,29 +28,32 @@ const setUpDirectPostingStyle = {
 const InstagramDirectUpload = ({
   onSetUpDirectPostingClick,
 }) => (
-  <div style={instagramDirectPostingStyle}>
-    <div>
-      <div style={textWrapperStyle}>
-        <Text
-          color={'black'}
-        >
+  <div>
+    <div style={instagramDirectPostingStyle}>
+      <div>
+        <div style={textWrapperStyle}>
+          <Text
+            color={'black'}
+          >
           Enable Direct Posting
         </Text>
-      </div>
-      <div style={textWrapperStyle}>
-        <Text>
+        </div>
+        <div style={textWrapperStyle}>
+          <Text>
          Buffer can now post directly to Instagram, all you need to do is switch Instagram
          profile to a business profile. We've created a guide to walk you through the process.
         </Text>
+        </div>
       </div>
-    </div>
-    <div style={setUpDirectPostingStyle}>
-      <Button
-        onClick={() => { onSetUpDirectPostingClick(); }}
-      >
+      <div style={setUpDirectPostingStyle}>
+        <Button
+          onClick={() => { onSetUpDirectPostingClick(); }}
+        >
         Set up direct posting
       </Button>
+      </div>
     </div>
+    <Divider />
   </div>
 );
 
