@@ -25,9 +25,10 @@ const dateStyle = {
 };
 
 const numPostsStyle = {
-  fontSize: '0.3rem',
+  fontSize: '0.6rem',
   position: 'relative',
   top: '-0.3rem',
+  fontWeight: '600',
 };
 
 /* MiniCalendar displays one month in the past */

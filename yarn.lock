@@ -163,10 +163,10 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/chronos/-/chronos-0.6.1.tgz#0213dff339459ca510103e5a72f558682a2675dd"
   integrity sha1-AhPf8zlFnKUQED5acvVYaComdd0=
 
-"@bufferapp/components@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-3.0.0.tgz#478e8f3079b3392c3560d78d66a8c7c5f43b0fa5"
-  integrity sha512-Mj7+FlhsYsoD/mAb6spmTf60RFOa/eVpWqjUfeNvam17z5BFJd6h5hyVWzZZiR6Mkl7ZO4iiu1iHCI99URz1ZA==
+"@bufferapp/components@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@bufferapp/components/-/components-3.0.2.tgz#a12503ce4b347fcd375034a1558795ffe791d6e1"
+  integrity sha512-uER+3TGkJe7em2FZftrHDlbGVBV2lurjLGczs/J8Y7IbDeYZz1adT9pdvJm+Wz1y5zKZO/l/1tWiWCwS0I38fQ==
   dependencies:
     "@bufferapp/react-keyframes" "0.2.5"
     moment "^2.22.2"
@@ -174,15 +174,15 @@
     react-autocomplete "1.7.2"
     react-day-picker "7.2.3"
 
-"@bufferapp/composer@2.1.5":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-2.1.5.tgz#e43875766686c1990cd53487afb023dcc2d5dfa7"
-  integrity sha512-otGLpB5GpgG60x+O4Toz7x7lHz3QJ7rH5gGbfETaKIUahV5VvJRVnRyJ5aNtGn4nD7Q6r9SGfecOExUeQ7ySVw==
+"@bufferapp/composer@2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-2.1.6.tgz#f31ba54f64ee08bd04ce9e67425d9df1d9aa6818"
+  integrity sha512-vc1RJObi0KKReNqgqFEERj6wjUyczBef1JFeVyuKirvxQe9gGmVaYKKaGgXIqPX6jo6mj6cCRibPrID1Ka61hQ==
   dependencies:
     "@bufferapp/buffer-js-api" "0.3.0"
     "@bufferapp/buffer-js-metrics" "0.2.0"
     "@bufferapp/buffer-js-request" "0.2.0"
-    "@bufferapp/components" "3.0.0"
+    "@bufferapp/components" "3.0.2"
     "@bufferapp/draft-js" "0.10.1-fork.5"
     "@bufferapp/draft-js-emoji-plugin" "^2.0.0-rc9.1"
     "@bufferapp/draft-js-mention-plugin" "2.0.0-rc8.3"
