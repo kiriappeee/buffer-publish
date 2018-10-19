@@ -8,7 +8,7 @@
   },
   "author": "melissa@buffer.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.9.3",
+    "@bufferapp/async-data-fetch": "1.9.4",
     "@bufferapp/publish-profile-sidebar": "^1.9.25",
     "@bufferapp/publish-pusher-sync": "^1.9.25",
     "@bufferapp/publish-queue": "^1.9.25",

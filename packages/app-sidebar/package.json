@@ -8,7 +8,7 @@
   },
   "author": "hamstu@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.9.3",
+    "@bufferapp/async-data-fetch": "1.9.4",
     "@bufferapp/date-time-preferences": "1.9.3",
     "@bufferapp/session-manager": "0.7.1"
   },

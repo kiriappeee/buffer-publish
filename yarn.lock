@@ -113,6 +113,13 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-0.5.36-beta01.tgz#684504ddc303577c42b0ba350d854990d6bd1ad1"
   integrity sha1-aEUE3cMDV3xCsLo1DYVJkNa9GtE=
 
+"@bufferapp/async-data-fetch@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-1.9.4.tgz#186a15efd7280d403065ae313aa3707ad9066bcc"
+  integrity sha512-uSWWtngPYGP5MAE2rLtWhacOjqIs6VBWFHyR+XdTRxwLACH+BeNwGVoj+5QFJS8AQgE/a0/HD3Px7JGyrYCkrA==
+  dependencies:
+    micro-rpc-client "^0.1.4"
+
 "@bufferapp/buda@0.5.2-beta1":
   version "0.5.2-beta1"
   resolved "https://registry.yarnpkg.com/@bufferapp/buda/-/buda-0.5.2-beta1.tgz#2c420a7fa0c9facb6a01ec4821bd167b08f481a6"
@@ -8925,7 +8932,7 @@ micro-rpc-client@0.1.2:
   dependencies:
     isomorphic-fetch "^2.2.1"
 
-micro-rpc-client@0.1.4:
+micro-rpc-client@0.1.4, micro-rpc-client@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/micro-rpc-client/-/micro-rpc-client-0.1.4.tgz#f3cc744f31c647321a0313cf5a09abb4e16a44c1"
   integrity sha512-OTWowbnLHVvI6A7wgdJ229rzsrFo4I/pN+MAiI/K9WDwymmmCp4pP3KweV9/ijZtZFLNTfm8BLWb9RCLXPDUkQ==

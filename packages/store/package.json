@@ -9,7 +9,7 @@
   "author": "hharnisc@gmail.com",
   "dependencies": {
     "@bufferapp/app-sidebar": "^1.9.22",
-    "@bufferapp/async-data-fetch": "1.9.3",
+    "@bufferapp/async-data-fetch": "1.9.4",
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/close-account": "1.9.3",
     "@bufferapp/edit-email": "^1.9.10",
