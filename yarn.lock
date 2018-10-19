@@ -358,6 +358,14 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/shutdown-helper/-/shutdown-helper-0.2.0.tgz#d43bbba845e30e411dda76a7b7629e11160e5395"
   integrity sha1-1Du7qEXjDkEd2nant2KeERYOU5U=
 
+"@bufferapp/unauthorized-redirect@1.9.8":
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/@bufferapp/unauthorized-redirect/-/unauthorized-redirect-1.9.8.tgz#9372465b35bdffa98a44fc003561b7f2ae408c9f"
+  integrity sha512-hNAUU16W3HeohdKuJeVgPYtH/FUnjXLHJFOu4nDnhAf9gOFbHQG8PHZ03G/ZMJs5h22lOu2Hg95u+jcJ3VP1Qw==
+  dependencies:
+    "@bufferapp/async-data-fetch" "1.9.4"
+    "@bufferapp/session-manager" "0.7.1"
+
 "@lerna/add@^3.2.0":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@lerna/add/-/add-3.4.1.tgz#d41068317e30f530df48220d256b5e79690b1877"
