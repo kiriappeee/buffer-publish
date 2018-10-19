@@ -13,7 +13,7 @@
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/close-account": "1.9.3",
     "@bufferapp/edit-email": "^1.9.10",
-    "@bufferapp/environment": "1.9.3",
+    "@bufferapp/environment": "1.9.4",
     "@bufferapp/maintenance-redirect": "1.9.11",
     "@bufferapp/manage-apps-extras": "1.9.3",
     "@bufferapp/notifications": "1.9.3",
