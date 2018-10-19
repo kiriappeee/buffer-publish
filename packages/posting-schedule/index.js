@@ -1,29 +1,29 @@
 import { connect } from 'react-redux';
-import { actions as profileSidebarActions } from '../profile-sidebar/index';
+import { actions as profileSidebarActions } from '@bufferapp/publish-profile-sidebar';
 import { actions } from './reducer';
 
-import PostingSchedule from './components/PostingSchedule/index';
+import PostingSchedule from './components/PostingSchedule';
 
 export default connect(
   state => ({
-    loading: state.settings.loading,
-    scheduleLoading: state.settings.scheduleLoading,
-    settingsHeader: state.settings.settingsHeader,
+    loading: state.postingSchedule.loading,
+    scheduleLoading: state.postingSchedule.scheduleLoading,
+    settingsHeader: state.postingSchedule.settingsHeader,
     translations: state.i18n.translations.settings, // all package translations
-    days: state.settings.days,
-    schedules: state.settings.schedules,
-    pausedSchedules: state.settings.pausedSchedules,
-    mergedSchedules: state.settings.mergedSchedules,
-    items: state.settings.items,
-    profileTimezoneCity: state.settings.profileTimezoneCity,
-    hasTwentyFourHourTimeFormat: state.settings.hasTwentyFourHourTimeFormat,
-    clearTimezoneInput: state.settings.clearTimezoneInput,
-    paused: state.settings.paused,
-    showClearAllModal: state.settings.showClearAllModal,
-    profileName: state.settings.profileName,
-    profileType: state.settings.profileType,
-    profileService: state.settings.profileService,
-    avatar: state.settings.avatar,
+    days: state.postingSchedule.days,
+    schedules: state.postingSchedule.schedules,
+    pausedSchedules: state.postingSchedule.pausedSchedules,
+    mergedSchedules: state.postingSchedule.mergedSchedules,
+    items: state.postingSchedule.items,
+    profileTimezoneCity: state.postingSchedule.profileTimezoneCity,
+    hasTwentyFourHourTimeFormat: state.postingSchedule.hasTwentyFourHourTimeFormat,
+    clearTimezoneInput: state.postingSchedule.clearTimezoneInput,
+    paused: state.postingSchedule.paused,
+    showClearAllModal: state.postingSchedule.showClearAllModal,
+    profileName: state.postingSchedule.profileName,
+    profileType: state.postingSchedule.profileType,
+    profileService: state.postingSchedule.profileService,
+    avatar: state.postingSchedule.avatar,
   }),
   (dispatch, ownProps) => ({
     onRemoveTimeClick: (hours, minutes, dayName, timeIndex, paused) => {
