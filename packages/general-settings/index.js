@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import { actions } from './reducer';
-import GeneralSettings from './components/GeneralSettings/index';
+import GeneralSettings from './components/GeneralSettings';
 
 export default connect(
     state => ({
-
+      direct_posting_enabled: state.generalSettings.direct_posting_enabled,
+      profileId: state.generalSettings.profileId,
     }),
     (dispatch, ownProps) => ({
       onSetUpDirectPostingClick: () => {
@@ -12,8 +13,8 @@ export default connect(
           profileId: ownProps.profileId,
         }));
       },
-      showInstagramDirectPostingComponent: actions.showInstagramDirectPosting,
     }),
 )(GeneralSettings);
+
 export reducer, { actions, actionTypes } from './reducer';
 export middleware from './middleware';

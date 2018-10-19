@@ -32,8 +32,10 @@
     "@bufferapp/publish-settings": "^1.9.25",
     "@bufferapp/publish-tabs": "^1.9.25",
     "@bufferapp/publish-two-factor-auth": "^1.9.10",
-    "@bufferapp/publish-upgrade-modal": "^1.9.25",
-    "@bufferapp/unauthorized-redirect": "1.9.8"
+    "@bufferapp/publish-upgrade-modal": "^1.9.24",
+    "@bufferapp/unauthorized-redirect": "1.9.6",
+    "@bufferapp/publish-general-settings": "1.9.3",
+    "@bufferapp/publish-posting-schedule": "1.9.3"
   },
   "devDependencies": {
     "eslint": "3.19.0"

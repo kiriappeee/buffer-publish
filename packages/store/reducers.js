@@ -25,6 +25,8 @@ import { reducer as changePasswordReducer } from '@bufferapp/change-password';
 import { reducer as manageAppsReducer } from '@bufferapp/manage-apps-extras';
 import { reducer as twoFactorAuthReducer } from '@bufferapp/publish-two-factor-auth';
 import { reducer as closeAccountReducer } from '@bufferapp/close-account';
+import { reducer as postingScheduleSettingsReducer } from '@bufferapp/publish-posting-schedule';
+import { reducer as generalSettingsReducer } from '@bufferapp/publish-general-settings';
 
 export default combineReducers({
   form: formReducer,

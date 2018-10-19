@@ -1,7 +1,7 @@
 {
   "name": "@bufferapp/publish-general-settings",
   "version": "1.9.3",
-  "description": "package for general settings",
+  "description": "General profile settings",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ignore-pattern coverage node_modules"
