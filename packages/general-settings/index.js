@@ -15,5 +15,5 @@ export default connect(
       showInstagramDirectPostingComponent: actions.showInstagramDirectPosting,
     }),
 )(GeneralSettings);
-export { actions, actionTypes } from './reducer';
+export reducer, { actions, actionTypes } from './reducer';
 export middleware from './middleware';

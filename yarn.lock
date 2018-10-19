@@ -342,6 +342,36 @@
     "@bufferapp/async-data-fetch" "0.5.36-beta01"
     "@bufferapp/chronos" "0.6.1"
 
+"@bufferapp/publish-profile-sidebar@^1.9.25":
+  version "1.9.25"
+  resolved "https://registry.yarnpkg.com/@bufferapp/publish-profile-sidebar/-/publish-profile-sidebar-1.9.25.tgz#c73bb88dc7053c128e65e8bdb4c9e37c11a73d6d"
+  integrity sha512-1BMTJd46K/cRTfHGyzQsekacrUrqgFLqt5LkR6CnP/wU4WM+IsxoN8DKyNBr4JIFatIO6qisNwV2URVH8uU7jA==
+  dependencies:
+    "@bufferapp/async-data-fetch" "1.9.3"
+    "@bufferapp/keywrapper" "0.2.0"
+    "@bufferapp/notifications" "1.9.3"
+    "@bufferapp/product-features" "^1.9.20"
+    "@bufferapp/publish-routes" "1.9.3"
+    "@bufferapp/publish-utils" "1.9.15"
+
+"@bufferapp/publish-settings@^1.9.24":
+  version "1.9.25"
+  resolved "https://registry.yarnpkg.com/@bufferapp/publish-settings/-/publish-settings-1.9.25.tgz#739e3a1ad6886602d6cf3f6f2807f0d0466a7d94"
+  integrity sha512-4Mi77gINcN/Lr4ZWffUvYpEzlRAiX+ZBewkew6fA4hGXxcDfo/6A/49BhHFkygv24gqmI6vxEzfHGWO5Ng69Pg==
+  dependencies:
+    "@bufferapp/async-data-fetch" "1.9.3"
+    "@bufferapp/keywrapper" "0.2.0"
+    "@bufferapp/notifications" "1.9.3"
+    "@bufferapp/publish-profile-sidebar" "^1.9.25"
+    "@bufferapp/publish-shared-components" "^1.9.25"
+
+"@bufferapp/publish-shared-components@^1.9.25":
+  version "1.9.25"
+  resolved "https://registry.yarnpkg.com/@bufferapp/publish-shared-components/-/publish-shared-components-1.9.25.tgz#b73eadb089560e12306bddd99e8f28abe3f15d7a"
+  integrity sha512-jQALZC0UuWMDiGw3kB//JTVKtZ4pBXXToja4y7dZAPmKBlLT8bmi9tCP5JqGZNxWxy/CEvOethb57DdM6dJ/Qw==
+  dependencies:
+    react-images "0.5.5"
+
 "@bufferapp/publish-utils@1.9.15":
   version "1.9.15"
   resolved "https://registry.yarnpkg.com/@bufferapp/publish-utils/-/publish-utils-1.9.15.tgz#de37a8b22499260d36509802532d4289c8779833"
