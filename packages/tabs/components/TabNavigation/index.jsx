@@ -29,6 +29,7 @@ const TabNavigation = ({
     >
       <Tab tabId={'queue'}>Queue</Tab>
       <Tab tabId={'sent'}>Sent Posts</Tab>
+      <Tab tabId={'drafts'}>Drafts</Tab>
       <Tab tabId={'settings'}>Settings</Tab>
       {shouldShowUpgradeCta &&
         <div style={upgradeCtaStyle}>
