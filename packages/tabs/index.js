@@ -9,6 +9,8 @@ import TabNavigation from './components/TabNavigation';
 // default export = container
 export default connect(
   (state, ownProps) => ({
+    isBusinessAccount: state.profileSidebar.selectedProfile.business,
+    isManager: state.profileSidebar.selectedProfile.isManager,
     selectedTabId: ownProps.tabId,
     shouldShowUpgradeCta: state.appSidebar.user.is_free_user,
   }),
