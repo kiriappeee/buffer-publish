@@ -23,6 +23,7 @@
     "@bufferapp/publish-example": "1.9.3",
     "@bufferapp/publish-i18n": "^1.9.25",
     "@bufferapp/publish-modals": "^1.9.25",
+    "@bufferapp/publish-drafts": "^1.9.25",
     "@bufferapp/publish-profile-sidebar": "^1.9.25",
     "@bufferapp/publish-pusher-sync": "^1.9.25",
     "@bufferapp/publish-queue": "^1.9.25",

@@ -4,6 +4,7 @@ import createHistory from 'history/createBrowserHistory';
 import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/buffermetrics/redux';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
+import { middleware as draftsMiddleware } from '@bufferapp/publish-drafts';
 import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
@@ -79,6 +80,7 @@ const configureStore = (initialstate) => {
         defaultPageMiddleware,
         maintenanceRedirectMiddleware,
         bufferMetricsMiddleware,
+        draftsMiddleware,
       ),
     ),
   );
