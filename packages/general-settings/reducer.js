@@ -7,7 +7,7 @@ export const actionTypes = keyWrapper('GENERAL', {
 });
 
 const initialState = {
-  direct_posting_enabled: false,
+  directPostingEnabled: false,
   profileId: null,
 };
 
@@ -16,8 +16,8 @@ export default (state = initialState, action) => {
     case profileActionTypes.SELECT_PROFILE:
       return {
         ...state,
-        direct_posting_enabled: action.profile.direct_posting_enabled,
-        profileId: action.profile.id,
+        directPostingEnabled: action.profile.directPostingEnabled,
+        profileId: action.profileId,
       };
     default:
       return state;
@@ -25,7 +25,8 @@ export default (state = initialState, action) => {
 };
 
 export const actions = {
-  handleSetUpDirectPostingClick: () => ({
+  handleSetUpDirectPostingClick: profileId => ({
     type: actionTypes.SET_DIRECT_POSTING,
+    profileId,
   }),
 };

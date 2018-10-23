@@ -4,7 +4,7 @@ import GeneralSettings from './components/GeneralSettings';
 
 export default connect(
     state => ({
-      direct_posting_enabled: state.generalSettings.direct_posting_enabled,
+      directPostingEnabled: state.generalSettings.directPostingEnabled,
       profileId: state.generalSettings.profileId,
     }),
     (dispatch, ownProps) => ({

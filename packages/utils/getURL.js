@@ -18,8 +18,7 @@ module.exports = {
     }
     return 'https://buffer.com/manage/own';
   },
-  getInstagramDirectPostingURL: (profileIdObj) => {
-    const profileId = profileIdObj.profileId;
+  getInstagramDirectPostingURL: (profileId) => {
     if (window.location.hostname === 'publish.local.buffer.com') {
       return `https://local.buffer.com/instagram/setup?profile_id=${profileId}`;
     }

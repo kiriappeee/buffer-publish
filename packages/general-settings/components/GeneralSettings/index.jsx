@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import InstagramDirectUpload from '../InstagramDirectUpload/index';
 
 const GeneralSettings = ({
-  direct_posting_enabled,
+  directPostingEnabled,
   onSetUpDirectPostingClick,
 }) => (
   <div>
-    {!direct_posting_enabled &&
+    {!directPostingEnabled &&
       <InstagramDirectUpload
         onSetUpDirectPostingClick={onSetUpDirectPostingClick}
       />
@@ -15,12 +15,12 @@ const GeneralSettings = ({
   </div>
 );
 
-// GeneralSettings.defaultProps = {
-//   direct_posting_enabled: false,
-// };
+GeneralSettings.defaultProps = {
+  directPostingEnabled: false,
+};
 
 GeneralSettings.propTypes = {
-  direct_posting_enabled: PropTypes.bool.isRequired,
+  directPostingEnabled: PropTypes.bool.isRequired,
   onSetUpDirectPostingClick: PropTypes.func.isRequired,
 };
 
