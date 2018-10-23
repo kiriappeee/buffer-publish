@@ -26,7 +26,7 @@ describe('GeneralSettings', () => {
     });
     const wrapper = mount(
       <Provider store={store}>
-        <InstagramDirectUpload onSetUpDirectPostingClick={null} />
+        <InstagramDirectUpload onSetUpDirectPostingClick={null}/>
       </Provider>,
     );
     expect(wrapper.find(InstagramDirectUpload).length)
