@@ -132,6 +132,12 @@ export default connect(
         profileId: ownProps.profileId,
       }));
     },
+    onComposerPlaceholderClick: () => {
+      dispatch(actions.handleComposerPlaceholderClick());
+    },
+    onComposerCreateSuccess: () => {
+      dispatch(actions.handleComposerCreateSuccess());
+    },
   }),
 )(DraftList);
 
