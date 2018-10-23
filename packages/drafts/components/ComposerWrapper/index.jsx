@@ -1,3 +1,4 @@
+// TO DO: MOVE THIS TO A SHARED PACKAGE TO BE USED BY DRAFTS AND QUEUE
 import React from 'react';
 import { connect } from 'react-redux';
 import { bufferPublishComposer as Composer } from '@bufferapp/composer';

@@ -1,3 +1,5 @@
+// TO DO: MOVE THIS TO A SHARED PACKAGE TO BE USED BY DRAFTS AND QUEUE
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Popover } from '@bufferapp/components';
