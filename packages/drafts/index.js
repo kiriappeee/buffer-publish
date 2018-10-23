@@ -114,6 +114,12 @@ export default connect(
     return {};
   },
   (dispatch, ownProps) => ({
+    onEditClick: (draft) => {
+      dispatch(actions.handleEditClick({
+        draft: draft.draft,
+        profileId: ownProps.profileId,
+      }));
+    },
     onDeleteClick: (draft) => {
       dispatch(actions.handleDeleteClick({
         draft: draft.draft,
