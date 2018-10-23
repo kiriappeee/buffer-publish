@@ -317,6 +317,14 @@
     fluent-logger "2.2.0"
     on-finished "2.3.0"
 
+"@bufferapp/notifications@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/notifications/-/notifications-1.9.4.tgz#eb56370e1a9b65b857c30e66132cd0f25ad750ce"
+  integrity sha512-LvDohhA6NO9EYIMT4GpMMSm5YpVvuQPdPe5oEb9d18nvBU6dP4nZZZa8EQMXduQd2z6QbIJzVXI61Of9wA2MvA==
+  dependencies:
+    "@bufferapp/keywrapper" "0.2.0"
+    uuid "3.3.2"
+
 "@bufferapp/performance-tracking@0.43.5":
   version "0.43.5"
   resolved "https://registry.yarnpkg.com/@bufferapp/performance-tracking/-/performance-tracking-0.43.5.tgz#20d4f4813e898e2fe0484522d67b4536177e05fd"
@@ -13562,7 +13570,7 @@ uuid@3.0.1:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
   integrity sha1-ZUS7ot/ajBzxfmKaOjBeK7H+5sE=
 
-uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1, uuid@^3.3.2:
+uuid@3.3.2, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==

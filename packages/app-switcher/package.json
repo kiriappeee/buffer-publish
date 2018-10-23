@@ -10,7 +10,7 @@
   "author": "hamstu@gmail.com",
   "dependencies": {
     "@bufferapp/async-data-fetch": "1.9.4",
-    "@bufferapp/notifications": "1.9.3",
+    "@bufferapp/notifications": "1.9.4",
     "@bufferapp/publish-utils": "^1.9.25"
   },
   "devDependencies": {
