@@ -11,7 +11,7 @@ import {
 import createHistory from 'history/createHashHistory';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import ProfileSettings from './index';
+import PostingSchedule from './index';
 import {
   settingsHeader,
   days,
@@ -24,7 +24,7 @@ import {
 const history = createHistory();
 const store = createStore(combineReducers({ form: formReducer }));
 
-storiesOf('ProfileSettings', module)
+storiesOf('PostingSchedule', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory =>
     <Provider store={store}>
@@ -34,7 +34,7 @@ storiesOf('ProfileSettings', module)
     </Provider>,
   )
   .add('default', () => (
-    <ProfileSettings
+    <PostingSchedule
       settingsHeader={settingsHeader}
       days={days}
       hasTwentyFourHourTimeFormat={false}

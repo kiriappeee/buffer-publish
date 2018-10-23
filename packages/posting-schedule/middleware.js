@@ -13,8 +13,8 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules: getState().settings.pausedSchedules,
-          schedules: getState().settings.schedules,
+          pausedSchedules: getState().postingSchedule.pausedSchedules,
+          schedules: getState().postingSchedule.schedules,
           showNotification: true,
         },
       }));
@@ -24,7 +24,7 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updateSchedule',
         args: {
           profileId: action.profileId,
-          schedules: getState().settings.schedules,
+          schedules: getState().postingSchedule.schedules,
         },
       }));
       break;
@@ -33,8 +33,8 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules: getState().settings.pausedSchedules,
-          schedules: getState().settings.schedules,
+          pausedSchedules: getState().postingSchedule.pausedSchedules,
+          schedules: getState().postingSchedule.schedules,
           showNotification: true,
         },
       }));
@@ -44,9 +44,9 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules: getState().settings.pausedSchedules,
-          schedules: getState().settings.schedules,
-          emptyPausedSchedules: getState().settings.pausedSchedules.length === 0,
+          pausedSchedules: getState().postingSchedule.pausedSchedules,
+          schedules: getState().postingSchedule.schedules,
+          emptyPausedSchedules: getState().postingSchedule.pausedSchedules.length === 0,
           showNotification: true,
         },
       }));
@@ -56,8 +56,8 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules: getState().settings.pausedSchedules,
-          schedules: getState().settings.schedules,
+          pausedSchedules: getState().postingSchedule.pausedSchedules,
+          schedules: getState().postingSchedule.schedules,
         },
       }));
       break;
@@ -66,8 +66,8 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules: getState().settings.pausedSchedules,
-          schedules: getState().settings.schedules,
+          pausedSchedules: getState().postingSchedule.pausedSchedules,
+          schedules: getState().postingSchedule.schedules,
           showNotification: true,
         },
       }));
@@ -77,7 +77,7 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updateSchedule',
         args: {
           profileId: action.profileId,
-          schedules: getState().settings.schedules,
+          schedules: getState().postingSchedule.schedules,
         },
       }));
       break;
@@ -86,8 +86,8 @@ export default ({ dispatch, getState }) => next => (action) => {
         name: 'updatePausedSchedules',
         args: {
           profileId: action.profileId,
-          pausedSchedules: getState().settings.pausedSchedules,
-          schedules: getState().settings.schedules,
+          pausedSchedules: getState().postingSchedule.pausedSchedules,
+          schedules: getState().postingSchedule.schedules,
           emptyPausedSchedules: true,
           showNotification: false,
         },

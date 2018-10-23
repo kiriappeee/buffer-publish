@@ -8,8 +8,8 @@ export default connect(
   state => ({
     loading: state.postingSchedule.loading,
     scheduleLoading: state.postingSchedule.scheduleLoading,
-    settingsHeader: state.postingSchedule.settingsHeader,
-    translations: state.i18n.translations.settings, // all package translations
+    postingScheduleHeader: state.postingSchedule.postingScheduleHeader,
+    translations: state.i18n.translations.postingSchedule, // all package translations
     days: state.postingSchedule.days,
     schedules: state.postingSchedule.schedules,
     pausedSchedules: state.postingSchedule.pausedSchedules,

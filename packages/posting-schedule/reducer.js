@@ -19,7 +19,7 @@ import {
   updateScheduleTimeForApi,
   deleteAllTimesFromSchedule } from './utils/scheduleUtils';
 
-export const actionTypes = keyWrapper('SETTINGS', {
+export const actionTypes = keyWrapper('POSTING_SCHEDULE', {
   REMOVE_SCHEDULE_TIME: 0,
   UPDATE_SCHEDULE_TIME: 0,
   ADD_SCHEDULE_TIME: 0,

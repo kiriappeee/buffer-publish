@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import Settings, {
+import PostingSchedule, {
   reducer,
   actions,
   actionTypes,
   middleware,
 } from './index';
-import ProfileSettings from './components/PostingSchedule/index';
+// import PostingSchedule from './components/PostingSchedule/index';
 import {
   settingsHeader,
   days,
@@ -21,10 +21,10 @@ const storeFake = state => ({
   getState: () => ({ ...state }),
 });
 
-describe('Settings', () => {
+describe('PostingSchedule', () => {
   it('should render', () => {
     const store = storeFake({
-      settings: {
+      postingSchedule: {
         loading: false,
         settingsHeader,
         days,
@@ -43,10 +43,10 @@ describe('Settings', () => {
     });
     const wrapper = mount(
       <Provider store={store}>
-        <Settings />
+        <PostingSchedule />
       </Provider>,
     );
-    expect(wrapper.find(ProfileSettings).length)
+    expect(wrapper.find(PostingSchedule).length)
       .toBe(1);
   });
 
