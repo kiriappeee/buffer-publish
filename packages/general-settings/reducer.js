@@ -2,7 +2,7 @@
 import { actionTypes as profileActionTypes } from '@bufferapp/publish-profile-sidebar';
 import keyWrapper from '@bufferapp/keywrapper';
 
-export const actionTypes = keyWrapper('GENERAL', {
+export const actionTypes = keyWrapper('GENERAL_SETTINGS', {
   SET_DIRECT_POSTING: 0,
 });
 
