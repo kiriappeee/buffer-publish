@@ -17,7 +17,7 @@ import {
   SensitiveData,
 } from '@bufferapp/publish-shared-components';
 
-import PostingTimeForm from '../PostingTimeForm/index';
+import PostingTimeForm from '../PostingTimeForm';
 import TimezoneInputForm from '../TimezoneInputForm';
 import debounce from '../../utils/debounce';
 import ConfirmClear from '../ConfirmClear/index';
