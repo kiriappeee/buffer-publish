@@ -13,4 +13,4 @@ COPY staticAssets.json /usr/src/app
 
 EXPOSE 80
 
-CMD node ./index.jsx
+CMD node ./index.js
