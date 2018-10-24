@@ -25,7 +25,7 @@ const setUpDirectPostingStyle = {
 };
 
 
-const InstagramDirectUpload = ({
+const InstagramDirectPosting = ({
   onSetUpDirectPostingClick,
 }) => (
   <div>
@@ -57,7 +57,7 @@ const InstagramDirectUpload = ({
   </div>
 );
 
-InstagramDirectUpload.propTypes = {
+InstagramDirectPosting.propTypes = {
   onSetUpDirectPostingClick: PropTypes.func.isRequired,
 };
 

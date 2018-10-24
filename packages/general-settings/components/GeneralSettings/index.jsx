@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import InstagramDirectUpload from '../InstagramDirectUpload';
+import InstagramDirectPosting from '../InstagramDirectPosting';
 
 const GeneralSettings = ({
   directPostingEnabled,
@@ -8,7 +8,7 @@ const GeneralSettings = ({
 }) => (
   <div>
     {!directPostingEnabled &&
-      <InstagramDirectUpload
+      <InstagramDirectPosting
         onSetUpDirectPostingClick={onSetUpDirectPostingClick}
       />
     }
