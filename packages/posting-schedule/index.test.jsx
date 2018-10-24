@@ -7,7 +7,6 @@ import PostingSchedule, {
   actionTypes,
   middleware,
 } from './index';
-// import PostingSchedule from './components/PostingSchedule/index';
 import {
   settingsHeader,
   days,
