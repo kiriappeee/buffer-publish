@@ -15,7 +15,7 @@ import {
   ScheduleTable,
   EmptyState,
   SensitiveData,
-} from '../../../shared-components/index';
+} from '@bufferapp/publish-shared-components';
 
 import PostingTimeForm from '../PostingTimeForm/index';
 import TimezoneInputForm from '../TimezoneInputForm/index';

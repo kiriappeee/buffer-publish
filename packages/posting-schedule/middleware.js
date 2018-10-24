@@ -1,8 +1,8 @@
 import {
   actions as dataFetchActions,
   actionTypes as dataFetchActionTypes,
-} from '../async-data-fetch/index';
-import { actions as notificationActions } from '../notifications/index';
+} from '@bufferapp/async-data-fetch';
+import { actions as notificationActions } from '@bufferapp/notifications';
 import { actionTypes } from './reducer';
 
 export default ({ dispatch, getState }) => next => (action) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import InstagramDirectUpload from '../InstagramDirectUpload/index';
+import InstagramDirectUpload from '../InstagramDirectUpload';
 
 const GeneralSettings = ({
   directPostingEnabled,
