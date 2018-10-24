@@ -66,7 +66,7 @@ example/ # root
         `-- index.jsx # implementation of the profile page display
         `-- story.jsx # description of profile page
 `-- .babelrc # babel transpiler
-`-- index.jsx # main package file, should export the container and top level  resources
+`-- index.js # main package file, should export the container and top level  resources
 `-- index.test.js # main package file tests
 `-- package.json # npm package
 `-- README.md # you are here
