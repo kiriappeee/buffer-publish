@@ -13,7 +13,7 @@ export default connect(
     onMenuItemClick: ({ menuItemKey }) => {
       switch (menuItemKey) {
         case 'preferences':
-          dispatch(push('/preferences/general-settings'));
+          dispatch(push('/preferences/general'));
           break;
         default:
           throw new Error(`Unknown menu item key ${menuItemKey}`);

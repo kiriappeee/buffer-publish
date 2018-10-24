@@ -1,6 +1,6 @@
 const APPS_EXTRAS = 'appsandextras';
 const SECURITY = 'security';
-const GENERAL = 'general-settings';
+const GENERAL = 'general';
 
 const constants = {
   APPS_EXTRAS,
