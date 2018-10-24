@@ -20,7 +20,7 @@ import {
 import PostingTimeForm from '../PostingTimeForm';
 import TimezoneInputForm from '../TimezoneInputForm';
 import debounce from '../../utils/debounce';
-import ConfirmClear from '../ConfirmClear/index';
+import ConfirmClear from '../ConfirmClear';
 
 const headerStyle = {
   marginBottom: '0.5rem',
