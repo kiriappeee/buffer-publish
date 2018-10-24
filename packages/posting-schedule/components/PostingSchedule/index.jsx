@@ -18,7 +18,7 @@ import {
 } from '@bufferapp/publish-shared-components';
 
 import PostingTimeForm from '../PostingTimeForm/index';
-import TimezoneInputForm from '../TimezoneInputForm/index';
+import TimezoneInputForm from '../TimezoneInputForm';
 import debounce from '../../utils/debounce';
 import ConfirmClear from '../ConfirmClear/index';
 
