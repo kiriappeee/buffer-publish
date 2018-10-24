@@ -61,4 +61,4 @@ InstagramDirectPosting.propTypes = {
   onSetUpDirectPostingClick: PropTypes.func.isRequired,
 };
 
-export default InstagramDirectUpload;
+export default InstagramDirectPosting;
