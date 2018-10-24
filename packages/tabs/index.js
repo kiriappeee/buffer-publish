@@ -13,7 +13,7 @@ export default connect(
     isManager: state.profileSidebar.selectedProfile.isManager,
     selectedTabId: ownProps.tabId,
     shouldShowUpgradeCta: state.appSidebar.user.is_free_user,
-    hasDraftsFeatureFlip: state.appSidebar.user.features.includes('drafts_new-publish'),
+    hasDraftsFeatureFlip: state.appSidebar.user.features.includes('drafts_new_publish'),
   }),
   (dispatch, ownProps) => ({
     onTabClick: tabId => dispatch(push(generateProfilePageRoute({
