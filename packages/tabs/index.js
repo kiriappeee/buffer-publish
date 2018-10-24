@@ -24,9 +24,9 @@ export default connect(
     }))),
     showUpgradeModal: () => dispatch(modalsActions.showUpgradeModal()),
     onChildTabClick: childTabId => dispatch(push(generateChildTabRoute({
-          tabId: ownProps.tabId,
-          childTabId,
-          profileId: ownProps.profileId,
+      tabId: ownProps.tabId,
+      childTabId,
+      profileId: ownProps.profileId,
     }))),
   }),
 )(TabNavigation);

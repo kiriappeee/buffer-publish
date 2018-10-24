@@ -45,31 +45,31 @@ const TabNavigation = ({
         <Tab tabId={'drafts'}>Drafts</Tab>
       }
       <Tab tabId={'settings'}>Settings</Tab>
-        {shouldShowUpgradeCta &&
+      {shouldShowUpgradeCta &&
         <div style={upgradeCtaStyle}>
-            <Text size="mini">
-                <Link
-                    padding="18px 13px 17px 13px"
-                    block
-                    unstyled
-                    newTab
-                    href={'#'}
-                    onClick={(e) => { e.preventDefault(); showUpgradeModal(); }}
-                >
-                    Upgrade
-                </Link>
-            </Text>
+          <Text size="mini">
+            <Link
+              padding="18px 13px 17px 13px"
+              block
+              unstyled
+              newTab
+              href={'#'}
+              onClick={(e) => { e.preventDefault(); showUpgradeModal(); }}
+            >
+              Upgrade
+            </Link>
+          </Text>
         </div>
         }
     </Tabs>
-      {shouldShowNestedSettingsTab &&
-          <Tabs
-              selectedTabId={selectedChildTabId}
-              onTabClick={onChildTabClick}
-          >
-              <Tab tabId={'general'}>General</Tab>
-              <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
-          </Tabs>
+    {shouldShowNestedSettingsTab &&
+      <Tabs
+        selectedTabId={selectedChildTabId}
+        onTabClick={onChildTabClick}
+      >
+        <Tab tabId={'general'}>General</Tab>
+        <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
+      </Tabs>
       }
   </div>;
 
@@ -86,7 +86,7 @@ TabNavigation.propTypes = {
   showUpgradeModal: PropTypes.func.isRequired,
   hasDraftsFeatureFlip: PropTypes.bool,
   onChildTabClick: PropTypes.func.isRequired,
-  selectedChildTabId: PropTypes.string
+  selectedChildTabId: PropTypes.string,
 };
 
 export default TabNavigation;
