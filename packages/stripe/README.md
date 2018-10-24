@@ -76,7 +76,7 @@ stripe/ # root
 `-- snapshot.test.js # configure jest snapshots
 ```
 
-### index.jsx
+### index.js
 
 This is the main package file, it's default export should be the container.
 
