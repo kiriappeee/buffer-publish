@@ -122,6 +122,11 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-0.5.36-beta01.tgz#684504ddc303577c42b0ba350d854990d6bd1ad1"
   integrity sha1-aEUE3cMDV3xCsLo1DYVJkNa9GtE=
 
+"@bufferapp/async-data-fetch@1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-1.9.3.tgz#ad0cddb56e609e2ae6b06ed5f7736af66e17d601"
+  integrity sha512-dKbDSpi5paujKOwQdZ3T0lFPLMyv5V/wtRbPoRw0w+93D26QPSQ926He8SzUxLvi48mNx7Vufvzr9cDTDDbh9w==
+
 "@bufferapp/async-data-fetch@1.9.4":
   version "1.9.4"
   resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-1.9.4.tgz#186a15efd7280d403065ae313aa3707ad9066bcc"
@@ -326,6 +331,13 @@
     fluent-logger "2.2.0"
     on-finished "2.3.0"
 
+"@bufferapp/notifications@1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@bufferapp/notifications/-/notifications-1.9.3.tgz#e017550c119995618c4dc33b4506d62c96caab5e"
+  integrity sha512-4whItnwA7m/ttaJ+/s3CrWuUaGEQlN20kP7a+Q2/ETjTGBo7HtQTdu/ahq89STzDkANWGC2aQZqTzG4tc4cOWQ==
+  dependencies:
+    "@bufferapp/keywrapper" "0.2.0"
+
 "@bufferapp/notifications@1.9.4":
   version "1.9.4"
   resolved "https://registry.yarnpkg.com/@bufferapp/notifications/-/notifications-1.9.4.tgz#eb56370e1a9b65b857c30e66132cd0f25ad750ce"
@@ -342,19 +354,7 @@
     "@bufferapp/async-data-fetch" "0.5.36-beta01"
     "@bufferapp/chronos" "0.6.1"
 
-"@bufferapp/publish-profile-sidebar@^1.9.25":
-  version "1.9.25"
-  resolved "https://registry.yarnpkg.com/@bufferapp/publish-profile-sidebar/-/publish-profile-sidebar-1.9.25.tgz#c73bb88dc7053c128e65e8bdb4c9e37c11a73d6d"
-  integrity sha512-1BMTJd46K/cRTfHGyzQsekacrUrqgFLqt5LkR6CnP/wU4WM+IsxoN8DKyNBr4JIFatIO6qisNwV2URVH8uU7jA==
-  dependencies:
-    "@bufferapp/async-data-fetch" "1.9.3"
-    "@bufferapp/keywrapper" "0.2.0"
-    "@bufferapp/notifications" "1.9.3"
-    "@bufferapp/product-features" "^1.9.20"
-    "@bufferapp/publish-routes" "1.9.3"
-    "@bufferapp/publish-utils" "1.9.15"
-
-"@bufferapp/publish-settings@^1.9.24":
+"@bufferapp/publish-settings@^1.9.25":
   version "1.9.25"
   resolved "https://registry.yarnpkg.com/@bufferapp/publish-settings/-/publish-settings-1.9.25.tgz#739e3a1ad6886602d6cf3f6f2807f0d0466a7d94"
   integrity sha512-4Mi77gINcN/Lr4ZWffUvYpEzlRAiX+ZBewkew6fA4hGXxcDfo/6A/49BhHFkygv24gqmI6vxEzfHGWO5Ng69Pg==
@@ -364,13 +364,6 @@
     "@bufferapp/notifications" "1.9.3"
     "@bufferapp/publish-profile-sidebar" "^1.9.25"
     "@bufferapp/publish-shared-components" "^1.9.25"
-
-"@bufferapp/publish-shared-components@^1.9.25":
-  version "1.9.25"
-  resolved "https://registry.yarnpkg.com/@bufferapp/publish-shared-components/-/publish-shared-components-1.9.25.tgz#b73eadb089560e12306bddd99e8f28abe3f15d7a"
-  integrity sha512-jQALZC0UuWMDiGw3kB//JTVKtZ4pBXXToja4y7dZAPmKBlLT8bmi9tCP5JqGZNxWxy/CEvOethb57DdM6dJ/Qw==
-  dependencies:
-    react-images "0.5.5"
 
 "@bufferapp/publish-utils@1.9.15":
   version "1.9.15"
@@ -413,12 +406,12 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/shutdown-helper/-/shutdown-helper-0.2.0.tgz#d43bbba845e30e411dda76a7b7629e11160e5395"
   integrity sha1-1Du7qEXjDkEd2nant2KeERYOU5U=
 
-"@bufferapp/unauthorized-redirect@1.9.8":
-  version "1.9.8"
-  resolved "https://registry.yarnpkg.com/@bufferapp/unauthorized-redirect/-/unauthorized-redirect-1.9.8.tgz#9372465b35bdffa98a44fc003561b7f2ae408c9f"
-  integrity sha512-hNAUU16W3HeohdKuJeVgPYtH/FUnjXLHJFOu4nDnhAf9gOFbHQG8PHZ03G/ZMJs5h22lOu2Hg95u+jcJ3VP1Qw==
+"@bufferapp/unauthorized-redirect@1.9.6":
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/@bufferapp/unauthorized-redirect/-/unauthorized-redirect-1.9.6.tgz#feeed857314143f3b0b05b05108555cce3ba6190"
+  integrity sha512-TTNgTrkN/rIoRTvp6+/6qozMa8qCBPSh5KsYkvpl5ENjhPJyXwApRMhlO3jYJJBnDnxmXg9V5O8JVmOFVwgVFg==
   dependencies:
-    "@bufferapp/async-data-fetch" "1.9.4"
+    "@bufferapp/async-data-fetch" "1.9.3"
     "@bufferapp/session-manager" "0.7.1"
 
 "@lerna/add@^3.2.0":
