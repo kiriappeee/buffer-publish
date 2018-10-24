@@ -67,7 +67,7 @@ example/ # root
         `-- index.jsx # implementation of the login display
         `-- story.jsx # description of all the possible configurations of the login display
 `-- .babelrc # babel transpiler
-`-- index.jsx # main package file, should export the container and top level  resources
+`-- index.js # main package file, should export the container and top level  resources
 `-- index.test.js # main package file tests
 `-- middleware.js # all action side effects
 `-- middleware.test.js # test action side effects
