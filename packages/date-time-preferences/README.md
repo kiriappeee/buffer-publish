@@ -65,7 +65,7 @@ date-time-preferences/ # root
         `-- index.jsx # implementation of the component
         `-- story.jsx # description of all the possible configurations of the component
 `-- .babelrc # babel transpiler
-`-- index.jsx # main package file, should export the container and top level  resources
+`-- index.js # main package file, should export the container and top level  resources
 `-- index.test.js # main package file tests
 `-- middleware.js # all action side effects
 `-- middleware.test.js # test action side effects
