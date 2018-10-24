@@ -21,6 +21,7 @@ const TabNavigation = ({
   onTabClick,
   shouldShowUpgradeCta,
   showUpgradeModal,
+  hasDraftsFeatureFlip,
 }) =>
   /* wrapper div with "tabs" id necessary as a selector
   for a11y focus after selecting profile in sidebar */
@@ -31,13 +32,13 @@ const TabNavigation = ({
     >
       <Tab tabId={'queue'}>Queue</Tab>
       <Tab tabId={'sent'}>Sent Posts</Tab>
-      {isBusinessAccount && isManager &&
+      {hasDraftsFeatureFlip && isBusinessAccount && isManager &&
         <Tab tabId={'awaitingApproval'}>Awaiting Approval</Tab>
       }
-      {isBusinessAccount && !isManager &&
+      {hasDraftsFeatureFlip && isBusinessAccount && !isManager &&
         <Tab tabId={'pendingApproval'}>Pending Approval</Tab>
       }
-      {isBusinessAccount &&
+      {hasDraftsFeatureFlip && isBusinessAccount &&
         <Tab tabId={'drafts'}>Drafts</Tab>
       }
       <Tab tabId={'settings'}>Settings</Tab>
@@ -62,6 +63,7 @@ const TabNavigation = ({
 
 TabNavigation.defaultProps = {
   shouldShowUpgradeCta: false,
+  hasDraftsFeatureFlip: false,
 };
 
 TabNavigation.propTypes = {
@@ -69,6 +71,7 @@ TabNavigation.propTypes = {
   onTabClick: PropTypes.func.isRequired,
   shouldShowUpgradeCta: PropTypes.bool.isRequired,
   showUpgradeModal: PropTypes.func.isRequired,
+  hasDraftsFeatureFlip: PropTypes.bool
 };
 
 export default TabNavigation;
