@@ -9,8 +9,11 @@ import TabNavigation from './components/TabNavigation';
 // default export = container
 export default connect(
   (state, ownProps) => ({
+    isBusinessAccount: state.profileSidebar.selectedProfile.business,
+    isManager: state.profileSidebar.selectedProfile.isManager,
     selectedTabId: ownProps.tabId,
     shouldShowUpgradeCta: state.appSidebar.user.is_free_user,
+    hasDraftsFeatureFlip: state.appSidebar.user.features ? state.appSidebar.user.features.includes('drafts_new_publish') : false,
   }),
   (dispatch, ownProps) => ({
     onTabClick: tabId => dispatch(push(generateProfilePageRoute({
