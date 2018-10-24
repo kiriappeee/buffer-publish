@@ -1,4 +1,4 @@
-import { getURL } from '../utils/index';
+import { getURL } from '@bufferapp/publish-utils';
 import { actionTypes } from './reducer';
 
 export default () => next => (action) => {
