@@ -16,6 +16,7 @@ export default connect(
     shouldShowUpgradeCta: state.appSidebar.user.is_free_user,
     hasDraftsFeatureFlip: state.appSidebar.user.features ? state.appSidebar.user.features.includes('drafts_new_publish') : false,
     shouldShowNestedSettingsTab: ownProps.tabId === "settings",
+    // This should be removed once the general settings tab is complete - Lola Oct/2018
     showGeneralSettings: state.profileSidebar.selectedProfile.type === "instagram",
   }),
   (dispatch, ownProps) => ({

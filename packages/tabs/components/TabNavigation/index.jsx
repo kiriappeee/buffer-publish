@@ -68,6 +68,8 @@ const TabNavigation = ({
         selectedTabId={selectedChildTabId}
         onTabClick={onChildTabClick}
       >
+        {/* This func should be removed once
+        the general settings tab is complete - Lola Oct/2018 */}
         {showGeneralSettings &&
           <Tab tabId={'general-settings'}>General</Tab>
         }
