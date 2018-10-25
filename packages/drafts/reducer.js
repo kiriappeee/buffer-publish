@@ -6,6 +6,8 @@ export const actionTypes = keyWrapper('DRAFTS', {
   DRAFT_CLICKED_DELETE: 0,
   DRAFT_CANCELED_DELETE: 0,
   DRAFT_CONFIRMED_DELETE: 0,
+  OPEN_COMPOSER: 0,
+  HIDE_COMPOSER: 0,
 });
 
 const initialState = {
@@ -15,6 +17,7 @@ const initialState = {
   environment: 'production',
   editMode: false,
   editingPostId: '',
+  draftMode: true,
 };
 
 const profileInitialState = {
@@ -144,12 +147,32 @@ export default (state = initialState, action) => {
         };
       }
       return state;
+    case actionTypes.OPEN_COMPOSER:
+      return {
+        ...state,
+        showComposer: true,
+        editMode: action.editMode,
+        editingPostId: action.updateId,
+      };
+    case actionTypes.HIDE_COMPOSER:
+      return {
+        ...state,
+        showComposer: false,
+        editMode: false,
+      };
     default:
       return state;
   }
 };
 
 export const actions = {
+  handleEditClick: ({ draft, profileId }) => ({
+    type: actionTypes.OPEN_COMPOSER,
+    updateId: draft.id,
+    editMode: true,
+    draft,
+    profileId,
+  }),
   handleDeleteClick: ({ draft, profileId }) => ({
     type: actionTypes.DRAFT_CLICKED_DELETE,
     updateId: draft.id,
@@ -167,5 +190,12 @@ export const actions = {
     updateId: draft.id,
     draft,
     profileId,
+  }),
+  handleComposerPlaceholderClick: () => ({
+    type: actionTypes.OPEN_COMPOSER,
+  }),
+  // TODO: rename to more representative name
+  handleComposerCreateSuccess: () => ({
+    type: actionTypes.HIDE_COMPOSER,
   }),
 };

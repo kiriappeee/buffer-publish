@@ -5,6 +5,20 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
+import ComposerPopover from '../ComposerPopover';
+import {
+  Input,
+} from '@bufferapp/components';
+
+const composerStyle = {
+  marginBottom: '1.5rem',
+  flexGrow: '1',
+};
+
+const topBarContainerStyle = {
+  display: 'flex',
+  position: 'relative'
+};
 
 const loadingContainerStyle = {
   width: '100%',
@@ -76,6 +90,11 @@ const DraftList = ({
   onRequestApprovalClick,
   onRescheduleClick,
   onUserReadMessage,
+  onComposerPlaceholderClick,
+  onComposerCreateSuccess,
+  showComposer,
+  editMode,
+
 }) => {
   if (loading) {
     return (
@@ -87,6 +106,25 @@ const DraftList = ({
 
   return (
     <div className={containerStyle}>
+      <div style={topBarContainerStyle}>
+        <div style={composerStyle}>
+          {showComposer && !editMode &&
+            <ComposerPopover
+              type={'drafts'}
+              onSave={onComposerCreateSuccess}
+              transparentOverlay
+              preserveComposerStateOnClose
+            />
+          }
+          <Input
+            placeholder={'Create a new draft...'}
+            onFocus={onComposerPlaceholderClick}
+          />
+        </div>
+      </div>
+      {showComposer && editMode &&
+        <ComposerPopover onSave={onComposerCreateSuccess} />
+      }
       {
         postLists.length > 0 ?
         renderDraftList({

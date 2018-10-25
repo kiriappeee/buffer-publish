@@ -114,6 +114,12 @@ export default connect(
     return {};
   },
   (dispatch, ownProps) => ({
+    onEditClick: (draft) => {
+      dispatch(actions.handleEditClick({
+        draft: draft.draft,
+        profileId: ownProps.profileId,
+      }));
+    },
     onDeleteClick: (draft) => {
       dispatch(actions.handleDeleteClick({
         draft: draft.draft,
@@ -131,6 +137,12 @@ export default connect(
         draft: draft.draft,
         profileId: ownProps.profileId,
       }));
+    },
+    onComposerPlaceholderClick: () => {
+      dispatch(actions.handleComposerPlaceholderClick());
+    },
+    onComposerCreateSuccess: () => {
+      dispatch(actions.handleComposerCreateSuccess());
     },
   }),
 )(DraftList);
