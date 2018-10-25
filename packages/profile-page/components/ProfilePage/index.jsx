@@ -72,9 +72,15 @@ const TabContent = ({ tabId, profileId, childTabId }) => {
             />
           );
         case 'general-settings':
-        default:
           return (
             <GeneralSettings
+              profileId={profileId}
+              childTabId={childTabId}
+            />
+          );
+        default:
+          return (
+            <PostingSchedule
               profileId={profileId}
               childTabId={childTabId}
             />
