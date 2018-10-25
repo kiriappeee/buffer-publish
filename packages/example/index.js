@@ -9,18 +9,7 @@ export default connect(
     loggedIn: state.example.loggedIn,
     translations: state.i18n.translations.example, // all package translations
   }),
-  dispatch => ({
-    onMenuItemClick: ({ menuItemKey }) => {
-      switch (menuItemKey) {
-        case 'preferences':
-          dispatch(push('/preferences/general'));
-          break;
-        default:
-          throw new Error(`Unknown menu item key ${menuItemKey}`);
-      }
-    },
-  }),
-)(AppSidebar);
+)(LoggedIn);
 
 // export reducer, actions and action types
 export reducer, { actions, actionTypes } from './reducer';
