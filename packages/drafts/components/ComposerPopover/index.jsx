@@ -9,6 +9,7 @@ const ComposerPopover = ({
   onSave,
   transparentOverlay,
   preserveComposerStateOnClose,
+  type,
 }) => (
   <Popover
     left={'0px'}
@@ -18,6 +19,7 @@ const ComposerPopover = ({
     onOverlayClick={onSave}
   >
     <ComposerWrapper
+      type={type}
       onSave={onSave}
       preserveStateOnClose={preserveComposerStateOnClose}
     />

@@ -12,10 +12,11 @@ ComposerWrapper.propTypes = Composer.propTypes;
 ComposerWrapper.defaultProps = Composer.defaultProps;
 
 export default connect(
-  (state) => {
+  (state, ownProps) => {
     if (state.appSidebar && state.profileSidebar) {
       const selectedProfileId = state.profileSidebar.selectedProfileId;
       const postId = state.drafts.editingPostId;
+      const type = ownProps.type;
       return ({
         userData: state.appSidebar.user,
         profiles: state.profileSidebar.profiles,
@@ -24,6 +25,7 @@ export default connect(
         editMode: state.drafts.editMode,
         post: state.drafts.byProfileId[selectedProfileId].drafts[postId],
         draftMode: state.drafts.draftMode,
+        type: type,
       });
     }
     return {};

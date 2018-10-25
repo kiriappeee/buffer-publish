@@ -110,6 +110,7 @@ const DraftList = ({
         <div style={composerStyle}>
           {showComposer && !editMode &&
             <ComposerPopover
+              type={'drafts'}
               onSave={onComposerCreateSuccess}
               transparentOverlay
               preserveComposerStateOnClose
