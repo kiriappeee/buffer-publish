@@ -44,7 +44,6 @@ const tabContentStyle = {
 };
 
 
-
 const TabContent = ({ tabId, profileId, childTabId }) => {
   switch (tabId) {
     case 'queue':
@@ -66,14 +65,14 @@ const TabContent = ({ tabId, profileId, childTabId }) => {
     case 'settings':
       switch (childTabId) {
         case 'posting-schedule':
-            return (
-                <PostingSchedule
-                    profileId={profileId}
-                    childTabId={childTabId}
-                />
-            );
-          case 'general-settings':
-          default:
+          return (
+            <PostingSchedule
+              profileId={profileId}
+              childTabId={childTabId}
+            />
+          );
+        case 'general-settings':
+        default:
           return (
             <GeneralSettings
               profileId={profileId}
@@ -96,7 +95,7 @@ TabContent.propTypes = {
 
 TabContent.defaultProps = {
   tabId: '',
- childTabId: '',
+  childTabId: '',
 };
 
 const ProfilePage = ({
