@@ -108,10 +108,26 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@bufferapp/app-sidebar@1.9.23":
+  version "1.9.23"
+  resolved "https://registry.yarnpkg.com/@bufferapp/app-sidebar/-/app-sidebar-1.9.23.tgz#65fcf879ab7a0a360a3d58f4902a4c0bfd99b22d"
+  integrity sha512-luM91K+WMv9DEAqEdEbjhPfV9hdmBY/RE1X4l9T+n7jEDclBJTty9wF6R+WW5Vzr95AgKpaefaEgwbyenks0Rw==
+  dependencies:
+    "@bufferapp/async-data-fetch" "1.9.4"
+    "@bufferapp/keywrapper" "0.2.0"
+    "@bufferapp/session-manager" "0.7.1"
+
 "@bufferapp/async-data-fetch@0.5.36-beta01":
   version "0.5.36-beta01"
   resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-0.5.36-beta01.tgz#684504ddc303577c42b0ba350d854990d6bd1ad1"
   integrity sha1-aEUE3cMDV3xCsLo1DYVJkNa9GtE=
+
+"@bufferapp/async-data-fetch@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-1.9.4.tgz#186a15efd7280d403065ae313aa3707ad9066bcc"
+  integrity sha512-uSWWtngPYGP5MAE2rLtWhacOjqIs6VBWFHyR+XdTRxwLACH+BeNwGVoj+5QFJS8AQgE/a0/HD3Px7JGyrYCkrA==
+  dependencies:
+    micro-rpc-client "^0.1.4"
 
 "@bufferapp/buda@0.5.2-beta1":
   version "0.5.2-beta1"
@@ -174,10 +190,10 @@
     react-autocomplete "1.7.2"
     react-day-picker "7.2.3"
 
-"@bufferapp/composer@2.1.6":
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-2.1.6.tgz#f31ba54f64ee08bd04ce9e67425d9df1d9aa6818"
-  integrity sha512-vc1RJObi0KKReNqgqFEERj6wjUyczBef1JFeVyuKirvxQe9gGmVaYKKaGgXIqPX6jo6mj6cCRibPrID1Ka61hQ==
+"@bufferapp/composer@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@bufferapp/composer/-/composer-2.1.8.tgz#665704cd978f21bacb45fc058b1db50fd88828f7"
+  integrity sha512-wKzL4lYn96pUkKAu8/0M8bP2NfaHhioxtE1VVzTid2/Fm8SE2V4Y1krw6D4gPQaLhBobxiVGb6bFcwz9gM4hxQ==
   dependencies:
     "@bufferapp/buffer-js-api" "0.3.0"
     "@bufferapp/buffer-js-metrics" "0.2.0"
@@ -288,6 +304,14 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/dragme/-/dragme-0.2.2.tgz#84944ff6d77809c07e465daf9359442b184f9764"
   integrity sha1-hJRP9td4CcB+Rl2vk1lEKxhPl2Q=
 
+"@bufferapp/environment@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/environment/-/environment-1.9.4.tgz#af2d0ff45bdf91a3028fdea35c50abd630343b25"
+  integrity sha512-hZMTT4utcgEPQl9mvovdDGnNsjKaoCtcF5vQ8Cmjemp4dcXIgC4h0DQhzk6Koo3eL8G+WVM8iYm4FNm/WYiPWA==
+  dependencies:
+    "@bufferapp/async-data-fetch" "1.9.4"
+    "@bufferapp/session-manager" "0.7.1"
+
 "@bufferapp/keywrapper@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@bufferapp/keywrapper/-/keywrapper-0.2.0.tgz#158275f0a9562cc015c44c8b73629d2526e36092"
@@ -301,6 +325,14 @@
     bunyan "1.8.1"
     fluent-logger "2.2.0"
     on-finished "2.3.0"
+
+"@bufferapp/notifications@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@bufferapp/notifications/-/notifications-1.9.4.tgz#eb56370e1a9b65b857c30e66132cd0f25ad750ce"
+  integrity sha512-LvDohhA6NO9EYIMT4GpMMSm5YpVvuQPdPe5oEb9d18nvBU6dP4nZZZa8EQMXduQd2z6QbIJzVXI61Of9wA2MvA==
+  dependencies:
+    "@bufferapp/keywrapper" "0.2.0"
+    uuid "3.3.2"
 
 "@bufferapp/performance-tracking@0.43.5":
   version "0.43.5"
@@ -350,6 +382,14 @@
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@bufferapp/shutdown-helper/-/shutdown-helper-0.2.0.tgz#d43bbba845e30e411dda76a7b7629e11160e5395"
   integrity sha1-1Du7qEXjDkEd2nant2KeERYOU5U=
+
+"@bufferapp/unauthorized-redirect@1.9.8":
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/@bufferapp/unauthorized-redirect/-/unauthorized-redirect-1.9.8.tgz#9372465b35bdffa98a44fc003561b7f2ae408c9f"
+  integrity sha512-hNAUU16W3HeohdKuJeVgPYtH/FUnjXLHJFOu4nDnhAf9gOFbHQG8PHZ03G/ZMJs5h22lOu2Hg95u+jcJ3VP1Qw==
+  dependencies:
+    "@bufferapp/async-data-fetch" "1.9.4"
+    "@bufferapp/session-manager" "0.7.1"
 
 "@lerna/add@^3.2.0":
   version "3.4.1"
@@ -8925,7 +8965,7 @@ micro-rpc-client@0.1.2:
   dependencies:
     isomorphic-fetch "^2.2.1"
 
-micro-rpc-client@0.1.4:
+micro-rpc-client@0.1.4, micro-rpc-client@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/micro-rpc-client/-/micro-rpc-client-0.1.4.tgz#f3cc744f31c647321a0313cf5a09abb4e16a44c1"
   integrity sha512-OTWowbnLHVvI6A7wgdJ229rzsrFo4I/pN+MAiI/K9WDwymmmCp4pP3KweV9/ijZtZFLNTfm8BLWb9RCLXPDUkQ==
@@ -13539,7 +13579,7 @@ uuid@3.0.1:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
   integrity sha1-ZUS7ot/ajBzxfmKaOjBeK7H+5sE=
 
-uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1, uuid@^3.3.2:
+uuid@3.3.2, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==

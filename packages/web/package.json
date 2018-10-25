@@ -7,8 +7,8 @@
     "lint": "eslint . --ignore-pattern coverage .storybook node_modules"
   },
   "dependencies": {
-    "@bufferapp/app-sidebar": "^1.9.22",
-    "@bufferapp/notifications": "1.9.3",
+    "@bufferapp/app-sidebar": "1.9.23",
+    "@bufferapp/notifications": "1.9.4",
     "@bufferapp/profile-page": "^1.9.25",
     "@bufferapp/publish-app-switcher": "^1.9.25",
     "@bufferapp/publish-beta-redirect": "^1.9.25",
