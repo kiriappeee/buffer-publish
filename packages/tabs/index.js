@@ -1,5 +1,5 @@
 import { push } from 'react-router-redux';
-import { generateProfilePageRoute } from '@bufferapp/publish-routes';
+import { generateProfilePageRoute, generateChildTabRoute } from '@bufferapp/publish-routes';
 import { connect } from 'react-redux';
 import { actions as modalsActions } from '@bufferapp/publish-modals';
 
@@ -12,8 +12,12 @@ export default connect(
     isBusinessAccount: state.profileSidebar.selectedProfile.business,
     isManager: state.profileSidebar.selectedProfile.isManager,
     selectedTabId: ownProps.tabId,
+    selectedChildTabId: ownProps.childTabId,
     shouldShowUpgradeCta: state.appSidebar.user.is_free_user,
     hasDraftsFeatureFlip: state.appSidebar.user.features ? state.appSidebar.user.features.includes('drafts_new_publish') : false,
+    shouldShowNestedSettingsTab: ownProps.tabId === "settings",
+    // This should be removed once the general settings tab is complete - Lola Oct/2018
+    showGeneralSettings: state.profileSidebar.selectedProfile.type === "instagram",
   }),
   (dispatch, ownProps) => ({
     onTabClick: tabId => dispatch(push(generateProfilePageRoute({
@@ -21,6 +25,11 @@ export default connect(
       profileId: ownProps.profileId,
     }))),
     showUpgradeModal: () => dispatch(modalsActions.showUpgradeModal()),
+    onChildTabClick: childTabId => dispatch(push(generateChildTabRoute({
+      tabId: ownProps.tabId,
+      childTabId,
+      profileId: ownProps.profileId,
+    }))),
   }),
 )(TabNavigation);
 

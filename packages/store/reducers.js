@@ -5,7 +5,8 @@ import { reducer as tabsReducer } from '@bufferapp/publish-tabs';
 import { reducer as queueReducer } from '@bufferapp/publish-queue';
 import { reducer as sentReducer } from '@bufferapp/publish-sent';
 import { reducer as draftsReducer } from '@bufferapp/publish-drafts';
-import { reducer as settingsReducer } from '@bufferapp/publish-settings';
+import { reducer as postingScheduleReducer } from '@bufferapp/publish-posting-schedule';
+import { reducer as generalSettingsReducer } from '@bufferapp/publish-general-settings';
 import { reducer as i18nReducer } from '@bufferapp/publish-i18n';
 import { reducer as profileSidebarReducer } from '@bufferapp/publish-profile-sidebar';
 import { reducer as appSidebarReducer } from '@bufferapp/app-sidebar';
@@ -29,7 +30,6 @@ export default combineReducers({
   router: routerReducer,
   queue: queueReducer,
   sent: sentReducer,
-  settings: settingsReducer,
   i18n: i18nReducer,
   tabs: tabsReducer,
   profileSidebar: profileSidebarReducer,
@@ -49,4 +49,6 @@ export default combineReducers({
   closeAccount: closeAccountReducer,
   productFeatures: productFeaturesReducer,
   drafts: draftsReducer,
+  generalSettings: generalSettingsReducer,
+  postingSchedule: postingScheduleReducer,
 });

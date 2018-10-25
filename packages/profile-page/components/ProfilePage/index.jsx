@@ -5,8 +5,9 @@ import { Redirect } from 'react-router';
 
 import QueuedPosts from '@bufferapp/publish-queue';
 import SentPosts from '@bufferapp/publish-sent';
-import DraftList from '@bufferapp/publish-drafts'
-import ProfileSettings from '@bufferapp/publish-settings';
+import DraftList from '@bufferapp/publish-drafts';
+import PostingSchedule from '@bufferapp/publish-posting-schedule';
+import GeneralSettings from '@bufferapp/publish-general-settings';
 import TabNavigation from '@bufferapp/publish-tabs';
 import ProfileSidebar from '@bufferapp/publish-profile-sidebar';
 import { ScrollableContainer } from '@bufferapp/publish-shared-components';
@@ -42,7 +43,8 @@ const tabContentStyle = {
   maxWidth: '49rem',
 };
 
-const TabContent = ({ tabId, profileId }) => {
+
+const TabContent = ({ tabId, profileId, childTabId }) => {
   switch (tabId) {
     case 'queue':
       return (
@@ -61,11 +63,29 @@ const TabContent = ({ tabId, profileId }) => {
         />
       );
     case 'settings':
-      return (
-        <ProfileSettings
-          profileId={profileId}
-        />
-      );
+      switch (childTabId) {
+        case 'posting-schedule':
+          return (
+            <PostingSchedule
+              profileId={profileId}
+              childTabId={childTabId}
+            />
+          );
+        case 'general-settings':
+          return (
+            <GeneralSettings
+              profileId={profileId}
+              childTabId={childTabId}
+            />
+          );
+        default:
+          return (
+            <PostingSchedule
+              profileId={profileId}
+              childTabId={childTabId}
+            />
+          );
+      }
     default:
       return (
         <Redirect to="/" />
@@ -75,11 +95,13 @@ const TabContent = ({ tabId, profileId }) => {
 
 TabContent.propTypes = {
   tabId: PropTypes.string,
+  childTabId: PropTypes.string,
   profileId: PropTypes.string.isRequired,
 };
 
 TabContent.defaultProps = {
   tabId: '',
+  childTabId: '',
 };
 
 const ProfilePage = ({
@@ -87,6 +109,7 @@ const ProfilePage = ({
     params: {
       profileId,
       tabId,
+     childTabId,
     },
   },
   onLoadMore,
@@ -113,13 +136,14 @@ const ProfilePage = ({
         <TabNavigation
           profileId={profileId}
           tabId={tabId}
+          childTabId={childTabId}
         />
         <ScrollableContainer
           tabId={tabId}
           growthSpace={1}
         >
           <div style={tabContentStyle}>
-            <TabContent tabId={tabId} profileId={profileId} />
+            <TabContent tabId={tabId} profileId={profileId} childTabId={childTabId} />
             {loadingMore &&
               <div style={loadingAnimationStyle}>
                 <LoadingAnimation marginTop={'1rem'} />
@@ -137,6 +161,7 @@ ProfilePage.propTypes = {
     params: PropTypes.shape({
       tabId: PropTypes.string,
       profileId: PropTypes.string,
+      childTabId: PropTypes.string,
     }),
   }).isRequired,
   onLoadMore: PropTypes.func.isRequired,

@@ -24,4 +24,5 @@ module.exports = profile => ({
   paused: profile.paused,
   open: false,
   organizationRole: profile.organization_role,
+  directPostingEnabled: profile.direct_posting_enabled,
 });

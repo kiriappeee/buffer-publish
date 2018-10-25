@@ -122,6 +122,11 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-0.5.36-beta01.tgz#684504ddc303577c42b0ba350d854990d6bd1ad1"
   integrity sha1-aEUE3cMDV3xCsLo1DYVJkNa9GtE=
 
+"@bufferapp/async-data-fetch@1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-1.9.3.tgz#ad0cddb56e609e2ae6b06ed5f7736af66e17d601"
+  integrity sha512-dKbDSpi5paujKOwQdZ3T0lFPLMyv5V/wtRbPoRw0w+93D26QPSQ926He8SzUxLvi48mNx7Vufvzr9cDTDDbh9w==
+
 "@bufferapp/async-data-fetch@1.9.4":
   version "1.9.4"
   resolved "https://registry.yarnpkg.com/@bufferapp/async-data-fetch/-/async-data-fetch-1.9.4.tgz#186a15efd7280d403065ae313aa3707ad9066bcc"
@@ -383,12 +388,12 @@
   resolved "https://registry.yarnpkg.com/@bufferapp/shutdown-helper/-/shutdown-helper-0.2.0.tgz#d43bbba845e30e411dda76a7b7629e11160e5395"
   integrity sha1-1Du7qEXjDkEd2nant2KeERYOU5U=
 
-"@bufferapp/unauthorized-redirect@1.9.8":
-  version "1.9.8"
-  resolved "https://registry.yarnpkg.com/@bufferapp/unauthorized-redirect/-/unauthorized-redirect-1.9.8.tgz#9372465b35bdffa98a44fc003561b7f2ae408c9f"
-  integrity sha512-hNAUU16W3HeohdKuJeVgPYtH/FUnjXLHJFOu4nDnhAf9gOFbHQG8PHZ03G/ZMJs5h22lOu2Hg95u+jcJ3VP1Qw==
+"@bufferapp/unauthorized-redirect@1.9.6":
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/@bufferapp/unauthorized-redirect/-/unauthorized-redirect-1.9.6.tgz#feeed857314143f3b0b05b05108555cce3ba6190"
+  integrity sha512-TTNgTrkN/rIoRTvp6+/6qozMa8qCBPSh5KsYkvpl5ENjhPJyXwApRMhlO3jYJJBnDnxmXg9V5O8JVmOFVwgVFg==
   dependencies:
-    "@bufferapp/async-data-fetch" "1.9.4"
+    "@bufferapp/async-data-fetch" "1.9.3"
     "@bufferapp/session-manager" "0.7.1"
 
 "@lerna/add@^3.2.0":

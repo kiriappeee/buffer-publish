@@ -18,8 +18,12 @@ const TabNavigation = ({
   isBusinessAccount,
   isManager,
   selectedTabId,
+  selectedChildTabId,
   onTabClick,
+  onChildTabClick,
   shouldShowUpgradeCta,
+  shouldShowNestedSettingsTab,
+  showGeneralSettings,
   showUpgradeModal,
   hasDraftsFeatureFlip,
 }) =>
@@ -57,13 +61,29 @@ const TabNavigation = ({
             </Link>
           </Text>
         </div>
-      }
+        }
     </Tabs>
+    {shouldShowNestedSettingsTab &&
+      <Tabs
+        selectedTabId={selectedChildTabId}
+        onTabClick={onChildTabClick}
+      >
+        {/* This func should be removed once
+        the general settings tab is complete - Lola Oct/2018 */}
+        {showGeneralSettings &&
+          <Tab tabId={'general-settings'}>General</Tab>
+        }
+        <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
+      </Tabs>
+      }
   </div>;
+
 
 TabNavigation.defaultProps = {
   shouldShowUpgradeCta: false,
   hasDraftsFeatureFlip: false,
+  shouldShowNestedSettingsTab: false,
+  showGeneralSettings: false,
 };
 
 TabNavigation.propTypes = {
@@ -71,7 +91,11 @@ TabNavigation.propTypes = {
   onTabClick: PropTypes.func.isRequired,
   shouldShowUpgradeCta: PropTypes.bool.isRequired,
   showUpgradeModal: PropTypes.func.isRequired,
-  hasDraftsFeatureFlip: PropTypes.bool
+  hasDraftsFeatureFlip: PropTypes.bool,
+  onChildTabClick: PropTypes.func.isRequired,
+  selectedChildTabId: PropTypes.string,
+  shouldShowNestedSettingsTab: PropTypes.bool,
+  showGeneralSettings: PropTypes.bool,
 };
 
 export default TabNavigation;

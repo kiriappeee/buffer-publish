@@ -5,7 +5,8 @@ import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/bu
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
 import { middleware as draftsMiddleware } from '@bufferapp/publish-drafts';
-import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
+import { middleware as postingScheduleSettingsMiddleware } from '@bufferapp/publish-posting-schedule';
+import { middleware as generalSettingsMiddleware } from '@bufferapp/publish-general-settings';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
 import { middleware as productFeatureMiddleware } from '@bufferapp/product-features';
@@ -61,7 +62,8 @@ const configureStore = (initialstate) => {
         productFeatureMiddleware,
         queueMiddleware,
         sentMiddleware,
-        settingsMiddleware,
+        postingScheduleSettingsMiddleware,
+        generalSettingsMiddleware,
         pusherSyncMiddleware,
         notificationsMiddleware,
         environmentMiddleware,
