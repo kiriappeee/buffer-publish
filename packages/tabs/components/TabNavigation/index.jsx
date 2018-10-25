@@ -23,6 +23,7 @@ const TabNavigation = ({
   onChildTabClick,
   shouldShowUpgradeCta,
   shouldShowNestedSettingsTab,
+  showGeneralSettings,
   showUpgradeModal,
   hasDraftsFeatureFlip,
 }) =>
@@ -67,7 +68,9 @@ const TabNavigation = ({
         selectedTabId={selectedChildTabId}
         onTabClick={onChildTabClick}
       >
-        <Tab tabId={'general-settings'}>General</Tab>
+        {showGeneralSettings &&
+          <Tab tabId={'general-settings'}>General</Tab>
+        }
         <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
       </Tabs>
       }
@@ -77,6 +80,8 @@ const TabNavigation = ({
 TabNavigation.defaultProps = {
   shouldShowUpgradeCta: false,
   hasDraftsFeatureFlip: false,
+  shouldShowNestedSettingsTab: false,
+  showGeneralSettings: false,
 };
 
 TabNavigation.propTypes = {
@@ -87,6 +92,8 @@ TabNavigation.propTypes = {
   hasDraftsFeatureFlip: PropTypes.bool,
   onChildTabClick: PropTypes.func.isRequired,
   selectedChildTabId: PropTypes.string,
+  shouldShowNestedSettingsTab: PropTypes.bool,
+  showGeneralSettings: PropTypes.bool,
 };
 
 export default TabNavigation;
