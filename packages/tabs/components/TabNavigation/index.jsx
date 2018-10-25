@@ -67,7 +67,7 @@ const TabNavigation = ({
         selectedTabId={selectedChildTabId}
         onTabClick={onChildTabClick}
       >
-        <Tab tabId={'general'}>General</Tab>
+        <Tab tabId={'general-settings'}>General</Tab>
         <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
       </Tabs>
       }

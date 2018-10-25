@@ -5,7 +5,6 @@ import { reducer as tabsReducer } from '@bufferapp/publish-tabs';
 import { reducer as queueReducer } from '@bufferapp/publish-queue';
 import { reducer as sentReducer } from '@bufferapp/publish-sent';
 import { reducer as draftsReducer } from '@bufferapp/publish-drafts';
-import { reducer as settingsReducer } from '../posting-schedule/index';
 import { reducer as PostingScheduleReducer } from '@bufferapp/publish-posting-schedule';
 import { reducer as GeneralSettingsReducer } from '@bufferapp/publish-general-settings';
 import { reducer as i18nReducer } from '@bufferapp/publish-i18n';
@@ -25,8 +24,6 @@ import { reducer as changePasswordReducer } from '@bufferapp/change-password';
 import { reducer as manageAppsReducer } from '@bufferapp/manage-apps-extras';
 import { reducer as twoFactorAuthReducer } from '@bufferapp/publish-two-factor-auth';
 import { reducer as closeAccountReducer } from '@bufferapp/close-account';
-import { reducer as postingScheduleSettingsReducer } from '@bufferapp/publish-posting-schedule';
-import { reducer as generalSettingsReducer } from '@bufferapp/publish-general-settings';
 
 export default combineReducers({
   form: formReducer,
