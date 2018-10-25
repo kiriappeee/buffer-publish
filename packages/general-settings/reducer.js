@@ -25,8 +25,8 @@ export default (state = initialState, action) => {
 };
 
 export const actions = {
-  handleSetUpDirectPostingClick: profileId => ({
+  handleSetUpDirectPostingClick: action => ({
     type: actionTypes.SET_DIRECT_POSTING,
-    profileId,
+    profileId: action.profileId,
   }),
 };
