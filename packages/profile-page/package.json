@@ -16,7 +16,8 @@
     "@bufferapp/publish-queue": "^1.9.25",
     "@bufferapp/publish-routes": "1.9.3",
     "@bufferapp/publish-sent": "^1.9.25",
-    "@bufferapp/publish-settings": "^1.9.25",
+    "@bufferapp/publish-general-settings": "1.9.3",
+    "@bufferapp/publish-posting-schedule": "1.9.3",
     "@bufferapp/publish-shared-components": "^1.9.25",
     "@bufferapp/publish-store": "^1.9.25",
     "@bufferapp/publish-tabs": "^1.9.25"

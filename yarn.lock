@@ -331,13 +331,6 @@
     fluent-logger "2.2.0"
     on-finished "2.3.0"
 
-"@bufferapp/notifications@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@bufferapp/notifications/-/notifications-1.9.3.tgz#e017550c119995618c4dc33b4506d62c96caab5e"
-  integrity sha512-4whItnwA7m/ttaJ+/s3CrWuUaGEQlN20kP7a+Q2/ETjTGBo7HtQTdu/ahq89STzDkANWGC2aQZqTzG4tc4cOWQ==
-  dependencies:
-    "@bufferapp/keywrapper" "0.2.0"
-
 "@bufferapp/notifications@1.9.4":
   version "1.9.4"
   resolved "https://registry.yarnpkg.com/@bufferapp/notifications/-/notifications-1.9.4.tgz#eb56370e1a9b65b857c30e66132cd0f25ad750ce"
@@ -353,17 +346,6 @@
   dependencies:
     "@bufferapp/async-data-fetch" "0.5.36-beta01"
     "@bufferapp/chronos" "0.6.1"
-
-"@bufferapp/publish-settings@^1.9.25":
-  version "1.9.25"
-  resolved "https://registry.yarnpkg.com/@bufferapp/publish-settings/-/publish-settings-1.9.25.tgz#739e3a1ad6886602d6cf3f6f2807f0d0466a7d94"
-  integrity sha512-4Mi77gINcN/Lr4ZWffUvYpEzlRAiX+ZBewkew6fA4hGXxcDfo/6A/49BhHFkygv24gqmI6vxEzfHGWO5Ng69Pg==
-  dependencies:
-    "@bufferapp/async-data-fetch" "1.9.3"
-    "@bufferapp/keywrapper" "0.2.0"
-    "@bufferapp/notifications" "1.9.3"
-    "@bufferapp/publish-profile-sidebar" "^1.9.25"
-    "@bufferapp/publish-shared-components" "^1.9.25"
 
 "@bufferapp/publish-utils@1.9.15":
   version "1.9.15"

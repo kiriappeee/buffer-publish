@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules(?!\/@bufferapp\/performance-tracking)(?!\/@bufferapp\/async-data-fetch)(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)/,
+        exclude: /node_modules(?!\/@bufferapp\/performance-tracking)(?!\/@bufferapp\/async-data-fetch)(?!\/@bufferapp\/components)(?!\/@bufferapp\/web-components)(?!\/@bufferapp\/composer)(?!\/@bufferapp\/unauthorized-redirect)/,
         use: {
           loader: 'babel-loader',
         },

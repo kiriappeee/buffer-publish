@@ -113,7 +113,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "/node_modules(?!/@bufferapp/performance-tracking)(?!/@bufferapp/async-data-fetch)(?!/@bufferapp/components)(?!/@bufferapp/web-components)(?!/@bufferapp/composer)/"
+      "/node_modules(?!/@bufferapp/performance-tracking)(?!/@bufferapp/async-data-fetch)(?!/@bufferapp/components)(?!/@bufferapp/web-components)(?!/@bufferapp/composer)(?!\/@bufferapp\/unauthorized-redirect)/"
     ],
     "verbose": true,
     "collectCoverage": true,

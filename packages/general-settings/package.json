@@ -8,7 +8,7 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "1.9.3"
+    "@bufferapp/async-data-fetch": "1.9.4"
   },
   "devDependencies": {
     "eslint": "3.19.0"
