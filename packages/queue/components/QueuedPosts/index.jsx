@@ -11,7 +11,7 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 
-import ComposerPopover from '../ComposerPopover';
+import ComposerPopover from '@bufferapp/publish-composer';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
 import MiniCalendar from '../MiniCalendar';
@@ -86,6 +86,7 @@ const QueuedPosts = ({
               onSave={onComposerCreateSuccess}
               transparentOverlay
               preserveComposerStateOnClose
+              type={'queue'}
             />
           }
           <Input
@@ -124,7 +125,10 @@ const QueuedPosts = ({
         />
       }
       {showComposer && editMode &&
-        <ComposerPopover onSave={onComposerCreateSuccess} />
+        <ComposerPopover 
+          onSave={onComposerCreateSuccess}
+          type={'queue'}
+        />
       }
       <QueueItems
         items={postLists}
