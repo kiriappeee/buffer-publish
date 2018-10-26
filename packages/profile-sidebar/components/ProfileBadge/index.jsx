@@ -12,7 +12,15 @@ import {
 
 import { geyser } from '@bufferapp/components/style/color';
 
-import { constants } from '@bufferapp/publish-utils';
+import {
+  SERVICE_NAMES,
+  SERVICE_TWITTER,
+  SERVICE_FACEBOOK,
+  SERVICE_LINKEDIN,
+  SERVICE_GOOGLE,
+  SERVICE_PINTEREST,
+  SERVICE_INSTAGRAM,
+} from '@bufferapp/publish-constants';
 
 const profileBadgeStyle = {
   position: 'relative',
@@ -32,15 +40,15 @@ const profileBadgeIconStyle = {
   boxShadow: 'inset 0 0 16px 16px #fff',
 };
 
-const badgeTypes = PropTypes.oneOf(constants.SERVICE_NAMES);
+const badgeTypes = PropTypes.oneOf(SERVICE_NAMES);
 
 const profileBadgeIconMap = new Map([
-  [constants.SERVICE_TWITTER, { component: CircleTwitterIcon, color: 'twitter' }],
-  [constants.SERVICE_FACEBOOK, { component: CircleFacebookIcon, color: 'facebook' }],
-  [constants.SERVICE_LINKEDIN, { component: CircleLinkedInIcon, color: 'linkedin' }],
-  [constants.SERVICE_GOOGLE, { component: CircleGooglePlusIcon, color: 'googleplus' }],
-  [constants.SERVICE_PINTEREST, { component: CirclePinterestIcon, color: 'pinterest' }],
-  [constants.SERVICE_INSTAGRAM, { component: CircleInstagramIcon, color: 'instagram' }],
+  [SERVICE_TWITTER, { component: CircleTwitterIcon, color: 'twitter' }],
+  [SERVICE_FACEBOOK, { component: CircleFacebookIcon, color: 'facebook' }],
+  [SERVICE_LINKEDIN, { component: CircleLinkedInIcon, color: 'linkedin' }],
+  [SERVICE_GOOGLE, { component: CircleGooglePlusIcon, color: 'googleplus' }],
+  [SERVICE_PINTEREST, { component: CirclePinterestIcon, color: 'pinterest' }],
+  [SERVICE_INSTAGRAM, { component: CircleInstagramIcon, color: 'instagram' }],
 ]);
 
 const ProfileBadgeIcon = ({ type }) => {
@@ -56,22 +64,14 @@ ProfileBadgeIcon.propTypes = {
   type: badgeTypes.isRequired,
 };
 
-const ProfileBadge = ({
-  avatarUrl,
-  type,
-}) =>
+const ProfileBadge = ({ avatarUrl, type }) => (
   <div style={profileBadgeStyle}>
-    <Image
-      border={'circle'}
-      src={avatarUrl}
-      height={'100%'}
-      width={'100%'}
-      verticalAlignBottom
-    />
+    <Image border={'circle'} src={avatarUrl} height={'100%'} width={'100%'} verticalAlignBottom />
     <div style={profileBadgeIconStyle}>
       <ProfileBadgeIcon type={type} />
     </div>
-  </div>;
+  </div>
+);
 
 ProfileBadge.propTypes = {
   avatarUrl: PropTypes.string.isRequired,

@@ -1,6 +1,6 @@
 import { actionTypes } from '@bufferapp/async-data-fetch';
 import { actions as notificationActions } from '@bufferapp/notifications';
-import { getURL } from '@bufferapp/publish-utils';
+import { getURL } from '@bufferapp/publish-formatters';
 
 export default ({ dispatch }) => next => (action) => {
   next(action);

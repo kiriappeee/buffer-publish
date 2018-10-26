@@ -1,4 +1,5 @@
-const { postParser, buildPostMap } = require('@bufferapp/publish-utils');
+const { postParser } = require('@bufferapp/publish-parsers');
+const { buildPostMap } = require('@bufferapp/publish-formatters');
 const { method } = require('@bufferapp/buffer-rpc');
 const rp = require('request-promise');
 

@@ -8,6 +8,8 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
+    "@bufferapp/publish-formatters": "1.9.27",
+    "@bufferapp/publish-constants": "1.9.25",
     "react-images": "0.5.5"
   },
   "devDependencies": {
