@@ -11,7 +11,7 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 
-import ComposerPopover from '@bufferapp/publish-composer';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
 import MiniCalendar from '../MiniCalendar';

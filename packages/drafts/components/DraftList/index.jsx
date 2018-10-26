@@ -5,7 +5,7 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
-import ComposerPopover from '@bufferapp/publish-composer';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
 import {
   Input,
 } from '@bufferapp/components';

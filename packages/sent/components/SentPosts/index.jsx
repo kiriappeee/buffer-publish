@@ -14,7 +14,7 @@ import {
   fillColor,
   curiousBlue,
 } from '@bufferapp/components/style/color';
-import ComposerPopover from '@bufferapp/publish-composer';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
 
 const headerStyle = {
   marginBottom: '1.5rem',
