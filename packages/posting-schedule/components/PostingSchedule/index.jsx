@@ -94,7 +94,7 @@ const PostingSchedule = ({
   onAddPostingTime,
   onUpdateTimezone,
   onGetTimezones,
-  settingsHeader,
+  postingScheduleHeader,
   hasTwentyFourHourTimeFormat,
   onRemoveTimeClick,
   onTimezoneInputFocus,
@@ -133,7 +133,7 @@ const PostingSchedule = ({
     <div>
       <div style={headerStyle}>
         <SensitiveData>
-          <Text color="black">{settingsHeader}</Text>
+          <Text color="black">{postingScheduleHeader}</Text>
         </SensitiveData>
       </div>
       <Divider />
@@ -298,7 +298,7 @@ PostingSchedule.propTypes = {
   })).isRequired,
   loading: PropTypes.bool.isRequired,
   scheduleLoading: PropTypes.bool.isRequired,
-  settingsHeader: PropTypes.string.isRequired,
+  postingScheduleHeader: PropTypes.string.isRequired,
   onRemoveTimeClick: PropTypes.func.isRequired,
   onUpdateTime: PropTypes.func.isRequired,
   onAddPostingTime: PropTypes.func.isRequired,

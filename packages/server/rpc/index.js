@@ -32,6 +32,8 @@ const connectedApps = require('./connectedApps');
 const revokeConnectedApp = require('./revokeConnectedApp');
 const getNumberOfPostsMethod = require('./getNumberPosts');
 const featureMethod = require('./features');
+const getLinkShortener = require('./getLinkShortener');
+const changeLinkShortener = require('./changeLinkShortener');
 
 module.exports = rpc(
   profilesMethod,
@@ -66,4 +68,6 @@ module.exports = rpc(
   revokeConnectedApp,
   getNumberOfPostsMethod,
   featureMethod,
+  getLinkShortener,
+  changeLinkShortener,
 );

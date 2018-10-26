@@ -35,7 +35,7 @@ storiesOf('PostingSchedule', module)
   )
   .add('default', () => (
     <PostingSchedule
-      settingsHeader={settingsHeader}
+      postingScheduleHeader={settingsHeader}
       days={days}
       hasTwentyFourHourTimeFormat={false}
       initialValues={initialValues}

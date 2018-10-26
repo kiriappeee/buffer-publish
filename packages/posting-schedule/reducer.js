@@ -1,8 +1,8 @@
-
 import { actionTypes as profileActionTypes } from '@bufferapp/publish-profile-sidebar';
 import { actionTypes as dataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import cloneDeep from 'lodash.clonedeep';
 import keyWrapper from '@bufferapp/keywrapper';
+
 import {
   transformSchedules,
   mergeSchedules,
@@ -38,7 +38,7 @@ export const actionTypes = keyWrapper('POSTING_SCHEDULE', {
 });
 
 const initialState = {
-  settingsHeader: 'Your posting schedule',
+  postingScheduleHeader: 'Your posting schedule',
   loading: false,
   scheduleLoading: true,
   days: [],
@@ -76,7 +76,7 @@ export default (state = initialState, action) => {
         pausedSchedules: action.profile.pausedSchedules,
         mergedSchedules,
         profileTimezoneCity: action.profile.timezone_city,
-        settingsHeader: `Your posting schedule for ${action.profile.serviceUsername}`,
+        postingScheduleHeader: `Your posting schedule for ${action.profile.serviceUsername}`,
         paused: action.profile.paused,
         profileId: action.profile.id,
         profileName: action.profile.handle,
