@@ -9,47 +9,6 @@ import {
 } from '@bufferapp/components';
 import styles from './style.css';
 
-const openWithUrl = (url) => {
-  window.open(url, '_blank');
-};
-
-const renderEmailPrompt = ({
-  isManager,
-  userMessages,
-  userNewDraftsSubscribeLink,
-  handleUserReadMessage,
-}) => {
-  const message = 'new_contributions_emails';
-  if (isManager && !userMessages.includes(message)) {
-    const emailLink = userNewDraftsSubscribeLink;
-    return (
-      <div className={styles.banner}>
-        <Text size={'small'}>{'Email me when a new draft is awaiting approval'}</Text>
-        <span className={styles['left-button']}>
-          <Button
-            quaternary
-            onClick={() => handleUserReadMessage({ message })}
-          >
-            {'No, thanks'}
-          </Button>
-        </span>
-        <span className={styles['right-button']}>
-          <Button
-            quaternary
-            onClick={() => {
-              openWithUrl(emailLink);
-              handleUserReadMessage({ message });
-            }}
-          >
-            {'Yes, please'}
-          </Button>
-        </span>
-      </div>
-    );
-  }
-  return '';
-};
-
 const renderEmptyState = (isManager, view) => {
   let title;
   let subtitle;
@@ -84,33 +43,20 @@ const renderEmptyState = (isManager, view) => {
 
 const Empty = ({
   isManager,
-  userMessages,
-  userNewDraftsSubscribeLink,
-  handleUserReadMessage,
   view,
 }) => (
   <div className={styles.container}>
-    { renderEmailPrompt({
-      isManager,
-      userMessages,
-      userNewDraftsSubscribeLink,
-      handleUserReadMessage,
-    }) }
     { renderEmptyState(isManager, view) }
   </div>
   );
 
 Empty.propTypes = {
   isManager: PropTypes.bool,
-  userMessages: PropTypes.arrayOf(),
-  userNewDraftsSubscribeLink: PropTypes.string,
-  handleUserReadMessage: PropTypes.func,
   view: PropTypes.oneOf(['approval', 'drafts', null]),
 };
 
 Empty.defaultProps = {
   isManager: false,
-  userMessages: [],
 };
 
 export default Empty;

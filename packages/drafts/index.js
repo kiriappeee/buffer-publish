@@ -96,8 +96,6 @@ export default connect(
         environment: state.environment.environment,
         editMode: state.drafts.editMode,
         editingPostId: state.drafts.editingPostId,
-        userMessages: state.appSidebar.user.messages,
-        userNewDraftsSubscribeLink: state.appSidebar.user.new_contributions_emails_subscribe_link,
       };
     }
     return {};
