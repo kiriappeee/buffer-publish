@@ -136,6 +136,11 @@ export default connect(
         endDate,
       }));
     },
+    onSetUpDirectPostingClick: () => {
+      dispatch(actions.handleSetUpDirectPostingClick({
+        profileId: ownProps.profileId,
+      }));
+    },
   }),
 )(QueuedPosts);
 

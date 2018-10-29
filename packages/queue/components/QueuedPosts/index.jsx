@@ -68,6 +68,7 @@ const QueuedPosts = ({
   subprofiles,
   isInstagramProfile,
   directPostingEnabled,
+  onSetUpDirectPostingClick,
 }) => {
   if (loading) {
     return (
@@ -116,7 +117,7 @@ const QueuedPosts = ({
         </FeatureLoader>
 
         {isInstagramProfile && !directPostingEnabled &&
-          <div> </div>
+          <a onClick={onSetUpDirectPostingClick}>Set up direct posting!</a>
         }
 
       </div>
@@ -193,6 +194,7 @@ QueuedPosts.propTypes = {
   ]),
   IsInstagramProfile: PropTypes.bool,
   directPostingEnabled: PropTypes.bool,
+  onSetUpDirectPostingClick: PropTypes.func,
 };
 
 QueuedPosts.defaultProps = {

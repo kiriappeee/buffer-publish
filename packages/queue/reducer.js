@@ -24,6 +24,7 @@ export const actionTypes = keyWrapper('QUEUE', {
   POST_REQUEUE: 0,
   TOGGLE_CALENDAR: 0,
   GET_NUMBER_POSTS: 0,
+  SET_DIRECT_POSTING: 0,
 });
 
 export const initialState = {
@@ -33,6 +34,7 @@ export const initialState = {
   environment: 'production',
   editMode: false,
   editingPostId: '',
+  directPostingEnabled: false,
 };
 
 const profileInitialState = {
@@ -380,6 +382,12 @@ const profileReducer = (state = profileInitialState, action) => {
         ...state,
         numberOfPostsByDate: action.result.numberOfPostsByDate,
       };
+    case actionTypes.SET_DIRECT_POSTING:
+      return {
+        ...state,
+        directPostingEnabled: action.profile.directPostingEnabled,
+        profileId: action.profileId,
+      };
     case `sharePostNow_${dataFetchActionTypes.FETCH_FAIL}`:
     case actionTypes.POST_ERROR:
     case actionTypes.POST_CREATED:
@@ -551,10 +559,14 @@ export const actions = {
     type: actionTypes.TOGGLE_CALENDAR,
     profileId,
   }),
-  handleMiniCalendarMonthChange: ({ profileId, startDate, endDate}) => ({
+  handleMiniCalendarMonthChange: ({ profileId, startDate, endDate }) => ({
     type: actionTypes.GET_NUMBER_POSTS,
     profileId,
     startDate,
     endDate,
+  }),
+  handleSetUpDirectPostingClick: action => ({
+    type: actionTypes.SET_DIRECT_POSTING,
+    profileId: action.profileId,
   }),
 };
