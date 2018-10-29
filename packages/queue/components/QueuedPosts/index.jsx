@@ -118,7 +118,7 @@ const QueuedPosts = ({
         </FeatureLoader>
 
       </div>
-      {isInstagramProfile && directPostingEnabled &&
+      {isInstagramProfile && !directPostingEnabled &&
         <InstagramDirectPostingBanner onSetUpDirectPostingClick={onSetUpDirectPostingClick} />
       }
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}

@@ -1,48 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Button, Divider,
-  Text, Link,
+  Text, Link, CircleInstagramIcon,
 } from '@bufferapp/components';
-
-const instagramDirectPostingStyle = {
-  display: 'flex',
-  flex: 1,
-  flexDirection: 'row',
-  marginBottom: '0.5rem',
-};
 
 const textWrapperStyle = {
   display: 'flex',
-  marginBottom: '0.5rem',
+  marginLeft: '0.3rem',
 };
 
-const setUpDirectPostingStyle = {
-  marginBottom: '1.5rem',
-  marginTop: '1rem',
-  textAlign: 'right',
-  whiteSpace: 'nowrap',
+const linkWrapperStyle = {
+  marginLeft: '0.3rem',
 };
 
+const bannerWrapper = {
+  border: '1px solid #CAD4DB',
+  display: 'flex',
+  position: 'relative',
+  padding: '0.5rem',
+  borderRadius: '0.2rem',
+  backgroundColor: '#F1F7FB',
+  alignItems: 'center',
+};
 
 const InstagramDirectPostingBanner = ({
   onSetUpDirectPostingClick,
 }) => (
-  <div>
-    <div>
-      <div>
-        <Text>
-          Buffer can now post directly to Instagram!
-        </Text>
-      </div>
-    </div>
-    <div>
-      <Link
-        onClick={() => { onSetUpDirectPostingClick(); }}
+  <div style={bannerWrapper}>
+    <CircleInstagramIcon color={'torchRed'} />
+    <span
+      style={textWrapperStyle}
+    >
+      <Text
+        color={'black'}
+        size={'small'}
       >
-        Set up Instagram direct scheduling.
-      </Link>
-    </div>
+        Buffer can now post directly to Instagram!
+        <span
+          style={linkWrapperStyle}
+        >
+          <Link
+            onClick={() => { onSetUpDirectPostingClick(); }}
+          >
+            Set up Instagram direct scheduling.
+          </Link>
+        </span>
+      </Text>
+    </span>
   </div>
 );
 
