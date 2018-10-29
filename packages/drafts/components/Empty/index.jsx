@@ -7,7 +7,6 @@ import {
   Button,
   Text,
 } from '@bufferapp/components';
-import styles from './style.css';
 
 const renderEmptyState = (isManager, view) => {
   let title;
@@ -45,7 +44,7 @@ const Empty = ({
   isManager,
   view,
 }) => (
-  <div className={styles.container}>
+  <div>
     { renderEmptyState(isManager, view) }
   </div>
   );
