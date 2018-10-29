@@ -5,7 +5,7 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
-import ComposerPopover from '../ComposerPopover';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
 import {
   Input,
 } from '@bufferapp/components';
@@ -123,7 +123,10 @@ const DraftList = ({
         </div>
       </div>
       {showComposer && editMode &&
-        <ComposerPopover onSave={onComposerCreateSuccess} />
+        <ComposerPopover 
+          type={'drafts'}
+          onSave={onComposerCreateSuccess} 
+        />
       }
       {
         postLists.length > 0 ?
