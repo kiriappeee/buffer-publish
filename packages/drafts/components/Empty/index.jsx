@@ -4,7 +4,6 @@ import {
   EmptyState,
 } from '@bufferapp/publish-shared-components';
 import {
-  Button,
   Text,
 } from '@bufferapp/components';
 
@@ -37,7 +36,8 @@ const renderEmptyState = (isManager, view) => {
       title={title}
       subtitle={subtitle}
       emoji={emoji}
-    />);
+    />
+  );
 };
 
 const Empty = ({
