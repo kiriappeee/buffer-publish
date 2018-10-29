@@ -34,6 +34,7 @@ ComposerPopover.propTypes = {
 ComposerPopover.defaultProps = {
   transparentOverlay: false,
   preserveComposerStateOnClose: false,
+  type: 'queue',
 };
 
 export default ComposerPopover;

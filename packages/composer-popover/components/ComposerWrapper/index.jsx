@@ -31,14 +31,12 @@ export default connect(
           options = {
             editMode: state.queue.editMode,
             post: state.queue.byProfileId[selectedProfileId].posts[postId],
-            draftMode: null,
           }
           break;
         case 'sent':
           options = {
             editMode: state.sent.editMode,
             post: state.sent.byProfileId[selectedProfileId].posts.find(p => p.id === postId),
-            draftMode: null,
           }
           break;
       }
@@ -47,9 +45,9 @@ export default connect(
         profiles: state.profileSidebar.profiles,
         enabledApplicationModes: state.enabledApplicationModes,
         environment: state.environment.environment,
-        editMode: options.editMode,
-        post: options.post,
-        draftMode: options.draftMode,
+        editMode: false,
+        draftMode: null,
+        ...options
       });
     }
     return {};
