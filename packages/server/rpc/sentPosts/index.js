@@ -1,4 +1,4 @@
-const { postParser } = require('@bufferapp/publish-utils');
+const { postParser } = require('@bufferapp/publish-parsers');
 const { method } = require('@bufferapp/buffer-rpc');
 const rp = require('request-promise');
 

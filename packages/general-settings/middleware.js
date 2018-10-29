@@ -1,4 +1,4 @@
-import { getURL } from '@bufferapp/publish-utils';
+import { getURL } from '@bufferapp/publish-formatters';
 import { actionTypes as profileActionTypes } from '@bufferapp/publish-profile-sidebar';
 import {
   actions as asyncDataFetch,

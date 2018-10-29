@@ -44,7 +44,7 @@ To get started on local development and testing:
 
 2. **Install the latest version of `yarn`**
   → [Installing Yarn](https://yarnpkg.com/en/docs/install)
-  
+
 3. **Make sure you have node with version <= 9 (Node v10 is not compatible)**
     ```
     $ node -v
@@ -107,11 +107,6 @@ Buffer Publish is a _monorepo_. That means it's composed of several separate par
 ## Publishing Packages
 
 Since our app is made from a bunch of npm packages, we can publish them to the npm repository when we've made changes. All packages are namespaced under the `@bufferapp` organization.
-
-|ℹ️  &nbsp;**When should you publish?**|
-|--|
-|In general, you should publish to npm when you've made significant changes to any local package, like fixing a bug, or finishing a feature. **Publishing your changes is usually* not a requirement for deploys to production (or staging servers) to work correctly.** This is because the process that bundles and deploys Publish does not fetch packages from npm if they are present in the repository (i.e., anything commited in `/packages`). Conversely, you would want to publish any changes to the Buffer Composer (`@bufferapp/buffer-composer`) since it doesn't live in this repo. (* The exception to this rule is any changes to the `@bufferapp/publish-utils` package that are consumed by the `server` package — since at this point the build process will grab the code from npm. See [this JIRA issue](https://buffer.atlassian.net/browse/ENG-163) for more context.) |
-
 
 **Login**
 Login to your NPM user who has access to the [`@bufferapp` npm organization](https://www.npmjs.com/org/bufferapp). If you're not part of the organization, ask someone on the team for help.

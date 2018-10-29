@@ -1,21 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { 
-  Text,
-  Link,
-} from '@bufferapp/components';
-import {
-  borderWidth,
-} from '@bufferapp/components/style/border';
-import {
-  mystic,
-} from '@bufferapp/components/style/color';
-import { 
-  constants,
-} from '@bufferapp/publish-utils';
-import { 
-  abbreviateNumber,
-} from '@bufferapp/publish-utils/number';
+import { Text, Link } from '@bufferapp/components';
+import { borderWidth } from '@bufferapp/components/style/border';
+import { mystic } from '@bufferapp/components/style/color';
+import { SERVICE_NAMES } from '@bufferapp/publish-constants';
+import { abbreviateNumber } from '@bufferapp/publish-formatters';
 
 const statsBarStyle = {
   display: 'flex',
@@ -34,11 +23,7 @@ const statsCellStyle = {
   flexDirection: 'column',
 };
 
-
-const PostStats = ({
-  statistics,
-  profileService,
-}) => {
+const PostStats = ({ statistics, profileService }) => {
   const titles = {
     retweets: 'Retweet',
     comments: 'Comment',
@@ -55,41 +40,55 @@ const PostStats = ({
   };
 
   const createElement = (typeStats) => {
-    let isLinkedinClicks = (typeStats === 'clicks' && profileService === 'linkedin');
+    const isLinkedinClicks = typeStats === 'clicks' && profileService === 'linkedin';
     let value = statistics[typeStats];
     let title = titles[typeStats];
     if (typeStats === 'reach_twitter' && profileService === 'twitter') {
-      value = statistics['reach'];
+      value = statistics.reach;
     }
     if (typeStats === 'reach' && profileService === 'twitter') {
       return;
     }
-    if ((typeStats !== 'reach' && typeStats !== 'reach_twitter' && typeStats !== 'plusOne') && value !== 1) {
+    if (
+      typeStats !== 'reach' &&
+      typeStats !== 'reach_twitter' &&
+      typeStats !== 'plusOne' &&
+      value !== 1
+    ) {
       title += 's';
     }
 
     return value === undefined ? null : (
       <div style={statsCellStyle} key={typeStats}>
-        <Text size={'large'} color={'black'}>{abbreviateNumber(value, 1)}</Text>
+        <Text size={'large'} color={'black'}>
+          {abbreviateNumber(value, 1)}
+        </Text>
         <span>
           <Text size={'mini'}>{title}</Text>
-          {isLinkedinClicks && 
-            <Link href={'https://faq.buffer.com/article/181-why-does-linkedin-sometimes-show-a-different-number-for-clicks'} unstyled>*</Link>
-          }
+          {isLinkedinClicks && (
+            <Link
+              href={
+                'https://faq.buffer.com/article/181-why-does-linkedin-sometimes-show-a-different-number-for-clicks'
+              }
+              unstyled
+            >
+              *
+            </Link>
+          )}
         </span>
       </div>
     );
   };
-  
+
   return (
     <div style={statsBarStyle}>
-      {Object.keys(titles).map((typeStats) => createElement(typeStats))}
+      {Object.keys(titles).map(typeStats => createElement(typeStats))}
     </div>
   );
 };
 
 PostStats.propTypes = {
-  profileService: PropTypes.oneOf(constants.SERVICE_NAMES),
+  profileService: PropTypes.oneOf(SERVICE_NAMES),
 };
 
 export default PostStats;

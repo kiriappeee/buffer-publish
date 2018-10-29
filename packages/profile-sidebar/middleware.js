@@ -1,5 +1,5 @@
 import { push } from 'react-router-redux';
-import { getURL } from '@bufferapp/publish-utils';
+import { getURL } from '@bufferapp/publish-formatters';
 
 import {
   generateProfilePageRoute,

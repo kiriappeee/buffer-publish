@@ -5,7 +5,7 @@ const SERVICE_GOOGLE = 'google';
 const SERVICE_PINTEREST = 'pinterest';
 const SERVICE_INSTAGRAM = 'instagram';
 
-const constants = {
+module.exports = {
   SERVICE_NAMES: [
     SERVICE_TWITTER,
     SERVICE_FACEBOOK,
@@ -21,5 +21,3 @@ const constants = {
   SERVICE_PINTEREST,
   SERVICE_INSTAGRAM,
 };
-
-module.exports = constants;

@@ -1,15 +1,14 @@
 {
-  "name": "@bufferapp/stripe",
+  "name": "@bufferapp/publish-composer-popover",
   "version": "1.9.25",
-  "description": "A Stripe library logic encapsulation",
+  "description": "Composer wrapper package",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ignore-pattern coverage node_modules"
   },
-  "author": "mike@msanroman.io",
+  "author": "ana@buffer.com",
   "dependencies": {
-    "@bufferapp/keywrapper": "0.2.0",
-    "@bufferapp/publish-formatters": "1.9.27"
+    "@bufferapp/composer": "2.1.8"
   },
   "devDependencies": {
     "eslint": "3.19.0"
