@@ -9,10 +9,12 @@ const textWrapperStyle = {
   marginBottom: '0.5rem',
 };
 
-const wrapperSidebarStyle = {
+const bitlyWrapperSidebarStyle = {
   flex: 'auto',
   flexDirection: 'column',
-  marginBottom: '1.5rem',
+};
+
+const wrapperSidebarStyle = {
   textAlign: 'right',
   whiteSpace: 'nowrap',
   marginLeft: '0.5rem',
@@ -32,6 +34,7 @@ const LinkShorteningWrapper = ({
     startSectionStyles,
     loading,
     selectedShortener,
+    showConnectBitly,
   }) => {
   const selectedValue = selectedShortener || (linkList && linkList.filter(ll => ll.selected));
 
@@ -43,6 +46,7 @@ const LinkShorteningWrapper = ({
         flexDirection: 'row',
         marginBottom: '0.5rem',
         width: '100%',
+        alignItems: 'center',
       }}
     >
       <div
@@ -61,7 +65,12 @@ const LinkShorteningWrapper = ({
         </div>
       }
       {linkList && !loading &&
-        <div style={wrapperSidebarStyle}>
+        <div
+          style={{
+            ...wrapperSidebarStyle,
+            ...(showConnectBitly ? bitlyWrapperSidebarStyle : {}),
+          }}
+        >
           <div>
             <Select
               options={linkList}
@@ -69,14 +78,16 @@ const LinkShorteningWrapper = ({
               value={selectedValue && selectedValue[0].value}
             />
           </div>
-          <div
-            style={{
-              marginTop: '0.5rem',
-              width: '100%',
-            }}
-          >
-            <Button fillContainer>Connect Bit.ly</Button>
-          </div>
+          {showConnectBitly &&
+            <div
+              style={{
+                marginTop: '0.5rem',
+                width: '100%',
+              }}
+            >
+              <Button fillContainer>Connect Bit.ly</Button>
+            </div>
+          }
         </div>
       }
     </div>
@@ -89,6 +100,7 @@ LinkShorteningWrapper.defaultProps = {
   startSectionStyles: null,
   loading: true,
   selectedShortener: null,
+  showConnectBitly: false,
 };
 
 LinkShorteningWrapper.propTypes = {
@@ -111,6 +123,7 @@ LinkShorteningWrapper.propTypes = {
     maxWidth: PropTypes.string,
   }),
   selectedShortener: PropTypes.string,
+  showConnectBitly: PropTypes.bool,
 };
 
 export default LinkShorteningWrapper;
