@@ -16,6 +16,7 @@ import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
 import MiniCalendar from '../MiniCalendar';
 import FeatureLoader from '@bufferapp/product-features';
+import InstagramDirectPostingBanner from '../InstagramDirectPostingBanner';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -116,8 +117,8 @@ const QueuedPosts = ({
           }
         </FeatureLoader>
 
-        {isInstagramProfile && !directPostingEnabled &&
-          <a onClick={onSetUpDirectPostingClick}>Set up direct posting!</a>
+        {isInstagramProfile && directPostingEnabled &&
+          <InstagramDirectPostingBanner onSetUpDirectPostingClick={onSetUpDirectPostingClick} />
         }
 
       </div>
