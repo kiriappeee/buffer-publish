@@ -1,4 +1,4 @@
-import { getURL } from '@bufferapp/publish-utils';
+import { getURL } from '@bufferapp/publish-formatters';
 import { actionTypes } from './reducer';
 
 export default () => next => (action) => {

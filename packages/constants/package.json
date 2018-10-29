@@ -1,12 +1,12 @@
 {
-  "name": "@bufferapp/publish-utils",
+  "name": "@bufferapp/publish-constants",
   "version": "1.9.25",
-  "description": "Misc. publish utils for dates, parsing, etc.",
+  "description": "Buffer Publish Constants",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ignore-pattern coverage node_modules"
   },
-  "author": "hamstu@gmail.com",
+  "author": "hharnisc@gmail.com",
   "devDependencies": {
     "eslint": "3.19.0"
   },
