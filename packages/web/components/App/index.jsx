@@ -12,6 +12,7 @@ import Preferences from '@bufferapp/publish-preferences';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 import AppModals from '@bufferapp/publish-modals';
+import { BufferLoading } from '@bufferapp/publish-shared-components';
 
 import DefaultPage from '@bufferapp/default-page';
 
@@ -39,15 +40,23 @@ class App extends Component { // eslint-disable-line
                 path={preferencePageRoute}
                 component={Preferences}
               />
-             <Route
+              <Route
                 path={childTabRoute}
                 component={ProfilePage}
-             />
+              />
               <Route
                 path={profilePageRoute}
                 component={ProfilePage}
               />
-              <Route component={DefaultPage} />
+              <Route
+                path="/new-connection"
+                component={DefaultPage}
+              />
+              <Route
+                exact
+                path="/"
+                render={() => <BufferLoading fullScreen />}
+              />
             </Switch>
           </EnsurePublishBetaUser>
         </div>

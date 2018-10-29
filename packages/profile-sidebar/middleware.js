@@ -19,12 +19,23 @@ import {
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
   switch (action.type) {
-    case 'APP_INIT':
+    case 'APP_INIT': {
       dispatch(dataFetchActions.fetch({
         name: 'profiles',
       }));
+      console.debug(getState());
+      const profilesLoaded = getState().profileSidebar.loading === false;
+      dispatch({ type: 'profile_loading_redirect', profiles_loaded: profilesLoaded });
       break;
+    }
     case `profiles_${dataFetchActionTypes.FETCH_SUCCESS}`: {
+      dispatch({ type: 'profile_loading_redirect', profiles_loaded: true });
+      break;
+    }
+    case 'profile_loading_redirect': {
+      if (!action.profiles_loaded) {
+        break;
+      }
       const path = getState().router.location.pathname;
       const params = getProfilePageParams({
         path,
@@ -32,12 +43,13 @@ export default ({ dispatch, getState }) => next => (action) => {
       const isPreferencePage = !!getPreferencePageParams({
         path,
       });
+      const profiles = getState().profileSidebar.profiles;
       if (params && params.profileId) {
         dispatch(actions.selectProfile({
-          profile: action.result.find(profile => profile.id === params.profileId),
+          profile: profiles.find(profile => profile.id === params.profileId),
         }));
-      } else if (!isPreferencePage && action.result.length > 0) {
-        const selectedProfile = action.result[0];
+      } else if (!isPreferencePage && profiles.length > 0) {
+        const selectedProfile = profiles[0];
         dispatch(actions.selectProfile({
           profile: selectedProfile,
         }));
@@ -45,9 +57,12 @@ export default ({ dispatch, getState }) => next => (action) => {
           profileId: selectedProfile.id,
           tabId: 'queue',
         })));
+      } else if (!isPreferencePage && profiles.length === 0) {
+        dispatch(push('/new-connection'));
       }
       break;
     }
+
     case actionTypes.PROFILE_PAUSED:
     case actionTypes.PROFILE_UNPAUSED:
       dispatch(dataFetchActions.fetch({
