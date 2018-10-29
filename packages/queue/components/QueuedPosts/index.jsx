@@ -24,7 +24,7 @@ const composerStyle = {
 
 const topBarContainerStyle = {
   display: 'flex',
-  position: 'relative'
+  position: 'relative',
 };
 
 const loadingContainerStyle = {
@@ -67,6 +67,7 @@ const QueuedPosts = ({
   onMiniCalendarMonthChange,
   subprofiles,
   isInstagramProfile,
+  directPostingEnabled,
 }) => {
   if (loading) {
     return (
@@ -106,16 +107,16 @@ const QueuedPosts = ({
             </Button>
           </div>
 
-          {showCalendar && 
-            <MiniCalendar 
-              numberOfPostsByDate={numberOfPostsByDate} 
-              onMonthChange={onMiniCalendarMonthChange}  
+          {showCalendar &&
+            <MiniCalendar
+              numberOfPostsByDate={numberOfPostsByDate}
+              onMonthChange={onMiniCalendarMonthChange}
             />
           }
         </FeatureLoader>
 
-        {isInstagramProfile &&
-        <div> </div>
+        {isInstagramProfile && !directPostingEnabled &&
+          <div> </div>
         }
 
       </div>
@@ -191,6 +192,7 @@ QueuedPosts.propTypes = {
     PropTypes.array,
   ]),
   IsInstagramProfile: PropTypes.bool,
+  directPostingEnabled: PropTypes.bool,
 };
 
 QueuedPosts.defaultProps = {
@@ -207,6 +209,7 @@ QueuedPosts.defaultProps = {
   numberOfPostsByDate: null,
   subprofiles: [],
   IsInstagramProfile: false,
+  directPostingEnabled: false,
 };
 
 export default QueuedPosts;
