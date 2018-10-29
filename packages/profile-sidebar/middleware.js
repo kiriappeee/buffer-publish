@@ -23,17 +23,16 @@ export default ({ dispatch, getState }) => next => (action) => {
       dispatch(dataFetchActions.fetch({
         name: 'profiles',
       }));
-      console.debug(getState());
-      const profilesLoaded = getState().profileSidebar.loading === false;
-      dispatch({ type: 'profile_loading_redirect', profiles_loaded: profilesLoaded });
+      dispatch({ type: 'profile_loading_redirect' });
       break;
     }
     case `profiles_${dataFetchActionTypes.FETCH_SUCCESS}`: {
-      dispatch({ type: 'profile_loading_redirect', profiles_loaded: true });
+      dispatch({ type: 'profile_loading_redirect' });
       break;
     }
     case 'profile_loading_redirect': {
-      if (!action.profiles_loaded) {
+      const profilesLoaded = getState().profileSidebar.loading === false;
+      if (!profilesLoaded) {
         break;
       }
       const path = getState().router.location.pathname;

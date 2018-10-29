@@ -12,8 +12,7 @@ import Preferences from '@bufferapp/publish-preferences';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 import AppModals from '@bufferapp/publish-modals';
-import { BufferLoading } from '@bufferapp/publish-shared-components';
-
+import InitialLoading from '@bufferapp/publish-initial-loading';
 import DefaultPage from '@bufferapp/default-page';
 
 const appStyle = {
@@ -55,7 +54,7 @@ class App extends Component { // eslint-disable-line
               <Route
                 exact
                 path="/"
-                render={() => <BufferLoading fullScreen />}
+                component={InitialLoading}
               />
             </Switch>
           </EnsurePublishBetaUser>

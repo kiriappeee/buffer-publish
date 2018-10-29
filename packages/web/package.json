@@ -17,6 +17,7 @@
     "@bufferapp/publish-preferences": "^1.9.25",
     "@bufferapp/publish-profile-sidebar": "^1.9.25",
     "@bufferapp/publish-routes": "1.9.3",
+    "@bufferapp/publish-initial-loading": "1.9.3",
     "@bufferapp/publish-store": "^1.9.25"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
