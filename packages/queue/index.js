@@ -41,6 +41,7 @@ export default connect(
         paused,
         numberOfPostsByDate: currentProfile.numberOfPostsByDate,
         subprofiles: state.profileSidebar && selectedProfile ? selectedProfile.subprofiles : [],
+        isInstagramProfile: state.profileSidebar.selectedProfile.type === "instagram",
       };
     }
     return {};

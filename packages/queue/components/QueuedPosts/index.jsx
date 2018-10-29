@@ -66,6 +66,7 @@ const QueuedPosts = ({
   numberOfPostsByDate,
   onMiniCalendarMonthChange,
   subprofiles,
+  isInstagramProfile,
 }) => {
   if (loading) {
     return (
@@ -112,6 +113,10 @@ const QueuedPosts = ({
             />
           }
         </FeatureLoader>
+
+        {isInstagramProfile &&
+        <div> </div>
+        }
 
       </div>
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
@@ -185,6 +190,7 @@ QueuedPosts.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  IsInstagramProfile: PropTypes.bool,
 };
 
 QueuedPosts.defaultProps = {
@@ -200,6 +206,7 @@ QueuedPosts.defaultProps = {
   showCalendar: false,
   numberOfPostsByDate: null,
   subprofiles: [],
+  IsInstagramProfile: false,
 };
 
 export default QueuedPosts;
