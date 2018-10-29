@@ -10,6 +10,10 @@ import {
   actionTypes as dataFetchActionTypes,
   actions as dataFetchActions,
 } from '@bufferapp/async-data-fetch';
+
+import { actionTypes as initialLoadingActionTypes } from '@bufferapp/publish-initial-loading';
+
+
 import { actions as notificationActions } from '@bufferapp/notifications';
 import {
   actions,
@@ -23,14 +27,14 @@ export default ({ dispatch, getState }) => next => (action) => {
       dispatch(dataFetchActions.fetch({
         name: 'profiles',
       }));
-      dispatch({ type: 'profile_loading_redirect' });
+      dispatch({ type: initialLoadingActionTypes.PROFILE_LOADING_REDIRECT });
       break;
     }
     case `profiles_${dataFetchActionTypes.FETCH_SUCCESS}`: {
-      dispatch({ type: 'profile_loading_redirect' });
+      dispatch({ type: initialLoadingActionTypes.PROFILE_LOADING_REDIRECT });
       break;
     }
-    case 'profile_loading_redirect': {
+    case initialLoadingActionTypes.PROFILE_LOADING_REDIRECT: {
       const profilesLoaded = getState().profileSidebar.loading === false;
       if (!profilesLoaded) {
         break;

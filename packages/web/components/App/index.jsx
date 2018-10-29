@@ -52,8 +52,6 @@ class App extends Component { // eslint-disable-line
                 component={DefaultPage}
               />
               <Route
-                exact
-                path="/"
                 component={InitialLoading}
               />
             </Switch>
