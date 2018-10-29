@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/maintenance-redirect",
-  "version": "1.9.11",
+  "version": "2.0.0",
   "description": "Redirect to login when maintenance response is received",
   "main": "index.js",
   "scripts": {
