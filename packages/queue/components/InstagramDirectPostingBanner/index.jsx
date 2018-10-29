@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Button, Divider,
-  Text,
+  Text, Link,
 } from '@bufferapp/components';
 
 const instagramDirectPostingStyle = {
@@ -37,11 +37,11 @@ const InstagramDirectPostingBanner = ({
       </div>
     </div>
     <div>
-      <a
+      <Link
         onClick={() => { onSetUpDirectPostingClick(); }}
       >
         Set up Instagram direct scheduling.
-      </a>
+      </Link>
     </div>
   </div>
 );
