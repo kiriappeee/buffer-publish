@@ -1,12 +1,15 @@
 {
-  "name": "@bufferapp/publish-initial-loading",
+  "name": "@bufferapp/publish-composer-popover",
   "version": "2.0.0",
-  "description": "Loading view when the app starts",
+  "description": "Composer wrapper package",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ignore-pattern coverage node_modules"
   },
-  "author": "jose@buffer.com",
+  "author": "ana@buffer.com",
+  "dependencies": {
+    "@bufferapp/composer": "2.1.9"
+  },
   "devDependencies": {
     "eslint": "3.19.0"
   },

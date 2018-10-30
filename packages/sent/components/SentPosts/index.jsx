@@ -14,7 +14,7 @@ import {
   fillColor,
   curiousBlue,
 } from '@bufferapp/components/style/color';
-import ComposerPopover from '../ComposerPopover';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
 
 const headerStyle = {
   marginBottom: '1.5rem',
@@ -78,12 +78,16 @@ const SentPosts = ({
             <ComposerPopover
               onSave={onComposerCreateSuccess}
               transparentOverlay
+              type={'sent'}
             />
           }
         </div>
       </div>
       {showComposer && editMode &&
-        <ComposerPopover onSave={onComposerCreateSuccess} />
+        <ComposerPopover 
+          onSave={onComposerCreateSuccess}
+          type={'sent'}
+        />
       }
       <PostLists
         postLists={postLists}
