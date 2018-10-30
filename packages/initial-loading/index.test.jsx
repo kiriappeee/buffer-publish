@@ -2,13 +2,10 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 
-import Example, {
-  reducer,
+import InitialLoading, {
   actions,
   actionTypes,
-  middleware,
 } from './index';
-import LoggedIn from './components/LoggedIn';
 
 const storeFake = state => ({
   default: () => {},
@@ -17,47 +14,22 @@ const storeFake = state => ({
   getState: () => ({ ...state }),
 });
 
-describe('Example', () => {
+describe('InitialLoading', () => {
   it('should render', () => {
     const store = storeFake({
-      example: {
-        loggedIn: false,
-      },
-      i18n: {
-        translations: {
-          example: {
-            loggedIn: 'Logged In...',
-            loggedOut: 'Logged Out...',
-          },
-        },
-      },
+
     });
     const wrapper = mount(
       <Provider store={store}>
-        <Example />
+        <InitialLoading />
       </Provider>,
     );
-    expect(wrapper.find(LoggedIn).length)
+    expect(wrapper.find(InitialLoading).length)
       .toBe(1);
-  });
-
-  it('should export reducer', () => {
-    expect(reducer)
-      .toBeDefined();
-  });
-
-  it('should export actions', () => {
-    expect(actions)
-      .toBeDefined();
   });
 
   it('should export actionTypes', () => {
     expect(actionTypes)
-      .toBeDefined();
-  });
-
-  it('should export middleware', () => {
-    expect(middleware)
       .toBeDefined();
   });
 });

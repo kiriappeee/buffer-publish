@@ -1,23 +1,21 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { checkA11y } from 'storybook-addon-a11y';
-import LoggedIn from './index';
+import { Provider } from 'react-redux';
 
-const translations = {
-  loggedIn: 'Logged In...',
-  loggedOut: 'Logged Out...',
-};
+import InitialLoading from './index';
 
-storiesOf('LoggedIn', module)
+const storeFake = state => ({
+  default: () => { },
+  subscribe: () => { },
+  dispatch: () => { },
+  getState: () => ({ ...state }),
+});
+
+storiesOf('InitialLoading', module)
   .addDecorator(checkA11y)
-  .add('should show user is logged in', () => (
-    <LoggedIn
-      translations={translations}
-      loggedIn
-    />
-  ))
-  .add('should show user is not logged in', () => (
-    <LoggedIn
-      translations={translations}
-    />
+  .addDecorator(getStory => <Provider store={storeFake}>{getStory()}</Provider>)
+  .add('default', () => (
+    <InitialLoading onCompomentMount={action('onComponentMount')} />
   ));

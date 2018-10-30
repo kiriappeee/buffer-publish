@@ -14,4 +14,4 @@ export default connect(
     }),
 )(InitialLoading);
 
-export reducer, { actions, actionTypes } from './reducer';
+export { actionTypes } from './reducer';
