@@ -4,6 +4,16 @@ import {
   Text, Link, CircleInstagramIcon,
 } from '@bufferapp/components';
 
+import {
+  borderRadius,
+  borderWidth,
+} from '@bufferapp/components/style/border';
+
+import {
+  curiousBlueUltraLight,
+  geyser,
+} from '@bufferapp/components/style/color';
+
 const textWrapperStyle = {
   display: 'flex',
   marginLeft: '0.3rem',
@@ -14,12 +24,12 @@ const linkWrapperStyle = {
 };
 
 const bannerWrapper = {
-  border: '1px solid #CAD4DB',
+  borderRadius,
+  border: `${borderWidth} solid ${geyser}`,
   display: 'flex',
   position: 'relative',
   padding: '0.5rem',
-  borderRadius: '0.2rem',
-  backgroundColor: '#F1F7FB',
+  backgroundColor: `${curiousBlueUltraLight}`,
   alignItems: 'center',
 };
 
