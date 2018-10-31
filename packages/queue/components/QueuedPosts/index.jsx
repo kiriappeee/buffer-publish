@@ -16,6 +16,7 @@ import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
 import MiniCalendar from '../MiniCalendar';
 import FeatureLoader from '@bufferapp/product-features';
+import InstagramDirectPostingBanner from '../InstagramDirectPostingBanner';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -24,7 +25,7 @@ const composerStyle = {
 
 const topBarContainerStyle = {
   display: 'flex',
-  position: 'relative'
+  position: 'relative',
 };
 
 const loadingContainerStyle = {
@@ -66,6 +67,9 @@ const QueuedPosts = ({
   numberOfPostsByDate,
   onMiniCalendarMonthChange,
   subprofiles,
+  isInstagramProfile,
+  directPostingEnabled,
+  onSetUpDirectPostingClick,
 }) => {
   if (loading) {
     return (
@@ -106,15 +110,18 @@ const QueuedPosts = ({
             </Button>
           </div>
 
-          {showCalendar && 
-            <MiniCalendar 
-              numberOfPostsByDate={numberOfPostsByDate} 
-              onMonthChange={onMiniCalendarMonthChange}  
+          {showCalendar &&
+            <MiniCalendar
+              numberOfPostsByDate={numberOfPostsByDate}
+              onMonthChange={onMiniCalendarMonthChange}
             />
           }
         </FeatureLoader>
 
       </div>
+      {isInstagramProfile && !directPostingEnabled &&
+        <InstagramDirectPostingBanner onSetUpDirectPostingClick={onSetUpDirectPostingClick} />
+      }
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
       {total < 1 &&
         <EmptyState
@@ -189,6 +196,9 @@ QueuedPosts.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
+  IsInstagramProfile: PropTypes.bool,
+  directPostingEnabled: PropTypes.bool,
+  onSetUpDirectPostingClick: PropTypes.func,
 };
 
 QueuedPosts.defaultProps = {
@@ -204,6 +214,8 @@ QueuedPosts.defaultProps = {
   showCalendar: false,
   numberOfPostsByDate: null,
   subprofiles: [],
+  IsInstagramProfile: false,
+  directPostingEnabled: false,
 };
 
 export default QueuedPosts;

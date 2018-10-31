@@ -41,6 +41,8 @@ export default connect(
         paused,
         numberOfPostsByDate: currentProfile.numberOfPostsByDate,
         subprofiles: state.profileSidebar && selectedProfile ? selectedProfile.subprofiles : [],
+        isInstagramProfile: state.profileSidebar && selectedProfile && selectedProfile.type === "instagram",
+        directPostingEnabled: state.profileSidebar && selectedProfile && selectedProfile.directPostingEnabled,
       };
     }
     return {};
@@ -132,6 +134,11 @@ export default connect(
         profileId: ownProps.profileId,
         startDate,
         endDate,
+      }));
+    },
+    onSetUpDirectPostingClick: () => {
+      dispatch(actions.handleSetUpDirectPostingClick({
+        profileId: ownProps.profileId,
       }));
     },
   }),

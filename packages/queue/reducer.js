@@ -24,6 +24,7 @@ export const actionTypes = keyWrapper('QUEUE', {
   POST_REQUEUE: 0,
   TOGGLE_CALENDAR: 0,
   GET_NUMBER_POSTS: 0,
+  SET_DIRECT_POSTING: 0,
 });
 
 export const initialState = {
@@ -551,7 +552,7 @@ export const actions = {
     type: actionTypes.TOGGLE_CALENDAR,
     profileId,
   }),
-  handleMiniCalendarMonthChange: ({ profileId, startDate, endDate}) => ({
+  handleMiniCalendarMonthChange: ({ profileId, startDate, endDate }) => ({
     type: actionTypes.GET_NUMBER_POSTS,
     profileId,
     startDate,
