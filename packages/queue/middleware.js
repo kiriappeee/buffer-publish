@@ -6,7 +6,6 @@ import {
 } from '@bufferapp/async-data-fetch';
 import { actions as notificationActions } from '@bufferapp/notifications';
 import { actionTypes, actions } from './reducer';
-import {getURL} from "@bufferapp/publish-formatters";
 
 export default ({ dispatch, getState }) => next => (action) => {
   next(action);
@@ -113,9 +112,6 @@ export default ({ dispatch, getState }) => next => (action) => {
           endDate: action.endDate,
         },
       }));
-      break;
-    case actionTypes.SET_DIRECT_POSTING:
-      window.location = getURL.getInstagramDirectPostingURL(action.profileId);
       break;
     case actionTypes.POST_DROPPED: {
       if (action.commit) {
