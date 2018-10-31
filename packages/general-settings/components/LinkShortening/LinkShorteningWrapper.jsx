@@ -27,6 +27,20 @@ const loadingContainerStyle = {
   textAlign: 'center',
 };
 
+const containerStyling = {
+  display: 'flex',
+  flex: '1 1 0%',
+  flexDirection: 'row',
+  marginBottom: '0.5rem',
+  width: '100%',
+  alignItems: 'center',
+};
+
+const connectBitlyButton = {
+  marginTop: '0.5rem',
+  width: '100%',
+};
+
 const LinkShorteningWrapper = ({
     onOptionSelect,
     children,
@@ -40,14 +54,7 @@ const LinkShorteningWrapper = ({
 
   return (
     <div
-      style={{
-        display: 'flex',
-        flex: '1 1 0%',
-        flexDirection: 'row',
-        marginBottom: '0.5rem',
-        width: '100%',
-        alignItems: 'center',
-      }}
+      style={containerStyling}
     >
       <div
         style={startSectionStyles}
@@ -79,12 +86,7 @@ const LinkShorteningWrapper = ({
             />
           </div>
           {showConnectBitly &&
-            <div
-              style={{
-                marginTop: '0.5rem',
-                width: '100%',
-              }}
-            >
+            <div style={connectBitlyButton} >
               <Button fillContainer>Connect Bit.ly</Button>
             </div>
           }

@@ -9,6 +9,14 @@ const textWrapperStyle = {
   marginBottom: '0.5rem',
 };
 
+const pinterestSectionStyling = {
+  padding: '10px',
+  background: '#efefef',
+  borderRadius: '6px',
+  backgroundClip: 'padding-box',
+  width: '100%',
+};
+
 const LinkShortening = ({
     onOptionSelect,
     profileService,
@@ -32,13 +40,7 @@ const LinkShortening = ({
       >
         <div style={textWrapperStyle}>
           <div
-            style={{
-              padding: '10px',
-              background: '#efefef',
-              borderRadius: '6px',
-              backgroundClip: 'padding-box',
-              width: '100%',
-            }}
+            style={pinterestSectionStyling}
           >
             <Text>
               Sadly, at the moment Pinterest does not allow posting of shortened links. <br />
