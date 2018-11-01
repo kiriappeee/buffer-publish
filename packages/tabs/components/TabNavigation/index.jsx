@@ -23,30 +23,31 @@ const TabNavigation = ({
   onChildTabClick,
   shouldShowUpgradeCta,
   shouldShowNestedSettingsTab,
-  showGeneralSettings,
   showUpgradeModal,
   hasDraftsFeatureFlip,
-}) =>
+}) => {
+  const selectedChildTab = selectedChildTabId || 'general-settings';
+  return (
   /* wrapper div with "tabs" id necessary as a selector
   for a11y focus after selecting profile in sidebar */
-  <div id="tabs" style={{ paddingLeft: '0.5rem' }}>
-    <Tabs
-      selectedTabId={selectedTabId}
-      onTabClick={onTabClick}
-    >
-      <Tab tabId={'queue'}>Queue</Tab>
-      <Tab tabId={'sent'}>Sent Posts</Tab>
-      {hasDraftsFeatureFlip && isBusinessAccount && isManager &&
+    <div id="tabs" style={{ paddingLeft: '0.5rem' }}>
+      <Tabs
+        selectedTabId={selectedTabId}
+        onTabClick={onTabClick}
+      >
+        <Tab tabId={'queue'}>Queue</Tab>
+        <Tab tabId={'sent'}>Sent Posts</Tab>
+        {hasDraftsFeatureFlip && isBusinessAccount && isManager &&
         <Tab tabId={'awaitingApproval'}>Awaiting Approval</Tab>
-      }
-      {hasDraftsFeatureFlip && isBusinessAccount && !isManager &&
+        }
+        {hasDraftsFeatureFlip && isBusinessAccount && !isManager &&
         <Tab tabId={'pendingApproval'}>Pending Approval</Tab>
-      }
-      {hasDraftsFeatureFlip && isBusinessAccount &&
+        }
+        {hasDraftsFeatureFlip && isBusinessAccount &&
         <Tab tabId={'drafts'}>Drafts</Tab>
-      }
-      <Tab tabId={'settings'}>Settings</Tab>
-      {shouldShowUpgradeCta &&
+        }
+        <Tab tabId={'settings'}>Settings</Tab>
+        {shouldShowUpgradeCta &&
         <div style={upgradeCtaStyle}>
           <Text size="mini">
             <Link
@@ -55,35 +56,35 @@ const TabNavigation = ({
               unstyled
               newTab
               href={'#'}
-              onClick={(e) => { e.preventDefault(); showUpgradeModal(); }}
+              onClick={(e) => {
+                e.preventDefault();
+                showUpgradeModal();
+              }}
             >
               Upgrade
             </Link>
           </Text>
         </div>
         }
-    </Tabs>
-    {shouldShowNestedSettingsTab &&
+      </Tabs>
+      {shouldShowNestedSettingsTab &&
       <Tabs
-        selectedTabId={selectedChildTabId}
+        selectedTabId={selectedChildTab}
         onTabClick={onChildTabClick}
       >
-        {/* This func should be removed once
-        the general settings tab is complete - Lola Oct/2018 */}
-        {showGeneralSettings &&
-          <Tab tabId={'general-settings'}>General</Tab>
-        }
+        <Tab tabId={'general-settings'}>General</Tab>
         <Tab tabId={'posting-schedule'}>Posting Schedule</Tab>
       </Tabs>
       }
-  </div>;
-
+    </div>
+  );
+};
 
 TabNavigation.defaultProps = {
   shouldShowUpgradeCta: false,
   hasDraftsFeatureFlip: false,
   shouldShowNestedSettingsTab: false,
-  showGeneralSettings: false,
+  selectedChildTabId: null,
 };
 
 TabNavigation.propTypes = {
@@ -95,7 +96,6 @@ TabNavigation.propTypes = {
   onChildTabClick: PropTypes.func.isRequired,
   selectedChildTabId: PropTypes.string,
   shouldShowNestedSettingsTab: PropTypes.bool,
-  showGeneralSettings: PropTypes.bool,
 };
 
 export default TabNavigation;

@@ -39,10 +39,10 @@ class App extends Component { // eslint-disable-line
                 path={preferencePageRoute}
                 component={Preferences}
               />
-             <Route
+              <Route
                 path={childTabRoute}
                 component={ProfilePage}
-             />
+              />
               <Route
                 path={profilePageRoute}
                 component={ProfilePage}
