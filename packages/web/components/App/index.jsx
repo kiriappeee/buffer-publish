@@ -12,7 +12,7 @@ import Preferences from '@bufferapp/publish-preferences';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 import AppModals from '@bufferapp/publish-modals';
-
+import InitialLoading from '@bufferapp/publish-initial-loading';
 import DefaultPage from '@bufferapp/default-page';
 
 const appStyle = {
@@ -47,7 +47,13 @@ class App extends Component { // eslint-disable-line
                 path={profilePageRoute}
                 component={ProfilePage}
               />
-              <Route component={DefaultPage} />
+              <Route
+                path="/new-connection"
+                component={DefaultPage}
+              />
+              <Route
+                component={InitialLoading}
+              />
             </Switch>
           </EnsurePublishBetaUser>
         </div>
