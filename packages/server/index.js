@@ -27,7 +27,6 @@ let staticAssets = {
   'bundle.js': 'https://local.buffer.com:8080/static/bundle.js',
   'bundle.css': 'https://local.buffer.com:8080/static/bundle.css',
   'vendor.js': 'https://local.buffer.com:8080/static/vendor.js',
-  'vendor.css': 'https://local.buffer.com:8080/static/vendor.css',
 };
 
 // NOTE: Bugsnag will not notify in local setup with current weback configuration
@@ -86,7 +85,6 @@ const getHtml = () =>
   fs
     .readFileSync(join(__dirname, 'index.html'), 'utf8')
     .replace('{{{vendor}}}', staticAssets['vendor.js'])
-    .replace('{{{vendor-css}}}', staticAssets['vendor.css'])
     .replace('{{{bundle}}}', staticAssets['bundle.js'])
     .replace('{{{bundle-css}}}', staticAssets['bundle.css'])
     .replace('{{{stripeScript}}}', stripeScript)
