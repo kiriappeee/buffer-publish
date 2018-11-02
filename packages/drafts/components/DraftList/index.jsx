@@ -61,16 +61,10 @@ const renderDraftList = ({
 
 const renderEmpty = ({
   manager,
-  userMessages,
-  userNewDraftsSubscribeLink,
-  onUserReadMessage,
   view,
 }) =>
   <Empty
     isManager={manager}
-    userMessages={userMessages}
-    userNewDraftsSubscribeLink={userNewDraftsSubscribeLink}
-    handleUserReadMessage={onUserReadMessage}
     view={'drafts'}
   />;
 
@@ -79,8 +73,6 @@ const DraftList = ({
   loading,
   postLists,
   manager,
-  userMessages,
-  userNewDraftsSubscribeLink,
   onApproveClick,
   onCancelConfirmClick,
   onDeleteClick,
@@ -89,7 +81,6 @@ const DraftList = ({
   onMoveToDraftsClick,
   onRequestApprovalClick,
   onRescheduleClick,
-  onUserReadMessage,
   onComposerPlaceholderClick,
   onComposerCreateSuccess,
   showComposer,
@@ -143,9 +134,6 @@ const DraftList = ({
         }) :
         renderEmpty({
           manager,
-          userMessages,
-          userNewDraftsSubscribeLink,
-          onUserReadMessage,
           view: 'drafts',
         })
       }
@@ -162,8 +150,6 @@ DraftList.propTypes = {
     }),
   ),
   manager: PropTypes.bool,
-  userMessages: PropTypes.arrayOf(),
-  userNewDraftsSubscribeLink: PropTypes.string,
   total: PropTypes.number,
   onApproveClick: PropTypes.func.isRequired,
   onCancelConfirmClick: PropTypes.func.isRequired,
@@ -173,12 +159,10 @@ DraftList.propTypes = {
   onMoveToDraftsClick: PropTypes.func.isRequired,
   onRequestApprovalClick: PropTypes.func.isRequired,
   onRescheduleClick: PropTypes.func.isRequired,
-  onUserReadMessage: PropTypes.func.isRequired,
 };
 
 DraftList.defaultProps = {
   loading: true,
-  userMessages: [],
 };
 
 export default DraftList;
