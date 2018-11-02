@@ -113,6 +113,7 @@ We have a few helpful commands defined in this project's `package.json`.
 | `yarn run clean`  | Deletes all `node_modules` from all packages. Use this first if you see any odd dependency errors and then follow with `yarn`. |
 | `yarn run test`  | Runs `yarn test` on all packages. |
 | `yarn run test-update`  | Runs `yarn run test-update` on all packages to update all snapshot tests. |
+`yarn test:debug <path to test>` | Runs `"node --inspect node_modules/.bin/jest --runInBand"` with the test you specify.
 | `yarn run start`  | Starts up the Publish Express server, [as explained above](#the-publish-server), and is run automatically when you start Publish with `./dev up`. (So in most cases you won't be running this command.) |
 
 ## Adding New Dependencies
@@ -193,6 +194,16 @@ export default (state, action) => {
   }
 };
 ```
+## Testing
+
+### Debugging
+
+To use the `yarn test:debug` script, follow these instructions:
+1. Add a `debugger` statement near the failing line in your test.
+2. Type `chrome://inspect` in your chrome browser address bar.
+3. Click on "Open dedicated DevTools for Node".
+4. In your terminal run `yarn test:debug <path to test>`
+5. Visit the inspector you opened up, you should see that the debugger has been triggered and the app has paused near the line that is failing.
 
 ## External Packages
 
