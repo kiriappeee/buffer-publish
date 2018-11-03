@@ -7,10 +7,10 @@ const wrapper = {
   maxWidth: '800px',
 };
 
-storiesOf('EditEmail')
+storiesOf('EditEmail', module)
   .addDecorator(checkA11y)
   .add('clicking on the edit link displays the modal', () => (
     <div style={wrapper}>
-      <EditEmail email="hello@bufferapp.com" onClick={action('display modal')}/>
+      <EditEmail email="hello@bufferapp.com" onClick={action('display modal')} />
     </div>
   ));

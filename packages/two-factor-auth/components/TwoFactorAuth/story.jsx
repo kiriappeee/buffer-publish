@@ -1,11 +1,12 @@
 import React from 'react';
-import { action, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { checkA11y } from 'storybook-addon-a11y';
 import TwoFactorAuth from './index';
 import machine from '../../machine';
 
 const transitionAction = action('transition');
-const stories = storiesOf('TwoFactorAuth').addDecorator(checkA11y);
+const stories = storiesOf('TwoFactorAuth', module).addDecorator(checkA11y);
 
 Object.keys(machine).forEach((machineState) => {
   stories.add(machineState, () => (

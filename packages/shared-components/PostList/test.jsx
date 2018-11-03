@@ -1,23 +1,40 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import PostList from './index';
+import { Provider } from 'react-redux';
 import {
   posts,
   confirmDeletePosts,
 } from './postData';
 
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
+
 describe('PostList', () => {
   it('should trigger onEditClick', () => {
     const handleEditClick = jest.fn();
     const wrapper = mount(
-      <PostList
-        posts={posts}
-        onDeleteCancel={() => {}}
-        onDeleteClick={() => {}}
-        onDeleteConfirmClick={() => {}}
-        onEditClick={handleEditClick}
-        onShareNowClick={() => {}}
-      />,
+      <Provider store={store}>
+        <PostList
+          posts={posts}
+          onDeleteCancel={() => {}}
+          onDeleteClick={() => {}}
+          onDeleteConfirmClick={() => {}}
+          onEditClick={handleEditClick}
+          onShareNowClick={() => {}}
+        />
+      </Provider>,
     );
     // click on the edit button
     wrapper
@@ -33,14 +50,16 @@ describe('PostList', () => {
   it('should trigger onShareNowClick', () => {
     const handleShareNowClick = jest.fn();
     const wrapper = mount(
-      <PostList
-        posts={posts}
-        onDeleteCancel={() => {}}
-        onDeleteClick={() => {}}
-        onDeleteConfirmClick={() => {}}
-        onEditClick={() => {}}
-        onShareNowClick={handleShareNowClick}
-      />,
+      <Provider store={store}>
+        <PostList
+          posts={posts}
+          onDeleteCancel={() => {}}
+          onDeleteClick={() => {}}
+          onDeleteConfirmClick={() => {}}
+          onEditClick={() => {}}
+          onShareNowClick={handleShareNowClick}
+        />
+      </Provider>,
     );
     // click on the edit button
     wrapper
@@ -56,14 +75,16 @@ describe('PostList', () => {
   it('should trigger onDeleteConfirmClick', () => {
     const handleDeleteConfirmClick = jest.fn();
     const wrapper = mount(
-      <PostList
-        posts={confirmDeletePosts}
-        onDeleteCancel={() => {}}
-        onDeleteClick={() => {}}
-        onDeleteConfirmClick={handleDeleteConfirmClick}
-        onEditClick={() => {}}
-        onShareNowClick={() => {}}
-      />,
+      <Provider store={store}>
+        <PostList
+          posts={confirmDeletePosts}
+          onDeleteCancel={() => {}}
+          onDeleteClick={() => {}}
+          onDeleteConfirmClick={handleDeleteConfirmClick}
+          onEditClick={() => {}}
+          onShareNowClick={() => {}}
+        />
+      </Provider>,
     );
     // click on the confirm delete button
     wrapper
@@ -79,14 +100,16 @@ describe('PostList', () => {
   it('should trigger onCancelConfirmClick', () => {
     const handleCancelConfirmClick = jest.fn();
     const wrapper = mount(
-      <PostList
-        posts={confirmDeletePosts}
-        onCancelConfirmClick={handleCancelConfirmClick}
-        onDeleteClick={() => {}}
-        onDeleteConfirmClick={() => {}}
-        onEditClick={() => {}}
-        onShareNowClick={() => {}}
-      />,
+      <Provider store={store}>
+        <PostList
+          posts={confirmDeletePosts}
+          onCancelConfirmClick={handleCancelConfirmClick}
+          onDeleteClick={() => {}}
+          onDeleteConfirmClick={() => {}}
+          onEditClick={() => {}}
+          onShareNowClick={() => {}}
+        />
+      </Provider>,
     );
     // click on the confirm delete button
     wrapper
@@ -102,14 +125,16 @@ describe('PostList', () => {
   it('should trigger onDeleteClick', () => {
     const handleDeleteClick = jest.fn();
     const wrapper = mount(
-      <PostList
-        posts={posts}
-        onDeleteCancel={() => {}}
-        onDeleteClick={handleDeleteClick}
-        onDeleteConfirmClick={() => {}}
-        onEditClick={() => {}}
-        onShareNowClick={() => {}}
-      />,
+      <Provider store={store}>
+        <PostList
+          posts={posts}
+          onDeleteCancel={() => {}}
+          onDeleteClick={handleDeleteClick}
+          onDeleteConfirmClick={() => {}}
+          onEditClick={() => {}}
+          onShareNowClick={() => {}}
+        />
+      </Provider>,
     );
     // click on the approve button
     wrapper

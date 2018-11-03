@@ -5,7 +5,7 @@ import {
 
 export const actionTypes = {};
 
-const initialState = {
+export const initialState = {
   redirecting: false,
   showGoBackToClassic: false,
   submittingFeedback: false,
@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
     case `user_${dataFetchActionTypes.FETCH_SUCCESS}`:
       return {
         ...state,
-        showGoBackToClassic: true,
+        showGoBackToClassic: !action.result.features.includes('new_publish_new_buffer_free_users'),
         user: {
           ...action.result,
           loading: false,

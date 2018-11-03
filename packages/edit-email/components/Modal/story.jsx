@@ -7,11 +7,10 @@ const wrapper = {
   maxWidth: '800px',
 };
 
-storiesOf('Edit email modal')
+storiesOf('Edit email modal', module)
   .addDecorator(checkA11y)
   .add('modal', () => (
     <div style={wrapper}>
       <Modal email="hello@bufferapp.com" updateEmail={action('update email')} hideModal={action('hide modal')}/>
     </div>
   ));
-

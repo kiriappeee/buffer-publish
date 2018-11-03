@@ -5,6 +5,21 @@ import {
 } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 import MultipleImagesPost from './index';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const links = [{
   displayString: 'http://buff.ly/1LTbUqv',
@@ -12,11 +27,20 @@ const links = [{
   rawString: 'http://buff.ly/1LTbUqv',
   url: 'https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x',
 }];
+const multilineLinks = [{
+  ...links[0],
+  indices: [78, 100],
+}];
 
 const text = 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv';
+const multilineText = 'What is a Product Designer? \n\nAn awesome story by @jgadapee over on Medium! \n\nhttp://buff.ly/1LTbUqv';
 
 const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
+};
+
+const postDetailsSent = {
+  postAction: 'This post was sent at 9:21 (GMT)',
 };
 
 const postDetailsError = {
@@ -31,8 +55,13 @@ const imageUrls = [
   'http://via.placeholder.com/400x400',
 ];
 
-storiesOf('MultipleImagesPost')
+storiesOf('MultipleImagesPost', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued multiple image post', () => (
     <MultipleImagesPost
       postDetails={postDetails}
@@ -44,7 +73,26 @@ storiesOf('MultipleImagesPost')
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
-      sent={false}
+      isSent={false}
+      onImageClick={action('image-click')}
+      onImageClickNext={action('image-click-next')}
+      onImageClickPrev={action('image-click-prev')}
+      onImageClose={action('image-close')}
+      currentImage={0}
+    />
+  ))
+  .add('queued multiple image post with multi-line text', () => (
+    <MultipleImagesPost
+      postDetails={postDetails}
+      links={multilineLinks}
+      imageUrls={imageUrls}
+      onCancelConfirmClick={action('cancel-confirm-click')}
+      onDeleteClick={action('delete-click')}
+      onDeleteConfirmClick={action('delete-confirm-click')}
+      onEditClick={action('edit-click')}
+      onShareNowClick={action('share-now-click')}
+      text={multilineText}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -54,7 +102,7 @@ storiesOf('MultipleImagesPost')
   ))
   .add('sent multiple image post', () => (
     <MultipleImagesPost
-      postDetails={postDetails}
+      postDetails={postDetailsSent}
       links={links}
       imageUrls={imageUrls}
       onCancelConfirmClick={action('cancel-confirm-click')}
@@ -63,7 +111,7 @@ storiesOf('MultipleImagesPost')
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
-      sent
+      isSent
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}
@@ -82,7 +130,7 @@ storiesOf('MultipleImagesPost')
       onEditClick={action('edit-click')}
       onShareNowClick={action('share-now-click')}
       text={text}
-      sent={false}
+      isSent={false}
       onImageClick={action('image-click')}
       onImageClickNext={action('image-click-next')}
       onImageClickPrev={action('image-click-prev')}

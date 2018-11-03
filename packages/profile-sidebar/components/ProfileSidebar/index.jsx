@@ -7,6 +7,7 @@ import {
   QuestionIcon,
   IconArrowPopover,
 } from '@bufferapp/components';
+import FeatureLoader from '@bufferapp/product-features';
 import {
   offWhite,
   mystic,
@@ -51,7 +52,7 @@ const buttonDividerStyle = {
   marginBottom: '1rem',
 };
 
-const renderLockedHeader = translations => (
+const renderLockedHeader = ({translations, profileLimit}) => (
   <div style={lockedAccountHeaderStyle}>
     <Text size={'small'}>
       {translations.lockedList}
@@ -59,18 +60,24 @@ const renderLockedHeader = translations => (
     <div style={{ position: 'absolute', marginLeft: '13rem' }}>
       <IconArrowPopover
         icon={<QuestionIcon />}
-        position="above"
+        position='above'
         shadow
         oneLine={false}
-        width="320px"
+        width='320px'
         label={translations.lockedList}
       >
         <div style={{ padding: '.5rem .25rem' }}>
-          {translations.lockedListTooltip}
+          {translations.lockedListTooltip1 + profileLimit + translations.lockedListTooltip2}
         </div>
       </IconArrowPopover>
     </div>
   </div>
+);
+
+const DefaultFallbackType = (
+  <Text size={'large'} >
+    Free
+  </Text>
 );
 
 const productTitle = (
@@ -84,11 +91,14 @@ const productTitle = (
         Publish
       </Text>
     </span>
-    <Text
-      size={'large'}
+    <FeatureLoader
+      fallback={DefaultFallbackType}
+      supportedPlans={'pro'}
     >
-      Free
-    </Text>
+      <Text size={'large'} >
+        Pro
+      </Text>
+    </FeatureLoader>
     <Divider marginTop={'1rem'} />
   </div>
 );
@@ -96,10 +106,10 @@ const productTitle = (
 const renderLoadingProfiles = () => (
   <div>
     <LoadingProfileListItem />
-    <LoadingProfileListItem offset="100ms" />
-    <LoadingProfileListItem offset="200ms" />
-    <LoadingProfileListItem offset="300ms" />
-    <LoadingProfileListItem offset="400ms" />
+    <LoadingProfileListItem offset='100ms' />
+    <LoadingProfileListItem offset='200ms' />
+    <LoadingProfileListItem offset='300ms' />
+    <LoadingProfileListItem offset='400ms' />
   </div>
 );
 
@@ -111,6 +121,7 @@ const ProfileSidebar = ({
   translations,
   onProfileClick,
   onConnectSocialAccountClick,
+  profileLimit,
 }) =>
   <div style={profileSidebarStyle}>
     {productTitle}
@@ -121,7 +132,7 @@ const ProfileSidebar = ({
         profiles={profiles}
         onProfileClick={onProfileClick}
       />
-      {lockedProfiles.length > 0 && renderLockedHeader(translations) }
+      {lockedProfiles.length > 0 && renderLockedHeader({translations, profileLimit}) }
       {lockedProfiles.length > 0 && <Divider />}
       <ProfileList
         selectedProfileId={selectedProfileId}
@@ -159,6 +170,7 @@ ProfileSidebar.propTypes = {
     lockedList: PropTypes.string,
     lockedListTooltip: PropTypes.string,
   }).isRequired,
+  profileLimit: PropTypes.number,
 };
 
 ProfileSidebar.defaultProps = {

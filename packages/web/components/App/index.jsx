@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { profilePageRoute, preferencePageRoute } from '@bufferapp/publish-routes';
+import { profilePageRoute, preferencePageRoute, childTabRoute } from '@bufferapp/publish-routes';
 import { Route, Switch } from 'react-router';
 
 import { DragDropContext } from 'react-dnd';
@@ -12,8 +12,8 @@ import Preferences from '@bufferapp/publish-preferences';
 import AppSwitcher from '@bufferapp/publish-app-switcher';
 import EnsurePublishBetaUser from '@bufferapp/publish-beta-redirect';
 import AppModals from '@bufferapp/publish-modals';
-
-import DefaultPage from '../DefaultPage';
+import InitialLoading from '@bufferapp/publish-initial-loading';
+import DefaultPage from '@bufferapp/default-page';
 
 const appStyle = {
   display: 'flex',
@@ -40,10 +40,20 @@ class App extends Component { // eslint-disable-line
                 component={Preferences}
               />
               <Route
+                path={childTabRoute}
+                component={ProfilePage}
+              />
+              <Route
                 path={profilePageRoute}
                 component={ProfilePage}
               />
-              <Route component={DefaultPage} />
+              <Route
+                path="/new-connection"
+                component={DefaultPage}
+              />
+              <Route
+                component={InitialLoading}
+              />
             </Switch>
           </EnsurePublishBetaUser>
         </div>

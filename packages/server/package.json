@@ -1,47 +1,34 @@
 {
   "name": "@bufferapp/publish-server",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "description": "",
   "scripts": {
-    "start": "micro",
-    "lint": "eslint . --ignore-pattern coverage node_modules",
-    "test": "sh ../../package_test.sh",
-    "test-watch": "jest --watch"
+    "start": "node index.js",
+    "lint": "eslint . --ignore-pattern coverage node_modules"
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
+    "@bufferapp/buffer-rpc": "0.0.4",
     "@bufferapp/buffermetrics": "0.5.2",
     "@bufferapp/logger": "0.7.0",
-    "@bufferapp/micro-rpc": "0.1.6",
-    "@bufferapp/publish-utils": "^1.9.0",
-    "@bufferapp/session-manager": "0.6.2",
+    "@bufferapp/publish-parsers": "1.9.26",
+    "@bufferapp/publish-formatters": "1.9.27",
+    "@bufferapp/session-manager": "0.7.1",
     "@bufferapp/shutdown-helper": "0.2.0",
     "body-parser": "1.17.2",
     "bugsnag": "1.11.0",
     "cookie-parser": "1.4.3",
     "express": "4.15.3",
     "jsonwebtoken": "7.4.1",
-    "micro": "7.3.3",
-    "micro-rpc-client": "0.1.2",
-    "microrouter": "2.1.1",
+    "micro-rpc-client": "0.1.4",
+    "moment-timezone": "0.5.13",
     "node-dogstatsd": "0.0.6",
     "pusher": "1.5.1",
     "request": "2.81.0",
     "request-promise": "4.2.1"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "eslint": "3.19.0",
-    "extract-text-webpack-plugin": "2.1.2",
-    "jest": "19.0.2",
-    "optimize-css-assets-webpack-plugin": "^3.2.0",
-    "postcss-calc": "5.2.0",
-    "postcss-color-function": "2.0.1",
-    "postcss-custom-properties": "5.0.0",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "0.8.2"
+    "eslint": "3.19.0"
   },
   "publishConfig": {
     "access": "public"

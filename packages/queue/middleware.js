@@ -24,6 +24,23 @@ export default ({ dispatch, getState }) => next => (action) => {
         },
       }));
       break;
+    case `updatePausedSchedules_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      dispatch(dataFetchActions.fetch({
+        name: 'queuedPosts',
+        args: {
+          profileId: action.args.profileId,
+          isFetchingMore: false,
+        },
+      }));
+      break;
+    case `COMPOSER_EVENT`:
+      if (action.eventType === 'saved-drafts') {
+        dispatch(notificationActions.createNotification({
+          notificationType: 'success',
+          message: action.data.message,
+        }));
+      }
+      break;
     case `requeuePost_${dataFetchActionTypes.FETCH_SUCCESS}`:
       dispatch(dataFetchActions.fetch({
         name: 'queuedPosts',
@@ -86,7 +103,16 @@ export default ({ dispatch, getState }) => next => (action) => {
         message: action.error,
       }));
       break;
-
+    case actionTypes.GET_NUMBER_POSTS:
+      dispatch(dataFetchActions.fetch({
+        name: 'getNumberOfPosts',
+        args: {
+          profileId: action.profileId,
+          startDate: action.startDate,
+          endDate: action.endDate,
+        },
+      }));
+      break;
     case actionTypes.POST_DROPPED: {
       if (action.commit) {
         const state = getState();

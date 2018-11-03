@@ -1,0 +1,24 @@
+{
+  "name": "@bufferapp/default-page",
+  "version": "2.0.0",
+  "description": "Default Page package",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ignore-pattern coverage node_modules",
+    "storybook": "start-storybook -p 9001",
+    "test-watch": "jest --watch"
+  },
+  "author": "amylee@buffer.com",
+  "dependencies": {
+    "@bufferapp/keywrapper": "0.2.0",
+    "@bufferapp/publish-profile-sidebar": "2.0.0",
+    "@bufferapp/publish-shared-components": "2.0.0",
+    "@bufferapp/publish-formatters": "1.9.27"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

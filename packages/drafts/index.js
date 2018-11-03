@@ -1,20 +1,18 @@
 import { connect } from 'react-redux';
-import { getDateString, isInThePast } from '@bufferapp/publish-utils/date';
+import { getDateString, isInThePast } from '@bufferapp/publish-formatters';
 import { actions } from './reducer';
 import DraftList from './components/DraftList';
 
 // TODO: move these to utils
 const getPostActionString = ({ draft, profileTimezone, isPastDue, twentyFourHourTime }) => {
   if (draft.scheduled_at) {
-    const dateString = getDateString(
-      draft.scheduled_at,
-      profileTimezone,
-      {
-        isPastDue,
-        twentyFourHourTime,
-      },
-    );
-    return `This draft ${isPastDue ? 'was' : 'will be'} scheduled for ${dateString}${isPastDue ? '' : ' on approval'}.`;
+    const dateString = getDateString(draft.scheduled_at, profileTimezone, {
+      isPastDue,
+      twentyFourHourTime,
+    });
+    return `This draft ${isPastDue ? 'was' : 'will be'} scheduled for ${dateString}${
+      isPastDue ? '' : ' on approval'
+    }.`;
   } else if (draft.shared_next) {
     return 'This draft will be added to the top of the queue on approval.';
   }
@@ -22,21 +20,12 @@ const getPostActionString = ({ draft, profileTimezone, isPastDue, twentyFourHour
   return 'This draft will be added to the queue on approval.';
 };
 
-const getDraftDetails = ({
-  draft,
-  profileTimezone,
-  isPastDue,
-  twentyFourHourTime,
-}) => {
+const getDraftDetails = ({ draft, profileTimezone, isPastDue, twentyFourHourTime }) => {
   const createdAt = draft.created_at;
-  const createdAtString = getDateString(
+  const createdAtString = getDateString(createdAt, profileTimezone, {
     createdAt,
-    profileTimezone,
-    {
-      createdAt,
-      twentyFourHourTime,
-    },
-  );
+    twentyFourHourTime,
+  });
   let avatarUrl = '';
   if (draft.user) {
     avatarUrl = draft.user.avatar || draft.user.gravatar;
@@ -107,30 +96,48 @@ export default connect(
         environment: state.environment.environment,
         editMode: state.drafts.editMode,
         editingPostId: state.drafts.editingPostId,
-        userMessages: state.appSidebar.user.messages,
-        userNewDraftsSubscribeLink: state.appSidebar.user.new_contributions_emails_subscribe_link,
       };
     }
     return {};
   },
   (dispatch, ownProps) => ({
+    onEditClick: (draft) => {
+      dispatch(
+        actions.handleEditClick({
+          draft: draft.draft,
+          profileId: ownProps.profileId,
+        }),
+      );
+    },
     onDeleteClick: (draft) => {
-      dispatch(actions.handleDeleteClick({
-        draft: draft.draft,
-        profileId: ownProps.profileId,
-      }));
+      dispatch(
+        actions.handleDeleteClick({
+          draft: draft.draft,
+          profileId: ownProps.profileId,
+        }),
+      );
     },
     onCancelConfirmClick: (draft) => {
-      dispatch(actions.handleCancelConfirmClick({
-        draft: draft.draft,
-        profileId: ownProps.profileId,
-      }));
+      dispatch(
+        actions.handleCancelConfirmClick({
+          draft: draft.draft,
+          profileId: ownProps.profileId,
+        }),
+      );
     },
     onDeleteConfirmClick: (draft) => {
-      dispatch(actions.handleDeleteConfirmClick({
-        draft: draft.draft,
-        profileId: ownProps.profileId,
-      }));
+      dispatch(
+        actions.handleDeleteConfirmClick({
+          draft: draft.draft,
+          profileId: ownProps.profileId,
+        }),
+      );
+    },
+    onComposerPlaceholderClick: () => {
+      dispatch(actions.handleComposerPlaceholderClick());
+    },
+    onComposerCreateSuccess: () => {
+      dispatch(actions.handleComposerCreateSuccess());
     },
   }),
 )(DraftList);

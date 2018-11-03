@@ -16,7 +16,7 @@ const time = {
   },
 };
 
-storiesOf('ScheduleTableCell')
+storiesOf('ScheduleTableCell', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <ScheduleTableCell

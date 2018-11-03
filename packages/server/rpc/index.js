@@ -1,5 +1,5 @@
-const { rpc } = require('@bufferapp/micro-rpc');
-const checkToken = require('./checkToken');
+const { rpc } = require('@bufferapp/buffer-rpc');
+
 const profilesMethod = require('./profiles');
 const queuedPostsMethod = require('./queuedPosts');
 const sentPostsMethod = require('./sentPosts');
@@ -30,8 +30,12 @@ const twoFactorRecovery = require('./twoFactorRecovery');
 const closeAccount = require('./closeAccount');
 const connectedApps = require('./connectedApps');
 const revokeConnectedApp = require('./revokeConnectedApp');
+const getNumberOfPostsMethod = require('./getNumberPosts');
+const featureMethod = require('./features');
+const getLinkShortener = require('./getLinkShortener');
+const changeLinkShortener = require('./changeLinkShortener');
 
-module.exports = checkToken(rpc(
+module.exports = rpc(
   profilesMethod,
   queuedPostsMethod,
   sentPostsMethod,
@@ -62,4 +66,8 @@ module.exports = checkToken(rpc(
   closeAccount,
   connectedApps,
   revokeConnectedApp,
-));
+  getNumberOfPostsMethod,
+  featureMethod,
+  getLinkShortener,
+  changeLinkShortener,
+);

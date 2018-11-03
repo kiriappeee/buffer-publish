@@ -25,6 +25,10 @@ const store = storeFake({
   },
   upgradeModal: {},
   stripe: {},
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  },
 });
 
 const UpgradeModalDecorator = storyFn => (
@@ -45,7 +49,7 @@ class _TestContextContainer extends Component { // eslint-disable-line
 }
 const TestContextContainer = DragDropContext(TestBackend)(_TestContextContainer);
 
-storiesOf('QueuedPosts')
+storiesOf('QueuedPosts', module)
   .addDecorator(checkA11y)
   .addDecorator(UpgradeModalDecorator)
   .addDecorator(getStory => <TestContextContainer>{getStory()}</TestContextContainer>)

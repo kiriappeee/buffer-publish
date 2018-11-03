@@ -24,6 +24,7 @@ export default connect(
     const paused =
       (state.profileSidebar.profiles.filter(p => p.id === profileId && p.paused).length) > 0;
     if (currentProfile) {
+      const { profileSidebar: { selectedProfile } = {} } = state;
       return {
         loading: currentProfile.loading,
         loadingMore: currentProfile.loadingMore,
@@ -37,8 +38,11 @@ export default connect(
         editMode: state.queue.editMode,
         editingPostId: state.queue.editingPostId,
         showCalendar: currentProfile.showCalendar,
-        hasCalendarFeatureFlip: state.appSidebar.user.features.includes('mini_calendar'),
         paused,
+        numberOfPostsByDate: currentProfile.numberOfPostsByDate,
+        subprofiles: state.profileSidebar && selectedProfile ? selectedProfile.subprofiles : [],
+        isInstagramProfile: state.profileSidebar && selectedProfile && selectedProfile.type === "instagram",
+        directPostingEnabled: state.profileSidebar && selectedProfile && selectedProfile.directPostingEnabled,
       };
     }
     return {};
@@ -124,6 +128,18 @@ export default connect(
     },
     onCalendarToggleClick: () => {
       dispatch(actions.handleCalendarToggle({ profileId: ownProps.profileId }));
+    },
+    onMiniCalendarMonthChange: (startDate, endDate) => {
+      dispatch(actions.handleMiniCalendarMonthChange({
+        profileId: ownProps.profileId,
+        startDate,
+        endDate,
+      }));
+    },
+    onSetUpDirectPostingClick: () => {
+      dispatch(actions.handleSetUpDirectPostingClick({
+        profileId: ownProps.profileId,
+      }));
     },
   }),
 )(QueuedPosts);

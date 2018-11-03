@@ -1,6 +1,6 @@
 /* global Stripe */
 
-import { getClassicBufferURL } from '@bufferapp/publish-utils';
+import { getURL } from '@bufferapp/publish-formatters';
 import { actions as notification } from '@bufferapp/notifications';
 import { actions as asyncDataFetchActions, actionTypes as asyncDataFetchActionTypes } from '@bufferapp/async-data-fetch';
 import { actions, actionTypes } from './reducer';
@@ -46,7 +46,7 @@ export default ({ dispatch, getState }) => next => (action) => {
       });
       break;
     case `upgradeToPro_${asyncDataFetchActionTypes.FETCH_SUCCESS}`:
-      window.location.assign(getClassicBufferURL());
+      window.location.assign(getURL.getClassicBufferURL());
       break;
     default:
       break;

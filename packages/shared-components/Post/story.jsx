@@ -7,6 +7,21 @@ import {
 import { checkA11y } from 'storybook-addon-a11y';
 import { Text } from '@bufferapp/components';
 import Post from './index';
+import { Provider } from 'react-redux';
+
+const storeFake = state => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => ({ ...state }),
+});
+
+const store = storeFake({
+  productFeatures: {
+    planName: 'free',
+    features: {},
+  }
+});
 
 const postDetails = {
   isRetweet: false,
@@ -41,7 +56,28 @@ const links = [{
   indices: [74, 96],
 }];
 
+const statistics = {
+  clicks: 12,
+  favorites: 5,
+  mentions: 1,
+  reach: 122,
+  retweets: 2,
+};
+
 const retweetComment = 'What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv';
+
+const subprofiles = [
+  {
+    avatar: 'http://i.pinimg.com/200x150/76/4a/36/764a36f92e012937b13d150690747365.jpg',
+    id: '5bbca83e94803d000e7dca34',
+    name: 'Books',
+  },
+  {
+    avatar: 'http://i.pinimg.com/200x150/ac/c7/15/acc7159eb4a3fd01963087465305b967.jpg',
+    id: '5bbca83e94803d000e7dca35',
+    name: 'Travel',
+  },
+];
 
 const children = (
   <Text size={'mini'} color={'black'}>
@@ -49,8 +85,13 @@ const children = (
   </Text>
 );
 
-storiesOf('Post')
+storiesOf('Post', module)
   .addDecorator(checkA11y)
+  .addDecorator(getStory =>
+    <Provider store={store}>
+      {getStory()}
+    </Provider>,
+  )
   .add('queued post', () => (
     <Post
       postDetails={postDetails}
@@ -59,7 +100,7 @@ storiesOf('Post')
       onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       onEditClick={action('edit-click')}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -72,7 +113,8 @@ storiesOf('Post')
       onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
-      sent
+      isSent
+      statistics={statistics}
     >
       {children}
     </Post>
@@ -87,7 +129,7 @@ storiesOf('Post')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetailsError}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -101,7 +143,7 @@ storiesOf('Post')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -115,7 +157,7 @@ storiesOf('Post')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -129,7 +171,7 @@ storiesOf('Post')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -145,7 +187,7 @@ storiesOf('Post')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('Post', 'isWorking')}
       retweetProfile={retweetProfile}
-      sent={false}
+      isSent={false}
     >
       {children}
     </Post>
@@ -163,7 +205,69 @@ storiesOf('Post')
       onShareNowClick={linkTo('Post', 'isWorking')}
       retweetProfile={retweetProfile}
       retweetComment={retweetComment}
-      sent={false}
+      isSent={false}
+    >
+      {children}
+    </Post>
+  ))
+  .add('Instragram post with Location', () => (
+    <Post
+      postDetails={postDetails}
+      onCancelConfirmClick={linkTo('Post', 'hovered')}
+      onDeleteClick={linkTo('Post', 'isConfirmingDelete')}
+      onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
+      onShareNowClick={linkTo('Post', 'isWorking')}
+      onEditClick={action('edit-click')}
+      locationName="Buffer, Earth"
+      profileService="instagram"
+      isSent={false}
+    >
+      {children}
+    </Post>
+  ))
+  .add('Instragram post without Location', () => (
+    <Post
+      postDetails={postDetails}
+      onCancelConfirmClick={linkTo('Post', 'hovered')}
+      onDeleteClick={linkTo('Post', 'isConfirmingDelete')}
+      onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
+      onShareNowClick={linkTo('Post', 'isWorking')}
+      onEditClick={action('edit-click')}
+      profileService="instagram"
+      isSent={false}
+    >
+      {children}
+    </Post>
+  ))
+  .add('Pinterest post with board and source URL', () => (
+    <Post
+      postDetails={postDetails}
+      onCancelConfirmClick={linkTo('Post', 'hovered')}
+      onDeleteClick={linkTo('Post', 'isConfirmingDelete')}
+      onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
+      onShareNowClick={linkTo('Post', 'isWorking')}
+      onEditClick={action('edit-click')}
+      profileService="pinterest"
+      subprofiles={subprofiles}
+      subprofileID={'5bbca83e94803d000e7dca35'}
+      sourceUrl={'http://google.com'}
+      isSent={false}
+    >
+      {children}
+    </Post>
+  ))
+  .add('Pinterest post with board only', () => (
+    <Post
+      postDetails={postDetails}
+      onCancelConfirmClick={linkTo('Post', 'hovered')}
+      onDeleteClick={linkTo('Post', 'isConfirmingDelete')}
+      onDeleteConfirmClick={linkTo('Post', 'isDeleting')}
+      onShareNowClick={linkTo('Post', 'isWorking')}
+      onEditClick={action('edit-click')}
+      profileService="pinterest"
+      subprofiles={subprofiles}
+      subprofileID={'5bbca83e94803d000e7dca34'}
+      isSent={false}
     >
       {children}
     </Post>

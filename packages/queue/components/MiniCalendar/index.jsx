@@ -1,103 +1,87 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayPicker from 'react-day-picker';
-import { ArrowRightIcon, ArrowLeftIcon } from '@bufferapp/components/Icon/Icons';
-import { Button } from '@bufferapp/components';
-import 'react-day-picker/lib/style.css';
+import moment from 'moment-timezone';
+import { InputDate } from '@bufferapp/components';
 
 const containerStyle = {
   position: 'absolute',
-  right: '2.3rem',
+  right: '0',
   marginTop: '3rem',
   backgroundColor: 'white',
   borderRadius: '4px',
   border: '1px solid #dce0e0',
   padding: '0.5rem',
   overflow: 'hidden',
-}
-
-const fakeDateData = {
-  'Tue Feb 06 2018': 4,
-  'Wed Feb 07 2018': 2,
-  'Thu Feb 08 2018': 1,
+  zIndex: '1',
 };
 
 const cellStyle = {
-  height: '1.6rem',
-  width: '1.9rem',
-}
+  maxHeight: '1rem',
+};
 
 const dateStyle = {
   top: '-0.3rem',
   position: 'relative',
-}
+};
 
 const numPostsStyle = {
-  fontSize: '0.3rem',
+  fontSize: '0.6rem',
   position: 'relative',
   top: '-0.3rem',
-}
+  fontWeight: '600',
+};
 
-const NavBar = ({
-  nextMonth,
-  previousMonth,
-  onPreviousClick,
-  onNextClick,
-  className,
-  localeUtils,
-}) => {
-  const styleLeft = {
-    float: 'left',
-  };
-  const styleRight = {
-    float: 'right',
-  };
-  const onNext = () => {
-    onNextClick();
-    // add our hooks here
+/* MiniCalendar displays one month in the past */
+const firstMonthToDisplay = moment().subtract(1, 'month').toDate();
+
+const MiniCalendar = ({numberOfPostsByDate, onMonthChange}) => {
+
+  /* Used to update number of posts when navigate to another month on DateInputNavBar */
+  const onNavigationClick = (newMonth) => {
+    const startDate = moment(newMonth).startOf('month').unix();
+    const endDate = moment(newMonth).endOf('month').unix();
+    onMonthChange(startDate, endDate);
   };
 
-  const onPrev = () => {
-    onPreviousClick();
-    // add our hooks here
+  /* Requests the number of posts for the current month when open the calendar */
+  if(!numberOfPostsByDate) {
+    onNavigationClick();
+  };
+
+  /* Renders content of each day cell and adds number of posts if they exist */
+  const renderDay = (day) => {
+    const dayString = day.toDateString();
+    const numPosts = numberOfPostsByDate && numberOfPostsByDate[dayString];
+    return (
+      <div style={cellStyle}>
+        <div style={dateStyle}>{day.getDate()}</div>
+        {numPosts && <div style={numPostsStyle}>{numPosts + ' post'}{numPosts > 1 ? 's' : ''}</div>}
+      </div>
+    )
   };
 
   return (
-    <div className={className}>
-      <div style={styleLeft}>
-        <Button style={styleLeft} noStyle onClick={onNext}>
-          <ArrowLeftIcon/>
-        </Button>
-      </div>
-      <div style={styleRight}>
-        <Button noStyle onClick={onNext}>
-          <ArrowRightIcon/>
-        </Button>
-      </div>
+    <div style={containerStyle}>
+      <InputDate
+        firstMonthToDisplay={firstMonthToDisplay}
+        initialMonth={new Date()}
+        onNavigationClick={onNavigationClick}
+        renderDay={renderDay}
+      />
     </div>
   );
 };
 
-const renderDay = (day) => {
-  const dayString = day.toDateString();
-  const numPosts = fakeDateData[dayString];
-  return (
-    <div style={cellStyle}>
-      <div style={dateStyle}>{day.getDate()}</div>
-      {numPosts && <div style={numPostsStyle}>{numPosts + ' post'}{numPosts > 1 ? 's' : ''}</div>}
-    </div>
-  )
-};
-
-const MiniCalendar = () =>
-  <div style={containerStyle}>
-    <DayPicker navbarElement={<NavBar/>} renderDay={renderDay} showOutsideDays />
-  </div>;
-
 MiniCalendar.propTypes = {
+  onMonthChange: PropTypes.func.isRequired,
+  numberOfPostsByDate: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
 };
 
 MiniCalendar.defaultProps = {
+  numberOfPostsByDate: null,
 };
 
 export default MiniCalendar;

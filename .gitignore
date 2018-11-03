@@ -10,3 +10,9 @@ packages/composer
 packages/buffer-composer
 packages/buffer-components
 bundle.js
+.idea/
+bundle.js.map
+bundle.css
+vendor*.js
+vendor*.js.map
+vendor.css

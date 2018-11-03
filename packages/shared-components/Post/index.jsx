@@ -10,17 +10,21 @@ import {
 } from '@bufferapp/components/style/animation';
 
 import {
-  boxShadowLevelTwo,
-} from '@bufferapp/components/style/dropShadow';
+  borderRadius,
+} from '@bufferapp/components/style/border';
 
+import FeatureLoader from '@bufferapp/product-features';
 import PostFooter from '../PostFooter';
+import PostStats from '../PostStats';
 import RetweetPanel from '../RetweetPanel';
+import RenderPostMetaBar from './RenderPostMetaBar';
 
 const getPostContainerStyle = ({ dragging, hovering }) => ({
   display: 'flex',
   width: '100%',
   boxShadow: (hovering && !dragging) ? '0 2px 4px 0 rgba(0,0,0,0.50)' : 'none',
   transition: `box-shadow 0.1s ${transitionAnimationType}`,
+  borderRadius,
 });
 
 const postStyle = {
@@ -122,11 +126,17 @@ const Post = ({
   retweetComment,
   retweetCommentLinks,
   retweetProfile,
-  sent,
+  locationName,
+  sourceUrl,
+  subprofileID,
+  subprofiles,
   draggable,
   dragging,
   hovering,
   fixed,
+  statistics,
+  profileService,
+  isSent,
 }) =>
   (<div style={getPostContainerStyle({ dragging, hovering })}>
     <div style={postStyle}>
@@ -144,6 +154,14 @@ const Post = ({
           draggable,
           dragging,
         })}
+        <RenderPostMetaBar
+          profileService={profileService}
+          dragging={dragging}
+          locationName={locationName}
+          sourceUrl={sourceUrl}
+          subprofileID={subprofileID}
+          subprofiles={subprofiles}
+        />
         <PostFooter
           isDeleting={isDeleting}
           isConfirmingDelete={isConfirmingDelete}
@@ -154,10 +172,20 @@ const Post = ({
           onEditClick={onEditClick}
           onShareNowClick={onShareNowClick}
           postDetails={postDetails}
-          sent={sent}
           dragging={dragging}
           onRequeueClick={onRequeueClick}
+          isSent={isSent}
         />
+        <FeatureLoader
+          supportedFeatures={'post_stats'}
+        >
+          {isSent && !postDetails.isRetweet &&
+            <PostStats
+              statistics={statistics}
+              profileService={profileService}
+            />
+          }
+        </FeatureLoader>
       </Card>
     </div>
   </div>);
@@ -191,12 +219,12 @@ Post.commonPropTypes = {
       indices: PropTypes.arrayOf(PropTypes.number),
     }),
   ),
-  sent: PropTypes.bool.isRequired,
   draggable: PropTypes.bool,
   dragging: PropTypes.bool,
   hovering: PropTypes.bool,
   fixed: PropTypes.bool,
   onDropPost: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 Post.propTypes = {
@@ -209,6 +237,7 @@ Post.defaultProps = {
   isDeleting: false,
   isWorking: false,
   fixed: false,
+  isSent: false,
 };
 
 export default Post;

@@ -1,7 +1,7 @@
 import Pusher from 'pusher-js';
 import { actionTypes as profileSidebarActionTypes } from '@bufferapp/publish-profile-sidebar';
 import { actionTypes as queueActionTypes } from '@bufferapp/publish-queue';
-import { postParser } from '@bufferapp/publish-utils';
+import { postParser } from '@bufferapp/publish-parsers';
 
 import middleware from './middleware';
 

@@ -9,10 +9,6 @@ global.Stripe = {
   createToken: jest.fn(),
 };
 
-Object.defineProperty(window.location, 'hostname', {
-  value: 'publish.local.buffer.com',
-});
-
 const i18n = {
   translations: {
     stripe: {

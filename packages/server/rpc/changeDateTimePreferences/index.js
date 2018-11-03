@@ -1,6 +1,6 @@
-const { method } = require('@bufferapp/micro-rpc');
+const { method } = require('@bufferapp/buffer-rpc');
 const rp = require('request-promise');
-const { userParser } = require('@bufferapp/publish-utils');
+const { userParser } = require('@bufferapp/publish-parsers');
 
 module.exports = method(
   'changeDateTimePreferences',

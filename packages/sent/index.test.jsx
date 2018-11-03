@@ -31,11 +31,17 @@ describe('Sent', () => {
           },
         },
       },
+      appSidebar: {
+        user: {
+          is_business_user: false,
+        },
+      },
     });
     const wrapper = mount(
       <Provider store={store}>
         <Sent
           profileId="abc"
+          onShareAgainClick={jest.fn()}
         />
       </Provider>,
     );

@@ -1,8 +1,6 @@
-const { postParser, date } = require('@bufferapp/publish-utils');
-const { method } = require('@bufferapp/micro-rpc');
+const { postParser } = require('@bufferapp/publish-parsers');
+const { method } = require('@bufferapp/buffer-rpc');
 const rp = require('request-promise');
-
-const { daysAgoTimestamp } = date;
 
 module.exports = method(
   'sentPosts',
@@ -16,7 +14,6 @@ module.exports = method(
         access_token: session.publish.accessToken,
         page,
         count: 20,
-        since: daysAgoTimestamp(30),
       },
     })
       .then(result => JSON.parse(result))

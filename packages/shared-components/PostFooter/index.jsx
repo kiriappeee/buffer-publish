@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import {
   Text,
   WarningIcon,
+  ClockIcon,
+  CircleInstReminderIcon,
 } from '@bufferapp/components';
 import {
   borderWidth,
 } from '@bufferapp/components/style/border';
 import {
   mystic,
+  offWhite,
 } from '@bufferapp/components/style/color';
 
 import PostFooterButtons from '../PostFooterButtons';
@@ -16,10 +19,15 @@ import PostFooterButtons from '../PostFooterButtons';
 const getPostDetailsStyle = dragging => ({
   display: 'flex',
   padding: '0.5rem 1rem',
-  backgroundColor: '#fcfcfc',
+  backgroundColor: offWhite,
   borderTop: `${borderWidth} solid ${mystic}`,
   opacity: dragging ? 0 : 1,
 });
+
+const sentPostDetailsStyle = {
+  display: 'flex',
+  padding: '0.5rem 1rem',
+};
 
 const postActionDetailsStyle = {
   flexGrow: 1,
@@ -39,20 +47,25 @@ const postControlsStyle = {
 
 /* eslint-disable react/prop-types */
 
-const renderIcon = () =>
-  (<div style={postActionDetailsIconStyle}>
-    <WarningIcon color={'torchRed'} />
-  </div>);
-
-const renderText = ({ postDetails }, hasError) =>
+const renderText = ({ postDetails }, hasError, isSent) =>
   (<span>
     <Text
       size={'small'}
-      color={hasError ? 'torchRed' : 'black'}
+      color={hasError ? 'torchRed' : (isSent ? 'shuttleGray': 'black')}
     >
       {hasError ? postDetails.error : postDetails.postAction}
     </Text>
   </span>);
+
+const renderIcon = (hasError, isSent, isCustomScheduled, isInstagramReminder) => {
+  if (!hasError && !isCustomScheduled && !isInstagramReminder) return;
+
+  return (<div style={postActionDetailsIconStyle}>
+    {hasError ? <WarningIcon color={'torchRed'} /> : null}
+    {isInstagramReminder && !hasError ? <CircleInstReminderIcon color={'instagram'} /> : null}
+    {isCustomScheduled && !hasError && !isInstagramReminder ? <ClockIcon color={isSent ? 'shuttleGray' : 'outerSpace'} /> : null}
+  </div>);
+};
 
 /* eslint-enable react/prop-types */
 
@@ -67,16 +80,18 @@ const PostFooter = ({
   onEditClick,
   onShareNowClick,
   postDetails,
-  sent,
   dragging,
+  isSent,
 }) => {
   const hasError = postDetails.error && postDetails.error.length > 0;
-  return (<div style={getPostDetailsStyle(dragging)}>
+  const isCustomScheduled = postDetails.isCustomScheduled;
+  const isInstagramReminder = postDetails.isInstagramReminder;
+  return (<div style={isSent? sentPostDetailsStyle : getPostDetailsStyle(dragging)}>
     <div style={postActionDetailsStyle}>
-      {hasError && renderIcon()}
-      {renderText({ postDetails }, hasError)}
+      {renderIcon(hasError, isSent, isCustomScheduled, isInstagramReminder)}
+      {renderText({ postDetails }, hasError, isSent)}
     </div>
-    { !sent && (
+    { !isSent && (
       <div style={postControlsStyle}>
         <PostFooterButtons
           error={postDetails.error}
@@ -108,9 +123,9 @@ PostFooter.propTypes = {
     error: PropTypes.string,
     postAction: PropTypes.string,
   }).isRequired,
-  sent: PropTypes.bool.isRequired,
   dragging: PropTypes.bool,
   onRequeueClick: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 PostFooter.defaultProps = {

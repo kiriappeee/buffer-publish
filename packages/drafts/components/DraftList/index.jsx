@@ -5,6 +5,20 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 import Empty from '../Empty';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
+import {
+  Input,
+} from '@bufferapp/components';
+
+const composerStyle = {
+  marginBottom: '1.5rem',
+  flexGrow: '1',
+};
+
+const topBarContainerStyle = {
+  display: 'flex',
+  position: 'relative'
+};
 
 const loadingContainerStyle = {
   width: '100%',
@@ -47,16 +61,10 @@ const renderDraftList = ({
 
 const renderEmpty = ({
   manager,
-  userMessages,
-  userNewDraftsSubscribeLink,
-  onUserReadMessage,
   view,
 }) =>
   <Empty
     isManager={manager}
-    userMessages={userMessages}
-    userNewDraftsSubscribeLink={userNewDraftsSubscribeLink}
-    handleUserReadMessage={onUserReadMessage}
     view={'drafts'}
   />;
 
@@ -65,8 +73,6 @@ const DraftList = ({
   loading,
   postLists,
   manager,
-  userMessages,
-  userNewDraftsSubscribeLink,
   onApproveClick,
   onCancelConfirmClick,
   onDeleteClick,
@@ -75,7 +81,11 @@ const DraftList = ({
   onMoveToDraftsClick,
   onRequestApprovalClick,
   onRescheduleClick,
-  onUserReadMessage,
+  onComposerPlaceholderClick,
+  onComposerCreateSuccess,
+  showComposer,
+  editMode,
+
 }) => {
   if (loading) {
     return (
@@ -87,6 +97,28 @@ const DraftList = ({
 
   return (
     <div className={containerStyle}>
+      <div style={topBarContainerStyle}>
+        <div style={composerStyle}>
+          {showComposer && !editMode &&
+            <ComposerPopover
+              type={'drafts'}
+              onSave={onComposerCreateSuccess}
+              transparentOverlay
+              preserveComposerStateOnClose
+            />
+          }
+          <Input
+            placeholder={'Create a new draft...'}
+            onFocus={onComposerPlaceholderClick}
+          />
+        </div>
+      </div>
+      {showComposer && editMode &&
+        <ComposerPopover 
+          type={'drafts'}
+          onSave={onComposerCreateSuccess} 
+        />
+      }
       {
         postLists.length > 0 ?
         renderDraftList({
@@ -102,9 +134,6 @@ const DraftList = ({
         }) :
         renderEmpty({
           manager,
-          userMessages,
-          userNewDraftsSubscribeLink,
-          onUserReadMessage,
           view: 'drafts',
         })
       }
@@ -121,8 +150,6 @@ DraftList.propTypes = {
     }),
   ),
   manager: PropTypes.bool,
-  userMessages: PropTypes.arrayOf(),
-  userNewDraftsSubscribeLink: PropTypes.string,
   total: PropTypes.number,
   onApproveClick: PropTypes.func.isRequired,
   onCancelConfirmClick: PropTypes.func.isRequired,
@@ -132,12 +159,10 @@ DraftList.propTypes = {
   onMoveToDraftsClick: PropTypes.func.isRequired,
   onRequestApprovalClick: PropTypes.func.isRequired,
   onRescheduleClick: PropTypes.func.isRequired,
-  onUserReadMessage: PropTypes.func.isRequired,
 };
 
 DraftList.defaultProps = {
   loading: true,
-  userMessages: [],
 };
 
 export default DraftList;

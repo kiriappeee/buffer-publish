@@ -23,6 +23,8 @@ export const actionTypes = keyWrapper('QUEUE', {
   REORDERED_UPDATES: 0,
   POST_REQUEUE: 0,
   TOGGLE_CALENDAR: 0,
+  GET_NUMBER_POSTS: 0,
+  SET_DIRECT_POSTING: 0,
 });
 
 export const initialState = {
@@ -32,7 +34,6 @@ export const initialState = {
   environment: 'production',
   editMode: false,
   editingPostId: '',
-  hasCalendarFeatureFlip: false,
 };
 
 const profileInitialState = {
@@ -373,6 +374,12 @@ const profileReducer = (state = profileInitialState, action) => {
       return {
         ...state,
         showCalendar: !state.showCalendar,
+        numberOfPostsByDate: null,
+      };
+    case `getNumberOfPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
+      return {
+        ...state,
+        numberOfPostsByDate: action.result.numberOfPostsByDate,
       };
     case `sharePostNow_${dataFetchActionTypes.FETCH_FAIL}`:
     case actionTypes.POST_ERROR:
@@ -422,6 +429,7 @@ export default (state = initialState, action) => {
     case actionTypes.POST_SHARE_NOW:
     case actionTypes.POST_SENT:
     case actionTypes.POST_COUNT_UPDATED:
+    case `getNumberOfPosts_${dataFetchActionTypes.FETCH_SUCCESS}`:
     case actionTypes.TOGGLE_CALENDAR: {
       profileId = getProfileId(action);
       if (profileId) {
@@ -543,5 +551,11 @@ export const actions = {
   handleCalendarToggle: ({ profileId }) => ({
     type: actionTypes.TOGGLE_CALENDAR,
     profileId,
+  }),
+  handleMiniCalendarMonthChange: ({ profileId, startDate, endDate }) => ({
+    type: actionTypes.GET_NUMBER_POSTS,
+    profileId,
+    startDate,
+    endDate,
   }),
 };

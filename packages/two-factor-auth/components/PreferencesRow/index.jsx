@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Text, Link } from '@bufferapp/components';
+import { SensitiveData } from '@bufferapp/publish-shared-components';
 
 const formattedMethod = {
   '': 'Disabled',
@@ -31,7 +32,7 @@ const TwoFactorPreferencesRow = ({
       </div>
       {method === 'sms' && <div style={{ margin: '8px 0 0 0' }}>
         <Text size="mini">
-          Phone number: <b>{phoneNumber}</b>{' '}
+          Phone number: <SensitiveData><b>{phoneNumber}</b></SensitiveData>{' '}
           <Link href="#" onClick={() => transition('CHANGE_SMS')}>Edit</Link>
         </Text>
       </div>}

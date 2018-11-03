@@ -13,7 +13,7 @@ import Preferences from './index';
 const history = createHistory();
 const store = createStore();
 
-storiesOf('Preferences')
+storiesOf('Preferences', module)
   .addDecorator(checkA11y)
   .addDecorator(getStory =>
     <Provider store={store}>

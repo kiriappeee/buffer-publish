@@ -4,7 +4,7 @@ import { checkA11y } from 'storybook-addon-a11y';
 import EmptyState from './index';
 
 
-storiesOf('EmptyState')
+storiesOf('EmptyState', module)
   .addDecorator(checkA11y)
   .add('default', () => (
     <EmptyState
@@ -12,5 +12,12 @@ storiesOf('EmptyState')
       subtitle={'Click the box above to add a post to your queue :)'}
       heroImg={'https://s3.amazonaws.com/buffer-publish/images/fresh-queue.png'}
       heroImgSize={{ width: '229px', height: '196px' }}
+    />
+  ))
+  .add('with emoji', () => (
+    <EmptyState
+      title={'Looks like you don\'t have any drafts yet!'}
+      subtitle={'This is where drafts from your team members will appear.'}
+      emoji={'✍️'}
     />
   ));

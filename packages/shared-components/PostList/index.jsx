@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import {
   List,
   Text,
+  Button,
 } from '@bufferapp/components';
+import FeatureLoader from '@bufferapp/product-features';
 import TextPost from '../TextPost';
 import ImagePost from '../ImagePost';
 import MultipleImagesPost from '../MultipleImagesPost';
@@ -11,7 +13,14 @@ import LinkPost from '../LinkPost';
 import VideoPost from '../VideoPost';
 import PostDragWrapper from '../PostDragWrapper';
 
+const reBufferWrapperStyle = {
+  paddingLeft: '1rem',
+  minWidth: '132px',
+};
+
 const postStyle = {
+  display: 'flex',
+  alignItems: 'baseline',
   marginBottom: '2rem',
 };
 
@@ -43,6 +52,7 @@ const renderPost = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  isSent,
 }) => {
   const postWithEventHandlers = {
     ...post,
@@ -57,6 +67,7 @@ const renderPost = ({
     onImageClickPrev: () => onImageClickPrev({ post }),
     onImageClose: () => onImageClose({ post }),
     onDropPost,
+    isSent,
   };
   let PostComponent = postTypeComponentMap.get(post.type);
   PostComponent = PostComponent || TextPost;
@@ -79,6 +90,8 @@ const PostList = ({
   onImageClickPrev,
   onImageClose,
   onDropPost,
+  onShareAgainClick,
+  isSent,
 }) =>
   <div>
     <div style={listHeaderStyle}>
@@ -104,8 +117,22 @@ const PostList = ({
               onImageClickPrev,
               onImageClose,
               onDropPost,
+              onShareAgainClick,
+              isSent,
             })
           }
+          <FeatureLoader
+            supportedFeatures={'share_again'}
+          >
+            <div style={reBufferWrapperStyle}>
+              <Button
+                secondary
+                onClick={() => { onShareAgainClick({ post }); }}
+              >
+                Share Again
+              </Button>
+            </div>
+          </FeatureLoader>
         </div>,
       )}
     />
@@ -128,6 +155,8 @@ PostList.propTypes = {
   onImageClickPrev: PropTypes.func,
   onImageClose: PropTypes.func,
   onDropPost: PropTypes.func,
+  onShareAgainClick: PropTypes.func,
+  isSent: PropTypes.bool,
 };
 
 PostList.defaultProps = {

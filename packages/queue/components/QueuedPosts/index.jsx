@@ -11,10 +11,12 @@ import {
   BufferLoading,
 } from '@bufferapp/publish-shared-components';
 
-import ComposerPopover from '../ComposerPopover';
+import ComposerPopover from '@bufferapp/publish-composer-popover';
 import QueueItems from '../QueueItems';
 import QueuePausedBar from '../QueuePausedBar';
 import MiniCalendar from '../MiniCalendar';
+import FeatureLoader from '@bufferapp/product-features';
+import InstagramDirectPostingBanner from '../InstagramDirectPostingBanner';
 
 const composerStyle = {
   marginBottom: '1.5rem',
@@ -23,6 +25,7 @@ const composerStyle = {
 
 const topBarContainerStyle = {
   display: 'flex',
+  position: 'relative',
 };
 
 const loadingContainerStyle = {
@@ -35,6 +38,7 @@ const loadingContainerStyle = {
 const buttonStyle = {
   height: '40px',
   marginLeft: '1.5rem',
+  minWidth: '150px',
 };
 
 const QueuedPosts = ({
@@ -60,7 +64,12 @@ const QueuedPosts = ({
   paused,
   onUnpauseClick,
   onCalendarToggleClick,
-  hasCalendarFeatureFlip,
+  numberOfPostsByDate,
+  onMiniCalendarMonthChange,
+  subprofiles,
+  isInstagramProfile,
+  directPostingEnabled,
+  onSetUpDirectPostingClick,
 }) => {
   if (loading) {
     return (
@@ -81,6 +90,7 @@ const QueuedPosts = ({
               onSave={onComposerCreateSuccess}
               transparentOverlay
               preserveComposerStateOnClose
+              type={'queue'}
             />
           }
           <Input
@@ -88,15 +98,30 @@ const QueuedPosts = ({
             onFocus={onComposerPlaceholderClick}
           />
         </div>
-        {hasCalendarFeatureFlip &&
+        <FeatureLoader
+          supportedFeatures={'mini_calendar'}
+        >
           <div style={buttonStyle}>
-            <Button secondary onClick={onCalendarToggleClick}>
+            <Button
+              secondary
+              onClick={onCalendarToggleClick}
+            >
               {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
             </Button>
-          </div>}
-        {showCalendar && hasCalendarFeatureFlip && <MiniCalendar />}
+          </div>
+
+          {showCalendar &&
+            <MiniCalendar
+              numberOfPostsByDate={numberOfPostsByDate}
+              onMonthChange={onMiniCalendarMonthChange}
+            />
+          }
+        </FeatureLoader>
 
       </div>
+      {isInstagramProfile && !directPostingEnabled &&
+        <InstagramDirectPostingBanner onSetUpDirectPostingClick={onSetUpDirectPostingClick} />
+      }
       {!!paused && <QueuePausedBar handleClickUnpause={onUnpauseClick} />}
       {total < 1 &&
         <EmptyState
@@ -107,10 +132,14 @@ const QueuedPosts = ({
         />
       }
       {showComposer && editMode &&
-        <ComposerPopover onSave={onComposerCreateSuccess} />
+        <ComposerPopover 
+          onSave={onComposerCreateSuccess}
+          type={'queue'}
+        />
       }
       <QueueItems
         items={postLists}
+        subprofiles={subprofiles}
         onCancelConfirmClick={onCancelConfirmClick}
         onRequeueClick={onRequeueClick}
         onDeleteClick={onDeleteClick}
@@ -137,6 +166,11 @@ QueuedPosts.propTypes = {
       type: PropTypes.string,
     }),
   ).isRequired,
+  subprofiles: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string,
+    }),
+  ),
   total: PropTypes.number,
   onComposerPlaceholderClick: PropTypes.func.isRequired,
   onComposerCreateSuccess: PropTypes.func.isRequired,
@@ -157,7 +191,14 @@ QueuedPosts.propTypes = {
   onUnpauseClick: PropTypes.func.isRequired,
   showCalendar: PropTypes.bool,
   onCalendarToggleClick: PropTypes.func.isRequired,
-  hasCalendarFeatureFlip: PropTypes.bool,
+  onMiniCalendarMonthChange: PropTypes.func,
+  numberOfPostsByDate: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  IsInstagramProfile: PropTypes.bool,
+  directPostingEnabled: PropTypes.bool,
+  onSetUpDirectPostingClick: PropTypes.func,
 };
 
 QueuedPosts.defaultProps = {
@@ -171,7 +212,10 @@ QueuedPosts.defaultProps = {
   editMode: false,
   paused: false,
   showCalendar: false,
-  hasCalendarFeatureFlip: false,
+  numberOfPostsByDate: null,
+  subprofiles: [],
+  IsInstagramProfile: false,
+  directPostingEnabled: false,
 };
 
 export default QueuedPosts;

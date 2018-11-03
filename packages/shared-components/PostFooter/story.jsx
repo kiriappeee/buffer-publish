@@ -11,12 +11,32 @@ const postDetails = {
   postAction: 'This post will be sent at 9:21 (GMT)',
 };
 
+const postDetailsSent = {
+  postAction: 'This post was sent at 9:21 (GMT)',
+};
+
+const postDetailsCustomScheduled = {
+  postAction: 'This post is custom scheduled for 9:21 (GMT)',
+  isCustomScheduled: true,
+};
+
+const postDetailsCustomScheduledSent = {
+  postAction: 'This post was custom scheduled for 9:21 (GMT)',
+  isCustomScheduled: true,
+};
+
+const postDetailsInstagramReminder = {
+  postAction: 'You will receive a reminder at 9:21 (GMT) when it is time to post',
+  isCustomScheduled: true,
+  isInstagramReminder: true,
+};
+
 const postDetailsError = {
   postAction: 'This post will be sent at 9:21 (GMT)',
   error: 'Woops! Something went wrong. Try again?',
 };
 
-storiesOf('PostFooter')
+storiesOf('PostFooter', module)
   .addDecorator(checkA11y)
   .add('queued post', () => (
     <PostFooter
@@ -26,13 +46,31 @@ storiesOf('PostFooter')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('PostFooter', 'isWorking')}
       postDetails={postDetails}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('sent post', () => (
     <PostFooter
-      postDetails={postDetails}
-      sent
+      postDetails={postDetailsSent}
+      isSent
+    />
+  ))
+  .add('custom scheduled post', () => (
+    <PostFooter
+      postDetails={postDetailsCustomScheduled}
+      isSent={false}
+    />
+  ))
+  .add('sent custom scheduled post', () => (
+    <PostFooter
+      postDetails={postDetailsCustomScheduledSent}
+      isSent
+    />
+  ))
+  .add('instagram reminder post', () => (
+    <PostFooter
+      postDetails={postDetailsInstagramReminder}
+      isSent={false}
     />
   ))
   .add('post with error', () => (
@@ -43,7 +81,7 @@ storiesOf('PostFooter')
       onEditClick={action('edit-click')}
       onShareNowClick={linkTo('PostFooter', 'isWorking')}
       postDetails={postDetailsError}
-      sent={false}
+      isSent={false}
     />
   ))
   .add('isConfirmingDelete', () => (
@@ -54,7 +92,7 @@ storiesOf('PostFooter')
       onEditClick={action('edit-click')}
       postDetails={postDetails}
       isConfirmingDelete
-      sent={false}
+      isSent={false}
     />
   ))
   .add('isDeleting', () => (
@@ -65,7 +103,7 @@ storiesOf('PostFooter')
       onEditClick={action('edit-click')}
       postDetails={postDetails}
       isDeleting
-      sent={false}
+      isSent={false}
     />
   ))
   .add('isWorking', () => (
@@ -76,6 +114,6 @@ storiesOf('PostFooter')
       onEditClick={action('edit-click')}
       postDetails={postDetails}
       isWorking
-      sent={false}
+      isSent={false}
     />
   ));

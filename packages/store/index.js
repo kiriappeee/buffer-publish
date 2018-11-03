@@ -4,9 +4,12 @@ import createHistory from 'history/createBrowserHistory';
 import { createMiddleware as createBufferMetricsMiddleware } from '@bufferapp/buffermetrics/redux';
 import { middleware as queueMiddleware } from '@bufferapp/publish-queue';
 import { middleware as sentMiddleware } from '@bufferapp/publish-sent';
-import { middleware as settingsMiddleware } from '@bufferapp/publish-settings';
+import { middleware as draftsMiddleware } from '@bufferapp/publish-drafts';
+import { middleware as postingScheduleSettingsMiddleware } from '@bufferapp/publish-posting-schedule';
+import { middleware as generalSettingsMiddleware } from '@bufferapp/publish-general-settings';
 import { middleware as profileSidebarMiddleware } from '@bufferapp/publish-profile-sidebar';
 import { middleware as appSidebarMiddleware } from '@bufferapp/app-sidebar';
+import { middleware as productFeatureMiddleware } from '@bufferapp/product-features';
 import { middleware as i18nMiddleware } from '@bufferapp/publish-i18n';
 import { middleware as asyncDataFetchMiddleware } from '@bufferapp/async-data-fetch';
 import { middleware as pusherSyncMiddleware } from '@bufferapp/publish-pusher-sync';
@@ -24,6 +27,8 @@ import { middleware as manageAppsMiddleware } from '@bufferapp/manage-apps-extra
 import { middleware as twoFactorAuthMiddleware } from '@bufferapp/publish-two-factor-auth';
 import { middleware as dateTimePreferencesMiddleware } from '@bufferapp/date-time-preferences';
 import { middleware as closeAccountMiddleware } from '@bufferapp/close-account';
+import { middleware as maintenanceRedirectMiddleware } from '@bufferapp/maintenance-redirect';
+import { middleware as defaultPageMiddleware } from '@bufferapp/default-page';
 import performanceMiddleware from '@bufferapp/performance-tracking/middleware';
 import reducers from './reducers';
 
@@ -54,9 +59,11 @@ const configureStore = (initialstate) => {
         profileSidebarMiddleware,
         performanceMiddleware,
         appSidebarMiddleware,
+        productFeatureMiddleware,
         queueMiddleware,
         sentMiddleware,
-        settingsMiddleware,
+        postingScheduleSettingsMiddleware,
+        generalSettingsMiddleware,
         pusherSyncMiddleware,
         notificationsMiddleware,
         environmentMiddleware,
@@ -72,7 +79,10 @@ const configureStore = (initialstate) => {
         twoFactorAuthMiddleware,
         dateTimePreferencesMiddleware,
         closeAccountMiddleware,
+        defaultPageMiddleware,
+        maintenanceRedirectMiddleware,
         bufferMetricsMiddleware,
+        draftsMiddleware,
       ),
     ),
   );

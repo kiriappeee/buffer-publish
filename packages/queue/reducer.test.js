@@ -143,7 +143,6 @@ describe('reducer', () => {
       environment: 'production',
       editMode: false,
       editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const stateAfter = {
       byProfileId: {
@@ -162,7 +161,6 @@ describe('reducer', () => {
       environment: 'production',
       editMode: false,
       editingPostId: '',
-      hasCalendarFeatureFlip: false,
     };
     const action = {
       type: actionTypes.POST_UPDATED,
@@ -355,6 +353,7 @@ describe('reducer', () => {
           loading: true,
           loadingMore: false,
           moreToLoad: false,
+          numberOfPostsByDate: null,
           page: 1,
           posts: { 12345: post },
           total: 1,
@@ -366,6 +365,49 @@ describe('reducer', () => {
       type: actionTypes.TOGGLE_CALENDAR,
       profileId,
       post,
+    };
+    deepFreeze(action);
+    expect(reducer(stateBefore, action))
+      .toEqual(stateAfter);
+  });
+
+  // GET_NUMBER_POSTS
+  it('should handle getNumberOfPosts_FETCH_SUCCESS action type', () => {
+    const post = { id: '12345', text: 'i heart buffer' };
+    const stateBefore = {
+      byProfileId: {
+        [profileId]: {
+          loading: true,
+          loadingMore: false,
+          moreToLoad: false,
+          page: 1,
+          posts: { 12345: post },
+          total: 1,
+          showCalendar: false,
+        },
+      },
+    };
+    const stateAfter = {
+      byProfileId: {
+        [profileId]: {
+          loading: true,
+          loadingMore: false,
+          moreToLoad: false,
+          numberOfPostsByDate: { 'Tue Oct 02 2018': 1 },
+          page: 1,
+          posts: { 12345: post },
+          total: 1,
+          showCalendar: false,
+        },
+      },
+    };
+
+    const action = {
+      profileId,
+      type: 'getNumberOfPosts_FETCH_SUCCESS',
+      result: {
+        numberOfPostsByDate: { 'Tue Oct 02 2018': 1 },
+      },
     };
     deepFreeze(action);
     expect(reducer(stateBefore, action))

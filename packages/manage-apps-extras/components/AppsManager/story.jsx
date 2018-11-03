@@ -15,7 +15,7 @@ const connectedApps = [
   },
 ];
 
-storiesOf('AppsManager')
+storiesOf('AppsManager', module)
   .addDecorator(checkA11y)
   .add('without connected apps', () => (
     <AppsManager

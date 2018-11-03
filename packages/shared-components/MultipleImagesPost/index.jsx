@@ -35,7 +35,6 @@ const MultipleImagesPost = ({
   onShareNowClick,
   onRequeueClick,
   retweetProfile,
-  sent,
   text,
   isLightboxOpen,
   onImageClickPrev,
@@ -46,6 +45,13 @@ const MultipleImagesPost = ({
   draggable,
   dragging,
   hovering,
+  statistics,
+  subprofiles,
+  profile_service: profileService,
+  service_geolocation_name: locationName,
+  source_url: sourceUrl,
+  subprofile_id: subprofileID,
+  isSent,
 }) => {
   const images = imageUrls.map(url => ({ src: `${url}` }));
   const children = (
@@ -55,6 +61,7 @@ const MultipleImagesPost = ({
           color={'black'}
           links={links}
           size={'mini'}
+          whitespace={'pre-wrap'}
           newTab
           unstyled
         >
@@ -96,11 +103,17 @@ const MultipleImagesPost = ({
       onShareNowClick={onShareNowClick}
       onRequeueClick={onRequeueClick}
       retweetProfile={retweetProfile}
-      sent={sent}
       text={text}
       draggable={draggable}
       dragging={dragging}
       hovering={hovering}
+      statistics={statistics}
+      subprofiles={subprofiles}
+      profileService={profileService}
+      locationName={locationName}
+      sourceUrl={sourceUrl}
+      subprofileID={subprofileID}
+      isSent={isSent}
     >
       {children}
     </Post>
@@ -125,6 +138,7 @@ MultipleImagesPost.propTypes = {
   onImageClose: PropTypes.func,
   onImageClick: PropTypes.func,
   currentImage: PropTypes.number,
+  isSent: PropTypes.bool,
 };
 
 MultipleImagesPost.defaultProps = Post.defaultProps;
